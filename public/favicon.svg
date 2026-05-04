@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="투영 메이커 아이콘">
+  <defs>
+    <!-- 크림 배경 그라디언트 (라이트) -->
+    <linearGradient id="bgLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f2f1ed"/>
+      <stop offset="100%" stop-color="#ebeae5"/>
+    </linearGradient>
+    <!-- 오렌지 액센트 그라디언트 -->
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f54e00"/>
+      <stop offset="100%" stop-color="#c83e00"/>
+    </linearGradient>
+    <!-- 다크 모드 배경 -->
+    <linearGradient id="bgDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#26251e"/>
+      <stop offset="100%" stop-color="#1a1915"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .bg-rect   { fill: url(#bgLight); }
+    .hanger    { stroke: #26251e; }
+    .gem-body  { fill: url(#accentGrad); }
+    .gem-shine { fill: rgba(255,255,255,0.45); }
+    @media (prefers-color-scheme: dark) {
+      .bg-rect  { fill: url(#bgDark); }
+      .hanger   { stroke: #f2f1ed; }
+    }
+  </style>
+
+  <!-- 배경 라운드 사각형 -->
+  <rect class="bg-rect" x="4" y="4" width="92" height="92" rx="20" ry="20"/>
+
+  <!-- 옷걸이 — 후크 + 어깨 + 바 -->
+  <g class="hanger" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- 후크 (inverted-J) -->
+    <path d="M50,34 C50,14 74,10 74,23 C74,33 62,35 50,36"/>
+    <!-- 좌 어깨 -->
+    <line x1="50" y1="36" x2="14" y2="64"/>
+    <!-- 우 어깨 -->
+    <line x1="50" y1="36" x2="86" y2="64"/>
+    <!-- 하단 바 -->
+    <line x1="14" y1="64" x2="86" y2="64"/>
+  </g>
+
+  <!-- 크리스탈 다이아몬드 (Accent Orange) — 어깨 교점 중앙 -->
+  <polygon class="gem-body" points="50,38 58,51 50,64 42,51"/>
+  <!-- 좌상단 하이라이트 (광택) -->
+  <polygon class="gem-shine" points="50,40 56,51 50,51"/>
+</svg>
