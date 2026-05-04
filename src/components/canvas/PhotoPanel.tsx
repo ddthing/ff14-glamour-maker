@@ -26,7 +26,7 @@ export function PhotoPanel({
             style={{ background: 'linear-gradient(160deg, #2e2d25 0%, #1c1b15 100%)' }}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            onClick={onClick}
+            onClick={() => onClick(false)}
         >
             {isDragging && (
                 <div className="absolute inset-0 z-50 bg-[var(--accent)]/15 border-4 border-dashed border-[var(--accent)] flex items-center justify-center">
