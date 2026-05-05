@@ -94,7 +94,7 @@ i18n
             new_updates: "What's New",
             confirm: 'Confirm',
             hide_version: "Don't show for this version",
-            title_brand: '투영 세트 메이커',
+            title_brand: 'FFXIV Glamour Set Maker',
             view_changelog: 'View Changelog',
             to_light: 'Switch to light mode',
             to_dark: 'Switch to dark mode',

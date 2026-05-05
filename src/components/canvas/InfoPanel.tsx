@@ -179,7 +179,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                             letterSpacing: '0.12em',
                             color: 'rgba(255,255,255,0.45)',
                         }}>
-                            {t('title_brand')}
+                            {t('common.title_brand')}
                         </span>
                         <span style={{
                             fontSize: '0.55rem',
