@@ -1,50 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="투영 메이커 아이콘">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="FF14 Glamour Maker Icon">
   <defs>
-    <!-- 크림 배경 그라디언트 (라이트) -->
-    <linearGradient id="bgLight" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f2f1ed"/>
-      <stop offset="100%" stop-color="#ebeae5"/>
+    <!-- 프리즘 유리 질감 그라디언트 -->
+    <linearGradient id="prismGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.05"/>
     </linearGradient>
     <!-- 오렌지 액센트 그라디언트 -->
-    <linearGradient id="accentGrad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#f54e00"/>
       <stop offset="100%" stop-color="#c83e00"/>
     </linearGradient>
-    <!-- 다크 모드 배경 -->
-    <linearGradient id="bgDark" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#26251e"/>
-      <stop offset="100%" stop-color="#1a1915"/>
-    </linearGradient>
+    <!-- 라이트/다크 배경색 정의 -->
+    <style>
+      .bg-rect { fill: #f2f1ed; transition: fill 0.3s; }
+      .slot-bg { fill: #26251e; fill-opacity: 0.1; stroke: #26251e; stroke-opacity: 0.1; }
+      .accent-dot { fill: #f54e00; filter: drop-shadow(0 0 2px rgba(245,78,0,0.5)); }
+      
+      @media (prefers-color-scheme: dark) {
+        .bg-rect { fill: #1a1915; }
+        .slot-bg { fill: white; fill-opacity: 0.05; stroke: white; stroke-opacity: 0.1; }
+      }
+    </style>
   </defs>
 
-  <style>
-    .bg-rect   { fill: url(#bgLight); }
-    .hanger    { stroke: #26251e; }
-    .gem-body  { fill: url(#accentGrad); }
-    .gem-shine { fill: rgba(255,255,255,0.45); }
-    @media (prefers-color-scheme: dark) {
-      .bg-rect  { fill: url(#bgDark); }
-      .hanger   { stroke: #f2f1ed; }
-    }
-  </style>
-
   <!-- 배경 라운드 사각형 -->
-  <rect class="bg-rect" x="4" y="4" width="92" height="92" rx="20" ry="20"/>
+  <rect class="bg-rect" x="4" y="4" width="92" height="92" rx="22" ry="22"/>
 
-  <!-- 옷걸이 — 후크 + 어깨 + 바 -->
-  <g class="hanger" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <!-- 후크 (inverted-J) -->
-    <path d="M50,34 C50,14 74,10 74,23 C74,33 62,35 50,36"/>
-    <!-- 좌 어깨 -->
-    <line x1="50" y1="36" x2="14" y2="64"/>
-    <!-- 우 어깨 -->
-    <line x1="50" y1="36" x2="86" y2="64"/>
-    <!-- 하단 바 -->
-    <line x1="14" y1="64" x2="86" y2="64"/>
+  <!-- 코디네이션 슬롯 그리드 -->
+  <g transform="translate(26, 26)">
+    <!-- 메인 활성화 슬롯 (Orange) -->
+    <rect width="22" height="22" rx="5" fill="url(#accentGrad)" filter="drop-shadow(0 4px 8px rgba(245,78,0,0.4))"/>
+    
+    <!-- 보조 슬롯들 (Glass Style) -->
+    <rect x="28" y="0" width="22" height="22" rx="5" class="slot-bg"/>
+    <rect x="28" y="0" width="22" height="22" rx="5" fill="url(#prismGlass)"/>
+    
+    <rect x="0" y="28" width="22" height="22" rx="5" class="slot-bg"/>
+    <rect x="0" y="28" width="22" height="22" rx="5" fill="url(#prismGlass)"/>
+    
+    <rect x="28" y="28" width="22" height="22" rx="5" class="slot-bg"/>
+    <rect x="28" y="28" width="22" height="22" rx="5" fill="url(#prismGlass)"/>
+    
+    <!-- 프리즘 반사 선 -->
+    <path d="M33 5l12 12M45 5L33 17" stroke="white" stroke-width="1" stroke-opacity="0.2"/>
   </g>
 
-  <!-- 크리스탈 다이아몬드 (Accent Orange) — 어깨 교점 중앙 -->
-  <polygon class="gem-body" points="50,38 58,51 50,64 42,51"/>
-  <!-- 좌상단 하이라이트 (광택) -->
-  <polygon class="gem-shine" points="50,40 56,51 50,51"/>
+  <!-- 우측 상단 알림/포인트 도트 (FF14 감성) -->
+  <circle class="accent-dot" cx="78" cy="22" r="5"/>
 </svg>
