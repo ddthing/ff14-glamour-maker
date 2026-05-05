@@ -70,14 +70,13 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
                 )}
             </div>
 
-            {/* Name block */}
-            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '2px' }}>
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '1px' }}>
                 <span style={{
-                    fontSize: '0.9rem',
-                    fontWeight: 700,
-                    color: 'rgba(255,255,255,0.88)',
-                    lineHeight: 1.25,
-                    letterSpacing: '-0.01em',
+                    fontSize: '1.1rem',
+                    fontWeight: 800,
+                    color: 'rgba(255,255,255,0.92)',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.02em',
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                     whiteSpace: 'nowrap',
@@ -87,9 +86,9 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
                 </span>
                 {sub && (
                     <span style={{
-                        fontSize: '0.65rem',
+                        fontSize: '0.75rem',
                         fontWeight: 500,
-                        color: 'rgba(255,255,255,0.38)',
+                        color: 'rgba(255,255,255,0.4)',
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
                         whiteSpace: 'nowrap',
