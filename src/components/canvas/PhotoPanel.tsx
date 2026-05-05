@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Image as ImageIcon, Sparkles } from 'lucide-react';
+import { UploadCloud, RefreshCw } from 'lucide-react';
 
 interface PhotoPanelProps {
     croppedImageSrc: string | null;
@@ -7,12 +7,12 @@ interface PhotoPanelProps {
     hoverPhoto: boolean;
     onMouseEnter: () => void;
     onMouseLeave: () => void;
-    onClick: (isDemo?: boolean) => void;
+    onClick: () => void;
 }
 
 /**
  * PhotoPanel — 캔버스 좌측 캐릭터 사진 패널 (480px)
- * PreviewCanvas에서 분리된 표현 컴포넌트
+ * Design: Apple Senior — premium empty state, zero demo code.
  */
 export function PhotoPanel({
     croppedImageSrc, isDragging, hoverPhoto,
@@ -22,15 +22,28 @@ export function PhotoPanel({
 
     return (
         <div
-            className="w-[480px] h-full relative overflow-hidden shrink-0 flex flex-col items-center justify-center cursor-pointer"
-            style={{ background: 'linear-gradient(160deg, #2e2d25 0%, #1c1b15 100%)' }}
+            className="w-[480px] h-full relative overflow-hidden shrink-0 flex items-center justify-center cursor-pointer select-none"
+            style={{ background: 'linear-gradient(145deg, #272620 0%, #191810 100%)' }}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            onClick={() => onClick(false)}
+            onClick={onClick}
         >
+            {/* ── Drag-over Overlay ── */}
             {isDragging && (
-                <div className="absolute inset-0 z-50 bg-[var(--accent)]/15 border-4 border-dashed border-[var(--accent)] flex items-center justify-center">
-                    <span className="text-[var(--accent)] font-extrabold text-lg">
+                <div
+                    className="absolute inset-0 z-50 flex flex-col items-center justify-center gap-4"
+                    style={{ background: 'rgba(210,180,120,0.07)', backdropFilter: 'blur(4px)' }}
+                >
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center"
+                        style={{
+                            background: 'rgba(210,180,120,0.15)',
+                            border: '2px dashed rgba(210,180,120,0.5)',
+                            animation: 'pulse 1.5s ease-in-out infinite',
+                        }}>
+                        <UploadCloud size={34} strokeWidth={1.5} style={{ color: 'rgba(210,180,120,0.9)' }} />
+                    </div>
+                    <span className="text-sm font-bold tracking-[0.2em] uppercase"
+                        style={{ color: 'rgba(210,180,120,0.85)' }}>
                         {t('common.drop_image')}
                     </span>
                 </div>
@@ -38,52 +51,73 @@ export function PhotoPanel({
 
             {croppedImageSrc ? (
                 <>
+                    {/* ── Loaded Photo ── */}
                     <img
                         src={croppedImageSrc}
                         alt="character"
                         className="w-full h-full object-cover"
                     />
+
+                    {/* ── Hover Replace Overlay ── */}
                     {hoverPhoto && !isDragging && (
-                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity">
-                            <span className="flex items-center gap-2 bg-[var(--surface-300)] text-[var(--text-primary)] px-5 py-2.5 rounded-[var(--radius-pill)] font-bold text-sm" style={{ boxShadow: 'var(--shadow-focus)' }}>
-                                <Sparkles size={15} />
+                        <div
+                            className="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-opacity"
+                            style={{ background: 'rgba(10,9,7,0.6)', backdropFilter: 'blur(6px)' }}
+                        >
+                            <div className="w-14 h-14 rounded-full flex items-center justify-center"
+                                style={{
+                                    background: 'rgba(255,255,255,0.08)',
+                                    border: '1px solid rgba(255,255,255,0.15)',
+                                }}>
+                                <RefreshCw size={20} strokeWidth={1.5} className="text-white/70" />
+                            </div>
+                            <span className="text-xs font-bold tracking-[0.25em] uppercase text-white/75">
                                 {t('common.replace_image')}
                             </span>
                         </div>
                     )}
                 </>
             ) : (
-                <div className="flex flex-col items-center justify-center gap-6 text-[var(--text-muted)] transition-all w-full h-full relative group">
-                    <div className="absolute inset-8 border-2 border-dashed border-white/5 rounded-2xl pointer-events-none group-hover:border-white/10 transition-colors" />
-                    
-                    <div className="flex flex-col items-center gap-4">
-                        <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500">
-                            <ImageIcon size={32} strokeWidth={1.5} className="text-white/30" />
+                /* ── Premium Empty State ── */
+                <div className="relative w-full h-full flex items-center justify-center">
+
+                    {/* Ambient center glow */}
+                    <div className="absolute inset-0 pointer-events-none"
+                        style={{
+                            background: 'radial-gradient(ellipse 55% 35% at 50% 55%, rgba(210,180,120,0.05) 0%, transparent 70%)'
+                        }} />
+
+                    {/* Corner marks — Apple grid language */}
+                    <div className="absolute top-8 left-8 w-5 h-5 border-t border-l" style={{ borderColor: 'rgba(255,255,255,0.08)' }} />
+                    <div className="absolute top-8 right-8 w-5 h-5 border-t border-r" style={{ borderColor: 'rgba(255,255,255,0.08)' }} />
+                    <div className="absolute bottom-8 left-8 w-5 h-5 border-b border-l" style={{ borderColor: 'rgba(255,255,255,0.08)' }} />
+                    <div className="absolute bottom-8 right-8 w-5 h-5 border-b border-r" style={{ borderColor: 'rgba(255,255,255,0.08)' }} />
+
+                    {/* Main CTA content */}
+                    <div className="flex flex-col items-center gap-6 z-10">
+                        {/* Icon — subtle, not loud */}
+                        <div className="w-[84px] h-[84px] rounded-full flex items-center justify-center animate-breathe"
+                            style={{
+                                background: 'rgba(255,255,255,0.03)',
+                                border: '1px solid rgba(255,255,255,0.06)',
+                                boxShadow: '0 0 64px rgba(210,180,120,0.08) inset',
+                            }}>
+                            <UploadCloud size={32} strokeWidth={1.2} className="text-white/30" />
                         </div>
-                        
-                        <div className="flex flex-col items-center gap-2">
-                            <span className="font-black text-[0.9rem] text-white/60 tracking-[0.2em] uppercase">
-                                {t('common.click_or_drag', 'CLICK OR DRAG')}
+
+                        {/* Text */}
+                        <div className="flex flex-col items-center gap-2 text-center">
+                            <span className="text-[0.75rem] font-bold tracking-[0.3em] uppercase"
+                                style={{ color: 'rgba(255,255,255,0.38)' }}>
+                                {t('common.upload_hint')}
                             </span>
-                            <div className="w-8 h-px bg-white/10" />
-                            <span className="font-bold text-[0.6rem] text-white/20 uppercase tracking-[0.25em]">
-                                {t('common.upload_hint', 'CHARACTER IMAGE')}
+                            <span className="text-[0.55rem] font-medium tracking-[0.2em] uppercase"
+                                style={{ color: 'rgba(255,255,255,0.15)' }}>
+                                {t('common.click_or_drag')}
                             </span>
                         </div>
-                        
-                        <button 
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                onClick(true); // pass true to indicate demo load
-                            }}
-                            className="mt-6 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-[0.65rem] font-bold tracking-wider text-white/50 hover:text-white/80 transition-all uppercase flex items-center gap-1.5"
-                        >
-                            <Sparkles size={12} />
-                            Load Demo Character
-                        </button>
                     </div>
                 </div>
-
             )}
         </div>
     );

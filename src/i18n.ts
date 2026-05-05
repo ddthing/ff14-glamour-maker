@@ -30,7 +30,7 @@ i18n
             new_updates: '새로운 소식',
             confirm: '확인',
             hide_version: '이 버전 다시 보지 않기',
-            title_brand: '투영 메이커',
+            title_brand: '투영 세트 메이커',
             view_changelog: '공지사항 및 업데이트',
             to_light: '라이트 모드로 전환',
             to_dark: '다크 모드로 전환',
@@ -44,7 +44,12 @@ i18n
             presets_title: '저장된 프리셋',
             presets_placeholder: '새 프리셋 이름 (예: 본캐 닌자)',
             presets_save: '저장',
-            presets_empty: '프리셋 이름을 입력해주세요.'
+            presets_empty: '프리셋 이름을 입력해주세요.',
+            click_or_drag: '클릭하거나 사진을 끌어다 놓으세요',
+            copy_link: '링크 복사',
+            copied: '복사 완료',
+            canvas_label: '외장 정보',
+            no_items: '아이템 없음'
           },
           slots: {
             mainhand: '무기',
@@ -58,6 +63,16 @@ i18n
             wrists: '팔찌',
             rings: '반지',
             face: '얼굴 소품'
+          },
+          crop: {
+            studio_editor: '스튜디오 에디터',
+            refine_portrait: '사진 편집',
+            zoom_intensity: '확대 비율',
+            discard: '취소',
+            apply_portrait: '적용하기',
+            hint_move: '사진 이동',
+            hint_zoom: '크기 조절',
+            hint_confirm: '선택 완료'
           }
         }
       },
@@ -79,7 +94,7 @@ i18n
             new_updates: "What's New",
             confirm: 'Confirm',
             hide_version: "Don't show for this version",
-            title_brand: 'FFXIV Glamour Maker',
+            title_brand: '투영 세트 메이커',
             view_changelog: 'View Changelog',
             to_light: 'Switch to light mode',
             to_dark: 'Switch to dark mode',
@@ -93,7 +108,12 @@ i18n
             presets_title: 'Saved Presets',
             presets_placeholder: 'New preset name (e.g. Healer)',
             presets_save: 'Save',
-            presets_empty: 'Please enter a preset name.'
+            presets_empty: 'Please enter a preset name.',
+            click_or_drag: 'Click or drag and drop your photo',
+            copy_link: 'Copy Link',
+            copied: 'Copied',
+            canvas_label: 'Character Glamour',
+            no_items: 'No items yet'
           },
           slots: {
             mainhand: 'Main Hand',
@@ -107,6 +127,16 @@ i18n
             wrists: 'Bracelets',
             rings: 'Ring',
             face: 'Face Accessory'
+          },
+          crop: {
+            studio_editor: 'Studio Editor',
+            refine_portrait: 'Refine Your Portrait',
+            zoom_intensity: 'Zoom Intensity',
+            discard: 'Discard',
+            apply_portrait: 'Apply Portrait',
+            hint_move: 'Move Photo',
+            hint_zoom: 'Zoom In/Out',
+            hint_confirm: 'Confirm Selection'
           }
         }
       },
@@ -128,7 +158,7 @@ i18n
             new_updates: '最新情報',
             confirm: '確認',
             hide_version: 'このバージョンを再表示しない',
-            title_brand: 'FFXIV ミラプリメーカー',
+            title_brand: '투영 세트 메이커',
             view_changelog: 'お知らせとアップデート',
             to_light: 'ライトモードに切り替え',
             to_dark: 'ダークモードに切り替え',
@@ -142,7 +172,12 @@ i18n
             presets_title: '保存されたプリセット',
             presets_placeholder: '新しいプリセット名（例：メイン忍者）',
             presets_save: '保存',
-            presets_empty: 'プリセット名を入力してください。'
+            presets_empty: 'プリセット名を入力してください。',
+            click_or_drag: 'クリック または 写真をドラッグ＆ドロップ',
+            copy_link: 'リンクをコピー',
+            copied: 'コピー完了',
+            canvas_label: 'ミラプリ情報',
+            no_items: 'アイテムなし'
           },
           slots: {
             mainhand: '主武器',
@@ -156,6 +191,16 @@ i18n
             wrists: '腕輪',
             rings: '指輪',
             face: 'フェイスアクセサリー'
+          },
+          crop: {
+            studio_editor: 'スタジオエディター',
+            refine_portrait: 'ポートレートを編集',
+            zoom_intensity: 'ズーム調整',
+            discard: 'キャンセル',
+            apply_portrait: '適用する',
+            hint_move: '写真の移動',
+            hint_zoom: 'ズーム',
+            hint_confirm: '選択を確定'
           }
         }
       }

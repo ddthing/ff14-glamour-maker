@@ -3,44 +3,20 @@ import { useTranslation } from 'react-i18next';
 import { useDebounce } from '../../hooks/useDebounce';
 import type { FF14Item } from '../../hooks/useFF14Search';
 import { useFF14Search } from '../../hooks/useFF14Search';
+import { isMatchingSlot } from '../../domain/itemCategories';
+import type { EquipmentPart } from '../../types';
 import { ItemIcon } from '../canvas/ItemIcon';
 import { Search, AlertCircle, Loader2 } from 'lucide-react';
 
 interface Props {
     value: string;
     hasError?: boolean;
-    currentSlot?: string;
+    /** The slot to filter results by. Must be a valid EquipmentPart. */
+    currentSlot?: EquipmentPart;
     onNameChange: (name: string) => void;
     onSelect: (item: FF14Item) => void;
 }
 
-const SLOT_CATEGORY_MAP: Record<string, number | 'weapon'> = {
-    head: 34,
-    body: 35,
-    legs: 36,
-    hands: 37,
-    feet: 38,
-    neck: 40,
-    ears: 41,
-    wrists: 42,
-    rings: 43,
-    face: 108,
-    mainhand: 'weapon', 
-};
-
-const WEAPON_UI_CATEGORIES = [
-    ...Array.from({ length: 33 }, (_, i) => i + 1),
-    83, 84, 87, 88, 89, 96, 97, 98, 105, 106, 107
-];
-
-function isMatchingSlot(item: FF14Item, currentSlot: string): boolean {
-    if (item.uiCategory === undefined) return true;
-    if (currentSlot === 'face') return item.uiCategory === 108 || item.uiCategory === 34;
-    const expected = SLOT_CATEGORY_MAP[currentSlot];
-    if (expected === undefined) return true;
-    if (expected === 'weapon') return WEAPON_UI_CATEGORIES.includes(item.uiCategory);
-    return item.uiCategory === expected;
-}
 
 /**
  * ItemSearchInput
@@ -93,7 +69,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
             <div className="relative flex items-center h-[44px]">
                 <input
                     className={`
-                        w-full h-full bg-[var(--surface-100)] border rounded-lg px-4 pl-10 text-[0.9375rem] 
+                        w-full h-full bg-[var(--surface-100)] border rounded-lg px-4 pl-10 text-sm 
                         focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] outline-none transition-all
                         ${hasError ? 'border-[var(--error)] bg-[var(--error)]/5' : 'border-[var(--border)]'}
                     `}
@@ -121,7 +97,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     
                     {/* Loading State */}
                     {isLoading && filteredResults.length === 0 && (
-                        <div className="p-4 flex items-center justify-center gap-2 text-[0.8rem] text-[var(--text-muted)]">
+                        <div className="p-4 flex items-center justify-center gap-2 text-xs text-[var(--text-muted)]">
                             <Loader2 size={14} className="animate-spin text-[var(--accent)]" />
                             {t('common.loading')}
                         </div>
@@ -129,14 +105,14 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
 
                     {/* No Results State */}
                     {!isLoading && debouncedQuery.trim().length >= 1 && filteredResults.length === 0 && !error && (
-                        <div className="p-4 text-center text-[0.8rem] text-[var(--text-muted)]">
+                        <div className="p-4 text-center text-xs text-[var(--text-muted)]">
                             {t('common.no_results')}
                         </div>
                     )}
 
                     {/* Error State */}
                     {!!error && (
-                        <div className="p-4 flex items-center gap-2 text-[0.8rem] text-[var(--error)] font-medium bg-[var(--error)]/5">
+                        <div className="p-4 flex items-center gap-2 text-xs text-[var(--error)] font-medium bg-[var(--error)]/5">
                             <AlertCircle size={14} />
                             {error}
                         </div>
@@ -157,11 +133,11 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                                 />
                             </div>
                             <div className="flex-1 min-w-0">
-                                <div className="text-[0.85rem] font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--accent)]">
+                                <div className="text-sm font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--accent)]">
                                     {item.name}
                                 </div>
                                 {item.nameEn && (
-                                    <div className="text-[0.65rem] text-[var(--text-muted)] truncate">
+                                    <div className="text-xs text-[var(--text-muted)] truncate">
                                         {item.nameEn}
                                     </div>
                                 )}

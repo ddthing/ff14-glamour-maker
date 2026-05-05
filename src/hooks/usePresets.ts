@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import type { AppState, EquipmentPart, EquipItem } from '../types';
 
 export interface Preset {
@@ -17,19 +17,17 @@ const PRESETS_STORAGE_KEY = 'ff14_glamour_presets';
  * P1 수정: console.error → 조용히 실패, alert() → 제거
  */
 export function usePresets() {
-  const [presets, setPresets] = useState<Preset[]>([]);
-
-  // Load presets on mount
-  useEffect(() => {
+  // ── Lazy init: 첫 렌더부터 저장된 프리셋을 올바르게 표시 ──────────────────
+  // useEffect에서 읽으면 첫 렌더가 [] → 마운트 후 실제 데이터로 교체되어 깜박임 발생.
+  // lazy initializer는 첫 렌더 전에 실행되므로 깜박임 없음.
+  const [presets, setPresets] = useState<Preset[]>(() => {
     try {
       const stored = localStorage.getItem(PRESETS_STORAGE_KEY);
-      if (stored) {
-        setPresets(JSON.parse(stored));
-      }
+      return stored ? (JSON.parse(stored) as Preset[]) : [];
     } catch {
-      // 손상된 데이터는 무시하고 빈 상태로 시작
+      return [];
     }
-  }, []);
+  });
 
   // Save presets whenever they change
   const savePresetsToStorage = (newPresets: Preset[]) => {

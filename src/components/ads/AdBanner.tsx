@@ -32,12 +32,11 @@ export function AdBanner({ slot, format = 'auto', className, style }: AdBannerPr
       {/* Fallback UI (광고 미승인/차단 상태일 때 보임) */}
       <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-auto bg-[var(--bg-app)]">
         <div className="flex flex-col items-center gap-3">
-          <span className="text-[1.5rem]">☕</span>
           <span className="text-[0.7rem] font-bold tracking-widest uppercase text-[var(--text-secondary)] leading-relaxed">
-            Support<br/>the Developer
+            Support<br />the Developer
           </span>
           <p className="text-[0.65rem] text-[var(--text-muted)] mt-1 mb-2 px-2">
-            광고 차단기가 활성화되어 있습니다.<br/>개발자를 후원해 주시면 큰 힘이 됩니다!
+            개발자를 후원해 주시면 큰 힘이 됩니다!
           </p>
           <a
             href="https://ko-fi.com/reconeur"

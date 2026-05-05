@@ -10,7 +10,7 @@ interface CanvasItemRowProps {
 
 /**
  * CanvasItemRow — 캔버스 내 단일 아이템 행
- * PreviewCanvas의 renderItem()에서 추출된 순수 표현 컴포넌트
+ * Design: Apple Senior — 8px grid, refined type hierarchy, breathing room
  */
 export function CanvasItemRow({ item }: CanvasItemRowProps) {
     const { t, i18n } = useTranslation();
@@ -28,9 +28,28 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
     ].filter((d): d is { idx: number; name: string } => d !== null);
 
     return (
-        <div className="flex items-center gap-4 py-3.5 border-b border-white/10 last:border-0">
-            {/* 아이콘 */}
-            <div className="w-[58px] h-[58px] rounded-lg bg-white/10 border border-white/20 shrink-0 overflow-hidden flex items-center justify-center shadow-inner">
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            padding: '7px 0',
+            borderBottom: '1px solid rgba(255,255,255,0.055)',
+        }}
+            className="last:border-0"
+        >
+            {/* Icon — 44px, minimal border */}
+            <div style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '0px',
+                background: 'rgba(255,255,255,0.07)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                flexShrink: 0,
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}>
                 {(item.nameKo || item.iconPath) ? (
                     <ItemIcon
                         nameKo={item.nameKo || ''}
@@ -38,43 +57,141 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
                         className="w-full h-full object-cover"
                     />
                 ) : (
-                    <span className="text-[0.55rem] opacity-30 uppercase font-medium tracking-widest">
+                    <span style={{
+                        fontSize: '0.5rem',
+                        opacity: 0.25,
+                        textTransform: 'uppercase',
+                        fontWeight: 600,
+                        letterSpacing: '0.1em',
+                        color: 'white',
+                    }}>
                         {t(`slots.${item.id as string}`).slice(0, 3)}
                     </span>
                 )}
             </div>
 
-            {/* 이름 */}
-            <div className="flex-1 flex flex-col min-w-0">
-                <span className="text-[1.2rem] font-extrabold text-white leading-tight tracking-tight truncate drop-shadow-sm">
+            {/* Name block */}
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                <span style={{
+                    fontSize: '0.9rem',
+                    fontWeight: 700,
+                    color: 'rgba(255,255,255,0.88)',
+                    lineHeight: 1.25,
+                    letterSpacing: '-0.01em',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    display: 'block',
+                }}>
                     {main}
                 </span>
                 {sub && (
-                    <span className="text-[0.7rem] font-medium text-white/55 truncate mt-1">
+                    <span style={{
+                        fontSize: '0.65rem',
+                        fontWeight: 500,
+                        color: 'rgba(255,255,255,0.38)',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                        display: 'block',
+                        letterSpacing: '0.01em',
+                    }}>
                         {sub}
                     </span>
                 )}
             </div>
 
-            {/* 염색 */}
+            {/* Dye swatches — visual color bars */}
             {activeDyes.length > 0 && (
-                <div className="flex flex-col gap-1 items-end shrink-0">
+                <div style={{ display: 'flex', gap: '4px', alignItems: 'stretch', flexShrink: 0 }}>
                     {activeDyes.map(({ idx, name }) => {
                         const dye = FF14_DYES.find(d => d.name === name);
-                        const dyeName = lang.startsWith('ja') ? dye?.nameJa
-                            : lang.startsWith('en') ? dye?.nameEn
-                            : dye?.name;
+                        const dyeKo = dye?.name || name;
+                        const dyeEn = dye?.nameEn || '';
+                        const dyeJa = dye?.nameJa || '';
+
+                        let dyeMain: string;
+                        let dyeSub: string;
+                        if (lang.startsWith('en')) {
+                            dyeMain = dyeEn || dyeKo;
+                            dyeSub = [dyeKo, dyeJa].filter(Boolean).join(' / ');
+                        } else if (lang.startsWith('ja')) {
+                            dyeMain = dyeJa || dyeKo;
+                            dyeSub = [dyeKo, dyeEn].filter(Boolean).join(' / ');
+                        } else {
+                            dyeMain = dyeKo;
+                            dyeSub = [dyeEn, dyeJa].filter(Boolean).join(' / ');
+                        }
+
+                        const hex = dye?.hex ?? '#888888';
+
                         return (
                             <div
                                 key={idx}
-                                className="flex items-center gap-1.5 bg-black/40 border border-white/15 rounded-full px-2.5 py-1 text-[0.65rem] text-white/80 font-medium"
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    overflow: 'hidden',
+                                    border: '1px solid rgba(255,255,255,0.12)',
+                                    width: '56px',
+                                    flexShrink: 0,
+                                }}
                             >
-                                <span className="opacity-40 tracking-wider">[{idx}]</span>
-                                <span
-                                    className="w-2.5 h-2.5 rounded-full border border-white/30"
-                                    style={{ background: dye?.hex ?? '#888' }}
-                                />
-                                <span className="truncate max-w-[80px]">{dyeName}</span>
+                                {/* Color bar — prominent swatch */}
+                                <div style={{
+                                    height: '18px',
+                                    background: hex,
+                                    flexShrink: 0,
+                                    position: 'relative',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    paddingLeft: '4px',
+                                }}>
+                                    <span style={{
+                                        fontSize: '0.45rem',
+                                        fontWeight: 900,
+                                        letterSpacing: '0.05em',
+                                        color: 'rgba(255,255,255,0.7)',
+                                        textShadow: '0 1px 2px rgba(0,0,0,0.8)',
+                                        textTransform: 'uppercase',
+                                        mixBlendMode: 'overlay',
+                                    }}>
+                                        DYE {idx}
+                                    </span>
+                                </div>
+                                {/* Name label */}
+                                <div style={{
+                                    background: 'rgba(0,0,0,0.45)',
+                                    padding: '2px 4px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '1px',
+                                }}>
+                                    <span style={{
+                                        fontSize: '0.55rem',
+                                        fontWeight: 700,
+                                        color: 'rgba(255,255,255,0.8)',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        whiteSpace: 'nowrap',
+                                        lineHeight: 1.2,
+                                    }}>
+                                        {dyeMain}
+                                    </span>
+                                    {dyeSub && (
+                                        <span style={{
+                                            fontSize: '0.45rem',
+                                            fontWeight: 400,
+                                            color: 'rgba(255,255,255,0.35)',
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap',
+                                            lineHeight: 1.2,
+                                        }}>
+                                            {dyeSub}
+                                        </span>
+                                    )}
+                                </div>
                             </div>
                         );
                     })}

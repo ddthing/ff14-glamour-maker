@@ -6,21 +6,28 @@ import type { EquipItem } from '../types';
  * @param language The current i18n language string (e.g., 'ko', 'en', 'ja').
  */
 export function getLocalizedItemNames(item: EquipItem, language: string) {
+    const ko = item.nameKo || item.name || '';
+    const en = item.nameEn || '';
+    const ja = item.nameJa || '';
+
     if (language.startsWith('en')) {
+        const subParts = [ko, ja].filter(Boolean);
         return {
-            main: item.nameEn || item.name,
-            sub: [item.nameKo, item.nameJa].filter(Boolean).join(' · '),
+            main: en || ko,
+            sub: subParts.join(' / '),
         };
     }
     if (language.startsWith('ja')) {
+        const subParts = [ko, en].filter(Boolean);
         return {
-            main: item.nameJa || item.name,
-            sub: [item.nameKo, item.nameEn].filter(Boolean).join(' · '),
+            main: ja || ko,
+            sub: subParts.join(' / '),
         };
     }
-    // 기본 한국어
+    // Default to Korean
+    const subParts = [en, ja].filter(Boolean);
     return {
-        main: item.nameKo || item.name,
-        sub: [item.nameEn, item.nameJa].filter(Boolean).join(' · '),
+        main: ko,
+        sub: subParts.join(' / '),
     };
 }

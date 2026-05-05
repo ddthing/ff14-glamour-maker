@@ -114,13 +114,7 @@ export function PreviewCanvas({ state, setState }: Props) {
                             hoverPhoto={hoverPhoto}
                             onMouseEnter={() => setHoverPhoto(true)}
                             onMouseLeave={() => setHoverPhoto(false)}
-                            onClick={(isDemo) => {
-                                if (isDemo) {
-                                    setState(s => ({ ...s, imageSrc: '/og-image.png', croppedImageSrc: '/og-image.png' }));
-                                } else {
-                                    fileInputRef.current?.click();
-                                }
-                            }}
+                            onClick={() => fileInputRef.current?.click()}
                         />
 
                         {/* ── 우: 글래머 정보 패널 ── */}

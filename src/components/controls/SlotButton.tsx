@@ -53,7 +53,7 @@ export function SlotButton({ part, item, isActive, onClick }: SlotButtonProps) {
         >
             {/* Label & Icon */}
             <span className={`
-                flex items-center gap-1 text-[0.6rem] font-bold uppercase tracking-wider
+                flex items-center gap-1 text-xs font-bold uppercase tracking-wider
                 ${isActive ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)] group-hover:text-[var(--text-secondary)]'}
             `}>
                 {SLOT_ICONS[part]}

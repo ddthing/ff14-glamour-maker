@@ -55,7 +55,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
 
             {/* Input Field */}
             <input
-                className="w-full h-full bg-transparent border-none text-[0.9375rem] focus:ring-0 outline-none placeholder:text-[var(--text-muted)]"
+                className="w-full h-full bg-transparent border-none text-sm focus:ring-0 outline-none placeholder:text-[var(--text-muted)]"
                 placeholder={placeholder}
                 value={open ? searchTerm : value}
                 onChange={e => {
@@ -72,7 +72,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
             {open && (
                 <div className="dropdown-menu absolute top-[calc(100%+6px)] left-0 right-0 z-[200] max-h-[220px] scrollbar-thin">
                     {filteredDyes.length === 0 ? (
-                        <div className="p-3 text-center text-[0.75rem] text-[var(--text-muted)]">
+                        <div className="p-3 text-center text-xs text-[var(--text-muted)]">
                             {t('common.no_results')}
                         </div>
                     ) : (
@@ -90,7 +90,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
                                     className="w-2.5 h-2.5 rounded-full border border-[var(--border)] shrink-0" 
                                     style={{ background: dye.hex !== 'transparent' ? dye.hex : 'transparent' }} 
                                 />
-                                <span className="text-[0.8rem] font-medium text-[var(--text-primary)] truncate group-hover:text-[var(--accent)]">
+                                <span className="text-sm font-medium text-[var(--text-primary)] truncate group-hover:text-[var(--accent)]">
                                     {i18n.language.startsWith('ja') ? dye.nameJa : 
                                      i18n.language.startsWith('en') ? dye.nameEn : 
                                      dye.name}
