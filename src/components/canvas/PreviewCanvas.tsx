@@ -96,7 +96,7 @@ export function PreviewCanvas({ state, setState }: Props) {
                         id="glamour-canvas"
                         className="canvas-scale-inner select-none flex flex-row rounded-[var(--radius-lg)] overflow-hidden"
                         style={{
-                            background: 'linear-gradient(135deg, #1a1915 0%, #26251e 100%)',
+                            background: '#1a1915',
                             boxShadow: 'var(--shadow-elevated)',
                             width: CANVAS_W,
                             height: CANVAS_H,

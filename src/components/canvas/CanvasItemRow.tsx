@@ -10,7 +10,8 @@ interface CanvasItemRowProps {
 
 /**
  * CanvasItemRow — 캔버스 내 단일 아이템 행
- * Design: Apple Senior — 8px grid, refined type hierarchy, breathing room
+ * Design: 3단 적층 구조 (메인명 / 서브명 / 염색 칩)
+ * — 다국어 이름이 길어도 잘리지 않음, 염색 정보를 하단에 칩 형태로 배치
  */
 export function CanvasItemRow({ item }: CanvasItemRowProps) {
     const { t, i18n } = useTranslation();
@@ -30,18 +31,18 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
     return (
         <div style={{
             display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            padding: '7px 0',
-            borderBottom: '1px solid rgba(255,255,255,0.055)',
+            alignItems: 'flex-start',
+            gap: '14px',
+            padding: '8px 0',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
         }}
             className="last:border-0"
         >
-            {/* Icon — 44px, minimal border */}
+            {/* Icon — 48px */}
             <div style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '0px',
+                width: '48px',
+                height: '48px',
+                borderRadius: '2px',
                 background: 'rgba(255,255,255,0.07)',
                 border: '1px solid rgba(255,255,255,0.1)',
                 flexShrink: 0,
@@ -70,132 +71,100 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
                 )}
             </div>
 
-            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '1px' }}>
+            {/* 3단 텍스트 영역 */}
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '3px' }}>
+
+                {/* 1단: 메인 아이템명 (한글 등 주 언어) */}
                 <span style={{
-                    fontSize: '1.1rem',
+                    fontSize: '1.3rem',
                     fontWeight: 800,
-                    color: 'rgba(255,255,255,0.92)',
-                    lineHeight: 1.2,
-                    letterSpacing: '-0.02em',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap',
+                    color: '#ffffff',
+                    lineHeight: 1.15,
+                    letterSpacing: '-0.03em',
                     display: 'block',
+                    wordBreak: 'keep-all',
                 }}>
                     {main}
                 </span>
+
+                {/* 2단: 서브 아이템명 (다국어) */}
                 {sub && (
                     <span style={{
-                        fontSize: '0.75rem',
+                        fontSize: '0.82rem',
                         fontWeight: 500,
-                        color: 'rgba(255,255,255,0.4)',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap',
+                        color: 'rgba(255,255,255,0.42)',
+                        lineHeight: 1.25,
                         display: 'block',
-                        letterSpacing: '0.01em',
+                        letterSpacing: '-0.01em',
+                        wordBreak: 'break-word',
                     }}>
                         {sub}
                     </span>
                 )}
-            </div>
 
-            {/* Dye swatches — visual color bars */}
-            {activeDyes.length > 0 && (
-                <div style={{ display: 'flex', gap: '4px', alignItems: 'stretch', flexShrink: 0 }}>
-                    {activeDyes.map(({ idx, name }) => {
-                        const dye = FF14_DYES.find(d => d.name === name);
-                        const dyeKo = dye?.name || name;
-                        const dyeEn = dye?.nameEn || '';
-                        const dyeJa = dye?.nameJa || '';
+                {/* 3단: 염색 정보 칩 */}
+                {activeDyes.length > 0 && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginTop: '3px' }}>
+                        {activeDyes.map(({ idx, name }) => {
+                            const dye = FF14_DYES.find(d => d.name === name);
+                            const dyeKo = dye?.name || name;
+                            const dyeEn = dye?.nameEn || '';
+                            const dyeJa = dye?.nameJa || '';
+                            const hex = dye?.hex ?? '#888888';
 
-                        let dyeMain: string;
-                        let dyeSub: string;
-                        if (lang.startsWith('en')) {
-                            dyeMain = dyeEn || dyeKo;
-                            dyeSub = [dyeKo, dyeJa].filter(Boolean).join(' / ');
-                        } else if (lang.startsWith('ja')) {
-                            dyeMain = dyeJa || dyeKo;
-                            dyeSub = [dyeKo, dyeEn].filter(Boolean).join(' / ');
-                        } else {
-                            dyeMain = dyeKo;
-                            dyeSub = [dyeEn, dyeJa].filter(Boolean).join(' / ');
-                        }
+                            let dyeLabel: string;
+                            if (lang.startsWith('en')) {
+                                dyeLabel = dyeEn || dyeKo;
+                            } else if (lang.startsWith('ja')) {
+                                dyeLabel = dyeJa || dyeKo;
+                            } else {
+                                dyeLabel = dyeKo;
+                            }
 
-                        const hex = dye?.hex ?? '#888888';
-
-                        return (
-                            <div
-                                key={idx}
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    overflow: 'hidden',
-                                    border: '1px solid rgba(255,255,255,0.12)',
-                                    width: '56px',
-                                    flexShrink: 0,
-                                }}
-                            >
-                                {/* Color bar — prominent swatch */}
-                                <div style={{
-                                    height: '18px',
-                                    background: hex,
-                                    flexShrink: 0,
-                                    position: 'relative',
+                            return (
+                                <div key={idx} style={{
                                     display: 'flex',
                                     alignItems: 'center',
-                                    paddingLeft: '4px',
+                                    gap: '5px',
+                                    background: 'rgba(255,255,255,0.06)',
+                                    border: '1px solid rgba(255,255,255,0.1)',
+                                    padding: '2px 8px 2px 5px',
+                                    borderRadius: '2px',
                                 }}>
+                                    {/* 색상 스와치 */}
+                                    <div style={{
+                                        width: '10px',
+                                        height: '10px',
+                                        background: hex,
+                                        borderRadius: '1px',
+                                        boxShadow: '0 0 0 1px rgba(0,0,0,0.4)',
+                                        flexShrink: 0,
+                                    }} />
+                                    {/* 염색명 */}
                                     <span style={{
-                                        fontSize: '0.45rem',
-                                        fontWeight: 900,
-                                        letterSpacing: '0.05em',
-                                        color: 'rgba(255,255,255,0.7)',
-                                        textShadow: '0 1px 2px rgba(0,0,0,0.8)',
-                                        textTransform: 'uppercase',
-                                        mixBlendMode: 'overlay',
+                                        fontSize: '0.7rem',
+                                        fontWeight: 700,
+                                        color: 'rgba(255,255,255,0.75)',
+                                        letterSpacing: '0.01em',
+                                        lineHeight: 1,
                                     }}>
-                                        DYE {idx}
+                                        {dyeLabel}
                                     </span>
-                                </div>
-                                {/* Name label */}
-                                <div style={{
-                                    background: 'rgba(0,0,0,0.45)',
-                                    padding: '2px 4px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    gap: '1px',
-                                }}>
+                                    {/* DYE 번호 뱃지 */}
                                     <span style={{
                                         fontSize: '0.55rem',
-                                        fontWeight: 700,
-                                        color: 'rgba(255,255,255,0.8)',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        whiteSpace: 'nowrap',
-                                        lineHeight: 1.2,
+                                        fontWeight: 500,
+                                        color: 'rgba(255,255,255,0.25)',
+                                        letterSpacing: '0.05em',
                                     }}>
-                                        {dyeMain}
+                                        {idx}
                                     </span>
-                                    {dyeSub && (
-                                        <span style={{
-                                            fontSize: '0.45rem',
-                                            fontWeight: 400,
-                                            color: 'rgba(255,255,255,0.35)',
-                                            overflow: 'hidden',
-                                            textOverflow: 'ellipsis',
-                                            whiteSpace: 'nowrap',
-                                            lineHeight: 1.2,
-                                        }}>
-                                            {dyeSub}
-                                        </span>
-                                    )}
                                 </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            )}
+                            );
+                        })}
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

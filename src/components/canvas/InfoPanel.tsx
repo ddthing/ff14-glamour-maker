@@ -14,36 +14,60 @@ const SLOT_ORDER: EquipmentPart[] = [
 
 /**
  * InfoPanel — 캔버스 우측 글래머 정보 패널 (600px)
- * Design: Apple Senior + DESIGN.md — Warm Minimalism, 8px grid, -0.72px tracking
+ * Fix: 블러 이미지를 -25% / 150% / scale(1.1) 로 확장하여 우측 검은 여백 제거
+ * Fix: 타이틀 폰트 2.2rem 으로 상향
  */
 export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
     const { t } = useTranslation();
     const filledItems = SLOT_ORDER.filter(id => !!state.items[id]?.name);
 
     return (
-        <div className="relative flex-1 h-full overflow-hidden flex flex-col">
+        <div className="relative flex-1 h-full overflow-hidden flex flex-col" style={{ background: '#1a1915' }}>
 
-            {/* ── Background Layer (Premium Glassmorphism) ── */}
+            {/* ── Background Layer ── */}
             {bgSrc ? (
                 <>
-                    <img
-                        src={bgSrc}
-                        alt=""
+                    {/*
+                     * Blur 여백 완전 제거 전략:
+                     * CSS filter:blur()는 img 엘리먼트 경계에서 투명해지는 특성이 있어
+                     * img를 아무리 크게 해도 엣지는 투명해짐.
+                     * 해결: wrapper div를 InfoPanel 밖으로 60px 확장 →
+                     * img가 wrapper를 꽉 채움 → blur 투명 엣지는 wrapper 끝(=InfoPanel 밖)에 생성됨 →
+                     * InfoPanel의 overflow:hidden이 그 부분을 잘라냄 → 안쪽엔 완전한 blur만 보임.
+                     *)*/}
+                    <div
                         aria-hidden
-                        className="absolute inset-[-15%] w-[130%] h-[130%] object-cover pointer-events-none"
+                        className="pointer-events-none"
                         style={{
-                            filter: 'blur(24px) saturate(2.0)',
-                            opacity: 0.88,
-                            willChange: 'transform',
-                            transform: 'translateZ(0)',
+                            position: 'absolute',
+                            top: '-60px',
+                            left: '-60px',
+                            right: '-60px',
+                            bottom: '-60px',
+                            zIndex: 0,
                         }}
-                    />
-                    {/* Radial overlay: very transparent center so photo shows, darker at edges for text */}
+                    >
+                        <img
+                            src={bgSrc}
+                            alt=""
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                filter: 'blur(36px) saturate(1.8)',
+                                opacity: 0.85,
+                                willChange: 'transform',
+                                transform: 'translateZ(0)',
+                                display: 'block',
+                            }}
+                        />
+                    </div>
+                    {/* Radial overlay */}
                     <div className="absolute inset-0 z-[1]"
                         style={{
                             background: 'radial-gradient(circle at 45% 50%, rgba(14,13,10,0.18) 0%, rgba(14,13,10,0.6) 60%, rgba(14,13,10,0.88) 100%)'
                         }} />
-                    {/* Subtle noise grain for material feel */}
+                    {/* Noise grain */}
                     <div className="absolute inset-0 z-[2] opacity-[0.04] pointer-events-none"
                         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
                 </>
@@ -52,11 +76,11 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                     style={{ background: 'linear-gradient(145deg, #1f1e18 0%, #171610 100%)' }} />
             )}
 
-            {/* ── Content (8px grid: px=40px, py=36px) ── */}
-            <div className="relative z-10 flex flex-col h-full" style={{ padding: '36px 40px 28px' }}>
+            {/* ── Content ── */}
+            <div className="relative z-10 flex flex-col h-full" style={{ padding: '32px 40px 24px' }}>
 
                 {/* ── Header ── */}
-                <div style={{ marginBottom: '28px' }}>
+                <div style={{ marginBottom: '24px' }}>
                     {/* Eyebrow label */}
                     <div style={{ marginBottom: '10px' }}>
                         <span style={{
@@ -71,12 +95,12 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                         </span>
                     </div>
 
-                    {/* Title — DESIGN.md Section Heading: 26px, -0.325px tracking */}
+                    {/* Title — 2.2rem (가독성 향상) */}
                     <h1 style={{
-                        fontSize: '1.9rem',
+                        fontSize: '2.2rem',
                         fontWeight: 800,
                         lineHeight: 1.08,
-                        letterSpacing: '-0.325px',
+                        letterSpacing: '-0.4px',
                         color: '#ffffff',
                         textShadow: '0 2px 20px rgba(0,0,0,0.4)',
                         wordBreak: 'break-word',
@@ -119,7 +143,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                 <div style={{
                     height: '1px',
                     background: 'rgba(255,255,255,0.07)',
-                    marginBottom: '16px',
+                    marginBottom: '12px',
                     flexShrink: 0,
                 }} />
 
@@ -203,9 +227,9 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                         }}>
                             DESIGN & DEVELOPMENT:
                         </span>
-                        <a 
-                            href="https://x.com/reconeur" 
-                            target="_blank" 
+                        <a
+                            href="https://x.com/reconeur"
+                            target="_blank"
                             rel="noopener noreferrer"
                             style={{
                                 fontSize: '0.6rem',
