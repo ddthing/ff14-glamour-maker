@@ -1,4 +1,6 @@
 import { useState, useCallback } from 'react';
+import { isMatchingSlot } from '../domain/itemCategories';
+import type { EquipmentPart } from '../types';
 
 // 1. 로컬에 저장된 다국어 items 데이터 불러오기
 // 구조: { "1": { "en": "Gil", "ko": "길" }, "28974": { "ko": "신 이슈가르드..." } }
@@ -48,7 +50,7 @@ export function useFF14Search() {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
 
-    const searchItems = useCallback(async (query: string) => {
+    const searchItems = useCallback(async (query: string, currentSlot?: EquipmentPart) => {
         const q = query.trim().toLowerCase();
         const safeKeyword = q.replace(/\s+/g, '');
         
@@ -64,9 +66,9 @@ export function useFF14Search() {
             // Ensure the UI remains responsive during large dataset iteration
             await new Promise(resolve => setTimeout(resolve, 0));
 
-            const matchedItems: FF14Item[] = [];
-            const MAX_RESULTS = 50; 
-            
+            const MAX_RESULTS = 200;
+            const allMatched: FF14Item[] = [];
+
             for (const [idStr, langs] of Object.entries(typedItemsData)) {
                 const koName = (langs.ko || '').toLowerCase().replace(/\s+/g, '');
                 const enName = (langs.en || '').toLowerCase().replace(/\s+/g, '');
@@ -77,24 +79,28 @@ export function useFF14Search() {
                     enName.includes(safeKeyword) || 
                     jaName.includes(safeKeyword)
                 ) {
-                    const id = Number(idStr);
-                    
-                    matchedItems.push({
-                        id: id,
+                    allMatched.push({
+                        id: Number(idStr),
                         name: langs.ko || langs.en || langs.ja || 'Unknown Item',
                         nameEn: langs.en || '',
                         nameJa: langs.ja || '',
                         uiCategory: langs.uiCategory ?? undefined,
                         iconPath: langs.iconPath || undefined,
                     });
-
-                    if (matchedItems.length >= MAX_RESULTS) {
-                        break;
-                    }
                 }
             }
 
-            setResults(matchedItems);
+            // 현재 슬롯과 일치하는 아이템을 앞으로 정렬하여
+            // ID 높은 신규 패치 아이템이 MAX_RESULTS에 잘리지 않도록 함
+            if (currentSlot) {
+                allMatched.sort((a, b) => {
+                    const aMatch = isMatchingSlot(a, currentSlot) ? 0 : 1;
+                    const bMatch = isMatchingSlot(b, currentSlot) ? 0 : 1;
+                    return aMatch - bMatch;
+                });
+            }
+
+            setResults(allMatched.slice(0, MAX_RESULTS));
         } catch (err: unknown) {
             console.error('[Search Error]', err);
             setError('검색 처리 중 오류가 발생했습니다.');

@@ -34,7 +34,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
     useEffect(() => {
         if (!isFocused) return;
         if (debouncedQuery.trim().length >= 1) {
-            searchItems(debouncedQuery);
+            searchItems(debouncedQuery, currentSlot);
             setOpen(true);
         } else {
             clearResults();

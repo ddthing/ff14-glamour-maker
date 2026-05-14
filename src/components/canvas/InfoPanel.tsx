@@ -9,7 +9,7 @@ interface InfoPanelProps {
 
 const SLOT_ORDER: EquipmentPart[] = [
     'mainhand', 'head', 'body', 'hands', 'legs',
-    'feet', 'ears', 'neck', 'wrists', 'rings', 'face',
+    'feet', 'ears', 'neck', 'wrists', 'rings', 'rings2', 'face',
 ];
 
 /**
@@ -20,6 +20,13 @@ const SLOT_ORDER: EquipmentPart[] = [
 export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
     const { t } = useTranslation();
     const filledItems = SLOT_ORDER.filter(id => !!state.items[id]?.name);
+    const filledCount = filledItems.length;
+
+    // 입력된 아이템 수에 따라 행 크기를 동적 조절
+    // ≤6: comfortable (큰 폰트/아이콘), 7-9: balanced, 10+: compact
+    const sizeMode: 'comfortable' | 'balanced' | 'compact' =
+        filledCount <= 6 ? 'comfortable' :
+        filledCount <= 9 ? 'balanced' : 'compact';
 
     return (
         <div className="relative flex-1 h-full overflow-hidden flex flex-col" style={{ background: '#1a1915' }}>
@@ -80,7 +87,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
             <div className="relative z-10 flex flex-col h-full" style={{ padding: '32px 40px 24px' }}>
 
                 {/* ── Header ── */}
-                <div style={{ marginBottom: '24px' }}>
+                <div style={{ marginBottom: '16px' }}>
                     {/* Eyebrow label */}
                     <div style={{ marginBottom: '10px' }}>
                         <span style={{
@@ -95,9 +102,9 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                         </span>
                     </div>
 
-                    {/* Title — 2.2rem (가독성 향상) */}
+                    {/* Title — 1.9rem */}
                     <h1 style={{
-                        fontSize: '2.2rem',
+                        fontSize: '1.9rem',
                         fontWeight: 800,
                         lineHeight: 1.08,
                         letterSpacing: '-0.4px',
@@ -152,7 +159,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                     {filledItems.length > 0 ? (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
                             {SLOT_ORDER.map(id => (
-                                <CanvasItemRow key={id} item={state.items[id]} />
+                                <CanvasItemRow key={id} item={state.items[id]} sizeMode={sizeMode} />
                             ))}
                         </div>
                     ) : (
@@ -186,8 +193,8 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
 
                 {/* ── Footer — Brand watermark ── */}
                 <div style={{
-                    marginTop: '20px',
-                    paddingTop: '16px',
+                    marginTop: '12px',
+                    paddingTop: '10px',
                     borderTop: '1px solid rgba(255,255,255,0.07)',
                     display: 'flex',
                     justifyContent: 'space-between',

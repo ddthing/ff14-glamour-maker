@@ -6,6 +6,7 @@ import { getLocalizedItemNames } from '../../utils/formatters';
 
 interface CanvasItemRowProps {
     item: EquipItem;
+    sizeMode?: 'comfortable' | 'balanced' | 'compact';
 }
 
 /**
@@ -13,13 +14,21 @@ interface CanvasItemRowProps {
  * Design: 3단 적층 구조 (메인명 / 서브명 / 염색 칩)
  * — 다국어 이름이 길어도 잘리지 않음, 염색 정보를 하단에 칩 형태로 배치
  */
-export function CanvasItemRow({ item }: CanvasItemRowProps) {
+export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps) {
     const { t, i18n } = useTranslation();
     const lang = i18n.language;
 
     if (!item.name) return null;
 
     const { main, sub } = getLocalizedItemNames(item, lang);
+
+    // 사이즈 모드별 스타일
+    const sizes = {
+        comfortable: { icon: 48, padding: '8px 0', gap: '14px', mainFont: '1.3rem',  subFont: '0.82rem', textGap: '3px' },
+        balanced:    { icon: 42, padding: '6px 0', gap: '12px', mainFont: '1.15rem', subFont: '0.77rem', textGap: '2px' },
+        compact:     { icon: 36, padding: '5px 0', gap: '10px', mainFont: '1.05rem', subFont: '0.73rem', textGap: '2px' },
+    };
+    const s = sizes[sizeMode];
 
     const activeDyes = [
         item.dye1 && !['기본색', 'None', 'なし'].includes(item.dye1)
@@ -32,16 +41,16 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
         <div style={{
             display: 'flex',
             alignItems: 'flex-start',
-            gap: '14px',
-            padding: '8px 0',
+            gap: s.gap,
+            padding: s.padding,
             borderBottom: '1px solid rgba(255,255,255,0.06)',
         }}
             className="last:border-0"
         >
-            {/* Icon — 48px */}
+            {/* Icon */}
             <div style={{
-                width: '48px',
-                height: '48px',
+                width: `${s.icon}px`,
+                height: `${s.icon}px`,
                 borderRadius: '2px',
                 background: 'rgba(255,255,255,0.07)',
                 border: '1px solid rgba(255,255,255,0.1)',
@@ -72,11 +81,11 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
             </div>
 
             {/* 3단 텍스트 영역 */}
-            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '3px' }}>
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: s.textGap }}>
 
-                {/* 1단: 메인 아이템명 (한글 등 주 언어) */}
+                {/* 1단: 메인 아이템명 */}
                 <span style={{
-                    fontSize: '1.3rem',
+                    fontSize: s.mainFont,
                     fontWeight: 800,
                     color: '#ffffff',
                     lineHeight: 1.15,
@@ -90,10 +99,10 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
                 {/* 2단: 서브 아이템명 (다국어) */}
                 {sub && (
                     <span style={{
-                        fontSize: '0.82rem',
+                        fontSize: s.subFont,
                         fontWeight: 500,
                         color: 'rgba(255,255,255,0.42)',
-                        lineHeight: 1.25,
+                        lineHeight: 1.2,
                         display: 'block',
                         letterSpacing: '-0.01em',
                         wordBreak: 'break-word',
@@ -104,7 +113,7 @@ export function CanvasItemRow({ item }: CanvasItemRowProps) {
 
                 {/* 3단: 염색 정보 칩 */}
                 {activeDyes.length > 0 && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginTop: '3px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '2px' }}>
                         {activeDyes.map(({ idx, name }) => {
                             const dye = FF14_DYES.find(d => d.name === name);
                             const dyeKo = dye?.name || name;

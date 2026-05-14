@@ -15,6 +15,7 @@ export type EquipmentPart =
     | 'neck'
     | 'wrists'
     | 'rings'
+    | 'rings2'
     | 'face';
 
 // ─── Item Data ────────────────────────────────────────────────────────────────

@@ -61,7 +61,8 @@ i18n
             ears: '귀걸이',
             neck: '목걸이',
             wrists: '팔찌',
-            rings: '반지',
+            rings: '반지 1',
+            rings2: '반지 2',
             face: '얼굴 소품'
           },
           crop: {
@@ -125,7 +126,8 @@ i18n
             ears: 'Earrings',
             neck: 'Necklace',
             wrists: 'Bracelets',
-            rings: 'Ring',
+            rings: 'Ring 1',
+            rings2: 'Ring 2',
             face: 'Face Accessory'
           },
           crop: {
@@ -189,7 +191,8 @@ i18n
             ears: '耳飾り',
             neck: '首飾り',
             wrists: '腕輪',
-            rings: '指輪',
+            rings: '指輪 1',
+            rings2: '指輪 2',
             face: 'フェイスアクセサリー'
           },
           crop: {

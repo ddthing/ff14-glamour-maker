@@ -1,8 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { 
-    Sword, Crown, Shirt, Hand, SquareSplitVertical, Footprints, 
-    Ear, Gem, Watch, Circle, Glasses, Plus 
-} from 'lucide-react';
+import { Plus } from 'lucide-react';
 import type { EquipmentPart, EquipItem } from '../../types';
 import { ItemIcon } from '../canvas/ItemIcon';
 
@@ -12,23 +9,6 @@ interface SlotButtonProps {
     isActive: boolean;
     onClick: () => void;
 }
-
-/**
- * Slot Icon Mapping
- */
-const SLOT_ICONS: Record<EquipmentPart, React.ReactNode> = {
-    mainhand: <Sword size={12} />,
-    head: <Crown size={12} />,
-    body: <Shirt size={12} />,
-    hands: <Hand size={12} />,
-    legs: <SquareSplitVertical size={12} />,
-    feet: <Footprints size={12} />,
-    ears: <Ear size={12} />,
-    neck: <Gem size={12} />,
-    wrists: <Watch size={12} />,
-    rings: <Circle size={12} />,
-    face: <Glasses size={12} />
-};
 
 /**
  * SlotButton
@@ -51,12 +31,11 @@ export function SlotButton({ part, item, isActive, onClick }: SlotButtonProps) {
                 min-h-[76px] w-full cursor-pointer touch-manipulation active:scale-[0.97]
             `}
         >
-            {/* Label & Icon */}
+            {/* Label */}
             <span className={`
-                flex items-center gap-1 text-xs font-bold uppercase tracking-wider
+                text-xs font-bold uppercase tracking-wider
                 ${isActive ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)] group-hover:text-[var(--text-secondary)]'}
             `}>
-                {SLOT_ICONS[part]}
                 {t(`slots.${part}`)}
             </span>
 

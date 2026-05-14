@@ -11,6 +11,7 @@ export const INITIAL_ITEMS: Record<EquipmentPart, EquipItem> = {
   neck:     { id: 'neck',     label: '', name: '' },
   wrists:   { id: 'wrists',   label: '', name: '' },
   rings:    { id: 'rings',    label: '', name: '' },
+  rings2:   { id: 'rings2',   label: '', name: '' },
   face:     { id: 'face',     label: '', name: '' },
 };
 

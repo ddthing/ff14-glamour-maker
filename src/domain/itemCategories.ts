@@ -28,6 +28,7 @@ export const SLOT_CATEGORY_MAP: Record<EquipmentPart, number | 'weapon'> = {
     ears:     41,
     wrists:   42,
     rings:    43,
+    rings2:   43,
     face:     108,
     mainhand: 'weapon',
 };
@@ -40,6 +41,8 @@ export const SLOT_CATEGORY_MAP: Record<EquipmentPart, number | 'weapon'> = {
 export const WEAPON_UI_CATEGORIES: ReadonlySet<number> = new Set([
     ...Array.from({ length: 33 }, (_, i) => i + 1),
     83, 84, 87, 88, 89, 96, 97, 98, 105, 106, 107,
+    // 패치 7.0 픽토맨서 신규 무기 카테고리
+    109, 110, 111,
 ]);
 
 /**
