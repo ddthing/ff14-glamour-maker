@@ -36999,55 +36999,6 @@
     "en": "Terebinth",
     "ja": "テレビン油"
   },
-  "5814": {
-    "ko": "파란색 안료",
-    "uiCategory": 55,
-    "iconPath": "/i/021000/021457.png",
-    "en": "Blue Pigment",
-    "ja": "ブルーピグメント"
-  },
-  "5815": {
-    "ko": "빨간색 안료",
-    "uiCategory": 55,
-    "iconPath": "/i/021000/021456.png",
-    "en": "Red Pigment",
-    "ja": "レッドピグメント"
-  },
-  "5816": {
-    "ko": "노란색 안료",
-    "uiCategory": 55,
-    "iconPath": "/i/021000/021458.png",
-    "en": "Yellow Pigment",
-    "ja": "イエローピグメント"
-  },
-  "5817": {
-    "ko": "회색 안료",
-    "uiCategory": 55,
-    "iconPath": "/i/021000/021463.png",
-    "en": "Grey Pigment",
-    "ja": "グレイピグメント"
-  },
-  "5818": {
-    "ko": "갈색 안료",
-    "uiCategory": 55,
-    "iconPath": "/i/021000/021462.png",
-    "en": "Brown Pigment",
-    "ja": "ブラウンピグメント"
-  },
-  "5819": {
-    "ko": "초록색 안료",
-    "uiCategory": 55,
-    "iconPath": "/i/021000/021459.png",
-    "en": "Green Pigment",
-    "ja": "グリーンピグメント"
-  },
-  "5820": {
-    "ko": "보라색 안료",
-    "uiCategory": 55,
-    "iconPath": "/i/021000/021461.png",
-    "en": "Purple Pigment",
-    "ja": "パープルピグメント"
-  },
   "5821": {
     "ko": "생옻",
     "uiCategory": 55,
@@ -161817,7 +161768,7 @@
     "ko": "숙련공의 민소매셔츠",
     "uiCategory": 35,
     "iconPath": "/i/042000/042684.png",
-    "en": "Craftsman's Singlet",
+    "en": "Craftsman's Singlet",
     "ja": "クラフトマン・シングレット"
   },
   "28595": {
@@ -176218,7 +176169,7 @@
     "ja": "スクウェアペイヴド・ブリック"
   },
   "32250": {
-    "ko": "라노시아 포도나무 퍼걸러",
+    "ko": "라노시아 포도 퍼걸러",
     "uiCategory": 76,
     "iconPath": "/i/052000/052309.png",
     "en": "La Noscean Grape Pergola",
@@ -208041,7 +207992,7 @@
     "ja": "ウェイクアップクロノメーター"
   },
   "38617": {
-    "ko": "탁상용 커피 도구",
+    "ko": "탁상용 커피 세트",
     "uiCategory": 78,
     "iconPath": "/i/053000/053433.png",
     "en": "Countertop Coffee Service",
@@ -257135,6 +257086,13 @@
     "en": "Big Bang Ticket (Oizys)",
     "ja": "ビッグバンチケット【オイジュス】"
   },
+  "48095": {
+    "ko": "빅뱅 응모권: 아욱세시아",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026175.png",
+    "en": "Big Bang Ticket (Auxesia)",
+    "ja": "ビッグバンチケット【アウクセシア】"
+  },
   "48097": {
     "ko": "오늬무늬 내벽",
     "uiCategory": 73,
@@ -257456,6 +257414,13 @@
     "iconPath": "/i/065000/065128.png",
     "en": "Oizys Credit",
     "ja": "オイジュスクレジット"
+  },
+  "48148": {
+    "ko": "아욱세시아 화폐",
+    "uiCategory": 63,
+    "iconPath": "/i/065000/065129.png",
+    "en": "Auxesia Credit",
+    "ja": "アウクセシアクレジット"
   },
   "48157": {
     "ko": "마법의 프리즘: 리본 폭죽",
@@ -263455,6 +263420,13 @@
     "iconPath": "/i/065000/065138.png",
     "en": "Oizys Dronebit",
     "ja": "オイジュス・ドローンチップ"
+  },
+  "49171": {
+    "ko": "아욱세시아 무인기 칩",
+    "uiCategory": 63,
+    "iconPath": "/i/065000/065139.png",
+    "en": "Auxesia Dronebit",
+    "ja": "アウクセシア・ドローンチップ"
   },
   "49207": {
     "ko": "번개소나무 원목",
@@ -274530,6 +274502,69 @@
     "en": "Semicircular Outdoor Stage",
     "ja": "セミサークル・ガーデンステージ"
   },
+  "51276": {
+    "ko": "모조 아욱세시아 탑",
+    "uiCategory": 78,
+    "iconPath": "/i/052000/052875.png",
+    "en": "Auxesian Tower Replica",
+    "ja": "アウクセシア・タワーレプリカ"
+  },
+  "51277": {
+    "ko": "우주 금속 선반",
+    "uiCategory": 77,
+    "iconPath": "/i/051000/051754.png",
+    "en": "Cosmic Metal Shelf",
+    "ja": "コスモメタルシェルフ"
+  },
+  "51278": {
+    "ko": "우주 발판",
+    "uiCategory": 57,
+    "iconPath": "/i/052000/052876.png",
+    "en": "Cosmic Steps",
+    "ja": "コスモステップ"
+  },
+  "51279": {
+    "ko": "우주 칸막이",
+    "uiCategory": 57,
+    "iconPath": "/i/052000/052877.png",
+    "en": "Cosmic Partition",
+    "ja": "コスモパーティション"
+  },
+  "51280": {
+    "ko": "아욱세시아 고속 도로 관문",
+    "uiCategory": 76,
+    "iconPath": "/i/053000/053738.png",
+    "en": "Auxesian Waygate",
+    "ja": "アウクセシア・ハイウェイゲート"
+  },
+  "51281": {
+    "ko": "아욱세시아 고속 도로 조명",
+    "uiCategory": 76,
+    "iconPath": "/i/053000/053739.png",
+    "en": "Auxesian Waylight",
+    "ja": "アウクセシア・ハイウェイライト"
+  },
+  "51289": {
+    "ko": "뿌니뿌니 지바냥",
+    "uiCategory": 78,
+    "iconPath": "/i/053000/053560.png",
+    "en": "Wibbly-wobbly Jibanyan",
+    "ja": "ぷにぷにジバニャン"
+  },
+  "51290": {
+    "ko": "뿌니뿌니 백멍이",
+    "uiCategory": 78,
+    "iconPath": "/i/053000/053559.png",
+    "en": "Wibbly-wobbly Komasan",
+    "ja": "ぷにぷにコマさん"
+  },
+  "51291": {
+    "ko": "뿌니뿌니 우사뿅",
+    "uiCategory": 78,
+    "iconPath": "/i/053000/053558.png",
+    "en": "Wibbly-wobbly USApyon",
+    "ja": "ぷにぷにＵＳＡピョン"
+  },
   "51292": {
     "ko": "웃음짓는 수호천절 버섯",
     "uiCategory": 57,
@@ -274606,6 +274641,83 @@
     "iconPath": "/i/052000/052804.png",
     "en": "Authentic Gilded Screen",
     "ja": "金屏風EX"
+  },
+  "51315": {
+    "ko": "명인 점수: 목수",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062108.png",
+    "en": "Carpenter's Tool Mastery Point",
+    "ja": "マスターシップポイント:木工師"
+  },
+  "51316": {
+    "ko": "명인 점수: 대장장이",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062109.png",
+    "en": "Blacksmith's Tool Mastery Point",
+    "ja": "マスターシップポイント:鍛冶師"
+  },
+  "51317": {
+    "ko": "명인 점수: 갑주제작사",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062110.png",
+    "en": "Armorer's Tool Mastery Point",
+    "ja": "マスターシップポイント:甲冑師"
+  },
+  "51318": {
+    "ko": "명인 점수: 보석공예가",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062111.png",
+    "en": "Goldsmith's Tool Mastery Point",
+    "ja": "マスターシップポイント:彫金師"
+  },
+  "51319": {
+    "ko": "명인 점수: 가죽공예가",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062112.png",
+    "en": "Leatherworker's Tool Mastery Point",
+    "ja": "マスターシップポイント:革細工師"
+  },
+  "51320": {
+    "ko": "명인 점수: 재봉사",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062113.png",
+    "en": "Weaver's Tool Mastery Point",
+    "ja": "マスターシップポイント:裁縫師"
+  },
+  "51321": {
+    "ko": "명인 점수: 연금술사",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062114.png",
+    "en": "Alchemist's Tool Mastery Point",
+    "ja": "マスターシップポイント:錬金術師"
+  },
+  "51322": {
+    "ko": "명인 점수: 요리사",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062115.png",
+    "en": "Culinarian's Tool Mastery Point",
+    "ja": "マスターシップポイント:調理師"
+  },
+  "51323": {
+    "ko": "명인 점수: 광부",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062116.png",
+    "en": "Miner's Tool Mastery Point",
+    "ja": "マスターシップポイント:採掘師"
+  },
+  "51324": {
+    "ko": "명인 점수: 원예가",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062117.png",
+    "en": "Botanist's Tool Mastery Point",
+    "ja": "マスターシップポイント:園芸師"
+  },
+  "51325": {
+    "ko": "명인 점수: 어부",
+    "uiCategory": 63,
+    "iconPath": "/i/062000/062118.png",
+    "en": "Fisher's Tool Mastery Point",
+    "ja": "マスターシップポイント:漁師"
   },
   "51327": {
     "ko": "습격자 장비",
@@ -277134,6 +277246,1756 @@
     "en": "Uolon Horn Token",
     "ja": "ウォロン・ホルン交換手形"
   },
+  "51753": {
+    "ko": "독성 꽃가루 식물의 파편",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025202.png",
+    "en": "Shredded Toxic Bloomer",
+    "ja": "毒性花粉植物の断片"
+  },
+  "51754": {
+    "ko": "독성 꽃가루 식물의 재",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021001.png",
+    "en": "Toxic Bloomer Ash",
+    "ja": "毒性花粉植物の灰"
+  },
+  "51789": {
+    "ko": "모조 초공간 톱",
+    "uiCategory": 12,
+    "iconPath": "/i/039000/039014.png",
+    "en": "Hypersaw Replica",
+    "ja": "レプリカ・ハイパースペース・ソー"
+  },
+  "51790": {
+    "ko": "모조 초공간 단조망치",
+    "uiCategory": 14,
+    "iconPath": "/i/039000/039113.png",
+    "en": "Cross-pein Hyperhammer Replica",
+    "ja": "レプリカ・ハイパースペース・クロスペインハンマー"
+  },
+  "51791": {
+    "ko": "모조 초공간 돋을무늬 망치",
+    "uiCategory": 16,
+    "iconPath": "/i/039000/039213.png",
+    "en": "Raising Hyperhammer Replica",
+    "ja": "レプリカ・ハイパースペース・レイジングハンマー"
+  },
+  "51792": {
+    "ko": "모조 초공간 세공망치",
+    "uiCategory": 18,
+    "iconPath": "/i/039000/039312.png",
+    "en": "Hypermallet Replica",
+    "ja": "レプリカ・ハイパースペース・マレット"
+  },
+  "51793": {
+    "ko": "모조 초공간 둥근칼",
+    "uiCategory": 20,
+    "iconPath": "/i/039000/039413.png",
+    "en": "Round Hyperknife Replica",
+    "ja": "レプリカ・ハイパースペース・ラウンドナイフ"
+  },
+  "51794": {
+    "ko": "모조 초공간 바늘",
+    "uiCategory": 22,
+    "iconPath": "/i/039000/039513.png",
+    "en": "Hyperneedle Replica",
+    "ja": "レプリカ・ハイパースペース・ニードル"
+  },
+  "51795": {
+    "ko": "모조 초공간 증류기",
+    "uiCategory": 24,
+    "iconPath": "/i/039000/039612.png",
+    "en": "Hyperalembic Replica",
+    "ja": "レプリカ・ハイパースペース・アレンビック"
+  },
+  "51796": {
+    "ko": "모조 초공간 프라이팬",
+    "uiCategory": 26,
+    "iconPath": "/i/039000/039715.png",
+    "en": "Hyperfrypan Replica",
+    "ja": "レプリカ・ハイパースペース・フライパン"
+  },
+  "51797": {
+    "ko": "모조 초공간 곡괭이",
+    "uiCategory": 28,
+    "iconPath": "/i/038000/038315.png",
+    "en": "Hyperpickaxe Replica",
+    "ja": "レプリカ・ハイパースペース・ピック"
+  },
+  "51798": {
+    "ko": "모조 초공간 손도끼",
+    "uiCategory": 30,
+    "iconPath": "/i/038000/038413.png",
+    "en": "Hyperhatchet Replica",
+    "ja": "レプリカ・ハイパースペース・ハチェット"
+  },
+  "51799": {
+    "ko": "모조 초공간 낚싯대",
+    "uiCategory": 32,
+    "iconPath": "/i/038000/038516.png",
+    "en": "Fishing Hyperrod Replica",
+    "ja": "レプリカ・ハイパースペース・フィッシングロッド"
+  },
+  "51800": {
+    "ko": "모조 별들의 톱",
+    "uiCategory": 12,
+    "iconPath": "/i/039000/039014.png",
+    "en": "Saw of Stars Replica",
+    "ja": "レプリカ・ソー・オブ・スターズ"
+  },
+  "51801": {
+    "ko": "모조 별들의 단조망치",
+    "uiCategory": 14,
+    "iconPath": "/i/039000/039113.png",
+    "en": "Cross-pein Hammer of Stars Replica",
+    "ja": "レプリカ・クロスペインハンマー・オブ・スターズ"
+  },
+  "51802": {
+    "ko": "모조 별들의 돋을무늬 망치",
+    "uiCategory": 16,
+    "iconPath": "/i/039000/039213.png",
+    "en": "Raising Hammer of Stars Replica",
+    "ja": "レプリカ・レイジングハンマー・オブ・スターズ"
+  },
+  "51803": {
+    "ko": "모조 별들의 세공망치",
+    "uiCategory": 18,
+    "iconPath": "/i/039000/039312.png",
+    "en": "Mallet of Stars Replica",
+    "ja": "レプリカ・マレット・オブ・スターズ"
+  },
+  "51804": {
+    "ko": "모조 별들의 둥근칼",
+    "uiCategory": 20,
+    "iconPath": "/i/039000/039413.png",
+    "en": "Round Knife of Stars Replica",
+    "ja": "レプリカ・ラウンドナイフ・オブ・スターズ"
+  },
+  "51805": {
+    "ko": "모조 별들의 바늘",
+    "uiCategory": 22,
+    "iconPath": "/i/039000/039513.png",
+    "en": "Needle of Stars Replica",
+    "ja": "レプリカ・ニードル・オブ・スターズ"
+  },
+  "51806": {
+    "ko": "모조 별들의 증류기",
+    "uiCategory": 24,
+    "iconPath": "/i/039000/039612.png",
+    "en": "Alembic of Stars Replica",
+    "ja": "レプリカ・アレンビック・オブ・スターズ"
+  },
+  "51807": {
+    "ko": "모조 별들의 프라이팬",
+    "uiCategory": 26,
+    "iconPath": "/i/039000/039715.png",
+    "en": "Frypan of Stars Replica",
+    "ja": "レプリカ・フライパン・オブ・スターズ"
+  },
+  "51808": {
+    "ko": "모조 별들의 곡괭이",
+    "uiCategory": 28,
+    "iconPath": "/i/038000/038315.png",
+    "en": "Pickaxe of Stars Replica",
+    "ja": "レプリカ・ピック・オブ・スターズ"
+  },
+  "51809": {
+    "ko": "모조 별들의 손도끼",
+    "uiCategory": 30,
+    "iconPath": "/i/038000/038413.png",
+    "en": "Hatchet of Stars Replica",
+    "ja": "レプリカ・ハチェット・オブ・スターズ"
+  },
+  "51810": {
+    "ko": "모조 별들의 낚싯대",
+    "uiCategory": 32,
+    "iconPath": "/i/038000/038516.png",
+    "en": "Fishing Rod of Stars Replica",
+    "ja": "レプリカ・フィッシングロッド・オブ・スターズ"
+  },
+  "52017": {
+    "ko": "광고 간판 소재",
+    "uiCategory": 61,
+    "iconPath": "/i/022000/022650.png",
+    "en": "Turali Chalk",
+    "ja": "広告看板素材"
+  },
+  "52018": {
+    "ko": "타코 배달용 보온 소재",
+    "uiCategory": 61,
+    "iconPath": "/i/020000/020001.png",
+    "en": "Warming Crystal",
+    "ja": "タコス配達用保温素材"
+  },
+  "52019": {
+    "ko": "네오 타코 요리 소재",
+    "uiCategory": 61,
+    "iconPath": "/i/025000/025024.png",
+    "en": "Neotaco Spice",
+    "ja": "ネオタコス調理素材"
+  },
+  "52020": {
+    "ko": "판촉용 튜닉 소재",
+    "uiCategory": 61,
+    "iconPath": "/i/021000/021655.png",
+    "en": "Tunic Fiber",
+    "ja": "販促チュニック素材"
+  },
+  "52021": {
+    "ko": "야술라니 황야의 타코 소재",
+    "uiCategory": 61,
+    "iconPath": "/i/025000/025359.png",
+    "en": "Sizzlewheat",
+    "ja": "ヤースラニ荒野のタコス素材"
+  },
+  "52022": {
+    "ko": "티 아줌마네 2호점 광고 간판",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026694.png",
+    "en": "Aunt Tii's Billboard",
+    "ja": "チーちゃん2号店広告看板"
+  },
+  "52023": {
+    "ko": "타코 배달 용품",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026130.png",
+    "en": "Trusty Taco Tin",
+    "ja": "タコス配達用品"
+  },
+  "52024": {
+    "ko": "네오 타코 요리 도구",
+    "uiCategory": 61,
+    "iconPath": "/i/035000/035660.png",
+    "en": "Neomasher",
+    "ja": "ネオタコス調理用具"
+  },
+  "52025": {
+    "ko": "티 아줌마네 판촉용 튜닉 필수품",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026651.png",
+    "en": "Aunt Tii's Tunic Supplies",
+    "ja": "チーちゃん販促チュニック必需品"
+  },
+  "52026": {
+    "ko": "톡톡 튀는 식감의 타코 용기",
+    "uiCategory": 61,
+    "iconPath": "/i/053000/053302.png",
+    "en": "Shaco Packaging",
+    "ja": "ハジケ食感タコス容器"
+  },
+  "52027": {
+    "ko": "광고 간판 재료",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026108.png",
+    "en": "Advertisement Supplies",
+    "ja": "広告看板の材料"
+  },
+  "52028": {
+    "ko": "타코 배달 용품 재료",
+    "uiCategory": 61,
+    "iconPath": "/i/021000/021003.png",
+    "en": "Taco Tin Supplies",
+    "ja": "タコス配達用品の材料"
+  },
+  "52029": {
+    "ko": "네오 타코 요리 도구 재료",
+    "uiCategory": 61,
+    "iconPath": "/i/025000/025916.png",
+    "en": "Neomasher Supplies",
+    "ja": "ネオタコス調理用具の材料"
+  },
+  "52030": {
+    "ko": "판촉용 튜닉 필수품 재료",
+    "uiCategory": 61,
+    "iconPath": "/i/025000/025977.png",
+    "en": "Assorted Turali Pigments",
+    "ja": "販促チュニック必需品の材料"
+  },
+  "52031": {
+    "ko": "타코 용기 재료",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026109.png",
+    "en": "Shocking Supplies",
+    "ja": "タコス容器の材料"
+  },
+  "52043": {
+    "ko": "나무이암",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021205.png",
+    "en": "Treestone",
+    "ja": "樹泥岩"
+  },
+  "52044": {
+    "ko": "경량 실트암",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021207.png",
+    "en": "Lightweight Siltstone",
+    "ja": "軽シルト岩"
+  },
+  "52045": {
+    "ko": "신록 석영",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021459.png",
+    "en": "New Growth Quartz",
+    "ja": "ニューグロウスクォーツ"
+  },
+  "52046": {
+    "ko": "층운 점토",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021202.png",
+    "en": "Stratoclay",
+    "ja": "ストラト粘土"
+  },
+  "52047": {
+    "ko": "층운 석영",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021458.png",
+    "en": "Stratoquartz",
+    "ja": "ストラトクォーツ"
+  },
+  "52048": {
+    "ko": "호박이암",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021455.png",
+    "en": "Amberstone",
+    "ja": "琥珀泥岩"
+  },
+  "52049": {
+    "ko": "아욱세시아 명반",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022644.png",
+    "en": "Auxesian Alumen",
+    "ja": "アウクセシアアルメン"
+  },
+  "52050": {
+    "ko": "분홍 양파뿌리 원석",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021497.png",
+    "en": "Pink Onionroot Ore",
+    "ja": "ピンク・オニオンルート原石"
+  },
+  "52051": {
+    "ko": "파랑 양파뿌리 원석",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021498.png",
+    "en": "Blue Onionroot Ore",
+    "ja": "ブルー・オニオンルート原石"
+  },
+  "52052": {
+    "ko": "노랑 양파뿌리 원석",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021474.png",
+    "en": "Yellow Onionroot Ore",
+    "ja": "イエロー・オニオンルート原石"
+  },
+  "52053": {
+    "ko": "니켈 사과 광물 모래",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021219.png",
+    "en": "Granny Nickel Sand",
+    "ja": "ニッケル・アップルの鉱砂"
+  },
+  "52054": {
+    "ko": "니켈 사과",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022687.png",
+    "en": "Granny Nickel",
+    "ja": "ニッケル・アップル"
+  },
+  "52055": {
+    "ko": "분홍 니켈 사과",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021225.png",
+    "en": "Pink Granny Nickel",
+    "ja": "ピンクニッケル・アップル"
+  },
+  "52056": {
+    "ko": "그림자 남전기석",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021224.png",
+    "en": "Umbral Indicolite",
+    "ja": "霊性インディコライト"
+  },
+  "52057": {
+    "ko": "거북소나무 호박",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021176.png",
+    "en": "Tortoisepine Amber",
+    "ja": "トータスパインの琥珀"
+  },
+  "52058": {
+    "ko": "삼색 양파뿌리 원석",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021496.png",
+    "en": "Tricolored Onionroot Ore",
+    "ja": "トライ・オニオンルート原石"
+  },
+  "52059": {
+    "ko": "거북소나무 에테르 모래",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022711.png",
+    "en": "Tortoisepine Aethersand",
+    "ja": "トータスパイン霊砂"
+  },
+  "52060": {
+    "ko": "금 아티초크 희귀 광물 열매",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021217.png",
+    "en": "Rare Gold Artichoke Ore",
+    "ja": "ゴールドアーティチョークの稀少鉱果実"
+  },
+  "52061": {
+    "ko": "강력한 그림자 남전기석",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021228.png",
+    "en": "Antumbral Indicolite",
+    "ja": "強霊性インディコライト"
+  },
+  "52062": {
+    "ko": "금 아티초크 광물 모래",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021246.png",
+    "en": "Gold Artichoke Mineral Sand",
+    "ja": "ゴールドアーティチョークの鉱砂"
+  },
+  "52063": {
+    "ko": "푸른별 에테르 모래",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021229.png",
+    "en": "Emeraldstar Aethersand",
+    "ja": "翠星の霊砂"
+  },
+  "52064": {
+    "ko": "아욱세시아 표토",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021465.png",
+    "en": "Auxesian Regolith",
+    "ja": "アウクセシアレゴリス"
+  },
+  "52065": {
+    "ko": "신록 너도밤나무 원목",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022426.png",
+    "en": "New Growth Beech Log",
+    "ja": "ニューグロウスビーチ原木"
+  },
+  "52066": {
+    "ko": "푸름나무 원목",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022423.png",
+    "en": "Blue Arbor Log",
+    "ja": "ブルーアーバー原木"
+  },
+  "52067": {
+    "ko": "푸름나무 가지",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022417.png",
+    "en": "Blue Arbor Branch",
+    "ja": "ブルーアーバーの枝"
+  },
+  "52068": {
+    "ko": "나선 루피너스 초록잎",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024479.png",
+    "en": "Green Spiral Lupine Leaf",
+    "ja": "スパイラル・ルピナスの緑葉"
+  },
+  "52069": {
+    "ko": "나선 루피너스 파란잎",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024478.png",
+    "en": "Blue Spiral Lupine Leaf",
+    "ja": "スパイラル・ルピナスの青葉"
+  },
+  "52070": {
+    "ko": "나선 루피너스 구근",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025241.png",
+    "en": "Spiral Lupine Bulb",
+    "ja": "スパイラル・ルピナスの球根"
+  },
+  "52071": {
+    "ko": "나선 루피너스 꽃",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024477.png",
+    "en": "Spiral Lupine Flower",
+    "ja": "スパイラル・ルピナスの花"
+  },
+  "52072": {
+    "ko": "노랑 다육면초 꽃",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023576.png",
+    "en": "Yellow Copycube Flowers",
+    "ja": "イエロー・コピーキューブの花"
+  },
+  "52073": {
+    "ko": "다육면초 줄기",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025234.png",
+    "en": "Copycube Stalk",
+    "ja": "コピーキューブの茎"
+  },
+  "52074": {
+    "ko": "빨강 다육면초 꽃",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023577.png",
+    "en": "Red Copycube Flowers",
+    "ja": "レッド・コピーキューブの花"
+  },
+  "52075": {
+    "ko": "봄이슬나무 원목",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022406.png",
+    "en": "Dayspring Dew Log",
+    "ja": "デイスプリング・デュー原木"
+  },
+  "52076": {
+    "ko": "봄이슬나무 잎",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025039.png",
+    "en": "Dayspring Dew Leaves",
+    "ja": "デイスプリング・デューの葉"
+  },
+  "52077": {
+    "ko": "봄이슬나무 껍질",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023516.png",
+    "en": "Dayspring Dew Bark",
+    "ja": "デイスプリング・デュー樹皮"
+  },
+  "52078": {
+    "ko": "남전기 마호가니 원목",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022429.png",
+    "en": "Indigo Mahogany Log",
+    "ja": "インディコマホガニー原木"
+  },
+  "52079": {
+    "ko": "각성세포나무 원목",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022428.png",
+    "en": "Cerulift Log",
+    "ja": "セルリフト原木"
+  },
+  "52080": {
+    "ko": "무지갯빛 다육면초 꽃",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023579.png",
+    "en": "Rainbow Copycube Flowers",
+    "ja": "レインボー・コピーキューブの花"
+  },
+  "52081": {
+    "ko": "각성세포나무 뿌리",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023628.png",
+    "en": "Cerulift Root",
+    "ja": "セルリフトの樹根"
+  },
+  "52082": {
+    "ko": "육각볼록 목화",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025040.png",
+    "en": "Hexapuff Cotton Boll",
+    "ja": "ヘキサパフ綿花"
+  },
+  "52083": {
+    "ko": "남전기 치자꽃",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023626.png",
+    "en": "Indigo Gardenia Flower",
+    "ja": "インディコガーデニアの花"
+  },
+  "52084": {
+    "ko": "육각볼록 목화 씨앗",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024476.png",
+    "en": "Hexapuff Seeds",
+    "ja": "ヘキサパフの種"
+  },
+  "52085": {
+    "ko": "남전기 치자꽃 정제유",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022666.png",
+    "en": "Indigo Gardenia Glioaether",
+    "ja": "インディコガーデニア精油"
+  },
+  "52086": {
+    "ko": "잎맥길 흙",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021464.png",
+    "en": "Nervure Soil",
+    "ja": "緑道の土"
+  },
+  "52087": {
+    "ko": "금 니켈 사과",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023517.png",
+    "en": "Gold Granny Nickel",
+    "ja": "ゴールドニッケル・アップル"
+  },
+  "52088": {
+    "ko": "금 흙모래",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021006.png",
+    "en": "Unusual Gold Sand",
+    "ja": "金泥砂"
+  },
+  "52089": {
+    "ko": "외계 유래 가시물통풀",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023600.png",
+    "en": "Non-native Spinopitcher",
+    "ja": "異星由来のスパインピッチャー"
+  },
+  "52090": {
+    "ko": "만개한 버섯갓",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023627.png",
+    "en": "Plower's Pileus",
+    "ja": "プラワーズ・パイレウス"
+  },
+  "52091": {
+    "ko": "행성 아욱세시아 탐색 계획 증서 묶음",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026176.png",
+    "en": "Auxesia Token Booklet",
+    "ja": "惑星アウクセシア探索計画の証書"
+  },
+  "52092": {
+    "ko": "행성 아욱세시아 탐색 계획 증서",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026177.png",
+    "en": "Auxesia Exploration Token",
+    "ja": "惑星アウクセシア探索計画の手形"
+  },
+  "52093": {
+    "ko": "선구자 문명 기록: 녹금",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026234.png",
+    "en": "Botanic Gold Voyagers' Record",
+    "ja": "先駆者文明の記録:緑金"
+  },
+  "52094": {
+    "ko": "선구자 문명 기록: 청은",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026230.png",
+    "en": "Civic Silver Voyagers' Record",
+    "ja": "先駆者文明の記録:青銀"
+  },
+  "52095": {
+    "ko": "선구자 문명 기록: 백동",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026233.png",
+    "en": "Arboreal Bronze Voyagers' Record",
+    "ja": "先駆者文明の記録:白銅"
+  },
+  "52096": {
+    "ko": "목재 짱뚱어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029306.png",
+    "en": "Timberpond Skipper",
+    "ja": "ティンバースキッパー"
+  },
+  "52097": {
+    "ko": "큰키나무 낙엽고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029494.png",
+    "en": "Highwood Leaffish",
+    "ja": "ハイウッドリーフ"
+  },
+  "52098": {
+    "ko": "우주 프로킬로더스",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028409.png",
+    "en": "Prochilodus Cosmica",
+    "ja": "コスモプロキロダス"
+  },
+  "52099": {
+    "ko": "수중 조명 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029483.png",
+    "en": "Fishform: Modulight",
+    "ja": "水中調光機構"
+  },
+  "52100": {
+    "ko": "신록 낙엽고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029454.png",
+    "en": "New Growth Leaffish",
+    "ja": "ニューグロウスリーフ"
+  },
+  "52101": {
+    "ko": "아욱세시아 농어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028406.png",
+    "en": "Auxesian Peacock Bass",
+    "ja": "キクラ・アウクセシアン"
+  },
+  "52102": {
+    "ko": "목재 짱뚱어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029306.png",
+    "en": "Timberpond Skipper",
+    "ja": "ティンバースキッパー"
+  },
+  "52103": {
+    "ko": "큰키나무 낙엽고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029494.png",
+    "en": "Highwood Leaffish",
+    "ja": "ハイウッドリーフ"
+  },
+  "52104": {
+    "ko": "개척연못고기",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028633.png",
+    "en": "Pioneering Pondfish",
+    "ja": "エクスプローラーズポンドフィッシュ"
+  },
+  "52105": {
+    "ko": "수중 조명 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029483.png",
+    "en": "Fishform: Modulight",
+    "ja": "水中調光機構"
+  },
+  "52106": {
+    "ko": "신록 낙엽고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029454.png",
+    "en": "New Growth Leaffish",
+    "ja": "ニューグロウスリーフ"
+  },
+  "52107": {
+    "ko": "목재 빈대",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028407.png",
+    "en": "Timberlouse",
+    "ja": "ティンバーラウス"
+  },
+  "52108": {
+    "ko": "목재 짱뚱어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029306.png",
+    "en": "Timberpond Skipper",
+    "ja": "ティンバースキッパー"
+  },
+  "52109": {
+    "ko": "큰키나무 낙엽고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029494.png",
+    "en": "Highwood Leaffish",
+    "ja": "ハイウッドリーフ"
+  },
+  "52110": {
+    "ko": "도시 정수 조정 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029486.png",
+    "en": "Fishform: Aquaclear",
+    "ja": "都市浄水調整機構"
+  },
+  "52111": {
+    "ko": "우주 벨로네속스",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028590.png",
+    "en": "Cosmic Belonesox",
+    "ja": "コスモベロネソックス"
+  },
+  "52112": {
+    "ko": "수중 조명 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029483.png",
+    "en": "Fishform: Modulight",
+    "ja": "水中調光機構"
+  },
+  "52113": {
+    "ko": "신록 낙엽고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029454.png",
+    "en": "New Growth Carp",
+    "ja": "ニューグロウスリーフ"
+  },
+  "52114": {
+    "ko": "침강물 회수 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028411.png",
+    "en": "Fishform: Alluviscoop",
+    "ja": "沈下物回収機構"
+  },
+  "52115": {
+    "ko": "신록 무용수",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029440.png",
+    "en": "Verdant Dancer",
+    "ja": "ヴァーダンサー"
+  },
+  "52116": {
+    "ko": "목재 짱뚱어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029306.png",
+    "en": "Timberpond Skipper",
+    "ja": "ティンバースキッパー"
+  },
+  "52117": {
+    "ko": "큰키나무 낙엽고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029494.png",
+    "en": "Highwood Leaffish",
+    "ja": "ハイウッドリーフ"
+  },
+  "52118": {
+    "ko": "별 꺽저기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029476.png",
+    "en": "Stargazy Perch",
+    "ja": "ホシニラミ"
+  },
+  "52119": {
+    "ko": "목재 강늉치고기",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028617.png",
+    "en": "Timberpond Muskellunge",
+    "ja": "ティンバーマスキー"
+  },
+  "52120": {
+    "ko": "수중 조명 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029483.png",
+    "en": "Fishform: Modulight",
+    "ja": "水中調光機構"
+  },
+  "52121": {
+    "ko": "신록 낙엽고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029454.png",
+    "en": "New Growth Leaffish",
+    "ja": "ニューグロウスリーフ"
+  },
+  "52122": {
+    "ko": "개척검정우럭",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028618.png",
+    "en": "Gallivanting Croppie",
+    "ja": "エクスプローラーズクラッピー"
+  },
+  "52123": {
+    "ko": "잎맥자루",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029242.png",
+    "en": "Nervure Stalk",
+    "ja": "ナーヴュアストーク"
+  },
+  "52124": {
+    "ko": "이끼 낀 수지 덩어리",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029233.png",
+    "en": "Mossy Globule",
+    "ja": "苔むした樹脂塊"
+  },
+  "52125": {
+    "ko": "숲거북 잎",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028536.png",
+    "en": "Greatfrond Turtle",
+    "ja": "森亀葉"
+  },
+  "52126": {
+    "ko": "움트는 줄기",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028521.png",
+    "en": "Towerling Stemling",
+    "ja": "スプラウティングステム"
+  },
+  "52127": {
+    "ko": "우주 크레니시클라",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028579.png",
+    "en": "Crenicichla Cosmica",
+    "ja": "クレニシクラ・コスミカ"
+  },
+  "52128": {
+    "ko": "목재 위장어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028441.png",
+    "en": "Timberland Camofin",
+    "ja": "ティンバーカモフィッシュ"
+  },
+  "52129": {
+    "ko": "우주 두더지귀뚜라미",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029801.png",
+    "en": "Cosmic Hedgemole Cricket",
+    "ja": "コスモグリロタルパ"
+  },
+  "52130": {
+    "ko": "수맥 보조 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028593.png",
+    "en": "Fishform: Aquaflow",
+    "ja": "水脈補助機構"
+  },
+  "52131": {
+    "ko": "개구리 큰잎",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028422.png",
+    "en": "Fatleaf Frog",
+    "ja": "蛙大葉"
+  },
+  "52132": {
+    "ko": "거목 뿌리털",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028570.png",
+    "en": "Trailing Tendril",
+    "ja": "大樹の根毛"
+  },
+  "52133": {
+    "ko": "개척피피라",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029591.png",
+    "en": "Roaming Pipira",
+    "ja": "エクスプローラーズピピラ"
+  },
+  "52134": {
+    "ko": "이끼 낀 수지 덩어리",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029233.png",
+    "en": "Mossy Globule",
+    "ja": "苔むした樹脂塊"
+  },
+  "52135": {
+    "ko": "움트는 지느러미",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028592.png",
+    "en": "Sproutfin",
+    "ja": "スプラウティングフィン"
+  },
+  "52136": {
+    "ko": "둥근숲 태래어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028591.png",
+    "en": "Radial Cichlid",
+    "ja": "ラディウス・シクリッド"
+  },
+  "52137": {
+    "ko": "유사메타헤드론",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028527.png",
+    "en": "Pseudohedron",
+    "ja": "スードメタヘドロン"
+  },
+  "52138": {
+    "ko": "정원수 동갈치",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028768.png",
+    "en": "Topiary Gar",
+    "ja": "トピアリー・ガー"
+  },
+  "52139": {
+    "ko": "우주 두더지귀뚜라미",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029801.png",
+    "en": "Cosmic Hedgemole Cricket",
+    "ja": "コスモグリロタルパ"
+  },
+  "52140": {
+    "ko": "개화 구피",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029444.png",
+    "en": "Flourishing Guppy",
+    "ja": "フローリッシングッピー"
+  },
+  "52141": {
+    "ko": "우주 피라푸탕가",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028643.png",
+    "en": "Cosmic Piraputanga",
+    "ja": "コスモピラプタンガ"
+  },
+  "52142": {
+    "ko": "초록 구피",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028544.png",
+    "en": "Green Guppy",
+    "ja": "グリーングッピー"
+  },
+  "52143": {
+    "ko": "샘바닥 정화 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028511.png",
+    "en": "Fishform: Aquacleanse",
+    "ja": "泉底浄化機構"
+  },
+  "52144": {
+    "ko": "이끼 낀 수지 덩어리",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029233.png",
+    "en": "Mossy Globule",
+    "ja": "苔むした樹脂塊"
+  },
+  "52145": {
+    "ko": "숲거북 잎",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028536.png",
+    "en": "Greatfrond Turtle",
+    "ja": "森亀葉"
+  },
+  "52146": {
+    "ko": "굴삭어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029301.png",
+    "en": "Soil Stirrer",
+    "ja": "ソイルスタラー"
+  },
+  "52147": {
+    "ko": "삼림 원반",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029572.png",
+    "en": "Glade Platter",
+    "ja": "シュラウドディスク"
+  },
+  "52148": {
+    "ko": "이끼 낀 수지 덩어리",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029233.png",
+    "en": "Mossy Globule",
+    "ja": "苔むした樹脂塊"
+  },
+  "52149": {
+    "ko": "숲거북 잎",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028536.png",
+    "en": "Greatfrond Turtle",
+    "ja": "森亀葉"
+  },
+  "52150": {
+    "ko": "우주 잉어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028595.png",
+    "en": "Cosmocarp",
+    "ja": "コスモカープ"
+  },
+  "52151": {
+    "ko": "푸른가지 둥근거북",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028647.png",
+    "en": "Netroot Tortoise",
+    "ja": "翠枝の円亀"
+  },
+  "52152": {
+    "ko": "유사아로와나",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028654.png",
+    "en": "Arowana Analog",
+    "ja": "スードアロワナ"
+  },
+  "52153": {
+    "ko": "정원수 거대동갈치",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028769.png",
+    "en": "Topiary Megagar",
+    "ja": "トピアリー・メガガー"
+  },
+  "52154": {
+    "ko": "우주 두더지귀뚜라미",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029801.png",
+    "en": "Cosmic Hedgemole Cricket",
+    "ja": "コスモグリロタルパ"
+  },
+  "52155": {
+    "ko": "수맥 보조 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028593.png",
+    "en": "Fishform: Aquaflow",
+    "ja": "水脈補助機構"
+  },
+  "52156": {
+    "ko": "아욱세시아 곡정초",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028770.png",
+    "en": "Eriocaulon Auxesicum",
+    "ja": "エリオカウロン・アウクセジカム"
+  },
+  "52157": {
+    "ko": "물청포도",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028771.png",
+    "en": "Aquagrapes",
+    "ja": "ウォーターマスカット"
+  },
+  "52158": {
+    "ko": "우주 이끼",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028772.png",
+    "en": "Cosmoss",
+    "ja": "コスモスモス"
+  },
+  "52159": {
+    "ko": "개척농어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029304.png",
+    "en": "Perchsplorer",
+    "ja": "エクスプローラーズパーチ"
+  },
+  "52160": {
+    "ko": "잎맥 유목",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028576.png",
+    "en": "Nervure Driftwood",
+    "ja": "ナーヴュアドリフトウッド"
+  },
+  "52161": {
+    "ko": "아욱세시아 마저럼",
+    "uiCategory": 47,
+    "iconPath": "/i/025000/025015.png",
+    "en": "Auxesian Marjoram",
+    "ja": "アウクセシアン・マジョラム"
+  },
+  "52162": {
+    "ko": "잎맥길 수로 순회 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029489.png",
+    "en": "Fishform: Aquamotion",
+    "ja": "緑道水路巡回機構"
+  },
+  "52163": {
+    "ko": "잎맥 뿔이끼",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028774.png",
+    "en": "Nervure Corntail",
+    "ja": "ナーヴュアコーンテール"
+  },
+  "52164": {
+    "ko": "이끼 낀 수지 덩어리",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029233.png",
+    "en": "Mossy Globule",
+    "ja": "苔むした樹脂塊"
+  },
+  "52165": {
+    "ko": "이끼 스펀지",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029250.png",
+    "en": "Mossy Spongescale",
+    "ja": "モススポンジ"
+  },
+  "52166": {
+    "ko": "가족 연결어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029257.png",
+    "en": "Family Netweaver",
+    "ja": "ファミリーネットウィーバー"
+  },
+  "52167": {
+    "ko": "붉은 낙엽",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029175.png",
+    "en": "Autumn's Garb",
+    "ja": "紅落葉"
+  },
+  "52168": {
+    "ko": "유사에우헤드론",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028783.png",
+    "en": "Eupseudohedron",
+    "ja": "スードエウヘドロン"
+  },
+  "52169": {
+    "ko": "우주 두더지귀뚜라미",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029801.png",
+    "en": "Cosmic Hedgemole Cricket",
+    "ja": "コスモグリロタルパ"
+  },
+  "52170": {
+    "ko": "수맥 보조 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028593.png",
+    "en": "Fishform: Aquaflow",
+    "ja": "水脈補助機構"
+  },
+  "52171": {
+    "ko": "잎더미고기",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028657.png",
+    "en": "Stacks Foliafin",
+    "ja": "スタックスフォリアフィン"
+  },
+  "52172": {
+    "ko": "숲속 섬유",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028626.png",
+    "en": "Sylvan Strand",
+    "ja": "シルヴァンファイバー"
+  },
+  "52173": {
+    "ko": "샘바닥 중심 정화 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028561.png",
+    "en": "Fishform: Aquapure",
+    "ja": "泉底主幹浄化機構"
+  },
+  "52174": {
+    "ko": "개척농어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029304.png",
+    "en": "Perchsplorer",
+    "ja": "エクスプローラーズパーチ"
+  },
+  "52175": {
+    "ko": "잎맥 유목",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028576.png",
+    "en": "Nervure Driftwood",
+    "ja": "ナーヴュアドリフトウッド"
+  },
+  "52176": {
+    "ko": "백화 빙어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029395.png",
+    "en": "Chlorotic Smelt",
+    "ja": "クロロシススメルト"
+  },
+  "52177": {
+    "ko": "벗겨진 나뭇조각",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028585.png",
+    "en": "Barkscale",
+    "ja": "剥がれた木片"
+  },
+  "52178": {
+    "ko": "잎맥 뿌리",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029259.png",
+    "en": "Nervure Taproot",
+    "ja": "ナーヴュアルート"
+  },
+  "52179": {
+    "ko": "난초어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028785.png",
+    "en": "Orchidelirium Principal",
+    "ja": "オーキデリウム・プリンシパル"
+  },
+  "52180": {
+    "ko": "우주 두더지귀뚜라미",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029801.png",
+    "en": "Cosmic Hedgemole Cricket",
+    "ja": "コスモグリロタルパ"
+  },
+  "52181": {
+    "ko": "수맥 보조 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028593.png",
+    "en": "Fishform: Aquaflow",
+    "ja": "水脈補助機構"
+  },
+  "52182": {
+    "ko": "숲속 복어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029297.png",
+    "en": "Sylvan Swell",
+    "ja": "シルヴァンパファー"
+  },
+  "52183": {
+    "ko": "수지수염",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029253.png",
+    "en": "Resinwhisker",
+    "ja": "レジンウィスカー"
+  },
+  "52184": {
+    "ko": "대형 초록 구피",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028784.png",
+    "en": "Grand Green Guppy",
+    "ja": "グラングリーングッピー"
+  },
+  "52185": {
+    "ko": "개척농어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029304.png",
+    "en": "Perchsplorer",
+    "ja": "エクスプローラーズパーチ"
+  },
+  "52186": {
+    "ko": "잎맥 유목",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028576.png",
+    "en": "Nervure Driftwood",
+    "ja": "ナーヴュアドリフトウッド"
+  },
+  "52187": {
+    "ko": "비상용 환수 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029446.png",
+    "en": "Fishform: Aquacycle",
+    "ja": "非常用換水機構"
+  },
+  "52188": {
+    "ko": "익은 감귤어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029258.png",
+    "en": "Ripe Citrusfish",
+    "ja": "ライプシトラス"
+  },
+  "52189": {
+    "ko": "물이끼 청소 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028659.png",
+    "en": "Fishform: Vegiclean",
+    "ja": "水苔清掃機構"
+  },
+  "52190": {
+    "ko": "정원수 잉어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028775.png",
+    "en": "Topiary Carp",
+    "ja": "トピアリー・カープ"
+  },
+  "52191": {
+    "ko": "퇴적물 교반 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028423.png",
+    "en": "Fishform: Alluvimix",
+    "ja": "堆積物撹拌機構"
+  },
+  "52192": {
+    "ko": "둘레못고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029216.png",
+    "en": "Soaking Betta",
+    "ja": "ソーキングベタ"
+  },
+  "52193": {
+    "ko": "퇴적물 제거 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029227.png",
+    "en": "Fishform: Alluvimark",
+    "ja": "堆積物刻削機構"
+  },
+  "52194": {
+    "ko": "남전기 수지",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028582.png",
+    "en": "Indicoresin Trahira",
+    "ja": "インディコレジン"
+  },
+  "52195": {
+    "ko": "청록 덩굴",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028777.png",
+    "en": "Turquoise Vine",
+    "ja": "ターコイズヴァイン"
+  },
+  "52196": {
+    "ko": "우주 두더지귀뚜라미",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029801.png",
+    "en": "Cosmic Hedgemole Cricket",
+    "ja": "コスモグリロタルパ"
+  },
+  "52197": {
+    "ko": "수맥 보조 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028593.png",
+    "en": "Fishform: Aquaflow",
+    "ja": "水脈補助機構"
+  },
+  "52198": {
+    "ko": "숲속 전령",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029579.png",
+    "en": "Sylvan Herald",
+    "ja": "シルヴァンヘラルド"
+  },
+  "52199": {
+    "ko": "백화 비파",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029309.png",
+    "en": "Chlorotic Pleco",
+    "ja": "クロロシスプレコ"
+  },
+  "52200": {
+    "ko": "만개 도라도",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029518.png",
+    "en": "Blooming Characin",
+    "ja": "フルブルームドラド"
+  },
+  "52201": {
+    "ko": "정원수 피라루쿠",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028773.png",
+    "en": "Topiary Pirarucu",
+    "ja": "トピアリー・ピラルク"
+  },
+  "52202": {
+    "ko": "개척농어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029304.png",
+    "en": "Perchsplorer",
+    "ja": "エクスプローラーズパーチ"
+  },
+  "52203": {
+    "ko": "잎맥 유목",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028576.png",
+    "en": "Nervure Driftwood",
+    "ja": "ナーヴュアドリフトウッド"
+  },
+  "52204": {
+    "ko": "금빛 가을",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029453.png",
+    "en": "Autumn's Wealth",
+    "ja": "オータムゴールド"
+  },
+  "52205": {
+    "ko": "백화 나비고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029575.png",
+    "en": "Chlorotic Butterfly",
+    "ja": "クロロシスバタフライ"
+  },
+  "52206": {
+    "ko": "버섯갓 옥수수 황어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028583.png",
+    "en": "Pileus Corn Dace",
+    "ja": "パイレウスコーン"
+  },
+  "52207": {
+    "ko": "연두 비단",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028776.png",
+    "en": "Verdant Veil",
+    "ja": "萌葱錦"
+  },
+  "52208": {
+    "ko": "채광 꽃잎고기",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029704.png",
+    "en": "Skylit Petal",
+    "ja": "スカイライトペタル"
+  },
+  "52209": {
+    "ko": "남전기 펄프",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029456.png",
+    "en": "Indigo Pulpscale",
+    "ja": "インディコ・パルプ"
+  },
+  "52210": {
+    "ko": "숲속 핵",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028513.png",
+    "en": "Sylvan Core",
+    "ja": "シルヴァンコア"
+  },
+  "52211": {
+    "ko": "샘바닥 파장 계측 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028571.png",
+    "en": "Fishform: Aquameter",
+    "ja": "泉底波長計測機構"
+  },
+  "52212": {
+    "ko": "푸른꽃고기",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028612.png",
+    "en": "Bluebloom",
+    "ja": "ブルーブルーム"
+  },
+  "52213": {
+    "ko": "남전기석 게",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028778.png",
+    "en": "Crabby Indicolite",
+    "ja": "クラビー・インディコライト"
+  },
+  "52214": {
+    "ko": "정원수 붕어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028779.png",
+    "en": "Topiary Gibal",
+    "ja": "トピアリー・ギバル"
+  },
+  "52215": {
+    "ko": "정원 송어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029204.png",
+    "en": "Botanitrout",
+    "ja": "ガーデントラウト"
+  },
+  "52216": {
+    "ko": "분홍잎 조개",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029419.png",
+    "en": "Peachpetal Shell",
+    "ja": "ピーチペタルシェル"
+  },
+  "52217": {
+    "ko": "백화 꼬치어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029414.png",
+    "en": "Chlorotic Pike",
+    "ja": "クロロシスパイク"
+  },
+  "52218": {
+    "ko": "소란 패랭이",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029555.png",
+    "en": "Riotous Dianthus",
+    "ja": "ライオタス・ディアンサス"
+  },
+  "52219": {
+    "ko": "등나무 해파리",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028780.png",
+    "en": "Wisteria Jellyfish",
+    "ja": "ウィステリアジェリー"
+  },
+  "52220": {
+    "ko": "정원수 붕어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028779.png",
+    "en": "Topiary Gibal",
+    "ja": "トピアリー・ギバル"
+  },
+  "52221": {
+    "ko": "정원 송어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029204.png",
+    "en": "Botanitrout",
+    "ja": "ガーデントラウト"
+  },
+  "52222": {
+    "ko": "어린잎 참바리",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028622.png",
+    "en": "Cotyledon Grouper",
+    "ja": "カタリド・グルーパー"
+  },
+  "52223": {
+    "ko": "대형 꽃잎날개",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029772.png",
+    "en": "Greater Petalwing",
+    "ja": "グランドペタルウィング"
+  },
+  "52224": {
+    "ko": "병 속의 숲",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028649.png",
+    "en": "Shroud in a Bottle",
+    "ja": "ボトルシュラウド"
+  },
+  "52225": {
+    "ko": "정원수 고래",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028781.png",
+    "en": "Topiary Cetacean",
+    "ja": "トピアリー・ウェール"
+  },
+  "52226": {
+    "ko": "정원수 붕어",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028779.png",
+    "en": "Topiary Gibal",
+    "ja": "トピアリー・ギバル"
+  },
+  "52227": {
+    "ko": "수용성 비료 생성 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029500.png",
+    "en": "Fishform: Nutrigrowth",
+    "ja": "水溶肥料生成機構"
+  },
+  "52228": {
+    "ko": "표류 덤불",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029053.png",
+    "en": "Drifting Dragon",
+    "ja": "ドリフティングブッシュ"
+  },
+  "52229": {
+    "ko": "오로라 꽃잎고기",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028443.png",
+    "en": "Auroral Petalfish",
+    "ja": "オーロラペタル"
+  },
+  "52230": {
+    "ko": "비상용 수위 조절 기구",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028644.png",
+    "en": "Fishform: Aqualevel",
+    "ja": "非常用水位調整機構"
+  },
+  "52231": {
+    "ko": "정원수 뱀",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028782.png",
+    "en": "Topiary Serpent",
+    "ja": "トピアリー・サーペント"
+  },
+  "52232": {
+    "ko": "개척농어",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029304.png",
+    "en": "Perchsplorer",
+    "ja": "エクスプローラーズパーチ"
+  },
+  "52233": {
+    "ko": "아욱세시아 핵",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029316.png",
+    "en": "Auxesian Core",
+    "ja": "アウクセシアコア"
+  },
+  "52234": {
+    "ko": "우주 두더지귀뚜라미",
+    "uiCategory": 47,
+    "iconPath": "/i/029000/029801.png",
+    "en": "Cosmic Hedgemole Cricket",
+    "ja": "コスモグリロタルパ"
+  },
+  "52235": {
+    "ko": "아욱세시아 붕어마름",
+    "uiCategory": 47,
+    "iconPath": "/i/028000/028679.png",
+    "en": "Auxesian Cabomba",
+    "ja": "アウクセシア・カボンバ"
+  },
+  "52236": {
+    "ko": "우주 번데기",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027003.png",
+    "en": "Cosmoth Pupa",
+    "ja": "コスモ・モスプパ"
+  },
+  "52237": {
+    "ko": "우주 떡밥",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027042.png",
+    "en": "Cosmobait Ball",
+    "ja": "コスモボール"
+  },
+  "52238": {
+    "ko": "우주 각다귀",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027002.png",
+    "en": "Cosmic Crane Fly",
+    "ja": "コスモ・ガガンボ"
+  },
+  "52239": {
+    "ko": "우주 지렁이",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027018.png",
+    "en": "Cosmoworm",
+    "ja": "コスモワーム"
+  },
+  "52240": {
+    "ko": "끈적 유충",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027013.png",
+    "en": "Sticky Larva",
+    "ja": "スティッキーラーヴァ"
+  },
+  "52241": {
+    "ko": "우주 독거미",
+    "uiCategory": 33,
+    "iconPath": "/i/022000/022619.png",
+    "en": "Cosmic Tarantula",
+    "ja": "コスモチュラ"
+  },
+  "52242": {
+    "ko": "황금별 유충",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027102.png",
+    "en": "Gold Starfly Nymph",
+    "ja": "ゴールデンスターラーヴァ"
+  },
+  "52243": {
+    "ko": "우주 붉은 구더기",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027109.png",
+    "en": "Red Cosmomaggots",
+    "ja": "コスモ紅サシ"
+  },
+  "52244": {
+    "ko": "별 연어알",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027044.png",
+    "en": "Stellar Salmon Roe",
+    "ja": "星イクラ"
+  },
+  "52245": {
+    "ko": "우주 미끼용 꿀벌",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027105.png",
+    "en": "Cosmic Honeybee",
+    "ja": "コスモミツバチ"
+  },
+  "52246": {
+    "ko": "민물 만능팔",
+    "uiCategory": 33,
+    "iconPath": "/i/023000/023501.png",
+    "en": "Freshwater Arthrolure",
+    "ja": "淡水万能アーム"
+  },
+  "52247": {
+    "ko": "우주 하루살이",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027046.png",
+    "en": "Cosmic Mayfly",
+    "ja": "コスモカゲロウ"
+  },
+  "52248": {
+    "ko": "우주 거머리",
+    "uiCategory": 33,
+    "iconPath": "/i/022000/022635.png",
+    "en": "Cosmoleech",
+    "ja": "コスモリーチ"
+  },
+  "52249": {
+    "ko": "별 붉은 장구벌레",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027033.png",
+    "en": "Stellar Midge Larva",
+    "ja": "星赤虫"
+  },
+  "52250": {
+    "ko": "개량 우주 하루살이",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027111.png",
+    "en": "Refined Cosmic Mayfly",
+    "ja": "改良コスモカゲロウ"
+  },
+  "52251": {
+    "ko": "개량 우주 거머리",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027029.png",
+    "en": "Refined Cosmoleech",
+    "ja": "改良コスモリーチ"
+  },
+  "52252": {
+    "ko": "개량 별 붉은 장구벌레",
+    "uiCategory": 33,
+    "iconPath": "/i/027000/027112.png",
+    "en": "Refined Stellar Midge Larva",
+    "ja": "改良星赤虫"
+  },
+  "52253": {
+    "ko": "민물 만능팔",
+    "uiCategory": 33,
+    "iconPath": "/i/023000/023501.png",
+    "en": "Freshwater Arthrolure",
+    "ja": "淡水万能アーム"
+  },
   "52254": {
     "ko": "염료: 기본 색상",
     "uiCategory": 55,
@@ -277161,6 +279023,173 @@
     "iconPath": "/i/058000/058824.png",
     "en": "Barding of Naught",
     "ja": "ニヒリティ・バード"
+  },
+  "52288": {
+    "ko": "삽",
+    "uiCategory": 61,
+    "iconPath": "/i/058000/058056.png",
+    "en": "Shovel",
+    "ja": "スコップ"
+  },
+  "52299": {
+    "ko": "팔라초 다이아몬드 검",
+    "uiCategory": 2,
+    "iconPath": "/i/030000/030706.png",
+    "en": "Palazzo Diamond Sword",
+    "ja": "パラッツォダイヤ・ソード"
+  },
+  "52300": {
+    "ko": "팔라초 다이아몬드 너클",
+    "uiCategory": 1,
+    "iconPath": "/i/030000/030870.png",
+    "en": "Palazzo Diamond Knuckles",
+    "ja": "パラッツォダイヤ・ナックル"
+  },
+  "52301": {
+    "ko": "팔라초 다이아몬드 도끼",
+    "uiCategory": 3,
+    "iconPath": "/i/031000/031280.png",
+    "en": "Palazzo Diamond Axe",
+    "ja": "パラッツォダイヤ・アクス"
+  },
+  "52302": {
+    "ko": "팔라초 다이아몬드 미늘창",
+    "uiCategory": 5,
+    "iconPath": "/i/031000/031682.png",
+    "en": "Palazzo Diamond Halberd",
+    "ja": "パラッツォダイヤ・ハルバード"
+  },
+  "52303": {
+    "ko": "팔라초 다이아몬드 활",
+    "uiCategory": 4,
+    "iconPath": "/i/032000/032070.png",
+    "en": "Palazzo Diamond Bow",
+    "ja": "パラッツォダイヤ・ボウ"
+  },
+  "52304": {
+    "ko": "팔라초 다이아몬드 지팡이",
+    "uiCategory": 9,
+    "iconPath": "/i/032000/032501.png",
+    "en": "Palazzo Diamond Cane",
+    "ja": "パラッツォダイヤ・ケーン"
+  },
+  "52305": {
+    "ko": "팔라초 다이아몬드 주술봉",
+    "uiCategory": 7,
+    "iconPath": "/i/032000/032916.png",
+    "en": "Palazzo Diamond Rod",
+    "ja": "パラッツォダイヤ・ロッド"
+  },
+  "52306": {
+    "ko": "팔라초 다이아몬드 마법서",
+    "uiCategory": 10,
+    "iconPath": "/i/037000/037863.png",
+    "en": "Palazzo Diamond Grimoire",
+    "ja": "パラッツォダイヤ・グリモア"
+  },
+  "52307": {
+    "ko": "팔라초 다이아몬드 치유서",
+    "uiCategory": 98,
+    "iconPath": "/i/037000/037862.png",
+    "en": "Palazzo Diamond Codex",
+    "ja": "パラッツォダイヤ・コーデックス"
+  },
+  "52308": {
+    "ko": "팔라초 다이아몬드 단검",
+    "uiCategory": 84,
+    "iconPath": "/i/033000/033656.png",
+    "en": "Palazzo Diamond Daggers",
+    "ja": "パラッツォダイヤ・ダガー"
+  },
+  "52309": {
+    "ko": "팔라초 다이아몬드 그레이트소드",
+    "uiCategory": 87,
+    "iconPath": "/i/034000/034035.png",
+    "en": "Palazzo Diamond Greatsword",
+    "ja": "パラッツォダイヤ・グレートソード"
+  },
+  "52310": {
+    "ko": "팔라초 다이아몬드 단총",
+    "uiCategory": 88,
+    "iconPath": "/i/034000/034529.png",
+    "en": "Palazzo Diamond Musketoon",
+    "ja": "パラッツォダイヤ・マスケトン"
+  },
+  "52311": {
+    "ko": "팔라초 다이아몬드 육분의",
+    "uiCategory": 89,
+    "iconPath": "/i/034000/034728.png",
+    "en": "Palazzo Diamond Sextant",
+    "ja": "パラッツォダイヤ・セクスタント"
+  },
+  "52312": {
+    "ko": "팔라초 다이아몬드 외날검",
+    "uiCategory": 96,
+    "iconPath": "/i/036000/036584.png",
+    "en": "Palazzo Diamond Katana",
+    "ja": "パラッツォダイヤ・カタナ"
+  },
+  "52313": {
+    "ko": "팔라초 다이아몬드 터크",
+    "uiCategory": 97,
+    "iconPath": "/i/036000/036883.png",
+    "en": "Palazzo Diamond Tuck",
+    "ja": "パラッツォダイヤ・タック"
+  },
+  "52314": {
+    "ko": "팔라초 다이아몬드 총검",
+    "uiCategory": 106,
+    "iconPath": "/i/036000/036127.png",
+    "en": "Palazzo Diamond Bayonet",
+    "ja": "パラッツォダイヤ・バヨネット"
+  },
+  "52315": {
+    "ko": "팔라초 다이아몬드 차크람",
+    "uiCategory": 107,
+    "iconPath": "/i/036000/036326.png",
+    "en": "Palazzo Diamond Chakrams",
+    "ja": "パラッツォダイヤ・チャクラム"
+  },
+  "52316": {
+    "ko": "팔라초 다이아몬드 전투낫",
+    "uiCategory": 108,
+    "iconPath": "/i/037000/037297.png",
+    "en": "Palazzo Diamond War Scythe",
+    "ja": "パラッツォダイヤ・ウォーサイズ"
+  },
+  "52317": {
+    "ko": "팔라초 다이아몬드 날개",
+    "uiCategory": 109,
+    "iconPath": "/i/037000/037093.png",
+    "en": "Palazzo Diamond Wings",
+    "ja": "パラッツォダイヤ・ウィング"
+  },
+  "52318": {
+    "ko": "팔라초 다이아몬드 쌍검치",
+    "uiCategory": 110,
+    "iconPath": "/i/037000/037460.png",
+    "en": "Palazzo Diamond Saberfangs",
+    "ja": "パラッツォダイヤ・ダブルサーベル"
+  },
+  "52319": {
+    "ko": "팔라초 다이아몬드 부채붓",
+    "uiCategory": 111,
+    "iconPath": "/i/037000/037670.png",
+    "en": "Palazzo Diamond Fan Brush",
+    "ja": "パラッツォダイヤ・ファンブラシ"
+  },
+  "52320": {
+    "ko": "팔라초 다이아몬드 방패",
+    "uiCategory": 11,
+    "iconPath": "/i/030000/030295.png",
+    "en": "Palazzo Diamond Shield",
+    "ja": "パラッツォダイヤ・シールド"
+  },
+  "52321": {
+    "ko": "광대의 우상",
+    "uiCategory": 61,
+    "iconPath": "/i/026000/026697.png",
+    "ja": "道化師のトーテム像"
   },
   "52387": {
     "ko": "암영견 투구",
@@ -277261,7 +279290,7 @@
     "ja": "ブレイクストリート・ボトム"
   },
   "52401": {
-    "ko": "브레이크 스트리트 부츠",
+    "ko": "브레이크 스트리트 장화",
     "uiCategory": 38,
     "iconPath": "/i/057000/057971.png",
     "en": "Rule-breaker's Boots",
@@ -277379,6 +279408,1014 @@
     "en": "Alternative Boots",
     "ja": "アルタナティヴ・ブーツ"
   },
+  "52418": {
+    "ko": "우주 탐험가 모자",
+    "uiCategory": 34,
+    "iconPath": "/i/056000/056958.png",
+    "en": "Cosmic Explorer's Cap",
+    "ja": "コスモエクスプローラー・キャップ"
+  },
+  "52419": {
+    "ko": "우주 탐험가 재킷",
+    "uiCategory": 35,
+    "iconPath": "/i/057000/057395.png",
+    "en": "Cosmic Explorer's Jacket",
+    "ja": "コスモエクスプローラー・ジャケット"
+  },
+  "52420": {
+    "ko": "우주 탐험가 손등장갑",
+    "uiCategory": 37,
+    "iconPath": "/i/056000/056464.png",
+    "en": "Cosmic Explorer's Halfgloves",
+    "ja": "コスモエクスプローラー・ハーフグローブ"
+  },
+  "52421": {
+    "ko": "우주 탐험가 일자바지",
+    "uiCategory": 36,
+    "iconPath": "/i/057000/057480.png",
+    "en": "Cosmic Explorer's Slops",
+    "ja": "コスモエクスプローラー・スロップ"
+  },
+  "52422": {
+    "ko": "우주 탐험가 장화",
+    "uiCategory": 38,
+    "iconPath": "/i/057000/057974.png",
+    "en": "Cosmic Explorer's Boots",
+    "ja": "コスモエクスプローラー・ブーツ"
+  },
+  "52423": {
+    "ko": "우주 탐험가 쫄바지",
+    "uiCategory": 36,
+    "iconPath": "/i/057000/057481.png",
+    "en": "Cosmic Explorer's Tights",
+    "ja": "コスモエクスプローラー・タイツ"
+  },
+  "52424": {
+    "ko": "우주 정비공 모자",
+    "uiCategory": 34,
+    "iconPath": "/i/056000/056957.png",
+    "en": "Cosmic Operator's Cap",
+    "ja": "コスモオペレーター・キャップ"
+  },
+  "52425": {
+    "ko": "우주 정비공 현장작업복",
+    "uiCategory": 35,
+    "iconPath": "/i/057000/057394.png",
+    "en": "Cosmic Operator's Coverall Top",
+    "ja": "コスモオペレーター・カバーオール"
+  },
+  "52426": {
+    "ko": "우주 정비공 장갑",
+    "uiCategory": 37,
+    "iconPath": "/i/056000/056463.png",
+    "en": "Cosmic Operator's Gloves",
+    "ja": "コスモオペレーター・グローブ"
+  },
+  "52427": {
+    "ko": "우주 정비공 장화",
+    "uiCategory": 38,
+    "iconPath": "/i/057000/057973.png",
+    "en": "Cosmic Operator's Boots",
+    "ja": "コスモオペレーター・ブーツ"
+  },
+  "52433": {
+    "ko": "그래피티 네오 튜닉",
+    "uiCategory": 35,
+    "iconPath": "/i/057000/057388.png",
+    "en": "Graffiti Neotunic",
+    "ja": "グラフィティ・ネオチュニック"
+  },
+  "52434": {
+    "ko": "오버핏 그래피티 네오 튜닉",
+    "uiCategory": 35,
+    "iconPath": "/i/057000/057384.png",
+    "en": "Oversized Graffiti Neotunic",
+    "ja": "グラフィティ・ネオチュニック:オーバーサイズ"
+  },
+  "52435": {
+    "ko": "슬림핏 그래피티 네오 튜닉",
+    "uiCategory": 35,
+    "iconPath": "/i/057000/057386.png",
+    "en": "Form-fitting Graffiti Neotunic",
+    "ja": "グラフィティ・ネオチュニック:タイトサイズ"
+  },
+  "52451": {
+    "ko": "통일 규격 가공 백금",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020833.png",
+    "en": "Standard Treated Platinum Ingot",
+    "ja": "統一規格の加工プラチナ"
+  },
+  "52452": {
+    "ko": "탐색용 관측 렌즈",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022665.png",
+    "en": "Survey Lens",
+    "ja": "探索用の観測レンズ"
+  },
+  "52453": {
+    "ko": "중장비용 고강도 부품",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026269.png",
+    "en": "High-durability Heavy Machinery Part",
+    "ja": "重機用の高耐久部品"
+  },
+  "52454": {
+    "ko": "탐색용 전기톱",
+    "uiCategory": 63,
+    "iconPath": "/i/034000/034374.png",
+    "en": "Survey Chainsaw",
+    "ja": "探索用のチェンソー"
+  },
+  "52455": {
+    "ko": "도시 유적용 손수레",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023722.png",
+    "en": "Ruins Barrow",
+    "ja": "都市遺構用の手押し車"
+  },
+  "52456": {
+    "ko": "탐색 작업용 징검나무",
+    "uiCategory": 63,
+    "iconPath": "/i/051000/051436.png",
+    "en": "Exploration Scaffolding Panel",
+    "ja": "探索作業用の足場材"
+  },
+  "52457": {
+    "ko": "고강도 긴 철사",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020901.png",
+    "en": "High-durability Wire",
+    "ja": "高耐久ロングワイヤー"
+  },
+  "52458": {
+    "ko": "탐색 작업용 배기관",
+    "uiCategory": 63,
+    "iconPath": "/i/051000/051432.png",
+    "en": "Exploration Exhaust Pipe",
+    "ja": "探索作業用の排気管"
+  },
+  "52459": {
+    "ko": "선구자 유물 복원 부품",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026523.png",
+    "en": "Voyager Relic Restoration Component",
+    "ja": "先駆者遺物の復元パーツ"
+  },
+  "52460": {
+    "ko": "탐색용 에테르 확대경",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025986.png",
+    "en": "Survey Aetheric Magnifying Glass",
+    "ja": "探索用のエーテルルーペ"
+  },
+  "52461": {
+    "ko": "도시 유적용 관측기",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053537.png",
+    "en": "Ruins Aetheric Gauge",
+    "ja": "都市遺構用の観測機"
+  },
+  "52462": {
+    "ko": "통일 규격 고강도 합금판",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020958.png",
+    "en": "Standard High-durability Plating",
+    "ja": "統一規格の高耐久合金板"
+  },
+  "52463": {
+    "ko": "탐색용 고도 관측 렌즈",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022624.png",
+    "en": "Survey Precision Lens",
+    "ja": "探索用の高度観測レンズ"
+  },
+  "52464": {
+    "ko": "통일 규격 아욱세시아 합금",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020832.png",
+    "en": "Standard Auxesian Alloy Ingot",
+    "ja": "統一規格のアウクセシア合金"
+  },
+  "52465": {
+    "ko": "통일 규격 가공 동 주괴",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020813.png",
+    "en": "Standard Treated Bronze Ingot",
+    "ja": "統一規格の加工ブロンズ"
+  },
+  "52466": {
+    "ko": "중장비용 합금판",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020961.png",
+    "en": "Heavy Machinery Alloy Plating",
+    "ja": "重機用の合金板"
+  },
+  "52467": {
+    "ko": "도시 유적용 이음못",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023104.png",
+    "en": "Ruins Rivet",
+    "ja": "都市遺構用のリベット"
+  },
+  "52468": {
+    "ko": "통일 규격 가공 은 주괴",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020826.png",
+    "en": "Standard Treated Silver Ingot",
+    "ja": "統一規格の加工シルバー"
+  },
+  "52469": {
+    "ko": "통일 규격 가공 금 주괴",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020809.png",
+    "en": "Standard Treated Gold Ingot",
+    "ja": "統一規格の加工ゴールド"
+  },
+  "52470": {
+    "ko": "탐색 작업용 철골",
+    "uiCategory": 63,
+    "iconPath": "/i/051000/051438.png",
+    "en": "Exploration Steel Beam",
+    "ja": "探索作業用の鉄骨"
+  },
+  "52471": {
+    "ko": "중장비용 톱니바퀴",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025995.png",
+    "en": "Heavy Machinery Gear",
+    "ja": "重機用の歯車"
+  },
+  "52472": {
+    "ko": "통일 규격 손도끼",
+    "uiCategory": 63,
+    "iconPath": "/i/031000/031402.png",
+    "en": "Standard Hand Axe",
+    "ja": "統一規格のハンドアクス"
+  },
+  "52473": {
+    "ko": "통일 규격 벨트재",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020969.png",
+    "en": "Standard Vehicle Track Material",
+    "ja": "統一規格の履帯材"
+  },
+  "52474": {
+    "ko": "탐색용 홍옥 낫",
+    "uiCategory": 63,
+    "iconPath": "/i/038000/038169.png",
+    "en": "Survey Ruby Scythe",
+    "ja": "探索用のルビーサイズ"
+  },
+  "52475": {
+    "ko": "통일 규격 도끼머리",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023102.png",
+    "en": "Standard Axe Head",
+    "ja": "統一規格の斧頭"
+  },
+  "52476": {
+    "ko": "통일 규격 가공 홍옥금 주괴",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020828.png",
+    "en": "Standard Treated Ruby Gold Ingot",
+    "ja": "統一規格の加工ルビーゴールド"
+  },
+  "52477": {
+    "ko": "행성 탐색용 촉진제 구체",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023721.png",
+    "en": "Survey Formula Compounds",
+    "ja": "惑星探索用のフォーミュラボール"
+  },
+  "52478": {
+    "ko": "환경 대책용 접이식 파라솔",
+    "uiCategory": 63,
+    "iconPath": "/i/058000/058001.png",
+    "en": "Flareproof Compact Parasol",
+    "ja": "環境対策用の折り畳みパラソル"
+  },
+  "52479": {
+    "ko": "정원 작업용 분갈이 깔개",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021609.png",
+    "en": "Botanic Garden Sheet",
+    "ja": "庭園作業用の園芸シート"
+  },
+  "52480": {
+    "ko": "행성 탐색용 가공 기름천",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026127.png",
+    "en": "Survey Processed Oilcloth",
+    "ja": "惑星探索用の加工油布"
+  },
+  "52481": {
+    "ko": "문명 연구용 추출 섬유",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021690.png",
+    "en": "Archaeological Extraction Fiber",
+    "ja": "文明研究用の抽出ファイバー"
+  },
+  "52482": {
+    "ko": "통일 규격 강화 밧줄",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026103.png",
+    "en": "Standard Reinforced Rope",
+    "ja": "統一規格の強化ロープ"
+  },
+  "52483": {
+    "ko": "행성 탐색용 고전도 수지",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021267.png",
+    "en": "Hyperconductive Survey Resin",
+    "ja": "惑星探索用の高伝導樹脂"
+  },
+  "52484": {
+    "ko": "반출용 상급 포장 자재",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023563.png",
+    "en": "Superior Freight Component",
+    "ja": "搬出用の上級梱包資材"
+  },
+  "52485": {
+    "ko": "환경 대책용 파라솔",
+    "uiCategory": 63,
+    "iconPath": "/i/052000/052125.png",
+    "en": "Flareproof Parasol",
+    "ja": "環境対策用のパラソル"
+  },
+  "52486": {
+    "ko": "통일 규격 강화 섬유",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021671.png",
+    "en": "Standard Reinforced Fiber",
+    "ja": "統一規格の強化ファイバー"
+  },
+  "52487": {
+    "ko": "행성 탐색용 고전도 수지",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021267.png",
+    "en": "Hyperconductive Survey Resin",
+    "ja": "惑星探索用の高伝導樹脂"
+  },
+  "52488": {
+    "ko": "반출용 상급 포장 자재",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023563.png",
+    "en": "Superior Freight Component",
+    "ja": "搬出用の上級梱包資材"
+  },
+  "52489": {
+    "ko": "통일 규격 고밀도 부직포",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022037.png",
+    "en": "Standard High-density Bonded Fabric",
+    "ja": "統一規格の高密不織布"
+  },
+  "52490": {
+    "ko": "통일 규격 내후성 천",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021620.png",
+    "en": "Standard Flareproof Cloth",
+    "ja": "統一規格の耐候布"
+  },
+  "52491": {
+    "ko": "위문용 고급 양조주",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026550.png",
+    "en": "Finest Launch Party Liquor",
+    "ja": "慰労用の高級醸造酒"
+  },
+  "52492": {
+    "ko": "우주 만능 효모",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023540.png",
+    "en": "All-purpose Cosmic Yeast",
+    "ja": "コスモ万能酵母"
+  },
+  "52493": {
+    "ko": "광물질 식물 추출 섬유",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020901.png",
+    "en": "Mineralized Plant Fiber",
+    "ja": "鉱質植物の抽出ファイバー"
+  },
+  "52494": {
+    "ko": "행성 탐색용 장기 보존수",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022715.png",
+    "en": "Potable Survey Water",
+    "ja": "惑星探索用の長期保存水"
+  },
+  "52495": {
+    "ko": "행성 탐색용 보급 젤리",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023545.png",
+    "en": "Survey Supply Jelly",
+    "ja": "惑星探索用の補給ゼリー"
+  },
+  "52496": {
+    "ko": "행성 탐색용 보급 젤리",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023545.png",
+    "en": "Survey Supply Jelly",
+    "ja": "惑星探索用の補給ゼリー"
+  },
+  "52497": {
+    "ko": "행성 탐색용 영양제",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020673.png",
+    "en": "Survey Nutrient Mixture",
+    "ja": "惑星探索用の栄養剤"
+  },
+  "52498": {
+    "ko": "기지 생활용 이층 침대",
+    "uiCategory": 63,
+    "iconPath": "/i/052000/052647.png",
+    "en": "Habitat Bunk Bed",
+    "ja": "基地生活用の二段ベッド"
+  },
+  "52499": {
+    "ko": "정원 작업용 목판",
+    "uiCategory": 63,
+    "iconPath": "/i/052000/052366.png",
+    "en": "Botanic Planks",
+    "ja": "庭園作業用の板材"
+  },
+  "52500": {
+    "ko": "행성 탐색용 가공 낚시도구",
+    "uiCategory": 63,
+    "iconPath": "/i/038000/038236.png",
+    "en": "Survey Fishing Equipment",
+    "ja": "惑星探索用の加工釣具"
+  },
+  "52501": {
+    "ko": "반출용 상급 포장 자재",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053351.png",
+    "en": "Superior Freight Component",
+    "ja": "搬出用の上級梱包資材"
+  },
+  "52502": {
+    "ko": "행성 탐색용 가공 연료",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022418.png",
+    "en": "Processed Survey Fuel",
+    "ja": "惑星探索用の加工燃料"
+  },
+  "52503": {
+    "ko": "고순도 바이오 연료",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023538.png",
+    "en": "Purified Biofuel",
+    "ja": "高純度バイオ燃料"
+  },
+  "52504": {
+    "ko": "문명 연구용 추출 수지",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022674.png",
+    "en": "Archaeological Extraction Resin",
+    "ja": "文明研究用の抽出樹脂"
+  },
+  "52505": {
+    "ko": "고순도 보석 수지",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021271.png",
+    "en": "Purified Jewel Resin",
+    "ja": "高純度ジュエルレジン"
+  },
+  "52506": {
+    "ko": "통일 규격 강화 목재",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023625.png",
+    "en": "Standard Reinforced Lumber",
+    "ja": "統一規格の強化木材"
+  },
+  "52507": {
+    "ko": "통일 규격 고밀도 합판",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022515.png",
+    "en": "Standard High-density Plywood",
+    "ja": "統一規格の高密合板"
+  },
+  "52508": {
+    "ko": "통일 규격 수지 막대",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023105.png",
+    "en": "Standard Resin Pole",
+    "ja": "統一規格の樹脂ポール"
+  },
+  "52509": {
+    "ko": "기지 생활용 안락의자",
+    "uiCategory": 63,
+    "iconPath": "/i/052000/052659.png",
+    "en": "Habitat Sofa",
+    "ja": "基地生活用のソファ"
+  },
+  "52510": {
+    "ko": "행성 탐색용 가공 장화",
+    "uiCategory": 63,
+    "iconPath": "/i/049000/049492.png",
+    "en": "Survey Boots",
+    "ja": "惑星探索用の加工ブーツ"
+  },
+  "52511": {
+    "ko": "반출용 상급 포장 자재",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053351.png",
+    "en": "Superior Freight Component",
+    "ja": "搬出用の上級梱包資材"
+  },
+  "52512": {
+    "ko": "행성 탐색용 정비복",
+    "uiCategory": 63,
+    "iconPath": "/i/057000/057394.png",
+    "en": "Survey Operator Suit",
+    "ja": "惑星探索用のオペレータースーツ"
+  },
+  "52513": {
+    "ko": "통일 규격 두꺼운 천",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023158.png",
+    "en": "Thick Standard Cloth",
+    "ja": "統一規格の厚手布"
+  },
+  "52514": {
+    "ko": "기지 생활용 쿠션",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053248.png",
+    "en": "Habitat Cushion",
+    "ja": "基地生活用のクッション"
+  },
+  "52515": {
+    "ko": "행성 탐색용 가공 재킷",
+    "uiCategory": 63,
+    "iconPath": "/i/043000/043969.png",
+    "en": "Survey Jacket",
+    "ja": "惑星探索用の加工ジャケット"
+  },
+  "52516": {
+    "ko": "반출용 상급 포장 자재",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053351.png",
+    "en": "Superior Freight Component",
+    "ja": "搬出用の上級梱包資材"
+  },
+  "52517": {
+    "ko": "행성 탐색용 탐험복",
+    "uiCategory": 63,
+    "iconPath": "/i/057000/057395.png",
+    "en": "Survey Explorer Suit",
+    "ja": "惑星探索用のエクスプローラースーツ"
+  },
+  "52518": {
+    "ko": "통일 규격 경량 천",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021680.png",
+    "en": "Standard Lightweight Cloth",
+    "ja": "統一規格の軽量布"
+  },
+  "52519": {
+    "ko": "식물 행성 녹즙",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024413.png",
+    "en": "Auxesian Botanical Juice",
+    "ja": "植物惑星の青汁"
+  },
+  "52520": {
+    "ko": "행성 탐색용 내풍 양초",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026101.png",
+    "en": "Survey Inextinguishable Candle",
+    "ja": "惑星探索用の耐風蝋燭"
+  },
+  "52521": {
+    "ko": "행성 탐색용 박피재",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022652.png",
+    "en": "Stripped Survey Wood",
+    "ja": "惑星探索用の剥皮材"
+  },
+  "52522": {
+    "ko": "행성 탐색용 이암 벽돌",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022706.png",
+    "en": "Survey Bricks",
+    "ja": "惑星探索用の泥岩煉瓦"
+  },
+  "52523": {
+    "ko": "행성 탐색용 간이 발열제",
+    "uiCategory": 63,
+    "iconPath": "/i/027000/027608.png",
+    "en": "Simplified Survey Exothermic Agent",
+    "ja": "惑星探索用の簡易発熱剤"
+  },
+  "52524": {
+    "ko": "행성 탐색용 콘크리트",
+    "uiCategory": 63,
+    "iconPath": "/i/021000/021470.png",
+    "en": "Survey Concrete",
+    "ja": "惑星探索用のコンクリート"
+  },
+  "52525": {
+    "ko": "행성 탐색용 회반죽",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023539.png",
+    "en": "Survey Mortar",
+    "ja": "惑星探索用のモルタル"
+  },
+  "52526": {
+    "ko": "행성 탐색용 당근차",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024405.png",
+    "en": "Survey Carrot Tea",
+    "ja": "惑星探索用のキャロットティー"
+  },
+  "52527": {
+    "ko": "행성 탐색용 보존제",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022636.png",
+    "en": "Survey Preservative",
+    "ja": "惑星探索用の保存剤"
+  },
+  "52528": {
+    "ko": "행성 탐색용 당근차",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024405.png",
+    "en": "Survey Carrot Tea",
+    "ja": "惑星探索用のキャロットティー"
+  },
+  "52529": {
+    "ko": "행성 탐색용 지속 연금제",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020602.png",
+    "en": "Survey Growth Formula",
+    "ja": "惑星探索用の持続錬金剤"
+  },
+  "52530": {
+    "ko": "식물 행성 콩소메 수프",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024119.png",
+    "en": "Auxesian Soup",
+    "ja": "植物惑星のコンソメスープ"
+  },
+  "52531": {
+    "ko": "행성 탐색용 커피 세트",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053433.png",
+    "en": "Survey Coffee Service",
+    "ja": "惑星探索用のコーヒーセット"
+  },
+  "52532": {
+    "ko": "행성 탐색용 추출 향신료",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025054.png",
+    "en": "Survey Spice",
+    "ja": "惑星探索用の抽出スパイス"
+  },
+  "52533": {
+    "ko": "행성 탐색용 상급 윤활유",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025453.png",
+    "en": "Superior Survey Lubricant",
+    "ja": "惑星探索用の上級潤滑油"
+  },
+  "52534": {
+    "ko": "행성 탐색용 가열식 도시락",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023001.png",
+    "en": "Survey Self-heating Box Lunch",
+    "ja": "惑星探索用の加熱式弁当"
+  },
+  "52535": {
+    "ko": "행성 탐색용 강력 접착제",
+    "uiCategory": 63,
+    "iconPath": "/i/027000/027605.png",
+    "en": "Survey Adhesive",
+    "ja": "惑星探索用の強力接着剤"
+  },
+  "52536": {
+    "ko": "행성 탐색용 경화제",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022607.png",
+    "en": "Survey Curing Agent",
+    "ja": "惑星探索用の硬化剤"
+  },
+  "52537": {
+    "ko": "행성 탐색용 당근 알약",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023549.png",
+    "en": "Survey Carrot Pellets",
+    "ja": "惑星探索用のキャロットタブレット"
+  },
+  "52538": {
+    "ko": "행성 탐색용 도시락",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026130.png",
+    "en": "Survey Luncheon Coffer",
+    "ja": "惑星探索用のランチボックス"
+  },
+  "52539": {
+    "ko": "행성 탐색용 당근 알약",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023549.png",
+    "en": "Survey Carrot Pellets",
+    "ja": "惑星探索用のキャロットタブレット"
+  },
+  "52540": {
+    "ko": "행성 탐색용 샌드위치",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053353.png",
+    "en": "Survey Sandwich",
+    "ja": "惑星探索用のサンドイッチ"
+  },
+  "52541": {
+    "ko": "중장비용 바이오 연료",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023629.png",
+    "en": "Heavy Machinery Biofuel",
+    "ja": "重機用のバイオ燃料"
+  },
+  "52542": {
+    "ko": "식물 재생용 촉진제 구체",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023643.png",
+    "en": "Regrowth Formula Compounds",
+    "ja": "植物再生用のフォーミュラボール"
+  },
+  "52543": {
+    "ko": "아욱세시아 바이오 코크스",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023630.png",
+    "en": "Auxesian Biocoke",
+    "ja": "アウクセシアのバイオコークス"
+  },
+  "52544": {
+    "ko": "행성 탐색용 굴착 드릴",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023631.png",
+    "en": "Survey Boring Drill",
+    "ja": "惑星探索用の掘削ドリル"
+  },
+  "52545": {
+    "ko": "선구자 문명 세로형 수지 유리",
+    "uiCategory": 63,
+    "iconPath": "/i/051000/051931.png",
+    "en": "Arched Voyager Window",
+    "ja": "先駆者文明の縦型樹脂ガラス"
+  },
+  "52546": {
+    "ko": "선구자 문명 재현 모형",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053552.png",
+    "en": "Reproduced Voyagers' Ornament",
+    "ja": "先駆者文明の再現模型"
+  },
+  "52547": {
+    "ko": "행성 탐색용 촉진제 분사기",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023632.png",
+    "en": "Survey Sublimator Diffuser",
+    "ja": "惑星探索用のフォーミュラスプレッダー"
+  },
+  "52548": {
+    "ko": "선구자 문명 원형 수지 유리",
+    "uiCategory": 63,
+    "iconPath": "/i/051000/051930.png",
+    "en": "Round Voyager Window",
+    "ja": "先駆者文明の円型樹脂ガラス"
+  },
+  "52549": {
+    "ko": "선구자 문명 재현 단말",
+    "uiCategory": 63,
+    "iconPath": "/i/053000/053551.png",
+    "en": "Reproduced Voyagers' Terminal",
+    "ja": "先駆者文明の再現端末"
+  },
+  "52550": {
+    "ko": "행성 탐색용 용접기",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023633.png",
+    "en": "Survey Welder",
+    "ja": "惑星探索用の溶接機"
+  },
+  "52551": {
+    "ko": "선구자 문명 사각형 수지 유리",
+    "uiCategory": 63,
+    "iconPath": "/i/051000/051932.png",
+    "en": "Rectangular Voyager Window",
+    "ja": "先駆者文明の角型樹脂ガラス"
+  },
+  "52552": {
+    "ko": "선구자 문명 재현 화면 장치",
+    "uiCategory": 63,
+    "iconPath": "/i/051000/051929.png",
+    "en": "Reproduced Voyagers' Displays",
+    "ja": "先駆者文明の再現ディスプレイ"
+  },
+  "52553": {
+    "ko": "행성 탐색용 우주복",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023637.png",
+    "en": "Survey Cosmic Suit",
+    "ja": "惑星探索用のスペーススーツ"
+  },
+  "52554": {
+    "ko": "행성 탐색용 조종복",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023638.png",
+    "en": "Survey Pilot Suit",
+    "ja": "惑星探索用のパイロットスーツ"
+  },
+  "52555": {
+    "ko": "행성 탐색용 강화 우주복 부재",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023639.png",
+    "en": "Initiative Powersuit Component",
+    "ja": "惑星探索用のパワードスーツ部材"
+  },
+  "52556": {
+    "ko": "행성 탐색용 승무원복",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023640.png",
+    "en": "Survey Crew Suit",
+    "ja": "惑星探索用のクルースーツ"
+  },
+  "52557": {
+    "ko": "행성 탐색용 선장복",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023641.png",
+    "en": "Captain's Survey Suit",
+    "ja": "惑星探索用のキャプテンスーツ"
+  },
+  "52558": {
+    "ko": "행성 탐색용 제독 의상 부재",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023642.png",
+    "en": "Star Admiral's Coat Fabric",
+    "ja": "惑星探索用のアドミラルスーツ部材"
+  },
+  "52559": {
+    "ko": "행성 탐색용 명품 촉진제",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022713.png",
+    "en": "Master Survey Formula",
+    "ja": "惑星探索用のマスターフォーミュラ"
+  },
+  "52560": {
+    "ko": "행성 탐색용 유리벽돌",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020977.png",
+    "en": "Survey Glass Block",
+    "ja": "惑星探索用のグラスブロック"
+  },
+  "52561": {
+    "ko": "우주 도구용 에테르 수지",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026695.png",
+    "en": "Cosmic Tool-compatible Aetheric Resin",
+    "ja": "コスモツール用のエーテルレジン"
+  },
+  "52562": {
+    "ko": "우주 즉석면",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023634.png",
+    "en": "Pananoodles",
+    "ja": "コスモヌードル"
+  },
+  "52563": {
+    "ko": "특별 품질 우주 휴대식량",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023635.png",
+    "en": "Cosmotized Rations",
+    "ja": "特質コスモレーション"
+  },
+  "52564": {
+    "ko": "우주 도구용 고순도 젤",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023636.png",
+    "en": "Pure Cosmic Tool-compatible Gel",
+    "ja": "コスモツール用の高純度ジェル"
+  },
+  "52565": {
+    "ko": "고화력 연소 촉진제",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022418.png",
+    "en": "High Burn Combustibles",
+    "ja": "高火力燃焼促進材"
+  },
+  "52566": {
+    "ko": "숙취 해소용 향",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026112.png",
+    "en": "Wakening Incense",
+    "ja": "酔い覚ましのお香"
+  },
+  "52567": {
+    "ko": "고출력 화염 방사기 부재",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023541.png",
+    "en": "High-powered Flamethrower Parts",
+    "ja": "高出力火炎放射器部材"
+  },
+  "52568": {
+    "ko": "굴착용 드릴 교체용 날",
+    "uiCategory": 63,
+    "iconPath": "/i/023000/023541.png",
+    "en": "Boring Drill Replacement Bits",
+    "ja": "掘削用ドリル替え刃"
+  },
+  "52569": {
+    "ko": "로더 수리용 판금",
+    "uiCategory": 63,
+    "iconPath": "/i/020000/020957.png",
+    "en": "Machina Repair Plating",
+    "ja": "ローダー修復用板金"
+  },
+  "52570": {
+    "ko": "포자 채집용 탱크",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025952.png",
+    "en": "Spore Collection Tank",
+    "ja": "胞子採集用タンク"
+  },
+  "52571": {
+    "ko": "로더 교환용 정밀 부재",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026508.png",
+    "en": "Precision Machina Replacement Part",
+    "ja": "ローダーの交換用精密部材"
+  },
+  "52572": {
+    "ko": "무인기용 교환 회로",
+    "uiCategory": 63,
+    "iconPath": "/i/026000/026539.png",
+    "en": "Replacement Drone Circuit Board",
+    "ja": "ドローン用交換回路"
+  },
+  "52573": {
+    "ko": "작업용 안전 장갑",
+    "uiCategory": 63,
+    "iconPath": "/i/056000/056189.png",
+    "en": "Floraproof Work Gloves",
+    "ja": "作業用防刺グローブ"
+  },
+  "52574": {
+    "ko": "포자 대책 방진면",
+    "uiCategory": 63,
+    "iconPath": "/i/040000/040951.png",
+    "en": "Spore-filtering Mask",
+    "ja": "胞子対策防塵マスク"
+  },
+  "52575": {
+    "ko": "화기 작업용 복면",
+    "uiCategory": 63,
+    "iconPath": "/i/041000/041645.png",
+    "en": "Incineration Mask",
+    "ja": "火器作業用のマスク"
+  },
+  "52576": {
+    "ko": "정밀 작업용 공구 주머니",
+    "uiCategory": 63,
+    "iconPath": "/i/054000/054094.png",
+    "en": "Precision Tool Pouch",
+    "ja": "精密作業用ツールポーチ"
+  },
+  "52577": {
+    "ko": "화기 작업용 착화제",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022660.png",
+    "en": "Controlled Firelighter",
+    "ja": "火器作業用の着火剤"
+  },
+  "52578": {
+    "ko": "숙취 해소용 음료",
+    "uiCategory": 63,
+    "iconPath": "/i/027000/027624.png",
+    "en": "Sobering Tonic",
+    "ja": "酔い覚ましドリンク"
+  },
+  "52579": {
+    "ko": "발광 연못 수질 견본",
+    "uiCategory": 63,
+    "iconPath": "/i/022000/022606.png",
+    "en": "Luminous Pondwater Sample",
+    "ja": "発光池の水質サンプル"
+  },
+  "52580": {
+    "ko": "드릴용 윤활유",
+    "uiCategory": 63,
+    "iconPath": "/i/024000/024404.png",
+    "en": "Drill Lubricant",
+    "ja": "ドリル用潤滑油"
+  },
+  "52583": {
+    "ko": "공격성 꽃가루 식물의 파편",
+    "uiCategory": 63,
+    "iconPath": "/i/025000/025201.png",
+    "en": "Shredded Toxic Expulser",
+    "ja": "攻撃性花粉植物の断片"
+  },
   "52591": {
     "ko": "암영견 장비",
     "uiCategory": 112,
@@ -277434,6 +280471,27 @@
     "iconPath": "/i/056000/056993.png",
     "en": "Alternative Dress Attire",
     "ja": "アルタナティヴ・ラッフルドレス・アタイア"
+  },
+  "52599": {
+    "ko": "남성용 우주 탐험가 장비",
+    "uiCategory": 112,
+    "iconPath": "/i/057000/057395.png",
+    "en": "Cosmic Explorer's Attire [M]",
+    "ja": "コスモエクスプローラー・アタイア【M】"
+  },
+  "52600": {
+    "ko": "우주 정비공 장비",
+    "uiCategory": 112,
+    "iconPath": "/i/057000/057394.png",
+    "en": "Cosmic Operator's Attire",
+    "ja": "コスモオペレーター・アタイア"
+  },
+  "52603": {
+    "ko": "여성용 우주 탐험가 장비",
+    "uiCategory": 112,
+    "iconPath": "/i/057000/057395.png",
+    "en": "Cosmic Explorer's Attire [F]",
+    "ja": "コスモエクスプローラー・アタイア【F】"
   },
   "52606": {
     "ko": "다이아몬드 총검",
@@ -277666,6 +280724,13 @@
     "en": "Zero's Luminary Attire",
     "ja": "ゼロルミナリー・アタイア"
   },
+  "52712": {
+    "ko": "안료",
+    "uiCategory": 55,
+    "iconPath": "/i/021000/021463.png",
+    "en": "All-purpose Pigment",
+    "ja": "ピグメント"
+  },
   "int32": {
     "ko": "str",
     "uiCategory": null
@@ -277731,12 +280796,12 @@
     "iconPath": "/i/030000/030000.png"
   },
   "[1등급 어탁 액자에 탁본 가능]\"": {
-    "ko": "59",
+    "ko": "91",
     "uiCategory": null,
     "iconPath": "/i/000000/000000.png"
   },
   "[2등급 어탁 액자에 탁본 가능]\"": {
-    "ko": "14",
+    "ko": "91",
     "uiCategory": null,
     "iconPath": "/i/000000/000000.png"
   },
@@ -277779,6 +280844,11 @@
     "ko": "11",
     "uiCategory": null,
     "iconPath": "/i/002000/002000.png"
+  },
+  "유실물 관리인에게 건네주면 새로운 안료로 교환할 수 있다.\"": {
+    "ko": "63",
+    "uiCategory": null,
+    "iconPath": "/i/000000/000000.png"
   },
   "[판매용 아이템]\"": {
     "ko": "54",
@@ -278110,17 +281180,17 @@
     "uiCategory": null,
     "iconPath": "/i/020000/020000.png"
   },
-  "설치 가능한 소품 수: 200\"": {
-    "ko": "50",
-    "uiCategory": null,
-    "iconPath": "/i/030000/030200.png"
-  },
   "설치 가능한 소품 수: 300\"": {
     "ko": "50",
     "uiCategory": null,
     "iconPath": "/i/030000/030200.png"
   },
-  "설치 가능한 소품 수: 400\"": {
+  "설치 가능한 소품 수: 450\"": {
+    "ko": "50",
+    "uiCategory": null,
+    "iconPath": "/i/030000/030200.png"
+  },
+  "설치 가능한 소품 수: 600\"": {
     "ko": "50",
     "uiCategory": null,
     "iconPath": "/i/030000/030200.png"
@@ -290025,6 +293095,11 @@
     "uiCategory": null,
     "iconPath": "/i/035000/035000.png"
   },
+  "옛 영웅의 모습을 본뜬 마법인형. 이것도 저것도 전부 다 내 거야!\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/036000/036010.png"
+  },
   "옛 영웅의 모습을 본뜬 마법인형. 난 코스모 캐니언의 나나키!\"": {
     "ko": "59",
     "uiCategory": null,
@@ -290101,6 +293176,31 @@
     "iconPath": "/i/010000/010001.png"
   },
   "'Good King Moggle Mog XII (Pulse 2)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Return to Oblivion (Pulse 2)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'To the Edge (Pulse 2)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Fiend (Pulse 2)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Athena, the Tireless One (Pulse 2)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'The Nautilus Knoweth (Pulse 2)'의 선율이 기록된 오케스트리온 악보.\"": {
     "ko": "59",
     "uiCategory": null,
     "iconPath": "/i/010000/010001.png"
@@ -290340,6 +293440,11 @@
     "uiCategory": null,
     "iconPath": "/i/002000/002180.png"
   },
+  "우주 개척 계획 협찬의 일환으로 제작되었다.\"": {
+    "ko": "50",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010000.png"
+  },
   "제목: 저 너머로 이르는 길\"": {
     "ko": "50",
     "uiCategory": null,
@@ -290350,10 +293455,30 @@
     "uiCategory": null,
     "iconPath": "/i/039000/039600.png"
   },
+  "달/파엔나/오이지스 화폐 획득량 +35%\"": {
+    "ko": "5",
+    "uiCategory": null,
+    "iconPath": "/i/050000/050010.png"
+  },
+  "달/파엔나/오이지스/아욱세시아 화폐 획득량 +35%\"": {
+    "ko": "5",
+    "uiCategory": null,
+    "iconPath": "/i/050000/050010.png"
+  },
+  "[바탕지/바탕 무늬/뒷배경/상단 장식/하단 장식/초상화 틀/카드 틀/카드 장식]\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/044000/044003.png"
+  },
   "[바탕지/뒷배경/상단 장식/초상화 틀/카드 틀/장식]\"": {
     "ko": "59",
     "uiCategory": null,
     "iconPath": "/i/044000/044003.png"
+  },
+  "우주 리프킨을 불러내기 위한 호루라기.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/020000/020002.png"
   },
   "둥실둥실 물에 뜨는 모그리 모양 튜브.\"": {
     "ko": "59",
@@ -290370,7 +293495,27 @@
     "uiCategory": null,
     "iconPath": "/i/020000/020002.png"
   },
+  "개량형 우주 무장 병기를 기동하기 위한 인증 열쇠.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/020000/020002.png"
+  },
+  "우주 프레데터를 기동하기 위한 인증 열쇠.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/020000/020002.png"
+  },
   "보이드에서 발견된 마법 날개.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/020000/020002.png"
+  },
+  "채굴형 파워 로더를 기동하기 위한 인증 열쇠.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/020000/020002.png"
+  },
+  "회색 휠 로더를 기동하기 위한 열쇠.\"": {
     "ko": "59",
     "uiCategory": null,
     "iconPath": "/i/020000/020002.png"
@@ -290385,6 +293530,11 @@
     "uiCategory": null,
     "iconPath": "/i/036000/036000.png"
   },
+  "휠 로더의 모습을 본뜬 소형 완구. 작은 물건 정도는 휘릭 운반할 수 있다.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/036000/036010.png"
+  },
   "작은 종을 목에 단 아기 염소. 제국 수도 갈레말드 부근에서 많이 사육된다.\"": {
     "ko": "59",
     "uiCategory": null,
@@ -290394,6 +293544,11 @@
     "ko": "59",
     "uiCategory": null,
     "iconPath": "/i/036000/036000.png"
+  },
+  "행성 아욱세시아의 주민들이 남긴 소형 유기 단말.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/036000/036010.png"
   },
   "'FINAL FANTASY V: The Final Battle (Dawntrail)'의 선율이 기록된 오케스트리온 악보.\"": {
     "ko": "59",
@@ -290510,6 +293665,41 @@
     "uiCategory": null,
     "iconPath": "/i/010000/010001.png"
   },
+  "'Landscaping'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Dancing Mad (Distant Worlds)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Triumph (Orchestral Version)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Songs of Salt and Suffering (Orchestral Version)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Tomorrow and Tomorrow (Orchestral Version)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Windswept Echoes (Orchestral Version)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
+  "'Give It All (Orchestral Version)'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
+  },
   "'Smile (Orchestral Version)'의 선율이 기록된 오케스트리온 악보.\"": {
     "ko": "59",
     "uiCategory": null,
@@ -290529,6 +293719,11 @@
     "ko": "59",
     "uiCategory": null,
     "iconPath": "/i/020000/020002.png"
+  },
+  "'Carrots of Brilliance'의 선율이 기록된 오케스트리온 악보.\"": {
+    "ko": "59",
+    "uiCategory": null,
+    "iconPath": "/i/010000/010001.png"
   },
   "갈색 털을 가진 어린 알파카. 침에서 은은하게 초원 냄새가 난다.\"": {
     "ko": "59",
