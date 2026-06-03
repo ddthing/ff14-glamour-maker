@@ -2,7 +2,6 @@ import { PreviewCanvas } from './components/canvas/PreviewCanvas';
 import { ControlPanel } from './components/controls/ControlPanel';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
-import { AdBanner } from './components/ads/AdBanner';
 import { useUrlState } from './hooks/useUrlState';
 import { INITIAL_ITEMS } from './constants/initialState';
 

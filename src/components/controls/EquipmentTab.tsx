@@ -100,7 +100,7 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
                     value={""} // Search box remains empty (Command Palette style)
                     currentSlot={activeSlot}
                     hasError={!!activeItem.error}
-                    onNameChange={name => {
+                    onNameChange={() => {
                         // We only want to update if they are typing directly and hit blur without select,
                         // but since value is always empty, typing will only update local search state.
                         // So we don't update item name on every keystroke anymore to preserve the blank search field.

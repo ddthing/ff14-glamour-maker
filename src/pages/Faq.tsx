@@ -1,9 +1,7 @@
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
-import { useTranslation } from 'react-i18next';
 
 export function Faq() {
-    const { t } = useTranslation();
     return (
         <div className="min-h-screen flex flex-col bg-[var(--bg-app)]">
             <Header />
