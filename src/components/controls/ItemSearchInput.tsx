@@ -26,21 +26,60 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
     const { t } = useTranslation();
     const { results, isLoading, error, searchItems, clearResults } = useFF14Search();
 
+    const [localValue, setLocalValue] = useState(value);
     const [open, setOpen] = useState(false);
     const [isFocused, setIsFocused] = useState(false);
-    const debouncedQuery = useDebounce(value, 800);
+    const [selectedIndex, setSelectedIndex] = useState(-1);
+    const debouncedQuery = useDebounce(localValue, 800);
     const containerRef = useRef<HTMLDivElement>(null);
+    const isProgrammaticRef = useRef(false);
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const isFirstMount = useRef(true);
+
+    // Sync from props and handle slot changes (Auto Advance / Manual Click)
+    useEffect(() => {
+        if (isFirstMount.current) {
+            isFirstMount.current = false;
+            isProgrammaticRef.current = true;
+            setLocalValue(value);
+            return;
+        }
+
+        // When currentSlot changes (e.g. Auto Advance or manual slot change)
+        // 1. Reset search state
+        // 2. Guarantee focus for continuous typing
+        isProgrammaticRef.current = true;
+        setLocalValue(value); // Sync with parent's empty value
+        clearResults();
+        setOpen(false);
+        setSelectedIndex(-1);
+        
+        if (inputRef.current) {
+            // Slight delay ensures React has finished updating the DOM for the new slot
+            setTimeout(() => {
+                inputRef.current?.focus();
+            }, 10);
+        }
+    }, [currentSlot, value, clearResults]);
 
     useEffect(() => {
-        if (!isFocused) return;
+        if (!isFocused || isProgrammaticRef.current) return;
         if (debouncedQuery.trim().length >= 1) {
             searchItems(debouncedQuery, currentSlot);
             setOpen(true);
+            setSelectedIndex(-1);
+            onNameChange(debouncedQuery);
         } else {
             clearResults();
             setOpen(false);
+            setSelectedIndex(-1);
+            if (debouncedQuery === '') {
+                onNameChange('');
+            }
         }
-    }, [debouncedQuery, searchItems, clearResults, isFocused]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [debouncedQuery, searchItems, clearResults, isFocused, currentSlot]);
 
     useEffect(() => {
         const handler = (e: MouseEvent) => {
@@ -53,13 +92,46 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
     }, []);
 
     const handleSelect = (item: FF14Item) => {
+        isProgrammaticRef.current = true;
+        setLocalValue('');
         onSelect(item);
         setOpen(false);
+        // keep focus on the input if it was active
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    };
+
+    const handleBlur = () => {
+        setIsFocused(false);
+        if (localValue !== value) {
+            onNameChange(localValue);
+        }
     };
 
     const filteredResults = currentSlot
         ? results.filter(item => isMatchingSlot(item, currentSlot))
         : results;
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (!open || filteredResults.length === 0) return;
+        
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            setSelectedIndex(prev => (prev < filteredResults.length - 1 ? prev + 1 : prev));
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            setSelectedIndex(prev => (prev > 0 ? prev - 1 : 0));
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (selectedIndex >= 0 && selectedIndex < filteredResults.length) {
+                handleSelect(filteredResults[selectedIndex]);
+            } else if (filteredResults.length > 0) {
+                // If nothing is selected but results exist, select the first one
+                handleSelect(filteredResults[0]);
+            }
+        }
+    };
 
     const shouldShowDropdown = open && (filteredResults.length > 0 || isLoading || (debouncedQuery.trim().length >= 1 && (filteredResults.length === 0 || !!error)));
 
@@ -68,22 +140,25 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
             {/* Input Area */}
             <div className="relative flex items-center h-[44px]">
                 <input
+                    ref={inputRef}
                     className={`
                         w-full h-full bg-[var(--surface-100)] border rounded-lg px-4 pl-10 text-sm 
                         focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] outline-none transition-all
                         ${hasError ? 'border-[var(--error)] bg-[var(--error)]/5' : 'border-[var(--border)]'}
                     `}
                     placeholder={t('common.search_item')}
-                    value={value}
+                    value={localValue}
                     onChange={e => {
-                        onNameChange(e.target.value);
+                        isProgrammaticRef.current = false;
+                        setLocalValue(e.target.value);
                         if (!e.target.value) { clearResults(); setOpen(false); }
                     }}
                     onFocus={() => {
                         setIsFocused(true);
-                        if (value.trim().length >= 1) setOpen(true);
+                        if (localValue.trim().length >= 1) setOpen(true);
                     }}
-                    onBlur={() => setIsFocused(false)}
+                    onBlur={handleBlur}
+                    onKeyDown={handleKeyDown}
                 />
                 <Search size={14} className="absolute left-3 text-[var(--text-muted)] pointer-events-none" />
                 {isLoading && (
@@ -119,11 +194,14 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     )}
 
                     {/* Results List */}
-                    {filteredResults.map(item => (
+                    {filteredResults.map((item, index) => (
                         <button
                             key={item.id}
                             onMouseDown={e => { e.preventDefault(); handleSelect(item); }}
-                            className="w-full flex items-center gap-3 p-2.5 text-left hover:bg-[var(--surface-300)] transition-colors group"
+                            onMouseEnter={() => setSelectedIndex(index)}
+                            className={`w-full flex items-center gap-3 p-2.5 text-left transition-colors group ${
+                                index === selectedIndex ? 'bg-[var(--surface-300)]' : 'hover:bg-[var(--surface-300)]'
+                            }`}
                         >
                             <div className="w-8 h-8 rounded shrink-0 overflow-hidden border border-[var(--border)] bg-[var(--surface-100)]">
                                 <ItemIcon

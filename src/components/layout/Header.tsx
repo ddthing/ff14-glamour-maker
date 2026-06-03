@@ -18,7 +18,7 @@ export function Header() {
                 className="w-full shrink-0 z-50 transition-all duration-300 bg-[var(--bg-app)]/85 backdrop-blur-xl sticky top-0"
             >
 
-                <div className="max-w-7xl mx-auto w-full flex items-center justify-between h-[64px] px-4 md:px-10">
+                <div className="max-w-[1440px] mx-auto w-full flex items-center justify-between h-[64px] px-4 md:px-10">
                     {/* ── 로고 & 브랜드 ─── */}
                     <div className="flex items-center gap-2 md:gap-3 min-w-0">
                         <img

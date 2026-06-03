@@ -35,6 +35,9 @@ export function Footer() {
                 {/* Right: Links */}
                 <div className="flex items-center gap-4 shrink-0">
                     {[
+                        { href: '/guide', label: '가이드' },
+                        { href: '/faq', label: 'FAQ' },
+                        { href: '/about', label: 'About' },
                         { href: '/terms', label: '이용약관' },
                         { href: '/privacy', label: '개인정보처리방침' },
                     ].map(({ href, label }) => (
@@ -59,7 +62,7 @@ export function Footer() {
                         onMouseEnter={e => (e.currentTarget.style.color = 'rgba(38,37,30,0.7)')}
                         onMouseLeave={e => (e.currentTarget.style.color = 'rgba(38,37,30,0.3)')}
                     >
-                        <span>☕</span> Support
+                        ☕ Support
                     </a>
                 </div>
             </div>

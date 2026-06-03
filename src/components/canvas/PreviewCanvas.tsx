@@ -82,22 +82,23 @@ export function PreviewCanvas({ state, setState }: Props) {
 
             <div
                 ref={zoneRef}
-                className="canvas-scale-zone flex-1"
+                className="canvas-scale-zone flex-1 w-full"
+                style={{ aspectRatio: `${CANVAS_W} / ${CANVAS_H}` }}
                 {...dragHandlers}
             >
                 <div
-                    className="canvas-scale-outer"
+                    className="canvas-scale-outer rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-elevated)]"
                     style={{
                         width:  scale < 1 ? CANVAS_W * scale : CANVAS_W,
                         height: scale < 1 ? CANVAS_H * scale : CANVAS_H,
+                        position: 'relative'
                     }}
                 >
                     <div
                         id="glamour-canvas"
-                        className="canvas-scale-inner select-none flex flex-row rounded-[var(--radius-lg)] overflow-hidden"
+                        className="canvas-scale-inner select-none flex flex-row"
                         style={{
                             background: '#1a1915',
-                            boxShadow: 'var(--shadow-elevated)',
                             width: CANVAS_W,
                             height: CANVAS_H,
                             transformOrigin: 'top left',

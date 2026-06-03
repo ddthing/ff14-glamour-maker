@@ -5,6 +5,9 @@ import './i18n'
 import App from './App.tsx'
 import { Terms } from './pages/Terms.tsx'
 import { Privacy } from './pages/Privacy.tsx'
+import { Guide } from './pages/Guide.tsx'
+import { Faq } from './pages/Faq.tsx'
+import { About } from './pages/About.tsx'
 
 // ── 자동 업데이트 대응: 새 배포 시 이전 버전의 JS 청크 파일을 불러오지 못하는 경우(404) 처리 ──
 window.addEventListener('error', (e) => {
@@ -23,6 +26,12 @@ if (path === '/terms') {
   Component = Terms;
 } else if (path === '/privacy') {
   Component = Privacy;
+} else if (path === '/guide') {
+  Component = Guide;
+} else if (path === '/faq') {
+  Component = Faq;
+} else if (path === '/about') {
+  Component = About;
 }
 
 createRoot(document.getElementById('root')!).render(

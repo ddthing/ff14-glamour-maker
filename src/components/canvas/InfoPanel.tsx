@@ -169,24 +169,30 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                             flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            gap: '8px',
+                            gap: '24px',
                             height: '100%',
-                            opacity: 0.2,
+                            opacity: 0.8,
                         }}>
-                            <div style={{
-                                width: '40px',
-                                height: '40px',
-                                borderRadius: '0px',
-                                border: '1px solid rgba(255,255,255,0.3)',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}>
-                                <span style={{ fontSize: '1rem' }}>✦</span>
-                            </div>
-                            <span style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'white' }}>
-                                {t('common.no_items')}
+                            {/* Title */}
+                            <span style={{ fontSize: '1.2rem', fontWeight: 800, color: 'rgba(255,255,255,0.9)', letterSpacing: '0.05em' }}>
+                                {t('common.empty_title', 'Create Your Glamour Card')}
                             </span>
+
+                            {/* 3-Step Guide */}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', width: '100%', maxWidth: '320px', marginTop: '8px' }}>
+                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                    <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 'bold', color: 'rgba(255,255,255,0.9)', flexShrink: 0 }}>1</div>
+                                    <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.4, fontWeight: 500 }}>{t('common.step1_upload', 'Upload Character Photo')}</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                    <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 'bold', color: 'rgba(255,255,255,0.9)', flexShrink: 0 }}>2</div>
+                                    <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.4, fontWeight: 500 }}>{t('common.step2_equip', 'Add Equipment')}</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                    <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 'bold', color: 'rgba(255,255,255,0.9)', flexShrink: 0 }}>3</div>
+                                    <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.4, fontWeight: 500 }}>{t('common.step3_save', 'Save Image')}</span>
+                                </div>
+                            </div>
                         </div>
                     )}
                 </div>

@@ -96,13 +96,15 @@ export function PhotoPanel({
                     {/* Main CTA content */}
                     <div className="flex flex-col items-center gap-6 z-10">
                         {/* Icon — subtle, not loud */}
-                        <div className="w-[84px] h-[84px] rounded-full flex items-center justify-center animate-breathe"
+                        <div className="w-[84px] h-[84px] rounded-full flex items-center justify-center animate-breathe relative"
                             style={{
                                 background: 'rgba(255,255,255,0.03)',
                                 border: '1px solid rgba(255,255,255,0.06)',
                                 boxShadow: '0 0 64px rgba(210,180,120,0.08) inset',
                             }}>
                             <UploadCloud size={32} strokeWidth={1.2} className="text-white/30" />
+                            {/* Outer pulsing ring */}
+                            <div className="absolute inset-0 rounded-full animate-ping" style={{ border: '1px solid rgba(210,180,120,0.4)', animationDuration: '3s' }} />
                         </div>
 
                         {/* Text */}

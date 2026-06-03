@@ -49,7 +49,12 @@ i18n
             copy_link: '링크 복사',
             copied: '복사 완료',
             canvas_label: '외장 정보',
-            no_items: '아이템 없음'
+            no_items: '아이템 없음',
+            empty_title: '나만의 투영 카드 만들기',
+            step1_upload: '캐릭터 사진 업로드',
+            step2_equip: '투영 장비 입력',
+            step3_save: '이미지 저장',
+            settings: '기본 설정'
           },
           slots: {
             mainhand: '무기',
@@ -114,7 +119,12 @@ i18n
             copy_link: 'Copy Link',
             copied: 'Copied',
             canvas_label: 'Character Glamour',
-            no_items: 'No items yet'
+            no_items: 'No items yet',
+            empty_title: 'Create Your Glamour Card',
+            step1_upload: 'Upload Character Photo',
+            step2_equip: 'Add Equipment',
+            step3_save: 'Save Image',
+            settings: 'Settings'
           },
           slots: {
             mainhand: 'Main Hand',
@@ -179,7 +189,12 @@ i18n
             copy_link: 'リンクをコピー',
             copied: 'コピー完了',
             canvas_label: 'ミラプリ情報',
-            no_items: 'アイテムなし'
+            no_items: 'アイテムなし',
+            empty_title: 'ミラプリカードを作成',
+            step1_upload: 'キャラクター写真をアップロード',
+            step2_equip: '装備を入力',
+            step3_save: '画像を保存',
+            settings: '設定'
           },
           slots: {
             mainhand: '主武器',

@@ -7,6 +7,7 @@ interface SlotButtonProps {
     part: EquipmentPart;
     item: EquipItem;
     isActive: boolean;
+    isHighlighted?: boolean;
     onClick: () => void;
 }
 
@@ -14,7 +15,7 @@ interface SlotButtonProps {
  * SlotButton
  * Design Reference: Cursor Warm Minimalism - Pill/Card hybrid
  */
-export function SlotButton({ part, item, isActive, onClick }: SlotButtonProps) {
+export function SlotButton({ part, item, isActive, isHighlighted, onClick }: SlotButtonProps) {
     const { t } = useTranslation();
     const isFilled = !!item.name;
 
@@ -22,8 +23,9 @@ export function SlotButton({ part, item, isActive, onClick }: SlotButtonProps) {
         <button
             onClick={onClick}
             className={`
-                group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg border transition-all duration-150
-                ${isActive
+                group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg border transition-all duration-300
+                ${isHighlighted ? 'animate-pulse bg-[var(--surface-300)] border-[var(--accent)] shadow-[0_0_15px_rgba(245,78,0,0.3)] ring-2 ring-[var(--accent)] scale-[1.05]' : 
+                 isActive
                     ? 'bg-[var(--surface-300)] border-[var(--border-medium)] ring-1 ring-[var(--border-medium)]'
                     : 'bg-[var(--surface-100)] border-[var(--border)] hover:border-[var(--border-medium)] hover:bg-[var(--surface-200)] hover:scale-[1.02]'
                 }
