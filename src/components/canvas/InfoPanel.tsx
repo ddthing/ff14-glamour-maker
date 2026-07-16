@@ -1,16 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import type { AppState, EquipmentPart } from '../../types';
-import { CanvasItemRow } from './CanvasItemRow';
+import type { AppState } from '../../types';
+import { CanvasHeading } from './CanvasHeading';
+import { EquipmentList } from './EquipmentList';
 
 interface InfoPanelProps {
     state: AppState;
     bgSrc: string | null;
 }
-
-const SLOT_ORDER: EquipmentPart[] = [
-    'mainhand', 'head', 'body', 'hands', 'legs',
-    'feet', 'ears', 'neck', 'wrists', 'rings', 'rings2', 'face',
-];
 
 /**
  * InfoPanel — 캔버스 우측 글래머 정보 패널 (600px)
@@ -19,15 +15,6 @@ const SLOT_ORDER: EquipmentPart[] = [
  */
 export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
     const { t } = useTranslation();
-    const filledItems = SLOT_ORDER.filter(id => !!state.items[id]?.name);
-    const filledCount = filledItems.length;
-
-    // 입력된 아이템 수에 따라 행 크기를 동적 조절
-    // ≤6: comfortable (큰 폰트/아이콘), 7-9: balanced, 10+: compact
-    const sizeMode: 'comfortable' | 'balanced' | 'compact' =
-        filledCount <= 6 ? 'comfortable' :
-        filledCount <= 9 ? 'balanced' : 'compact';
-
     return (
         <div className="relative flex-1 h-full overflow-hidden flex flex-col" style={{ background: '#1a1915' }}>
 
@@ -88,65 +75,11 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
             {/* ── Content ── */}
             <div className="relative z-10 flex flex-col h-full" style={{ padding: '32px 40px 24px' }}>
 
-                {/* ── Header ── */}
-                <div style={{ marginBottom: '16px' }}>
-                    {/* Eyebrow label */}
-                    <div style={{ marginBottom: '10px' }}>
-                        <span style={{
-                            fontSize: '0.575rem',
-                            fontWeight: 700,
-                            letterSpacing: '0.22em',
-                            textTransform: 'uppercase',
-                            color: 'rgba(255,255,255,0.25)',
-                            display: 'block',
-                        }}>
-                            {t('common.canvas_label')}
-                        </span>
-                    </div>
-
-                    {/* Title — 1.9rem */}
-                    <h1 style={{
-                        fontSize: '1.9rem',
-                        fontWeight: 800,
-                        lineHeight: 1.08,
-                        letterSpacing: '-0.4px',
-                        color: '#ffffff',
-                        textShadow: '0 2px 20px rgba(0,0,0,0.4)',
-                        wordBreak: 'break-word',
-                    }}>
-                        {state.title || (
-                            <span style={{ color: 'rgba(255,255,255,0.18)' }}>—</span>
-                        )}
-                    </h1>
-
-                    {/* Creator */}
-                    {state.creator && (
-                        <div style={{
-                            marginTop: '10px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '8px',
-                        }}>
-                            <div style={{
-                                width: '20px',
-                                height: '1px',
-                                background: 'rgba(255,255,255,0.2)',
-                                flexShrink: 0,
-                            }} />
-                            <span style={{
-                                fontSize: '0.8rem',
-                                fontWeight: 500,
-                                color: 'rgba(255,255,255,0.45)',
-                                letterSpacing: '0.02em',
-                                overflow: 'hidden',
-                                textOverflow: 'ellipsis',
-                                whiteSpace: 'nowrap',
-                            }}>
-                                {state.creator}
-                            </span>
-                        </div>
-                    )}
-                </div>
+                <CanvasHeading
+                    title={state.title}
+                    creator={state.creator}
+                    label={t('common.canvas_label')}
+                />
 
                 {/* ── Divider ── */}
                 <div style={{
@@ -156,48 +89,15 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                     flexShrink: 0,
                 }} />
 
-                {/* ── Item List ── */}
-                <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    {filledItems.length > 0 ? (
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
-                            {SLOT_ORDER.map(id => (
-                                <CanvasItemRow key={id} item={state.items[id]} sizeMode={sizeMode} />
-                            ))}
-                        </div>
-                    ) : (
-                        /* Empty state */
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '24px',
-                            height: '100%',
-                            opacity: 0.8,
-                        }}>
-                            {/* Title */}
-                            <span style={{ fontSize: '1.2rem', fontWeight: 800, color: 'rgba(255,255,255,0.9)', letterSpacing: '0.05em' }}>
-                                {t('common.empty_title', 'Create Your Glamour Card')}
-                            </span>
-
-                            {/* 3-Step Guide */}
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', width: '100%', maxWidth: '320px', marginTop: '8px' }}>
-                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                                    <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 'bold', color: 'rgba(255,255,255,0.9)', flexShrink: 0 }}>1</div>
-                                    <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.4, fontWeight: 500 }}>{t('common.step1_upload', 'Upload Character Photo')}</span>
-                                </div>
-                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                                    <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 'bold', color: 'rgba(255,255,255,0.9)', flexShrink: 0 }}>2</div>
-                                    <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.4, fontWeight: 500 }}>{t('common.step2_equip', 'Add Equipment')}</span>
-                                </div>
-                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                                    <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 'bold', color: 'rgba(255,255,255,0.9)', flexShrink: 0 }}>3</div>
-                                    <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.4, fontWeight: 500 }}>{t('common.step3_save', 'Save Image')}</span>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                </div>
+                <EquipmentList
+                    items={state.items}
+                    emptyTitle={t('common.empty_title', 'Create Your Glamour Card')}
+                    emptySteps={[
+                        t('common.step1_upload', 'Upload Character Photo'),
+                        t('common.step2_equip', 'Add Equipment'),
+                        t('common.step3_save', 'Save Image'),
+                    ]}
+                />
 
                 {/* ── Footer — Brand watermark ── */}
                 <div style={{
