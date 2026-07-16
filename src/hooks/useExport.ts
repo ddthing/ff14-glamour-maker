@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { exportCanvasElement, type ExportStage } from '../features/export/exportCanvas';
+import type { ExportStage } from '../features/export/exportCanvas';
 
 export interface UseExportReturn {
   isExporting: boolean;
@@ -48,9 +48,11 @@ export function useExport(): UseExportReturn {
     }
 
     setIsExporting(true);
+    setStage('preparing');
     setError(null);
 
     try {
+      const { exportCanvasElement } = await import('../features/export/exportCanvas');
       const dataUrl = await exportCanvasElement(element, { onStage: setStage });
       setStage('sharing');
 

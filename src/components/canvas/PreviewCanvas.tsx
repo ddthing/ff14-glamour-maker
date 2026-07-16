@@ -1,7 +1,6 @@
-import { useRef, useState, useEffect } from 'react';
+import { lazy, Suspense, useRef, useState, useEffect } from 'react';
 import type { AppState } from '../../types';
 import { useImageUpload } from '../../hooks/useImageUpload';
-import { CropModal } from './CropModal';
 import { PhotoPanel } from './PhotoPanel';
 import { InfoPanel } from './InfoPanel';
 import { useTranslation } from 'react-i18next';
@@ -13,6 +12,7 @@ interface Props {
 
 const CANVAS_W = 1080;
 const CANVAS_H = 900;
+const CropModal = lazy(() => import('./CropModal').then(module => ({ default: module.CropModal })));
 
 /**
  * PreviewCanvas — 1080×900 캔버스 (사진 480px + 정보 600px)
@@ -63,14 +63,20 @@ export function PreviewCanvas({ state, setState }: Props) {
         <>
             {/* ── CropModal ─── */}
             {pendingImage && (
-                <CropModal
-                    imageSrc={pendingImage}
-                    onCancel={() => setPendingImage(null)}
-                    onConfirm={(croppedUrl, srcUrl) => {
-                        setState(s => ({ ...s, imageSrc: srcUrl, croppedImageSrc: croppedUrl }));
-                        setPendingImage(null);
-                    }}
-                />
+                <Suspense fallback={(
+                    <div className="fixed inset-0 z-[3000] grid place-items-center bg-black/90 text-sm font-bold text-white" role="status">
+                        {t('common.loading')}
+                    </div>
+                )}>
+                    <CropModal
+                        imageSrc={pendingImage}
+                        onCancel={() => setPendingImage(null)}
+                        onConfirm={(croppedUrl, srcUrl) => {
+                            setState(s => ({ ...s, imageSrc: srcUrl, croppedImageSrc: croppedUrl }));
+                            setPendingImage(null);
+                        }}
+                    />
+                </Suspense>
             )}
 
             {/* ── 숨은 파일 입력 ─── */}

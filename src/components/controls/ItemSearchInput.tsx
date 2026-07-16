@@ -208,7 +208,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     {!!error && (
                         <div className="p-4 flex items-center gap-2 text-xs text-[var(--error)] font-medium bg-[var(--error)]/5" role="alert">
                             <AlertCircle size={14} aria-hidden="true" />
-                            {error}
+                            {t('common.search_failed')}
                         </div>
                     )}
 
