@@ -1,3 +1,5 @@
+import type { EquipmentPart } from '../../types';
+
 export type ItemSource = 'item' | 'facewear';
 
 export interface FF14Item {
@@ -9,4 +11,5 @@ export interface FF14Item {
   uiCategory?: number;
   source?: ItemSource;
   equipSlot?: 'mainhand' | 'offhand';
+  equipSlots?: EquipmentPart[];
 }

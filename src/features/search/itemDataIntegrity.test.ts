@@ -11,6 +11,7 @@ interface LocalItemData {
   ja?: string;
   uiCategory?: number | null;
   iconPath?: string;
+  equipSlots?: EquipmentPart[];
 }
 
 const records: FF14Item[] = Object.entries(itemsData as Record<string, LocalItemData>).map(
@@ -21,6 +22,7 @@ const records: FF14Item[] = Object.entries(itemsData as Record<string, LocalItem
     nameJa: item.ja || '',
     uiCategory: item.uiCategory ?? undefined,
     iconPath: item.iconPath,
+    equipSlots: item.equipSlots,
     source: 'item',
   }),
 );

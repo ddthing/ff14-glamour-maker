@@ -13,6 +13,7 @@ interface LocalItemData {
   ko?: string;
   uiCategory?: number | null;
   iconPath?: string;
+  equipSlots?: EquipmentPart[];
 }
 
 type ItemDataMap = Record<string, LocalItemData>;
@@ -25,6 +26,7 @@ const searchableItems: FF14Item[] = Object.entries(itemsData as ItemDataMap).map
     nameJa: item.ja || '',
     uiCategory: item.uiCategory ?? undefined,
     iconPath: item.iconPath || undefined,
+    equipSlots: item.equipSlots,
     source: 'item',
   }),
 );
