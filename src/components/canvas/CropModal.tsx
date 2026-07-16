@@ -80,7 +80,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="crop-dialog-title"
-            className="fixed inset-0 z-[3000] flex flex-col items-center justify-center p-6 md:p-12"
+            className="fixed inset-0 z-[3000] flex flex-col items-center justify-center overscroll-contain p-6 md:p-12"
             style={{
                 background: 'rgba(0, 0, 0, 0.88)',
                 backdropFilter: 'blur(32px) saturate(1.5)',

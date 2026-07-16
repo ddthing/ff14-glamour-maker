@@ -64,6 +64,8 @@ export function PhotoPanel({
                     <img
                         src={croppedImageSrc}
                         alt={t('common.character_photo')}
+                        width={480}
+                        height={900}
                         className="w-full h-full object-cover"
                     />
 

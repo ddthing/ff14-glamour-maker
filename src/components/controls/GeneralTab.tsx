@@ -4,16 +4,18 @@ import { useState, useEffect } from 'react';
 import type { AppState } from '../../types';
 import { SectionLabel } from '../ui/SectionLabel';
 import { Divider } from '../ui/Divider';
-import { usePresets } from '../../hooks/usePresets';
+import type { Preset } from '../../hooks/usePresets';
 
 interface GeneralTabProps {
     state: AppState;
     setState: React.Dispatch<React.SetStateAction<AppState>>;
+    presets: Preset[];
+    onAddPreset: (name: string) => boolean;
+    onRemovePreset: (id: string) => void;
 }
 
-export function GeneralTab({ state, setState }: GeneralTabProps) {
+export function GeneralTab({ state, setState, presets, onAddPreset, onRemovePreset }: GeneralTabProps) {
     const { t } = useTranslation();
-    const { presets, addPreset, removePreset } = usePresets();
     const [presetNameInput, setPresetNameInput] = useState('');
     
     // Local state for debounced inputs
@@ -87,8 +89,7 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                         onChange={e => setPresetNameInput(e.target.value)}
                         onKeyDown={e => {
                             if (e.key === 'Enter' && presetNameInput.trim()) {
-                                addPreset(presetNameInput.trim(), state);
-                                setPresetNameInput('');
+                                if (onAddPreset(presetNameInput.trim())) setPresetNameInput('');
                             }
                         }}
                         placeholder={t('common.presets_placeholder')}
@@ -97,8 +98,7 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                         type="button"
                         onClick={() => {
                             if (!presetNameInput.trim()) return;
-                            addPreset(presetNameInput.trim(), state);
-                            setPresetNameInput('');
+                            if (onAddPreset(presetNameInput.trim())) setPresetNameInput('');
                         }}
                         style={{
                             height: '100%',
@@ -178,7 +178,7 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                                 <button
                                     type="button"
                                     aria-label={`${t('common.delete_preset')}: ${p.name}`}
-                                    onClick={() => removePreset(p.id)}
+                                    onClick={() => onRemovePreset(p.id)}
                                     style={{
                                         padding: '4px',
                                         color: 'var(--text-muted)',

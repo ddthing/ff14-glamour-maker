@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Info, RotateCcw, X } from 'lucide-react';
 import type { AppState, EquipmentPart, EquipItem } from '../../types';
@@ -18,6 +18,12 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
     const { t } = useTranslation();
     const [activeSlot, setActiveSlot] = useState<EquipmentPart>('head');
     const [justAutoAdvancedTo, setJustAutoAdvancedTo] = useState<EquipmentPart | null>(null);
+
+    useEffect(() => {
+        if (!justAutoAdvancedTo) return;
+        const timeoutId = window.setTimeout(() => setJustAutoAdvancedTo(null), 800);
+        return () => window.clearTimeout(timeoutId);
+    }, [justAutoAdvancedTo]);
 
     const activeItem = state.items[activeSlot];
 
@@ -127,7 +133,6 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
                                 const nextSlot = SLOT_ORDER[currentIndex + 1];
                                 setActiveSlot(nextSlot);
                                 setJustAutoAdvancedTo(nextSlot);
-                                setTimeout(() => setJustAutoAdvancedTo(null), 800);
                             }
                         }
                     }}

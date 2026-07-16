@@ -7,6 +7,7 @@ import { isMatchingSlot } from '../../domain/itemCategories';
 import type { EquipmentPart } from '../../types';
 import { ItemIcon } from '../canvas/ItemIcon';
 import { Search, AlertCircle, Loader2 } from 'lucide-react';
+import { preloadSearchItems } from '../../features/search/loadSearchItems';
 
 interface Props {
     value: string;
@@ -56,12 +57,16 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
         setOpen(false);
         setSelectedIndex(-1);
         
+        let focusTimeout: number | null = null;
         if (inputRef.current && window.matchMedia('(pointer: fine)').matches) {
             // Slight delay ensures React has finished updating the DOM for the new slot
-            setTimeout(() => {
+            focusTimeout = window.setTimeout(() => {
                 inputRef.current?.focus();
             }, 10);
         }
+        return () => {
+            if (focusTimeout !== null) window.clearTimeout(focusTimeout);
+        };
     }, [currentSlot, value, clearResults]);
 
     useEffect(() => {
@@ -169,9 +174,11 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                         if (!e.target.value) { clearResults(); setOpen(false); }
                     }}
                     onFocus={() => {
+                        void preloadSearchItems(currentSlot);
                         setIsFocused(true);
                         if (localValue.trim().length >= 1) setOpen(true);
                     }}
+                    onMouseEnter={() => void preloadSearchItems(currentSlot)}
                     onBlur={handleBlur}
                     onKeyDown={handleKeyDown}
                 />

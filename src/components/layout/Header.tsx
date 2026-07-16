@@ -13,6 +13,12 @@ export function Header() {
 
     return (
         <>
+            <a
+                href="#main-content"
+                className="fixed left-4 top-4 z-[4000] -translate-y-24 bg-[var(--text-primary)] px-4 py-2 text-sm font-bold text-[var(--bg-app)] shadow-lg transition-transform focus-visible:translate-y-0"
+            >
+                {t('common.skip_to_content')}
+            </a>
             <header
                 aria-label="메인 내비게이션"
                 className="w-full shrink-0 z-50 transition-[background-color,box-shadow] duration-300 bg-[var(--bg-app)]/85 backdrop-blur-xl sticky top-0"

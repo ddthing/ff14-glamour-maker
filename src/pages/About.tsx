@@ -5,7 +5,7 @@ export function About() {
     return (
         <div className="min-h-[100dvh] flex flex-col bg-[var(--bg-app)]">
             <Header />
-            <main className="flex-1 w-full max-w-3xl mx-auto px-6 py-12">
+            <main id="main-content" tabIndex={-1} className="flex-1 w-full max-w-3xl mx-auto px-6 py-12">
                 <h1 className="text-3xl font-black mb-8">About FF14 Glamour Maker</h1>
                 
                 <div className="space-y-8 bg-[var(--bg-panel)] p-8 rounded-3xl border border-[var(--border)]">

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AlertCircle, Check, Download, Link, RotateCcw } from 'lucide-react';
 import type { AppState } from '../../types';
@@ -6,6 +6,9 @@ import { Divider } from '../ui/Divider';
 import { useExport } from '../../hooks/useExport';
 import { GeneralTab } from './GeneralTab';
 import { EquipmentTab } from './EquipmentTab';
+import { usePresets } from '../../hooks/usePresets';
+import { useShareLink } from '../../hooks/useShareLink';
+import { useUndoAction } from '../../hooks/useUndoAction';
 
 interface Props {
     state: AppState;
@@ -21,21 +24,28 @@ interface Props {
 export function ControlPanel({ state, setState, onResetItems }: Props) {
     const { t } = useTranslation();
     const { isExporting, stage, error: exportError, handleExport } = useExport();
+    const { presets, error: presetError, addPreset, removePreset, restorePreset } = usePresets();
+    const { status: shareStatus, copyLink } = useShareLink(state);
+    const { action: undoAction, registerUndo, undo } = useUndoAction();
     const [activeTab, setActiveTab] = useState<'general' | 'equipment'>('equipment');
-    const [isCopied, setIsCopied] = useState(false);
-    const [copyFailed, setCopyFailed] = useState(false);
 
-    const handleCopyLink = async () => {
-        try {
-            await navigator.clipboard.writeText(window.location.href);
-            setCopyFailed(false);
-            setIsCopied(true);
-            setTimeout(() => setIsCopied(false), 2000);
-        } catch (err) {
-            console.error('Failed to copy link', err);
-            setCopyFailed(true);
-        }
-    };
+    const handleResetItems = useCallback(() => {
+        const previousItems = state.items;
+        onResetItems();
+        registerUndo({
+            message: t('common.items_reset'),
+            undo: () => setState(current => ({ ...current, items: previousItems })),
+        });
+    }, [onResetItems, registerUndo, setState, state.items, t]);
+
+    const handleRemovePreset = useCallback((id: string) => {
+        const removed = removePreset(id);
+        if (!removed) return;
+        registerUndo({
+            message: t('common.preset_deleted'),
+            undo: () => { restorePreset(removed.preset, removed.index); },
+        });
+    }, [registerUndo, removePreset, restorePreset, t]);
 
     const hasPhoto = !!state.croppedImageSrc;
     const hasItem = Object.values(state.items).some(item => !!item.name);
@@ -77,9 +87,15 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                 className="flex-1 flex flex-col min-h-0 overflow-y-auto scrollbar-thin"
             >
                 {activeTab === 'general' ? (
-                    <GeneralTab state={state} setState={setState} />
+                    <GeneralTab
+                        state={state}
+                        setState={setState}
+                        presets={presets}
+                        onAddPreset={name => addPreset(name, state)}
+                        onRemovePreset={handleRemovePreset}
+                    />
                 ) : (
-                    <EquipmentTab state={state} setState={setState} onResetItems={onResetItems} />
+                    <EquipmentTab state={state} setState={setState} onResetItems={handleResetItems} />
                 )}
             </div>
 
@@ -98,7 +114,7 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                         gap: '7px',
                         height: '44px',
                         background: 'var(--surface-300)',
-                        color: isCopied ? 'var(--success)' : 'var(--text-primary)',
+                        color: shareStatus === 'copied' ? 'var(--success)' : 'var(--text-primary)',
                         border: '1px solid var(--border)',
                         borderRadius: 'var(--radius-md)',
                         fontWeight: 600,
@@ -108,23 +124,23 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                         cursor: 'pointer',
                         transition: 'color 0.15s, transform 0.1s, border-color 0.15s',
                     }}
-                    onClick={handleCopyLink}
+                    onClick={copyLink}
                     onMouseEnter={e => {
-                        if (!isCopied) e.currentTarget.style.color = 'var(--error)';
+                        if (shareStatus !== 'copied') e.currentTarget.style.color = 'var(--error)';
                         e.currentTarget.style.borderColor = 'var(--border-medium)';
                     }}
                     onMouseLeave={e => {
-                        e.currentTarget.style.color = isCopied ? 'var(--success)' : 'var(--text-primary)';
+                        e.currentTarget.style.color = shareStatus === 'copied' ? 'var(--success)' : 'var(--text-primary)';
                         e.currentTarget.style.borderColor = 'var(--border)';
                     }}
                     onMouseDown={e => (e.currentTarget.style.transform = 'scale(0.97)')}
                     onMouseUp={e => (e.currentTarget.style.transform = 'scale(1)')}
                 >
-                    {isCopied
-                        ? <Check size={15} />
-                        : <Link size={15} />
+                    {shareStatus === 'copied'
+                        ? <Check size={15} aria-hidden="true" />
+                        : <Link size={15} aria-hidden="true" />
                     }
-                    {isCopied ? t('common.copied', '복사완료') : t('common.copy_link', '링크 복사')}
+                    {shareStatus === 'copied' ? t('common.copied') : t('common.copy_link')}
                 </button>
 
                 {/* Save Image — primary CTA */}
@@ -155,8 +171,8 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                     onMouseUp={e => (e.currentTarget.style.transform = 'scale(1)')}
                 >
                     {isExporting
-                        ? <span className="animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent" />
-                        : <Download size={15} />
+                        ? <span className="animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent" aria-hidden="true" />
+                        : <Download size={15} aria-hidden="true" />
                     }
                     {isExporting && stage
                         ? t(`common.export_${stage}`)
@@ -164,9 +180,14 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                 </button>
               </div>
               <div aria-live="polite" aria-atomic="true">
-                {copyFailed && (
+                {shareStatus === 'error' && (
                   <p className="text-xs text-[var(--error)]" style={{ margin: 0 }}>
                     {t('common.copy_failed')}
+                  </p>
+                )}
+                {presetError && (
+                  <p className="text-xs text-[var(--error)]" role="alert" style={{ margin: 0 }}>
+                    {t('common.preset_storage_failed')}
                   </p>
                 )}
                 {exportError && (
@@ -182,6 +203,18 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                     >
                       <RotateCcw size={12} aria-hidden="true" />
                       {t('common.export_retry')}
+                    </button>
+                  </div>
+                )}
+                {undoAction && (
+                  <div className="flex items-center justify-between gap-3 text-xs text-[var(--text-secondary)]">
+                    <span>{undoAction.message}</span>
+                    <button
+                      type="button"
+                      className="shrink-0 font-bold text-[var(--accent)] underline underline-offset-2"
+                      onClick={undo}
+                    >
+                      {t('common.undo')}
                     </button>
                   </div>
                 )}

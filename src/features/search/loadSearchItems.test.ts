@@ -45,4 +45,28 @@ describe('loadSearchItems', () => {
     await expect(loadSearchItems('body')).resolves.toHaveLength(1);
     expect(fetchItems).toHaveBeenCalledTimes(2);
   });
+
+  it('preloads only the requested dataset and shares the pending request', async () => {
+    let resolveFetch: ((response: Response) => void) | undefined;
+    const fetchItems = vi.fn((input: string | URL | Request) => {
+      void input;
+      return new Promise<Response>(resolve => {
+        resolveFetch = resolve;
+      });
+    });
+    vi.stubGlobal('fetch', fetchItems);
+
+    const { loadSearchItems, preloadSearchItems } = await import('./loadSearchItems');
+    const preload = preloadSearchItems('face');
+    const load = loadSearchItems('face');
+
+    expect(fetchItems).toHaveBeenCalledTimes(1);
+    resolveFetch?.(new Response(JSON.stringify({
+      2: { ko: '안경', en: 'Glasses', ja: '眼鏡' },
+    }), { status: 200 }));
+
+    await expect(preload).resolves.toBeUndefined();
+    await expect(load).resolves.toHaveLength(1);
+    expect(String(fetchItems.mock.calls[0]?.[0])).toContain('facewear');
+  });
 });

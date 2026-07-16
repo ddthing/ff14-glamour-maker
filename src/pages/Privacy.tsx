@@ -5,7 +5,7 @@ export function Privacy() {
     return (
         <div className="flex flex-col min-h-[100dvh] bg-[var(--bg-app)] text-[var(--text-primary)]">
             <Header />
-            <main className="flex-1 w-full max-w-3xl mx-auto px-6 py-12 md:py-20 flex flex-col gap-8">
+            <main id="main-content" tabIndex={-1} className="flex-1 w-full max-w-3xl mx-auto px-6 py-12 md:py-20 flex flex-col gap-8">
                 <h1 className="text-2xl md:text-3xl font-black tracking-tight text-[var(--text-primary)] border-b border-[var(--border)] pb-6">
                     개인정보처리방침 (Privacy Policy)
                 </h1>

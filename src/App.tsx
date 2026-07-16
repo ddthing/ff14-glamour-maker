@@ -22,7 +22,7 @@ function App() {
       <div className="flex-1 w-full max-w-[1440px] mx-auto px-4 md:px-10 flex justify-center mt-6 mb-12">
 
         {/* Central Workspace (Stage) */}
-        <main className="w-full flex flex-col lg:flex-row gap-4 lg:gap-8 h-auto items-stretch">
+        <main id="main-content" tabIndex={-1} className="w-full flex flex-col lg:flex-row gap-4 lg:gap-8 h-auto items-stretch">
           {/* Left: Canvas */}
           <div className="flex-1 min-w-0 flex flex-col h-full">
             <PreviewCanvas state={state} setState={setState} />

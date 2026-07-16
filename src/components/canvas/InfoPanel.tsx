@@ -57,6 +57,8 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                         <img
                             src={bgSrc}
                             alt=""
+                            width={720}
+                            height={1020}
                             style={{
                                 width: '100%',
                                 height: '100%',

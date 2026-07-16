@@ -61,3 +61,11 @@ export async function loadSearchItems(slot?: EquipmentPart): Promise<readonly FF
   const [equipment, facewear] = await Promise.all([loadEquipment(), loadFacewear()]);
   return [...equipment, ...facewear];
 }
+
+export async function preloadSearchItems(slot?: EquipmentPart): Promise<void> {
+  try {
+    await loadSearchItems(slot);
+  } catch {
+    // The failed cache entry is cleared by the loader so an actual search can retry.
+  }
+}

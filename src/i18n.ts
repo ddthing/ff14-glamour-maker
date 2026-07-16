@@ -64,7 +64,12 @@ i18n
             export_failed: '이미지를 저장하지 못했습니다. 다시 시도해 주세요.',
             export_retry: '다시 시도',
             clear_slot: '부위 아이템 지우기',
-            delete_preset: '프리셋 삭제'
+            delete_preset: '프리셋 삭제',
+            undo: '실행 취소',
+            items_reset: '장비를 초기화했습니다.',
+            preset_deleted: '프리셋을 삭제했습니다.',
+            preset_storage_failed: '프리셋을 저장하지 못했습니다. 브라우저 저장 공간을 확인해 주세요.',
+            skip_to_content: '본문으로 이동'
           },
           slots: {
             mainhand: '무기',
@@ -145,7 +150,12 @@ i18n
             export_failed: 'Could not save the image. Please try again.',
             export_retry: 'Try Again',
             clear_slot: 'Clear slot item',
-            delete_preset: 'Delete preset'
+            delete_preset: 'Delete preset',
+            undo: 'Undo',
+            items_reset: 'Equipment was reset.',
+            preset_deleted: 'Preset deleted.',
+            preset_storage_failed: 'Could not save the preset. Check your browser storage.',
+            skip_to_content: 'Skip to content'
           },
           slots: {
             mainhand: 'Main Hand',
@@ -226,7 +236,12 @@ i18n
             export_failed: '画像を保存できませんでした。もう一度お試しください。',
             export_retry: 'もう一度試す',
             clear_slot: '部位のアイテムを消去',
-            delete_preset: 'プリセットを削除'
+            delete_preset: 'プリセットを削除',
+            undo: '元に戻す',
+            items_reset: '装備を初期化しました。',
+            preset_deleted: 'プリセットを削除しました。',
+            preset_storage_failed: 'プリセットを保存できませんでした。ブラウザの保存領域を確認してください。',
+            skip_to_content: '本文へ移動'
           },
           slots: {
             mainhand: '主武器',
