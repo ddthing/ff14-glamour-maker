@@ -23,6 +23,7 @@ build/
 .agent/
 .cline/
 .gemini/
+.superpowers/
 rtk.log
 
 # TypeScript

@@ -2,6 +2,7 @@ import type { AppState, EquipmentPart, EquipItem } from '../types';
 
 export const INITIAL_ITEMS: Record<EquipmentPart, EquipItem> = {
   mainhand: { id: 'mainhand', label: '', name: '' },
+  offhand:  { id: 'offhand',  label: '', name: '' },
   head:     { id: 'head',     label: '', name: '' },
   body:     { id: 'body',     label: '', name: '' },
   hands:    { id: 'hands',    label: '', name: '' },

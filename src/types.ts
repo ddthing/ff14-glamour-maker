@@ -6,6 +6,7 @@
  */
 export type EquipmentPart =
     | 'mainhand'
+    | 'offhand'
     | 'head'
     | 'body'
     | 'hands'

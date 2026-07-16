@@ -1,41 +1,61 @@
 import { useState } from 'react';
-import type { AppState, EquipmentPart, EquipItem } from '../types';
+import { CURRENT_STATE_VERSION, decodeStateValue } from '../features/glamour/stateCodec';
+import type { AppState } from '../types';
 
 export interface Preset {
   id: string;
+  version: number;
   name: string;
   title: string;
   creator: string;
-  items: Record<EquipmentPart, EquipItem>;
+  items: AppState['items'];
   updatedAt: number;
 }
 
 const PRESETS_STORAGE_KEY = 'ff14_glamour_presets';
 
-/**
- * usePresets — 로컬 스토리지 기반 프리셋 관리 훅
- * P1 수정: console.error → 조용히 실패, alert() → 제거
- */
-export function usePresets() {
-  // ── Lazy init: 첫 렌더부터 저장된 프리셋을 올바르게 표시 ──────────────────
-  // useEffect에서 읽으면 첫 렌더가 [] → 마운트 후 실제 데이터로 교체되어 깜박임 발생.
-  // lazy initializer는 첫 렌더 전에 실행되므로 깜박임 없음.
-  const [presets, setPresets] = useState<Preset[]>(() => {
-    try {
-      const stored = localStorage.getItem(PRESETS_STORAGE_KEY);
-      return stored ? (JSON.parse(stored) as Preset[]) : [];
-    } catch {
-      return [];
-    }
-  });
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
 
-  // Save presets whenever they change
+function parseStoredPresets(value: string | null): Preset[] {
+  if (!value) return [];
+
+  try {
+    const parsed: unknown = JSON.parse(value);
+    if (!Array.isArray(parsed)) return [];
+
+    return parsed.flatMap((candidate): Preset[] => {
+      if (!isRecord(candidate)) return [];
+      if (typeof candidate.id !== 'string' || typeof candidate.name !== 'string') return [];
+
+      const decoded = decodeStateValue(candidate);
+      return [{
+        id: candidate.id,
+        version: CURRENT_STATE_VERSION,
+        name: candidate.name.trim() || 'Preset',
+        title: decoded.state.title,
+        creator: decoded.state.creator,
+        items: decoded.state.items,
+        updatedAt: typeof candidate.updatedAt === 'number' ? candidate.updatedAt : 0,
+      }];
+    });
+  } catch {
+    return [];
+  }
+}
+
+export function usePresets() {
+  const [presets, setPresets] = useState<Preset[]>(() =>
+    parseStoredPresets(localStorage.getItem(PRESETS_STORAGE_KEY)),
+  );
+
   const savePresetsToStorage = (newPresets: Preset[]) => {
     setPresets(newPresets);
     try {
       localStorage.setItem(PRESETS_STORAGE_KEY, JSON.stringify(newPresets));
     } catch {
-      // 스토리지 가득 참 — 조용히 실패 (향후 Toast로 대체 예정)
+      // UI feedback is added in the P1 interaction pass.
     }
   };
 
@@ -44,6 +64,7 @@ export function usePresets() {
 
     const newPreset: Preset = {
       id: crypto.randomUUID(),
+      version: CURRENT_STATE_VERSION,
       name: name.trim(),
       title: state.title,
       creator: state.creator,
@@ -55,7 +76,7 @@ export function usePresets() {
   };
 
   const removePreset = (id: string) => {
-    savePresetsToStorage(presets.filter(p => p.id !== id));
+    savePresetsToStorage(presets.filter(preset => preset.id !== id));
   };
 
   return { presets, addPreset, removePreset };

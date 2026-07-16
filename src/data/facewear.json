@@ -1,0 +1,4106 @@
+{
+  "1": {
+    "ko": "타원형 안경",
+    "iconPath": "/i/200000/200049.png",
+    "en": "Oval Spectacles",
+    "ja": "オーバルグラス"
+  },
+  "2": {
+    "ko": "은색 타원형 안경",
+    "iconPath": "/i/200000/200053.png",
+    "en": "Silver Oval Spectacles",
+    "ja": "オーバルグラス:シルバー"
+  },
+  "3": {
+    "ko": "금색 타원형 안경",
+    "iconPath": "/i/200000/200052.png",
+    "en": "Gold Oval Spectacles",
+    "ja": "オーバルグラス:ゴールド"
+  },
+  "4": {
+    "ko": "검은색 타원형 안경",
+    "iconPath": "/i/200000/200054.png",
+    "en": "Black Oval Spectacles",
+    "ja": "オーバルグラス:ブラック"
+  },
+  "5": {
+    "ko": "흰색 타원형 안경",
+    "iconPath": "/i/200000/200059.png",
+    "en": "White Oval Spectacles",
+    "ja": "オーバルグラス:ホワイト"
+  },
+  "6": {
+    "ko": "회색 타원형 안경",
+    "iconPath": "/i/200000/200050.png",
+    "en": "Grey Oval Spectacles",
+    "ja": "オーバルグラス:グレー"
+  },
+  "7": {
+    "ko": "빨간색 타원형 안경",
+    "iconPath": "/i/200000/200057.png",
+    "en": "Red Oval Spectacles",
+    "ja": "オーバルグラス:レッド"
+  },
+  "8": {
+    "ko": "파란색 타원형 안경",
+    "iconPath": "/i/200000/200056.png",
+    "en": "Blue Oval Spectacles",
+    "ja": "オーバルグラス:ブルー"
+  },
+  "9": {
+    "ko": "초록색 타원형 안경",
+    "iconPath": "/i/200000/200060.png",
+    "en": "Green Oval Spectacles",
+    "ja": "オーバルグラス:グリーン"
+  },
+  "10": {
+    "ko": "구리색 타원형 안경",
+    "iconPath": "/i/200000/200051.png",
+    "en": "Brass Oval Spectacles",
+    "ja": "オーバルグラス:ブラス"
+  },
+  "11": {
+    "ko": "보라색 타원형 안경",
+    "iconPath": "/i/200000/200055.png",
+    "en": "Purple Oval Spectacles",
+    "ja": "オーバルグラス:パープル"
+  },
+  "12": {
+    "ko": "갈색 타원형 안경",
+    "iconPath": "/i/200000/200058.png",
+    "en": "Brown Oval Spectacles",
+    "ja": "オーバルグラス:ブラウン"
+  },
+  "13": {
+    "ko": "검은알 안경",
+    "iconPath": "/i/200000/200085.png",
+    "en": "Shaded Spectacles",
+    "ja": "シェイデッドグラス"
+  },
+  "14": {
+    "ko": "은색 검은알 안경",
+    "iconPath": "/i/200000/200089.png",
+    "en": "Silver Shaded Spectacles",
+    "ja": "シェイデッドグラス:シルバー"
+  },
+  "15": {
+    "ko": "금색 검은알 안경",
+    "iconPath": "/i/200000/200088.png",
+    "en": "Gold Shaded Spectacles",
+    "ja": "シェイデッドグラス:ゴールド"
+  },
+  "16": {
+    "ko": "검은색 검은알 안경",
+    "iconPath": "/i/200000/200090.png",
+    "en": "Black Shaded Spectacles",
+    "ja": "シェイデッドグラス:ブラック"
+  },
+  "17": {
+    "ko": "흰색 검은알 안경",
+    "iconPath": "/i/200000/200095.png",
+    "en": "White Shaded Spectacles",
+    "ja": "シェイデッドグラス:ホワイト"
+  },
+  "18": {
+    "ko": "회색 검은알 안경",
+    "iconPath": "/i/200000/200086.png",
+    "en": "Grey Shaded Spectacles",
+    "ja": "シェイデッドグラス:グレー"
+  },
+  "19": {
+    "ko": "빨간색 검은알 안경",
+    "iconPath": "/i/200000/200093.png",
+    "en": "Red Shaded Spectacles",
+    "ja": "シェイデッドグラス:レッド"
+  },
+  "20": {
+    "ko": "파란색 검은알 안경",
+    "iconPath": "/i/200000/200092.png",
+    "en": "Blue Shaded Spectacles",
+    "ja": "シェイデッドグラス:ブルー"
+  },
+  "21": {
+    "ko": "초록색 검은알 안경",
+    "iconPath": "/i/200000/200096.png",
+    "en": "Green Shaded Spectacles",
+    "ja": "シェイデッドグラス:グリーン"
+  },
+  "22": {
+    "ko": "구리색 검은알 안경",
+    "iconPath": "/i/200000/200087.png",
+    "en": "Brass Shaded Spectacles",
+    "ja": "シェイデッドグラス:ブラス"
+  },
+  "23": {
+    "ko": "보라색 검은알 안경",
+    "iconPath": "/i/200000/200091.png",
+    "en": "Purple Shaded Spectacles",
+    "ja": "シェイデッドグラス:パープル"
+  },
+  "24": {
+    "ko": "갈색 검은알 안경",
+    "iconPath": "/i/200000/200094.png",
+    "en": "Brown Shaded Spectacles",
+    "ja": "シェイデッドグラス:ブラウン"
+  },
+  "25": {
+    "ko": "뿔테 안경",
+    "iconPath": "/i/200000/200061.png",
+    "en": "Classic Spectacles",
+    "ja": "クラシックグラス"
+  },
+  "26": {
+    "ko": "은색 뿔테 안경",
+    "iconPath": "/i/200000/200065.png",
+    "en": "Silver Classic Spectacles",
+    "ja": "クラシックグラス:シルバー"
+  },
+  "27": {
+    "ko": "금색 뿔테 안경",
+    "iconPath": "/i/200000/200064.png",
+    "en": "Gold Classic Spectacles",
+    "ja": "クラシックグラス:ゴールド"
+  },
+  "28": {
+    "ko": "검은색 뿔테 안경",
+    "iconPath": "/i/200000/200066.png",
+    "en": "Black Classic Spectacles",
+    "ja": "クラシックグラス:ブラック"
+  },
+  "29": {
+    "ko": "흰색 뿔테 안경",
+    "iconPath": "/i/200000/200071.png",
+    "en": "White Classic Spectacles",
+    "ja": "クラシックグラス:ホワイト"
+  },
+  "30": {
+    "ko": "회색 뿔테 안경",
+    "iconPath": "/i/200000/200062.png",
+    "en": "Grey Classic Spectacles",
+    "ja": "クラシックグラス:グレー"
+  },
+  "31": {
+    "ko": "빨간색 뿔테 안경",
+    "iconPath": "/i/200000/200069.png",
+    "en": "Red Classic Spectacles",
+    "ja": "クラシックグラス:レッド"
+  },
+  "32": {
+    "ko": "파란색 뿔테 안경",
+    "iconPath": "/i/200000/200068.png",
+    "en": "Blue Classic Spectacles",
+    "ja": "クラシックグラス:ブルー"
+  },
+  "33": {
+    "ko": "초록색 뿔테 안경",
+    "iconPath": "/i/200000/200072.png",
+    "en": "Green Classic Spectacles",
+    "ja": "クラシックグラス:グリーン"
+  },
+  "34": {
+    "ko": "구리색 뿔테 안경",
+    "iconPath": "/i/200000/200063.png",
+    "en": "Brass Classic Spectacles",
+    "ja": "クラシックグラス:ブラス"
+  },
+  "35": {
+    "ko": "보라색 뿔테 안경",
+    "iconPath": "/i/200000/200067.png",
+    "en": "Purple Classic Spectacles",
+    "ja": "クラシックグラス:パープル"
+  },
+  "36": {
+    "ko": "갈색 뿔테 안경",
+    "iconPath": "/i/200000/200070.png",
+    "en": "Brown Classic Spectacles",
+    "ja": "クラシックグラス:ブラウン"
+  },
+  "37": {
+    "ko": "분홍알 안경",
+    "iconPath": "/i/200000/200013.png",
+    "en": "Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ"
+  },
+  "38": {
+    "ko": "은색 분홍알 안경",
+    "iconPath": "/i/200000/200017.png",
+    "en": "Silver Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:シルバー"
+  },
+  "39": {
+    "ko": "금색 분홍알 안경",
+    "iconPath": "/i/200000/200016.png",
+    "en": "Gold Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:ゴールド"
+  },
+  "40": {
+    "ko": "검은색 분홍알 안경",
+    "iconPath": "/i/200000/200018.png",
+    "en": "Black Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:ブラック"
+  },
+  "41": {
+    "ko": "흰색 분홍알 안경",
+    "iconPath": "/i/200000/200023.png",
+    "en": "White Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:ホワイト"
+  },
+  "42": {
+    "ko": "회색 분홍알 안경",
+    "iconPath": "/i/200000/200014.png",
+    "en": "Grey Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:グレー"
+  },
+  "43": {
+    "ko": "빨간색 분홍알 안경",
+    "iconPath": "/i/200000/200021.png",
+    "en": "Red Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:レッド"
+  },
+  "44": {
+    "ko": "파란색 분홍알 안경",
+    "iconPath": "/i/200000/200020.png",
+    "en": "Blue Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:ブルー"
+  },
+  "45": {
+    "ko": "초록색 분홍알 안경",
+    "iconPath": "/i/200000/200024.png",
+    "en": "Green Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:グリーン"
+  },
+  "46": {
+    "ko": "구리색 분홍알 안경",
+    "iconPath": "/i/200000/200015.png",
+    "en": "Brass Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:ブラス"
+  },
+  "47": {
+    "ko": "보라색 분홍알 안경",
+    "iconPath": "/i/200000/200019.png",
+    "en": "Purple Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:パープル"
+  },
+  "48": {
+    "ko": "갈색 분홍알 안경",
+    "iconPath": "/i/200000/200022.png",
+    "en": "Brown Rose-colored Spectacles",
+    "ja": "ローズカラースペクタクルズ:ブラウン"
+  },
+  "49": {
+    "ko": "기본 안경",
+    "iconPath": "/i/200000/200001.png",
+    "en": "Simple Spectacles",
+    "ja": "ベーシックスペクタクルズ"
+  },
+  "50": {
+    "ko": "은색 기본 안경",
+    "iconPath": "/i/200000/200005.png",
+    "en": "Silver Spectacles",
+    "ja": "ベーシックスペクタクルズ:シルバー"
+  },
+  "51": {
+    "ko": "금색 기본 안경",
+    "iconPath": "/i/200000/200004.png",
+    "en": "Gold Spectacles",
+    "ja": "ベーシックスペクタクルズ:ゴールド"
+  },
+  "52": {
+    "ko": "검은색 기본 안경",
+    "iconPath": "/i/200000/200006.png",
+    "en": "Black Spectacles",
+    "ja": "ベーシックスペクタクルズ:ブラック"
+  },
+  "53": {
+    "ko": "흰색 기본 안경",
+    "iconPath": "/i/200000/200011.png",
+    "en": "White Spectacles",
+    "ja": "ベーシックスペクタクルズ:ホワイト"
+  },
+  "54": {
+    "ko": "회색 기본 안경",
+    "iconPath": "/i/200000/200002.png",
+    "en": "Grey Spectacles",
+    "ja": "ベーシックスペクタクルズ:グレー"
+  },
+  "55": {
+    "ko": "빨간색 기본 안경",
+    "iconPath": "/i/200000/200009.png",
+    "en": "Red Spectacles",
+    "ja": "ベーシックスペクタクルズ:レッド"
+  },
+  "56": {
+    "ko": "파란색 기본 안경",
+    "iconPath": "/i/200000/200008.png",
+    "en": "Blue Spectacles",
+    "ja": "ベーシックスペクタクルズ:ブルー"
+  },
+  "57": {
+    "ko": "초록색 기본 안경",
+    "iconPath": "/i/200000/200012.png",
+    "en": "Green Spectacles",
+    "ja": "ベーシックスペクタクルズ:グリーン"
+  },
+  "58": {
+    "ko": "구리색 기본 안경",
+    "iconPath": "/i/200000/200003.png",
+    "en": "Brass Spectacles",
+    "ja": "ベーシックスペクタクルズ:ブラス"
+  },
+  "59": {
+    "ko": "보라색 기본 안경",
+    "iconPath": "/i/200000/200007.png",
+    "en": "Purple Spectacles",
+    "ja": "ベーシックスペクタクルズ:パープル"
+  },
+  "60": {
+    "ko": "갈색 기본 안경",
+    "iconPath": "/i/200000/200010.png",
+    "en": "Brown Spectacles",
+    "ja": "ベーシックスペクタクルズ:ブラウン"
+  },
+  "61": {
+    "ko": "단안경",
+    "iconPath": "/i/200000/200025.png",
+    "en": "Monocle",
+    "ja": "モノクル"
+  },
+  "62": {
+    "ko": "은색 단안경",
+    "iconPath": "/i/200000/200029.png",
+    "en": "Silver Monocle",
+    "ja": "モノクル:シルバー"
+  },
+  "63": {
+    "ko": "금색 단안경",
+    "iconPath": "/i/200000/200028.png",
+    "en": "Gold Monocle",
+    "ja": "モノクル:ゴールド"
+  },
+  "64": {
+    "ko": "검은색 단안경",
+    "iconPath": "/i/200000/200030.png",
+    "en": "Black Monocle",
+    "ja": "モノクル:ブラック"
+  },
+  "65": {
+    "ko": "흰색 단안경",
+    "iconPath": "/i/200000/200035.png",
+    "en": "White Monocle",
+    "ja": "モノクル:ホワイト"
+  },
+  "66": {
+    "ko": "회색 단안경",
+    "iconPath": "/i/200000/200026.png",
+    "en": "Grey Monocle",
+    "ja": "モノクル:グレー"
+  },
+  "67": {
+    "ko": "빨간색 단안경",
+    "iconPath": "/i/200000/200033.png",
+    "en": "Red Monocle",
+    "ja": "モノクル:レッド"
+  },
+  "68": {
+    "ko": "파란색 단안경",
+    "iconPath": "/i/200000/200032.png",
+    "en": "Blue Monocle",
+    "ja": "モノクル:ブルー"
+  },
+  "69": {
+    "ko": "초록색 단안경",
+    "iconPath": "/i/200000/200036.png",
+    "en": "Green Monocle",
+    "ja": "モノクル:グリーン"
+  },
+  "70": {
+    "ko": "구리색 단안경",
+    "iconPath": "/i/200000/200027.png",
+    "en": "Brass Monocle",
+    "ja": "モノクル:ブラス"
+  },
+  "71": {
+    "ko": "보라색 단안경",
+    "iconPath": "/i/200000/200031.png",
+    "en": "Purple Monocle",
+    "ja": "モノクル:パープル"
+  },
+  "72": {
+    "ko": "갈색 단안경",
+    "iconPath": "/i/200000/200034.png",
+    "en": "Brown Monocle",
+    "ja": "モノクル:ブラウン"
+  },
+  "73": {
+    "ko": "현대식 코안경",
+    "iconPath": "/i/200000/200037.png",
+    "en": "Contemporary Pince-nez",
+    "ja": "モダンパンスネ"
+  },
+  "74": {
+    "ko": "은색 현대식 코안경",
+    "iconPath": "/i/200000/200041.png",
+    "en": "Silver Contemporary Pince-nez",
+    "ja": "モダンパンスネ:シルバー"
+  },
+  "75": {
+    "ko": "금색 현대식 코안경",
+    "iconPath": "/i/200000/200040.png",
+    "en": "Gold Contemporary Pince-nez",
+    "ja": "モダンパンスネ:ゴールド"
+  },
+  "76": {
+    "ko": "검은색 현대식 코안경",
+    "iconPath": "/i/200000/200042.png",
+    "en": "Black Contemporary Pince-nez",
+    "ja": "モダンパンスネ:ブラック"
+  },
+  "77": {
+    "ko": "흰색 현대식 코안경",
+    "iconPath": "/i/200000/200047.png",
+    "en": "White Contemporary Pince-nez",
+    "ja": "モダンパンスネ:ホワイト"
+  },
+  "78": {
+    "ko": "회색 현대식 코안경",
+    "iconPath": "/i/200000/200038.png",
+    "en": "Grey Contemporary Pince-nez",
+    "ja": "モダンパンスネ:グレー"
+  },
+  "79": {
+    "ko": "빨간색 현대식 코안경",
+    "iconPath": "/i/200000/200045.png",
+    "en": "Red Contemporary Pince-nez",
+    "ja": "モダンパンスネ:レッド"
+  },
+  "80": {
+    "ko": "파란색 현대식 코안경",
+    "iconPath": "/i/200000/200044.png",
+    "en": "Blue Contemporary Pince-nez",
+    "ja": "モダンパンスネ:ブルー"
+  },
+  "81": {
+    "ko": "초록색 현대식 코안경",
+    "iconPath": "/i/200000/200048.png",
+    "en": "Green Contemporary Pince-nez",
+    "ja": "モダンパンスネ:グリーン"
+  },
+  "82": {
+    "ko": "구리색 현대식 코안경",
+    "iconPath": "/i/200000/200039.png",
+    "en": "Brass Contemporary Pince-nez",
+    "ja": "モダンパンスネ:ブラス"
+  },
+  "83": {
+    "ko": "보라색 현대식 코안경",
+    "iconPath": "/i/200000/200043.png",
+    "en": "Purple Contemporary Pince-nez",
+    "ja": "モダンパンスネ:パープル"
+  },
+  "84": {
+    "ko": "갈색 현대식 코안경",
+    "iconPath": "/i/200000/200046.png",
+    "en": "Brown Contemporary Pince-nez",
+    "ja": "モダンパンスネ:ブラウン"
+  },
+  "85": {
+    "ko": "무테 안경",
+    "iconPath": "/i/200000/200097.png",
+    "en": "Rimless Glasses",
+    "ja": "リムレスグラス"
+  },
+  "86": {
+    "ko": "은색 무테 안경",
+    "iconPath": "/i/200000/200101.png",
+    "en": "Silver Rimless Glasses",
+    "ja": "リムレスグラス:シルバー"
+  },
+  "87": {
+    "ko": "금색 무테 안경",
+    "iconPath": "/i/200000/200100.png",
+    "en": "Gold Rimless Glasses",
+    "ja": "リムレスグラス:ゴールド"
+  },
+  "88": {
+    "ko": "검은색 무테 안경",
+    "iconPath": "/i/200000/200102.png",
+    "en": "Black Rimless Glasses",
+    "ja": "リムレスグラス:ブラック"
+  },
+  "89": {
+    "ko": "흰색 무테 안경",
+    "iconPath": "/i/200000/200107.png",
+    "en": "White Rimless Glasses",
+    "ja": "リムレスグラス:ホワイト"
+  },
+  "90": {
+    "ko": "회색 무테 안경",
+    "iconPath": "/i/200000/200098.png",
+    "en": "Grey Rimless Glasses",
+    "ja": "リムレスグラス:グレー"
+  },
+  "91": {
+    "ko": "빨간색 무테 안경",
+    "iconPath": "/i/200000/200105.png",
+    "en": "Red Rimless Glasses",
+    "ja": "リムレスグラス:レッド"
+  },
+  "92": {
+    "ko": "파란색 무테 안경",
+    "iconPath": "/i/200000/200104.png",
+    "en": "Blue Rimless Glasses",
+    "ja": "リムレスグラス:ブルー"
+  },
+  "93": {
+    "ko": "초록색 무테 안경",
+    "iconPath": "/i/200000/200108.png",
+    "en": "Green Rimless Glasses",
+    "ja": "リムレスグラス:グリーン"
+  },
+  "94": {
+    "ko": "구리색 무테 안경",
+    "iconPath": "/i/200000/200099.png",
+    "en": "Brass Rimless Glasses",
+    "ja": "リムレスグラス:ブラス"
+  },
+  "95": {
+    "ko": "보라색 무테 안경",
+    "iconPath": "/i/200000/200103.png",
+    "en": "Purple Rimless Glasses",
+    "ja": "リムレスグラス:パープル"
+  },
+  "96": {
+    "ko": "갈색 무테 안경",
+    "iconPath": "/i/200000/200106.png",
+    "en": "Brown Rimless Glasses",
+    "ja": "リムレスグラス:ブラウン"
+  },
+  "97": {
+    "ko": "굵은테 안경",
+    "iconPath": "/i/200000/200109.png",
+    "en": "Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス"
+  },
+  "98": {
+    "ko": "은색 굵은테 안경",
+    "iconPath": "/i/200000/200113.png",
+    "en": "Silver Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:シルバー"
+  },
+  "99": {
+    "ko": "금색 굵은테 안경",
+    "iconPath": "/i/200000/200112.png",
+    "en": "Gold Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:ゴールド"
+  },
+  "100": {
+    "ko": "검은색 굵은테 안경",
+    "iconPath": "/i/200000/200114.png",
+    "en": "Black Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:ブラック"
+  },
+  "101": {
+    "ko": "흰색 굵은테 안경",
+    "iconPath": "/i/200000/200119.png",
+    "en": "White Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:ホワイト"
+  },
+  "102": {
+    "ko": "회색 굵은테 안경",
+    "iconPath": "/i/200000/200110.png",
+    "en": "Grey Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:グレー"
+  },
+  "103": {
+    "ko": "빨간색 굵은테 안경",
+    "iconPath": "/i/200000/200117.png",
+    "en": "Red Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:レッド"
+  },
+  "104": {
+    "ko": "파란색 굵은테 안경",
+    "iconPath": "/i/200000/200116.png",
+    "en": "Blue Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:ブルー"
+  },
+  "105": {
+    "ko": "초록색 굵은테 안경",
+    "iconPath": "/i/200000/200120.png",
+    "en": "Green Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:グリーン"
+  },
+  "106": {
+    "ko": "구리색 굵은테 안경",
+    "iconPath": "/i/200000/200111.png",
+    "en": "Brass Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:ブラス"
+  },
+  "107": {
+    "ko": "보라색 굵은테 안경",
+    "iconPath": "/i/200000/200115.png",
+    "en": "Purple Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:パープル"
+  },
+  "108": {
+    "ko": "갈색 굵은테 안경",
+    "iconPath": "/i/200000/200118.png",
+    "en": "Brown Thick-rimmed Glasses",
+    "ja": "ボールドリムグラス:ブラウン"
+  },
+  "109": {
+    "ko": "예인의 안경",
+    "iconPath": "/i/200000/200073.png",
+    "en": "Minstrel's Spectacles",
+    "ja": "ミンストレルグラス"
+  },
+  "110": {
+    "ko": "은색 예인의 안경",
+    "iconPath": "/i/200000/200077.png",
+    "en": "Silver Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:シルバー"
+  },
+  "111": {
+    "ko": "금색 예인의 안경",
+    "iconPath": "/i/200000/200076.png",
+    "en": "Gold Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:ゴールド"
+  },
+  "112": {
+    "ko": "검은색 예인의 안경",
+    "iconPath": "/i/200000/200078.png",
+    "en": "Black Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:ブラック"
+  },
+  "113": {
+    "ko": "흰색 예인의 안경",
+    "iconPath": "/i/200000/200083.png",
+    "en": "White Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:ホワイト"
+  },
+  "114": {
+    "ko": "회색 예인의 안경",
+    "iconPath": "/i/200000/200074.png",
+    "en": "Grey Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:グレー"
+  },
+  "115": {
+    "ko": "빨간색 예인의 안경",
+    "iconPath": "/i/200000/200081.png",
+    "en": "Red Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:レッド"
+  },
+  "116": {
+    "ko": "파란색 예인의 안경",
+    "iconPath": "/i/200000/200080.png",
+    "en": "Blue Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:ブルー"
+  },
+  "117": {
+    "ko": "초록색 예인의 안경",
+    "iconPath": "/i/200000/200084.png",
+    "en": "Green Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:グリーン"
+  },
+  "118": {
+    "ko": "구리색 예인의 안경",
+    "iconPath": "/i/200000/200075.png",
+    "en": "Brass Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:ブラス"
+  },
+  "119": {
+    "ko": "보라색 예인의 안경",
+    "iconPath": "/i/200000/200079.png",
+    "en": "Purple Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:パープル"
+  },
+  "120": {
+    "ko": "갈색 예인의 안경",
+    "iconPath": "/i/200000/200082.png",
+    "en": "Brown Minstrel's Spectacles",
+    "ja": "ミンストレルグラス:ブラウン"
+  },
+  "121": {
+    "ko": "코안경",
+    "iconPath": "/i/200000/200121.png",
+    "en": "Pince-nez",
+    "ja": "パンスネ"
+  },
+  "122": {
+    "ko": "은색 코안경",
+    "iconPath": "/i/200000/200122.png",
+    "en": "Silver Pince-nez",
+    "ja": "パンスネ:シルバー"
+  },
+  "123": {
+    "ko": "금색 코안경",
+    "iconPath": "/i/200000/200123.png",
+    "en": "Gold Pince-nez",
+    "ja": "パンスネ:ゴールド"
+  },
+  "124": {
+    "ko": "검은색 코안경",
+    "iconPath": "/i/200000/200124.png",
+    "en": "Black Pince-nez",
+    "ja": "パンスネ:ブラック"
+  },
+  "125": {
+    "ko": "흰색 코안경",
+    "iconPath": "/i/200000/200125.png",
+    "en": "White Pince-nez",
+    "ja": "パンスネ:ホワイト"
+  },
+  "126": {
+    "ko": "회색 코안경",
+    "iconPath": "/i/200000/200126.png",
+    "en": "Grey Pince-nez",
+    "ja": "パンスネ:グレー"
+  },
+  "127": {
+    "ko": "빨간색 코안경",
+    "iconPath": "/i/200000/200127.png",
+    "en": "Red Pince-nez",
+    "ja": "パンスネ:レッド"
+  },
+  "128": {
+    "ko": "파란색 코안경",
+    "iconPath": "/i/200000/200128.png",
+    "en": "Blue Pince-nez",
+    "ja": "パンスネ:ブルー"
+  },
+  "129": {
+    "ko": "초록색 코안경",
+    "iconPath": "/i/200000/200129.png",
+    "en": "Green Pince-nez",
+    "ja": "パンスネ:グリーン"
+  },
+  "130": {
+    "ko": "구리색 코안경",
+    "iconPath": "/i/200000/200130.png",
+    "en": "Brass Pince-nez",
+    "ja": "パンスネ:ブラス"
+  },
+  "131": {
+    "ko": "보라색 코안경",
+    "iconPath": "/i/200000/200131.png",
+    "en": "Purple Pince-nez",
+    "ja": "パンスネ:パープル"
+  },
+  "132": {
+    "ko": "갈색 코안경",
+    "iconPath": "/i/200000/200132.png",
+    "en": "Brown Pince-nez",
+    "ja": "パンスネ:ブラウン"
+  },
+  "133": {
+    "ko": "확대경",
+    "iconPath": "/i/200000/200133.png",
+    "en": "Magnifiers",
+    "ja": "マグニファイアーズ"
+  },
+  "134": {
+    "ko": "은색 확대경",
+    "iconPath": "/i/200000/200134.png",
+    "en": "Silver Magnifiers",
+    "ja": "マグニファイアーズ:シルバー"
+  },
+  "135": {
+    "ko": "금색 확대경",
+    "iconPath": "/i/200000/200135.png",
+    "en": "Gold Magnifiers",
+    "ja": "マグニファイアーズ:ゴールド"
+  },
+  "136": {
+    "ko": "검은색 확대경",
+    "iconPath": "/i/200000/200136.png",
+    "en": "Black Magnifiers",
+    "ja": "マグニファイアーズ:ブラック"
+  },
+  "137": {
+    "ko": "흰색 확대경",
+    "iconPath": "/i/200000/200137.png",
+    "en": "White Magnifiers",
+    "ja": "マグニファイアーズ:ホワイト"
+  },
+  "138": {
+    "ko": "회색 확대경",
+    "iconPath": "/i/200000/200138.png",
+    "en": "Grey Magnifiers",
+    "ja": "マグニファイアーズ:グレー"
+  },
+  "139": {
+    "ko": "빨간색 확대경",
+    "iconPath": "/i/200000/200139.png",
+    "en": "Red Magnifiers",
+    "ja": "マグニファイアーズ:レッド"
+  },
+  "140": {
+    "ko": "파란색 확대경",
+    "iconPath": "/i/200000/200140.png",
+    "en": "Blue Magnifiers",
+    "ja": "マグニファイアーズ:ブルー"
+  },
+  "141": {
+    "ko": "초록색 확대경",
+    "iconPath": "/i/200000/200141.png",
+    "en": "Green Magnifiers",
+    "ja": "マグニファイアーズ:グリーン"
+  },
+  "142": {
+    "ko": "구리색 확대경",
+    "iconPath": "/i/200000/200142.png",
+    "en": "Brass Magnifiers",
+    "ja": "マグニファイアーズ:ブラス"
+  },
+  "143": {
+    "ko": "보라색 확대경",
+    "iconPath": "/i/200000/200143.png",
+    "en": "Purple Magnifiers",
+    "ja": "マグニファイアーズ:パープル"
+  },
+  "144": {
+    "ko": "갈색 확대경",
+    "iconPath": "/i/200000/200144.png",
+    "en": "Brown Magnifiers",
+    "ja": "マグニファイアーズ:ブラウン"
+  },
+  "145": {
+    "ko": "황동 고글",
+    "iconPath": "/i/200000/200145.png",
+    "en": "Brass Goggles",
+    "ja": "ブラスゴーグル"
+  },
+  "146": {
+    "ko": "은색 황동 고글",
+    "iconPath": "/i/200000/200146.png",
+    "en": "Silver Brass Goggles",
+    "ja": "ブラスゴーグル:シルバー"
+  },
+  "147": {
+    "ko": "금색 황동 고글",
+    "iconPath": "/i/200000/200147.png",
+    "en": "Gold Brass Goggles",
+    "ja": "ブラスゴーグル:ゴールド"
+  },
+  "148": {
+    "ko": "검은색 황동 고글",
+    "iconPath": "/i/200000/200148.png",
+    "en": "Black Brass Goggles",
+    "ja": "ブラスゴーグル:ブラック"
+  },
+  "149": {
+    "ko": "흰색 황동 고글",
+    "iconPath": "/i/200000/200149.png",
+    "en": "White Brass Goggles",
+    "ja": "ブラスゴーグル:ホワイト"
+  },
+  "150": {
+    "ko": "회색 황동 고글",
+    "iconPath": "/i/200000/200150.png",
+    "en": "Grey Brass Goggles",
+    "ja": "ブラスゴーグル:グレー"
+  },
+  "151": {
+    "ko": "빨간색 황동 고글",
+    "iconPath": "/i/200000/200151.png",
+    "en": "Red Brass Goggles",
+    "ja": "ブラスゴーグル:レッド"
+  },
+  "152": {
+    "ko": "파란색 황동 고글",
+    "iconPath": "/i/200000/200152.png",
+    "en": "Blue Brass Goggles",
+    "ja": "ブラスゴーグル:ブルー"
+  },
+  "153": {
+    "ko": "초록색 황동 고글",
+    "iconPath": "/i/200000/200153.png",
+    "en": "Green Brass Goggles",
+    "ja": "ブラスゴーグル:グリーン"
+  },
+  "154": {
+    "ko": "구리색 황동 고글",
+    "iconPath": "/i/200000/200154.png",
+    "en": "Bronze Brass Goggles",
+    "ja": "ブラスゴーグル:ブラス"
+  },
+  "155": {
+    "ko": "보라색 황동 고글",
+    "iconPath": "/i/200000/200155.png",
+    "en": "Purple Brass Goggles",
+    "ja": "ブラスゴーグル:パープル"
+  },
+  "156": {
+    "ko": "갈색 황동 고글",
+    "iconPath": "/i/200000/200156.png",
+    "en": "Brown Brass Goggles",
+    "ja": "ブラスゴーグル:ブラウン"
+  },
+  "157": {
+    "ko": "역반무테 안경",
+    "iconPath": "/i/200000/200157.png",
+    "en": "Under-rim Glasses",
+    "ja": "アンダーリムグラス"
+  },
+  "158": {
+    "ko": "은색 역반무테 안경",
+    "iconPath": "/i/200000/200158.png",
+    "en": "Silver Under-rim Glasses",
+    "ja": "アンダーリムグラス:シルバー"
+  },
+  "159": {
+    "ko": "금색 역반무테 안경",
+    "iconPath": "/i/200000/200159.png",
+    "en": "Gold Under-rim Glasses",
+    "ja": "アンダーリムグラス:ゴールド"
+  },
+  "160": {
+    "ko": "검은색 역반무테 안경",
+    "iconPath": "/i/200000/200160.png",
+    "en": "Black Under-rim Glasses",
+    "ja": "アンダーリムグラス:ブラック"
+  },
+  "161": {
+    "ko": "흰색 역반무테 안경",
+    "iconPath": "/i/200000/200161.png",
+    "en": "White Under-rim Glasses",
+    "ja": "アンダーリムグラス:ホワイト"
+  },
+  "162": {
+    "ko": "회색 역반무테 안경",
+    "iconPath": "/i/200000/200162.png",
+    "en": "Grey Under-rim Glasses",
+    "ja": "アンダーリムグラス:グレー"
+  },
+  "163": {
+    "ko": "빨간색 역반무테 안경",
+    "iconPath": "/i/200000/200163.png",
+    "en": "Red Under-rim Glasses",
+    "ja": "アンダーリムグラス:レッド"
+  },
+  "164": {
+    "ko": "파란색 역반무테 안경",
+    "iconPath": "/i/200000/200164.png",
+    "en": "Blue Under-rim Glasses",
+    "ja": "アンダーリムグラス:ブルー"
+  },
+  "165": {
+    "ko": "초록색 역반무테 안경",
+    "iconPath": "/i/200000/200165.png",
+    "en": "Green Under-rim Glasses",
+    "ja": "アンダーリムグラス:グリーン"
+  },
+  "166": {
+    "ko": "구리색 역반무테 안경",
+    "iconPath": "/i/200000/200166.png",
+    "en": "Brass Under-rim Glasses",
+    "ja": "アンダーリムグラス:ブラス"
+  },
+  "167": {
+    "ko": "보라색 역반무테 안경",
+    "iconPath": "/i/200000/200167.png",
+    "en": "Purple Under-rim Glasses",
+    "ja": "アンダーリムグラス:パープル"
+  },
+  "168": {
+    "ko": "갈색 역반무테 안경",
+    "iconPath": "/i/200000/200168.png",
+    "en": "Brown Under-rim Glasses",
+    "ja": "アンダーリムグラス:ブラウン"
+  },
+  "169": {
+    "ko": "타원형 뿔테 안경",
+    "iconPath": "/i/200000/200169.png",
+    "en": "Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス"
+  },
+  "170": {
+    "ko": "은색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200170.png",
+    "en": "Silver Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:シルバー"
+  },
+  "171": {
+    "ko": "금색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200171.png",
+    "en": "Gold Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:ゴールド"
+  },
+  "172": {
+    "ko": "검은색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200172.png",
+    "en": "Black Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:ブラック"
+  },
+  "173": {
+    "ko": "흰색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200173.png",
+    "en": "White Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:ホワイト"
+  },
+  "174": {
+    "ko": "회색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200174.png",
+    "en": "Grey Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:グレー"
+  },
+  "175": {
+    "ko": "빨간색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200175.png",
+    "en": "Red Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:レッド"
+  },
+  "176": {
+    "ko": "파란색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200176.png",
+    "en": "Blue Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:ブルー"
+  },
+  "177": {
+    "ko": "초록색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200177.png",
+    "en": "Green Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:グリーン"
+  },
+  "178": {
+    "ko": "구리색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200178.png",
+    "en": "Brass Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:ブラス"
+  },
+  "179": {
+    "ko": "보라색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200179.png",
+    "en": "Purple Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:パープル"
+  },
+  "180": {
+    "ko": "갈색 타원형 뿔테 안경",
+    "iconPath": "/i/200000/200180.png",
+    "en": "Brown Oval Reading Glasses",
+    "ja": "オーバルリーディンググラス:ブラウン"
+  },
+  "181": {
+    "ko": "고품격 무테 안경",
+    "iconPath": "/i/200000/200181.png",
+    "en": "Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス"
+  },
+  "182": {
+    "ko": "은색 고품격 무테 안경",
+    "iconPath": "/i/200000/200182.png",
+    "en": "Silver Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:シルバー"
+  },
+  "183": {
+    "ko": "금색 고품격 무테 안경",
+    "iconPath": "/i/200000/200183.png",
+    "en": "Gold Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:ゴールド"
+  },
+  "184": {
+    "ko": "검은색 고품격 무테 안경",
+    "iconPath": "/i/200000/200184.png",
+    "en": "Black Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:ブラック"
+  },
+  "185": {
+    "ko": "흰색 고품격 무테 안경",
+    "iconPath": "/i/200000/200185.png",
+    "en": "White Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:ホワイト"
+  },
+  "186": {
+    "ko": "회색 고품격 무테 안경",
+    "iconPath": "/i/200000/200186.png",
+    "en": "Grey Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:グレー"
+  },
+  "187": {
+    "ko": "빨간색 고품격 무테 안경",
+    "iconPath": "/i/200000/200187.png",
+    "en": "Red Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:レッド"
+  },
+  "188": {
+    "ko": "파란색 고품격 무테 안경",
+    "iconPath": "/i/200000/200188.png",
+    "en": "Blue Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:ブルー"
+  },
+  "189": {
+    "ko": "초록색 고품격 무테 안경",
+    "iconPath": "/i/200000/200189.png",
+    "en": "Green Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:グリーン"
+  },
+  "190": {
+    "ko": "구리색 고품격 무테 안경",
+    "iconPath": "/i/200000/200190.png",
+    "en": "Brass Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:ブラス"
+  },
+  "191": {
+    "ko": "보라색 고품격 무테 안경",
+    "iconPath": "/i/200000/200191.png",
+    "en": "Purple Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:パープル"
+  },
+  "192": {
+    "ko": "갈색 고품격 무테 안경",
+    "iconPath": "/i/200000/200192.png",
+    "en": "Brown Elegant Rimless Glasses",
+    "ja": "エレガント・リムレスグラス:ブラウン"
+  },
+  "193": {
+    "ko": "고양이 눈 안경",
+    "iconPath": "/i/200000/200193.png",
+    "en": "Cat Eye Glasses",
+    "ja": "キャットアイグラス"
+  },
+  "194": {
+    "ko": "은색 고양이 눈 안경",
+    "iconPath": "/i/200000/200194.png",
+    "en": "Silver Cat Eye Glasses",
+    "ja": "キャットアイグラス:シルバー"
+  },
+  "195": {
+    "ko": "금색 고양이 눈 안경",
+    "iconPath": "/i/200000/200195.png",
+    "en": "Gold Cat Eye Glasses",
+    "ja": "キャットアイグラス:ゴールド"
+  },
+  "196": {
+    "ko": "검은색 고양이 눈 안경",
+    "iconPath": "/i/200000/200196.png",
+    "en": "Black Cat Eye Glasses",
+    "ja": "キャットアイグラス:ブラック"
+  },
+  "197": {
+    "ko": "흰색 고양이 눈 안경",
+    "iconPath": "/i/200000/200197.png",
+    "en": "White Cat Eye Glasses",
+    "ja": "キャットアイグラス:ホワイト"
+  },
+  "198": {
+    "ko": "회색 고양이 눈 안경",
+    "iconPath": "/i/200000/200198.png",
+    "en": "Grey Cat Eye Glasses",
+    "ja": "キャットアイグラス:グレー"
+  },
+  "199": {
+    "ko": "빨간색 고양이 눈 안경",
+    "iconPath": "/i/200000/200199.png",
+    "en": "Red Cat Eye Glasses",
+    "ja": "キャットアイグラス:レッド"
+  },
+  "200": {
+    "ko": "파란색 고양이 눈 안경",
+    "iconPath": "/i/200000/200200.png",
+    "en": "Blue Cat Eye Glasses",
+    "ja": "キャットアイグラス:ブルー"
+  },
+  "201": {
+    "ko": "초록색 고양이 눈 안경",
+    "iconPath": "/i/200000/200201.png",
+    "en": "Green Cat Eye Glasses",
+    "ja": "キャットアイグラス:グリーン"
+  },
+  "202": {
+    "ko": "구리색 고양이 눈 안경",
+    "iconPath": "/i/200000/200202.png",
+    "en": "Brass Cat Eye Glasses",
+    "ja": "キャットアイグラス:ブラス"
+  },
+  "203": {
+    "ko": "보라색 고양이 눈 안경",
+    "iconPath": "/i/200000/200203.png",
+    "en": "Purple Cat Eye Glasses",
+    "ja": "キャットアイグラス:パープル"
+  },
+  "204": {
+    "ko": "갈색 고양이 눈 안경",
+    "iconPath": "/i/200000/200204.png",
+    "en": "Brown Cat Eye Glasses",
+    "ja": "キャットアイグラス:ブラウン"
+  },
+  "205": {
+    "ko": "얇은테 안경",
+    "iconPath": "/i/200000/200205.png",
+    "en": "Slim Frame Glasses",
+    "ja": "スリムフレームグラス"
+  },
+  "206": {
+    "ko": "은색 얇은테 안경",
+    "iconPath": "/i/200000/200206.png",
+    "en": "Silver Slim Frame Glasses",
+    "ja": "スリムフレームグラス:シルバー"
+  },
+  "207": {
+    "ko": "금색 얇은테 안경",
+    "iconPath": "/i/200000/200207.png",
+    "en": "Gold Slim Frame Glasses",
+    "ja": "スリムフレームグラス:ゴールド"
+  },
+  "208": {
+    "ko": "검은색 얇은테 안경",
+    "iconPath": "/i/200000/200208.png",
+    "en": "Black Slim Frame Glasses",
+    "ja": "スリムフレームグラス:ブラック"
+  },
+  "209": {
+    "ko": "흰색 얇은테 안경",
+    "iconPath": "/i/200000/200209.png",
+    "en": "White Slim Frame Glasses",
+    "ja": "スリムフレームグラス:ホワイト"
+  },
+  "210": {
+    "ko": "회색 얇은테 안경",
+    "iconPath": "/i/200000/200210.png",
+    "en": "Grey Slim Frame Glasses",
+    "ja": "スリムフレームグラス:グレー"
+  },
+  "211": {
+    "ko": "빨간색 얇은테 안경",
+    "iconPath": "/i/200000/200211.png",
+    "en": "Red Slim Frame Glasses",
+    "ja": "スリムフレームグラス:レッド"
+  },
+  "212": {
+    "ko": "파란색 얇은테 안경",
+    "iconPath": "/i/200000/200212.png",
+    "en": "Blue Slim Frame Glasses",
+    "ja": "スリムフレームグラス:ブルー"
+  },
+  "213": {
+    "ko": "초록색 얇은테 안경",
+    "iconPath": "/i/200000/200213.png",
+    "en": "Green Slim Frame Glasses",
+    "ja": "スリムフレームグラス:グリーン"
+  },
+  "214": {
+    "ko": "구리색 얇은테 안경",
+    "iconPath": "/i/200000/200214.png",
+    "en": "Brass Slim Frame Glasses",
+    "ja": "スリムフレームグラス:ブラス"
+  },
+  "215": {
+    "ko": "보라색 얇은테 안경",
+    "iconPath": "/i/200000/200215.png",
+    "en": "Purple Slim Frame Glasses",
+    "ja": "スリムフレームグラス:パープル"
+  },
+  "216": {
+    "ko": "갈색 얇은테 안경",
+    "iconPath": "/i/200000/200216.png",
+    "en": "Brown Slim Frame Glasses",
+    "ja": "スリムフレームグラス:ブラウン"
+  },
+  "217": {
+    "ko": "스모크 고글",
+    "iconPath": "/i/200000/200217.png",
+    "en": "Tinted Goggles",
+    "ja": "スモークゴーグル"
+  },
+  "218": {
+    "ko": "은색 스모크 고글",
+    "iconPath": "/i/200000/200218.png",
+    "en": "Silver Tinted Goggles",
+    "ja": "スモークゴーグル:シルバー"
+  },
+  "219": {
+    "ko": "금색 스모크 고글",
+    "iconPath": "/i/200000/200219.png",
+    "en": "Gold Tinted Goggles",
+    "ja": "スモークゴーグル:ゴールド"
+  },
+  "220": {
+    "ko": "검은색 스모크 고글",
+    "iconPath": "/i/200000/200220.png",
+    "en": "Black Tinted Goggles",
+    "ja": "スモークゴーグル:ブラック"
+  },
+  "221": {
+    "ko": "흰색 스모크 고글",
+    "iconPath": "/i/200000/200221.png",
+    "en": "White Tinted Goggles",
+    "ja": "スモークゴーグル:ホワイト"
+  },
+  "222": {
+    "ko": "회색 스모크 고글",
+    "iconPath": "/i/200000/200222.png",
+    "en": "Grey Tinted Goggles",
+    "ja": "スモークゴーグル:グレー"
+  },
+  "223": {
+    "ko": "빨간색 스모크 고글",
+    "iconPath": "/i/200000/200223.png",
+    "en": "Red Tinted Goggles",
+    "ja": "スモークゴーグル:レッド"
+  },
+  "224": {
+    "ko": "파란색 스모크 고글",
+    "iconPath": "/i/200000/200224.png",
+    "en": "Blue Tinted Goggles",
+    "ja": "スモークゴーグル:ブルー"
+  },
+  "225": {
+    "ko": "초록색 스모크 고글",
+    "iconPath": "/i/200000/200225.png",
+    "en": "Green Tinted Goggles",
+    "ja": "スモークゴーグル:グリーン"
+  },
+  "226": {
+    "ko": "구리색 스모크 고글",
+    "iconPath": "/i/200000/200226.png",
+    "en": "Brass Tinted Goggles",
+    "ja": "スモークゴーグル:ブラス"
+  },
+  "227": {
+    "ko": "보라색 스모크 고글",
+    "iconPath": "/i/200000/200227.png",
+    "en": "Purple Tinted Goggles",
+    "ja": "スモークゴーグル:パープル"
+  },
+  "228": {
+    "ko": "갈색 스모크 고글",
+    "iconPath": "/i/200000/200228.png",
+    "en": "Brown Tinted Goggles",
+    "ja": "スモークゴーグル:ブラウン"
+  },
+  "229": {
+    "ko": "안대(왼쪽)",
+    "iconPath": "/i/200000/200229.png",
+    "en": "Eyepatch (Left)",
+    "ja": "アイパッチ:左"
+  },
+  "230": {
+    "ko": "은색 안대(왼쪽)",
+    "iconPath": "/i/200000/200230.png",
+    "en": "Silver Eyepatch (Left)",
+    "ja": "アイパッチ:左:シルバー"
+  },
+  "231": {
+    "ko": "금색 안대(왼쪽)",
+    "iconPath": "/i/200000/200231.png",
+    "en": "Gold Eyepatch (Left)",
+    "ja": "アイパッチ:左:ゴールド"
+  },
+  "232": {
+    "ko": "검은색 안대(왼쪽)",
+    "iconPath": "/i/200000/200232.png",
+    "en": "Black Eyepatch (Left)",
+    "ja": "アイパッチ:左:ブラック"
+  },
+  "233": {
+    "ko": "흰색 안대(왼쪽)",
+    "iconPath": "/i/200000/200233.png",
+    "en": "White Eyepatch (Left)",
+    "ja": "アイパッチ:左:ホワイト"
+  },
+  "234": {
+    "ko": "회색 안대(왼쪽)",
+    "iconPath": "/i/200000/200234.png",
+    "en": "Grey Eyepatch (Left)",
+    "ja": "アイパッチ:左:グレー"
+  },
+  "235": {
+    "ko": "빨간색 안대(왼쪽)",
+    "iconPath": "/i/200000/200235.png",
+    "en": "Red Eyepatch (Left)",
+    "ja": "アイパッチ:左:レッド"
+  },
+  "236": {
+    "ko": "파란색 안대(왼쪽)",
+    "iconPath": "/i/200000/200236.png",
+    "en": "Blue Eyepatch (Left)",
+    "ja": "アイパッチ:左:ブルー"
+  },
+  "237": {
+    "ko": "초록색 안대(왼쪽)",
+    "iconPath": "/i/200000/200237.png",
+    "en": "Green Eyepatch (Left)",
+    "ja": "アイパッチ:左:グリーン"
+  },
+  "238": {
+    "ko": "구리색 안대(왼쪽)",
+    "iconPath": "/i/200000/200238.png",
+    "en": "Brass Eyepatch (Left)",
+    "ja": "アイパッチ:左:ブラス"
+  },
+  "239": {
+    "ko": "보라색 안대(왼쪽)",
+    "iconPath": "/i/200000/200239.png",
+    "en": "Purple Eyepatch (Left)",
+    "ja": "アイパッチ:左:パープル"
+  },
+  "240": {
+    "ko": "갈색 안대(왼쪽)",
+    "iconPath": "/i/200000/200240.png",
+    "en": "Brown Eyepatch (Left)",
+    "ja": "アイパッチ:左:ブラウン"
+  },
+  "241": {
+    "ko": "안대(오른쪽)",
+    "iconPath": "/i/200000/200241.png",
+    "en": "Eyepatch (Right)",
+    "ja": "アイパッチ:右"
+  },
+  "242": {
+    "ko": "은색 안대(오른쪽)",
+    "iconPath": "/i/200000/200242.png",
+    "en": "Silver Eyepatch (Right)",
+    "ja": "アイパッチ:右:シルバー"
+  },
+  "243": {
+    "ko": "금색 안대(오른쪽)",
+    "iconPath": "/i/200000/200243.png",
+    "en": "Gold Eyepatch (Right)",
+    "ja": "アイパッチ:右:ゴールド"
+  },
+  "244": {
+    "ko": "검은색 안대(오른쪽)",
+    "iconPath": "/i/200000/200244.png",
+    "en": "Black Eyepatch (Right)",
+    "ja": "アイパッチ:右:ブラック"
+  },
+  "245": {
+    "ko": "흰색 안대(오른쪽)",
+    "iconPath": "/i/200000/200245.png",
+    "en": "White Eyepatch (Right)",
+    "ja": "アイパッチ:右:ホワイト"
+  },
+  "246": {
+    "ko": "회색 안대(오른쪽)",
+    "iconPath": "/i/200000/200246.png",
+    "en": "Grey Eyepatch (Right)",
+    "ja": "アイパッチ:右:グレー"
+  },
+  "247": {
+    "ko": "빨간색 안대(오른쪽)",
+    "iconPath": "/i/200000/200247.png",
+    "en": "Red Eyepatch (Right)",
+    "ja": "アイパッチ:右:レッド"
+  },
+  "248": {
+    "ko": "파란색 안대(오른쪽)",
+    "iconPath": "/i/200000/200248.png",
+    "en": "Blue Eyepatch (Right)",
+    "ja": "アイパッチ:右:ブルー"
+  },
+  "249": {
+    "ko": "초록색 안대(오른쪽)",
+    "iconPath": "/i/200000/200249.png",
+    "en": "Green Eyepatch (Right)",
+    "ja": "アイパッチ:右:グリーン"
+  },
+  "250": {
+    "ko": "구리색 안대(오른쪽)",
+    "iconPath": "/i/200000/200250.png",
+    "en": "Brass Eyepatch (Right)",
+    "ja": "アイパッチ:右:ブラス"
+  },
+  "251": {
+    "ko": "보라색 안대(오른쪽)",
+    "iconPath": "/i/200000/200251.png",
+    "en": "Purple Eyepatch (Right)",
+    "ja": "アイパッチ:右:パープル"
+  },
+  "252": {
+    "ko": "갈색 안대(오른쪽)",
+    "iconPath": "/i/200000/200252.png",
+    "en": "Brown Eyepatch (Right)",
+    "ja": "アイパッチ:右:ブラウン"
+  },
+  "253": {
+    "ko": "금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200253.png",
+    "en": "Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左"
+  },
+  "254": {
+    "ko": "은색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200254.png",
+    "en": "Silver Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:シルバー"
+  },
+  "255": {
+    "ko": "금색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200255.png",
+    "en": "Gold Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:ゴールド"
+  },
+  "256": {
+    "ko": "검은색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200256.png",
+    "en": "Black Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:ブラック"
+  },
+  "257": {
+    "ko": "흰색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200257.png",
+    "en": "White Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:ホワイト"
+  },
+  "258": {
+    "ko": "회색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200258.png",
+    "en": "Grey Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:グレー"
+  },
+  "259": {
+    "ko": "빨간색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200259.png",
+    "en": "Red Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:レッド"
+  },
+  "260": {
+    "ko": "파란색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200260.png",
+    "en": "Blue Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:ブルー"
+  },
+  "261": {
+    "ko": "초록색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200261.png",
+    "en": "Green Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:グリーン"
+  },
+  "262": {
+    "ko": "구리색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200262.png",
+    "en": "Brass Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:ブラス"
+  },
+  "263": {
+    "ko": "보라색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200263.png",
+    "en": "Purple Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:パープル"
+  },
+  "264": {
+    "ko": "갈색 금속제 안대(왼쪽)",
+    "iconPath": "/i/200000/200264.png",
+    "en": "Brown Metallic Eyepatch (Left)",
+    "ja": "メタルアイパッチ:左:ブラウン"
+  },
+  "265": {
+    "ko": "금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200265.png",
+    "en": "Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右"
+  },
+  "266": {
+    "ko": "은색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200266.png",
+    "en": "Silver Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:シルバー"
+  },
+  "267": {
+    "ko": "금색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200267.png",
+    "en": "Gold Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:ゴールド"
+  },
+  "268": {
+    "ko": "검은색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200268.png",
+    "en": "Black Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:ブラック"
+  },
+  "269": {
+    "ko": "흰색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200269.png",
+    "en": "White Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:ホワイト"
+  },
+  "270": {
+    "ko": "회색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200270.png",
+    "en": "Grey Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:グレー"
+  },
+  "271": {
+    "ko": "빨간색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200271.png",
+    "en": "Red Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:レッド"
+  },
+  "272": {
+    "ko": "파란색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200272.png",
+    "en": "Blue Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:ブルー"
+  },
+  "273": {
+    "ko": "초록색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200273.png",
+    "en": "Green Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:グリーン"
+  },
+  "274": {
+    "ko": "구리색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200274.png",
+    "en": "Brass Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:ブラス"
+  },
+  "275": {
+    "ko": "보라색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200275.png",
+    "en": "Purple Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:パープル"
+  },
+  "276": {
+    "ko": "갈색 금속제 안대(오른쪽)",
+    "iconPath": "/i/200000/200276.png",
+    "en": "Brown Metallic Eyepatch (Right)",
+    "ja": "メタルアイパッチ:右:ブラウン"
+  },
+  "277": {
+    "ko": "커얼 안경",
+    "iconPath": "/i/200000/200277.png",
+    "en": "Coeurl Eyeglasses",
+    "ja": "クァールアイグラス"
+  },
+  "278": {
+    "ko": "은색 커얼 안경",
+    "iconPath": "/i/200000/200278.png",
+    "en": "Silver Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:シルバー"
+  },
+  "279": {
+    "ko": "금색 커얼 안경",
+    "iconPath": "/i/200000/200279.png",
+    "en": "Gold Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:ゴールド"
+  },
+  "280": {
+    "ko": "검은색 커얼 안경",
+    "iconPath": "/i/200000/200280.png",
+    "en": "Black Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:ブラック"
+  },
+  "281": {
+    "ko": "흰색 커얼 안경",
+    "iconPath": "/i/200000/200281.png",
+    "en": "White Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:ホワイト"
+  },
+  "282": {
+    "ko": "회색 커얼 안경",
+    "iconPath": "/i/200000/200282.png",
+    "en": "Grey Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:グレー"
+  },
+  "283": {
+    "ko": "빨간색 커얼 안경",
+    "iconPath": "/i/200000/200283.png",
+    "en": "Red Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:レッド"
+  },
+  "284": {
+    "ko": "파란색 커얼 안경",
+    "iconPath": "/i/200000/200284.png",
+    "en": "Blue Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:ブルー"
+  },
+  "285": {
+    "ko": "초록색 커얼 안경",
+    "iconPath": "/i/200000/200285.png",
+    "en": "Green Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:グリーン"
+  },
+  "286": {
+    "ko": "구리색 커얼 안경",
+    "iconPath": "/i/200000/200286.png",
+    "en": "Brass Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:ブラス"
+  },
+  "287": {
+    "ko": "보라색 커얼 안경",
+    "iconPath": "/i/200000/200287.png",
+    "en": "Purple Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:パープル"
+  },
+  "288": {
+    "ko": "갈색 커얼 안경",
+    "iconPath": "/i/200000/200288.png",
+    "en": "Brown Coeurl Eyeglasses",
+    "ja": "クァールアイグラス:ブラウン"
+  },
+  "289": {
+    "ko": "독서용 안경",
+    "iconPath": "/i/200000/200289.png",
+    "en": "Reading Glasses",
+    "ja": "リーディンググラス"
+  },
+  "290": {
+    "ko": "은색 독서용 안경",
+    "iconPath": "/i/200000/200290.png",
+    "en": "Silver Reading Glasses",
+    "ja": "リーディンググラス:シルバー"
+  },
+  "291": {
+    "ko": "금색 독서용 안경",
+    "iconPath": "/i/200000/200291.png",
+    "en": "Gold Reading Glasses",
+    "ja": "リーディンググラス:ゴールド"
+  },
+  "292": {
+    "ko": "검은색 독서용 안경",
+    "iconPath": "/i/200000/200292.png",
+    "en": "Black Reading Glasses",
+    "ja": "リーディンググラス:ブラック"
+  },
+  "293": {
+    "ko": "흰색 독서용 안경",
+    "iconPath": "/i/200000/200293.png",
+    "en": "White Reading Glasses",
+    "ja": "リーディンググラス:ホワイト"
+  },
+  "294": {
+    "ko": "회색 독서용 안경",
+    "iconPath": "/i/200000/200294.png",
+    "en": "Grey Reading Glasses",
+    "ja": "リーディンググラス:グレー"
+  },
+  "295": {
+    "ko": "빨간색 독서용 안경",
+    "iconPath": "/i/200000/200295.png",
+    "en": "Red Reading Glasses",
+    "ja": "リーディンググラス:レッド"
+  },
+  "296": {
+    "ko": "파란색 독서용 안경",
+    "iconPath": "/i/200000/200296.png",
+    "en": "Blue Reading Glasses",
+    "ja": "リーディンググラス:ブルー"
+  },
+  "297": {
+    "ko": "초록색 독서용 안경",
+    "iconPath": "/i/200000/200297.png",
+    "en": "Green Reading Glasses",
+    "ja": "リーディンググラス:グリーン"
+  },
+  "298": {
+    "ko": "구리색 독서용 안경",
+    "iconPath": "/i/200000/200298.png",
+    "en": "Brass Reading Glasses",
+    "ja": "リーディンググラス:ブラス"
+  },
+  "299": {
+    "ko": "보라색 독서용 안경",
+    "iconPath": "/i/200000/200299.png",
+    "en": "Purple Reading Glasses",
+    "ja": "リーディンググラス:パープル"
+  },
+  "300": {
+    "ko": "갈색 독서용 안경",
+    "iconPath": "/i/200000/200300.png",
+    "en": "Brown Reading Glasses",
+    "ja": "リーディンググラス:ブラウン"
+  },
+  "301": {
+    "ko": "옅은 색안경",
+    "iconPath": "/i/200000/200301.png",
+    "en": "Tinted Sunglasses",
+    "ja": "ライトカラーグラス"
+  },
+  "302": {
+    "ko": "옅은 은색 색안경",
+    "iconPath": "/i/200000/200302.png",
+    "en": "Silver Tinted Sunglasses",
+    "ja": "ライトカラーグラス:シルバー"
+  },
+  "303": {
+    "ko": "옅은 금색 색안경",
+    "iconPath": "/i/200000/200303.png",
+    "en": "Gold Tinted Sunglasses",
+    "ja": "ライトカラーグラス:ゴールド"
+  },
+  "304": {
+    "ko": "옅은 검은색 색안경",
+    "iconPath": "/i/200000/200304.png",
+    "en": "Black Tinted Sunglasses",
+    "ja": "ライトカラーグラス:ブラック"
+  },
+  "305": {
+    "ko": "옅은 흰색 색안경",
+    "iconPath": "/i/200000/200305.png",
+    "en": "White Tinted Sunglasses",
+    "ja": "ライトカラーグラス:ホワイト"
+  },
+  "306": {
+    "ko": "옅은 회색 색안경",
+    "iconPath": "/i/200000/200306.png",
+    "en": "Grey Tinted Sunglasses",
+    "ja": "ライトカラーグラス:グレー"
+  },
+  "307": {
+    "ko": "옅은 빨간색 색안경",
+    "iconPath": "/i/200000/200307.png",
+    "en": "Red Tinted Sunglasses",
+    "ja": "ライトカラーグラス:レッド"
+  },
+  "308": {
+    "ko": "옅은 파란색 색안경",
+    "iconPath": "/i/200000/200308.png",
+    "en": "Blue Tinted Sunglasses",
+    "ja": "ライトカラーグラス:ブルー"
+  },
+  "309": {
+    "ko": "옅은 초록색 색안경",
+    "iconPath": "/i/200000/200309.png",
+    "en": "Green Tinted Sunglasses",
+    "ja": "ライトカラーグラス:グリーン"
+  },
+  "310": {
+    "ko": "옅은 구리색 색안경",
+    "iconPath": "/i/200000/200310.png",
+    "en": "Brass Tinted Sunglasses",
+    "ja": "ライトカラーグラス:ブラス"
+  },
+  "311": {
+    "ko": "옅은 보라색 색안경",
+    "iconPath": "/i/200000/200311.png",
+    "en": "Purple Tinted Sunglasses",
+    "ja": "ライトカラーグラス:パープル"
+  },
+  "312": {
+    "ko": "옅은 갈색 색안경",
+    "iconPath": "/i/200000/200312.png",
+    "en": "Brown Tinted Sunglasses",
+    "ja": "ライトカラーグラス:ブラウン"
+  },
+  "313": {
+    "ko": "파티광 선글라스",
+    "iconPath": "/i/200000/200313.png",
+    "en": "Groovy Glasses",
+    "ja": "ダンスマングラス"
+  },
+  "314": {
+    "ko": "은색 파티광 선글라스",
+    "iconPath": "/i/200000/200314.png",
+    "en": "Silver Groovy Glasses",
+    "ja": "ダンスマングラス:シルバー"
+  },
+  "315": {
+    "ko": "금색 파티광 선글라스",
+    "iconPath": "/i/200000/200315.png",
+    "en": "Gold Groovy Glasses",
+    "ja": "ダンスマングラス:ゴールド"
+  },
+  "316": {
+    "ko": "검은색 파티광 선글라스",
+    "iconPath": "/i/200000/200316.png",
+    "en": "Black Groovy Glasses",
+    "ja": "ダンスマングラス:ブラック"
+  },
+  "317": {
+    "ko": "흰색 파티광 선글라스",
+    "iconPath": "/i/200000/200317.png",
+    "en": "White Groovy Glasses",
+    "ja": "ダンスマングラス:ホワイト"
+  },
+  "318": {
+    "ko": "회색 파티광 선글라스",
+    "iconPath": "/i/200000/200318.png",
+    "en": "Grey Groovy Glasses",
+    "ja": "ダンスマングラス:グレー"
+  },
+  "319": {
+    "ko": "빨간색 파티광 선글라스",
+    "iconPath": "/i/200000/200319.png",
+    "en": "Red Groovy Glasses",
+    "ja": "ダンスマングラス:レッド"
+  },
+  "320": {
+    "ko": "파란색 파티광 선글라스",
+    "iconPath": "/i/200000/200320.png",
+    "en": "Blue Groovy Glasses",
+    "ja": "ダンスマングラス:ブルー"
+  },
+  "321": {
+    "ko": "초록색 파티광 선글라스",
+    "iconPath": "/i/200000/200321.png",
+    "en": "Green Groovy Glasses",
+    "ja": "ダンスマングラス:グリーン"
+  },
+  "322": {
+    "ko": "구리색 파티광 선글라스",
+    "iconPath": "/i/200000/200322.png",
+    "en": "Brass Groovy Glasses",
+    "ja": "ダンスマングラス:ブラス"
+  },
+  "323": {
+    "ko": "보라색 파티광 선글라스",
+    "iconPath": "/i/200000/200323.png",
+    "en": "Purple Groovy Glasses",
+    "ja": "ダンスマングラス:パープル"
+  },
+  "324": {
+    "ko": "갈색 파티광 선글라스",
+    "iconPath": "/i/200000/200324.png",
+    "en": "Brown Groovy Glasses",
+    "ja": "ダンスマングラス:ブラウン"
+  },
+  "325": {
+    "ko": "그라데이션테 안경",
+    "iconPath": "/i/200000/200325.png",
+    "en": "Rectangular Glasses",
+    "ja": "グラデーションフレームグラス"
+  },
+  "326": {
+    "ko": "은색 그라데이션테 안경",
+    "iconPath": "/i/200000/200326.png",
+    "en": "Silver Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:シルバー"
+  },
+  "327": {
+    "ko": "금색 그라데이션테 안경",
+    "iconPath": "/i/200000/200327.png",
+    "en": "Gold Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:ゴールド"
+  },
+  "328": {
+    "ko": "검은색 그라데이션테 안경",
+    "iconPath": "/i/200000/200328.png",
+    "en": "Black Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:ブラック"
+  },
+  "329": {
+    "ko": "흰색 그라데이션테 안경",
+    "iconPath": "/i/200000/200329.png",
+    "en": "White Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:ホワイト"
+  },
+  "330": {
+    "ko": "회색 그라데이션테 안경",
+    "iconPath": "/i/200000/200330.png",
+    "en": "Grey Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:グレー"
+  },
+  "331": {
+    "ko": "빨간색 그라데이션테 안경",
+    "iconPath": "/i/200000/200331.png",
+    "en": "Red Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:レッド"
+  },
+  "332": {
+    "ko": "파란색 그라데이션테 안경",
+    "iconPath": "/i/200000/200332.png",
+    "en": "Blue Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:ブルー"
+  },
+  "333": {
+    "ko": "초록색 그라데이션테 안경",
+    "iconPath": "/i/200000/200333.png",
+    "en": "Green Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:グリーン"
+  },
+  "334": {
+    "ko": "구리색 그라데이션테 안경",
+    "iconPath": "/i/200000/200334.png",
+    "en": "Brass Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:ブラス"
+  },
+  "335": {
+    "ko": "보라색 그라데이션테 안경",
+    "iconPath": "/i/200000/200335.png",
+    "en": "Purple Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:パープル"
+  },
+  "336": {
+    "ko": "갈색 그라데이션테 안경",
+    "iconPath": "/i/200000/200336.png",
+    "en": "Brown Rectangular Glasses",
+    "ja": "グラデーションフレームグラス:ブラウン"
+  },
+  "337": {
+    "ko": "큰테 안경",
+    "iconPath": "/i/200000/200337.png",
+    "en": "Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス"
+  },
+  "338": {
+    "ko": "은색 큰테 안경",
+    "iconPath": "/i/200000/200338.png",
+    "en": "Silver Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:シルバー"
+  },
+  "339": {
+    "ko": "금색 큰테 안경",
+    "iconPath": "/i/200000/200339.png",
+    "en": "Gold Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:ゴールド"
+  },
+  "340": {
+    "ko": "검은색 큰테 안경",
+    "iconPath": "/i/200000/200340.png",
+    "en": "Black Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:ブラック"
+  },
+  "341": {
+    "ko": "흰색 큰테 안경",
+    "iconPath": "/i/200000/200341.png",
+    "en": "White Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:ホワイト"
+  },
+  "342": {
+    "ko": "회색 큰테 안경",
+    "iconPath": "/i/200000/200342.png",
+    "en": "Grey Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:グレー"
+  },
+  "343": {
+    "ko": "빨간색 큰테 안경",
+    "iconPath": "/i/200000/200343.png",
+    "en": "Red Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:レッド"
+  },
+  "344": {
+    "ko": "파란색 큰테 안경",
+    "iconPath": "/i/200000/200344.png",
+    "en": "Blue Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:ブルー"
+  },
+  "345": {
+    "ko": "초록색 큰테 안경",
+    "iconPath": "/i/200000/200345.png",
+    "en": "Green Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:グリーン"
+  },
+  "346": {
+    "ko": "구리색 큰테 안경",
+    "iconPath": "/i/200000/200346.png",
+    "en": "Brass Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:ブラス"
+  },
+  "347": {
+    "ko": "보라색 큰테 안경",
+    "iconPath": "/i/200000/200347.png",
+    "en": "Purple Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:パープル"
+  },
+  "348": {
+    "ko": "갈색 큰테 안경",
+    "iconPath": "/i/200000/200348.png",
+    "en": "Brown Bold-rimmed Glasses",
+    "ja": "ビッグリムグラス:ブラウン"
+  },
+  "349": {
+    "ko": "미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200349.png",
+    "en": "Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左"
+  },
+  "350": {
+    "ko": "은색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200350.png",
+    "en": "Silver Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:シルバー"
+  },
+  "351": {
+    "ko": "금색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200351.png",
+    "en": "Gold Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:ゴールド"
+  },
+  "352": {
+    "ko": "검은색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200352.png",
+    "en": "Black Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:ブラック"
+  },
+  "353": {
+    "ko": "흰색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200353.png",
+    "en": "White Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:ホワイト"
+  },
+  "354": {
+    "ko": "회색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200354.png",
+    "en": "Grey Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:グレー"
+  },
+  "355": {
+    "ko": "빨간색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200355.png",
+    "en": "Red Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:レッド"
+  },
+  "356": {
+    "ko": "파란색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200356.png",
+    "en": "Blue Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:ブルー"
+  },
+  "357": {
+    "ko": "초록색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200357.png",
+    "en": "Green Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:グリーン"
+  },
+  "358": {
+    "ko": "구리색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200358.png",
+    "en": "Brass Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:ブラス"
+  },
+  "359": {
+    "ko": "보라색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200359.png",
+    "en": "Purple Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:パープル"
+  },
+  "360": {
+    "ko": "갈색 미스릴 테두리 안대(왼쪽)",
+    "iconPath": "/i/200000/200360.png",
+    "en": "Brown Mythril-edged Eyepatch (Left)",
+    "ja": "ミスリルエッジアイパッチ:左:ブラウン"
+  },
+  "361": {
+    "ko": "미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200361.png",
+    "en": "Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右"
+  },
+  "362": {
+    "ko": "은색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200362.png",
+    "en": "Silver Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:シルバー"
+  },
+  "363": {
+    "ko": "금색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200363.png",
+    "en": "Gold Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:ゴールド"
+  },
+  "364": {
+    "ko": "검은색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200364.png",
+    "en": "Black Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:ブラック"
+  },
+  "365": {
+    "ko": "흰색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200365.png",
+    "en": "White Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:ホワイト"
+  },
+  "366": {
+    "ko": "회색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200366.png",
+    "en": "Grey Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:グレー"
+  },
+  "367": {
+    "ko": "빨간색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200367.png",
+    "en": "Red Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:レッド"
+  },
+  "368": {
+    "ko": "파란색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200368.png",
+    "en": "Blue Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:ブルー"
+  },
+  "369": {
+    "ko": "초록색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200369.png",
+    "en": "Green Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:グリーン"
+  },
+  "370": {
+    "ko": "구리색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200370.png",
+    "en": "Brass Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:ブラス"
+  },
+  "371": {
+    "ko": "보라색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200371.png",
+    "en": "Purple Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:パープル"
+  },
+  "372": {
+    "ko": "갈색 미스릴 테두리 안대(오른쪽)",
+    "iconPath": "/i/200000/200372.png",
+    "en": "Brown Mythril-edged Eyepatch (Right)",
+    "ja": "ミスリルエッジアイパッチ:右:ブラウン"
+  },
+  "373": {
+    "ko": "화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200373.png",
+    "en": "Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左"
+  },
+  "374": {
+    "ko": "은색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200374.png",
+    "en": "Silver Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:シルバー"
+  },
+  "375": {
+    "ko": "금색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200375.png",
+    "en": "Gold Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:ゴールド"
+  },
+  "376": {
+    "ko": "검은색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200376.png",
+    "en": "Black Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:ブラック"
+  },
+  "377": {
+    "ko": "흰색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200377.png",
+    "en": "White Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:ホワイト"
+  },
+  "378": {
+    "ko": "회색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200378.png",
+    "en": "Grey Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:グレー"
+  },
+  "379": {
+    "ko": "빨간색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200379.png",
+    "en": "Red Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:レッド"
+  },
+  "380": {
+    "ko": "파란색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200380.png",
+    "en": "Blue Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:ブルー"
+  },
+  "381": {
+    "ko": "초록색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200381.png",
+    "en": "Green Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:グリーン"
+  },
+  "382": {
+    "ko": "구리색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200382.png",
+    "en": "Brass Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:ブラス"
+  },
+  "383": {
+    "ko": "보라색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200383.png",
+    "en": "Purple Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:パープル"
+  },
+  "384": {
+    "ko": "갈색 화려한 가죽 안대(왼쪽)",
+    "iconPath": "/i/200000/200384.png",
+    "en": "Brown Ornamented Leather Eyepatch (Left)",
+    "ja": "レザードレスアイパッチ:左:ブラウン"
+  },
+  "385": {
+    "ko": "화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200385.png",
+    "en": "Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右"
+  },
+  "386": {
+    "ko": "은색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200386.png",
+    "en": "Silver Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:シルバー"
+  },
+  "387": {
+    "ko": "금색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200387.png",
+    "en": "Gold Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:ゴールド"
+  },
+  "388": {
+    "ko": "검은색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200388.png",
+    "en": "Black Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:ブラック"
+  },
+  "389": {
+    "ko": "흰색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200389.png",
+    "en": "White Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:ホワイト"
+  },
+  "390": {
+    "ko": "회색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200390.png",
+    "en": "Grey Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:グレー"
+  },
+  "391": {
+    "ko": "빨간색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200391.png",
+    "en": "Red Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:レッド"
+  },
+  "392": {
+    "ko": "파란색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200392.png",
+    "en": "Blue Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:ブルー"
+  },
+  "393": {
+    "ko": "초록색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200393.png",
+    "en": "Green Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:グリーン"
+  },
+  "394": {
+    "ko": "구리색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200394.png",
+    "en": "Brass Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:ブラス"
+  },
+  "395": {
+    "ko": "보라색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200395.png",
+    "en": "Purple Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:パープル"
+  },
+  "396": {
+    "ko": "갈색 화려한 가죽 안대(오른쪽)",
+    "iconPath": "/i/200000/200396.png",
+    "en": "Brown Ornamented Leather Eyepatch (Right)",
+    "ja": "レザードレスアイパッチ:右:ブラウン"
+  },
+  "397": {
+    "ko": "스카이와 머리장비",
+    "iconPath": "/i/200000/200397.png",
+    "en": "Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア"
+  },
+  "398": {
+    "ko": "은색 스카이와 머리장비",
+    "iconPath": "/i/200000/200398.png",
+    "en": "Silver Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:シルバー"
+  },
+  "399": {
+    "ko": "금색 스카이와 머리장비",
+    "iconPath": "/i/200000/200399.png",
+    "en": "Gold Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:ゴールド"
+  },
+  "400": {
+    "ko": "검은색 스카이와 머리장비",
+    "iconPath": "/i/200000/200400.png",
+    "en": "Black Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:ブラック"
+  },
+  "401": {
+    "ko": "흰색 스카이와 머리장비",
+    "iconPath": "/i/200000/200401.png",
+    "en": "White Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:ホワイト"
+  },
+  "402": {
+    "ko": "회색 스카이와 머리장비",
+    "iconPath": "/i/200000/200402.png",
+    "en": "Grey Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:グレー"
+  },
+  "403": {
+    "ko": "빨간색 스카이와 머리장비",
+    "iconPath": "/i/200000/200403.png",
+    "en": "Red Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:レッド"
+  },
+  "404": {
+    "ko": "파란색 스카이와 머리장비",
+    "iconPath": "/i/200000/200404.png",
+    "en": "Blue Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:ブルー"
+  },
+  "405": {
+    "ko": "초록색 스카이와 머리장비",
+    "iconPath": "/i/200000/200405.png",
+    "en": "Green Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:グリーン"
+  },
+  "406": {
+    "ko": "구리색 스카이와 머리장비",
+    "iconPath": "/i/200000/200406.png",
+    "en": "Brass Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:ブラス"
+  },
+  "407": {
+    "ko": "보라색 스카이와 머리장비",
+    "iconPath": "/i/200000/200407.png",
+    "en": "Purple Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:パープル"
+  },
+  "408": {
+    "ko": "갈색 스카이와 머리장비",
+    "iconPath": "/i/200000/200408.png",
+    "en": "Brown Scaevan Headgear",
+    "ja": "スカエウァ・ヘッドギア:ブラウン"
+  },
+  "421": {
+    "ko": "전술 고글",
+    "iconPath": "/i/200000/200421.png",
+    "en": "Tactical Goggles",
+    "ja": "タクティカル・ゴーグル"
+  },
+  "422": {
+    "ko": "은색 전술 고글",
+    "iconPath": "/i/200000/200422.png",
+    "en": "Silver Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:シルバー"
+  },
+  "423": {
+    "ko": "금색 전술 고글",
+    "iconPath": "/i/200000/200423.png",
+    "en": "Gold Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:ゴールド"
+  },
+  "424": {
+    "ko": "검은색 전술 고글",
+    "iconPath": "/i/200000/200424.png",
+    "en": "Black Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:ブラック"
+  },
+  "425": {
+    "ko": "흰색 전술 고글",
+    "iconPath": "/i/200000/200425.png",
+    "en": "White Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:ホワイト"
+  },
+  "426": {
+    "ko": "회색 전술 고글",
+    "iconPath": "/i/200000/200426.png",
+    "en": "Grey Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:グレー"
+  },
+  "427": {
+    "ko": "빨간색 전술 고글",
+    "iconPath": "/i/200000/200427.png",
+    "en": "Red Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:レッド"
+  },
+  "428": {
+    "ko": "파란색 전술 고글",
+    "iconPath": "/i/200000/200428.png",
+    "en": "Blue Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:ブルー"
+  },
+  "429": {
+    "ko": "초록색 전술 고글",
+    "iconPath": "/i/200000/200429.png",
+    "en": "Green Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:グリーン"
+  },
+  "430": {
+    "ko": "구리색 전술 고글",
+    "iconPath": "/i/200000/200430.png",
+    "en": "Brass Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:ブラス"
+  },
+  "431": {
+    "ko": "보라색 전술 고글",
+    "iconPath": "/i/200000/200431.png",
+    "en": "Purple Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:パープル"
+  },
+  "432": {
+    "ko": "갈색 전술 고글",
+    "iconPath": "/i/200000/200432.png",
+    "en": "Brown Tactical Goggles",
+    "ja": "タクティカル・ゴーグル:ブラウン"
+  },
+  "433": {
+    "ko": "차광 눈가리개",
+    "iconPath": "/i/200000/200433.png",
+    "en": "Shaded Visor",
+    "ja": "シェイドバイザー"
+  },
+  "434": {
+    "ko": "은색 차광 눈가리개",
+    "iconPath": "/i/200000/200434.png",
+    "en": "Silver Shaded Visor",
+    "ja": "シェイドバイザー:シルバー"
+  },
+  "435": {
+    "ko": "금색 차광 눈가리개",
+    "iconPath": "/i/200000/200435.png",
+    "en": "Gold Shaded Visor",
+    "ja": "シェイドバイザー:ゴールド"
+  },
+  "436": {
+    "ko": "검은색 차광 눈가리개",
+    "iconPath": "/i/200000/200436.png",
+    "en": "Black Shaded Visor",
+    "ja": "シェイドバイザー:ブラック"
+  },
+  "437": {
+    "ko": "흰색 차광 눈가리개",
+    "iconPath": "/i/200000/200437.png",
+    "en": "White Shaded Visor",
+    "ja": "シェイドバイザー:ホワイト"
+  },
+  "438": {
+    "ko": "회색 차광 눈가리개",
+    "iconPath": "/i/200000/200438.png",
+    "en": "Grey Shaded Visor",
+    "ja": "シェイドバイザー:グレー"
+  },
+  "439": {
+    "ko": "빨간색 차광 눈가리개",
+    "iconPath": "/i/200000/200439.png",
+    "en": "Red Shaded Visor",
+    "ja": "シェイドバイザー:レッド"
+  },
+  "440": {
+    "ko": "파란색 차광 눈가리개",
+    "iconPath": "/i/200000/200440.png",
+    "en": "Blue Shaded Visor",
+    "ja": "シェイドバイザー:ブルー"
+  },
+  "441": {
+    "ko": "초록색 차광 눈가리개",
+    "iconPath": "/i/200000/200441.png",
+    "en": "Green Shaded Visor",
+    "ja": "シェイドバイザー:グリーン"
+  },
+  "442": {
+    "ko": "구리색 차광 눈가리개",
+    "iconPath": "/i/200000/200442.png",
+    "en": "Brass Shaded Visor",
+    "ja": "シェイドバイザー:ブラス"
+  },
+  "443": {
+    "ko": "보라색 차광 눈가리개",
+    "iconPath": "/i/200000/200443.png",
+    "en": "Purple Shaded Visor",
+    "ja": "シェイドバイザー:パープル"
+  },
+  "444": {
+    "ko": "갈색 차광 눈가리개",
+    "iconPath": "/i/200000/200444.png",
+    "en": "Brown Shaded Visor",
+    "ja": "シェイドバイザー:ブラウン"
+  },
+  "445": {
+    "ko": "독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200445.png",
+    "en": "Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス"
+  },
+  "446": {
+    "ko": "은색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200446.png",
+    "en": "Silver Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:シルバー"
+  },
+  "447": {
+    "ko": "금색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200447.png",
+    "en": "Gold Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:ゴールド"
+  },
+  "448": {
+    "ko": "검은색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200448.png",
+    "en": "Black Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:ブラック"
+  },
+  "449": {
+    "ko": "흰색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200449.png",
+    "en": "White Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:ホワイト"
+  },
+  "450": {
+    "ko": "회색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200450.png",
+    "en": "Grey Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:グレー"
+  },
+  "451": {
+    "ko": "빨간색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200451.png",
+    "en": "Red Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:レッド"
+  },
+  "452": {
+    "ko": "파란색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200452.png",
+    "en": "Blue Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:ブルー"
+  },
+  "453": {
+    "ko": "초록색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200453.png",
+    "en": "Green Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:グリーン"
+  },
+  "454": {
+    "ko": "구리색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200454.png",
+    "en": "Brass Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:ブラス"
+  },
+  "455": {
+    "ko": "보라색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200455.png",
+    "en": "Purple Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:パープル"
+  },
+  "456": {
+    "ko": "갈색 독서용 고양이 눈 안경",
+    "iconPath": "/i/200000/200456.png",
+    "en": "Brown Cat Eye Reading Glasses",
+    "ja": "キャットアイ・リーディンググラス:ブラウン"
+  },
+  "457": {
+    "ko": "교수 안경",
+    "iconPath": "/i/200000/200457.png",
+    "en": "Professorial Glasses",
+    "ja": "プロフェッサーズグラス"
+  },
+  "458": {
+    "ko": "은색 교수 안경",
+    "iconPath": "/i/200000/200458.png",
+    "en": "Silver Professorial Glasses",
+    "ja": "プロフェッサーズグラス:シルバー"
+  },
+  "459": {
+    "ko": "금색 교수 안경",
+    "iconPath": "/i/200000/200459.png",
+    "en": "Gold Professorial Glasses",
+    "ja": "プロフェッサーズグラス:ゴールド"
+  },
+  "460": {
+    "ko": "검은색 교수 안경",
+    "iconPath": "/i/200000/200460.png",
+    "en": "Black Professorial Glasses",
+    "ja": "プロフェッサーズグラス:ブラック"
+  },
+  "461": {
+    "ko": "흰색 교수 안경",
+    "iconPath": "/i/200000/200461.png",
+    "en": "White Professorial Glasses",
+    "ja": "プロフェッサーズグラス:ホワイト"
+  },
+  "462": {
+    "ko": "회색 교수 안경",
+    "iconPath": "/i/200000/200462.png",
+    "en": "Grey Professorial Glasses",
+    "ja": "プロフェッサーズグラス:グレー"
+  },
+  "463": {
+    "ko": "빨간색 교수 안경",
+    "iconPath": "/i/200000/200463.png",
+    "en": "Red Professorial Glasses",
+    "ja": "プロフェッサーズグラス:レッド"
+  },
+  "464": {
+    "ko": "파란색 교수 안경",
+    "iconPath": "/i/200000/200464.png",
+    "en": "Blue Professorial Glasses",
+    "ja": "プロフェッサーズグラス:ブルー"
+  },
+  "465": {
+    "ko": "초록색 교수 안경",
+    "iconPath": "/i/200000/200465.png",
+    "en": "Green Professorial Glasses",
+    "ja": "プロフェッサーズグラス:グリーン"
+  },
+  "466": {
+    "ko": "구리색 교수 안경",
+    "iconPath": "/i/200000/200466.png",
+    "en": "Brass Professorial Glasses",
+    "ja": "プロフェッサーズグラス:ブラス"
+  },
+  "467": {
+    "ko": "보라색 교수 안경",
+    "iconPath": "/i/200000/200467.png",
+    "en": "Purple Professorial Glasses",
+    "ja": "プロフェッサーズグラス:パープル"
+  },
+  "468": {
+    "ko": "갈색 교수 안경",
+    "iconPath": "/i/200000/200468.png",
+    "en": "Brown Professorial Glasses",
+    "ja": "プロフェッサーズグラス:ブラウン"
+  },
+  "469": {
+    "ko": "작은 코안경",
+    "iconPath": "/i/200000/200469.png",
+    "en": "Petite Pince-nez",
+    "ja": "プチパンスネ"
+  },
+  "470": {
+    "ko": "은색 작은 코안경",
+    "iconPath": "/i/200000/200470.png",
+    "en": "Silver Petite Pince-nez",
+    "ja": "プチパンスネ:シルバー"
+  },
+  "471": {
+    "ko": "금색 작은 코안경",
+    "iconPath": "/i/200000/200471.png",
+    "en": "Gold Petite Pince-nez",
+    "ja": "プチパンスネ:ゴールド"
+  },
+  "472": {
+    "ko": "검은색 작은 코안경",
+    "iconPath": "/i/200000/200472.png",
+    "en": "Black Petite Pince-nez",
+    "ja": "プチパンスネ:ブラック"
+  },
+  "473": {
+    "ko": "흰색 작은 코안경",
+    "iconPath": "/i/200000/200473.png",
+    "en": "White Petite Pince-nez",
+    "ja": "プチパンスネ:ホワイト"
+  },
+  "474": {
+    "ko": "회색 작은 코안경",
+    "iconPath": "/i/200000/200474.png",
+    "en": "Grey Petite Pince-nez",
+    "ja": "プチパンスネ:グレー"
+  },
+  "475": {
+    "ko": "빨간색 작은 코안경",
+    "iconPath": "/i/200000/200475.png",
+    "en": "Red Petite Pince-nez",
+    "ja": "プチパンスネ:レッド"
+  },
+  "476": {
+    "ko": "파란색 작은 코안경",
+    "iconPath": "/i/200000/200476.png",
+    "en": "Blue Petite Pince-nez",
+    "ja": "プチパンスネ:ブルー"
+  },
+  "477": {
+    "ko": "초록색 작은 코안경",
+    "iconPath": "/i/200000/200477.png",
+    "en": "Green Petite Pince-nez",
+    "ja": "プチパンスネ:グリーン"
+  },
+  "478": {
+    "ko": "구리색 작은 코안경",
+    "iconPath": "/i/200000/200478.png",
+    "en": "Brass Petite Pince-nez",
+    "ja": "プチパンスネ:ブラス"
+  },
+  "479": {
+    "ko": "보라색 작은 코안경",
+    "iconPath": "/i/200000/200479.png",
+    "en": "Purple Petite Pince-nez",
+    "ja": "プチパンスネ:パープル"
+  },
+  "480": {
+    "ko": "갈색 작은 코안경",
+    "iconPath": "/i/200000/200480.png",
+    "en": "Brown Petite Pince-nez",
+    "ja": "プチパンスネ:ブラウン"
+  },
+  "481": {
+    "ko": "알랄라 안경",
+    "iconPath": "/i/200000/200481.png",
+    "en": "Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス"
+  },
+  "482": {
+    "ko": "은색 알랄라 안경",
+    "iconPath": "/i/200000/200482.png",
+    "en": "Silver Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:シルバー"
+  },
+  "483": {
+    "ko": "금색 알랄라 안경",
+    "iconPath": "/i/200000/200483.png",
+    "en": "Gold Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:ゴールド"
+  },
+  "484": {
+    "ko": "검은색 알랄라 안경",
+    "iconPath": "/i/200000/200484.png",
+    "en": "Black Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:ブラック"
+  },
+  "485": {
+    "ko": "흰색 알랄라 안경",
+    "iconPath": "/i/200000/200485.png",
+    "en": "White Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:ホワイト"
+  },
+  "486": {
+    "ko": "회색 알랄라 안경",
+    "iconPath": "/i/200000/200486.png",
+    "en": "Grey Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:グレー"
+  },
+  "487": {
+    "ko": "빨간색 알랄라 안경",
+    "iconPath": "/i/200000/200487.png",
+    "en": "Red Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:レッド"
+  },
+  "488": {
+    "ko": "파란색 알랄라 안경",
+    "iconPath": "/i/200000/200488.png",
+    "en": "Blue Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:ブルー"
+  },
+  "489": {
+    "ko": "초록색 알랄라 안경",
+    "iconPath": "/i/200000/200489.png",
+    "en": "Green Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:グリーン"
+  },
+  "490": {
+    "ko": "구리색 알랄라 안경",
+    "iconPath": "/i/200000/200490.png",
+    "en": "Brass Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:ブラス"
+  },
+  "491": {
+    "ko": "보라색 알랄라 안경",
+    "iconPath": "/i/200000/200491.png",
+    "en": "Purple Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:パープル"
+  },
+  "492": {
+    "ko": "갈색 알랄라 안경",
+    "iconPath": "/i/200000/200492.png",
+    "en": "Brown Painted Eggy Eyeglasses",
+    "ja": "デコレート・エッググラス:ブラウン"
+  },
+  "493": {
+    "ko": "알 파티 안경",
+    "iconPath": "/i/200000/200493.png",
+    "en": "Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス"
+  },
+  "494": {
+    "ko": "은색 알 파티 안경",
+    "iconPath": "/i/200000/200494.png",
+    "en": "Silver Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:シルバー"
+  },
+  "495": {
+    "ko": "금색 알 파티 안경",
+    "iconPath": "/i/200000/200495.png",
+    "en": "Gold Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:ゴールド"
+  },
+  "496": {
+    "ko": "검은색 알 파티 안경",
+    "iconPath": "/i/200000/200496.png",
+    "en": "Black Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:ブラック"
+  },
+  "497": {
+    "ko": "흰색 알 파티 안경",
+    "iconPath": "/i/200000/200497.png",
+    "en": "White Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:ホワイト"
+  },
+  "498": {
+    "ko": "회색 알 파티 안경",
+    "iconPath": "/i/200000/200498.png",
+    "en": "Grey Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:グレー"
+  },
+  "499": {
+    "ko": "빨간색 알 파티 안경",
+    "iconPath": "/i/200000/200499.png",
+    "en": "Red Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:レッド"
+  },
+  "500": {
+    "ko": "파란색 알 파티 안경",
+    "iconPath": "/i/200000/200500.png",
+    "en": "Blue Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:ブルー"
+  },
+  "501": {
+    "ko": "초록색 알 파티 안경",
+    "iconPath": "/i/200000/200501.png",
+    "en": "Green Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:グリーン"
+  },
+  "502": {
+    "ko": "구리색 알 파티 안경",
+    "iconPath": "/i/200000/200502.png",
+    "en": "Brass Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:ブラス"
+  },
+  "503": {
+    "ko": "보라색 알 파티 안경",
+    "iconPath": "/i/200000/200503.png",
+    "en": "Purple Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:パープル"
+  },
+  "504": {
+    "ko": "갈색 알 파티 안경",
+    "iconPath": "/i/200000/200504.png",
+    "en": "Brown Party Eggy Eyeglasses",
+    "ja": "クワトロ・エッググラス:ブラウン"
+  },
+  "505": {
+    "ko": "얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200505.png",
+    "en": "Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス"
+  },
+  "506": {
+    "ko": "은색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200506.png",
+    "en": "Silver Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:シルバー"
+  },
+  "507": {
+    "ko": "금색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200507.png",
+    "en": "Gold Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:ゴールド"
+  },
+  "508": {
+    "ko": "검은색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200508.png",
+    "en": "Black Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:ブラック"
+  },
+  "509": {
+    "ko": "흰색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200509.png",
+    "en": "White Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:ホワイト"
+  },
+  "510": {
+    "ko": "회색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200510.png",
+    "en": "Grey Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:グレー"
+  },
+  "511": {
+    "ko": "빨간색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200511.png",
+    "en": "Red Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:レッド"
+  },
+  "512": {
+    "ko": "파란색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200512.png",
+    "en": "Blue Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:ブルー"
+  },
+  "513": {
+    "ko": "초록색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200513.png",
+    "en": "Green Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:グリーン"
+  },
+  "514": {
+    "ko": "구리색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200514.png",
+    "en": "Brass Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:ブラス"
+  },
+  "515": {
+    "ko": "보라색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200515.png",
+    "en": "Purple Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:パープル"
+  },
+  "516": {
+    "ko": "갈색 얇은테 알랄라 안경",
+    "iconPath": "/i/200000/200516.png",
+    "en": "Brown Slim Frame Eggy Eyeglasses",
+    "ja": "スリムフレーム・エッググラス:ブラウン"
+  },
+  "517": {
+    "ko": "스프리건 안경",
+    "iconPath": "/i/200000/200517.png",
+    "en": "Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス"
+  },
+  "518": {
+    "ko": "은색 스프리건 안경",
+    "iconPath": "/i/200000/200518.png",
+    "en": "Silver Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:シルバー"
+  },
+  "519": {
+    "ko": "금색 스프리건 안경",
+    "iconPath": "/i/200000/200519.png",
+    "en": "Gold Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:ゴールド"
+  },
+  "520": {
+    "ko": "검은색 스프리건 안경",
+    "iconPath": "/i/200000/200520.png",
+    "en": "Black Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:ブラック"
+  },
+  "521": {
+    "ko": "흰색 스프리건 안경",
+    "iconPath": "/i/200000/200521.png",
+    "en": "White Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:ホワイト"
+  },
+  "522": {
+    "ko": "회색 스프리건 안경",
+    "iconPath": "/i/200000/200522.png",
+    "en": "Grey Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:グレー"
+  },
+  "523": {
+    "ko": "빨간색 스프리건 안경",
+    "iconPath": "/i/200000/200523.png",
+    "en": "Red Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:レッド"
+  },
+  "524": {
+    "ko": "파란색 스프리건 안경",
+    "iconPath": "/i/200000/200524.png",
+    "en": "Blue Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:ブルー"
+  },
+  "525": {
+    "ko": "초록색 스프리건 안경",
+    "iconPath": "/i/200000/200525.png",
+    "en": "Green Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:グリーン"
+  },
+  "526": {
+    "ko": "구리색 스프리건 안경",
+    "iconPath": "/i/200000/200526.png",
+    "en": "Brass Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:ブラス"
+  },
+  "527": {
+    "ko": "보라색 스프리건 안경",
+    "iconPath": "/i/200000/200527.png",
+    "en": "Purple Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:パープル"
+  },
+  "528": {
+    "ko": "갈색 스프리건 안경",
+    "iconPath": "/i/200000/200528.png",
+    "en": "Brown Spriggan Eyeglasses",
+    "ja": "スプリガン・グラス:ブラウン"
+  },
+  "529": {
+    "ko": "알 사냥 닭 안경",
+    "iconPath": "/i/200000/200529.png",
+    "en": "Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス"
+  },
+  "530": {
+    "ko": "은색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200530.png",
+    "en": "Silver Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:シルバー"
+  },
+  "531": {
+    "ko": "금색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200531.png",
+    "en": "Gold Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:ゴールド"
+  },
+  "532": {
+    "ko": "검은색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200532.png",
+    "en": "Black Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:ブラック"
+  },
+  "533": {
+    "ko": "흰색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200533.png",
+    "en": "White Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:ホワイト"
+  },
+  "534": {
+    "ko": "회색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200534.png",
+    "en": "Grey Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:グレー"
+  },
+  "535": {
+    "ko": "빨간색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200535.png",
+    "en": "Red Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:レッド"
+  },
+  "536": {
+    "ko": "파란색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200536.png",
+    "en": "Blue Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:ブルー"
+  },
+  "537": {
+    "ko": "초록색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200537.png",
+    "en": "Green Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:グリーン"
+  },
+  "538": {
+    "ko": "구리색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200538.png",
+    "en": "Brass Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:ブラス"
+  },
+  "539": {
+    "ko": "보라색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200539.png",
+    "en": "Purple Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:パープル"
+  },
+  "540": {
+    "ko": "갈색 알 사냥 닭 안경",
+    "iconPath": "/i/200000/200540.png",
+    "en": "Brown Chicken Eyeglasses",
+    "ja": "エッグハント・チキングラス:ブラウン"
+  },
+  "541": {
+    "ko": "꽃장식 안경",
+    "iconPath": "/i/200000/200541.png",
+    "en": "Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス"
+  },
+  "542": {
+    "ko": "은색 꽃장식 안경",
+    "iconPath": "/i/200000/200542.png",
+    "en": "Silver Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:シルバー"
+  },
+  "543": {
+    "ko": "금색 꽃장식 안경",
+    "iconPath": "/i/200000/200543.png",
+    "en": "Gold Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:ゴールド"
+  },
+  "544": {
+    "ko": "검은색 꽃장식 안경",
+    "iconPath": "/i/200000/200544.png",
+    "en": "Black Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:ブラック"
+  },
+  "545": {
+    "ko": "흰색 꽃장식 안경",
+    "iconPath": "/i/200000/200545.png",
+    "en": "White Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:ホワイト"
+  },
+  "546": {
+    "ko": "회색 꽃장식 안경",
+    "iconPath": "/i/200000/200546.png",
+    "en": "Grey Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:グレー"
+  },
+  "547": {
+    "ko": "빨간색 꽃장식 안경",
+    "iconPath": "/i/200000/200547.png",
+    "en": "Red Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:レッド"
+  },
+  "548": {
+    "ko": "파란색 꽃장식 안경",
+    "iconPath": "/i/200000/200548.png",
+    "en": "Blue Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:ブルー"
+  },
+  "549": {
+    "ko": "초록색 꽃장식 안경",
+    "iconPath": "/i/200000/200549.png",
+    "en": "Green Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:グリーン"
+  },
+  "550": {
+    "ko": "구리색 꽃장식 안경",
+    "iconPath": "/i/200000/200550.png",
+    "en": "Brass Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:ブラス"
+  },
+  "551": {
+    "ko": "보라색 꽃장식 안경",
+    "iconPath": "/i/200000/200551.png",
+    "en": "Purple Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:パープル"
+  },
+  "552": {
+    "ko": "갈색 꽃장식 안경",
+    "iconPath": "/i/200000/200552.png",
+    "en": "Brown Blooming Eyeglasses",
+    "ja": "デコレート・フラワーグラス:ブラウン"
+  },
+  "553": {
+    "ko": "수면안대",
+    "iconPath": "/i/200000/200553.png",
+    "en": "Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク"
+  },
+  "554": {
+    "ko": "은색 수면안대",
+    "iconPath": "/i/200000/200554.png",
+    "en": "Silver Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:シルバー"
+  },
+  "555": {
+    "ko": "금색 수면안대",
+    "iconPath": "/i/200000/200555.png",
+    "en": "Gold Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:ゴールド"
+  },
+  "556": {
+    "ko": "검은색 수면안대",
+    "iconPath": "/i/200000/200556.png",
+    "en": "Black Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:ブラック"
+  },
+  "557": {
+    "ko": "흰색 수면안대",
+    "iconPath": "/i/200000/200557.png",
+    "en": "White Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:ホワイト"
+  },
+  "558": {
+    "ko": "회색 수면안대",
+    "iconPath": "/i/200000/200558.png",
+    "en": "Grey Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:グレー"
+  },
+  "559": {
+    "ko": "빨간색 수면안대",
+    "iconPath": "/i/200000/200559.png",
+    "en": "Red Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:レッド"
+  },
+  "560": {
+    "ko": "파란색 수면안대",
+    "iconPath": "/i/200000/200560.png",
+    "en": "Blue Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:ブルー"
+  },
+  "561": {
+    "ko": "초록색 수면안대",
+    "iconPath": "/i/200000/200561.png",
+    "en": "Green Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:グリーン"
+  },
+  "562": {
+    "ko": "구리색 수면안대",
+    "iconPath": "/i/200000/200562.png",
+    "en": "Brass Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:ブラス"
+  },
+  "563": {
+    "ko": "보라색 수면안대",
+    "iconPath": "/i/200000/200563.png",
+    "en": "Purple Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:パープル"
+  },
+  "564": {
+    "ko": "갈색 수면안대",
+    "iconPath": "/i/200000/200564.png",
+    "en": "Brown Comfortable Eye Mask",
+    "ja": "プレーン・アイマスク:ブラウン"
+  },
+  "565": {
+    "ko": "홀로그램 안경",
+    "iconPath": "/i/200000/200565.png",
+    "en": "Holospecs",
+    "ja": "ホログラス"
+  },
+  "566": {
+    "ko": "은색 홀로그램 안경",
+    "iconPath": "/i/200000/200566.png",
+    "en": "Silver Holospecs",
+    "ja": "ホログラス:シルバー"
+  },
+  "567": {
+    "ko": "금색 홀로그램 안경",
+    "iconPath": "/i/200000/200567.png",
+    "en": "Gold Holospecs",
+    "ja": "ホログラス:ゴールド"
+  },
+  "568": {
+    "ko": "검은색 홀로그램 안경",
+    "iconPath": "/i/200000/200568.png",
+    "en": "Black Holospecs",
+    "ja": "ホログラス:ブラック"
+  },
+  "569": {
+    "ko": "흰색 홀로그램 안경",
+    "iconPath": "/i/200000/200569.png",
+    "en": "White Holospecs",
+    "ja": "ホログラス:ホワイト"
+  },
+  "570": {
+    "ko": "회색 홀로그램 안경",
+    "iconPath": "/i/200000/200570.png",
+    "en": "Grey Holospecs",
+    "ja": "ホログラス:グレー"
+  },
+  "571": {
+    "ko": "빨간색 홀로그램 안경",
+    "iconPath": "/i/200000/200571.png",
+    "en": "Red Holospecs",
+    "ja": "ホログラス:レッド"
+  },
+  "572": {
+    "ko": "파란색 홀로그램 안경",
+    "iconPath": "/i/200000/200572.png",
+    "en": "Blue Holospecs",
+    "ja": "ホログラス:ブルー"
+  },
+  "573": {
+    "ko": "초록색 홀로그램 안경",
+    "iconPath": "/i/200000/200573.png",
+    "en": "Green Holospecs",
+    "ja": "ホログラス:グリーン"
+  },
+  "574": {
+    "ko": "구리색 홀로그램 안경",
+    "iconPath": "/i/200000/200574.png",
+    "en": "Brass Holospecs",
+    "ja": "ホログラス:ブラス"
+  },
+  "575": {
+    "ko": "보라색 홀로그램 안경",
+    "iconPath": "/i/200000/200575.png",
+    "en": "Purple Holospecs",
+    "ja": "ホログラス:パープル"
+  },
+  "576": {
+    "ko": "갈색 홀로그램 안경",
+    "iconPath": "/i/200000/200576.png",
+    "en": "Brown Holospecs",
+    "ja": "ホログラス:ブラウン"
+  },
+  "577": {
+    "ko": "외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200577.png",
+    "en": "Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左"
+  },
+  "578": {
+    "ko": "은색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200578.png",
+    "en": "Silver Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:シルバー"
+  },
+  "579": {
+    "ko": "금색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200579.png",
+    "en": "Gold Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:ゴールド"
+  },
+  "580": {
+    "ko": "검은색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200580.png",
+    "en": "Black Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:ブラック"
+  },
+  "581": {
+    "ko": "흰색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200581.png",
+    "en": "White Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:ホワイト"
+  },
+  "582": {
+    "ko": "회색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200582.png",
+    "en": "Grey Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:グレー"
+  },
+  "583": {
+    "ko": "빨간색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200583.png",
+    "en": "Red Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:レッド"
+  },
+  "584": {
+    "ko": "파란색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200584.png",
+    "en": "Blue Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:ブルー"
+  },
+  "585": {
+    "ko": "초록색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200585.png",
+    "en": "Green Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:グリーン"
+  },
+  "586": {
+    "ko": "구리색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200586.png",
+    "en": "Brass Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:ブラス"
+  },
+  "587": {
+    "ko": "보라색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200587.png",
+    "en": "Purple Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:パープル"
+  },
+  "588": {
+    "ko": "갈색 외눈 가리개(왼쪽)",
+    "iconPath": "/i/200000/200588.png",
+    "en": "Brown Blindfold Eyepatch (Left)",
+    "ja": "フォールド・アイパッチ:左:ブラウン"
+  },
+  "589": {
+    "ko": "외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200589.png",
+    "en": "Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右"
+  },
+  "590": {
+    "ko": "은색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200590.png",
+    "en": "Silver Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:シルバー"
+  },
+  "591": {
+    "ko": "금색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200591.png",
+    "en": "Gold Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:ゴールド"
+  },
+  "592": {
+    "ko": "검은색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200592.png",
+    "en": "Black Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:ブラック"
+  },
+  "593": {
+    "ko": "흰색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200593.png",
+    "en": "White Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:ホワイト"
+  },
+  "594": {
+    "ko": "회색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200594.png",
+    "en": "Grey Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:グレー"
+  },
+  "595": {
+    "ko": "빨간색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200595.png",
+    "en": "Red Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:レッド"
+  },
+  "596": {
+    "ko": "파란색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200596.png",
+    "en": "Blue Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:ブルー"
+  },
+  "597": {
+    "ko": "초록색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200597.png",
+    "en": "Green Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:グリーン"
+  },
+  "598": {
+    "ko": "구리색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200598.png",
+    "en": "Brass Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:ブラス"
+  },
+  "599": {
+    "ko": "보라색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200599.png",
+    "en": "Purple Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:パープル"
+  },
+  "600": {
+    "ko": "갈색 외눈 가리개(오른쪽)",
+    "iconPath": "/i/200000/200600.png",
+    "en": "Brown Blindfold Eyepatch (Right)",
+    "ja": "フォールド・アイパッチ:右:ブラウン"
+  },
+  "601": {
+    "ko": "홀로그램 고글",
+    "iconPath": "/i/200000/200601.png",
+    "en": "Holovisor",
+    "ja": "ホロゴーグル"
+  },
+  "602": {
+    "ko": "은색 홀로그램 고글",
+    "iconPath": "/i/200000/200602.png",
+    "en": "Silver Holovisor",
+    "ja": "ホロゴーグル:シルバー"
+  },
+  "603": {
+    "ko": "금색 홀로그램 고글",
+    "iconPath": "/i/200000/200603.png",
+    "en": "Gold Holovisor",
+    "ja": "ホロゴーグル:ゴールド"
+  },
+  "604": {
+    "ko": "검은색 홀로그램 고글",
+    "iconPath": "/i/200000/200604.png",
+    "en": "Black Holovisor",
+    "ja": "ホロゴーグル:ブラック"
+  },
+  "605": {
+    "ko": "흰색 홀로그램 고글",
+    "iconPath": "/i/200000/200605.png",
+    "en": "White Holovisor",
+    "ja": "ホロゴーグル:ホワイト"
+  },
+  "606": {
+    "ko": "회색 홀로그램 고글",
+    "iconPath": "/i/200000/200606.png",
+    "en": "Grey Holovisor",
+    "ja": "ホロゴーグル:グレー"
+  },
+  "607": {
+    "ko": "빨간색 홀로그램 고글",
+    "iconPath": "/i/200000/200607.png",
+    "en": "Red Holovisor",
+    "ja": "ホロゴーグル:レッド"
+  },
+  "608": {
+    "ko": "파란색 홀로그램 고글",
+    "iconPath": "/i/200000/200608.png",
+    "en": "Blue Holovisor",
+    "ja": "ホロゴーグル:ブルー"
+  },
+  "609": {
+    "ko": "초록색 홀로그램 고글",
+    "iconPath": "/i/200000/200609.png",
+    "en": "Green Holovisor",
+    "ja": "ホロゴーグル:グリーン"
+  },
+  "610": {
+    "ko": "구리색 홀로그램 고글",
+    "iconPath": "/i/200000/200610.png",
+    "en": "Brass Holovisor",
+    "ja": "ホロゴーグル:ブラス"
+  },
+  "611": {
+    "ko": "보라색 홀로그램 고글",
+    "iconPath": "/i/200000/200611.png",
+    "en": "Purple Holovisor",
+    "ja": "ホロゴーグル:パープル"
+  },
+  "612": {
+    "ko": "갈색 홀로그램 고글",
+    "iconPath": "/i/200000/200612.png",
+    "en": "Brown Holovisor",
+    "ja": "ホロゴーグル:ブラウン"
+  },
+  "613": {
+    "ko": "암흑가 안경",
+    "iconPath": "/i/200000/200613.png",
+    "en": "Dark Glasses",
+    "ja": "ノワール・グラス"
+  },
+  "614": {
+    "ko": "은색 암흑가 안경",
+    "iconPath": "/i/200000/200614.png",
+    "en": "Silver Dark Glasses",
+    "ja": "ノワール・グラス:シルバー"
+  },
+  "615": {
+    "ko": "금색 암흑가 안경",
+    "iconPath": "/i/200000/200615.png",
+    "en": "Gold Dark Glasses",
+    "ja": "ノワール・グラス:ゴールド"
+  },
+  "616": {
+    "ko": "검은색 암흑가 안경",
+    "iconPath": "/i/200000/200616.png",
+    "en": "Black Dark Glasses",
+    "ja": "ノワール・グラス:ブラック"
+  },
+  "617": {
+    "ko": "흰색 암흑가 안경",
+    "iconPath": "/i/200000/200617.png",
+    "en": "White Dark Glasses",
+    "ja": "ノワール・グラス:ホワイト"
+  },
+  "618": {
+    "ko": "회색 암흑가 안경",
+    "iconPath": "/i/200000/200618.png",
+    "en": "Grey Dark Glasses",
+    "ja": "ノワール・グラス:グレー"
+  },
+  "619": {
+    "ko": "빨간색 암흑가 안경",
+    "iconPath": "/i/200000/200619.png",
+    "en": "Red Dark Glasses",
+    "ja": "ノワール・グラス:レッド"
+  },
+  "620": {
+    "ko": "파란색 암흑가 안경",
+    "iconPath": "/i/200000/200620.png",
+    "en": "Blue Dark Glasses",
+    "ja": "ノワール・グラス:ブルー"
+  },
+  "621": {
+    "ko": "초록색 암흑가 안경",
+    "iconPath": "/i/200000/200621.png",
+    "en": "Green Dark Glasses",
+    "ja": "ノワール・グラス:グリーン"
+  },
+  "622": {
+    "ko": "구리색 암흑가 안경",
+    "iconPath": "/i/200000/200622.png",
+    "en": "Brass Dark Glasses",
+    "ja": "ノワール・グラス:ブラス"
+  },
+  "623": {
+    "ko": "보라색 암흑가 안경",
+    "iconPath": "/i/200000/200623.png",
+    "en": "Purple Dark Glasses",
+    "ja": "ノワール・グラス:パープル"
+  },
+  "624": {
+    "ko": "갈색 암흑가 안경",
+    "iconPath": "/i/200000/200624.png",
+    "en": "Brown Dark Glasses",
+    "ja": "ノワール・グラス:ブラウン"
+  },
+  "649": {
+    "ko": "가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200649.png",
+    "en": "Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左"
+  },
+  "650": {
+    "ko": "은색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200653.png",
+    "en": "Silver Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:シルバー"
+  },
+  "651": {
+    "ko": "금색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200652.png",
+    "en": "Gold Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:ゴールド"
+  },
+  "652": {
+    "ko": "검은색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200654.png",
+    "en": "Black Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:ブラック"
+  },
+  "653": {
+    "ko": "흰색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200659.png",
+    "en": "White Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:ホワイト"
+  },
+  "654": {
+    "ko": "회색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200650.png",
+    "en": "Grey Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:グレー"
+  },
+  "655": {
+    "ko": "빨간색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200657.png",
+    "en": "Red Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:レッド"
+  },
+  "656": {
+    "ko": "파란색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200656.png",
+    "en": "Blue Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:ブルー"
+  },
+  "657": {
+    "ko": "초록색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200660.png",
+    "en": "Green Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:グリーン"
+  },
+  "658": {
+    "ko": "구리색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200651.png",
+    "en": "Brass Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:ブラス"
+  },
+  "659": {
+    "ko": "보라색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200655.png",
+    "en": "Purple Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:パープル"
+  },
+  "660": {
+    "ko": "갈색 가죽띠 눈보호대(왼쪽)",
+    "iconPath": "/i/200000/200658.png",
+    "en": "Brown Sash Blinder (Left)",
+    "ja": "ベルトアイガード:左:ブラウン"
+  },
+  "661": {
+    "ko": "가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200661.png",
+    "en": "Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右"
+  },
+  "662": {
+    "ko": "은색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200665.png",
+    "en": "Silver Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:シルバー"
+  },
+  "663": {
+    "ko": "금색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200664.png",
+    "en": "Gold Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:ゴールド"
+  },
+  "664": {
+    "ko": "검은색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200666.png",
+    "en": "Black Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:ブラック"
+  },
+  "665": {
+    "ko": "흰색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200671.png",
+    "en": "White Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:ホワイト"
+  },
+  "666": {
+    "ko": "회색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200662.png",
+    "en": "Grey Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:グレー"
+  },
+  "667": {
+    "ko": "빨간색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200669.png",
+    "en": "Red Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:レッド"
+  },
+  "668": {
+    "ko": "파란색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200668.png",
+    "en": "Blue Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:ブルー"
+  },
+  "669": {
+    "ko": "초록색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200672.png",
+    "en": "Green Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:グリーン"
+  },
+  "670": {
+    "ko": "구리색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200663.png",
+    "en": "Brass Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:ブラス"
+  },
+  "671": {
+    "ko": "보라색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200667.png",
+    "en": "Purple Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:パープル"
+  },
+  "672": {
+    "ko": "갈색 가죽띠 눈보호대(오른쪽)",
+    "iconPath": "/i/200000/200670.png",
+    "en": "Brown Sash Blinder (Right)",
+    "ja": "ベルトアイガード:右:ブラウン"
+  },
+  "673": {
+    "ko": "금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200673.png",
+    "en": "Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左"
+  },
+  "674": {
+    "ko": "은색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200677.png",
+    "en": "Silver Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:シルバー"
+  },
+  "675": {
+    "ko": "금색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200676.png",
+    "en": "Gold Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:ゴールド"
+  },
+  "676": {
+    "ko": "검은색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200678.png",
+    "en": "Black Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:ブラック"
+  },
+  "677": {
+    "ko": "흰색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200683.png",
+    "en": "White Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:ホワイト"
+  },
+  "678": {
+    "ko": "회색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200674.png",
+    "en": "Grey Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:グレー"
+  },
+  "679": {
+    "ko": "빨간색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200681.png",
+    "en": "Red Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:レッド"
+  },
+  "680": {
+    "ko": "파란색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200680.png",
+    "en": "Blue Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:ブルー"
+  },
+  "681": {
+    "ko": "초록색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200684.png",
+    "en": "Green Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:グリーン"
+  },
+  "682": {
+    "ko": "구리색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200675.png",
+    "en": "Brass Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:ブラス"
+  },
+  "683": {
+    "ko": "보라색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200679.png",
+    "en": "Purple Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:パープル"
+  },
+  "684": {
+    "ko": "갈색 금속징 안대(왼쪽)",
+    "iconPath": "/i/200000/200682.png",
+    "en": "Brown Studded Eyepatch (Left)",
+    "ja": "スタッズアイパッチ:左:ブラウン"
+  },
+  "685": {
+    "ko": "금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200685.png",
+    "en": "Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右"
+  },
+  "686": {
+    "ko": "은색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200689.png",
+    "en": "Silver Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:シルバー"
+  },
+  "687": {
+    "ko": "금색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200688.png",
+    "en": "Gold Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:ゴールド"
+  },
+  "688": {
+    "ko": "검은색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200690.png",
+    "en": "Black Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:ブラック"
+  },
+  "689": {
+    "ko": "흰색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200695.png",
+    "en": "White Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:ホワイト"
+  },
+  "690": {
+    "ko": "회색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200686.png",
+    "en": "Grey Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:グレー"
+  },
+  "691": {
+    "ko": "빨간색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200693.png",
+    "en": "Red Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:レッド"
+  },
+  "692": {
+    "ko": "파란색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200692.png",
+    "en": "Blue Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:ブルー"
+  },
+  "693": {
+    "ko": "초록색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200696.png",
+    "en": "Green Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:グリーン"
+  },
+  "694": {
+    "ko": "구리색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200687.png",
+    "en": "Brass Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:ブラス"
+  },
+  "695": {
+    "ko": "보라색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200691.png",
+    "en": "Purple Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:パープル"
+  },
+  "696": {
+    "ko": "갈색 금속징 안대(오른쪽)",
+    "iconPath": "/i/200000/200694.png",
+    "en": "Brown Studded Eyepatch (Right)",
+    "ja": "スタッズアイパッチ:右:ブラウン"
+  },
+  "721": {
+    "ko": "원형 역반무테 안경",
+    "iconPath": "/i/200000/200637.png",
+    "en": "Half-rim Spectacles",
+    "ja": "ハーフリム・グラス"
+  },
+  "722": {
+    "ko": "은색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200641.png",
+    "en": "Silver Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:シルバー"
+  },
+  "723": {
+    "ko": "금색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200640.png",
+    "en": "Gold Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:ゴールド"
+  },
+  "724": {
+    "ko": "검은색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200642.png",
+    "en": "Black Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:ブラック"
+  },
+  "725": {
+    "ko": "흰색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200647.png",
+    "en": "White Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:ホワイト"
+  },
+  "726": {
+    "ko": "회색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200638.png",
+    "en": "Grey Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:グレー"
+  },
+  "727": {
+    "ko": "빨간색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200645.png",
+    "en": "Red Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:レッド"
+  },
+  "728": {
+    "ko": "파란색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200644.png",
+    "en": "Blue Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:ブルー"
+  },
+  "729": {
+    "ko": "초록색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200648.png",
+    "en": "Green Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:グリーン"
+  },
+  "730": {
+    "ko": "구리색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200639.png",
+    "en": "Brass Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:ブラス"
+  },
+  "731": {
+    "ko": "보라색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200643.png",
+    "en": "Purple Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:パープル"
+  },
+  "732": {
+    "ko": "갈색 원형 역반무테 안경",
+    "iconPath": "/i/200000/200646.png",
+    "en": "Brown Half-rim Spectacles",
+    "ja": "ハーフリム・グラス:ブラウン"
+  },
+  "733": {
+    "ko": "밀착형 선글라스",
+    "iconPath": "/i/200000/200625.png",
+    "en": "Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス"
+  },
+  "734": {
+    "ko": "은색 밀착형 선글라스",
+    "iconPath": "/i/200000/200629.png",
+    "en": "Silver Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:シルバー"
+  },
+  "735": {
+    "ko": "금색 밀착형 선글라스",
+    "iconPath": "/i/200000/200628.png",
+    "en": "Gold Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:ゴールド"
+  },
+  "736": {
+    "ko": "검은색 밀착형 선글라스",
+    "iconPath": "/i/200000/200630.png",
+    "en": "Black Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:ブラック"
+  },
+  "737": {
+    "ko": "흰색 밀착형 선글라스",
+    "iconPath": "/i/200000/200635.png",
+    "en": "White Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:ホワイト"
+  },
+  "738": {
+    "ko": "회색 밀착형 선글라스",
+    "iconPath": "/i/200000/200626.png",
+    "en": "Grey Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:グレー"
+  },
+  "739": {
+    "ko": "빨간색 밀착형 선글라스",
+    "iconPath": "/i/200000/200633.png",
+    "en": "Red Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:レッド"
+  },
+  "740": {
+    "ko": "파란색 밀착형 선글라스",
+    "iconPath": "/i/200000/200632.png",
+    "en": "Blue Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:ブルー"
+  },
+  "741": {
+    "ko": "초록색 밀착형 선글라스",
+    "iconPath": "/i/200000/200636.png",
+    "en": "Green Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:グリーン"
+  },
+  "742": {
+    "ko": "구리색 밀착형 선글라스",
+    "iconPath": "/i/200000/200627.png",
+    "en": "Brass Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:ブラス"
+  },
+  "743": {
+    "ko": "보라색 밀착형 선글라스",
+    "iconPath": "/i/200000/200631.png",
+    "en": "Purple Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:パープル"
+  },
+  "744": {
+    "ko": "갈색 밀착형 선글라스",
+    "iconPath": "/i/200000/200634.png",
+    "en": "Brown Wrap-around Sunglasses",
+    "ja": "ラップアラウンド・グラス:ブラウン"
+  }
+}
