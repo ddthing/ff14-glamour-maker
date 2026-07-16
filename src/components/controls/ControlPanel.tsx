@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Download, Link, Check } from 'lucide-react';
+import { AlertCircle, Check, Download, Link, RotateCcw } from 'lucide-react';
 import type { AppState } from '../../types';
 import { Divider } from '../ui/Divider';
 import { useExport } from '../../hooks/useExport';
@@ -20,17 +20,20 @@ interface Props {
  */
 export function ControlPanel({ state, setState, onResetItems }: Props) {
     const { t } = useTranslation();
-    const { isExporting, handleExport } = useExport();
+    const { isExporting, stage, error: exportError, handleExport } = useExport();
     const [activeTab, setActiveTab] = useState<'general' | 'equipment'>('equipment');
     const [isCopied, setIsCopied] = useState(false);
+    const [copyFailed, setCopyFailed] = useState(false);
 
     const handleCopyLink = async () => {
         try {
             await navigator.clipboard.writeText(window.location.href);
+            setCopyFailed(false);
             setIsCopied(true);
             setTimeout(() => setIsCopied(false), 2000);
         } catch (err) {
             console.error('Failed to copy link', err);
+            setCopyFailed(true);
         }
     };
 
@@ -46,12 +49,14 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                 <button
                     className={`flex-1 py-3 text-sm font-bold transition-colors ${activeTab === 'equipment' ? 'text-[var(--text-primary)] border-b-2 border-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'}`}
                     onClick={() => setActiveTab('equipment')}
+                    aria-pressed={activeTab === 'equipment'}
                 >
                     {t('common.info_entry', '투영 정보 입력')}
                 </button>
                 <button
                     className={`flex-1 py-3 text-sm font-bold transition-colors ${activeTab === 'general' ? 'text-[var(--text-primary)] border-b-2 border-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'}`}
                     onClick={() => setActiveTab('general')}
+                    aria-pressed={activeTab === 'general'}
                 >
                     {t('common.settings', '기본 설정')}
                 </button>
@@ -68,7 +73,8 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
             <Divider />
 
             {/* ── Section 4: 액션 버튼 ── */}
-            <div style={{ padding: '16px 20px', display: 'flex', gap: '8px', flexShrink: 0, background: 'var(--surface-100)' }}>
+            <div style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '8px', flexShrink: 0, background: 'var(--surface-100)' }}>
+              <div style={{ display: 'flex', gap: '8px' }}>
                 {/* Copy Link */}
                 <button
                     style={{
@@ -110,7 +116,6 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
 
                 {/* Save Image — primary CTA */}
                 <button
-                    className={isReadyToSave ? "animate-pulse" : ""}
                     style={{
                         flex: 1,
                         display: 'flex',
@@ -140,8 +145,34 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                         ? <span className="animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent" />
                         : <Download size={15} />
                     }
-                    {isExporting ? t('common.saving') : t('common.save')}
+                    {isExporting && stage
+                        ? t(`common.export_${stage}`)
+                        : t('common.save')}
                 </button>
+              </div>
+              <div aria-live="polite" aria-atomic="true">
+                {copyFailed && (
+                  <p className="text-xs text-[var(--error)]" style={{ margin: 0 }}>
+                    {t('common.copy_failed')}
+                  </p>
+                )}
+                {exportError && (
+                  <div className="flex items-center justify-between gap-3 text-xs text-[var(--error)]" role="alert">
+                    <span className="flex items-center gap-1.5">
+                      <AlertCircle size={14} aria-hidden="true" />
+                      {t('common.export_failed')}
+                    </span>
+                    <button
+                      type="button"
+                      className="flex shrink-0 items-center gap-1 font-bold underline underline-offset-2"
+                      onClick={() => handleExport(state.title)}
+                    >
+                      <RotateCcw size={12} aria-hidden="true" />
+                      {t('common.export_retry')}
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
         </div>
     );
