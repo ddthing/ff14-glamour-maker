@@ -4,6 +4,7 @@ import { useImageUpload } from '../../hooks/useImageUpload';
 import { CropModal } from './CropModal';
 import { PhotoPanel } from './PhotoPanel';
 import { InfoPanel } from './InfoPanel';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     state: AppState;
@@ -26,6 +27,7 @@ const CANVAS_H = 900;
  * - CanvasItemRow: 개별 아이템 행 (InfoPanel이 사용)
  */
 export function PreviewCanvas({ state, setState }: Props) {
+    const { t } = useTranslation();
     const zoneRef = useRef<HTMLDivElement>(null);
     const [scale, setScale] = useState(1);
     const [hoverPhoto, setHoverPhoto] = useState(false);
@@ -73,9 +75,12 @@ export function PreviewCanvas({ state, setState }: Props) {
 
             {/* ── 숨은 파일 입력 ─── */}
             <input
+                id="character-photo-upload"
                 ref={fileInputRef}
                 type="file"
                 accept="image/*"
+                name="character-photo"
+                aria-label={t('common.character_photo')}
                 className="hidden"
                 onChange={onFileInputChange}
             />

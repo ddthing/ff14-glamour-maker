@@ -3,7 +3,7 @@ import { Footer } from '../components/layout/Footer';
 
 export function Faq() {
     return (
-        <div className="min-h-screen flex flex-col bg-[var(--bg-app)]">
+        <div className="min-h-[100dvh] flex flex-col bg-[var(--bg-app)]">
             <Header />
             <main className="flex-1 w-full max-w-3xl mx-auto px-6 py-12">
                 <h1 className="text-3xl font-black mb-8">Frequently Asked Questions</h1>

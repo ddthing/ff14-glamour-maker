@@ -83,6 +83,8 @@ export function ItemIcon({ nameKo, iconPath, tarToUrl, enableWebhook, className 
         <img
             src={imgSrc}
             alt=""
+            width={64}
+            height={64}
             className={`${className} transition-opacity duration-300`}
             crossOrigin="anonymous"
             onError={handleError}

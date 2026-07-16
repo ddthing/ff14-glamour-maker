@@ -28,7 +28,7 @@ export function AdBanner({ slot, format = 'auto', className, style }: AdBannerPr
   }, []);
 
   return (
-    <div ref={ref} className={`relative flex items-center justify-center bg-[var(--surface-200)] border border-[var(--border)] rounded-xl overflow-hidden transition-all duration-300 ${className || ''}`} style={style} aria-label="광고">
+    <div ref={ref} className={`relative flex items-center justify-center bg-[var(--surface-200)] border border-[var(--border)] rounded-xl overflow-hidden transition-[background-color,border-color,opacity] duration-300 ${className || ''}`} style={style} aria-label="광고">
       {/* Fallback UI (광고 미승인/차단 상태일 때 보임) */}
       <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-auto bg-[var(--bg-app)]">
         <div className="flex flex-col items-center gap-3">

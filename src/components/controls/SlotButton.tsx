@@ -21,9 +21,12 @@ export function SlotButton({ part, item, isActive, isHighlighted, onClick }: Slo
 
     return (
         <button
+            type="button"
             onClick={onClick}
+            aria-pressed={isActive}
+            aria-label={`${t(`slots.${part}`)}${isFilled ? `: ${item.name}` : ''}`}
             className={`
-                group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg border transition-all duration-300
+                group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg border transition-[background-color,border-color,box-shadow,transform,color] duration-300
                 ${isHighlighted ? 'animate-pulse bg-[var(--surface-300)] border-[var(--accent)] shadow-[0_0_15px_rgba(245,78,0,0.3)] ring-2 ring-[var(--accent)] scale-[1.05]' : 
                  isActive
                     ? 'bg-[var(--surface-300)] border-[var(--border-medium)] ring-1 ring-[var(--border-medium)]'
@@ -55,14 +58,14 @@ export function SlotButton({ part, item, isActive, isHighlighted, onClick }: Slo
                         w-full h-full rounded-md flex items-center justify-center transition-colors
                         ${isActive ? 'bg-[var(--surface-400)]' : 'bg-[var(--surface-200)]'}
                     `}>
-                        <Plus size={14} className="opacity-30" />
+                        <Plus size={14} className="opacity-30" aria-hidden="true" />
                     </div>
                 )}
             </div>
 
             {/* Filled Indicator */}
             {isFilled && (
-                <div className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_8px_rgba(245,78,0,0.4)]" />
+                <div className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_8px_rgba(245,78,0,0.4)]" aria-hidden="true" />
             )}
         </button>
     );

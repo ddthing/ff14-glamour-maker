@@ -22,11 +22,20 @@ export function PhotoPanel({
 
     return (
         <div
+            role="button"
+            tabIndex={0}
+            aria-label={croppedImageSrc ? t('common.replace_image') : t('common.upload_hint')}
             className="w-[480px] h-full relative overflow-hidden shrink-0 flex items-center justify-center cursor-pointer select-none"
             style={{ background: 'linear-gradient(145deg, #272620 0%, #191810 100%)' }}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             onClick={onClick}
+            onKeyDown={event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    onClick();
+                }
+            }}
         >
             {/* ── Drag-over Overlay ── */}
             {isDragging && (
@@ -54,7 +63,7 @@ export function PhotoPanel({
                     {/* ── Loaded Photo ── */}
                     <img
                         src={croppedImageSrc}
-                        alt="character"
+                        alt={t('common.character_photo')}
                         className="w-full h-full object-cover"
                     />
 
@@ -69,7 +78,7 @@ export function PhotoPanel({
                                     background: 'rgba(255,255,255,0.08)',
                                     border: '1px solid rgba(255,255,255,0.15)',
                                 }}>
-                                <RefreshCw size={20} strokeWidth={1.5} className="text-white/70" />
+                                <RefreshCw size={20} strokeWidth={1.5} className="text-white/70" aria-hidden="true" />
                             </div>
                             <span className="text-xs font-bold tracking-[0.25em] uppercase text-white/75">
                                 {t('common.replace_image')}
@@ -102,7 +111,7 @@ export function PhotoPanel({
                                 border: '1px solid rgba(255,255,255,0.06)',
                                 boxShadow: '0 0 64px rgba(210,180,120,0.08) inset',
                             }}>
-                            <UploadCloud size={32} strokeWidth={1.2} className="text-white/30" />
+                            <UploadCloud size={32} strokeWidth={1.2} className="text-white/30" aria-hidden="true" />
                             {/* Outer pulsing ring */}
                             <div className="absolute inset-0 rounded-full animate-ping" style={{ border: '1px solid rgba(210,180,120,0.4)', animationDuration: '3s' }} />
                         </div>

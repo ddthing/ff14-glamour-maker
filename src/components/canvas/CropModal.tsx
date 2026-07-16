@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Cropper from 'react-easy-crop';
 import getCroppedImg from '../../utils/cropImage';
@@ -21,6 +21,46 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
     const [croppedAreaPx, setCroppedAreaPx] = useState<{
         x: number; y: number; width: number; height: number;
     } | null>(null);
+    const dialogRef = useRef<HTMLDivElement>(null);
+    const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+        const previousOverflow = document.body.style.overflow;
+        const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+        document.body.style.overflow = 'hidden';
+        closeButtonRef.current?.focus();
+
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                onCancel();
+                return;
+            }
+
+            if (event.key !== 'Tab' || !dialogRef.current) return;
+            const focusable = Array.from(dialogRef.current.querySelectorAll<HTMLElement>(
+                'button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            ));
+            if (focusable.length === 0) return;
+
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = previousOverflow;
+            previousFocus?.focus();
+        };
+    }, [onCancel]);
 
     const handleCropComplete = useCallback(
         (_: unknown, px: { x: number; y: number; width: number; height: number }) =>
@@ -36,6 +76,10 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
 
     return (
         <div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="crop-dialog-title"
             className="fixed inset-0 z-[3000] flex flex-col items-center justify-center p-6 md:p-12"
             style={{
                 background: 'rgba(0, 0, 0, 0.88)',
@@ -48,18 +92,19 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                 {/* Header Section */}
                 <div className="w-full flex justify-between items-end border-b border-white/10 pb-6">
                     <div className="flex flex-col gap-2">
-                        <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
+                        <div>
                             <span className="text-[0.65rem] font-bold tracking-[0.3em] uppercase text-white/40">{t('crop.studio_editor')}</span>
                         </div>
-                        <h2 className="text-3xl font-extrabold text-white tracking-tight">{t('crop.refine_portrait')}</h2>
+                        <h2 id="crop-dialog-title" className="text-3xl font-extrabold text-white tracking-tight text-balance">{t('crop.refine_portrait')}</h2>
                     </div>
                     <button
+                        ref={closeButtonRef}
+                        type="button"
                         onClick={onCancel}
-                        className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:bg-white/10 transition-all"
+                        className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:bg-white/10 transition-[background-color,color,border-color]"
                     >
                         <span className="text-xs font-bold tracking-widest uppercase">{t('common.close')}</span>
-                        <X size={18} className="group-active:scale-90 transition-transform" />
+                        <X size={18} className="group-active:scale-90 transition-transform" aria-hidden="true" />
                     </button>
                 </div>
 
@@ -92,12 +137,13 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                     <div className="flex flex-col gap-5">
                         <div className="flex justify-between items-center text-white/50 font-bold tracking-widest text-[0.7rem] uppercase">
                             <div className="flex items-center gap-2">
-                                <Search size={14} />
-                                <span>{t('crop.zoom_intensity')}</span>
+                                <Search size={14} aria-hidden="true" />
+                                <label htmlFor="crop-zoom">{t('crop.zoom_intensity')}</label>
                             </div>
                             <span className="bg-white/10 px-2 py-0.5 rounded-md text-white/80 font-mono">{(zoom * 100).toFixed(0)}%</span>
                         </div>
                         <input
+                            id="crop-zoom"
                             type="range" min={1} max={4} step={0.01}
                             value={zoom}
                             onChange={(e) => setZoom(parseFloat(e.target.value))}
@@ -108,17 +154,19 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                     {/* Actions */}
                     <div className="flex gap-4 h-16">
                         <button
+                            type="button"
                             onClick={onCancel}
-                            className="flex-1 flex items-center justify-center gap-3 rounded-2xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all active:scale-[0.96]"
+                            className="flex-1 flex items-center justify-center gap-3 rounded-2xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-[background-color,transform] active:scale-[0.96]"
                         >
-                            <RotateCcw size={20} strokeWidth={2.5} />
+                            <RotateCcw size={20} strokeWidth={2.5} aria-hidden="true" />
                             <span>{t('crop.discard')}</span>
                         </button>
                         <button
+                            type="button"
                             onClick={handleConfirm}
-                            className="flex-[1.8] flex items-center justify-center gap-3 rounded-2xl bg-white text-black font-black text-lg hover:bg-[#f2f1ed] transition-all active:scale-[0.96] shadow-[0_12px_32px_rgba(255,255,255,0.15)]"
+                            className="flex-[1.8] flex items-center justify-center gap-3 rounded-2xl bg-white text-black font-black text-lg hover:bg-[#f2f1ed] transition-[background-color,transform] active:scale-[0.96] shadow-[0_12px_32px_rgba(255,255,255,0.15)]"
                         >
-                            <Check size={24} strokeWidth={3} />
+                            <Check size={24} strokeWidth={3} aria-hidden="true" />
                             <span>{t('crop.apply_portrait')}</span>
                         </button>
                     </div>
@@ -127,9 +175,9 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                 {/* Interactive Hint */}
                 <div className="flex items-center gap-4 text-white/20 text-[0.65rem] font-bold tracking-[0.25em] uppercase">
                     <span>{t('crop.hint_move')}</span>
-                    <div className="w-1 h-1 rounded-full bg-white/20" />
+                    <span className="h-3 w-px bg-white/20" aria-hidden="true" />
                     <span>{t('crop.hint_zoom')}</span>
-                    <div className="w-1 h-1 rounded-full bg-white/20" />
+                    <span className="h-3 w-px bg-white/20" aria-hidden="true" />
                     <span>{t('crop.hint_confirm')}</span>
                 </div>
             </div>

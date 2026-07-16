@@ -34,11 +34,12 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <SectionLabel icon={<Info size={12} />}>{t('common.info_entry')}</SectionLabel>
                 <button
+                    type="button"
                     className="btn-ghost"
                     onClick={onResetItems}
                     style={{ marginBottom: '10px' }}
                 >
-                    <RotateCcw size={12} strokeWidth={2.5} />
+                    <RotateCcw size={12} strokeWidth={2.5} aria-hidden="true" />
                     {t('common.reset')}
                 </button>
             </div>
@@ -78,6 +79,8 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
                         )}
                     </div>
                     <button
+                        type="button"
+                        aria-label={`${t('common.clear_slot')}: ${t(`slots.${activeSlot}`)}`}
                         onClick={() => updateItem({ name: '', dye1: '', dye2: '', iconPath: '', nameKo: '', nameEn: '', nameJa: '' })}
                         style={{
                             color: 'var(--text-muted)',
@@ -92,7 +95,7 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
                         onMouseEnter={e => (e.currentTarget.style.color = 'var(--error)')}
                         onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
                     >
-                        <X size={13} />
+                        <X size={13} aria-hidden="true" />
                     </button>
                 </div>
 

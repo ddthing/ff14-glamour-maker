@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDebounce } from '../../hooks/useDebounce';
 import type { FF14Item } from '../../hooks/useFF14Search';
@@ -34,6 +34,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
     const containerRef = useRef<HTMLDivElement>(null);
     const isProgrammaticRef = useRef(false);
     const inputRef = useRef<HTMLInputElement>(null);
+    const listboxId = useId();
 
     const isFirstMount = useRef(true);
 
@@ -55,7 +56,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
         setOpen(false);
         setSelectedIndex(-1);
         
-        if (inputRef.current) {
+        if (inputRef.current && window.matchMedia('(pointer: fine)').matches) {
             // Slight delay ensures React has finished updating the DOM for the new slot
             setTimeout(() => {
                 inputRef.current?.focus();
@@ -114,6 +115,11 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
         : results;
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Escape') {
+            setOpen(false);
+            setSelectedIndex(-1);
+            return;
+        }
         if (!open || filteredResults.length === 0) return;
         
         if (e.key === 'ArrowDown') {
@@ -141,9 +147,18 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
             <div className="relative flex items-center h-[44px]">
                 <input
                     ref={inputRef}
+                    type="search"
+                    name={`item-search-${currentSlot ?? 'all'}`}
+                    autoComplete="off"
+                    role="combobox"
+                    aria-autocomplete="list"
+                    aria-expanded={shouldShowDropdown}
+                    aria-controls={listboxId}
+                    aria-activedescendant={selectedIndex >= 0 ? `${listboxId}-option-${selectedIndex}` : undefined}
+                    aria-label={`${currentSlot ? t(`slots.${currentSlot}`) : ''} ${t('common.search_item')}`.trim()}
                     className={`
                         w-full h-full bg-[var(--surface-100)] border rounded-lg px-4 pl-10 text-sm 
-                        focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] outline-none transition-all
+                        focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] outline-none transition-[border-color,box-shadow,background-color]
                         ${hasError ? 'border-[var(--error)] bg-[var(--error)]/5' : 'border-[var(--border)]'}
                     `}
                     placeholder={t('common.search_item')}
@@ -160,35 +175,39 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     onBlur={handleBlur}
                     onKeyDown={handleKeyDown}
                 />
-                <Search size={14} className="absolute left-3 text-[var(--text-muted)] pointer-events-none" />
+                <Search size={14} className="absolute left-3 text-[var(--text-muted)] pointer-events-none" aria-hidden="true" />
                 {isLoading && (
-                    <Loader2 size={14} className="absolute right-3 text-[var(--accent)] animate-spin" />
+                    <Loader2 size={14} className="absolute right-3 text-[var(--accent)] animate-spin" aria-hidden="true" />
                 )}
             </div>
 
             {/* Dropdown Area */}
             {shouldShowDropdown && (
-                <div className="dropdown-menu absolute top-[calc(100%+6px)] left-0 right-0 z-[200] max-h-[260px] scrollbar-thin">
+                <div
+                    id={listboxId}
+                    role="listbox"
+                    className="dropdown-menu absolute top-[calc(100%+6px)] left-0 right-0 z-[200] max-h-[260px] scrollbar-thin"
+                >
                     
                     {/* Loading State */}
                     {isLoading && filteredResults.length === 0 && (
-                        <div className="p-4 flex items-center justify-center gap-2 text-xs text-[var(--text-muted)]">
-                            <Loader2 size={14} className="animate-spin text-[var(--accent)]" />
+                        <div className="p-4 flex items-center justify-center gap-2 text-xs text-[var(--text-muted)]" aria-live="polite">
+                            <Loader2 size={14} className="animate-spin text-[var(--accent)]" aria-hidden="true" />
                             {t('common.loading')}
                         </div>
                     )}
 
                     {/* No Results State */}
                     {!isLoading && debouncedQuery.trim().length >= 1 && filteredResults.length === 0 && !error && (
-                        <div className="p-4 text-center text-xs text-[var(--text-muted)]">
+                        <div className="p-4 text-center text-xs text-[var(--text-muted)]" aria-live="polite">
                             {t('common.no_results')}
                         </div>
                     )}
 
                     {/* Error State */}
                     {!!error && (
-                        <div className="p-4 flex items-center gap-2 text-xs text-[var(--error)] font-medium bg-[var(--error)]/5">
-                            <AlertCircle size={14} />
+                        <div className="p-4 flex items-center gap-2 text-xs text-[var(--error)] font-medium bg-[var(--error)]/5" role="alert">
+                            <AlertCircle size={14} aria-hidden="true" />
                             {error}
                         </div>
                     )}
@@ -196,8 +215,13 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     {/* Results List */}
                     {filteredResults.map((item, index) => (
                         <button
+                            id={`${listboxId}-option-${index}`}
+                            type="button"
+                            role="option"
+                            aria-selected={index === selectedIndex}
                             key={item.id}
-                            onMouseDown={e => { e.preventDefault(); handleSelect(item); }}
+                            onMouseDown={e => e.preventDefault()}
+                            onClick={() => handleSelect(item)}
                             onMouseEnter={() => setSelectedIndex(index)}
                             className={`w-full flex items-center gap-3 p-2.5 text-left transition-colors group ${
                                 index === selectedIndex ? 'bg-[var(--surface-300)]' : 'hover:bg-[var(--surface-300)]'

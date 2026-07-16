@@ -45,24 +45,37 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
         <div className="control-panel flex flex-col min-h-full bg-[var(--bg-panel)] rounded-2xl border border-[var(--border)] overflow-hidden shadow-[var(--shadow-elevated)]" style={{ gap: 0 }}>
 
             {/* ── Tabs Header ── */}
-            <div className="flex border-b border-[var(--border)]">
+            <div className="flex border-b border-[var(--border)]" role="tablist">
                 <button
+                    type="button"
+                    role="tab"
+                    id="equipment-tab"
+                    aria-controls="control-tabpanel"
                     className={`flex-1 py-3 text-sm font-bold transition-colors ${activeTab === 'equipment' ? 'text-[var(--text-primary)] border-b-2 border-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'}`}
                     onClick={() => setActiveTab('equipment')}
-                    aria-pressed={activeTab === 'equipment'}
+                    aria-selected={activeTab === 'equipment'}
                 >
                     {t('common.info_entry', '투영 정보 입력')}
                 </button>
                 <button
+                    type="button"
+                    role="tab"
+                    id="general-tab"
+                    aria-controls="control-tabpanel"
                     className={`flex-1 py-3 text-sm font-bold transition-colors ${activeTab === 'general' ? 'text-[var(--text-primary)] border-b-2 border-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'}`}
                     onClick={() => setActiveTab('general')}
-                    aria-pressed={activeTab === 'general'}
+                    aria-selected={activeTab === 'general'}
                 >
                     {t('common.settings', '기본 설정')}
                 </button>
             </div>
 
-            <div className="flex-1 flex flex-col min-h-0 overflow-y-auto scrollbar-thin">
+            <div
+                id="control-tabpanel"
+                role="tabpanel"
+                aria-labelledby={activeTab === 'general' ? 'general-tab' : 'equipment-tab'}
+                className="flex-1 flex flex-col min-h-0 overflow-y-auto scrollbar-thin"
+            >
                 {activeTab === 'general' ? (
                     <GeneralTab state={state} setState={setState} />
                 ) : (

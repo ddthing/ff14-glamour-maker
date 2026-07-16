@@ -15,7 +15,7 @@ export function Header() {
         <>
             <header
                 aria-label="메인 내비게이션"
-                className="w-full shrink-0 z-50 transition-all duration-300 bg-[var(--bg-app)]/85 backdrop-blur-xl sticky top-0"
+                className="w-full shrink-0 z-50 transition-[background-color,box-shadow] duration-300 bg-[var(--bg-app)]/85 backdrop-blur-xl sticky top-0"
             >
 
                 <div className="max-w-[1440px] mx-auto w-full flex items-center justify-between h-[64px] px-4 md:px-10">
@@ -66,7 +66,7 @@ export function Header() {
                                     ? t('common.to_light', '라이트 모드로 전환')
                                     : t('common.to_dark', '다크 모드로 전환')}
                                 aria-pressed={isDark}
-                                className="flex items-center justify-center w-8 h-8 rounded-full bg-transparent border-none text-[var(--text-secondary)] cursor-pointer transition-all hover:bg-[var(--surface-300)] hover:text-[var(--accent)] hover:rotate-12 touch-manipulation"
+                                className="flex items-center justify-center w-8 h-8 rounded-full bg-transparent border-none text-[var(--text-secondary)] cursor-pointer transition-[background-color,color,transform] hover:bg-[var(--surface-300)] hover:text-[var(--accent)] hover:rotate-12 touch-manipulation"
                             >
                                 {isDark ? <Sun size={15} aria-hidden="true" /> : <Moon size={15} aria-hidden="true" />}
                             </button>

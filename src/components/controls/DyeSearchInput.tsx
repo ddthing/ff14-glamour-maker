@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FF14_DYES } from '../../constants/dyes';
 
@@ -17,6 +17,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
     const [open, setOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const wrapperRef = useRef<HTMLDivElement>(null);
+    const listboxId = useId();
 
     useEffect(() => {
         if (!open) setSearchTerm(value);
@@ -43,7 +44,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
     const matchedDye = FF14_DYES.find(d => d.name === value);
 
     return (
-        <div ref={wrapperRef} className="relative flex-1 flex items-center bg-[var(--surface-100)] border border-[var(--border)] rounded-lg px-3 h-[44px] gap-2 transition-all focus-within:border-[var(--accent)] focus-within:ring-1 focus-within:ring-[var(--accent)]">
+        <div ref={wrapperRef} className="relative flex-1 flex items-center bg-[var(--surface-100)] border border-[var(--border)] rounded-lg px-3 h-[44px] gap-2 transition-[border-color,box-shadow] focus-within:border-[var(--accent)] focus-within:ring-1 focus-within:ring-[var(--accent)]">
             {/* Color Swatch Preview */}
             <div 
                 className="w-3.5 h-3.5 rounded-full border border-[var(--border)] shrink-0 transition-colors shadow-sm"
@@ -55,6 +56,14 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
 
             {/* Input Field */}
             <input
+                type="search"
+                name={`dye-search-${placeholder}`}
+                autoComplete="off"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded={open}
+                aria-controls={listboxId}
+                aria-label={placeholder}
                 className="w-full h-full bg-transparent border-none text-sm focus:ring-0 outline-none placeholder:text-[var(--text-muted)]"
                 placeholder={placeholder}
                 value={open ? searchTerm : value}
@@ -66,11 +75,17 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
                     setSearchTerm('');
                     setOpen(true);
                 }}
+                onKeyDown={event => {
+                    if (event.key === 'Escape') {
+                        setOpen(false);
+                        setSearchTerm(value);
+                    }
+                }}
             />
 
             {/* Dropdown Menu */}
             {open && (
-                <div className="dropdown-menu absolute top-[calc(100%+6px)] left-0 right-0 z-[200] max-h-[220px] scrollbar-thin">
+                <div id={listboxId} role="listbox" className="dropdown-menu absolute top-[calc(100%+6px)] left-0 right-0 z-[200] max-h-[220px] scrollbar-thin">
                     {filteredDyes.length === 0 ? (
                         <div className="p-3 text-center text-xs text-[var(--text-muted)]">
                             {t('common.no_results')}
@@ -78,6 +93,9 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
                     ) : (
                         filteredDyes.map(dye => (
                             <button
+                                type="button"
+                                role="option"
+                                aria-selected={dye.name === value}
                                 key={dye.name}
                                 className="w-full flex items-center gap-2.5 p-2 text-left hover:bg-[var(--surface-300)] transition-colors group"
                                 onClick={() => {

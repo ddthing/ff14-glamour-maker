@@ -41,6 +41,9 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                 <SectionLabel icon={<PenTool size={12} />}>{t('common.title')}</SectionLabel>
                 <input
                     id="glamour-set-name"
+                    name="glamour-set-name"
+                    aria-label={t('common.title')}
+                    autoComplete="off"
                     className="input-base"
                     value={localTitle}
                     onChange={e => setLocalTitle(e.target.value)}
@@ -53,6 +56,10 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                     <SectionLabel icon={<User size={12} />}>{t('common.creator')}</SectionLabel>
                     <input
                         id="glamour-creator"
+                        name="glamour-creator"
+                        aria-label={t('common.creator')}
+                        autoComplete="off"
+                        spellCheck={false}
                         className="input-base"
                         value={localCreator}
                         onChange={e => setLocalCreator(e.target.value)}
@@ -71,6 +78,9 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
 
                 <div style={{ display: 'flex', gap: '8px', height: '40px' }}>
                     <input
+                        name="preset-name"
+                        aria-label={t('common.presets_placeholder')}
+                        autoComplete="off"
                         className="input-base"
                         style={{ flex: 1, height: '100%', fontSize: '0.875rem' }}
                         value={presetNameInput}
@@ -84,6 +94,7 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                         placeholder={t('common.presets_placeholder')}
                     />
                     <button
+                        type="button"
                         onClick={() => {
                             if (!presetNameInput.trim()) return;
                             addPreset(presetNameInput.trim(), state);
@@ -111,7 +122,7 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                         onMouseDown={e => (e.currentTarget.style.transform = 'scale(0.97)')}
                         onMouseUp={e => (e.currentTarget.style.transform = 'scale(1)')}
                     >
-                        <Save size={13} />
+                        <Save size={13} aria-hidden="true" />
                         <span className="hidden sm:inline">{t('common.presets_save')}</span>
                     </button>
                 </div>
@@ -145,6 +156,7 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                                 onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}
                             >
                                 <button
+                                    type="button"
                                     style={{
                                         flex: 1,
                                         textAlign: 'left',
@@ -164,6 +176,8 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                                     {p.name}
                                 </button>
                                 <button
+                                    type="button"
+                                    aria-label={`${t('common.delete_preset')}: ${p.name}`}
                                     onClick={() => removePreset(p.id)}
                                     style={{
                                         padding: '4px',
@@ -178,7 +192,7 @@ export function GeneralTab({ state, setState }: GeneralTabProps) {
                                     onMouseEnter={e => (e.currentTarget.style.color = 'var(--error)')}
                                     onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
                                 >
-                                    <Trash2 size={13} />
+                                    <Trash2 size={13} aria-hidden="true" />
                                 </button>
                             </div>
                         ))}

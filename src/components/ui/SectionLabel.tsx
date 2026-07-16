@@ -25,7 +25,7 @@ export function SectionLabel({ icon, children }: SectionLabelProps) {
             color: 'var(--text-muted)',
             marginBottom: '10px',
         }}>
-            <span style={{ opacity: 0.6 }}>{icon}</span>
+            <span style={{ opacity: 0.6 }} aria-hidden="true">{icon}</span>
             {children}
         </h3>
     );

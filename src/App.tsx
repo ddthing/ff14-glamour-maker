@@ -13,7 +13,7 @@ function App() {
   const [state, setState] = useUrlState();
 
   return (
-    <div className="min-h-screen flex flex-col w-full bg-[var(--bg-app)]">
+    <div className="min-h-[100dvh] flex flex-col w-full bg-[var(--bg-app)]">
 
       {/* ── Header (shrink-0: fixed height) ── */}
       <Header />
