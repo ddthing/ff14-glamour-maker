@@ -9,11 +9,11 @@ import { EquipmentTab } from './EquipmentTab';
 import { usePresets } from '../../hooks/usePresets';
 import { useShareLink } from '../../hooks/useShareLink';
 import { useUndoAction } from '../../hooks/useUndoAction';
+import type { GlamourActions } from '../../features/glamour/useGlamourActions';
 
 interface Props {
     state: AppState;
-    setState: React.Dispatch<React.SetStateAction<AppState>>;
-    onResetItems: () => void;
+    actions: GlamourActions;
 }
 
 /**
@@ -21,7 +21,7 @@ interface Props {
  * Design: Apple Senior + DESIGN.md Warm Minimalism
  * Features: scale(0.98) active, ambient glow focus, oklab borders, surface scale
  */
-export function ControlPanel({ state, setState, onResetItems }: Props) {
+export function ControlPanel({ state, actions }: Props) {
     const { t } = useTranslation();
     const { isExporting, stage, error: exportError, handleExport } = useExport();
     const { presets, error: presetError, addPreset, removePreset, restorePreset } = usePresets();
@@ -31,12 +31,12 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
 
     const handleResetItems = useCallback(() => {
         const previousItems = state.items;
-        onResetItems();
+        actions.resetItems();
         registerUndo({
             message: t('common.items_reset'),
-            undo: () => setState(current => ({ ...current, items: previousItems })),
+            undo: () => actions.replaceItems(previousItems),
         });
-    }, [onResetItems, registerUndo, setState, state.items, t]);
+    }, [actions, registerUndo, state.items, t]);
 
     const handleRemovePreset = useCallback((id: string) => {
         const removed = removePreset(id);
@@ -89,13 +89,19 @@ export function ControlPanel({ state, setState, onResetItems }: Props) {
                 {activeTab === 'general' ? (
                     <GeneralTab
                         state={state}
-                        setState={setState}
+                        onTitleChange={actions.setTitle}
+                        onCreatorChange={actions.setCreator}
+                        onApplyPreset={actions.applyPreset}
                         presets={presets}
                         onAddPreset={name => addPreset(name, state)}
                         onRemovePreset={handleRemovePreset}
                     />
                 ) : (
-                    <EquipmentTab state={state} setState={setState} onResetItems={handleResetItems} />
+                    <EquipmentTab
+                        items={state.items}
+                        onUpdateItem={actions.updateItem}
+                        onResetItems={handleResetItems}
+                    />
                 )}
             </div>
 

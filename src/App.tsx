@@ -3,7 +3,7 @@ import { ControlPanel } from './components/controls/ControlPanel';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { useUrlState } from './hooks/useUrlState';
-import { INITIAL_ITEMS } from './constants/initialState';
+import { useGlamourActions } from './features/glamour/useGlamourActions';
 
 /**
  * App — Senior Architect Layout
@@ -11,6 +11,7 @@ import { INITIAL_ITEMS } from './constants/initialState';
  */
 function App() {
   const [state, setState] = useUrlState();
+  const actions = useGlamourActions(setState);
 
   return (
     <div className="min-h-[100dvh] flex flex-col w-full bg-[var(--bg-app)]">
@@ -25,15 +26,14 @@ function App() {
         <main id="main-content" tabIndex={-1} className="w-full flex flex-col lg:flex-row gap-4 lg:gap-8 h-auto items-stretch">
           {/* Left: Canvas */}
           <div className="flex-1 min-w-0 flex flex-col h-full">
-            <PreviewCanvas state={state} setState={setState} />
+            <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />
           </div>
 
           {/* Right: Control Sidebar */}
           <aside className="w-full lg:w-[400px] shrink-0 flex flex-col h-[600px] lg:h-full">
             <ControlPanel
               state={state}
-              setState={setState}
-              onResetItems={() => setState(s => ({ ...s, items: INITIAL_ITEMS }))}
+              actions={actions}
             />
           </aside>
         </main>

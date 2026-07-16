@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 interface Props {
     state: AppState;
-    setState: React.Dispatch<React.SetStateAction<AppState>>;
+    onPhotoConfirm: (croppedImageSrc: string, imageSrc: string) => void;
 }
 
 const CANVAS_W = 1080;
@@ -26,7 +26,7 @@ const CropModal = lazy(() => import('./CropModal').then(module => ({ default: mo
  * - InfoPanel: 우측 글래머 정보 패널
  * - CanvasItemRow: 개별 아이템 행 (InfoPanel이 사용)
  */
-export function PreviewCanvas({ state, setState }: Props) {
+export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
     const { t } = useTranslation();
     const zoneRef = useRef<HTMLDivElement>(null);
     const [scale, setScale] = useState(1);
@@ -72,7 +72,7 @@ export function PreviewCanvas({ state, setState }: Props) {
                         imageSrc={pendingImage}
                         onCancel={() => setPendingImage(null)}
                         onConfirm={(croppedUrl, srcUrl) => {
-                            setState(s => ({ ...s, imageSrc: srcUrl, croppedImageSrc: croppedUrl }));
+                            onPhotoConfirm(croppedUrl, srcUrl);
                             setPendingImage(null);
                         }}
                     />
