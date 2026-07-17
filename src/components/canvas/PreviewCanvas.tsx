@@ -41,20 +41,31 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
     useEffect(() => {
         let rafId = 0;
 
-        const obs = new ResizeObserver(([entry]) => {
+        const measure = () => {
             cancelAnimationFrame(rafId);
             rafId = requestAnimationFrame(() => {
-                const { width, height } = entry.contentRect;
+                const zone = zoneRef.current;
+                if (!zone) return;
+                const { width, height } = zone.getBoundingClientRect();
                 if (width === 0 || height === 0) return;
-                
+
                 const scaleW = width / CANVAS_W;
                 const scaleH = height / CANVAS_H;
                 const minScale = Math.min(scaleW, scaleH, 1);
                 setScale(minScale);
             });
-        });
+        };
+
+        const obs = new ResizeObserver(measure);
         if (zoneRef.current) obs.observe(zoneRef.current);
-        return () => { obs.disconnect(); cancelAnimationFrame(rafId); };
+        window.addEventListener('resize', measure, { passive: true });
+        measure();
+
+        return () => {
+            obs.disconnect();
+            window.removeEventListener('resize', measure);
+            cancelAnimationFrame(rafId);
+        };
     }, []);
 
     const bgSrc = state.croppedImageSrc || state.imageSrc;
@@ -93,12 +104,12 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
 
             <div
                 ref={zoneRef}
-                className="canvas-scale-zone flex-1 w-full"
+                className="canvas-scale-zone min-w-0 w-full flex-1"
                 style={{ aspectRatio: `${CANVAS_W} / ${CANVAS_H}` }}
                 {...dragHandlers}
             >
                 <div
-                    className="canvas-scale-outer rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-elevated)]"
+                    className="canvas-scale-outer preview-frame overflow-hidden rounded-[var(--radius-lg)]"
                     style={{
                         width:  scale < 1 ? CANVAS_W * scale : CANVAS_W,
                         height: scale < 1 ? CANVAS_H * scale : CANVAS_H,

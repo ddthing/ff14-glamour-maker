@@ -3,12 +3,6 @@ import type { AppState, EquipmentPart, EquipItem } from '../../types';
 
 export const CURRENT_STATE_VERSION = 1;
 
-type SerializableState = Omit<AppState, 'imageSrc' | 'croppedImageSrc'>;
-
-interface VersionedState extends SerializableState {
-  version: number;
-}
-
 export interface DecodeStateResult {
   state: AppState;
   status: 'empty' | 'valid' | 'recovered' | 'invalid';
@@ -132,55 +126,6 @@ function sanitizeState(value: unknown): DecodeStateResult {
   };
 
   return { state, status: warnings.length > 0 ? 'recovered' : 'valid', warnings };
-}
-
-function encodeData(value: object): string {
-  const bytes = new TextEncoder().encode(JSON.stringify(value));
-  let binary = '';
-  bytes.forEach(byte => {
-    binary += String.fromCharCode(byte);
-  });
-  return btoa(binary);
-}
-
-function decodeData(encoded: string): unknown {
-  const binary = atob(encoded);
-  const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
-  return JSON.parse(new TextDecoder().decode(bytes));
-}
-
-export function encodeStateHash(state: AppState): string {
-  const serializable: SerializableState = {
-    crop: state.crop,
-    zoom: state.zoom,
-    items: state.items,
-    title: state.title,
-    creator: state.creator,
-  };
-  const payload: VersionedState = { version: CURRENT_STATE_VERSION, ...serializable };
-  return `#data=${encodeData(payload)}`;
-}
-
-export function decodeStateHash(hash: string): DecodeStateResult {
-  if (!hash || !hash.startsWith('#data=')) {
-    return { state: cloneInitialState(), status: 'empty', warnings: [] };
-  }
-
-  try {
-    const decoded = decodeData(hash.slice('#data='.length));
-    if (!isRecord(decoded)) {
-      return { state: cloneInitialState(), status: 'invalid', warnings: ['state must be an object'] };
-    }
-    const state = { ...decoded };
-    delete state.version;
-    return sanitizeState(state);
-  } catch {
-    return {
-      state: cloneInitialState(),
-      status: 'invalid',
-      warnings: ['state hash could not be decoded'],
-    };
-  }
 }
 
 export function decodeStateValue(value: unknown): DecodeStateResult {

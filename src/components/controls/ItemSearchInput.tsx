@@ -45,8 +45,8 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     aria-activedescendant={selectedIndex >= 0 ? `${listboxId}-option-${selectedIndex}` : undefined}
                     aria-label={`${currentSlot ? t(`slots.${currentSlot}`) : ''} ${t('common.search_item')}`.trim()}
                     className={`
-                        w-full h-full bg-[var(--surface-100)] border rounded-lg px-4 pl-10 text-sm 
-                        focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] outline-none transition-[border-color,box-shadow,background-color]
+                        input-focus-control w-full h-full bg-[var(--surface-100)] border rounded-[var(--radius-sm)] px-4 pl-10 text-sm
+                        outline-none transition-[border-color,box-shadow,background-color]
                         ${hasError ? 'border-[var(--error)] bg-[var(--error)]/5' : 'border-[var(--border)]'}
                     `}
                     placeholder={t('common.search_item')}

@@ -49,6 +49,15 @@ describe('localized application chrome', () => {
     await renderChrome('en');
 
     expect(container.querySelector('header')?.getAttribute('aria-label')).toBe('Main navigation');
+    expect(container.querySelector('.brand-wordmark')?.textContent).toBe('Glamour Set Maker');
+    expect(container.querySelector('header img')).toBeNull();
+    expect(container.querySelector('header > div')?.className).toContain('h-[52px]');
+    expect(container.querySelector('.header-control-rail')).not.toBeNull();
+    expect(container.querySelectorAll('.header-control-cell')).toHaveLength(4);
+    expect(
+      Array.from(container.querySelectorAll('.header-control-cell'))
+        .every(cell => cell.tagName === 'BUTTON'),
+    ).toBe(true);
     expect(localFooterLabels()).toEqual(['Guide', 'FAQ', 'About', 'Terms', 'Privacy']);
   });
 
@@ -56,6 +65,7 @@ describe('localized application chrome', () => {
     await renderChrome('ja');
 
     expect(container.querySelector('header')?.getAttribute('aria-label')).toBe('メインナビゲーション');
+    expect(container.querySelector('.brand-wordmark')?.textContent).toBe('ミラプリセットメーカー');
     expect(localFooterLabels()).toEqual([
       'ガイド',
       'よくある質問',

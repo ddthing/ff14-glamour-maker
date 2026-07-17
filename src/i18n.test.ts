@@ -15,10 +15,12 @@ describe('translation resources', () => {
     }
   });
 
-  it('uses the intended localized labels for off-hand and the Japanese brand', () => {
+  it('uses the intended localized labels and standardized product names', () => {
     expect(i18n.getResource('ko', 'translation', 'slots.offhand')).toBe('보조무기');
     expect(i18n.getResource('en', 'translation', 'slots.offhand')).toBe('Off Hand');
     expect(i18n.getResource('ja', 'translation', 'slots.offhand')).toBe('副武器');
-    expect(i18n.getResource('ja', 'translation', 'common.title_brand')).toBe('FFXIV ミラプリセットメーカー');
+    expect(i18n.getResource('ko', 'translation', 'common.title_brand')).toBe('투영 세트 메이커');
+    expect(i18n.getResource('en', 'translation', 'common.title_brand')).toBe('Glamour Set Maker');
+    expect(i18n.getResource('ja', 'translation', 'common.title_brand')).toBe('ミラプリセットメーカー');
   });
 });

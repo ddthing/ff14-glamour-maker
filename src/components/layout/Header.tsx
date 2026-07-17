@@ -1,86 +1,50 @@
+import { Moon, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useDarkMode } from '../../hooks/useDarkMode';
+import { useLocalizedMetadata } from '../../hooks/useLocalizedMetadata';
 import { LanguageSelector } from './LanguageSelector';
-import { Sun, Moon } from 'lucide-react';
 
-/**
- * Header (Global Navigation Bar)
- * Design Reference: Cursor Warm Minimalism
- */
 export function Header() {
-    const { t } = useTranslation();
-    const [isDark, toggleDark] = useDarkMode();
+  const { t } = useTranslation();
+  const [isDark, toggleDark] = useDarkMode();
+  useLocalizedMetadata();
 
-    return (
-        <>
-            <a
-                href="#main-content"
-                className="fixed left-4 top-4 z-[4000] -translate-y-24 bg-[var(--text-primary)] px-4 py-2 text-sm font-bold text-[var(--bg-app)] shadow-lg transition-transform focus-visible:translate-y-0"
+  return (
+    <>
+      <a
+        href="#main-content"
+        className="fixed left-4 top-2 z-[4000] -translate-y-24 rounded-[var(--radius-sm)] bg-[var(--text-primary)] px-4 py-2 text-sm font-bold text-[var(--bg-app)] shadow-lg transition-transform focus-visible:translate-y-0"
+      >
+        {t('common.skip_to_content')}
+      </a>
+
+      <header
+        aria-label={t('common.main_navigation')}
+        className="app-header sticky top-0 z-50 w-full shrink-0"
+      >
+        <div className="mx-auto flex h-[52px] w-full max-w-[1480px] items-center justify-between gap-3 px-3 sm:px-5 lg:px-10">
+          <div className="flex min-w-0 items-center">
+            <span className="brand-wordmark whitespace-nowrap">{t('common.title_brand')}</span>
+          </div>
+
+          <div className="header-control-rail shrink-0">
+            <LanguageSelector />
+            <span aria-hidden="true" className="header-control-divider" />
+            <button
+              id="dark-mode-toggle"
+              type="button"
+              onClick={toggleDark}
+              aria-label={isDark ? t('common.to_light') : t('common.to_dark')}
+              aria-pressed={isDark}
+              className="header-control-cell"
             >
-                {t('common.skip_to_content')}
-            </a>
-            <header
-                aria-label={t('common.main_navigation')}
-                className="w-full shrink-0 z-50 transition-[background-color,box-shadow] duration-300 bg-[var(--bg-app)]/85 backdrop-blur-xl sticky top-0"
-            >
-
-                <div className="max-w-[1440px] mx-auto w-full flex items-center justify-between h-[64px] px-4 md:px-10">
-                    {/* ── 로고 & 브랜드 ─── */}
-                    <div className="flex items-center gap-2 md:gap-3 min-w-0">
-                        <img
-                            src="/favicon.svg"
-                            alt=""
-                            aria-hidden="true"
-                            width="32"
-                            height="32"
-                            className="w-8 h-8 shrink-0 object-contain"
-                        />
-                        <div className="flex flex-col min-w-0 justify-center">
-                            <span
-                                translate="no"
-                                className="text-[1rem] md:text-[1.1rem] font-black tracking-tight text-[var(--text-primary)] whitespace-nowrap leading-none"
-                            >
-                                {t('common.title_brand', '투영 세트 메이커')}
-                            </span>
-                            <span
-                                translate="no"
-                                className="text-[0.6rem] md:text-[0.65rem] font-semibold text-[var(--text-muted)] whitespace-nowrap tracking-[0.15em] uppercase mt-0.5"
-                            >
-                                FFXIV Glamour Set Maker
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* ── 우측 버튼 그룹 ─── */}
-                    <div className="flex items-center gap-1.5 md:gap-3">
-                        <div className="flex items-center gap-1 md:gap-2">
-                            {/* 언어 선택 */}
-                            <LanguageSelector />
-
-                            {/* 구분선 */}
-                            <div
-                                role="separator"
-                                aria-hidden="true"
-                                className="w-px h-3.5 bg-[var(--border)] mx-1"
-                            />
-
-                            {/* 다크모드 토글 */}
-                            <button
-                                id="dark-mode-toggle"
-                                onClick={toggleDark}
-                                aria-label={isDark
-                                    ? t('common.to_light', '라이트 모드로 전환')
-                                    : t('common.to_dark', '다크 모드로 전환')}
-                                aria-pressed={isDark}
-                                className="flex items-center justify-center w-8 h-8 rounded-full bg-transparent border-none text-[var(--text-secondary)] cursor-pointer transition-[background-color,color,transform] hover:bg-[var(--surface-300)] hover:text-[var(--accent)] hover:rotate-12 touch-manipulation"
-                            >
-                                {isDark ? <Sun size={15} aria-hidden="true" /> : <Moon size={15} aria-hidden="true" />}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-        </>
-    );
+              {isDark
+                ? <Sun size={15} aria-hidden="true" />
+                : <Moon size={15} aria-hidden="true" />}
+            </button>
+          </div>
+        </div>
+      </header>
+    </>
+  );
 }

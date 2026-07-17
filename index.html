@@ -6,13 +6,14 @@
 
   <!-- ── 파비콘 & 앱 아이콘 ───────────────────────────────────── -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="/favicon.png" sizes="180x180" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/manifest.ko.webmanifest" />
+  <meta name="apple-mobile-web-app-title" content="투영 세트 메이커" />
 
   <!-- ── 색상 스킴 — 라이트 모드 기본 ── -->
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f1ed" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#1a1915" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f6fb" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#17151f" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -21,10 +22,10 @@
   <link rel="preconnect" href="https://xivapi.com" crossorigin />
 
   <!-- ── SEO Core ─────────────────────────────────────────────── -->
-  <title>투영 메이커 | 파이널판타지14 글래머 카드 메이커</title>
-  <meta name="description" content="파이널판타지14(FF14) 투영 세트를 예쁜 카드로 만들고 공유하세요. 캐릭터 사진과 장비 아이템 정보를 한 장의 고화질 이미지로 저장할 수 있는 무료 글래머 카드 메이커입니다." />
+  <title>투영 세트 메이커 | 파이널판타지14 투영 카드 제작</title>
+  <meta name="description" content="파이널판타지14 투영 세트를 한 장의 고화질 카드 이미지로 만드는 무료 웹 도구입니다." />
   <meta name="keywords" content="파이널판타지14, FF14, FFXIV, 파판14, 룩템, 투영, 글래머, 코디, 카드메이커, 장비, 염색" />
-  <meta name="author" content="투영 메이커" />
+  <meta name="author" content="투영 세트 메이커" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ff14-glamour.pages.dev/" />
 
@@ -33,20 +34,20 @@
 
   <!-- ── Open Graph (SNS 공유 최적화) ─────────────────────────── -->
   <meta property="og:type"         content="website" />
-  <meta property="og:site_name"    content="투영 메이커" />
+  <meta property="og:site_name"    content="투영 세트 메이커" />
   <meta property="og:locale"       content="ko_KR" />
   <meta property="og:url"          content="https://ff14-glamour.pages.dev/" />
-  <meta property="og:title"        content="투영 메이커 | 파이널판타지14 글래머 카드 메이커" />
-  <meta property="og:description"  content="FF14 투영 세트를 예쁜 카드로! 캐릭터 사진과 장비 정보를 한 장의 고화질 이미지로 저장하는 무료 서비스." />
+  <meta property="og:title"        content="투영 세트 메이커 | 파이널판타지14 투영 카드 제작" />
+  <meta property="og:description"  content="FF14 투영 세트와 장비 정보를 한 장의 고화질 이미지로 저장하는 무료 웹 도구." />
   <meta property="og:image"        content="https://ff14-glamour.pages.dev/og-image.png" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt"    content="투영 메이커 — FF14 글래머 카드 메이커" />
+  <meta property="og:image:alt"    content="투영 세트 메이커, FF14 투영 카드 제작 도구" />
 
   <!-- ── Twitter / X 카드 ─────────────────────────────────────── -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="투영 메이커 | FF14 글래머 카드 메이커" />
-  <meta name="twitter:description" content="파이널판타지14 투영 세트를 예쁜 카드로 만들고 공유하세요." />
+  <meta name="twitter:title"       content="투영 세트 메이커 | FF14 투영 카드 제작" />
+  <meta name="twitter:description" content="파이널판타지14 투영 세트를 고화질 카드 이미지로 저장하세요." />
   <meta name="twitter:image"       content="https://ff14-glamour.pages.dev/og-image.png" />
 
   <!-- ── Google AdSense ───────────────────────────────────────── -->
@@ -57,8 +58,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "투영 메이커",
-    "description": "파이널판타지14 투영 세트를 예쁜 카드로 만들고 공유하는 무료 글래머 카드 메이커",
+    "name": "투영 세트 메이커",
+    "description": "파이널판타지14 투영 세트를 고화질 카드 이미지로 만드는 무료 웹 도구",
     "url": "https://ff14-glamour.pages.dev/",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Web",

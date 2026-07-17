@@ -71,11 +71,10 @@ function readStoredPresets(): { presets: Preset[]; error: string | null } {
 }
 
 export function usePresets(): UsePresetsReturn {
-  const initialState = useRef<ReturnType<typeof readStoredPresets> | null>(null);
-  initialState.current ??= readStoredPresets();
-  const [presets, setPresets] = useState<Preset[]>(initialState.current.presets);
+  const [initialState] = useState(readStoredPresets);
+  const [presets, setPresets] = useState<Preset[]>(initialState.presets);
   const presetsRef = useRef(presets);
-  const [error, setError] = useState<string | null>(initialState.current.error);
+  const [error, setError] = useState<string | null>(initialState.error);
 
   const savePresetsToStorage = useCallback((newPresets: Preset[]): boolean => {
     try {

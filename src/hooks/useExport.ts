@@ -54,7 +54,7 @@ export function useExport(): UseExportReturn {
     try {
       const { exportCanvasElement } = await import('../features/export/exportCanvas');
       const dataUrl = await exportCanvasElement(element, { onStage: setStage });
-      setStage('sharing');
+      setStage(null);
 
       try {
         if (await shareImage(dataUrl, title)) return;

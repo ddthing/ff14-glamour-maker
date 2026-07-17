@@ -1,24 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { INITIAL_STATE } from '../../constants/initialState';
 import {
-  CURRENT_STATE_VERSION,
-  decodeStateHash,
   decodeStateValue,
-  encodeStateHash,
 } from './stateCodec';
 
-function encodeLegacy(value: object): string {
-  const bytes = new TextEncoder().encode(JSON.stringify(value));
-  let binary = '';
-  bytes.forEach(byte => {
-    binary += String.fromCharCode(byte);
-  });
-  return `#data=${btoa(binary)}`;
-}
-
 describe('stateCodec', () => {
-  it('migrates an unversioned link and adds a safe offhand default', () => {
-    const hash = encodeLegacy({
+  it('migrates an unversioned preset and adds a safe offhand default', () => {
+    const result = decodeStateValue({
       title: '여름 투영',
       creator: '테스터',
       items: {
@@ -33,8 +21,6 @@ describe('stateCodec', () => {
       },
     });
 
-    const result = decodeStateHash(hash);
-
     expect(result.status).toBe('valid');
     expect(result.state.title).toBe('여름 투영');
     expect(result.state.items.mainhand.nameJa).toBe('デスシックル');
@@ -45,42 +31,8 @@ describe('stateCodec', () => {
     });
   });
 
-  it('round-trips Unicode without serializing uploaded images', () => {
-    const state = {
-      ...INITIAL_STATE,
-      title: '星빛 Glamour',
-      creator: '제작자',
-      imageSrc: 'data:image/png;base64,large',
-      croppedImageSrc: 'data:image/png;base64,cropped',
-      items: {
-        ...INITIAL_STATE.items,
-        head: {
-          ...INITIAL_STATE.items.head,
-          name: '안경',
-          nameKo: '안경',
-          nameEn: 'Glasses',
-          nameJa: '眼鏡',
-        },
-      },
-    };
-
-    const hash = encodeStateHash(state);
-    const decodedJson = new TextDecoder().decode(
-      Uint8Array.from(atob(hash.slice('#data='.length)), char => char.charCodeAt(0)),
-    );
-
-    expect(JSON.parse(decodedJson).version).toBe(CURRENT_STATE_VERSION);
-    expect(decodedJson).not.toContain('data:image');
-    expect(decodeStateHash(hash).state).toMatchObject({
-      title: '星빛 Glamour',
-      creator: '제작자',
-      imageSrc: null,
-      croppedImageSrc: null,
-    });
-  });
-
   it('recovers safely from malformed fields and unknown slots', () => {
-    const hash = encodeLegacy({
+    const result = decodeStateValue({
       title: 123,
       zoom: 'huge',
       crop: { x: 'bad', y: 20 },
@@ -89,8 +41,6 @@ describe('stateCodec', () => {
         exploit: { name: 'not a slot' },
       },
     });
-
-    const result = decodeStateHash(hash);
 
     expect(result.status).toBe('recovered');
     expect(result.state.title).toBe(INITIAL_STATE.title);
@@ -101,8 +51,8 @@ describe('stateCodec', () => {
     expect(result.warnings.length).toBeGreaterThan(0);
   });
 
-  it('returns the initial state for a broken hash', () => {
-    const result = decodeStateHash('#data=not-valid-base64');
+  it('returns the initial state for a broken preset value', () => {
+    const result = decodeStateValue('not-an-object');
 
     expect(result.status).toBe('invalid');
     expect(result.state).toEqual(INITIAL_STATE);

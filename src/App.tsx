@@ -1,49 +1,47 @@
+import { useState } from 'react';
 import { PreviewCanvas } from './components/canvas/PreviewCanvas';
 import { ControlPanel } from './components/controls/ControlPanel';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
-import { useUrlState } from './hooks/useUrlState';
 import { useGlamourActions } from './features/glamour/useGlamourActions';
+import { INITIAL_STATE } from './constants/initialState';
+import type { AppState } from './types';
 
-/**
- * App — Senior Architect Layout
- * min-h-screen: allows the page to scroll naturally
- */
+function createInitialState(): AppState {
+  return {
+    ...INITIAL_STATE,
+    crop: { ...INITIAL_STATE.crop },
+    items: Object.fromEntries(
+      Object.entries(INITIAL_STATE.items).map(([slot, item]) => [slot, { ...item }]),
+    ) as AppState['items'],
+  };
+}
+
 function App() {
-  const [state, setState] = useUrlState();
+  const [state, setState] = useState<AppState>(createInitialState);
   const actions = useGlamourActions(setState);
 
   return (
-    <div className="min-h-[100dvh] flex flex-col w-full bg-[var(--bg-app)]">
-
-      {/* ── Header (shrink-0: fixed height) ── */}
+    <div className="flex min-h-[100dvh] w-full flex-col">
       <Header />
 
-      {/* ── Workspace ── */}
-      <div className="flex-1 w-full max-w-[1440px] mx-auto px-4 md:px-10 flex justify-center mt-6 mb-12">
-
-        {/* Central Workspace (Stage) */}
-        <main id="main-content" tabIndex={-1} className="w-full flex flex-col lg:flex-row gap-4 lg:gap-8 h-auto items-stretch">
-          {/* Left: Canvas */}
-          <div className="flex-1 min-w-0 flex flex-col h-full">
+      <div className="workspace-shell mx-auto flex w-full max-w-[1480px] flex-1 px-3 pb-10 pt-4 sm:px-5 sm:pt-6 lg:px-10 lg:pb-14 lg:pt-8">
+        <main
+          id="main-content"
+          tabIndex={-1}
+          className="grid w-full min-w-0 grid-cols-1 items-stretch gap-4 min-[1400px]:grid-cols-[minmax(0,1fr)_400px] min-[1400px]:gap-9"
+        >
+          <div className="flex min-w-0 flex-col self-stretch">
             <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />
           </div>
 
-          {/* Right: Control Sidebar */}
-          <aside className="w-full lg:w-[400px] shrink-0 flex flex-col h-[600px] lg:h-full">
-            <ControlPanel
-              state={state}
-              actions={actions}
-            />
+          <aside className="flex w-full min-w-0 flex-col self-stretch">
+            <ControlPanel state={state} actions={actions} />
           </aside>
         </main>
-
-        {/* Ad Rail removed */}
       </div>
 
-      {/* ── Footer ── */}
       <Footer />
-
     </div>
   );
 }

@@ -9,13 +9,13 @@ interface ControlTabsProps {
 
 export function ControlTabs({ activeTab, equipmentLabel, generalLabel, onChange }: ControlTabsProps) {
   return (
-    <div className="flex border-b border-[var(--border)]" role="tablist">
+    <div className="control-tabs" role="tablist">
       <button
         type="button"
         role="tab"
         id="equipment-tab"
         aria-controls="control-tabpanel"
-        className={`flex-1 py-3 text-sm font-bold transition-colors ${activeTab === 'equipment' ? 'text-[var(--text-primary)] border-b-2 border-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'}`}
+        className="control-tab"
         onClick={() => onChange('equipment')}
         aria-selected={activeTab === 'equipment'}
       >
@@ -26,7 +26,7 @@ export function ControlTabs({ activeTab, equipmentLabel, generalLabel, onChange 
         role="tab"
         id="general-tab"
         aria-controls="control-tabpanel"
-        className={`flex-1 py-3 text-sm font-bold transition-colors ${activeTab === 'general' ? 'text-[var(--text-primary)] border-b-2 border-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'}`}
+        className="control-tab"
         onClick={() => onChange('general')}
         aria-selected={activeTab === 'general'}
       >

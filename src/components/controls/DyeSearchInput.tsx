@@ -44,7 +44,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
     const matchedDye = FF14_DYES.find(d => d.name === value);
 
     return (
-        <div ref={wrapperRef} className="relative flex-1 flex items-center bg-[var(--surface-100)] border border-[var(--border)] rounded-lg px-3 h-[44px] gap-2 transition-[border-color,box-shadow] focus-within:border-[var(--accent)] focus-within:ring-1 focus-within:ring-[var(--accent)]">
+        <div ref={wrapperRef} className="input-focus-shell relative flex-1 flex items-center bg-[var(--surface-100)] border border-[var(--border)] rounded-[var(--radius-sm)] px-3 h-[44px] gap-2 transition-[border-color,box-shadow]">
             {/* Color Swatch Preview */}
             <div 
                 className="w-3.5 h-3.5 rounded-full border border-[var(--border)] shrink-0 transition-colors shadow-sm"
@@ -64,7 +64,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
                 aria-expanded={open}
                 aria-controls={listboxId}
                 aria-label={placeholder}
-                className="w-full h-full bg-transparent border-none text-sm focus:ring-0 outline-none placeholder:text-[var(--text-muted)]"
+                className="input-focus-proxy w-full h-full bg-transparent border-none text-sm outline-none placeholder:text-[var(--text-muted)]"
                 placeholder={placeholder}
                 value={open ? searchTerm : value}
                 onChange={e => {

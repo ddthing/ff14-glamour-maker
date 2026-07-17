@@ -1,75 +1,45 @@
 import { useTranslation } from 'react-i18next';
 
-/**
- * Footer — Minimal Legal Strip
- * Design: Apple Senior — max height 44px, single-row, zero visual weight.
- */
+const FOOTER_LINKS = [
+  { href: '/guide', key: 'common.footer_guide' },
+  { href: '/faq', key: 'common.footer_faq' },
+  { href: '/about', key: 'common.footer_about' },
+  { href: '/terms', key: 'common.footer_terms' },
+  { href: '/privacy', key: 'common.footer_privacy' },
+] as const;
+
 export function Footer() {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    return (
-        <footer
-            className="w-full shrink-0"
-            style={{
-                borderTop: '1px solid rgba(38,37,30,0.08)',
-                background: 'var(--bg-app)',
-            }}
-        >
-            <div
-                className="max-w-7xl mx-auto px-4 md:px-10 flex flex-row justify-between items-center"
-                style={{ height: '44px' }}
+  return (
+    <footer className="w-full shrink-0 border-t border-[var(--border)] bg-[var(--header-bg)]">
+      <div className="mx-auto flex w-full max-w-[1480px] flex-col gap-3 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-5 lg:px-10">
+        <div className="flex min-w-0 items-center gap-2 text-[0.62rem] text-[var(--text-muted)]">
+          <span className="shrink-0 font-bold tracking-[0.08em]">{t('common.title_brand')}</span>
+          <span aria-hidden="true">·</span>
+          <span className="truncate">© SQUARE ENIX. {t('common.footer_fan_project')}</span>
+        </div>
+
+        <nav aria-label={t('common.footer_navigation')} className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          {FOOTER_LINKS.map(({ href, key }) => (
+            <a
+              key={href}
+              href={href}
+              className="text-[0.68rem] font-medium text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)]"
             >
-                {/* Left: Brand + Copyright */}
-                <div className="flex items-center gap-2 md:gap-3 min-w-0">
-                    <span
-                        className="text-[0.6rem] font-bold tracking-[0.18em] uppercase shrink-0"
-                        style={{ color: 'rgba(38,37,30,0.35)' }}
-                    >
-                        FFXIV Glamour Set Maker
-                    </span>
-                    <span style={{ color: 'rgba(38,37,30,0.15)', fontSize: '0.5rem' }}>·</span>
-                    <span
-                        className="text-[0.55rem] truncate"
-                        style={{ color: 'rgba(38,37,30,0.25)' }}
-                    >
-                        © SQUARE ENIX. Fan Project
-                    </span>
-                </div>
-
-                {/* Right: Links */}
-                <div className="flex items-center gap-4 shrink-0">
-                    {[
-                        { href: '/guide', label: t('common.footer_guide') },
-                        { href: '/faq', label: t('common.footer_faq') },
-                        { href: '/about', label: t('common.footer_about') },
-                        { href: '/terms', label: t('common.footer_terms') },
-                        { href: '/privacy', label: t('common.footer_privacy') },
-                    ].map(({ href, label }) => (
-                        <a
-                            key={href}
-                            href={href}
-                            className="text-[0.6rem] font-medium transition-colors"
-                            style={{ color: 'rgba(38,37,30,0.3)' }}
-                            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(38,37,30,0.65)')}
-                            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(38,37,30,0.3)')}
-                        >
-                            {label}
-                        </a>
-                    ))}
-                    <span style={{ width: '1px', height: '10px', background: 'rgba(38,37,30,0.1)', display: 'inline-block' }} />
-                    <a
-                        href="https://ko-fi.com/reconeur"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[0.6rem] font-bold tracking-wider uppercase flex items-center gap-1 transition-colors"
-                        style={{ color: 'rgba(38,37,30,0.3)' }}
-                        onMouseEnter={e => (e.currentTarget.style.color = 'rgba(38,37,30,0.7)')}
-                        onMouseLeave={e => (e.currentTarget.style.color = 'rgba(38,37,30,0.3)')}
-                    >
-                        ☕ Support
-                    </a>
-                </div>
-            </div>
-        </footer>
-    );
+              {t(key)}
+            </a>
+          ))}
+          <a
+            href="https://ko-fi.com/reconeur"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[0.68rem] font-semibold text-[var(--accent)] transition-colors hover:text-[var(--accent-strong)]"
+          >
+            {t('common.footer_support')}
+          </a>
+        </nav>
+      </div>
+    </footer>
+  );
 }

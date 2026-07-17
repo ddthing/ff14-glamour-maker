@@ -21,7 +21,7 @@ export const INITIAL_STATE: AppState = {
   croppedImageSrc: null,
   crop: { x: 0, y: 0 },
   zoom: 1,
-  title: 'Character Glamour',
+  title: '',
   creator: '',
   items: INITIAL_ITEMS,
 };
