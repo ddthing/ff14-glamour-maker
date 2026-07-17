@@ -5,9 +5,9 @@
 
 ## Summary
 
-Simplify the deployable Vite web application by removing the decorative header icon, consolidating icon usage around the new prism favicon, eliminating the link-sharing feature and its URL-state infrastructure, and resolving the nested-scroll complaint caused by mismatched preview and control-panel heights.
+Simplify the deployable Vite web application by removing the decorative header icon, consolidating icon usage around the new prism favicon, adding consistent home-screen shortcut metadata, eliminating the link-sharing feature and its URL-state infrastructure, resolving the nested-scroll complaint caused by mismatched preview and control-panel heights, and enforcing complete Korean, English, and Japanese language isolation.
 
-Stability takes priority over installability. This change does not add a PWA manifest, service worker, offline cache, or install prompt.
+Stability takes priority over PWA features. This change adds only the metadata and icon files required for a consistent home-screen shortcut. It does not add a service worker, offline cache, install prompt, or app-store packaging.
 
 ## Diagnosed Layout Problem
 
@@ -25,16 +25,18 @@ The mismatch is caused by the preview scaling from its `1080:900` aspect ratio w
 
 - Keep the header visually quiet and text-led.
 - Use the approved prism artwork consistently for favicon/icon contexts.
+- Use the same prism artwork when the site is added to a phone home screen.
 - Remove nested scrolling from the editor controls.
 - Align the control surface and preview at wide desktop sizes.
 - Use one natural document scroll on smaller screens.
 - Remove link sharing and all code that exists only to support shared URL state.
 - Preserve upload, search, dye, preset, undo, theme, language, and export behavior.
 - Preserve the internal `1080 × 900` exported-card layout.
+- Show only the selected language in application chrome, editor copy, exported-card copy, and public information pages.
 
 ## Non-Goals
 
-- Adding PWA installation or offline behavior.
+- Adding a service worker, offline behavior, an install prompt, or app-store packaging.
 - Changing the social preview image (`og-image.png`), which is content artwork rather than an application icon.
 - Redesigning the exported card.
 - Deploying to a hosting provider as part of this code change.
@@ -46,9 +48,50 @@ The header removes the `<img>` prism mark entirely. The left side contains only 
 
 The small-screen rule that previously hid the wordmark is removed, because there is no longer an icon to serve as the brand anchor.
 
-`public/favicon.svg` remains the single icon source referenced by `index.html`. No legacy favicon or touch-icon reference may point to a different asset. The repository currently has no web manifest or other app-icon set to synchronize.
+`public/favicon.svg` remains the vector source of truth. Verified PNG derivatives are generated from it for:
+
+- `apple-touch-icon.png` at `180 × 180`;
+- standard home-screen icon at `192 × 192`;
+- large home-screen icon at `512 × 512`.
+
+`index.html` references the SVG favicon, the Apple touch icon, and a minimal web app manifest. The manifest references only PNG derivatives generated from the approved prism source.
+
+The manifest exists solely to provide shortcut name, colors, start URL, display mode, and icons. No service worker or offline runtime is introduced.
 
 `public/og-image.png` remains unchanged because it is used for Open Graph, Twitter, demo content, and structured-data imagery rather than browser or application chrome.
+
+## Language Isolation and Naming
+
+The product name is standardized as:
+
+- Korean: `투영 세트 메이커`;
+- English: `Glamour Set Maker`;
+- Japanese: `ミラプリセットメーカー`.
+
+The former `Glamour Maker`, `FF14 Glamour Maker`, `FFXIV Glamour Set Maker`, and fixed `GLAMOUR MAKER` UI names are removed from user-facing application copy. Legal Final Fantasy XIV references and proper nouns remain when context requires them.
+
+The current i18n language controls:
+
+- header and footer brand name;
+- editor labels and status messages;
+- exported-card labels, empty-state copy, and credit label;
+- Guide, FAQ, About, Terms, and Privacy content;
+- document `<html lang>`;
+- document title and description;
+- home-screen application title metadata;
+- the selected localized manifest reference.
+
+Each public page renders its content from translation resources. English fallback paragraphs must not appear on Korean or Japanese pages. Korean legal copy must not appear on English or Japanese pages.
+
+The site domain, `SQUARE ENIX`, Final Fantasy XIV names, and `@RECONEUR` remain unchanged as proper names. The label surrounding a proper name is translated.
+
+The language selector retains `KR`, `EN`, and `JA` as compact locale codes, while its accessible group label and button names use the current interface language.
+
+### Localized shortcut metadata
+
+The app provides one small manifest per supported language so the shortcut name matches the selected language when the user adds the site to a home screen. All manifests reference the same prism PNG assets and use the same start URL and colors.
+
+Changing language updates the active manifest link and Apple home-screen title without adding a service worker or install flow.
 
 ## Responsive Layout Design
 
@@ -113,6 +156,8 @@ Images continue to be session-local and are not persisted.
 - Removing link sharing must not leave empty live regions, dead translations, or unused clipboard access.
 - Header controls retain keyboard access and visible focus.
 - The wordmark remains visible at narrow widths without causing horizontal overflow.
+- The document language and title update when the interface language changes.
+- Proper names may remain untranslated, but surrounding labels must use the selected language.
 
 ## Verification
 
@@ -123,6 +168,8 @@ Images continue to be session-local and are not persisted.
 - Run the TypeScript and Vite production build.
 - Add or update component tests to assert that the copy-link action is absent and export remains available.
 - Search the source tree for sharing symbols and translation keys after deletion.
+- Add localization tests for brand naming and public pages in Korean, English, and Japanese.
+- Verify the localized manifest files and every referenced PNG icon exist.
 
 ### Browser
 
@@ -142,12 +189,22 @@ At representative tablet and mobile widths:
 
 Verify light and dark modes and confirm there are no browser console errors or warnings.
 
+For each supported language:
+
+- the header, footer, editor, export card, and public pages contain the expected localized brand;
+- no former English-only product name is rendered;
+- `<html lang>`, document title, and home-screen title metadata match the language;
+- the active manifest uses the matching localized application name and the shared prism icon files.
+
 ## Acceptance Criteria
 
 - Header prism image is absent.
-- Every browser/app icon reference uses the approved prism favicon source.
+- Every browser, Apple touch, and manifest icon is derived from the approved prism favicon source.
+- Adding the site to a phone home screen uses the prism icon and the localized product name.
 - The wide-desktop preview and control panel are visually equal in height.
 - The editor has no nested control-panel scrollbar.
 - The image-export action spans the action area.
 - No sharing UI, clipboard sharing code, URL-state code, related translation, or related test remains.
+- Korean, English, and Japanese views contain only their selected interface language except for proper nouns.
+- The standardized brand name is used consistently in all three languages.
 - Existing non-sharing features continue to pass automated and browser verification.
