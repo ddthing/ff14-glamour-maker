@@ -1,6 +1,6 @@
 # Minimal Header and Radius System Design
 
-**Date:** 2026-07-17  
+**Date:** 2026-07-17
 **Status:** Approved for implementation
 
 ## Summary
