@@ -7,15 +7,16 @@ import { DyeSearchInput } from './DyeSearchInput';
 import { SlotButton } from './SlotButton';
 import { SectionLabel } from '../ui/SectionLabel';
 import { SLOT_ORDER } from '../../constants/slots';
+import { getLocalizedItemNames } from '../../utils/formatters';
 
 interface EquipmentTabProps {
-    state: AppState;
-    setState: React.Dispatch<React.SetStateAction<AppState>>;
+    items: AppState['items'];
+    onUpdateItem: (part: EquipmentPart, updates: Partial<EquipItem>) => void;
     onResetItems: () => void;
 }
 
-export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProps) {
-    const { t } = useTranslation();
+export function EquipmentTab({ items, onUpdateItem, onResetItems }: EquipmentTabProps) {
+    const { t, i18n } = useTranslation();
     const [activeSlot, setActiveSlot] = useState<EquipmentPart>('head');
     const [justAutoAdvancedTo, setJustAutoAdvancedTo] = useState<EquipmentPart | null>(null);
 
@@ -25,13 +26,11 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
         return () => window.clearTimeout(timeoutId);
     }, [justAutoAdvancedTo]);
 
-    const activeItem = state.items[activeSlot];
+    const activeItem = items[activeSlot];
+    const activeItemName = getLocalizedItemNames(activeItem, i18n.language).main;
 
     const updateItem = (updates: Partial<EquipItem>) => {
-        setState(s => ({
-            ...s,
-            items: { ...s.items, [activeSlot]: { ...s.items[activeSlot], ...updates } }
-        }));
+        onUpdateItem(activeSlot, updates);
     };
 
     return (
@@ -80,7 +79,7 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
                         </span>
                         {activeItem.name && (
                             <span className="text-xs font-medium text-[var(--accent)] truncate max-w-[200px]">
-                                {activeItem.name}
+                                {activeItemName}
                             </span>
                         )}
                     </div>
@@ -158,7 +157,7 @@ export function EquipmentTab({ state, setState, onResetItems }: EquipmentTabProp
                     <SlotButton
                         key={part}
                         part={part}
-                        item={state.items[part]}
+                        item={items[part]}
                         isActive={activeSlot === part}
                         isHighlighted={justAutoAdvancedTo === part}
                         onClick={() => setActiveSlot(part)}

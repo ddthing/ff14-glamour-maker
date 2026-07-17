@@ -8,13 +8,23 @@ import type { Preset } from '../../hooks/usePresets';
 
 interface GeneralTabProps {
     state: AppState;
-    setState: React.Dispatch<React.SetStateAction<AppState>>;
+    onTitleChange: (title: string) => void;
+    onCreatorChange: (creator: string) => void;
+    onApplyPreset: (preset: Pick<AppState, 'title' | 'creator' | 'items'>) => void;
     presets: Preset[];
     onAddPreset: (name: string) => boolean;
     onRemovePreset: (id: string) => void;
 }
 
-export function GeneralTab({ state, setState, presets, onAddPreset, onRemovePreset }: GeneralTabProps) {
+export function GeneralTab({
+    state,
+    onTitleChange,
+    onCreatorChange,
+    onApplyPreset,
+    presets,
+    onAddPreset,
+    onRemovePreset,
+}: GeneralTabProps) {
     const { t } = useTranslation();
     const [presetNameInput, setPresetNameInput] = useState('');
     
@@ -29,11 +39,11 @@ export function GeneralTab({ state, setState, presets, onAddPreset, onRemovePres
     }, [state.title, state.creator]);
 
     const handleTitleBlur = () => {
-        setState(s => ({ ...s, title: localTitle }));
+        onTitleChange(localTitle);
     };
 
     const handleCreatorBlur = () => {
-        setState(s => ({ ...s, creator: localCreator }));
+        onCreatorChange(localCreator);
     };
 
     return (
@@ -171,7 +181,7 @@ export function GeneralTab({ state, setState, presets, onAddPreset, onRemovePres
                                         cursor: 'pointer',
                                         padding: 0,
                                     }}
-                                    onClick={() => setState(s => ({ ...s, title: p.title, creator: p.creator, items: p.items }))}
+                                    onClick={() => onApplyPreset(p)}
                                 >
                                     {p.name}
                                 </button>

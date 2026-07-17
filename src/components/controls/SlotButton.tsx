@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Plus } from 'lucide-react';
 import type { EquipmentPart, EquipItem } from '../../types';
 import { ItemIcon } from '../canvas/ItemIcon';
+import { getLocalizedItemNames } from '../../utils/formatters';
 
 interface SlotButtonProps {
     part: EquipmentPart;
@@ -16,15 +17,16 @@ interface SlotButtonProps {
  * Design Reference: Cursor Warm Minimalism - Pill/Card hybrid
  */
 export function SlotButton({ part, item, isActive, isHighlighted, onClick }: SlotButtonProps) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const isFilled = !!item.name;
+    const localizedItemName = getLocalizedItemNames(item, i18n.language).main;
 
     return (
         <button
             type="button"
             onClick={onClick}
             aria-pressed={isActive}
-            aria-label={`${t(`slots.${part}`)}${isFilled ? `: ${item.name}` : ''}`}
+            aria-label={`${t(`slots.${part}`)}${isFilled ? `: ${localizedItemName}` : ''}`}
             className={`
                 group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg border transition-[background-color,border-color,box-shadow,transform,color] duration-300
                 ${isHighlighted ? 'animate-pulse bg-[var(--surface-300)] border-[var(--accent)] shadow-[0_0_15px_rgba(245,78,0,0.3)] ring-2 ring-[var(--accent)] scale-[1.05]' : 

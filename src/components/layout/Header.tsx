@@ -20,7 +20,7 @@ export function Header() {
                 {t('common.skip_to_content')}
             </a>
             <header
-                aria-label="메인 내비게이션"
+                aria-label={t('common.main_navigation')}
                 className="w-full shrink-0 z-50 transition-[background-color,box-shadow] duration-300 bg-[var(--bg-app)]/85 backdrop-blur-xl sticky top-0"
             >
 

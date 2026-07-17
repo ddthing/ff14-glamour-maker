@@ -69,7 +69,13 @@ i18n
             items_reset: '장비를 초기화했습니다.',
             preset_deleted: '프리셋을 삭제했습니다.',
             preset_storage_failed: '프리셋을 저장하지 못했습니다. 브라우저 저장 공간을 확인해 주세요.',
-            skip_to_content: '본문으로 이동'
+            skip_to_content: '본문으로 이동',
+            main_navigation: '메인 내비게이션',
+            footer_guide: '가이드',
+            footer_faq: '자주 묻는 질문',
+            footer_about: '소개',
+            footer_terms: '이용약관',
+            footer_privacy: '개인정보처리방침'
           },
           slots: {
             mainhand: '무기',
@@ -155,7 +161,13 @@ i18n
             items_reset: 'Equipment was reset.',
             preset_deleted: 'Preset deleted.',
             preset_storage_failed: 'Could not save the preset. Check your browser storage.',
-            skip_to_content: 'Skip to content'
+            skip_to_content: 'Skip to content',
+            main_navigation: 'Main navigation',
+            footer_guide: 'Guide',
+            footer_faq: 'FAQ',
+            footer_about: 'About',
+            footer_terms: 'Terms',
+            footer_privacy: 'Privacy'
           },
           slots: {
             mainhand: 'Main Hand',
@@ -241,7 +253,13 @@ i18n
             items_reset: '装備を初期化しました。',
             preset_deleted: 'プリセットを削除しました。',
             preset_storage_failed: 'プリセットを保存できませんでした。ブラウザの保存領域を確認してください。',
-            skip_to_content: '本文へ移動'
+            skip_to_content: '本文へ移動',
+            main_navigation: 'メインナビゲーション',
+            footer_guide: 'ガイド',
+            footer_faq: 'よくある質問',
+            footer_about: '概要',
+            footer_terms: '利用規約',
+            footer_privacy: 'プライバシーポリシー'
           },
           slots: {
             mainhand: '主武器',
