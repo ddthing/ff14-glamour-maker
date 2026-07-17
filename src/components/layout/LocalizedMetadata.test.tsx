@@ -44,4 +44,13 @@ describe('localized document metadata', () => {
     expect(document.querySelector('meta[name="apple-mobile-web-app-title"]')?.getAttribute('content')).toBe('ミラプリセットメーカー');
     expect(document.querySelector('link[rel="manifest"]')?.getAttribute('href')).toBe('/manifest.ja.webmanifest');
   });
+
+  it('uses the dedicated Korean home-screen name', async () => {
+    await act(async () => {
+      await i18n.changeLanguage('ko');
+      root.render(<Header />);
+    });
+
+    expect(document.querySelector('meta[name="apple-mobile-web-app-title"]')?.getAttribute('content')).toBe('투영세트 메이커');
+  });
 });

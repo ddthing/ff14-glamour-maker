@@ -22,7 +22,7 @@ export function useLocalizedMetadata(): void {
     document.documentElement.lang = language;
     document.title = t('common.meta_title');
     setMetaContent('meta[name="description"]', t('common.meta_description'));
-    setMetaContent('meta[name="apple-mobile-web-app-title"]', t('common.title_brand'));
+    setMetaContent('meta[name="apple-mobile-web-app-title"]', t('common.home_screen_name'));
     document
       .querySelector<HTMLLinkElement>('link[rel="manifest"]')
       ?.setAttribute('href', `/manifest.${language}.webmanifest`);

@@ -20,15 +20,15 @@ describe('home-screen assets', () => {
   });
 
   it.each([
-    ['ko', '투영 세트 메이커'],
+    ['ko', '투영세트 메이커'],
     ['en', 'Glamour Set Maker'],
     ['ja', 'ミラプリセットメーカー'],
   ])('provides a localized %s manifest using shared icons', (language, name) => {
     const manifest = JSON.parse(
       manifests[language as keyof typeof manifests],
-    ) as { name: string; lang: string; icons: Array<{ src: string }> };
+    ) as { name: string; short_name: string; lang: string; icons: Array<{ src: string }> };
 
-    expect(manifest).toMatchObject({ name, lang: language });
+    expect(manifest).toMatchObject({ name, short_name: name, lang: language });
     expect(manifest.icons.map(icon => icon.src)).toEqual(['/icon-192.png', '/icon-512.png']);
   });
 });
