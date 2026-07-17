@@ -4,6 +4,7 @@ import type { EquipmentPart } from '../../types';
 import { ItemIcon } from '../canvas/ItemIcon';
 import { Search, AlertCircle, Loader2 } from 'lucide-react';
 import { useItemSearchCombobox } from '../../features/search/useItemSearchCombobox';
+import { getLocalizedItemNames } from '../../utils/formatters';
 
 interface Props {
     value: string;
@@ -20,7 +21,7 @@ interface Props {
  * Design Reference: Cursor Warm Minimalism - Floating dropdown with warm borders
  */
 export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, onSelect }: Props) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const search = useItemSearchCombobox({ value, currentSlot, onNameChange, onSelect });
     const {
         containerRef, inputRef, listboxId, localValue, debouncedQuery, filteredResults,
@@ -94,7 +95,9 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     )}
 
                     {/* Results List */}
-                    {filteredResults.map((item, index) => (
+                    {filteredResults.map((item, index) => {
+                        const { main, sub } = getLocalizedItemNames(item, i18n.language);
+                        return (
                         <button
                             id={`${listboxId}-option-${index}`}
                             type="button"
@@ -117,16 +120,17 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                             </div>
                             <div className="flex-1 min-w-0">
                                 <div className="text-sm font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--accent)]">
-                                    {item.name}
+                                    {main}
                                 </div>
-                                {item.nameEn && (
+                                {sub && (
                                     <div className="text-xs text-[var(--text-muted)] truncate">
-                                        {item.nameEn}
+                                        {sub}
                                     </div>
                                 )}
                             </div>
                         </button>
-                    ))}
+                        );
+                    })}
                 </div>
             )}
         </div>

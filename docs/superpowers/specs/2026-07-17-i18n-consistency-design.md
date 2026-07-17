@@ -16,7 +16,7 @@
 
 - `common.main_navigation`과 푸터 링크용 번역 키를 한국어, 영어, 일본어에 같은 구조로 추가한다.
 - `Header`와 `Footer`는 하드코딩된 문자열 대신 `t(...)`를 사용한다.
-- `SlotButton`은 현재 `i18n.language`와 `getLocalizedItemNames(item, language).main`으로 접근성 이름을 만든다.
+- `SlotButton`, `EquipmentTab`, `ItemSearchInput`은 현재 `i18n.language`와 `getLocalizedItemNames`로 선택 아이템과 검색 결과의 주·보조 이름을 만든다.
 - 브랜드명, 외부 Support 링크, 페이지 본문 번역은 이번 범위에 포함하지 않는다.
 
 ## 데이터 흐름

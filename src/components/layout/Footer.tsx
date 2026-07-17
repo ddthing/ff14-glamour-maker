@@ -1,8 +1,12 @@
+import { useTranslation } from 'react-i18next';
+
 /**
  * Footer — Minimal Legal Strip
  * Design: Apple Senior — max height 44px, single-row, zero visual weight.
  */
 export function Footer() {
+    const { t } = useTranslation();
+
     return (
         <footer
             className="w-full shrink-0"
@@ -35,11 +39,11 @@ export function Footer() {
                 {/* Right: Links */}
                 <div className="flex items-center gap-4 shrink-0">
                     {[
-                        { href: '/guide', label: '가이드' },
-                        { href: '/faq', label: 'FAQ' },
-                        { href: '/about', label: 'About' },
-                        { href: '/terms', label: '이용약관' },
-                        { href: '/privacy', label: '개인정보처리방침' },
+                        { href: '/guide', label: t('common.footer_guide') },
+                        { href: '/faq', label: t('common.footer_faq') },
+                        { href: '/about', label: t('common.footer_about') },
+                        { href: '/terms', label: t('common.footer_terms') },
+                        { href: '/privacy', label: t('common.footer_privacy') },
                     ].map(({ href, label }) => (
                         <a
                             key={href}

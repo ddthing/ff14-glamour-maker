@@ -7,6 +7,7 @@ import { DyeSearchInput } from './DyeSearchInput';
 import { SlotButton } from './SlotButton';
 import { SectionLabel } from '../ui/SectionLabel';
 import { SLOT_ORDER } from '../../constants/slots';
+import { getLocalizedItemNames } from '../../utils/formatters';
 
 interface EquipmentTabProps {
     items: AppState['items'];
@@ -15,7 +16,7 @@ interface EquipmentTabProps {
 }
 
 export function EquipmentTab({ items, onUpdateItem, onResetItems }: EquipmentTabProps) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [activeSlot, setActiveSlot] = useState<EquipmentPart>('head');
     const [justAutoAdvancedTo, setJustAutoAdvancedTo] = useState<EquipmentPart | null>(null);
 
@@ -26,6 +27,7 @@ export function EquipmentTab({ items, onUpdateItem, onResetItems }: EquipmentTab
     }, [justAutoAdvancedTo]);
 
     const activeItem = items[activeSlot];
+    const activeItemName = getLocalizedItemNames(activeItem, i18n.language).main;
 
     const updateItem = (updates: Partial<EquipItem>) => {
         onUpdateItem(activeSlot, updates);
@@ -77,7 +79,7 @@ export function EquipmentTab({ items, onUpdateItem, onResetItems }: EquipmentTab
                         </span>
                         {activeItem.name && (
                             <span className="text-xs font-medium text-[var(--accent)] truncate max-w-[200px]">
-                                {activeItem.name}
+                                {activeItemName}
                             </span>
                         )}
                     </div>
