@@ -1,13 +1,10 @@
 import { AlertCircle, RotateCcw } from 'lucide-react';
-import type { ShareStatus } from '../../hooks/useShareLink';
 import type { UndoAction } from '../../hooks/useUndoAction';
 
 interface ControlStatusProps {
-  shareStatus: ShareStatus;
   presetError: string | null;
   exportError: string | null;
   undoAction: UndoAction | null;
-  copyFailedLabel: string;
   presetFailedLabel: string;
   exportFailedLabel: string;
   retryLabel: string;
@@ -17,14 +14,11 @@ interface ControlStatusProps {
 }
 
 export function ControlStatus({
-  shareStatus, presetError, exportError, undoAction, copyFailedLabel, presetFailedLabel,
+  presetError, exportError, undoAction, presetFailedLabel,
   exportFailedLabel, retryLabel, undoLabel, onRetryExport, onUndo,
 }: ControlStatusProps) {
   return (
     <div aria-live="polite" aria-atomic="true">
-      {shareStatus === 'error' && (
-        <p className="text-xs text-[var(--error)]" style={{ margin: 0 }}>{copyFailedLabel}</p>
-      )}
       {presetError && (
         <p className="text-xs text-[var(--error)]" role="alert" style={{ margin: 0 }}>
           {presetFailedLabel}

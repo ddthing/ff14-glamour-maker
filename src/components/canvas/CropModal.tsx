@@ -101,7 +101,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                         ref={closeButtonRef}
                         type="button"
                         onClick={onCancel}
-                        className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:bg-white/10 transition-[background-color,color,border-color]"
+                        className="group flex items-center gap-2 px-4 py-2 rounded-[var(--radius-sm)] bg-white/5 border border-white/10 text-white/50 hover:text-white hover:bg-white/10 transition-[background-color,color,border-color]"
                     >
                         <span className="text-xs font-bold tracking-widest uppercase">{t('common.close')}</span>
                         <X size={18} className="group-active:scale-90 transition-transform" aria-hidden="true" />
@@ -109,7 +109,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                 </div>
 
                 {/* The Stage */}
-                <div className="relative w-full aspect-video md:aspect-[16/9] rounded-3xl overflow-hidden border border-white/15 shadow-[0_32px_64px_rgba(0,0,0,0.6)]">
+                <div className="relative w-full aspect-video md:aspect-[16/9] rounded-[var(--radius-lg)] overflow-hidden border border-white/15 shadow-[0_32px_64px_rgba(0,0,0,0.6)]">
                     <Cropper
                         image={imageSrc}
                         crop={crop}
@@ -140,7 +140,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                                 <Search size={14} aria-hidden="true" />
                                 <label htmlFor="crop-zoom">{t('crop.zoom_intensity')}</label>
                             </div>
-                            <span className="bg-white/10 px-2 py-0.5 rounded-md text-white/80 font-mono">{(zoom * 100).toFixed(0)}%</span>
+                            <span className="bg-white/10 px-2 py-0.5 rounded-[var(--radius-sm)] text-white/80 font-mono">{(zoom * 100).toFixed(0)}%</span>
                         </div>
                         <input
                             id="crop-zoom"
@@ -156,7 +156,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                         <button
                             type="button"
                             onClick={onCancel}
-                            className="flex-1 flex items-center justify-center gap-3 rounded-2xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-[background-color,transform] active:scale-[0.96]"
+                            className="flex-1 flex items-center justify-center gap-3 rounded-[var(--radius-sm)] bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-[background-color,transform] active:scale-[0.96]"
                         >
                             <RotateCcw size={20} strokeWidth={2.5} aria-hidden="true" />
                             <span>{t('crop.discard')}</span>
@@ -164,7 +164,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                         <button
                             type="button"
                             onClick={handleConfirm}
-                            className="flex-[1.8] flex items-center justify-center gap-3 rounded-2xl bg-white text-black font-black text-lg hover:bg-[#f2f1ed] transition-[background-color,transform] active:scale-[0.96] shadow-[0_12px_32px_rgba(255,255,255,0.15)]"
+                            className="flex-[1.8] flex items-center justify-center gap-3 rounded-[var(--radius-sm)] bg-white text-black font-black text-lg hover:bg-[#f2f1ed] transition-[background-color,transform] active:scale-[0.96] shadow-[0_12px_32px_rgba(255,255,255,0.15)]"
                         >
                             <Check size={24} strokeWidth={3} aria-hidden="true" />
                             <span>{t('crop.apply_portrait')}</span>

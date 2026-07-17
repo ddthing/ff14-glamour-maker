@@ -8,7 +8,6 @@ interface SlotButtonProps {
     part: EquipmentPart;
     item: EquipItem;
     isActive: boolean;
-    isHighlighted?: boolean;
     onClick: () => void;
 }
 
@@ -16,7 +15,7 @@ interface SlotButtonProps {
  * SlotButton
  * Design Reference: Cursor Warm Minimalism - Pill/Card hybrid
  */
-export function SlotButton({ part, item, isActive, isHighlighted, onClick }: SlotButtonProps) {
+export function SlotButton({ part, item, isActive, onClick }: SlotButtonProps) {
     const { t, i18n } = useTranslation();
     const isFilled = !!item.name;
     const localizedItemName = getLocalizedItemNames(item, i18n.language).main;
@@ -28,9 +27,8 @@ export function SlotButton({ part, item, isActive, isHighlighted, onClick }: Slo
             aria-pressed={isActive}
             aria-label={`${t(`slots.${part}`)}${isFilled ? `: ${localizedItemName}` : ''}`}
             className={`
-                group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg border transition-[background-color,border-color,box-shadow,transform,color] duration-300
-                ${isHighlighted ? 'animate-pulse bg-[var(--surface-300)] border-[var(--accent)] shadow-[0_0_15px_rgba(245,78,0,0.3)] ring-2 ring-[var(--accent)] scale-[1.05]' : 
-                 isActive
+                group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-[var(--radius-sm)] border transition-[background-color,border-color,box-shadow,transform,color] duration-300
+                ${isActive
                     ? 'bg-[var(--surface-300)] border-[var(--border-medium)] ring-1 ring-[var(--border-medium)]'
                     : 'bg-[var(--surface-100)] border-[var(--border)] hover:border-[var(--border-medium)] hover:bg-[var(--surface-200)] hover:scale-[1.02]'
                 }

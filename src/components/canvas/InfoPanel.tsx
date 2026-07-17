@@ -76,7 +76,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
             <div className="relative z-10 flex flex-col h-full" style={{ padding: '32px 40px 24px' }}>
 
                 <CanvasHeading
-                    title={state.title}
+                    title={state.title || t('common.default_set_title')}
                     creator={state.creator}
                     label={t('common.canvas_label')}
                 />
@@ -140,7 +140,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                             letterSpacing: '0.1em',
                             color: 'rgba(255,255,255,0.18)',
                         }}>
-                            DESIGN & DEVELOPMENT:
+                            {t('common.design_credit')}
                         </span>
                         <a
                             href="https://x.com/reconeur"

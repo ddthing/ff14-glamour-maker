@@ -44,7 +44,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
     const matchedDye = FF14_DYES.find(d => d.name === value);
 
     return (
-        <div ref={wrapperRef} className="relative flex-1 flex items-center bg-[var(--surface-100)] border border-[var(--border)] rounded-lg px-3 h-[44px] gap-2 transition-[border-color,box-shadow] focus-within:border-[var(--accent)] focus-within:ring-1 focus-within:ring-[var(--accent)]">
+        <div ref={wrapperRef} className="relative flex-1 flex items-center bg-[var(--surface-100)] border border-[var(--border)] rounded-[var(--radius-sm)] px-3 h-[44px] gap-2 transition-[border-color,box-shadow] focus-within:border-[var(--accent)] focus-within:ring-1 focus-within:ring-[var(--accent)]">
             {/* Color Swatch Preview */}
             <div 
                 className="w-3.5 h-3.5 rounded-full border border-[var(--border)] shrink-0 transition-colors shadow-sm"

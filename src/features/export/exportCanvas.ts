@@ -1,6 +1,6 @@
 import { toPng } from 'html-to-image';
 
-export type ExportStage = 'preparing' | 'rendering' | 'sharing';
+export type ExportStage = 'preparing' | 'rendering';
 
 interface ImageSnapshot {
   image: HTMLImageElement;

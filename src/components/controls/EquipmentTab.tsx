@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Info, RotateCcw, X } from 'lucide-react';
 import type { AppState, EquipmentPart, EquipItem } from '../../types';
@@ -18,13 +18,6 @@ interface EquipmentTabProps {
 export function EquipmentTab({ items, onUpdateItem, onResetItems }: EquipmentTabProps) {
     const { t, i18n } = useTranslation();
     const [activeSlot, setActiveSlot] = useState<EquipmentPart>('head');
-    const [justAutoAdvancedTo, setJustAutoAdvancedTo] = useState<EquipmentPart | null>(null);
-
-    useEffect(() => {
-        if (!justAutoAdvancedTo) return;
-        const timeoutId = window.setTimeout(() => setJustAutoAdvancedTo(null), 800);
-        return () => window.clearTimeout(timeoutId);
-    }, [justAutoAdvancedTo]);
 
     const activeItem = items[activeSlot];
     const activeItemName = getLocalizedItemNames(activeItem, i18n.language).main;
@@ -114,8 +107,6 @@ export function EquipmentTab({ items, onUpdateItem, onResetItems }: EquipmentTab
                         // So we don't update item name on every keystroke anymore to preserve the blank search field.
                     }}
                     onSelect={item => {
-                        const wasEmpty = !activeItem.name;
-                        
                         updateItem({
                             name: item.name,
                             nameKo: item.name,
@@ -124,16 +115,6 @@ export function EquipmentTab({ items, onUpdateItem, onResetItems }: EquipmentTab
                             iconPath: item.iconPath || '',
                             error: ''
                         });
-
-                        // Smart Auto-Advance: Only advance if the slot was originally empty
-                        if (wasEmpty) {
-                            const currentIndex = SLOT_ORDER.indexOf(activeSlot);
-                            if (currentIndex >= 0 && currentIndex < SLOT_ORDER.length - 1) {
-                                const nextSlot = SLOT_ORDER[currentIndex + 1];
-                                setActiveSlot(nextSlot);
-                                setJustAutoAdvancedTo(nextSlot);
-                            }
-                        }
                     }}
                 />
 
@@ -159,7 +140,6 @@ export function EquipmentTab({ items, onUpdateItem, onResetItems }: EquipmentTab
                         part={part}
                         item={items[part]}
                         isActive={activeSlot === part}
-                        isHighlighted={justAutoAdvancedTo === part}
                         onClick={() => setActiveSlot(part)}
                     />
                 ))}
