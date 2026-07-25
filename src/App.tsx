@@ -4,6 +4,7 @@ import { ControlPanel } from './components/controls/ControlPanel';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { useGlamourActions } from './features/glamour/useGlamourActions';
+import { useManagedPhotoUrl } from './hooks/useManagedPhotoUrl';
 import { INITIAL_STATE } from './constants/initialState';
 import type { AppState } from './types';
 
@@ -20,6 +21,7 @@ function createInitialState(): AppState {
 function App() {
   const [state, setState] = useState<AppState>(createInitialState);
   const actions = useGlamourActions(setState);
+  const confirmPhoto = useManagedPhotoUrl(state.croppedImageSrc, actions.setPhoto);
 
   return (
     <div className="flex min-h-[100dvh] w-full flex-col">
@@ -32,7 +34,7 @@ function App() {
           className="grid w-full min-w-0 grid-cols-1 items-stretch gap-4 min-[1400px]:grid-cols-[minmax(0,1fr)_400px] min-[1400px]:gap-9"
         >
           <div className="flex min-w-0 flex-col self-stretch">
-            <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />
+            <PreviewCanvas state={state} onPhotoConfirm={confirmPhoto} />
           </div>
 
           <aside className="flex w-full min-w-0 flex-col self-stretch">

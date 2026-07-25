@@ -83,7 +83,7 @@ describe('useGlamourActions', () => {
   });
 
   it('replaces equipment for preset restoration without changing the photo', () => {
-    act(() => actions.setPhoto('cropped-data', 'source-data'));
+    act(() => actions.setPhoto('blob:cropped-photo'));
     const presetItems = {
       ...currentState.items,
       face: { ...currentState.items.face, name: 'Classic Spectacles' },
@@ -98,8 +98,8 @@ describe('useGlamourActions', () => {
     expect(currentState).toMatchObject({
       title: 'Library Look',
       creator: '@scholar',
-      imageSrc: 'source-data',
-      croppedImageSrc: 'cropped-data',
+      imageSrc: null,
+      croppedImageSrc: 'blob:cropped-photo',
     });
     expect(currentState.items.face.name).toBe('Classic Spectacles');
   });

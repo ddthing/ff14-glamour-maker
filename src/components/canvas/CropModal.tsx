@@ -7,7 +7,7 @@ import { X, Check, Search, RotateCcw } from 'lucide-react';
 interface CropModalProps {
     imageSrc: string;
     onCancel: () => void;
-    onConfirm: (croppedUrl: string, src: string) => void;
+    onConfirm: (croppedImage: Blob) => void;
 }
 
 /**
@@ -21,8 +21,20 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
     const [croppedAreaPx, setCroppedAreaPx] = useState<{
         x: number; y: number; width: number; height: number;
     } | null>(null);
+    const [isProcessing, setIsProcessing] = useState(false);
+    const [error, setError] = useState('');
     const dialogRef = useRef<HTMLDivElement>(null);
     const closeButtonRef = useRef<HTMLButtonElement>(null);
+    const requestGenerationRef = useRef(0);
+    const processingRef = useRef(false);
+
+    const handleCancel = useCallback(() => {
+        requestGenerationRef.current += 1;
+        processingRef.current = false;
+        setIsProcessing(false);
+        setError('');
+        onCancel();
+    }, [onCancel]);
 
     useEffect(() => {
         const previousOverflow = document.body.style.overflow;
@@ -33,7 +45,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'Escape') {
                 event.preventDefault();
-                onCancel();
+                handleCancel();
                 return;
             }
 
@@ -56,11 +68,12 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
 
         document.addEventListener('keydown', handleKeyDown);
         return () => {
+            requestGenerationRef.current += 1;
             document.removeEventListener('keydown', handleKeyDown);
             document.body.style.overflow = previousOverflow;
             previousFocus?.focus();
         };
-    }, [onCancel]);
+    }, [handleCancel]);
 
     const handleCropComplete = useCallback(
         (_: unknown, px: { x: number; y: number; width: number; height: number }) =>
@@ -69,9 +82,25 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
     );
 
     const handleConfirm = async () => {
-        if (!croppedAreaPx) return;
-        const url = await getCroppedImg(imageSrc, croppedAreaPx);
-        if (url) onConfirm(url, imageSrc);
+        if (!croppedAreaPx || processingRef.current) return;
+
+        processingRef.current = true;
+        setIsProcessing(true);
+        setError('');
+        const generation = ++requestGenerationRef.current;
+
+        try {
+            const croppedImage = await getCroppedImg(imageSrc, croppedAreaPx);
+            if (generation !== requestGenerationRef.current) return;
+            processingRef.current = false;
+            setIsProcessing(false);
+            onConfirm(croppedImage);
+        } catch {
+            if (generation !== requestGenerationRef.current) return;
+            processingRef.current = false;
+            setIsProcessing(false);
+            setError('crop-failed');
+        }
     };
 
     return (
@@ -100,7 +129,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                     <button
                         ref={closeButtonRef}
                         type="button"
-                        onClick={onCancel}
+                        onClick={handleCancel}
                         className="group flex items-center gap-2 px-4 py-2 rounded-[var(--radius-sm)] bg-white/5 border border-white/10 text-white/50 hover:text-white hover:bg-white/10 transition-[background-color,color,border-color]"
                     >
                         <span className="text-xs font-bold tracking-widest uppercase">{t('common.close')}</span>
@@ -155,7 +184,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                     <div className="flex gap-4 h-16">
                         <button
                             type="button"
-                            onClick={onCancel}
+                            onClick={handleCancel}
                             className="flex-1 flex items-center justify-center gap-3 rounded-[var(--radius-sm)] bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-[background-color,transform] active:scale-[0.96]"
                         >
                             <RotateCcw size={20} strokeWidth={2.5} aria-hidden="true" />
@@ -164,12 +193,21 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                         <button
                             type="button"
                             onClick={handleConfirm}
+                            disabled={!croppedAreaPx || isProcessing}
                             className="flex-[1.8] flex items-center justify-center gap-3 rounded-[var(--radius-sm)] bg-white text-black font-black text-lg hover:bg-[#f2f1ed] transition-[background-color,transform] active:scale-[0.96] shadow-[0_12px_32px_rgba(255,255,255,0.15)]"
                         >
                             <Check size={24} strokeWidth={3} aria-hidden="true" />
-                            <span>{t('crop.apply_portrait')}</span>
+                            <span>{isProcessing ? t('crop.processing') : t('crop.apply_portrait')}</span>
                         </button>
                     </div>
+                    {error && (
+                        <div
+                            role="alert"
+                            className="rounded-[var(--radius-sm)] border border-red-400/30 bg-red-500/10 px-4 py-3 text-center text-sm font-semibold text-red-200"
+                        >
+                            {t('crop.processing_failed')}
+                        </div>
+                    )}
                 </div>
 
                 {/* Interactive Hint */}

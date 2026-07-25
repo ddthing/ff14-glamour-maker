@@ -15,7 +15,7 @@ export interface GlamourActions {
   replaceItems: (items: AppState['items']) => void;
   resetItems: () => void;
   applyPreset: (preset: PresetState) => void;
-  setPhoto: (croppedImageSrc: string, imageSrc: string) => void;
+  setPhoto: (croppedImageSrc: string) => void;
 }
 
 function createInitialItems(): AppState['items'] {
@@ -62,8 +62,8 @@ export function useGlamourActions(
     }));
   }, [setState]);
 
-  const setPhoto = useCallback((croppedImageSrc: string, imageSrc: string) => {
-    setState(current => ({ ...current, croppedImageSrc, imageSrc }));
+  const setPhoto = useCallback((croppedImageSrc: string) => {
+    setState(current => ({ ...current, croppedImageSrc, imageSrc: null }));
   }, [setState]);
 
   return useMemo(() => ({

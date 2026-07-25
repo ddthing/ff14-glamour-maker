@@ -4,10 +4,11 @@ import { useImageUpload } from '../../hooks/useImageUpload';
 import { PhotoPanel } from './PhotoPanel';
 import { InfoPanel } from './InfoPanel';
 import { useTranslation } from 'react-i18next';
+import { ACCEPTED_IMAGE_INPUT } from '../../features/image/imageFile';
 
 interface Props {
     state: AppState;
-    onPhotoConfirm: (croppedImageSrc: string, imageSrc: string) => void;
+    onPhotoConfirm: (croppedImage: Blob) => void;
 }
 
 const CANVAS_W = 1080;
@@ -33,7 +34,8 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
     const [hoverPhoto, setHoverPhoto] = useState(false);
 
     const {
-        fileInputRef, pendingImage, setPendingImage,
+        fileInputRef, pendingImage, clearPendingImage,
+        error: uploadError,
         isDragging, dragHandlers, onFileInputChange,
     } = useImageUpload();
 
@@ -81,10 +83,10 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
                 )}>
                     <CropModal
                         imageSrc={pendingImage}
-                        onCancel={() => setPendingImage(null)}
-                        onConfirm={(croppedUrl, srcUrl) => {
-                            onPhotoConfirm(croppedUrl, srcUrl);
-                            setPendingImage(null);
+                        onCancel={clearPendingImage}
+                        onConfirm={croppedImage => {
+                            onPhotoConfirm(croppedImage);
+                            clearPendingImage();
                         }}
                     />
                 </Suspense>
@@ -95,7 +97,7 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
                 id="character-photo-upload"
                 ref={fileInputRef}
                 type="file"
-                accept="image/*"
+                accept={ACCEPTED_IMAGE_INPUT}
                 name="character-photo"
                 aria-label={t('common.character_photo')}
                 className="hidden"
@@ -104,10 +106,20 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
 
             <div
                 ref={zoneRef}
-                className="canvas-scale-zone min-w-0 w-full flex-1"
+                className="canvas-scale-zone relative min-w-0 w-full flex-1"
                 style={{ aspectRatio: `${CANVAS_W} / ${CANVAS_H}` }}
                 {...dragHandlers}
             >
+                {uploadError && (
+                    <div
+                        role="alert"
+                        className="absolute left-3 right-3 top-3 z-20 rounded-[var(--radius-sm)] border border-[var(--error)]/30 bg-[var(--surface-100)]/95 px-3 py-2 text-sm text-[var(--error)] shadow-lg"
+                    >
+                        {uploadError === 'file-too-large'
+                            ? t('common.upload_file_too_large')
+                            : t('common.upload_unsupported_type')}
+                    </div>
+                )}
                 <div
                     className="canvas-scale-outer preview-frame overflow-hidden rounded-[var(--radius-lg)]"
                     style={{

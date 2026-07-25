@@ -1,64 +1,88 @@
-import { useRef, useState, useCallback } from 'react';
-
-// ── useImageUpload — 파일 업로드 전용 훅 ─────────────────────────────────────
-// R6: PreviewCanvas에서 파일 입력·드래그앤드롭·파일 읽기 로직을 분리합니다.
-// 단일 책임 원칙: 이 훅은 오직 이미지 파일 → Data URL 변환만 담당합니다.
-// ─────────────────────────────────────────────────────────────────────────────
+import { useCallback, useEffect, useRef, useState } from 'react';
+import {
+  validateImageFile,
+  type ImageFileError,
+} from '../features/image/imageFile';
 
 interface UseImageUploadReturn {
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   pendingImage: string | null;
-  setPendingImage: (url: string | null) => void;
+  clearPendingImage: () => void;
   isDragging: boolean;
+  error: ImageFileError | null;
   loadFile: (file: File) => void;
   dragHandlers: {
-    onDragOver: (e: React.DragEvent) => void;
+    onDragOver: (event: React.DragEvent) => void;
     onDragLeave: () => void;
-    onDrop: (e: React.DragEvent) => void;
+    onDrop: (event: React.DragEvent) => void;
   };
-  onFileInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFileInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export function useImageUpload(): UseImageUploadReturn {
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const pendingImageRef = useRef<string | null>(null);
   const [pendingImage, setPendingImage] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [error, setError] = useState<ImageFileError | null>(null);
+
+  const clearPendingImage = useCallback(() => {
+    const currentUrl = pendingImageRef.current;
+    pendingImageRef.current = null;
+    setPendingImage(null);
+    if (currentUrl) URL.revokeObjectURL(currentUrl);
+  }, []);
 
   const loadFile = useCallback((file: File) => {
-    if (!file.type.startsWith('image/')) return;
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      if (typeof reader.result === 'string') setPendingImage(reader.result);
-    };
-    reader.readAsDataURL(file);
+    const validationError = validateImageFile(file);
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
+    const nextUrl = URL.createObjectURL(file);
+    const previousUrl = pendingImageRef.current;
+    pendingImageRef.current = nextUrl;
+    setPendingImage(nextUrl);
+    setError(null);
+    if (previousUrl) URL.revokeObjectURL(previousUrl);
+  }, []);
+
+  useEffect(() => () => {
+    const currentUrl = pendingImageRef.current;
+    pendingImageRef.current = null;
+    if (currentUrl) URL.revokeObjectURL(currentUrl);
   }, []);
 
   const dragHandlers = {
-    onDragOver: (e: React.DragEvent) => {
-      e.preventDefault();
+    onDragOver: (event: React.DragEvent) => {
+      event.preventDefault();
       setIsDragging(true);
     },
     onDragLeave: () => setIsDragging(false),
-    onDrop: (e: React.DragEvent) => {
-      e.preventDefault();
+    onDrop: (event: React.DragEvent) => {
+      event.preventDefault();
       setIsDragging(false);
-      if (e.dataTransfer.files?.[0]) loadFile(e.dataTransfer.files[0]);
+      const file = event.dataTransfer.files?.[0];
+      if (file) loadFile(file);
     },
   };
 
   const onFileInputChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      if (e.target.files?.[0]) loadFile(e.target.files[0]);
-      e.target.value = '';
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      if (file) loadFile(file);
+      event.target.value = '';
     },
-    [loadFile]
+    [loadFile],
   );
 
   return {
     fileInputRef,
     pendingImage,
-    setPendingImage,
+    clearPendingImage,
     isDragging,
+    error,
     loadFile,
     dragHandlers,
     onFileInputChange,
