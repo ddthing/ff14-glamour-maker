@@ -1,6 +1,6 @@
 # Secure Missing-Item Reporting Design
 
-**Date:** 2026-07-25  
+**Date:** 2026-07-25
 **Status:** Approved for implementation planning
 
 ## Objective
@@ -155,4 +155,3 @@ endpoint does not affect the editor.
 Rollback consists of disabling `enableWebhook` at the `ItemIcon` call site or
 returning `503` from the reporting function. The webhook credential must never
 be restored to client code.
-
