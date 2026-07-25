@@ -18,7 +18,6 @@ const reactTestEnvironment = globalThis as typeof globalThis & {
 function cloneInitialState(): AppState {
   return {
     ...INITIAL_STATE,
-    crop: { ...INITIAL_STATE.crop },
     items: Object.fromEntries(
       Object.entries(INITIAL_ITEMS).map(([slot, item]) => [slot, { ...item }]),
     ) as AppState['items'],
@@ -98,7 +97,6 @@ describe('useGlamourActions', () => {
     expect(currentState).toMatchObject({
       title: 'Library Look',
       creator: '@scholar',
-      imageSrc: null,
       croppedImageSrc: 'blob:cropped-photo',
     });
     expect(currentState.items.face.name).toBe('Classic Spectacles');

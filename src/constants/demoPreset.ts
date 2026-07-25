@@ -1,10 +1,7 @@
 import type { AppState } from '../types';
 
 export const DEMO_PRESET: AppState = {
-  imageSrc: '/og-image.png',
   croppedImageSrc: '/og-image.png',
-  crop: { x: 0, y: 0 },
-  zoom: 1,
   title: 'Nier Automata - 2B',
   creator: '@reconeur',
   items: {

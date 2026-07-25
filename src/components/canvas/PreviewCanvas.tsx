@@ -73,7 +73,7 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
         };
     }, []);
 
-    const bgSrc = state.croppedImageSrc || state.imageSrc;
+    const bgSrc = state.croppedImageSrc;
 
     return (
         <>

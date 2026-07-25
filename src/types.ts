@@ -55,14 +55,8 @@ export interface EquipItem {
  * Manages the user's current character snapshot, customized equipment, and metadata.
  */
 export interface AppState {
-    /** The base64 or URL of the user's uploaded character screenshot */
-    imageSrc: string | null;
     /** The final cropped character image for the canvas */
     croppedImageSrc: string | null;
-    /** The specific x/y crop coordinates applied to the user's image */
-    crop: { x: number; y: number };
-    /** The zoom level applied during the cropping phase */
-    zoom: number;
     /** A dictionary recording the user's item choices across all equipment slots */
     items: Record<EquipmentPart, EquipItem>;
     /** The user-defined title of the glamour set (e.g., "Casual Wear") */

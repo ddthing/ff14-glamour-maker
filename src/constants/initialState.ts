@@ -17,10 +17,7 @@ export const INITIAL_ITEMS: Record<EquipmentPart, EquipItem> = {
 };
 
 export const INITIAL_STATE: AppState = {
-  imageSrc: null,
   croppedImageSrc: null,
-  crop: { x: 0, y: 0 },
-  zoom: 1,
   title: '',
   creator: '',
   items: INITIAL_ITEMS,

@@ -34,8 +34,6 @@ describe('stateCodec', () => {
   it('recovers safely from malformed fields and unknown slots', () => {
     const result = decodeStateValue({
       title: 123,
-      zoom: 'huge',
-      crop: { x: 'bad', y: 20 },
       items: {
         head: { name: 999, nameEn: 'Valid fallback' },
         exploit: { name: 'not a slot' },
@@ -44,11 +42,29 @@ describe('stateCodec', () => {
 
     expect(result.status).toBe('recovered');
     expect(result.state.title).toBe(INITIAL_STATE.title);
-    expect(result.state.zoom).toBe(INITIAL_STATE.zoom);
-    expect(result.state.crop).toEqual({ x: 0, y: 20 });
     expect(result.state.items.head.name).toBe('');
     expect('exploit' in result.state.items).toBe(false);
     expect(result.warnings.length).toBeGreaterThan(0);
+  });
+
+  it('ignores obsolete photo and crop fields in legacy preset values', () => {
+    const result = decodeStateValue({
+      title: 'Legacy preset',
+      creator: '@legacy',
+      imageSrc: 'data:image/png;base64,legacy',
+      croppedImageSrc: 'blob:legacy-photo',
+      crop: { x: 'bad', y: 20 },
+      zoom: 'huge',
+      items: {},
+    });
+
+    expect(result.status).toBe('valid');
+    expect(result.state.title).toBe('Legacy preset');
+    expect(result.state.creator).toBe('@legacy');
+    expect(result.state).not.toHaveProperty('imageSrc');
+    expect(result.state).not.toHaveProperty('crop');
+    expect(result.state).not.toHaveProperty('zoom');
+    expect(result.state.croppedImageSrc).toBeNull();
   });
 
   it('returns the initial state for a broken preset value', () => {

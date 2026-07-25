@@ -63,7 +63,7 @@ export function useGlamourActions(
   }, [setState]);
 
   const setPhoto = useCallback((croppedImageSrc: string) => {
-    setState(current => ({ ...current, croppedImageSrc, imageSrc: null }));
+    setState(current => ({ ...current, croppedImageSrc }));
   }, [setState]);
 
   return useMemo(() => ({

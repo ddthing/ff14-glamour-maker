@@ -65,7 +65,6 @@ function createState(overrides: Partial<AppState> = {}): AppState {
   return {
     ...INITIAL_STATE,
     ...overrides,
-    crop: { ...INITIAL_STATE.crop },
     items: Object.fromEntries(
       Object.entries(overrides.items ?? INITIAL_STATE.items)
         .map(([slot, item]) => [slot, { ...item }]),

@@ -11,7 +11,6 @@ import type { AppState } from './types';
 function createInitialState(): AppState {
   return {
     ...INITIAL_STATE,
-    crop: { ...INITIAL_STATE.crop },
     items: Object.fromEntries(
       Object.entries(INITIAL_STATE.items).map(([slot, item]) => [slot, { ...item }]),
     ) as AppState['items'],

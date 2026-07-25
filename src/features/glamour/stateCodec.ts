@@ -19,7 +19,6 @@ const VALID_SLOTS = new Set<EquipmentPart>(Object.keys(INITIAL_ITEMS) as Equipme
 function cloneInitialState(): AppState {
   return {
     ...INITIAL_STATE,
-    crop: { ...INITIAL_STATE.crop },
     items: Object.fromEntries(
       Object.entries(INITIAL_ITEMS).map(([slot, item]) => [slot, { ...item }]),
     ) as Record<EquipmentPart, EquipItem>,
@@ -45,26 +44,6 @@ function sanitizeString(
   if (value.length > maxLength) {
     warnings.push(`${field} was truncated`);
     return value.slice(0, maxLength);
-  }
-  return value;
-}
-
-function sanitizeNumber(
-  value: unknown,
-  fallback: number,
-  field: string,
-  warnings: string[],
-  minimum: number,
-  maximum: number,
-): number {
-  if (value === undefined) return fallback;
-  if (typeof value !== 'number' || !Number.isFinite(value)) {
-    warnings.push(`${field} must be a finite number`);
-    return fallback;
-  }
-  if (value < minimum || value > maximum) {
-    warnings.push(`${field} was outside the allowed range`);
-    return fallback;
   }
   return value;
 }
@@ -109,19 +88,10 @@ function sanitizeState(value: unknown): DecodeStateResult {
     }
   }
 
-  const cropValue = isRecord(value.crop) ? value.crop : {};
-  if (value.crop !== undefined && !isRecord(value.crop)) warnings.push('crop must be an object');
-
   const state: AppState = {
-    imageSrc: null,
     croppedImageSrc: null,
     title: sanitizeString(value.title, initial.title, 'title', warnings, 120),
     creator: sanitizeString(value.creator, initial.creator, 'creator', warnings, 80),
-    crop: {
-      x: sanitizeNumber(cropValue.x, initial.crop.x, 'crop.x', warnings, -10_000, 10_000),
-      y: sanitizeNumber(cropValue.y, initial.crop.y, 'crop.y', warnings, -10_000, 10_000),
-    },
-    zoom: sanitizeNumber(value.zoom, initial.zoom, 'zoom', warnings, 0.1, 10),
     items,
   };
 
