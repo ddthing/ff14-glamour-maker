@@ -29,8 +29,8 @@ export function useFF14Search() {
     try {
       const searchableItems = await loadSearchItems(currentSlot);
       const nextResults = findItems(searchableItems, trimmedQuery, {
-        slot: currentSlot,
-        limit: 200,
+        slot: currentSlot === 'offhand' ? currentSlot : undefined,
+        limit: 50,
       });
 
       if (generation === requestGeneration.current) {

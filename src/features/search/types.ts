@@ -12,4 +12,5 @@ export interface FF14Item {
   source?: ItemSource;
   equipSlot?: 'mainhand' | 'offhand';
   equipSlots?: EquipmentPart[];
+  searchKeys?: readonly string[];
 }

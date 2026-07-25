@@ -40,6 +40,22 @@ describe('item slot classification', () => {
 });
 
 describe('searchItems', () => {
+  it('uses precomputed search keys without normalizing item names at query time', () => {
+    const item = {
+      ...makeItem(1, 'Unrelated display name', 34),
+      searchKeys: ['needle'],
+    };
+
+    expect(searchItems([item], 'needle')).toEqual([item]);
+  });
+
+  it('returns no results for a non-positive limit', () => {
+    const item = makeItem(1, 'Needle', 34);
+
+    expect(searchItems([item], 'needle', { limit: 0 })).toEqual([]);
+    expect(searchItems([item], 'needle', { limit: -1 })).toEqual([]);
+  });
+
   it('filters by slot before applying the result limit', () => {
     const irrelevant = Array.from({ length: 250 }, (_, index) =>
       makeItem(index, `공용의 머리 ${index}`, 34),

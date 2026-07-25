@@ -39,20 +39,22 @@ export function isMatchingSlot(item: FF14Item, slot: EquipmentPart): boolean {
 }
 
 function normalizeSearchText(value: string): string {
-  return value.normalize('NFKC').toLocaleLowerCase().replace(/\s+/g, '');
+  return value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
 }
 
 function matchScore(item: FF14Item, query: string): number | null {
   let bestScore: number | null = null;
+  const searchKeys = item.searchKeys?.length
+    ? item.searchKeys
+    : [item.name, item.nameEn, item.nameJa].map(normalizeSearchText);
 
-  for (const name of [item.name, item.nameEn, item.nameJa]) {
-    const normalizedName = normalizeSearchText(name);
-    if (!normalizedName) continue;
+  for (const searchKey of searchKeys) {
+    if (!searchKey) continue;
 
     let score: number | null = null;
-    if (normalizedName === query) score = 0;
-    else if (normalizedName.startsWith(query)) score = 1;
-    else if (normalizedName.includes(query)) score = 2;
+    if (searchKey === query) score = 0;
+    else if (searchKey.startsWith(query)) score = 1;
+    else if (searchKey.includes(query)) score = 2;
 
     if (score !== null && (bestScore === null || score < bestScore)) {
       bestScore = score;
@@ -76,15 +78,16 @@ export function searchItems(
   if (!normalizedQuery) return [];
 
   const limit = Math.max(0, options.limit ?? 200);
-  const ranked: Array<{ item: FF14Item; score: number; index: number }> = [];
+  if (limit === 0) return [];
 
-  items.forEach((item, index) => {
-    if (options.slot && !isMatchingSlot(item, options.slot)) return;
+  const buckets: [FF14Item[], FF14Item[], FF14Item[]] = [[], [], []];
+
+  for (const item of items) {
+    if (options.slot && !isMatchingSlot(item, options.slot)) continue;
     const score = matchScore(item, normalizedQuery);
-    if (score === null) return;
-    ranked.push({ item, score, index });
-  });
+    if (score === null || buckets[score].length >= limit) continue;
+    buckets[score].push(item);
+  }
 
-  ranked.sort((left, right) => left.score - right.score || left.index - right.index);
-  return ranked.slice(0, limit).map(result => result.item);
+  return buckets.flat().slice(0, limit);
 }

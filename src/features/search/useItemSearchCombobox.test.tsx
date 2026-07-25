@@ -77,7 +77,11 @@ describe('useItemSearchCombobox', () => {
   it('preloads on focus and debounces the current slot search', () => {
     act(() => current.handleFocus());
     act(() => current.handleChange({ target: { value: 'circlet' } } as React.ChangeEvent<HTMLInputElement>));
-    act(() => vi.advanceTimersByTime(800));
+    act(() => vi.advanceTimersByTime(199));
+
+    expect(mocks.searchItems).not.toHaveBeenCalled();
+
+    act(() => vi.advanceTimersByTime(1));
 
     expect(mocks.preloadSearchItems).toHaveBeenCalledWith('head');
     expect(mocks.searchItems).toHaveBeenCalledWith('circlet', 'head');
@@ -87,7 +91,7 @@ describe('useItemSearchCombobox', () => {
   it('selects the first filtered result with Enter', () => {
     act(() => current.handleFocus());
     act(() => current.handleChange({ target: { value: 'circlet' } } as React.ChangeEvent<HTMLInputElement>));
-    act(() => vi.advanceTimersByTime(800));
+    act(() => vi.advanceTimersByTime(200));
 
     act(() => current.handleKeyDown({ key: 'Enter', preventDefault: vi.fn() } as unknown as React.KeyboardEvent<HTMLInputElement>));
 

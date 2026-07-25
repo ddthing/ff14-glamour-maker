@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import { mergeLocalizedItems, parseEquipSlotCsv, parseItemCsv } from './itemData.mjs';
+import { generateSearchData } from './searchData.mjs';
 
 const ITEM_SOURCES = {
   ko: 'https://raw.githubusercontent.com/Ra-Workspace/ffxiv-datamining-ko/master/csv/Item.csv',
@@ -27,6 +28,7 @@ async function main() {
     parseEquipSlotCsv(equipSlotCsv),
   );
   await fs.writeFile('src/data/items.json', `${JSON.stringify(items, null, 2)}\n`, 'utf8');
+  await generateSearchData();
 
   const counts = Object.fromEntries(Object.keys(ITEM_SOURCES).map(language => [
     language,

@@ -1,13 +1,11 @@
 import {
   useEffect,
   useId,
-  useMemo,
   useRef,
   useState,
   type ChangeEvent,
   type KeyboardEvent,
 } from 'react';
-import { isMatchingSlot } from '../../domain/itemCategories';
 import { useDebounce } from '../../hooks/useDebounce';
 import { useFF14Search, type FF14Item } from '../../hooks/useFF14Search';
 import type { EquipmentPart } from '../../types';
@@ -31,7 +29,7 @@ export function useItemSearchCombobox({
   const [open, setOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const debouncedQuery = useDebounce(localValue, 800);
+  const debouncedQuery = useDebounce(localValue, 200);
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const isProgrammaticRef = useRef(false);
@@ -88,10 +86,7 @@ export function useItemSearchCombobox({
     return () => document.removeEventListener('mousedown', handleOutsideMouseDown);
   }, []);
 
-  const filteredResults = useMemo(
-    () => currentSlot ? results.filter(item => isMatchingSlot(item, currentSlot)) : results,
-    [currentSlot, results],
-  );
+  const filteredResults = results;
 
   const handleSelect = (item: FF14Item) => {
     isProgrammaticRef.current = true;
