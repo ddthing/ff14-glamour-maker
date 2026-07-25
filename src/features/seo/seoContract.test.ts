@@ -28,6 +28,13 @@ describe('SEO and monetization contracts', () => {
     expect(existsSync(new URL('../../../public/vite.svg', import.meta.url))).toBe(false);
   });
 
+  it('uses the production origin on exported cards', () => {
+    const infoPanel = readProjectFile('src/components/canvas/InfoPanel.tsx');
+
+    expect(infoPanel).toContain('ff14-glamour-maker.pages.dev');
+    expect(infoPanel).not.toContain('ff14-glamour.pages.dev');
+  });
+
   it('publishes only the canonical production origin in search signals', () => {
     const searchFiles = [
       readProjectFile('index.html'),

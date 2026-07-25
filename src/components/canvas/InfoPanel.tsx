@@ -135,7 +135,7 @@ function InfoPanelComponent({
                             letterSpacing: '0.08em',
                             fontWeight: 600,
                         }}>
-                            ff14-glamour.pages.dev
+                            ff14-glamour-maker.pages.dev
                         </span>
                     </div>
 

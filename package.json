@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build --manifest && node scripts/checkLazyChunkIsolation.mjs",
+    "build": "tsc -b && vite build --manifest && node scripts/prerenderSeoPages.mjs && node scripts/checkLazyChunkIsolation.mjs",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",

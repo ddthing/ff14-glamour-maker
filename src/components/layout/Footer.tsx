@@ -29,14 +29,6 @@ export function Footer() {
               {t(key)}
             </a>
           ))}
-          <a
-            href="https://ko-fi.com/reconeur"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[0.68rem] font-semibold text-[var(--accent)] transition-colors hover:text-[var(--accent-strong)]"
-          >
-            {t('common.footer_support')}
-          </a>
         </nav>
       </div>
     </footer>
