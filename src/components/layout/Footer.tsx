@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 
 const FOOTER_LINKS = [
   { href: '/guide', key: 'common.footer_guide' },
-  { href: '/faq', key: 'common.footer_faq' },
   { href: '/about', key: 'common.footer_about' },
   { href: '/terms', key: 'common.footer_terms' },
   { href: '/privacy', key: 'common.footer_privacy' },

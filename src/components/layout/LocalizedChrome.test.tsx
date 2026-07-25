@@ -58,7 +58,7 @@ describe('localized application chrome', () => {
       Array.from(container.querySelectorAll('.header-control-cell'))
         .every(cell => cell.tagName === 'BUTTON'),
     ).toBe(true);
-    expect(localFooterLabels()).toEqual(['Guide', 'FAQ', 'About', 'Terms', 'Privacy']);
+    expect(localFooterLabels()).toEqual(['Guide', 'About', 'Terms', 'Privacy']);
   });
 
   it('renders Japanese navigation and footer labels', async () => {
@@ -68,7 +68,6 @@ describe('localized application chrome', () => {
     expect(container.querySelector('.brand-wordmark')?.textContent).toBe('ミラプリセットメーカー');
     expect(localFooterLabels()).toEqual([
       'ガイド',
-      'よくある質問',
       '概要',
       '利用規約',
       'プライバシーポリシー',

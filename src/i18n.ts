@@ -85,7 +85,10 @@ i18n
             design_credit: '디자인 및 개발:',
             default_set_title: '캐릭터 투영',
             meta_title: '투영 세트 메이커 | 파이널판타지14 투영 카드 제작',
-            meta_description: '파이널판타지14 투영 세트를 한 장의 고화질 카드 이미지로 만드는 무료 웹 도구입니다.'
+            meta_description: '파이널판타지14 투영 세트를 한 장의 고화질 카드 이미지로 만드는 무료 웹 도구입니다.',
+            not_found_title: '페이지를 찾을 수 없습니다',
+            not_found_description: '요청한 페이지가 없거나 주소가 변경되었습니다.',
+            back_home: '메인으로 돌아가기'
           },
           slots: {
             mainhand: '무기',
@@ -189,7 +192,10 @@ i18n
             design_credit: 'Design and development:',
             default_set_title: 'Character Glamour',
             meta_title: 'Glamour Set Maker | Final Fantasy XIV Outfit Cards',
-            meta_description: 'Create a high-resolution card for your Final Fantasy XIV glamour set in your browser.'
+            meta_description: 'Create a high-resolution card for your Final Fantasy XIV glamour set in your browser.',
+            not_found_title: 'Page not found',
+            not_found_description: 'The requested page does not exist or its address has changed.',
+            back_home: 'Back to maker'
           },
           slots: {
             mainhand: 'Main Hand',
@@ -293,7 +299,10 @@ i18n
             design_credit: 'デザイン・開発:',
             default_set_title: 'キャラクターミラプリ',
             meta_title: 'ミラプリセットメーカー | ファイナルファンタジーXIV',
-            meta_description: 'ファイナルファンタジーXIVのミラプリセットを高画質カード画像にできる無料ウェブツールです。'
+            meta_description: 'ファイナルファンタジーXIVのミラプリセットを高画質カード画像にできる無料ウェブツールです。',
+            not_found_title: 'ページが見つかりません',
+            not_found_description: '指定されたページは存在しないか、URLが変更されています。',
+            back_home: 'メイン画面に戻る'
           },
           slots: {
             mainhand: '主武器',
