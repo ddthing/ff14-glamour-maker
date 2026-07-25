@@ -15,6 +15,7 @@ export default defineConfig({
     },
   },
   build: {
+    manifest: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -22,8 +23,6 @@ export default defineConfig({
           'vendor-react': ['react', 'react-dom'],
           // i18n
           'vendor-i18n': ['react-i18next', 'i18next'],
-          // 캔버스/이미지 처리
-          'vendor-canvas': ['react-easy-crop', 'html-to-image'],
           // UI 라이브러리
           'vendor-ui': ['lucide-react'],
         },
@@ -31,5 +30,4 @@ export default defineConfig({
     },
   },
 })
-
 
