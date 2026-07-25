@@ -1,32 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- 메인 페이지 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ff14-glamour.pages.dev/</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ff14-glamour.pages.dev/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ff14-glamour.pages.dev/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://ff14-glamour.pages.dev/"/>
+    <loc>https://ff14-glamour-maker.pages.dev/</loc>
   </url>
-
-  <!-- 개인정보처리방침 -->
   <url>
-    <loc>https://ff14-glamour.pages.dev/privacy</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://ff14-glamour-maker.pages.dev/guide</loc>
   </url>
-
-  <!-- 이용약관 -->
   <url>
-    <loc>https://ff14-glamour.pages.dev/terms</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://ff14-glamour-maker.pages.dev/about</loc>
   </url>
-
+  <url>
+    <loc>https://ff14-glamour-maker.pages.dev/privacy</loc>
+  </url>
+  <url>
+    <loc>https://ff14-glamour-maker.pages.dev/terms</loc>
+  </url>
 </urlset>
