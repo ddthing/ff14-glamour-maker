@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import './i18n'
 import App from './App.tsx'
+import { installVitePreloadRecovery } from './features/runtime/vitePreloadRecovery'
 
 const Terms = lazy(() => import('./pages/Terms.tsx').then(module => ({ default: module.Terms })))
 const Privacy = lazy(() => import('./pages/Privacy.tsx').then(module => ({ default: module.Privacy })))
@@ -11,14 +12,19 @@ const Guide = lazy(() => import('./pages/Guide.tsx').then(module => ({ default: 
 const Faq = lazy(() => import('./pages/Faq.tsx').then(module => ({ default: module.Faq })))
 const About = lazy(() => import('./pages/About.tsx').then(module => ({ default: module.About })))
 
-// ── 자동 업데이트 대응: 새 배포 시 이전 버전의 JS 청크 파일을 불러오지 못하는 경우(404) 처리 ──
-window.addEventListener('error', (e) => {
-  // 스크립트 로드 실패 등 리소스 에러 확인
-  if (e.target instanceof HTMLScriptElement || (e.target as HTMLElement)?.tagName === 'LINK') {
-    console.warn('[AutoUpdate] Resource load failed. Refreshing to pull latest version...');
-    window.location.reload();
+function getSessionStorage(): Storage | null {
+  try {
+    return window.sessionStorage
+  } catch {
+    return null
   }
-}, true);
+}
+
+installVitePreloadRecovery({
+  eventTarget: window,
+  storage: getSessionStorage(),
+  reload: () => window.location.reload(),
+})
 
 // 초경량 라우팅 시스템 (react-router 불필요)
 const path = window.location.pathname;
