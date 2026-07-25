@@ -1,4 +1,4 @@
-import { lazy, Suspense, useRef, useState, useEffect } from 'react';
+import { lazy, Suspense, useCallback, useRef, useState, useEffect } from 'react';
 import type { AppState } from '../../types';
 import { useImageUpload } from '../../hooks/useImageUpload';
 import { PhotoPanel } from './PhotoPanel';
@@ -31,13 +31,16 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
     const { t } = useTranslation();
     const zoneRef = useRef<HTMLDivElement>(null);
     const [scale, setScale] = useState(1);
-    const [hoverPhoto, setHoverPhoto] = useState(false);
 
     const {
         fileInputRef, pendingImage, clearPendingImage,
         error: uploadError,
         isDragging, dragHandlers, onFileInputChange,
     } = useImageUpload();
+
+    const openFilePicker = useCallback(() => {
+        fileInputRef.current?.click();
+    }, [fileInputRef]);
 
     // ResizeObserver + rAF debounce — Layout Thrashing 방지
     useEffect(() => {
@@ -146,14 +149,16 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
                         <PhotoPanel
                             croppedImageSrc={state.croppedImageSrc}
                             isDragging={isDragging}
-                            hoverPhoto={hoverPhoto}
-                            onMouseEnter={() => setHoverPhoto(true)}
-                            onMouseLeave={() => setHoverPhoto(false)}
-                            onClick={() => fileInputRef.current?.click()}
+                            onClick={openFilePicker}
                         />
 
                         {/* ── 우: 글래머 정보 패널 ── */}
-                        <InfoPanel state={state} bgSrc={bgSrc} />
+                        <InfoPanel
+                            title={state.title}
+                            creator={state.creator}
+                            items={state.items}
+                            bgSrc={bgSrc}
+                        />
                     </div>
                 </div>
             </div>

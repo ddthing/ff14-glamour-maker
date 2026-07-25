@@ -1,10 +1,13 @@
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { AppState } from '../../types';
 import { CanvasHeading } from './CanvasHeading';
 import { EquipmentList } from './EquipmentList';
 
 interface InfoPanelProps {
-    state: AppState;
+    title: string;
+    creator: string;
+    items: AppState['items'];
     bgSrc: string | null;
 }
 
@@ -13,7 +16,12 @@ interface InfoPanelProps {
  * Fix: 블러 이미지를 -25% / 150% / scale(1.1) 로 확장하여 우측 검은 여백 제거
  * Fix: 타이틀 폰트 2.2rem 으로 상향
  */
-export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
+function InfoPanelComponent({
+    title,
+    creator,
+    items,
+    bgSrc,
+}: InfoPanelProps) {
     const { t } = useTranslation();
     return (
         <div className="relative flex-1 h-full overflow-hidden flex flex-col" style={{ background: '#1a1915' }}>
@@ -76,8 +84,8 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
             <div className="relative z-10 flex flex-col h-full" style={{ padding: '32px 40px 24px' }}>
 
                 <CanvasHeading
-                    title={state.title || t('common.default_set_title')}
-                    creator={state.creator}
+                    title={title || t('common.default_set_title')}
+                    creator={creator}
                     label={t('common.canvas_label')}
                 />
 
@@ -90,7 +98,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
                 }} />
 
                 <EquipmentList
-                    items={state.items}
+                    items={items}
                     emptyTitle={t('common.empty_title', 'Create Your Glamour Card')}
                     emptySteps={[
                         t('common.step1_upload', 'Upload Character Photo'),
@@ -162,3 +170,5 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
         </div>
     );
 }
+
+export const InfoPanel = memo(InfoPanelComponent);

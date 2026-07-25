@@ -1,12 +1,10 @@
+import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { UploadCloud, RefreshCw } from 'lucide-react';
 
 interface PhotoPanelProps {
     croppedImageSrc: string | null;
     isDragging: boolean;
-    hoverPhoto: boolean;
-    onMouseEnter: () => void;
-    onMouseLeave: () => void;
     onClick: () => void;
 }
 
@@ -14,11 +12,11 @@ interface PhotoPanelProps {
  * PhotoPanel — 캔버스 좌측 캐릭터 사진 패널 (480px)
  * Design: Apple Senior — premium empty state, zero demo code.
  */
-export function PhotoPanel({
-    croppedImageSrc, isDragging, hoverPhoto,
-    onMouseEnter, onMouseLeave, onClick,
+function PhotoPanelComponent({
+    croppedImageSrc, isDragging, onClick,
 }: PhotoPanelProps) {
     const { t } = useTranslation();
+    const [hoverPhoto, setHoverPhoto] = useState(false);
 
     return (
         <div
@@ -27,8 +25,8 @@ export function PhotoPanel({
             aria-label={croppedImageSrc ? t('common.replace_image') : t('common.upload_hint')}
             className="w-[480px] h-full relative overflow-hidden shrink-0 flex items-center justify-center cursor-pointer select-none"
             style={{ background: 'linear-gradient(145deg, #272620 0%, #191810 100%)' }}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
+            onMouseEnter={() => setHoverPhoto(true)}
+            onMouseLeave={() => setHoverPhoto(false)}
             onClick={onClick}
             onKeyDown={event => {
                 if (event.key === 'Enter' || event.key === ' ') {
@@ -135,3 +133,5 @@ export function PhotoPanel({
         </div>
     );
 }
+
+export const PhotoPanel = memo(PhotoPanelComponent);
