@@ -82672,7 +82672,7 @@
     ]
   },
   "8428": {
-    "ko": "보강된 초래자의 손목장식",
+    "ko": "보강된 초래자의 손목띠",
     "iconPath": "/i/044000/044191.png",
     "uiCategory": 37,
     "equipSlotCategory": 5,
@@ -178437,7 +178437,7 @@
     "iconPath": "/i/044000/044604.png",
     "uiCategory": 37,
     "equipSlotCategory": 5,
-    "en": "Tigerskin Gloves of Aiming",
+    "en": "Tigerskin Wristgloves of Aiming",
     "ja": "タイガー・レンジャーリストグローブ",
     "equipSlots": [
       "hands"
@@ -178500,7 +178500,7 @@
     "iconPath": "/i/044000/044605.png",
     "uiCategory": 37,
     "equipSlotCategory": 5,
-    "en": "Tigerskin Gloves of Scouting",
+    "en": "Tigerskin Wristgloves of Scouting",
     "ja": "タイガー・スカウトリストグローブ",
     "equipSlots": [
       "hands"
@@ -204094,7 +204094,7 @@
     "equipSlots": []
   },
   "21054": {
-    "ko": "큰머위 요정 피리",
+    "ko": "큰머위 요정 뿔피리",
     "iconPath": "/i/026000/026038.png",
     "uiCategory": 63,
     "en": "Korpokkur Kolossus Horn",
@@ -271093,7 +271093,7 @@
     "equipSlots": []
   },
   "28124": {
-    "ko": "달멜 피리",
+    "ko": "달멜 호루라기",
     "iconPath": "/i/026000/026039.png",
     "uiCategory": 63,
     "en": "Dhalmel Whistle",
@@ -399838,7 +399838,7 @@
     "iconPath": "/i/030000/030845.png",
     "uiCategory": 1,
     "equipSlotCategory": 13,
-    "en": "Riversbreath Tonfas",
+    "en": "Riversbreath Tonfa",
     "ja": "リバーズブレス・トンファー",
     "equipSlots": [
       "mainhand"
@@ -400690,7 +400690,7 @@
     "iconPath": "/i/030000/030844.png",
     "uiCategory": 1,
     "equipSlotCategory": 13,
-    "en": "Ruthenium Tonfas",
+    "en": "Ruthenium Tonfa",
     "ja": "ルテニウム・トンファー",
     "equipSlots": [
       "mainhand"
@@ -401542,7 +401542,7 @@
     "iconPath": "/i/030000/030836.png",
     "uiCategory": 1,
     "equipSlotCategory": 13,
-    "en": "Zormor Tonfas",
+    "en": "Zormor Tonfa",
     "ja": "ゾーモーの旋棍",
     "equipSlots": [
       "mainhand"
@@ -405802,7 +405802,7 @@
     "iconPath": "/i/030000/030837.png",
     "uiCategory": 1,
     "equipSlotCategory": 13,
-    "en": "Ra'Kaznar Tonfas",
+    "en": "Ra'Kaznar Tonfa",
     "ja": "カザナル・トンファー",
     "equipSlots": [
       "mainhand"
@@ -445624,6 +445624,14 @@
     "ja": "マメット・ヨカフイ",
     "equipSlots": []
   },
+  "46784": {
+    "ko": "바벌레",
+    "iconPath": "/i/059000/059962.png",
+    "uiCategory": 81,
+    "en": "Oglop",
+    "ja": "ブリ虫",
+    "equipSlots": []
+  },
   "46785": {
     "ko": "페오 울 인형",
     "iconPath": "/i/059000/059965.png",
@@ -445927,7 +445935,7 @@
     "equipSlots": []
   },
   "46825": {
-    "ko": "우주 달멜 피리",
+    "ko": "우주 달멜 호루라기",
     "iconPath": "/i/026000/026039.png",
     "uiCategory": 63,
     "en": "Interstellar Dhalmel Whistle",
@@ -477641,6 +477649,14 @@
     "ja": "マメット・ユフィ",
     "equipSlots": []
   },
+  "50317": {
+    "ko": "빈센트 인형",
+    "iconPath": "/i/059000/059975.png",
+    "uiCategory": 81,
+    "en": "Wind-up Vincent",
+    "ja": "マメット・ヴィンセント",
+    "equipSlots": []
+  },
   "50318": {
     "ko": "레드 XIII 인형",
     "iconPath": "/i/059000/059976.png",
@@ -482830,6 +482846,1522 @@
       "rings2"
     ]
   },
+  "50970": {
+    "ko": "식칼 연마용 숫돌",
+    "iconPath": "/i/021000/021485.png",
+    "uiCategory": 48,
+    "en": "Monarch Whetstone",
+    "ja": "包丁研磨用砥石",
+    "equipSlots": []
+  },
+  "50971": {
+    "ko": "식칼 강화용 손잡이 재료",
+    "iconPath": "/i/022000/022030.png",
+    "uiCategory": 52,
+    "en": "Ascendant Twine",
+    "ja": "包丁強化用グリップ材",
+    "equipSlots": []
+  },
+  "50972": {
+    "ko": "식칼 강화용 합금",
+    "iconPath": "/i/021000/021020.png",
+    "uiCategory": 49,
+    "en": "Ancestral Alloy Ingot",
+    "ja": "包丁強化用合金",
+    "equipSlots": []
+  },
+  "50973": {
+    "ko": "식칼 연마용 기름",
+    "iconPath": "/i/022000/022671.png",
+    "uiCategory": 54,
+    "en": "Majestic Polish",
+    "ja": "包丁研磨用オイル",
+    "equipSlots": []
+  },
+  "50974": {
+    "ko": "환영 해제기 α",
+    "iconPath": "/i/026000/026229.png",
+    "uiCategory": 63,
+    "en": "Phantom Dispeller α",
+    "ja": "ファントムディスペラーα",
+    "equipSlots": []
+  },
+  "50975": {
+    "ko": "환영 해제기 β",
+    "iconPath": "/i/026000/026231.png",
+    "uiCategory": 63,
+    "en": "Phantom Dispeller β",
+    "ja": "ファントムディスペラーβ",
+    "equipSlots": []
+  },
+  "50976": {
+    "ko": "환영 해제기 γ",
+    "iconPath": "/i/026000/026230.png",
+    "uiCategory": 63,
+    "en": "Phantom Dispeller γ",
+    "ja": "ファントムディスペラーγ",
+    "equipSlots": []
+  },
+  "50977": {
+    "ko": "그믐달 광석",
+    "iconPath": "/i/021000/021212.png",
+    "uiCategory": 61,
+    "en": "Ecliptic Arcanite",
+    "ja": "新月鉱石",
+    "equipSlots": []
+  },
+  "50978": {
+    "ko": "팬텀 달그림자 한손검",
+    "iconPath": "/i/030000/030704.png",
+    "uiCategory": 2,
+    "equipSlotCategory": 1,
+    "en": "Phantom Sword Eclipticum",
+    "ja": "ファントムイクリプティカム・ソード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50979": {
+    "ko": "팬텀 달그림자 톤파",
+    "iconPath": "/i/030000/030868.png",
+    "uiCategory": 1,
+    "equipSlotCategory": 13,
+    "en": "Phantom Tonfa Eclipticum",
+    "ja": "ファントムイクリプティカム・トンファー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50980": {
+    "ko": "팬텀 달그림자 전투망치",
+    "iconPath": "/i/031000/031278.png",
+    "uiCategory": 3,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Hammer Eclipticum",
+    "ja": "ファントムイクリプティカム・ウォーハンマー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50981": {
+    "ko": "팬텀 달그림자 창",
+    "iconPath": "/i/031000/031680.png",
+    "uiCategory": 5,
+    "equipSlotCategory": 13,
+    "en": "Phantom Spear Eclipticum",
+    "ja": "ファントムイクリプティカム・スピア",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50982": {
+    "ko": "팬텀 달그림자 현악궁",
+    "iconPath": "/i/032000/032068.png",
+    "uiCategory": 4,
+    "equipSlotCategory": 13,
+    "en": "Phantom Harp Bow Eclipticum",
+    "ja": "ファントムイクリプティカム・ハープボウ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50983": {
+    "ko": "팬텀 달그림자 환술봉",
+    "iconPath": "/i/032000/032499.png",
+    "uiCategory": 9,
+    "equipSlotCategory": 13,
+    "en": "Phantom Cane Eclipticum",
+    "ja": "ファントムイクリプティカム・ケーン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50984": {
+    "ko": "팬텀 달그림자 주술봉",
+    "iconPath": "/i/032000/032914.png",
+    "uiCategory": 7,
+    "equipSlotCategory": 13,
+    "en": "Phantom Staff Eclipticum",
+    "ja": "ファントムイクリプティカム・スタッフ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50985": {
+    "ko": "팬텀 달그림자 금서",
+    "iconPath": "/i/037000/037859.png",
+    "uiCategory": 10,
+    "equipSlotCategory": 13,
+    "en": "Phantom Index Eclipticum",
+    "ja": "ファントムイクリプティカム・インデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50986": {
+    "ko": "팬텀 달그림자 치유서",
+    "iconPath": "/i/037000/037858.png",
+    "uiCategory": 98,
+    "equipSlotCategory": 13,
+    "en": "Phantom Codex Eclipticum",
+    "ja": "ファントムイクリプティカム・コーデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50987": {
+    "ko": "팬텀 달그림자 단검",
+    "iconPath": "/i/033000/033654.png",
+    "uiCategory": 84,
+    "equipSlotCategory": 13,
+    "en": "Phantom Knives Eclipticum",
+    "ja": "ファントムイクリプティカム・ナイフ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50988": {
+    "ko": "팬텀 달그림자 단두검",
+    "iconPath": "/i/034000/034033.png",
+    "uiCategory": 87,
+    "equipSlotCategory": 13,
+    "en": "Phantom Guillotine Eclipticum",
+    "ja": "ファントムイクリプティカム・ディバイダー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50989": {
+    "ko": "팬텀 달그림자 연발권총",
+    "iconPath": "/i/034000/034527.png",
+    "uiCategory": 88,
+    "equipSlotCategory": 13,
+    "en": "Phantom Revolver Eclipticum",
+    "ja": "ファントムイクリプティカム・リボルバー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50990": {
+    "ko": "팬텀 달그림자 천구의",
+    "iconPath": "/i/034000/034726.png",
+    "uiCategory": 89,
+    "equipSlotCategory": 13,
+    "en": "Phantom Star Globe Eclipticum",
+    "ja": "ファントムイクリプティカム・スターグローブ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50991": {
+    "ko": "팬텀 달그림자 외날검",
+    "iconPath": "/i/036000/036582.png",
+    "uiCategory": 96,
+    "equipSlotCategory": 13,
+    "en": "Phantom Blade Eclipticum",
+    "ja": "ファントムイクリプティカム・ブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50992": {
+    "ko": "팬텀 달그림자 데겐",
+    "iconPath": "/i/036000/036881.png",
+    "uiCategory": 97,
+    "equipSlotCategory": 13,
+    "en": "Phantom Degen Eclipticum",
+    "ja": "ファントムイクリプティカム・デーゲン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50993": {
+    "ko": "팬텀 달그림자 건블레이드",
+    "iconPath": "/i/036000/036124.png",
+    "uiCategory": 106,
+    "equipSlotCategory": 13,
+    "en": "Phantom Gunblade Eclipticum",
+    "ja": "ファントムイクリプティカム・ガンブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50994": {
+    "ko": "팬텀 달그림자 부채",
+    "iconPath": "/i/036000/036323.png",
+    "uiCategory": 107,
+    "equipSlotCategory": 13,
+    "en": "Phantom Fans Eclipticum",
+    "ja": "ファントムイクリプティカム・ファン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50995": {
+    "ko": "팬텀 달그림자 전투낫",
+    "iconPath": "/i/037000/037294.png",
+    "uiCategory": 108,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Scythe Eclipticum",
+    "ja": "ファントムイクリプティカム・ウォーサイズ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50996": {
+    "ko": "팬텀 달그림자 진자",
+    "iconPath": "/i/037000/037090.png",
+    "uiCategory": 109,
+    "equipSlotCategory": 13,
+    "en": "Phantom Pendulums Eclipticum",
+    "ja": "ファントムイクリプティカム・ペンデュラム",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50997": {
+    "ko": "팬텀 달그림자 쌍송곳니",
+    "iconPath": "/i/037000/037457.png",
+    "uiCategory": 110,
+    "equipSlotCategory": 13,
+    "en": "Phantom Twinfangs Eclipticum",
+    "ja": "ファントムイクリプティカム・ツインファング",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50998": {
+    "ko": "팬텀 달그림자 둥근붓",
+    "iconPath": "/i/037000/037667.png",
+    "uiCategory": 111,
+    "equipSlotCategory": 13,
+    "en": "Phantom Round Brush Eclipticum",
+    "ja": "ファントムイクリプティカム・ラウンドブラシ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50999": {
+    "ko": "팬텀 달그림자 방패",
+    "iconPath": "/i/030000/030293.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Phantom Shield Eclipticum",
+    "ja": "ファントムイクリプティカム・シールド",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "51000": {
+    "ko": "팬텀 숨은그림자 한손검",
+    "iconPath": "/i/030000/030704.png",
+    "uiCategory": 2,
+    "equipSlotCategory": 1,
+    "en": "Phantom Sword Occultum",
+    "ja": "ファントムオカルタム・ソード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51001": {
+    "ko": "팬텀 숨은그림자 톤파",
+    "iconPath": "/i/030000/030868.png",
+    "uiCategory": 1,
+    "equipSlotCategory": 13,
+    "en": "Phantom Tonfa Occultum",
+    "ja": "ファントムオカルタム・トンファー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51002": {
+    "ko": "팬텀 숨은그림자 전투망치",
+    "iconPath": "/i/031000/031278.png",
+    "uiCategory": 3,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Hammer Occultum",
+    "ja": "ファントムオカルタム・ウォーハンマー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51003": {
+    "ko": "팬텀 숨은그림자 창",
+    "iconPath": "/i/031000/031680.png",
+    "uiCategory": 5,
+    "equipSlotCategory": 13,
+    "en": "Phantom Spear Occultum",
+    "ja": "ファントムオカルタム・スピア",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51004": {
+    "ko": "팬텀 숨은그림자 현악궁",
+    "iconPath": "/i/032000/032068.png",
+    "uiCategory": 4,
+    "equipSlotCategory": 13,
+    "en": "Phantom Harp Bow Occultum",
+    "ja": "ファントムオカルタム・ハープボウ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51005": {
+    "ko": "팬텀 숨은그림자 환술봉",
+    "iconPath": "/i/032000/032499.png",
+    "uiCategory": 9,
+    "equipSlotCategory": 13,
+    "en": "Phantom Cane Occultum",
+    "ja": "ファントムオカルタム・ケーン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51006": {
+    "ko": "팬텀 숨은그림자 주술봉",
+    "iconPath": "/i/032000/032914.png",
+    "uiCategory": 7,
+    "equipSlotCategory": 13,
+    "en": "Phantom Staff Occultum",
+    "ja": "ファントムオカルタム・スタッフ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51007": {
+    "ko": "팬텀 숨은그림자 금서",
+    "iconPath": "/i/037000/037859.png",
+    "uiCategory": 10,
+    "equipSlotCategory": 13,
+    "en": "Phantom Index Occultum",
+    "ja": "ファントムオカルタム・インデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51008": {
+    "ko": "팬텀 숨은그림자 치유서",
+    "iconPath": "/i/037000/037858.png",
+    "uiCategory": 98,
+    "equipSlotCategory": 13,
+    "en": "Phantom Codex Occultum",
+    "ja": "ファントムオカルタム・コーデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51009": {
+    "ko": "팬텀 숨은그림자 단검",
+    "iconPath": "/i/033000/033654.png",
+    "uiCategory": 84,
+    "equipSlotCategory": 13,
+    "en": "Phantom Knives Occultum",
+    "ja": "ファントムオカルタム・ナイフ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51010": {
+    "ko": "팬텀 숨은그림자 단두검",
+    "iconPath": "/i/034000/034033.png",
+    "uiCategory": 87,
+    "equipSlotCategory": 13,
+    "en": "Phantom Guillotine Occultum",
+    "ja": "ファントムオカルタム・ディバイダー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51011": {
+    "ko": "팬텀 숨은그림자 연발권총",
+    "iconPath": "/i/034000/034527.png",
+    "uiCategory": 88,
+    "equipSlotCategory": 13,
+    "en": "Phantom Revolver Occultum",
+    "ja": "ファントムオカルタム・リボルバー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51012": {
+    "ko": "팬텀 숨은그림자 천구의",
+    "iconPath": "/i/034000/034726.png",
+    "uiCategory": 89,
+    "equipSlotCategory": 13,
+    "en": "Phantom Star Globe Occultum",
+    "ja": "ファントムオカルタム・スターグローブ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51013": {
+    "ko": "팬텀 숨은그림자 외날검",
+    "iconPath": "/i/036000/036582.png",
+    "uiCategory": 96,
+    "equipSlotCategory": 13,
+    "en": "Phantom Blade Occultum",
+    "ja": "ファントムオカルタム・ブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51014": {
+    "ko": "팬텀 숨은그림자 데겐",
+    "iconPath": "/i/036000/036881.png",
+    "uiCategory": 97,
+    "equipSlotCategory": 13,
+    "en": "Phantom Degen Occultum",
+    "ja": "ファントムオカルタム・デーゲン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51015": {
+    "ko": "팬텀 숨은그림자 건블레이드",
+    "iconPath": "/i/036000/036124.png",
+    "uiCategory": 106,
+    "equipSlotCategory": 13,
+    "en": "Phantom Gunblade Occultum",
+    "ja": "ファントムオカルタム・ガンブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51016": {
+    "ko": "팬텀 숨은그림자 부채",
+    "iconPath": "/i/036000/036323.png",
+    "uiCategory": 107,
+    "equipSlotCategory": 13,
+    "en": "Phantom Fans Occultum",
+    "ja": "ファントムオカルタム・ファン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51017": {
+    "ko": "팬텀 숨은그림자 전투낫",
+    "iconPath": "/i/037000/037294.png",
+    "uiCategory": 108,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Scythe Occultum",
+    "ja": "ファントムオカルタム・ウォーサイズ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51018": {
+    "ko": "팬텀 숨은그림자 진자",
+    "iconPath": "/i/037000/037090.png",
+    "uiCategory": 109,
+    "equipSlotCategory": 13,
+    "en": "Phantom Pendulums Occultum",
+    "ja": "ファントムオカルタム・ペンデュラム",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51019": {
+    "ko": "팬텀 숨은그림자 쌍송곳니",
+    "iconPath": "/i/037000/037457.png",
+    "uiCategory": 110,
+    "equipSlotCategory": 13,
+    "en": "Phantom Twinfangs Occultum",
+    "ja": "ファントムオカルタム・ツインファング",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51020": {
+    "ko": "팬텀 숨은그림자 둥근붓",
+    "iconPath": "/i/037000/037667.png",
+    "uiCategory": 111,
+    "equipSlotCategory": 13,
+    "en": "Phantom Round Brush Occultum",
+    "ja": "ファントムオカルタム・ラウンドブラシ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51021": {
+    "ko": "팬텀 숨은그림자 방패",
+    "iconPath": "/i/030000/030293.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Phantom Shield Occultum",
+    "ja": "ファントムオカルタム・シールド",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "51022": {
+    "ko": "무광 모조 팬텀 어둠그림자 한손검",
+    "iconPath": "/i/030000/030699.png",
+    "uiCategory": 2,
+    "equipSlotCategory": 1,
+    "en": "Phantom Sword Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ソードMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51023": {
+    "ko": "무광 모조 팬텀 어둠그림자 자마다르",
+    "iconPath": "/i/030000/030863.png",
+    "uiCategory": 1,
+    "equipSlotCategory": 13,
+    "en": "Matte Replica Phantom Jamadhars Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・ジャマダルMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51024": {
+    "ko": "무광 모조 팬텀 어둠그림자 긴날도끼",
+    "iconPath": "/i/031000/031273.png",
+    "uiCategory": 3,
+    "equipSlotCategory": 13,
+    "en": "Phantom Bardiche Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・バルディッシュMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51025": {
+    "ko": "무광 모조 팬텀 어둠그림자 갈래창",
+    "iconPath": "/i/031000/031675.png",
+    "uiCategory": 5,
+    "equipSlotCategory": 13,
+    "en": "Phantom Fork Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・フォークMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51026": {
+    "ko": "무광 모조 팬텀 어둠그림자 장궁",
+    "iconPath": "/i/032000/032063.png",
+    "uiCategory": 4,
+    "equipSlotCategory": 13,
+    "en": "Phantom Longbow Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ロングボウMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51027": {
+    "ko": "무광 모조 팬텀 어둠그림자 환술봉",
+    "iconPath": "/i/032000/032494.png",
+    "uiCategory": 9,
+    "equipSlotCategory": 13,
+    "en": "Phantom Cane Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ケーンMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51028": {
+    "ko": "무광 모조 팬텀 어둠그림자 장봉",
+    "iconPath": "/i/032000/032909.png",
+    "uiCategory": 7,
+    "equipSlotCategory": 13,
+    "en": "Phantom Longpole Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ロングポールMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51029": {
+    "ko": "무광 모조 팬텀 어둠그림자 금서",
+    "iconPath": "/i/037000/037849.png",
+    "uiCategory": 10,
+    "equipSlotCategory": 13,
+    "en": "Phantom Index Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・インデックスMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51030": {
+    "ko": "무광 모조 팬텀 어둠그림자 치유서",
+    "iconPath": "/i/037000/037848.png",
+    "uiCategory": 98,
+    "equipSlotCategory": 13,
+    "en": "Phantom Codex Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・コーデックスMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51031": {
+    "ko": "무광 모조 팬텀 어둠그림자 쿠쿠리",
+    "iconPath": "/i/033000/033649.png",
+    "uiCategory": 84,
+    "equipSlotCategory": 13,
+    "en": "Matte Replica Phantom Khukuri Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・ククリMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51032": {
+    "ko": "무광 모조 팬텀 어둠그림자 단두검",
+    "iconPath": "/i/034000/034028.png",
+    "uiCategory": 87,
+    "equipSlotCategory": 13,
+    "en": "Phantom Guillotine Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ディバイダーMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51033": {
+    "ko": "무광 모조 팬텀 어둠그림자 단총",
+    "iconPath": "/i/034000/034522.png",
+    "uiCategory": 88,
+    "equipSlotCategory": 13,
+    "en": "Phantom Musketoon Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・マスケトンMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51034": {
+    "ko": "무광 모조 팬텀 어둠그림자 항성의",
+    "iconPath": "/i/034000/034721.png",
+    "uiCategory": 89,
+    "equipSlotCategory": 13,
+    "en": "Phantom Star Pendant Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・スターペンダントMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51035": {
+    "ko": "무광 모조 팬텀 어둠그림자 외날검",
+    "iconPath": "/i/036000/036577.png",
+    "uiCategory": 96,
+    "equipSlotCategory": 13,
+    "en": "Phantom Blade Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ブレードMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51036": {
+    "ko": "무광 모조 팬텀 어둠그림자 행어",
+    "iconPath": "/i/036000/036876.png",
+    "uiCategory": 97,
+    "equipSlotCategory": 13,
+    "en": "Phantom Hanger Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ハンガーMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51037": {
+    "ko": "무광 모조 팬텀 어둠그림자 건블레이드",
+    "iconPath": "/i/036000/036119.png",
+    "uiCategory": 106,
+    "equipSlotCategory": 13,
+    "en": "Phantom Gunblade Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ガンブレードMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51038": {
+    "ko": "무광 모조 팬텀 어둠그림자 타흘룸",
+    "iconPath": "/i/036000/036318.png",
+    "uiCategory": 107,
+    "equipSlotCategory": 13,
+    "en": "Matte Replica Phantom Tathlums Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・タスラムMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51039": {
+    "ko": "무광 모조 팬텀 어둠그림자 전투낫",
+    "iconPath": "/i/037000/037289.png",
+    "uiCategory": 108,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Scythe Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ウォーサイズMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51040": {
+    "ko": "무광 모조 팬텀 어둠그림자 날개",
+    "iconPath": "/i/037000/037085.png",
+    "uiCategory": 109,
+    "equipSlotCategory": 13,
+    "en": "Matte Replica Phantom Wings Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・ウィングMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51041": {
+    "ko": "무광 모조 팬텀 어둠그림자 쌍송곳니",
+    "iconPath": "/i/037000/037452.png",
+    "uiCategory": 110,
+    "equipSlotCategory": 13,
+    "en": "Matte Replica Phantom Twinfangs Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・ツインファングMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51042": {
+    "ko": "무광 모조 팬텀 어둠그림자 둥근붓",
+    "iconPath": "/i/037000/037662.png",
+    "uiCategory": 111,
+    "equipSlotCategory": 13,
+    "en": "Phantom Round Brush Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ラウンドブラシMF",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51043": {
+    "ko": "무광 모조 팬텀 어둠그림자 방패",
+    "iconPath": "/i/030000/030288.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Phantom Shield Obscurum Matte Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・シールドMF",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "51044": {
+    "ko": "모조 팬텀 어둠그림자 한손검",
+    "iconPath": "/i/030000/030699.png",
+    "uiCategory": 2,
+    "equipSlotCategory": 1,
+    "en": "Phantom Sword Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ソード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51045": {
+    "ko": "모조 팬텀 어둠그림자 자마다르",
+    "iconPath": "/i/030000/030863.png",
+    "uiCategory": 1,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Jamadhars Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・ジャマダル",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51046": {
+    "ko": "모조 팬텀 어둠그림자 긴날도끼",
+    "iconPath": "/i/031000/031273.png",
+    "uiCategory": 3,
+    "equipSlotCategory": 13,
+    "en": "Phantom Bardiche Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・バルディッシュ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51047": {
+    "ko": "모조 팬텀 어둠그림자 갈래창",
+    "iconPath": "/i/031000/031675.png",
+    "uiCategory": 5,
+    "equipSlotCategory": 13,
+    "en": "Phantom Fork Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・フォーク",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51048": {
+    "ko": "모조 팬텀 어둠그림자 장궁",
+    "iconPath": "/i/032000/032063.png",
+    "uiCategory": 4,
+    "equipSlotCategory": 13,
+    "en": "Phantom Longbow Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ロングボウ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51049": {
+    "ko": "모조 팬텀 어둠그림자 환술봉",
+    "iconPath": "/i/032000/032494.png",
+    "uiCategory": 9,
+    "equipSlotCategory": 13,
+    "en": "Phantom Cane Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ケーン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51050": {
+    "ko": "모조 팬텀 어둠그림자 장봉",
+    "iconPath": "/i/032000/032909.png",
+    "uiCategory": 7,
+    "equipSlotCategory": 13,
+    "en": "Phantom Longpole Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ロングポール",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51051": {
+    "ko": "모조 팬텀 어둠그림자 금서",
+    "iconPath": "/i/037000/037849.png",
+    "uiCategory": 10,
+    "equipSlotCategory": 13,
+    "en": "Phantom Index Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・インデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51052": {
+    "ko": "모조 팬텀 어둠그림자 치유서",
+    "iconPath": "/i/037000/037848.png",
+    "uiCategory": 98,
+    "equipSlotCategory": 13,
+    "en": "Phantom Codex Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・コーデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51053": {
+    "ko": "모조 팬텀 어둠그림자 쿠쿠리",
+    "iconPath": "/i/033000/033649.png",
+    "uiCategory": 84,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Khukuri Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・ククリ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51054": {
+    "ko": "모조 팬텀 어둠그림자 단두검",
+    "iconPath": "/i/034000/034028.png",
+    "uiCategory": 87,
+    "equipSlotCategory": 13,
+    "en": "Phantom Guillotine Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ディバイダー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51055": {
+    "ko": "모조 팬텀 어둠그림자 단총",
+    "iconPath": "/i/034000/034522.png",
+    "uiCategory": 88,
+    "equipSlotCategory": 13,
+    "en": "Phantom Musketoon Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・マスケトン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51056": {
+    "ko": "모조 팬텀 어둠그림자 항성의",
+    "iconPath": "/i/034000/034721.png",
+    "uiCategory": 89,
+    "equipSlotCategory": 13,
+    "en": "Phantom Star Pendant Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・スターペンダント",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51057": {
+    "ko": "모조 팬텀 어둠그림자 외날검",
+    "iconPath": "/i/036000/036577.png",
+    "uiCategory": 96,
+    "equipSlotCategory": 13,
+    "en": "Phantom Blade Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51058": {
+    "ko": "모조 팬텀 어둠그림자 행어",
+    "iconPath": "/i/036000/036876.png",
+    "uiCategory": 97,
+    "equipSlotCategory": 13,
+    "en": "Phantom Hanger Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ハンガー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51059": {
+    "ko": "모조 팬텀 어둠그림자 건블레이드",
+    "iconPath": "/i/036000/036119.png",
+    "uiCategory": 106,
+    "equipSlotCategory": 13,
+    "en": "Phantom Gunblade Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ガンブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51060": {
+    "ko": "모조 팬텀 어둠그림자 타흘룸",
+    "iconPath": "/i/036000/036318.png",
+    "uiCategory": 107,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Tathlums Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・タスラム",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51061": {
+    "ko": "모조 팬텀 어둠그림자 전투낫",
+    "iconPath": "/i/037000/037289.png",
+    "uiCategory": 108,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Scythe Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ウォーサイズ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51062": {
+    "ko": "모조 팬텀 어둠그림자 날개",
+    "iconPath": "/i/037000/037085.png",
+    "uiCategory": 109,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Wings Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・ウィング",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51063": {
+    "ko": "모조 팬텀 어둠그림자 쌍송곳니",
+    "iconPath": "/i/037000/037452.png",
+    "uiCategory": 110,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Twinfangs Obscurum",
+    "ja": "レプリカ・ファントムオブスキュラム・ツインファング",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51064": {
+    "ko": "모조 팬텀 어둠그림자 둥근붓",
+    "iconPath": "/i/037000/037662.png",
+    "uiCategory": 111,
+    "equipSlotCategory": 13,
+    "en": "Phantom Round Brush Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・ラウンドブラシ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51065": {
+    "ko": "모조 팬텀 어둠그림자 방패",
+    "iconPath": "/i/030000/030288.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Phantom Shield Obscurum Replica",
+    "ja": "レプリカ・ファントムオブスキュラム・シールド",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "51066": {
+    "ko": "모조 팬텀 달그림자 한손검",
+    "iconPath": "/i/030000/030704.png",
+    "uiCategory": 2,
+    "equipSlotCategory": 1,
+    "en": "Phantom Sword Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ソード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51067": {
+    "ko": "모조 팬텀 달그림자 톤파",
+    "iconPath": "/i/030000/030868.png",
+    "uiCategory": 1,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Tonfa Eclipticum",
+    "ja": "レプリカ・ファントムイクリプティカム・トンファー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51068": {
+    "ko": "모조 팬텀 달그림자 전투망치",
+    "iconPath": "/i/031000/031278.png",
+    "uiCategory": 3,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Hammer Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ウォーハンマー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51069": {
+    "ko": "모조 팬텀 달그림자 창",
+    "iconPath": "/i/031000/031680.png",
+    "uiCategory": 5,
+    "equipSlotCategory": 13,
+    "en": "Phantom Spear Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・スピア",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51070": {
+    "ko": "모조 팬텀 달그림자 현악궁",
+    "iconPath": "/i/032000/032068.png",
+    "uiCategory": 4,
+    "equipSlotCategory": 13,
+    "en": "Phantom Harp Bow Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ハープボウ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51071": {
+    "ko": "모조 팬텀 달그림자 환술봉",
+    "iconPath": "/i/032000/032499.png",
+    "uiCategory": 9,
+    "equipSlotCategory": 13,
+    "en": "Phantom Cane Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ケーン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51072": {
+    "ko": "모조 팬텀 달그림자 주술봉",
+    "iconPath": "/i/032000/032914.png",
+    "uiCategory": 7,
+    "equipSlotCategory": 13,
+    "en": "Phantom Staff Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・スタッフ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51073": {
+    "ko": "모조 팬텀 달그림자 금서",
+    "iconPath": "/i/037000/037859.png",
+    "uiCategory": 10,
+    "equipSlotCategory": 13,
+    "en": "Phantom Index Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・インデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51074": {
+    "ko": "모조 팬텀 달그림자 치유서",
+    "iconPath": "/i/037000/037858.png",
+    "uiCategory": 98,
+    "equipSlotCategory": 13,
+    "en": "Phantom Codex Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・コーデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51075": {
+    "ko": "모조 팬텀 달그림자 단검",
+    "iconPath": "/i/033000/033654.png",
+    "uiCategory": 84,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Knives Eclipticum",
+    "ja": "レプリカ・ファントムイクリプティカム・ナイフ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51076": {
+    "ko": "모조 팬텀 달그림자 단두검",
+    "iconPath": "/i/034000/034033.png",
+    "uiCategory": 87,
+    "equipSlotCategory": 13,
+    "en": "Phantom Guillotine Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ディバイダー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51077": {
+    "ko": "모조 팬텀 달그림자 연발권총",
+    "iconPath": "/i/034000/034527.png",
+    "uiCategory": 88,
+    "equipSlotCategory": 13,
+    "en": "Phantom Revolver Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・リボルバー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51078": {
+    "ko": "모조 팬텀 달그림자 천구의",
+    "iconPath": "/i/034000/034726.png",
+    "uiCategory": 89,
+    "equipSlotCategory": 13,
+    "en": "Phantom Star Globe Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・スターグローブ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51079": {
+    "ko": "모조 팬텀 달그림자 외날검",
+    "iconPath": "/i/036000/036582.png",
+    "uiCategory": 96,
+    "equipSlotCategory": 13,
+    "en": "Phantom Blade Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51080": {
+    "ko": "모조 팬텀 달그림자 데겐",
+    "iconPath": "/i/036000/036881.png",
+    "uiCategory": 97,
+    "equipSlotCategory": 13,
+    "en": "Phantom Degen Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・デーゲン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51081": {
+    "ko": "모조 팬텀 달그림자 건블레이드",
+    "iconPath": "/i/036000/036124.png",
+    "uiCategory": 106,
+    "equipSlotCategory": 13,
+    "en": "Phantom Gunblade Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ガンブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51082": {
+    "ko": "모조 팬텀 달그림자 부채",
+    "iconPath": "/i/036000/036323.png",
+    "uiCategory": 107,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Fans Eclipticum",
+    "ja": "レプリカ・ファントムイクリプティカム・ファン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51083": {
+    "ko": "모조 팬텀 달그림자 전투낫",
+    "iconPath": "/i/037000/037294.png",
+    "uiCategory": 108,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Scythe Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ウォーサイズ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51084": {
+    "ko": "모조 팬텀 달그림자 진자",
+    "iconPath": "/i/037000/037090.png",
+    "uiCategory": 109,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Pendulums Eclipticum",
+    "ja": "レプリカ・ファントムイクリプティカム・ペンデュラム",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51085": {
+    "ko": "모조 팬텀 달그림자 쌍송곳니",
+    "iconPath": "/i/037000/037457.png",
+    "uiCategory": 110,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Twinfangs Eclipticum",
+    "ja": "レプリカ・ファントムイクリプティカム・ツインファング",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51086": {
+    "ko": "모조 팬텀 달그림자 둥근붓",
+    "iconPath": "/i/037000/037667.png",
+    "uiCategory": 111,
+    "equipSlotCategory": 13,
+    "en": "Phantom Round Brush Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・ラウンドブラシ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51087": {
+    "ko": "모조 팬텀 달그림자 방패",
+    "iconPath": "/i/030000/030293.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Phantom Shield Eclipticum Replica",
+    "ja": "レプリカ・ファントムイクリプティカム・シールド",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "51088": {
+    "ko": "모조 팬텀 숨은그림자 한손검",
+    "iconPath": "/i/030000/030704.png",
+    "uiCategory": 2,
+    "equipSlotCategory": 1,
+    "en": "Phantom Sword Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ソード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51089": {
+    "ko": "모조 팬텀 숨은그림자 톤파",
+    "iconPath": "/i/030000/030868.png",
+    "uiCategory": 1,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Tonfa Occultum",
+    "ja": "レプリカ・ファントムオカルタム・トンファー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51090": {
+    "ko": "모조 팬텀 숨은그림자 전투망치",
+    "iconPath": "/i/031000/031278.png",
+    "uiCategory": 3,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Hammer Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ウォーハンマー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51091": {
+    "ko": "모조 팬텀 숨은그림자 창",
+    "iconPath": "/i/031000/031680.png",
+    "uiCategory": 5,
+    "equipSlotCategory": 13,
+    "en": "Phantom Spear Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・スピア",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51092": {
+    "ko": "모조 팬텀 숨은그림자 현악궁",
+    "iconPath": "/i/032000/032068.png",
+    "uiCategory": 4,
+    "equipSlotCategory": 13,
+    "en": "Phantom Harp Bow Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ハープボウ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51093": {
+    "ko": "모조 팬텀 숨은그림자 환술봉",
+    "iconPath": "/i/032000/032499.png",
+    "uiCategory": 9,
+    "equipSlotCategory": 13,
+    "en": "Phantom Cane Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ケーン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51094": {
+    "ko": "모조 팬텀 숨은그림자 주술봉",
+    "iconPath": "/i/032000/032914.png",
+    "uiCategory": 7,
+    "equipSlotCategory": 13,
+    "en": "Phantom Staff Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・スタッフ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51095": {
+    "ko": "모조 팬텀 숨은그림자 금서",
+    "iconPath": "/i/037000/037859.png",
+    "uiCategory": 10,
+    "equipSlotCategory": 13,
+    "en": "Phantom Index Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・インデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51096": {
+    "ko": "모조 팬텀 숨은그림자 치유서",
+    "iconPath": "/i/037000/037858.png",
+    "uiCategory": 98,
+    "equipSlotCategory": 13,
+    "en": "Phantom Codex Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・コーデックス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51097": {
+    "ko": "모조 팬텀 숨은그림자 단검",
+    "iconPath": "/i/033000/033654.png",
+    "uiCategory": 84,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Knives Occultum",
+    "ja": "レプリカ・ファントムオカルタム・ナイフ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51098": {
+    "ko": "모조 팬텀 숨은그림자 단두검",
+    "iconPath": "/i/034000/034033.png",
+    "uiCategory": 87,
+    "equipSlotCategory": 13,
+    "en": "Phantom Guillotine Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ディバイダー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51099": {
+    "ko": "모조 팬텀 숨은그림자 연발권총",
+    "iconPath": "/i/034000/034527.png",
+    "uiCategory": 88,
+    "equipSlotCategory": 13,
+    "en": "Phantom Revolver Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・リボルバー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51100": {
+    "ko": "모조 팬텀 숨은그림자 천구의",
+    "iconPath": "/i/034000/034726.png",
+    "uiCategory": 89,
+    "equipSlotCategory": 13,
+    "en": "Phantom Star Globe Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・スターグローブ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51101": {
+    "ko": "모조 팬텀 숨은그림자 외날검",
+    "iconPath": "/i/036000/036582.png",
+    "uiCategory": 96,
+    "equipSlotCategory": 13,
+    "en": "Phantom Blade Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51102": {
+    "ko": "모조 팬텀 숨은그림자 데겐",
+    "iconPath": "/i/036000/036881.png",
+    "uiCategory": 97,
+    "equipSlotCategory": 13,
+    "en": "Phantom Degen Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・デーゲン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51103": {
+    "ko": "모조 팬텀 숨은그림자 건블레이드",
+    "iconPath": "/i/036000/036124.png",
+    "uiCategory": 106,
+    "equipSlotCategory": 13,
+    "en": "Phantom Gunblade Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ガンブレード",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51104": {
+    "ko": "모조 팬텀 숨은그림자 부채",
+    "iconPath": "/i/036000/036323.png",
+    "uiCategory": 107,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Fans Occultum",
+    "ja": "レプリカ・ファントムオカルタム・ファン",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51105": {
+    "ko": "모조 팬텀 숨은그림자 전투낫",
+    "iconPath": "/i/037000/037294.png",
+    "uiCategory": 108,
+    "equipSlotCategory": 13,
+    "en": "Phantom War Scythe Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ウォーサイズ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51106": {
+    "ko": "모조 팬텀 숨은그림자 진자",
+    "iconPath": "/i/037000/037090.png",
+    "uiCategory": 109,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Pendulums Occultum",
+    "ja": "レプリカ・ファントムオカルタム・ペンデュラム",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51107": {
+    "ko": "모조 팬텀 숨은그림자 쌍송곳니",
+    "iconPath": "/i/037000/037457.png",
+    "uiCategory": 110,
+    "equipSlotCategory": 13,
+    "en": "Replica Phantom Twinfangs Occultum",
+    "ja": "レプリカ・ファントムオカルタム・ツインファング",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51108": {
+    "ko": "모조 팬텀 숨은그림자 둥근붓",
+    "iconPath": "/i/037000/037667.png",
+    "uiCategory": 111,
+    "equipSlotCategory": 13,
+    "en": "Phantom Round Brush Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・ラウンドブラシ",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51109": {
+    "ko": "모조 팬텀 숨은그림자 방패",
+    "iconPath": "/i/030000/030293.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Phantom Shield Occultum Replica",
+    "ja": "レプリカ・ファントムオカルタム・シールド",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
   "51110": {
     "ko": "보강된 궁정연인 한손검",
     "iconPath": "/i/030000/030703.png",
@@ -484357,12 +485889,28 @@
     "ja": "ガーデン・パーティライト",
     "equipSlots": []
   },
+  "51270": {
+    "ko": "정원 수로",
+    "iconPath": "/i/053000/053741.png",
+    "uiCategory": 76,
+    "en": "Garden Canal",
+    "ja": "ガーデン・カナル",
+    "equipSlots": []
+  },
   "51271": {
     "ko": "반원형 화단 무대",
     "iconPath": "/i/053000/053746.png",
     "uiCategory": 76,
     "en": "Semicircular Outdoor Stage",
     "ja": "セミサークル・ガーデンステージ",
+    "equipSlots": []
+  },
+  "51272": {
+    "ko": "폐허 수도교",
+    "iconPath": "/i/053000/053737.png",
+    "uiCategory": 76,
+    "en": "Crumbling Aqueduct",
+    "ja": "ルインド・アクアダクト",
     "equipSlots": []
   },
   "51275": {
@@ -484421,6 +485969,62 @@
     "ja": "アウクセシア・ハイウェイライト",
     "equipSlots": []
   },
+  "51282": {
+    "ko": "익룡 화석 표본",
+    "iconPath": "/i/051000/051936.png",
+    "uiCategory": 79,
+    "en": "Winged Scalekin Fossil",
+    "ja": "翼竜の化石標本",
+    "equipSlots": []
+  },
+  "51283": {
+    "ko": "초승달 돌기둥",
+    "iconPath": "/i/052000/052874.png",
+    "uiCategory": 57,
+    "en": "Crescent Stone Pillar",
+    "ja": "クレセント・ストーンピラー",
+    "equipSlots": []
+  },
+  "51284": {
+    "ko": "초승달 벽걸이 선반",
+    "iconPath": "/i/051000/051935.png",
+    "uiCategory": 79,
+    "en": "Crescent Wall Rack",
+    "ja": "クレセント・ウォールラック",
+    "equipSlots": []
+  },
+  "51285": {
+    "ko": "초승달 진열장",
+    "iconPath": "/i/051000/051753.png",
+    "uiCategory": 77,
+    "en": "Crescent Display Case",
+    "ja": "クレセント・ディスプレイケース",
+    "equipSlots": []
+  },
+  "51286": {
+    "ko": "초승달 푸른돌 장식품",
+    "iconPath": "/i/053000/053555.png",
+    "uiCategory": 78,
+    "en": "Blue Crescent Moon",
+    "ja": "クレセント・ブルーストーン",
+    "equipSlots": []
+  },
+  "51287": {
+    "ko": "초승달 노란돌 장식품",
+    "iconPath": "/i/053000/053554.png",
+    "uiCategory": 78,
+    "en": "Yellow Crescent Cube",
+    "ja": "クレセント・イエローストーン",
+    "equipSlots": []
+  },
+  "51288": {
+    "ko": "초승달 붉은돌 장식품",
+    "iconPath": "/i/053000/053556.png",
+    "uiCategory": 78,
+    "en": "Red Crescent Crystal",
+    "ja": "クレセント・レッドストーン",
+    "equipSlots": []
+  },
   "51289": {
     "ko": "뿌니뿌니 지바냥",
     "iconPath": "/i/053000/053560.png",
@@ -484449,7 +486053,7 @@
     "ko": "웃음짓는 수호천절 버섯",
     "iconPath": "/i/052000/052885.png",
     "uiCategory": 57,
-    "en": "スマイリング・ウェイクマッシュルーム",
+    "en": "Smiling Wakeshroom",
     "ja": "スマイリング・ウェイクマッシュルーム",
     "equipSlots": []
   },
@@ -484457,7 +486061,7 @@
     "ko": "응시하는 수호천절 버섯",
     "iconPath": "/i/052000/052886.png",
     "uiCategory": 57,
-    "en": "ステアリング・ウェイクマッシュルーム",
+    "en": "Staring Wakeshroom",
     "ja": "ステアリング・ウェイクマッシュルーム",
     "equipSlots": []
   },
@@ -484465,7 +486069,7 @@
     "ko": "수호천절 유령 수레",
     "iconPath": "/i/052000/052887.png",
     "uiCategory": 57,
-    "en": "ウェイクゴースト・バギー",
+    "en": "Wakesoul Buggy",
     "ja": "ウェイクゴースト・バギー",
     "equipSlots": []
   },
@@ -484473,7 +486077,7 @@
     "ko": "별빛 썰매",
     "iconPath": "/i/053000/053745.png",
     "uiCategory": 76,
-    "en": "スターライト・スレッド",
+    "en": "Starlight Sled",
     "ja": "スターライト・スレッド",
     "equipSlots": []
   },
@@ -484485,19 +486089,43 @@
     "ja": "彼方に至る路のポスターEX",
     "equipSlots": []
   },
+  "51299": {
+    "ko": "신생제 포스터: 2026-1",
+    "iconPath": "/i/051000/051946.png",
+    "uiCategory": 79,
+    "en": "The Rising MMXXV Advertisement",
+    "ja": "新生祭のポスター2025",
+    "equipSlots": []
+  },
+  "51300": {
+    "ko": "신생제 축제 탁상용 액자: 2026-1",
+    "iconPath": "/i/053000/053566.png",
+    "uiCategory": 78,
+    "en": "Tabletop Rising MMXXV Advertisement",
+    "ja": "新生祭の卓上絵画2025",
+    "equipSlots": []
+  },
+  "51301": {
+    "ko": "신생제 포스터: 2025-2",
+    "iconPath": "/i/051000/051945.png",
+    "uiCategory": 79,
+    "en": "The Rising MMXXIV Advertisement",
+    "ja": "新生祭のポスター2024",
+    "equipSlots": []
+  },
   "51302": {
-    "ko": "수호천절 포스터: 2025",
+    "ko": "수호천절 포스터: 2025-2",
     "iconPath": "/i/051000/051944.png",
     "uiCategory": 79,
-    "en": "守護天節のポスター2025",
+    "en": "All Saints' Wake MMXXV Advertisement",
     "ja": "守護天節のポスター2025",
     "equipSlots": []
   },
   "51303": {
-    "ko": "수호천절 탁상용 액자: 2025",
+    "ko": "수호천절 탁상용 액자: 2025-2",
     "iconPath": "/i/053000/053565.png",
     "uiCategory": 78,
-    "en": "守護天節の卓上絵画2025",
+    "en": "Tabletop All Saints' Wake MMXXV Advertisement",
     "ja": "守護天節の卓上絵画2025",
     "equipSlots": []
   },
@@ -484505,23 +486133,23 @@
     "ko": "수호천절 포스터: 2017",
     "iconPath": "/i/051000/051943.png",
     "uiCategory": 79,
-    "en": "守護天節のポスター2016",
+    "en": "All Saints' Wake MMXVI Advertisement",
     "ja": "守護天節のポスター2016",
     "equipSlots": []
   },
   "51305": {
-    "ko": "별빛축제 포스터: 2025",
+    "ko": "별빛축제 포스터: 2025-2",
     "iconPath": "/i/051000/051948.png",
     "uiCategory": 79,
-    "en": "星芒祭のポスター2025",
+    "en": "Starlight Celebration MMXXV Advertisement",
     "ja": "星芒祭のポスター2025",
     "equipSlots": []
   },
   "51306": {
-    "ko": "별빛축제 탁상용 액자: 2025",
+    "ko": "별빛축제 탁상용 액자: 2025-2",
     "iconPath": "/i/053000/053567.png",
     "uiCategory": 78,
-    "en": "星芒祭の卓上絵画2025",
+    "en": "Tabletop Starlight Celebration MMXXV Advertisement",
     "ja": "星芒祭の卓上絵画2025",
     "equipSlots": []
   },
@@ -484529,7 +486157,7 @@
     "ko": "별빛축제 포스터: 2023",
     "iconPath": "/i/051000/051947.png",
     "uiCategory": 79,
-    "en": "星芒祭のポスター2022",
+    "en": "Starlight Celebration MMXXII Advertisement",
     "ja": "星芒祭のポスター2022",
     "equipSlots": []
   },
@@ -485113,7 +486741,7 @@
     "ko": "드라바니아 학살자 장비",
     "iconPath": "/i/043000/043284.png",
     "uiCategory": 112,
-    "en": "Dravanian Attire of Slaying",
+    "en": "Dravanian Attire of Maiming",
     "ja": "ドラヴァニアン・スレイヤー・アタイア",
     "equipSlots": []
   },
@@ -486513,7 +488141,7 @@
     "ko": "마누샤 학살자 장비",
     "iconPath": "/i/043000/043948.png",
     "uiCategory": 112,
-    "en": "Manusya Attire of Slaying",
+    "en": "Manusya Attire of Maiming",
     "ja": "マヌシャ・スレイヤー・アタイア",
     "equipSlots": []
   },
@@ -488530,6 +490158,1894 @@
       "mainhand"
     ]
   },
+  "51811": {
+    "ko": "팬텀 환영 수호자 가면",
+    "iconPath": "/i/056000/056947.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Mask of Fending",
+    "ja": "ファントムヴィジョン・ディフェンダーマスク",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51812": {
+    "ko": "팬텀 환영 수호자 흉갑",
+    "iconPath": "/i/057000/057376.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Corselet of Fending",
+    "ja": "ファントムヴィジョン・ディフェンダーコースリット",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51813": {
+    "ko": "팬텀 환영 수호자 완갑",
+    "iconPath": "/i/056000/056451.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Vambraces of Fending",
+    "ja": "ファントムヴィジョン・ディフェンダーヴァンブレイス",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51814": {
+    "ko": "팬텀 환영 수호자 하의",
+    "iconPath": "/i/057000/057469.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Bottoms of Fending",
+    "ja": "ファントムヴィジョン・ディフェンダーボトム",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51815": {
+    "ko": "팬텀 환영 수호자 쇠구두",
+    "iconPath": "/i/057000/057961.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Sollerets of Fending",
+    "ja": "ファントムヴィジョン・ディフェンダーソルレット",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51816": {
+    "ko": "팬텀 환영 수호자 가면 +1",
+    "iconPath": "/i/056000/056947.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Mask of Fending +1",
+    "ja": "ファントムヴィジョン・ディフェンダーマスク+1",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51817": {
+    "ko": "팬텀 환영 수호자 흉갑 +1",
+    "iconPath": "/i/057000/057376.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Corselet of Fending +1",
+    "ja": "ファントムヴィジョン・ディフェンダーコースリット+1",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51818": {
+    "ko": "팬텀 환영 수호자 완갑 +1",
+    "iconPath": "/i/056000/056451.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Vambraces of Fending +1",
+    "ja": "ファントムヴィジョン・ディフェンダーヴァンブレイス+1",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51819": {
+    "ko": "팬텀 환영 수호자 하의 +1",
+    "iconPath": "/i/057000/057469.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Bottoms of Fending +1",
+    "ja": "ファントムヴィジョン・ディフェンダーボトム+1",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51820": {
+    "ko": "팬텀 환영 수호자 쇠구두 +1",
+    "iconPath": "/i/057000/057961.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Sollerets of Fending +1",
+    "ja": "ファントムヴィジョン・ディフェンダーソルレット+1",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51821": {
+    "ko": "팬텀 환영 수호자 가면 +2",
+    "iconPath": "/i/056000/056947.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Mask of Fending +2",
+    "ja": "ファントムヴィジョン・ディフェンダーマスク+2",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51822": {
+    "ko": "팬텀 환영 수호자 흉갑 +2",
+    "iconPath": "/i/057000/057376.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Corselet of Fending +2",
+    "ja": "ファントムヴィジョン・ディフェンダーコースリット+2",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51823": {
+    "ko": "팬텀 환영 수호자 완갑 +2",
+    "iconPath": "/i/056000/056451.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Vambraces of Fending +2",
+    "ja": "ファントムヴィジョン・ディフェンダーヴァンブレイス+2",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51824": {
+    "ko": "팬텀 환영 수호자 하의 +2",
+    "iconPath": "/i/057000/057469.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Bottoms of Fending +2",
+    "ja": "ファントムヴィジョン・ディフェンダーボトム+2",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51825": {
+    "ko": "팬텀 환영 수호자 쇠구두 +2",
+    "iconPath": "/i/057000/057961.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Sollerets of Fending +2",
+    "ja": "ファントムヴィジョン・ディフェンダーソルレット+2",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51826": {
+    "ko": "팬텀 환영 수호자 가면 +3",
+    "iconPath": "/i/056000/056947.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Mask of Fending +3",
+    "ja": "ファントムヴィジョン・ディフェンダーマスク+3",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51827": {
+    "ko": "팬텀 환영 수호자 흉갑 +3",
+    "iconPath": "/i/057000/057376.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Corselet of Fending +3",
+    "ja": "ファントムヴィジョン・ディフェンダーコースリット+3",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51828": {
+    "ko": "팬텀 환영 수호자 완갑 +3",
+    "iconPath": "/i/056000/056451.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Vambraces of Fending +3",
+    "ja": "ファントムヴィジョン・ディフェンダーヴァンブレイス+3",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51829": {
+    "ko": "팬텀 환영 수호자 하의 +3",
+    "iconPath": "/i/057000/057469.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Bottoms of Fending +3",
+    "ja": "ファントムヴィジョン・ディフェンダーボトム+3",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51830": {
+    "ko": "팬텀 환영 수호자 쇠구두 +3",
+    "iconPath": "/i/057000/057961.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Sollerets of Fending +3",
+    "ja": "ファントムヴィジョン・ディフェンダーソルレット+3",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51831": {
+    "ko": "팬텀 환영 학살자 가면",
+    "iconPath": "/i/056000/056948.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Mask of Maiming",
+    "ja": "ファントムヴィジョン・スレイヤーマスク",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51832": {
+    "ko": "팬텀 환영 학살자 흉갑",
+    "iconPath": "/i/057000/057377.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Corselet of Maiming",
+    "ja": "ファントムヴィジョン・スレイヤーコースリット",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51833": {
+    "ko": "팬텀 환영 학살자 완갑",
+    "iconPath": "/i/056000/056452.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Vambraces of Maiming",
+    "ja": "ファントムヴィジョン・スレイヤーヴァンブレイス",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51834": {
+    "ko": "팬텀 환영 학살자 하의",
+    "iconPath": "/i/057000/057470.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Bottoms of Maiming",
+    "ja": "ファントムヴィジョン・スレイヤーボトム",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51835": {
+    "ko": "팬텀 환영 학살자 쇠구두",
+    "iconPath": "/i/057000/057962.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Sollerets of Maiming",
+    "ja": "ファントムヴィジョン・スレイヤーソルレット",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51836": {
+    "ko": "팬텀 환영 학살자 가면 +1",
+    "iconPath": "/i/056000/056948.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Mask of Maiming +1",
+    "ja": "ファントムヴィジョン・スレイヤーマスク+1",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51837": {
+    "ko": "팬텀 환영 학살자 흉갑 +1",
+    "iconPath": "/i/057000/057377.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Corselet of Maiming +1",
+    "ja": "ファントムヴィジョン・スレイヤーコースリット+1",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51838": {
+    "ko": "팬텀 환영 학살자 완갑 +1",
+    "iconPath": "/i/056000/056452.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Vambraces of Maiming +1",
+    "ja": "ファントムヴィジョン・スレイヤーヴァンブレイス+1",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51839": {
+    "ko": "팬텀 환영 학살자 하의 +1",
+    "iconPath": "/i/057000/057470.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Bottoms of Maiming +1",
+    "ja": "ファントムヴィジョン・スレイヤーボトム+1",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51840": {
+    "ko": "팬텀 환영 학살자 쇠구두 +1",
+    "iconPath": "/i/057000/057962.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Sollerets of Maiming +1",
+    "ja": "ファントムヴィジョン・スレイヤーソルレット+1",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51841": {
+    "ko": "팬텀 환영 학살자 가면 +2",
+    "iconPath": "/i/056000/056948.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Mask of Maiming +2",
+    "ja": "ファントムヴィジョン・スレイヤーマスク+2",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51842": {
+    "ko": "팬텀 환영 학살자 흉갑 +2",
+    "iconPath": "/i/057000/057377.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Corselet of Maiming +2",
+    "ja": "ファントムヴィジョン・スレイヤーコースリット+2",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51843": {
+    "ko": "팬텀 환영 학살자 완갑 +2",
+    "iconPath": "/i/056000/056452.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Vambraces of Maiming +2",
+    "ja": "ファントムヴィジョン・スレイヤーヴァンブレイス+2",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51844": {
+    "ko": "팬텀 환영 학살자 하의 +2",
+    "iconPath": "/i/057000/057470.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Bottoms of Maiming +2",
+    "ja": "ファントムヴィジョン・スレイヤーボトム+2",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51845": {
+    "ko": "팬텀 환영 학살자 쇠구두 +2",
+    "iconPath": "/i/057000/057962.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Sollerets of Maiming +2",
+    "ja": "ファントムヴィジョン・スレイヤーソルレット+2",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51846": {
+    "ko": "팬텀 환영 학살자 가면 +3",
+    "iconPath": "/i/056000/056948.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Mask of Maiming +3",
+    "ja": "ファントムヴィジョン・スレイヤーマスク+3",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51847": {
+    "ko": "팬텀 환영 학살자 흉갑 +3",
+    "iconPath": "/i/057000/057377.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Corselet of Maiming +3",
+    "ja": "ファントムヴィジョン・スレイヤーコースリット+3",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51848": {
+    "ko": "팬텀 환영 학살자 완갑 +3",
+    "iconPath": "/i/056000/056452.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Vambraces of Maiming +3",
+    "ja": "ファントムヴィジョン・スレイヤーヴァンブレイス+3",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51849": {
+    "ko": "팬텀 환영 학살자 하의 +3",
+    "iconPath": "/i/057000/057470.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Bottoms of Maiming +3",
+    "ja": "ファントムヴィジョン・スレイヤーボトム+3",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51850": {
+    "ko": "팬텀 환영 학살자 쇠구두 +3",
+    "iconPath": "/i/057000/057962.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Sollerets of Maiming +3",
+    "ja": "ファントムヴィジョン・スレイヤーソルレット+3",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51851": {
+    "ko": "팬텀 환영 타격대 터번",
+    "iconPath": "/i/056000/056950.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Striking",
+    "ja": "ファントムヴィジョン・ストライカーターバン",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51852": {
+    "ko": "팬텀 환영 타격대 로브",
+    "iconPath": "/i/057000/057379.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Striking",
+    "ja": "ファントムヴィジョン・ストライカーローブ",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51853": {
+    "ko": "팬텀 환영 타격대 손목덮개",
+    "iconPath": "/i/056000/056454.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Striking",
+    "ja": "ファントムヴィジョン・ストライカーリストラップ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51854": {
+    "ko": "팬텀 환영 타격대 헐렁바지",
+    "iconPath": "/i/057000/057472.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Striking",
+    "ja": "ファントムヴィジョン・ストライカーサルエル",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51855": {
+    "ko": "팬텀 환영 타격대 장화",
+    "iconPath": "/i/057000/057964.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Striking",
+    "ja": "ファントムヴィジョン・ストライカーブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51856": {
+    "ko": "팬텀 환영 타격대 터번 +1",
+    "iconPath": "/i/056000/056950.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Striking +1",
+    "ja": "ファントムヴィジョン・ストライカーターバン+1",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51857": {
+    "ko": "팬텀 환영 타격대 로브 +1",
+    "iconPath": "/i/057000/057379.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Striking +1",
+    "ja": "ファントムヴィジョン・ストライカーローブ+1",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51858": {
+    "ko": "팬텀 환영 타격대 손목덮개 +1",
+    "iconPath": "/i/056000/056454.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Striking +1",
+    "ja": "ファントムヴィジョン・ストライカーリストラップ+1",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51859": {
+    "ko": "팬텀 환영 타격대 헐렁바지 +1",
+    "iconPath": "/i/057000/057472.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Striking +1",
+    "ja": "ファントムヴィジョン・ストライカーサルエル+1",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51860": {
+    "ko": "팬텀 환영 타격대 장화 +1",
+    "iconPath": "/i/057000/057964.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Striking +1",
+    "ja": "ファントムヴィジョン・ストライカーブーツ+1",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51861": {
+    "ko": "팬텀 환영 타격대 터번 +2",
+    "iconPath": "/i/056000/056950.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Striking +2",
+    "ja": "ファントムヴィジョン・ストライカーターバン+2",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51862": {
+    "ko": "팬텀 환영 타격대 로브 +2",
+    "iconPath": "/i/057000/057379.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Striking +2",
+    "ja": "ファントムヴィジョン・ストライカーローブ+2",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51863": {
+    "ko": "팬텀 환영 타격대 손목덮개 +2",
+    "iconPath": "/i/056000/056454.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Striking +2",
+    "ja": "ファントムヴィジョン・ストライカーリストラップ+2",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51864": {
+    "ko": "팬텀 환영 타격대 헐렁바지 +2",
+    "iconPath": "/i/057000/057472.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Striking +2",
+    "ja": "ファントムヴィジョン・ストライカーサルエル+2",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51865": {
+    "ko": "팬텀 환영 타격대 장화 +2",
+    "iconPath": "/i/057000/057964.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Striking +2",
+    "ja": "ファントムヴィジョン・ストライカーブーツ+2",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51866": {
+    "ko": "팬텀 환영 타격대 터번 +3",
+    "iconPath": "/i/056000/056950.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Striking +3",
+    "ja": "ファントムヴィジョン・ストライカーターバン+3",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51867": {
+    "ko": "팬텀 환영 타격대 로브 +3",
+    "iconPath": "/i/057000/057379.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Striking +3",
+    "ja": "ファントムヴィジョン・ストライカーローブ+3",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51868": {
+    "ko": "팬텀 환영 타격대 손목덮개 +3",
+    "iconPath": "/i/056000/056454.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Striking +3",
+    "ja": "ファントムヴィジョン・ストライカーリストラップ+3",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51869": {
+    "ko": "팬텀 환영 타격대 헐렁바지 +3",
+    "iconPath": "/i/057000/057472.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Striking +3",
+    "ja": "ファントムヴィジョン・ストライカーサルエル+3",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51870": {
+    "ko": "팬텀 환영 타격대 장화 +3",
+    "iconPath": "/i/057000/057964.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Striking +3",
+    "ja": "ファントムヴィジョン・ストライカーブーツ+3",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51871": {
+    "ko": "팬텀 환영 유격대 터번",
+    "iconPath": "/i/056000/056949.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Aiming",
+    "ja": "ファントムヴィジョン・レンジャーターバン",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51872": {
+    "ko": "팬텀 환영 유격대 로브",
+    "iconPath": "/i/057000/057378.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Aiming",
+    "ja": "ファントムヴィジョン・レンジャーローブ",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51873": {
+    "ko": "팬텀 환영 유격대 손목덮개",
+    "iconPath": "/i/056000/056453.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Aiming",
+    "ja": "ファントムヴィジョン・レンジャーリストラップ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51874": {
+    "ko": "팬텀 환영 유격대 헐렁바지",
+    "iconPath": "/i/057000/057471.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Aiming",
+    "ja": "ファントムヴィジョン・レンジャーサルエル",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51875": {
+    "ko": "팬텀 환영 유격대 장화",
+    "iconPath": "/i/057000/057963.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Aiming",
+    "ja": "ファントムヴィジョン・レンジャーブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51876": {
+    "ko": "팬텀 환영 유격대 터번 +1",
+    "iconPath": "/i/056000/056949.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Aiming +1",
+    "ja": "ファントムヴィジョン・レンジャーターバン+1",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51877": {
+    "ko": "팬텀 환영 유격대 로브 +1",
+    "iconPath": "/i/057000/057378.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Aiming +1",
+    "ja": "ファントムヴィジョン・レンジャーローブ+1",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51878": {
+    "ko": "팬텀 환영 유격대 손목덮개 +1",
+    "iconPath": "/i/056000/056453.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Aiming +1",
+    "ja": "ファントムヴィジョン・レンジャーリストラップ+1",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51879": {
+    "ko": "팬텀 환영 유격대 헐렁바지 +1",
+    "iconPath": "/i/057000/057471.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Aiming +1",
+    "ja": "ファントムヴィジョン・レンジャーサルエル+1",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51880": {
+    "ko": "팬텀 환영 유격대 장화 +1",
+    "iconPath": "/i/057000/057963.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Aiming +1",
+    "ja": "ファントムヴィジョン・レンジャーブーツ+1",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51881": {
+    "ko": "팬텀 환영 유격대 터번 +2",
+    "iconPath": "/i/056000/056949.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Aiming +2",
+    "ja": "ファントムヴィジョン・レンジャーターバン+2",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51882": {
+    "ko": "팬텀 환영 유격대 로브 +2",
+    "iconPath": "/i/057000/057378.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Aiming +2",
+    "ja": "ファントムヴィジョン・レンジャーローブ+2",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51883": {
+    "ko": "팬텀 환영 유격대 손목덮개 +2",
+    "iconPath": "/i/056000/056453.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Aiming +2",
+    "ja": "ファントムヴィジョン・レンジャーリストラップ+2",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51884": {
+    "ko": "팬텀 환영 유격대 헐렁바지 +2",
+    "iconPath": "/i/057000/057471.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Aiming +2",
+    "ja": "ファントムヴィジョン・レンジャーサルエル+2",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51885": {
+    "ko": "팬텀 환영 유격대 장화 +2",
+    "iconPath": "/i/057000/057963.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Aiming +2",
+    "ja": "ファントムヴィジョン・レンジャーブーツ+2",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51886": {
+    "ko": "팬텀 환영 유격대 터번 +3",
+    "iconPath": "/i/056000/056949.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Aiming +3",
+    "ja": "ファントムヴィジョン・レンジャーターバン+3",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51887": {
+    "ko": "팬텀 환영 유격대 로브 +3",
+    "iconPath": "/i/057000/057378.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Aiming +3",
+    "ja": "ファントムヴィジョン・レンジャーローブ+3",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51888": {
+    "ko": "팬텀 환영 유격대 손목덮개 +3",
+    "iconPath": "/i/056000/056453.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Aiming +3",
+    "ja": "ファントムヴィジョン・レンジャーリストラップ+3",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51889": {
+    "ko": "팬텀 환영 유격대 헐렁바지 +3",
+    "iconPath": "/i/057000/057471.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Aiming +3",
+    "ja": "ファントムヴィジョン・レンジャーサルエル+3",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51890": {
+    "ko": "팬텀 환영 유격대 장화 +3",
+    "iconPath": "/i/057000/057963.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Aiming +3",
+    "ja": "ファントムヴィジョン・レンジャーブーツ+3",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51891": {
+    "ko": "팬텀 환영 정찰대 터번",
+    "iconPath": "/i/056000/056951.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Scouting",
+    "ja": "ファントムヴィジョン・スカウトターバン",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51892": {
+    "ko": "팬텀 환영 정찰대 로브",
+    "iconPath": "/i/057000/057380.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Scouting",
+    "ja": "ファントムヴィジョン・スカウトローブ",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51893": {
+    "ko": "팬텀 환영 정찰대 손목덮개",
+    "iconPath": "/i/056000/056455.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Scouting",
+    "ja": "ファントムヴィジョン・スカウトリストラップ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51894": {
+    "ko": "팬텀 환영 정찰대 헐렁바지",
+    "iconPath": "/i/057000/057473.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Scouting",
+    "ja": "ファントムヴィジョン・スカウトサルエル",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51895": {
+    "ko": "팬텀 환영 정찰대 장화",
+    "iconPath": "/i/057000/057965.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Scouting",
+    "ja": "ファントムヴィジョン・スカウトブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51896": {
+    "ko": "팬텀 환영 정찰대 터번 +1",
+    "iconPath": "/i/056000/056951.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Scouting +1",
+    "ja": "ファントムヴィジョン・スカウトターバン+1",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51897": {
+    "ko": "팬텀 환영 정찰대 로브 +1",
+    "iconPath": "/i/057000/057380.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Scouting +1",
+    "ja": "ファントムヴィジョン・スカウトローブ+1",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51898": {
+    "ko": "팬텀 환영 정찰대 손목덮개 +1",
+    "iconPath": "/i/056000/056455.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Scouting +1",
+    "ja": "ファントムヴィジョン・スカウトリストラップ+1",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51899": {
+    "ko": "팬텀 환영 정찰대 헐렁바지 +1",
+    "iconPath": "/i/057000/057473.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Scouting +1",
+    "ja": "ファントムヴィジョン・スカウトサルエル+1",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51900": {
+    "ko": "팬텀 환영 정찰대 장화 +1",
+    "iconPath": "/i/057000/057965.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Scouting +1",
+    "ja": "ファントムヴィジョン・スカウトブーツ+1",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51901": {
+    "ko": "팬텀 환영 정찰대 터번 +2",
+    "iconPath": "/i/056000/056951.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Scouting +2",
+    "ja": "ファントムヴィジョン・スカウトターバン+2",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51902": {
+    "ko": "팬텀 환영 정찰대 로브 +2",
+    "iconPath": "/i/057000/057380.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Scouting +2",
+    "ja": "ファントムヴィジョン・スカウトローブ+2",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51903": {
+    "ko": "팬텀 환영 정찰대 손목덮개 +2",
+    "iconPath": "/i/056000/056455.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Scouting +2",
+    "ja": "ファントムヴィジョン・スカウトリストラップ+2",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51904": {
+    "ko": "팬텀 환영 정찰대 헐렁바지 +2",
+    "iconPath": "/i/057000/057473.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Scouting +2",
+    "ja": "ファントムヴィジョン・スカウトサルエル+2",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51905": {
+    "ko": "팬텀 환영 정찰대 장화 +2",
+    "iconPath": "/i/057000/057965.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Scouting +2",
+    "ja": "ファントムヴィジョン・スカウトブーツ+2",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51906": {
+    "ko": "팬텀 환영 정찰대 터번 +3",
+    "iconPath": "/i/056000/056951.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Turban of Scouting +3",
+    "ja": "ファントムヴィジョン・スカウトターバン+3",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51907": {
+    "ko": "팬텀 환영 정찰대 로브 +3",
+    "iconPath": "/i/057000/057380.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Robe of Scouting +3",
+    "ja": "ファントムヴィジョン・スカウトローブ+3",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51908": {
+    "ko": "팬텀 환영 정찰대 손목덮개 +3",
+    "iconPath": "/i/056000/056455.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Scouting +3",
+    "ja": "ファントムヴィジョン・スカウトリストラップ+3",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51909": {
+    "ko": "팬텀 환영 정찰대 헐렁바지 +3",
+    "iconPath": "/i/057000/057473.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Scouting +3",
+    "ja": "ファントムヴィジョン・スカウトサルエル+3",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51910": {
+    "ko": "팬텀 환영 정찰대 장화 +3",
+    "iconPath": "/i/057000/057965.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Boots of Scouting +3",
+    "ja": "ファントムヴィジョン・スカウトブーツ+3",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51911": {
+    "ko": "팬텀 환영 치유사 수면모자",
+    "iconPath": "/i/056000/056946.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Nightcap of Healing",
+    "ja": "ファントムヴィジョン・ヒーラーナイトキャップ",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51912": {
+    "ko": "팬텀 환영 치유사 누비옷",
+    "iconPath": "/i/057000/057375.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Acton of Healing",
+    "ja": "ファントムヴィジョン・ヒーラーアクトン",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51913": {
+    "ko": "팬텀 환영 치유사 손목덮개",
+    "iconPath": "/i/056000/056450.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Healing",
+    "ja": "ファントムヴィジョン・ヒーラーリストラップ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51914": {
+    "ko": "팬텀 환영 치유사 헐렁바지",
+    "iconPath": "/i/057000/057468.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Healing",
+    "ja": "ファントムヴィジョン・ヒーラーサルエル",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51915": {
+    "ko": "팬텀 환영 치유사 뾰족신",
+    "iconPath": "/i/057000/057960.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Crakows of Healing",
+    "ja": "ファントムヴィジョン・ヒーラークラコー",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51916": {
+    "ko": "팬텀 환영 치유사 수면모자 +1",
+    "iconPath": "/i/056000/056946.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Nightcap of Healing +1",
+    "ja": "ファントムヴィジョン・ヒーラーナイトキャップ+1",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51917": {
+    "ko": "팬텀 환영 치유사 누비옷 +1",
+    "iconPath": "/i/057000/057375.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Acton of Healing +1",
+    "ja": "ファントムヴィジョン・ヒーラーアクトン+1",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51918": {
+    "ko": "팬텀 환영 치유사 손목덮개 +1",
+    "iconPath": "/i/056000/056450.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Healing +1",
+    "ja": "ファントムヴィジョン・ヒーラーリストラップ+1",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51919": {
+    "ko": "팬텀 환영 치유사 헐렁바지 +1",
+    "iconPath": "/i/057000/057468.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Healing +1",
+    "ja": "ファントムヴィジョン・ヒーラーサルエル+1",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51920": {
+    "ko": "팬텀 환영 치유사 뾰족신 +1",
+    "iconPath": "/i/057000/057960.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Crakows of Healing +1",
+    "ja": "ファントムヴィジョン・ヒーラークラコー+1",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51921": {
+    "ko": "팬텀 환영 치유사 수면모자 +2",
+    "iconPath": "/i/056000/056946.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Nightcap of Healing +2",
+    "ja": "ファントムヴィジョン・ヒーラーナイトキャップ+2",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51922": {
+    "ko": "팬텀 환영 치유사 누비옷 +2",
+    "iconPath": "/i/057000/057375.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Acton of Healing +2",
+    "ja": "ファントムヴィジョン・ヒーラーアクトン+2",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51923": {
+    "ko": "팬텀 환영 치유사 손목덮개 +2",
+    "iconPath": "/i/056000/056450.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Healing +2",
+    "ja": "ファントムヴィジョン・ヒーラーリストラップ+2",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51924": {
+    "ko": "팬텀 환영 치유사 헐렁바지 +2",
+    "iconPath": "/i/057000/057468.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Healing +2",
+    "ja": "ファントムヴィジョン・ヒーラーサルエル+2",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51925": {
+    "ko": "팬텀 환영 치유사 뾰족신 +2",
+    "iconPath": "/i/057000/057960.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Crakows of Healing +2",
+    "ja": "ファントムヴィジョン・ヒーラークラコー+2",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51926": {
+    "ko": "팬텀 환영 치유사 수면모자 +3",
+    "iconPath": "/i/056000/056946.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Nightcap of Healing +3",
+    "ja": "ファントムヴィジョン・ヒーラーナイトキャップ+3",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51927": {
+    "ko": "팬텀 환영 치유사 누비옷 +3",
+    "iconPath": "/i/057000/057375.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Acton of Healing +3",
+    "ja": "ファントムヴィジョン・ヒーラーアクトン+3",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51928": {
+    "ko": "팬텀 환영 치유사 손목덮개 +3",
+    "iconPath": "/i/056000/056450.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Healing +3",
+    "ja": "ファントムヴィジョン・ヒーラーリストラップ+3",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51929": {
+    "ko": "팬텀 환영 치유사 헐렁바지 +3",
+    "iconPath": "/i/057000/057468.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Healing +3",
+    "ja": "ファントムヴィジョン・ヒーラーサルエル+3",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51930": {
+    "ko": "팬텀 환영 치유사 뾰족신 +3",
+    "iconPath": "/i/057000/057960.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Crakows of Healing +3",
+    "ja": "ファントムヴィジョン・ヒーラークラコー+3",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51931": {
+    "ko": "팬텀 환영 마술사 수면모자",
+    "iconPath": "/i/056000/056945.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Nightcap of Casting",
+    "ja": "ファントムヴィジョン・キャスターナイトキャップ",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51932": {
+    "ko": "팬텀 환영 마술사 누비옷",
+    "iconPath": "/i/057000/057374.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Acton of Casting",
+    "ja": "ファントムヴィジョン・キャスターアクトン",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51933": {
+    "ko": "팬텀 환영 마술사 손목덮개",
+    "iconPath": "/i/056000/056449.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Casting",
+    "ja": "ファントムヴィジョン・キャスターリストラップ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51934": {
+    "ko": "팬텀 환영 마술사 헐렁바지",
+    "iconPath": "/i/057000/057467.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Casting",
+    "ja": "ファントムヴィジョン・キャスターサルエル",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51935": {
+    "ko": "팬텀 환영 마술사 뾰족신",
+    "iconPath": "/i/057000/057959.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Crakows of Casting",
+    "ja": "ファントムヴィジョン・キャスタークラコー",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51936": {
+    "ko": "팬텀 환영 마술사 수면모자 +1",
+    "iconPath": "/i/056000/056945.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Nightcap of Casting +1",
+    "ja": "ファントムヴィジョン・キャスターナイトキャップ+1",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51937": {
+    "ko": "팬텀 환영 마술사 누비옷 +1",
+    "iconPath": "/i/057000/057374.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Acton of Casting +1",
+    "ja": "ファントムヴィジョン・キャスターアクトン+1",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51938": {
+    "ko": "팬텀 환영 마술사 손목덮개 +1",
+    "iconPath": "/i/056000/056449.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Casting +1",
+    "ja": "ファントムヴィジョン・キャスターリストラップ+1",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51939": {
+    "ko": "팬텀 환영 마술사 헐렁바지 +1",
+    "iconPath": "/i/057000/057467.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Casting +1",
+    "ja": "ファントムヴィジョン・キャスターサルエル+1",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51940": {
+    "ko": "팬텀 환영 마술사 뾰족신 +1",
+    "iconPath": "/i/057000/057959.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Crakows of Casting +1",
+    "ja": "ファントムヴィジョン・キャスタークラコー+1",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51941": {
+    "ko": "팬텀 환영 마술사 수면모자 +2",
+    "iconPath": "/i/056000/056945.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Nightcap of Casting +2",
+    "ja": "ファントムヴィジョン・キャスターナイトキャップ+2",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51942": {
+    "ko": "팬텀 환영 마술사 누비옷 +2",
+    "iconPath": "/i/057000/057374.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Acton of Casting +2",
+    "ja": "ファントムヴィジョン・キャスターアクトン+2",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51943": {
+    "ko": "팬텀 환영 마술사 손목덮개 +2",
+    "iconPath": "/i/056000/056449.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Casting +2",
+    "ja": "ファントムヴィジョン・キャスターリストラップ+2",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51944": {
+    "ko": "팬텀 환영 마술사 헐렁바지 +2",
+    "iconPath": "/i/057000/057467.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Casting +2",
+    "ja": "ファントムヴィジョン・キャスターサルエル+2",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51945": {
+    "ko": "팬텀 환영 마술사 뾰족신 +2",
+    "iconPath": "/i/057000/057959.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Crakows of Casting +2",
+    "ja": "ファントムヴィジョン・キャスタークラコー+2",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51946": {
+    "ko": "팬텀 환영 마술사 수면모자 +3",
+    "iconPath": "/i/056000/056945.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Phantom Vision Nightcap of Casting +3",
+    "ja": "ファントムヴィジョン・キャスターナイトキャップ+3",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51947": {
+    "ko": "팬텀 환영 마술사 누비옷 +3",
+    "iconPath": "/i/057000/057374.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Phantom Vision Acton of Casting +3",
+    "ja": "ファントムヴィジョン・キャスターアクトン+3",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51948": {
+    "ko": "팬텀 환영 마술사 손목덮개 +3",
+    "iconPath": "/i/056000/056449.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Phantom Vision Wristwraps of Casting +3",
+    "ja": "ファントムヴィジョン・キャスターリストラップ+3",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51949": {
+    "ko": "팬텀 환영 마술사 헐렁바지 +3",
+    "iconPath": "/i/057000/057467.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Phantom Vision Sarouel of Casting +3",
+    "ja": "ファントムヴィジョン・キャスターサルエル+3",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51950": {
+    "ko": "팬텀 환영 마술사 뾰족신 +3",
+    "iconPath": "/i/057000/057959.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Phantom Vision Crakows of Casting +3",
+    "ja": "ファントムヴィジョン・キャスタークラコー+3",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51952": {
+    "ko": "투르 튜닉",
+    "iconPath": "/i/057000/057381.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Tule Tunic",
+    "ja": "トゥール・チュニック",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51953": {
+    "ko": "투르 손등장갑",
+    "iconPath": "/i/056000/056456.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Tule Halfgloves",
+    "ja": "トゥール・ハーフグローブ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51954": {
+    "ko": "투르 긴바지",
+    "iconPath": "/i/057000/057474.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Tule Trousers",
+    "ja": "トゥール・トラウザー",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51955": {
+    "ko": "투르 긴장화",
+    "iconPath": "/i/057000/057966.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Tule Longboots",
+    "ja": "トゥール・ロングブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51957": {
+    "ko": "토르나 튜닉",
+    "iconPath": "/i/057000/057383.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 23,
+    "en": "Torna Tunic",
+    "ja": "トルナ・チュニック",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51958": {
+    "ko": "토르나 손목장식",
+    "iconPath": "/i/056000/056458.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Torna Wristlets",
+    "ja": "トルナ・リストレット",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51960": {
+    "ko": "토르나 장화",
+    "iconPath": "/i/057000/057968.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Torna Boots",
+    "ja": "トルナ・ブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51961": {
+    "ko": "카웬 두건",
+    "iconPath": "/i/056000/056952.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Carwen Bandana",
+    "ja": "カーウェン・バンダナ",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "51962": {
+    "ko": "카웬 튜닉",
+    "iconPath": "/i/057000/057382.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Carwen Tunic",
+    "ja": "カーウェン・チュニック",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "51963": {
+    "ko": "카웬 팔덮개",
+    "iconPath": "/i/056000/056457.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Carwen Armlets",
+    "ja": "カーウェン・アームレット",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "51964": {
+    "ko": "카웬 쫄바지",
+    "iconPath": "/i/057000/057475.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Carwen Tights",
+    "ja": "カーウェン・タイツ",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "51965": {
+    "ko": "카웬 장화",
+    "iconPath": "/i/057000/057967.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Carwen Boots",
+    "ja": "カーウェン・ブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "51966": {
+    "ko": "상세 지도: 초승달 섬 북부",
+    "iconPath": "/i/026000/026193.png",
+    "uiCategory": 63,
+    "en": "North Horn Riding Map",
+    "ja": "詳細地図:三日月島北部",
+    "equipSlots": []
+  },
+  "51967": {
+    "ko": "소울 샤드: 닌자",
+    "iconPath": "/i/026000/026681.png",
+    "uiCategory": 61,
+    "en": "Ninja's Soul Shard",
+    "ja": "ソウルシャード:忍者",
+    "equipSlots": []
+  },
+  "51968": {
+    "ko": "소울 샤드: 흑마도사",
+    "iconPath": "/i/026000/026681.png",
+    "uiCategory": 61,
+    "en": "Black Mage's Soul Shard",
+    "ja": "ソウルシャード:黒魔道士",
+    "equipSlots": []
+  },
+  "51969": {
+    "ko": "소울 샤드: 백마도사",
+    "iconPath": "/i/026000/026681.png",
+    "uiCategory": 61,
+    "en": "White Mage's Soul Shard",
+    "ja": "ソウルシャード:白魔道士",
+    "equipSlots": []
+  },
+  "51970": {
+    "ko": "소울 샤드: 용기사",
+    "iconPath": "/i/026000/026681.png",
+    "uiCategory": 61,
+    "en": "Dragoon's Soul Shard",
+    "ja": "ソウルシャード:竜騎士",
+    "equipSlots": []
+  },
+  "51971": {
+    "ko": "소울 샤드: 소환사",
+    "iconPath": "/i/026000/026681.png",
+    "uiCategory": 61,
+    "en": "Summoner's Soul Shard",
+    "ja": "ソウルシャード:召喚士",
+    "equipSlots": []
+  },
+  "51972": {
+    "ko": "소울 샤드: 청마도사",
+    "iconPath": "/i/026000/026681.png",
+    "uiCategory": 61,
+    "en": "Blue Mage's Soul Shard",
+    "ja": "ソウルシャード:青魔道士",
+    "equipSlots": []
+  },
+  "51973": {
+    "ko": "소울 샤드: 적마도사",
+    "iconPath": "/i/026000/026681.png",
+    "uiCategory": 61,
+    "en": "Red Mage's Soul Shard",
+    "ja": "ソウルシャード:赤魔道士",
+    "equipSlots": []
+  },
+  "51974": {
+    "ko": "소울 샤드: 강령술사",
+    "iconPath": "/i/026000/026681.png",
+    "uiCategory": 61,
+    "en": "Necromancer's Soul Shard",
+    "ja": "ソウルシャード:ネクロマンサー",
+    "equipSlots": []
+  },
+  "51975": {
+    "ko": "열두 도시 백은화",
+    "iconPath": "/i/065000/065142.png",
+    "uiCategory": 63,
+    "en": "Enlightenment Silver Obol",
+    "ja": "十二都市白銀貨",
+    "equipSlots": []
+  },
+  "51976": {
+    "ko": "열두 도시 백금화",
+    "iconPath": "/i/065000/065143.png",
+    "uiCategory": 63,
+    "en": "Enlightenment Gold Obol",
+    "ja": "十二都市白金貨",
+    "equipSlots": []
+  },
+  "51977": {
+    "ko": "마의 부적",
+    "iconPath": "/i/065000/065141.png",
+    "uiCategory": 63,
+    "en": "Arcane Amulet",
+    "ja": "魔の護符",
+    "equipSlots": []
+  },
+  "51978": {
+    "ko": "최종 정착액",
+    "iconPath": "/i/027000/027627.png",
+    "uiCategory": 63,
+    "en": "Final Final Fixative",
+    "ja": "ラストフィキサチーフ",
+    "equipSlots": []
+  },
+  "51979": {
+    "ko": "탐사기록: 아르바텔",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on Arbatel",
+    "ja": "探査記録:アルバテル",
+    "equipSlots": []
+  },
+  "51980": {
+    "ko": "탐사기록: 타이니 메이지",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Tiny Mage",
+    "ja": "探査記録:タイニーメイジ",
+    "equipSlots": []
+  },
+  "51981": {
+    "ko": "탐사기록: 알골",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on Algol",
+    "ja": "探査記録:アルゴル",
+    "equipSlots": []
+  },
+  "51982": {
+    "ko": "탐사기록: 메타몰퍼",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Metamorph",
+    "ja": "探査記録:メタモルファ",
+    "equipSlots": []
+  },
+  "51983": {
+    "ko": "탐사기록: 창백한 마기아",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Pallmagia",
+    "ja": "探査記録:ペイルマギア",
+    "equipSlots": []
+  },
+  "51984": {
+    "ko": "탐사기록: 마기 강령술사",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Phantom Necromancer",
+    "ja": "探査記録:マギ・ネクロマンサー",
+    "equipSlots": []
+  },
+  "51985": {
+    "ko": "탐사기록: 유괴자",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Abductor",
+    "ja": "探査記録:アブダクター",
+    "equipSlots": []
+  },
+  "51986": {
+    "ko": "탐사기록: 루브룸 드래곤",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Claret Dragon",
+    "ja": "探査記録:ルブルムドラゴン",
+    "equipSlots": []
+  },
+  "51987": {
+    "ko": "탐사기록: 설화석고 검사",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Alabaster Blade",
+    "ja": "探査記録:アラバスターブレード",
+    "equipSlots": []
+  },
+  "51988": {
+    "ko": "탐사기록: 칼로피스테리 분신",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on Conjured Calofisteri",
+    "ja": "探査記録:カロフィステリ・ダブル",
+    "equipSlots": []
+  },
+  "51989": {
+    "ko": "탐사기록: 쌍두 에이비스",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Two-headed Aevis",
+    "ja": "探査記録:ツーヘッド・エイビス",
+    "equipSlots": []
+  },
+  "51990": {
+    "ko": "탐사기록: 소드 댄서",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Sword Dancer",
+    "ja": "探査記録:ソードダンサー",
+    "equipSlots": []
+  },
+  "51991": {
+    "ko": "탐사기록: 네크로포비아",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on Necrophobia",
+    "ja": "探査記録:ネクロフォビア",
+    "equipSlots": []
+  },
+  "51992": {
+    "ko": "탐사기록: 인덱스",
+    "iconPath": "/i/026000/026603.png",
+    "uiCategory": 61,
+    "en": "Notes on the Index",
+    "ja": "探査記録:インデックス",
+    "equipSlots": []
+  },
   "51993": {
     "ko": "초상화 교재: 바나딜의 반향",
     "iconPath": "/i/026000/026625.png",
@@ -488538,12 +492054,28 @@
     "ja": "ポートレート教材:エコーズ オブ ヴァナ・ディール",
     "equipSlots": []
   },
+  "51995": {
+    "ko": "초상화 교재: 초승달 섬 2",
+    "iconPath": "/i/026000/026625.png",
+    "uiCategory": 61,
+    "en": "Occult Omniscience Framer's Kit",
+    "ja": "ポートレート教材:クレセントアイル2",
+    "equipSlots": []
+  },
   "51996": {
     "ko": "초상화 교재: 우주 개척 4",
     "iconPath": "/i/026000/026625.png",
     "uiCategory": 61,
     "en": "Cosmic Growth Framer's Kit",
     "ja": "ポートレート教材:コスモエクスプローラー4",
+    "equipSlots": []
+  },
+  "51997": {
+    "ko": "초상화 교재: 마법자판 난타전",
+    "iconPath": "/i/026000/026625.png",
+    "uiCategory": 61,
+    "en": "Keybound Brawler Framer's Kit",
+    "ja": "ポートレート教材:キーバウンド・ブロウラー",
     "equipSlots": []
   },
   "51998": {
@@ -488616,6 +492148,46 @@
     "uiCategory": 47,
     "en": "Shined Copper Shark",
     "ja": "ブライトカッパーシャーク",
+    "equipSlots": []
+  },
+  "52007": {
+    "ko": "네라도",
+    "iconPath": "/i/028000/028786.png",
+    "uiCategory": 47,
+    "en": "Ner Lar Dor",
+    "ja": "ネー・ラァ・ドー",
+    "equipSlots": []
+  },
+  "52008": {
+    "ko": "제파 보폴",
+    "iconPath": "/i/028000/028787.png",
+    "uiCategory": 47,
+    "en": "Xehabopo'u",
+    "ja": "ヂェファ・ボポル",
+    "equipSlots": []
+  },
+  "52009": {
+    "ko": "채광 하트가오리",
+    "iconPath": "/i/028000/028788.png",
+    "uiCategory": 47,
+    "en": "Skyfrond",
+    "ja": "スカイライトハート",
+    "equipSlots": []
+  },
+  "52010": {
+    "ko": "로네크 폴립테루스",
+    "iconPath": "/i/028000/028789.png",
+    "uiCategory": 47,
+    "en": "Rroneek Bichir",
+    "ja": "ロネークポリプテルス",
+    "equipSlots": []
+  },
+  "52011": {
+    "ko": "세 날 범고래",
+    "iconPath": "/i/028000/028168.png",
+    "uiCategory": 47,
+    "en": "Triple Threat",
+    "ja": "三刃の鯱",
     "equipSlots": []
   },
   "52012": {
@@ -489267,27 +492839,27 @@
     "equipSlots": []
   },
   "52093": {
-    "ko": "선구자 문명 기록: 녹금",
+    "ko": "고대 기록: 녹금",
     "iconPath": "/i/026000/026234.png",
     "uiCategory": 61,
-    "en": "Botanic Gold Voyagers' Record",
-    "ja": "先駆者文明の記録:緑金",
+    "en": "Botanic Gold Ancient Record",
+    "ja": "古代の記録:緑金",
     "equipSlots": []
   },
   "52094": {
-    "ko": "선구자 문명 기록: 청은",
+    "ko": "고대 기록: 청은",
     "iconPath": "/i/026000/026230.png",
     "uiCategory": 61,
-    "en": "Civic Silver Voyagers' Record",
-    "ja": "先駆者文明の記録:青銀",
+    "en": "Civic Silver Ancient Record",
+    "ja": "古代の記録:青銀",
     "equipSlots": []
   },
   "52095": {
-    "ko": "선구자 문명 기록: 백동",
+    "ko": "고대 기록: 백동",
     "iconPath": "/i/026000/026233.png",
     "uiCategory": 61,
-    "en": "Arboreal Bronze Voyagers' Record",
-    "ja": "先駆者文明の記録:白銅",
+    "en": "Arboreal Bronze Ancient Record",
+    "ja": "古代の記録:白銅",
     "equipSlots": []
   },
   "52096": {
@@ -490602,12 +494174,44 @@
     "ja": "ウィング・オブ・レガシー",
     "equipSlots": []
   },
+  "52260": {
+    "ko": "나이트 스탤리온 기동 열쇠",
+    "iconPath": "/i/026000/026014.png",
+    "uiCategory": 63,
+    "en": "Night Stallion Activation Key",
+    "ja": "ナイトスタリオン起動鍵",
+    "equipSlots": []
+  },
+  "52261": {
+    "ko": "가드 스콜피온 인증 열쇠",
+    "iconPath": "/i/026000/026014.png",
+    "uiCategory": 63,
+    "en": "Magitek Scorpion Identification Key",
+    "ja": "ガードスコーピオン認証鍵",
+    "equipSlots": []
+  },
   "52262": {
     "ko": "로켓 주먹 인증 열쇠",
     "iconPath": "/i/026000/026014.png",
     "uiCategory": 63,
     "en": "Rocket Punch Identification Key",
     "ja": "ロケットパンチ認証鍵",
+    "equipSlots": []
+  },
+  "52264": {
+    "ko": "과묵한 콜리브리 호루라기",
+    "iconPath": "/i/026000/026039.png",
+    "uiCategory": 63,
+    "en": "Colibri Callado Whistle",
+    "ja": "クワイエット・コリブリ・ホイッスル",
+    "equipSlots": []
+  },
+  "52266": {
+    "ko": "오리부리 지게꾼 호루라기",
+    "iconPath": "/i/026000/026039.png",
+    "uiCategory": 63,
+    "en": "Duck-billed Porter Whistle",
+    "ja": "ダックポーター・ホイッスル",
     "equipSlots": []
   },
   "52267": {
@@ -490682,12 +494286,44 @@
     "ja": "カプリーヌ",
     "equipSlots": []
   },
+  "52277": {
+    "ko": "모든 것을 외는 자",
+    "iconPath": "/i/059000/059986.png",
+    "uiCategory": 81,
+    "en": "Tiny Omniscient",
+    "ja": "すべてをしおるもの",
+    "equipSlots": []
+  },
+  "52278": {
+    "ko": "미니 메이지",
+    "iconPath": "/i/059000/059987.png",
+    "uiCategory": 81,
+    "en": "Puny Mage",
+    "ja": "ピューニィメイジ",
+    "equipSlots": []
+  },
+  "52279": {
+    "ko": "우크라마트 인형",
+    "iconPath": "/i/059000/059988.png",
+    "uiCategory": 81,
+    "en": "Wind-up Wuk Lamat",
+    "ja": "マメット・ウクラマト",
+    "equipSlots": []
+  },
   "52280": {
     "ko": "프리슈 인형",
     "iconPath": "/i/059000/059990.png",
     "uiCategory": 81,
     "en": "Wind-up Prishe",
     "ja": "マメット・プリッシュ",
+    "equipSlots": []
+  },
+  "52281": {
+    "ko": "코트르 인형",
+    "iconPath": "/i/059000/059991.png",
+    "uiCategory": 81,
+    "en": "Wind-up Köttr",
+    "ja": "マメット・コットル",
     "equipSlots": []
   },
   "52282": {
@@ -490698,6 +494334,22 @@
     "ja": "ナギュリィ・ジャーム",
     "equipSlots": []
   },
+  "52283": {
+    "ko": "바레트 인형",
+    "iconPath": "/i/059000/059993.png",
+    "uiCategory": 81,
+    "en": "Wind-up Barret",
+    "ja": "マメット・バレット",
+    "equipSlots": []
+  },
+  "52284": {
+    "ko": "니므 올로사파",
+    "iconPath": "/i/059000/059994.png",
+    "uiCategory": 81,
+    "en": "Nymian Uolosapa",
+    "ja": "ニーム・オーロサパ",
+    "equipSlots": []
+  },
   "52285": {
     "ko": "허무 갑주",
     "iconPath": "/i/058000/058824.png",
@@ -490706,12 +494358,52 @@
     "ja": "ニヒリティ・バード",
     "equipSlots": []
   },
+  "52286": {
+    "ko": "소풍 갑주",
+    "iconPath": "/i/058000/058827.png",
+    "uiCategory": 63,
+    "en": "Picnicker's Barding",
+    "ja": "ピクニック・バード",
+    "equipSlots": []
+  },
+  "52287": {
+    "ko": "아발란치 개틀링 건",
+    "iconPath": "/i/058000/058054.png",
+    "uiCategory": 61,
+    "en": "Avalanche Gatling Gun",
+    "ja": "アバランチ・ガトリングガン",
+    "equipSlots": []
+  },
   "52288": {
     "ko": "삽",
     "iconPath": "/i/058000/058056.png",
     "uiCategory": 61,
     "en": "Shovel",
     "ja": "スコップ",
+    "equipSlots": []
+  },
+  "52289": {
+    "ko": "고풍스러운 등불",
+    "iconPath": "/i/058000/058057.png",
+    "uiCategory": 61,
+    "en": "Antique Lantern",
+    "ja": "アンティーク・ランタン",
+    "equipSlots": []
+  },
+  "52290": {
+    "ko": "연기 교본: 지도 보기",
+    "iconPath": "/i/026000/026435.png",
+    "uiCategory": 61,
+    "en": "Ballroom Etiquette - Geographic Guesswork",
+    "ja": "演技教本:地図を見る",
+    "equipSlots": []
+  },
+  "52291": {
+    "ko": "연기 교본: 마법자판 치기",
+    "iconPath": "/i/026000/026435.png",
+    "uiCategory": 85,
+    "en": "Ballroom Etiquette - Intrepid Inputs",
+    "ja": "演技教本:魔法盤を叩く",
     "equipSlots": []
   },
   "52292": {
@@ -490736,6 +494428,30 @@
     "uiCategory": 61,
     "en": "Ballroom Etiquette - Trial by Taco",
     "ja": "演技教本:タコスを食べる",
+    "equipSlots": []
+  },
+  "52295": {
+    "ko": "연기 교본: 뒤돌아보기",
+    "iconPath": "/i/026000/026435.png",
+    "uiCategory": 61,
+    "en": "Ballroom Etiquette - Rearward Regards",
+    "ja": "演技教本:後ろを振り返る",
+    "equipSlots": []
+  },
+  "52297": {
+    "ko": "번개구체",
+    "iconPath": "/i/028000/028790.png",
+    "uiCategory": 47,
+    "en": "Great Ball of Lightning",
+    "ja": "ライトニングボール",
+    "equipSlots": []
+  },
+  "52298": {
+    "ko": "마기 아포크리파",
+    "iconPath": "/i/053000/053736.png",
+    "uiCategory": 76,
+    "en": "Occult Apocrytaph",
+    "ja": "マギ・アポクリファ",
     "equipSlots": []
   },
   "52299": {
@@ -490988,6 +494704,124 @@
     "ja": "道化師のトーテム像",
     "equipSlots": []
   },
+  "52322": {
+    "ko": "맨더빌 골드 소서 화폐",
+    "iconPath": "/i/065000/065140.png",
+    "uiCategory": 100,
+    "en": "MGC",
+    "ja": "マンダヴィル・ゴールドソーサークレジット",
+    "equipSlots": []
+  },
+  "52323": {
+    "ko": "아발란치 격투가 상의",
+    "iconPath": "/i/057000/057372.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Avalanche Brawler's Top",
+    "ja": "アバランチブロウラー・トップス",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "52324": {
+    "ko": "아발란치 격투가 손등장갑",
+    "iconPath": "/i/056000/056447.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Avalanche Brawler's Halfgloves",
+    "ja": "アバランチブロウラー・ハーフグローブ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "52325": {
+    "ko": "아발란치 격투가 하의",
+    "iconPath": "/i/057000/057465.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Avalanche Brawler's Bottoms",
+    "ja": "アバランチブロウラー・ボトム",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "52326": {
+    "ko": "아발란치 격투가 장화",
+    "iconPath": "/i/057000/057957.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Avalanche Brawler's Boots",
+    "ja": "アバランチブロウラー・ブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "52327": {
+    "ko": "아발란치 격투가 귀걸이",
+    "iconPath": "/i/055000/055574.png",
+    "uiCategory": 41,
+    "equipSlotCategory": 9,
+    "en": "Avalanche Brawler's Earring",
+    "ja": "アバランチブロウラー・イヤリング",
+    "equipSlots": [
+      "ears"
+    ]
+  },
+  "52328": {
+    "ko": "아발란치 리더 선글라스",
+    "iconPath": "/i/056000/056944.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Avalanche Leader's Sunglasses",
+    "ja": "アバランチリーダー・サングラス",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "52329": {
+    "ko": "아발란치 리더 조끼",
+    "iconPath": "/i/057000/057373.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Avalanche Leader's Vest",
+    "ja": "アバランチリーダー・ベスト",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "52330": {
+    "ko": "아발란치 리더 손등장갑",
+    "iconPath": "/i/056000/056448.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Avalanche Leader's Halfgloves",
+    "ja": "アバランチリーダー・ハーフグローブ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "52331": {
+    "ko": "아발란치 리더 카고팬츠",
+    "iconPath": "/i/057000/057466.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Avalanche Leader's Cargo Trousers",
+    "ja": "アバランチリーダー・カーゴパンツ",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "52332": {
+    "ko": "아발란치 리더 장화",
+    "iconPath": "/i/057000/057958.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Avalanche Leader's Boots",
+    "ja": "アバランチリーダー・ブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
   "52333": {
     "ko": "오케스트리온 악보: FINAL FANTASY V: The Final Battle (Dawntrail)",
     "iconPath": "/i/025000/025945.png",
@@ -491156,6 +494990,30 @@
     "ja": "オーケストリオン譜:The Republic of Bastok",
     "equipSlots": []
   },
+  "52354": {
+    "ko": "오케스트리온 악보: Welcome to the Gold Saucer",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Welcome to the Gold Saucer Orchestrion Roll",
+    "ja": "オーケストリオン譜:ウェルカム・トゥ・ゴールドソーサー",
+    "equipSlots": []
+  },
+  "52355": {
+    "ko": "오케스트리온 악보: Let the Battles Begin!",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Let the Battles Begin! Orchestrion Roll",
+    "ja": "オーケストリオン譜:闘う者達",
+    "equipSlots": []
+  },
+  "52356": {
+    "ko": "오케스트리온 악보: Fight On!",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Fight On! Orchestrion Roll",
+    "ja": "オーケストリオン譜:更に闘う者達",
+    "equipSlots": []
+  },
   "52357": {
     "ko": "오케스트리온 악보: For Hope and Happiness",
     "iconPath": "/i/025000/025945.png",
@@ -491186,6 +495044,70 @@
     "uiCategory": 94,
     "en": "Dancing Mad (Distant Worlds) Orchestrion Roll",
     "ja": "オーケストリオン譜:妖星乱舞（Distant Worlds）",
+    "equipSlots": []
+  },
+  "52361": {
+    "ko": "오케스트리온 악보: Pulper of Inquiry",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Pulper of Inquiry Orchestrion Roll",
+    "ja": "オーケストリオン譜:探偵のアレ",
+    "equipSlots": []
+  },
+  "52362": {
+    "ko": "오케스트리온 악보: FINAL FANTASY IX: Battle 2",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "FINAL FANTASY IX: Battle 2 Orchestrion Roll",
+    "ja": "オーケストリオン譜:バトル2 from FINAL FANTASY IX",
+    "equipSlots": []
+  },
+  "52363": {
+    "ko": "오케스트리온 악보: Matoya's Cave (Modulation)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Matoya's Cave (Modulation) Orchestrion Roll",
+    "ja": "オーケストリオン譜:メイン・テーマ ～ マトーヤの洞窟（MODULATION）",
+    "equipSlots": []
+  },
+  "52364": {
+    "ko": "오케스트리온 악보: Eternal Wind (Modulation)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Eternal Wind (Modulation) Orchestrion Roll",
+    "ja": "オーケストリオン譜:悠久の風（MODULATION）",
+    "equipSlots": []
+  },
+  "52365": {
+    "ko": "오케스트리온 악보: Zanarkand (Modulation)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Zanarkand (Modulation) Orchestrion Roll",
+    "ja": "オーケストリオン譜:ザナルカンドにて（MODULATION）",
+    "equipSlots": []
+  },
+  "52366": {
+    "ko": "오케스트리온 악보: Dungeon (Dawntrail)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Dungeon (Dawntrail) Orchestrion Roll",
+    "ja": "オーケストリオン譜:ダンジョン",
+    "equipSlots": []
+  },
+  "52367": {
+    "ko": "오케스트리온 악보: Sealed Away (Dawntrail)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Sealed Away (Dawntrail) Orchestrion Roll",
+    "ja": "オーケストリオン譜:封印されしもの",
+    "equipSlots": []
+  },
+  "52368": {
+    "ko": "오케스트리온 악보: To the North Mountain (Dawntrail)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "To the North Mountain (Dawntrail) Orchestrion Roll",
+    "ja": "オーケストリオン譜:銀嶺を行く",
     "equipSlots": []
   },
   "52372": {
@@ -491226,6 +495148,86 @@
     "uiCategory": 94,
     "en": "Give It All (Orchestral Version) Orchestrion Roll",
     "ja": "オーケストリオン譜:Give it All（Orchestral）",
+    "equipSlots": []
+  },
+  "52377": {
+    "ko": "오케스트리온 악보: Smile (Till Dawn My Tears Flow)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Smile (Till Dawn My Tears Flow) Orchestrion Roll",
+    "ja": "オーケストリオン譜:Smile（Till Dawn My Tears Flow）",
+    "equipSlots": []
+  },
+  "52378": {
+    "ko": "오케스트리온 악보: Morrow's Might & Magic (Till Dawn My Tears Flow)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Morrow's Might & Magic (Till Dawn My Tears Flow) Orchestrion Roll",
+    "ja": "オーケストリオン譜:金煌なる都（Till Dawn My Tears Flow）",
+    "equipSlots": []
+  },
+  "52379": {
+    "ko": "오케스트리온 악보: Bee My Honey (Till Dawn My Tears Flow)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Bee My Honey (Till Dawn My Tears Flow) Orchestrion Roll",
+    "ja": "オーケストリオン譜:Bee My Honey（Till Dawn My Tears Flow）",
+    "equipSlots": []
+  },
+  "52380": {
+    "ko": "오케스트리온 악보: Promises to Keep (Till Dawn My Tears Flow)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Promises to Keep (Till Dawn My Tears Flow) Orchestrion Roll",
+    "ja": "オーケストリオン譜:消せない約束（Till Dawn My Tears Flow）",
+    "equipSlots": []
+  },
+  "52381": {
+    "ko": "오케스트리온 악보: Roses of May (Till Dawn My Tears Flow)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Roses of May (Till Dawn My Tears Flow) Orchestrion Roll",
+    "ja": "オーケストリオン譜:ローズ・オブ・メイ（Till Dawn My Tears Flow）",
+    "equipSlots": []
+  },
+  "52382": {
+    "ko": "오케스트리온 악보: Sinister (Back in the Ring)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Sinister (Back in the Ring) Orchestrion Roll",
+    "ja": "オーケストリオン譜:Sinister（Back in the Ring）",
+    "equipSlots": []
+  },
+  "52383": {
+    "ko": "오케스트리온 악보: The Mirror (Back in the Ring)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "The Mirror (Back in the Ring) Orchestrion Roll",
+    "ja": "オーケストリオン譜:The Mirror（Back in the Ring）",
+    "equipSlots": []
+  },
+  "52384": {
+    "ko": "오케스트리온 악보: Absolute Tyranny (Back in the Ring)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Absolute Tyranny (Back in the Ring) Orchestrion Roll",
+    "ja": "オーケストリオン譜:Absolute Tyranny（Back in the Ring）",
+    "equipSlots": []
+  },
+  "52385": {
+    "ko": "오케스트리온 악보: Smile (Back in the Ring)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Smile (Back in the Ring) Orchestrion Roll",
+    "ja": "オーケストリオン譜:Smile（Back in the Ring）",
+    "equipSlots": []
+  },
+  "52386": {
+    "ko": "오케스트리온 악보: Primal Judgment - De Novo (Back in the Ring)",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Primal Judgment - De Novo (Back in the Ring) Orchestrion Roll",
+    "ja": "オーケストリオン譜:原初の審判：覆審（Back in the Ring）",
     "equipSlots": []
   },
   "52387": {
@@ -491651,7 +495653,7 @@
     "iconPath": "/i/057000/057394.png",
     "uiCategory": 35,
     "equipSlotCategory": 23,
-    "en": "Cosmic Operator's Coverall Top",
+    "en": "Cosmic Operator's Coveralls",
     "ja": "コスモオペレーター・カバーオール",
     "equipSlots": [
       "body"
@@ -491712,6 +495714,66 @@
       "body"
     ]
   },
+  "52436": {
+    "ko": "페스티벌 네오 튜닉",
+    "iconPath": "/i/057000/057389.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Festival Neotunic",
+    "ja": "フェスティバル・ネオチュニック",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "52437": {
+    "ko": "오버핏 페스티벌 네오 튜닉",
+    "iconPath": "/i/057000/057385.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Oversized Festival Neotunic",
+    "ja": "フェスティバル・ネオチュニック:オーバーサイズ",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "52438": {
+    "ko": "슬림핏 페스티벌 네오 튜닉",
+    "iconPath": "/i/057000/057387.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Form-fitting Festival Neotunic",
+    "ja": "フェスティバル・ネオチュニック:タイトサイズ",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "52439": {
+    "ko": "할로네 귀걸이",
+    "iconPath": "/i/055000/055572.png",
+    "uiCategory": 41,
+    "equipSlotCategory": 9,
+    "en": "Halone's Earring",
+    "ja": "ハルオーネイヤリング",
+    "equipSlots": [
+      "ears"
+    ]
+  },
+  "52440": {
+    "ko": "헤어카탈로그: 땋은 올림머리",
+    "iconPath": "/i/026000/026178.png",
+    "uiCategory": 61,
+    "en": "Modern Aesthetics - Bun and the Beautiful",
+    "ja": "ヘアカタログ:ブレイドバン",
+    "equipSlots": []
+  },
+  "52441": {
+    "ko": "스타일카탈로그: 기본 타원형 안경",
+    "iconPath": "/i/026000/026074.png",
+    "uiCategory": 61,
+    "en": "The Faces We Wear - Simple Oval Spectacles",
+    "ja": "スタイルカタログ:ベーシック・オーバルグラス",
+    "equipSlots": []
+  },
   "52442": {
     "ko": "스타일카탈로그: 가죽띠 눈보호대(왼쪽)",
     "iconPath": "/i/026000/026074.png",
@@ -491744,6 +495806,14 @@
     "ja": "スタイルカタログ:スタッズアイパッチ:右",
     "equipSlots": []
   },
+  "52447": {
+    "ko": "스타일카탈로그: 굵은테 고글",
+    "iconPath": "/i/026000/026074.png",
+    "uiCategory": 61,
+    "en": "The Faces We Wear - Thick-rimmed Goggles",
+    "ja": "スタイルカタログ:シックフレーム・ゴーグル",
+    "equipSlots": []
+  },
   "52448": {
     "ko": "스타일카탈로그: 원형 역반무테 안경",
     "iconPath": "/i/026000/026074.png",
@@ -491758,6 +495828,14 @@
     "uiCategory": 61,
     "en": "The Faces We Wear - Wrap-around Sunglasses",
     "ja": "スタイルカタログ:ラップアラウンド・グラス",
+    "equipSlots": []
+  },
+  "52450": {
+    "ko": "마법자판 난타전 보물상자",
+    "iconPath": "/i/026000/026531.png",
+    "uiCategory": 61,
+    "en": "Keybound Coffer",
+    "ja": "キーバウンド・ブロウラーの宝箱",
     "equipSlots": []
   },
   "52451": {
@@ -492069,7 +496147,7 @@
     "iconPath": "/i/022000/022037.png",
     "uiCategory": 63,
     "en": "Standard High-density Bonded Fabric",
-    "ja": "統一規格の高密不織布",
+    "ja": "統一規格の高密度不織布",
     "equipSlots": []
   },
   "52490": {
@@ -492213,7 +496291,7 @@
     "iconPath": "/i/022000/022515.png",
     "uiCategory": 63,
     "en": "Standard High-density Plywood",
-    "ja": "統一規格の高密合板",
+    "ja": "統一規格の高密度合板",
     "equipSlots": []
   },
   "52508": {
@@ -492268,7 +496346,7 @@
     "ko": "기지 생활용 쿠션",
     "iconPath": "/i/053000/053248.png",
     "uiCategory": 63,
-    "en": "Habitat Cushion",
+    "en": "Habitat Cushions",
     "ja": "基地生活用のクッション",
     "equipSlots": []
   },
@@ -492808,6 +496886,17 @@
     "ja": "ポートレート教材:レッドホット",
     "equipSlots": []
   },
+  "52582": {
+    "ko": "팬텀 식칼",
+    "iconPath": "/i/039000/039718.png",
+    "uiCategory": 27,
+    "equipSlotCategory": 2,
+    "en": "Phantom Philleter",
+    "ja": "ファントム包丁",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
   "52583": {
     "ko": "공격성 꽃가루 식물의 파편",
     "iconPath": "/i/025000/025201.png",
@@ -492830,6 +496919,46 @@
     "uiCategory": 94,
     "en": "Serenity Unending: A Bygone Medley (Orchestral Version) Orchestrion Roll",
     "ja": "オーケストリオン譜:記憶幻想 ～遠き日々のメドレー～（Orchestral）",
+    "equipSlots": []
+  },
+  "52586": {
+    "ko": "투르 의복",
+    "iconPath": "/i/057000/057381.png",
+    "uiCategory": 112,
+    "en": "Tule Attire",
+    "ja": "トゥール・アタイア",
+    "equipSlots": []
+  },
+  "52587": {
+    "ko": "토르나 의복",
+    "iconPath": "/i/057000/057383.png",
+    "uiCategory": 112,
+    "en": "Torna Attire",
+    "ja": "トルナ・アタイア",
+    "equipSlots": []
+  },
+  "52588": {
+    "ko": "카웬 의복",
+    "iconPath": "/i/057000/057382.png",
+    "uiCategory": 112,
+    "en": "Carwen Attire",
+    "ja": "カーウェン・アタイア",
+    "equipSlots": []
+  },
+  "52589": {
+    "ko": "아발란치 격투가 의복",
+    "iconPath": "/i/057000/057372.png",
+    "uiCategory": 112,
+    "en": "Avalanche Brawler's Attire",
+    "ja": "アバランチブロウラー・アタイア",
+    "equipSlots": []
+  },
+  "52590": {
+    "ko": "아발란치 리더 의복",
+    "iconPath": "/i/057000/057373.png",
+    "uiCategory": 112,
+    "en": "Avalanche Leader's Attire",
+    "ja": "アバランチリーダー・アタイア",
     "equipSlots": []
   },
   "52591": {
@@ -493232,21 +497361,100 @@
     "ja": "虚無の触腕",
     "equipSlots": []
   },
+  "52634": {
+    "ko": "무역풍 튜닉",
+    "iconPath": "/i/057000/057396.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Tradewinds Tunic",
+    "ja": "トレードウィンズ・チュニック",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "52635": {
+    "ko": "무역풍 손목장갑",
+    "iconPath": "/i/056000/056465.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Tradewinds Wristgloves",
+    "ja": "トレードウィンズ・リストグローブ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "52636": {
+    "ko": "무역풍 무릎바지",
+    "iconPath": "/i/057000/057482.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Tradewinds Gaskins",
+    "ja": "トレードウィンズ・ガスキン",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "52637": {
+    "ko": "무역풍 신발",
+    "iconPath": "/i/057000/057975.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Tradewinds Shoes",
+    "ja": "トレードウィンズ・シューズ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
   "52638": {
     "ko": "달콤냥",
     "iconPath": "/i/059000/059940.png",
     "uiCategory": 81,
-    "en": "Sweetkit",
+    "en": "Lolly Cat",
     "ja": "スウィートキャット",
     "equipSlots": []
   },
   "52640": {
-    "ko": "별빛 썰매 종",
+    "ko": "별빛 큰썰매 종",
     "iconPath": "/i/026000/026104.png",
     "uiCategory": 63,
     "en": "Starlight Sleigh Bell",
     "ja": "スターライトスレイ・ベル",
     "equipSlots": []
+  },
+  "52641": {
+    "ko": "폐허 수도교 부재",
+    "iconPath": "/i/022000/022470.png",
+    "uiCategory": 61,
+    "en": "Crumbling Aqueduct Fragment",
+    "ja": "ルインド・アクアダクトの部材",
+    "equipSlots": []
+  },
+  "52642": {
+    "ko": "폐허 수도교 금속재",
+    "iconPath": "/i/021000/021011.png",
+    "uiCategory": 61,
+    "en": "Crumbling Aqueduct Metal",
+    "ja": "ルインド・アクアダクトの金属材",
+    "equipSlots": []
+  },
+  "52643": {
+    "ko": "폐허 수도교 연금수지",
+    "iconPath": "/i/022000/022698.png",
+    "uiCategory": 61,
+    "en": "Crumbling Aqueduct Resin",
+    "ja": "ルインド・アクアダクトの錬金樹脂",
+    "equipSlots": []
+  },
+  "52647": {
+    "ko": "아발란치 리더 귀걸이",
+    "iconPath": "/i/055000/055573.png",
+    "uiCategory": 41,
+    "equipSlotCategory": 9,
+    "en": "Avalanche Leader's Earring",
+    "ja": "アバランチリーダー・イヤリング",
+    "equipSlots": [
+      "ears"
+    ]
   },
   "52648": {
     "ko": "오케스트리온 악보: Carrots of Brilliance",
@@ -493254,6 +497462,14 @@
     "uiCategory": 94,
     "en": "Carrots of Brilliance Orchestrion Roll",
     "ja": "オーケストリオン譜:ブリリアンスキャロット",
+    "equipSlots": []
+  },
+  "52653": {
+    "ko": "무역풍 의복",
+    "iconPath": "/i/057000/057396.png",
+    "uiCategory": 112,
+    "en": "Tradewinds Attire",
+    "ja": "トレードウィンズ・アタイア",
     "equipSlots": []
   },
   "52654": {
