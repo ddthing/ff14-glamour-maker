@@ -1,0 +1,62 @@
+name: Update FF14 item data
+
+on:
+  schedule:
+    # 03:00 every Monday in Korea Standard Time (Sunday 18:00 UTC).
+    - cron: '0 18 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ff14-items
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh item data
+        run: node scripts/makeKoItems.mjs
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Commit and push changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add src/data/items.json
+          if git diff --cached --quiet -- src/data/items.json; then
+            echo "No item data changes detected."
+            exit 0
+          fi
+
+          git commit -m "chore: update FF14 item data"
+          git push origin HEAD:main
