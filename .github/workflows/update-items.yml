@@ -2,8 +2,8 @@ name: Update FF14 item data
 
 on:
   schedule:
-    # 03:00 every Monday in Korea Standard Time (Sunday 18:00 UTC).
-    - cron: '0 18 * * 0'
+    # 04:00 every day in Korea Standard Time (19:00 UTC).
+    - cron: '0 19 * * *'
   workflow_dispatch:
 
 permissions:
