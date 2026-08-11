@@ -17,7 +17,7 @@ describe('exportCanvasElement', () => {
     const canvas = createCanvas();
     const pending: Array<() => void> = [];
     const fetchImage = vi.fn((url: string | URL | Request) => new Promise<Response>(resolve => {
-      pending.push(() => resolve(new Response(new Blob([String(url)]), { status: 200 })));
+      pending.push(() => resolve(new Response(String(url), { status: 200 })));
     }));
     const render = vi.fn().mockResolvedValue('data:image/png;base64,result');
     const promise = exportCanvasElement(canvas, {
@@ -42,7 +42,7 @@ describe('exportCanvasElement', () => {
     const renderError = new Error('render failed');
 
     await expect(exportCanvasElement(canvas, {
-      fetchImage: vi.fn().mockResolvedValue(new Response(new Blob(['image']), { status: 200 })),
+      fetchImage: vi.fn().mockResolvedValue(new Response('image', { status: 200 })),
       blobToDataUrl: vi.fn().mockResolvedValue('data:image/png;base64,inlined'),
       render: vi.fn().mockRejectedValue(renderError),
     })).rejects.toBe(renderError);
