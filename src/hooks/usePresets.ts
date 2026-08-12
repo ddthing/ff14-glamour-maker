@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'react';
 import { CURRENT_STATE_VERSION, decodeStateValue } from '../features/glamour/stateCodec';
 import type { AppState } from '../types';
+import { getSafeStorage, readStorage, writeStorage } from '../utils/safeStorage';
 
 export interface Preset {
   id: string;
@@ -60,14 +61,9 @@ function parseStoredPresets(value: string | null): Preset[] {
 }
 
 function readStoredPresets(): { presets: Preset[]; error: string | null } {
-  try {
-    return {
-      presets: parseStoredPresets(localStorage.getItem(PRESETS_STORAGE_KEY)),
-      error: null,
-    };
-  } catch {
-    return { presets: [], error: 'storage-failed' };
-  }
+  const storage = getSafeStorage('local');
+  if (!storage) return { presets: [], error: 'storage-failed' };
+  return { presets: parseStoredPresets(readStorage(storage, PRESETS_STORAGE_KEY)), error: null };
 }
 
 export function usePresets(): UsePresetsReturn {
@@ -77,16 +73,19 @@ export function usePresets(): UsePresetsReturn {
   const [error, setError] = useState<string | null>(initialState.error);
 
   const savePresetsToStorage = useCallback((newPresets: Preset[]): boolean => {
-    try {
-      localStorage.setItem(PRESETS_STORAGE_KEY, JSON.stringify(newPresets));
-      presetsRef.current = newPresets;
-      setPresets(newPresets);
-      setError(null);
-      return true;
-    } catch {
+    const saved = writeStorage(
+      getSafeStorage('local'),
+      PRESETS_STORAGE_KEY,
+      JSON.stringify(newPresets),
+    );
+    if (!saved) {
       setError('storage-failed');
       return false;
     }
+    presetsRef.current = newPresets;
+    setPresets(newPresets);
+    setError(null);
+    return true;
   }, []);
 
   const addPreset = useCallback((name: string, state: AppState): boolean => {

@@ -3,19 +3,9 @@ import { PreviewCanvas } from './components/canvas/PreviewCanvas';
 import { ControlPanel } from './components/controls/ControlPanel';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
+import { createInitialState } from './features/glamour/stateFactory';
 import { useGlamourActions } from './features/glamour/useGlamourActions';
-import { INITIAL_STATE } from './constants/initialState';
 import type { AppState } from './types';
-
-function createInitialState(): AppState {
-  return {
-    ...INITIAL_STATE,
-    crop: { ...INITIAL_STATE.crop },
-    items: Object.fromEntries(
-      Object.entries(INITIAL_STATE.items).map(([slot, item]) => [slot, { ...item }]),
-    ) as AppState['items'],
-  };
-}
 
 function App() {
   const [state, setState] = useState<AppState>(createInitialState);

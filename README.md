@@ -28,6 +28,14 @@ Security headers and SPA routing are configured via `public/_headers` and `publi
 1. Commit your changes and push to GitHub.
 2. Cloudflare Pages will automatically trigger a build (`npm run build`) and deploy the app.
 
+### Environment variables
+
+Keep `DISCORD_WEBHOOK_URL` as a server-only Cloudflare Pages environment
+binding. Do not use a `VITE_` prefix: Vite exposes prefixed variables in the
+browser bundle. The local maintenance scripts use `CLOUDINARY_CLOUD_NAME`,
+`CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET`; copy the names from
+`.env.example` without committing real values.
+
 ## Maintenance & Item Updates
 
 When a new FFXIV patch drops and you need to add new items, read the included [UPDATING_ITEMS.md](./UPDATING_ITEMS.md) for the full guide.

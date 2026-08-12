@@ -1,5 +1,5 @@
 import { useCallback, useMemo, type Dispatch, type SetStateAction } from 'react';
-import { INITIAL_ITEMS } from '../../constants/initialState';
+import { cloneItems, createInitialItems } from './stateFactory';
 import type { AppState, EquipmentPart, EquipItem } from '../../types';
 
 interface PresetState {
@@ -16,12 +16,6 @@ export interface GlamourActions {
   resetItems: () => void;
   applyPreset: (preset: PresetState) => void;
   setPhoto: (croppedImageSrc: string, imageSrc: string) => void;
-}
-
-function createInitialItems(): AppState['items'] {
-  return Object.fromEntries(
-    Object.entries(INITIAL_ITEMS).map(([part, item]) => [part, { ...item }]),
-  ) as AppState['items'];
 }
 
 export function useGlamourActions(
@@ -46,7 +40,7 @@ export function useGlamourActions(
   }, [setState]);
 
   const replaceItems = useCallback((items: AppState['items']) => {
-    setState(current => ({ ...current, items }));
+    setState(current => ({ ...current, items: cloneItems(items) }));
   }, [setState]);
 
   const resetItems = useCallback(() => {
@@ -58,7 +52,7 @@ export function useGlamourActions(
       ...current,
       title: preset.title,
       creator: preset.creator,
-      items: preset.items,
+      items: cloneItems(preset.items),
     }));
   }, [setState]);
 

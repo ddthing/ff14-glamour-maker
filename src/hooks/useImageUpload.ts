@@ -1,5 +1,11 @@
 import { useRef, useState, useCallback } from 'react';
 
+export const MAX_IMAGE_FILE_BYTES = 20 * 1024 * 1024;
+
+export function isSupportedImageFile(file: File): boolean {
+  return file.type.startsWith('image/') && file.size <= MAX_IMAGE_FILE_BYTES;
+}
+
 // ── useImageUpload — 파일 업로드 전용 훅 ─────────────────────────────────────
 // R6: PreviewCanvas에서 파일 입력·드래그앤드롭·파일 읽기 로직을 분리합니다.
 // 단일 책임 원칙: 이 훅은 오직 이미지 파일 → Data URL 변환만 담당합니다.
@@ -25,7 +31,7 @@ export function useImageUpload(): UseImageUploadReturn {
   const [isDragging, setIsDragging] = useState(false);
 
   const loadFile = useCallback((file: File) => {
-    if (!file.type.startsWith('image/')) return;
+    if (!isSupportedImageFile(file)) return;
     const reader = new FileReader();
     reader.onloadend = () => {
       if (typeof reader.result === 'string') setPendingImage(reader.result);

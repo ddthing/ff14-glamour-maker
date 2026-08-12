@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getSafeStorage, readStorage, writeStorage } from '../utils/safeStorage';
 
 /**
  * Persisted dark-mode hook.
@@ -8,7 +9,7 @@ import { useState, useEffect } from 'react';
  */
 export function useDarkMode(): [boolean, () => void] {
     const [isDark, setIsDark] = useState<boolean>(() => {
-        const saved = localStorage.getItem('theme');
+        const saved = readStorage(getSafeStorage('local'), 'theme');
         if (saved !== null) return saved === 'dark';
         return window.matchMedia('(prefers-color-scheme: dark)').matches;
     });
@@ -20,7 +21,7 @@ export function useDarkMode(): [boolean, () => void] {
         } else {
             root.classList.remove('dark');
         }
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        writeStorage(getSafeStorage('local'), 'theme', isDark ? 'dark' : 'light');
     }, [isDark]);
 
     const toggle = () => setIsDark(d => !d);

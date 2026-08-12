@@ -1,4 +1,5 @@
-import { INITIAL_ITEMS, INITIAL_STATE } from '../../constants/initialState';
+import { INITIAL_ITEMS } from '../../constants/initialState';
+import { createInitialState } from './stateFactory';
 import type { AppState, EquipmentPart, EquipItem } from '../../types';
 
 export const CURRENT_STATE_VERSION = 1;
@@ -17,13 +18,7 @@ const ITEM_STRING_FIELDS = [
 const VALID_SLOTS = new Set<EquipmentPart>(Object.keys(INITIAL_ITEMS) as EquipmentPart[]);
 
 function cloneInitialState(): AppState {
-  return {
-    ...INITIAL_STATE,
-    crop: { ...INITIAL_STATE.crop },
-    items: Object.fromEntries(
-      Object.entries(INITIAL_ITEMS).map(([slot, item]) => [slot, { ...item }]),
-    ) as Record<EquipmentPart, EquipItem>,
-  };
+  return createInitialState();
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
