@@ -1,4 +1,5 @@
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // ── AdBanner — Apple UX 원칙 ───────────────────────────────────────────────────
 // · 광고는 사용자 흐름이 자연스럽게 끊기는 지점에만 배치합니다.
@@ -9,14 +10,30 @@ interface AdBannerProps {
   slot: string;
   format?: string;
   className?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
+}
+
+function ensureAdSenseScript(): void {
+  if (document.querySelector('script[data-adsense-loader]')) return;
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.crossOrigin = 'anonymous';
+  script.dataset.adsenseLoader = 'true';
+  script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2169729065542563';
+  document.head.appendChild(script);
 }
 
 export function AdBanner({ slot, format = 'auto', className, style }: AdBannerProps) {
   const ref = useRef<HTMLDivElement>(null);
   const pushed = useRef(false);
+  const { i18n } = useTranslation();
+  const language = i18n.resolvedLanguage?.split('-')[0] || i18n.language.split('-')[0];
+  const fallbackLabel = language === 'ja' ? '広告領域' : language === 'en' ? 'Advertisement' : '광고 영역';
 
   useEffect(() => {
+    ensureAdSenseScript();
+
     if (!pushed.current && ref.current) {
       pushed.current = true;
       try {
@@ -28,25 +45,11 @@ export function AdBanner({ slot, format = 'auto', className, style }: AdBannerPr
   }, []);
 
   return (
-    <div ref={ref} className={`relative flex items-center justify-center bg-[var(--surface-200)] border border-[var(--border)] rounded-[var(--radius-lg)] overflow-hidden transition-[background-color,border-color,opacity] duration-300 ${className || ''}`} style={style} aria-label="광고">
-      {/* Fallback UI (광고 미승인/차단 상태일 때 보임) */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-auto bg-[var(--bg-app)]">
-        <div className="flex flex-col items-center gap-3">
-          <span className="text-[0.7rem] font-bold tracking-widest uppercase text-[var(--text-secondary)] leading-relaxed">
-            Support<br />the Developer
-          </span>
-          <p className="text-[0.65rem] text-[var(--text-muted)] mt-1 mb-2 px-2">
-            개발자를 후원해 주시면 큰 힘이 됩니다!
-          </p>
-          <a
-            href="https://ko-fi.com/reconeur"
-            target="_blank"
-            rel="noreferrer"
-            className="px-4 py-2 bg-[var(--surface-300)] hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] text-[var(--text-primary)] rounded-[var(--radius-sm)] text-[0.7rem] font-bold tracking-wider transition-colors"
-          >
-            후원하기
-          </a>
-        </div>
+    <div ref={ref} className={`relative flex items-center justify-center overflow-hidden rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface-200)] transition-[background-color,border-color,opacity] duration-300 ${className || ''}`} style={style} aria-label={fallbackLabel}>
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-[var(--bg-app)] p-6 text-center">
+        <span className="text-[0.7rem] font-medium tracking-[0.08em] text-[var(--text-muted)]">
+          {fallbackLabel}
+        </span>
       </div>
 
       <ins

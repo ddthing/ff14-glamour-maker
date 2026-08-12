@@ -1,45 +1,95 @@
+import {
+  Download04Icon,
+  ImageUploadIcon,
+  PencilEdit01Icon,
+  Search01Icon,
+  SparklesIcon,
+} from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { useTranslation } from 'react-i18next';
 import { useLocalizedPageContent } from '../../content/localizedPages';
+
+const STEP_ICONS = [
+  ImageUploadIcon,
+  PencilEdit01Icon,
+  Search01Icon,
+  SparklesIcon,
+  Download04Icon,
+] as const;
 
 export function SeoArticle() {
   const { guide } = useLocalizedPageContent();
+  const { t } = useTranslation();
 
   return (
-    <article className="mx-auto mt-8 w-full max-w-4xl space-y-12 px-0 py-8 text-[var(--text-secondary)] sm:px-6 sm:py-12">
-      <section className="space-y-4">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">{guide.title}</h1>
-        {guide.intro.map(paragraph => <p key={paragraph} className="leading-relaxed">{paragraph}</p>)}
+    <article className="guide-article content-prose">
+      <section className="guide-intro">
+        {guide.intro.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-[var(--text-primary)]">{guide.howTitle}</h2>
-        <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-          {guide.steps.map((step, index) => (
-            <div key={step.title} className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--bg-panel)] p-6 shadow-sm">
-              <div className="mb-3 text-2xl font-black text-[var(--text-muted)]">{String(index + 1).padStart(2, '0')}</div>
-              <h3 className="mb-2 font-bold text-[var(--text-primary)]">{step.title}</h3>
-              <p className="text-sm leading-relaxed">{step.description}</p>
-            </div>
-          ))}
+      <section className="guide-section">
+        <div className="guide-section-heading">
+          <p className="content-eyebrow">01 — FLOW</p>
+          <h2>{guide.howTitle}</h2>
         </div>
+
+        <ol className="guide-step-list">
+          {guide.steps.map((step, index) => {
+            const icon = STEP_ICONS[index] ?? SparklesIcon;
+
+            return (
+              <li key={step.title} className="guide-step">
+                <div className="guide-step-rail" aria-hidden="true">
+                  <span className="guide-step-number">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="guide-step-icon">
+                    <HugeiconsIcon icon={icon} size={22} strokeWidth={1.7} />
+                  </span>
+                </div>
+                <div className="guide-step-copy">
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-[var(--text-primary)]">{guide.tipsTitle}</h2>
-        <ul className="list-disc space-y-2 pl-5">
+      <section className="guide-section">
+        <div className="guide-section-heading">
+          <p className="content-eyebrow">02 — DETAIL</p>
+          <h2>{guide.tipsTitle}</h2>
+        </div>
+        <ul className="guide-tip-grid">
           {guide.tips.map(tip => (
-            <li key={tip.title}><strong>{tip.title}:</strong> {tip.description}</li>
+            <li key={tip.title} className="guide-tip-card">
+              <h3>{tip.title}</h3>
+              <p>{tip.description}</p>
+            </li>
           ))}
         </ul>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-[var(--text-primary)]">{guide.faqTitle}</h2>
-        <div className="space-y-6">
-          {guide.entries.map(entry => (
-            <div key={entry.question}>
-              <h3 className="font-bold text-[var(--text-primary)]">{entry.question}</h3>
-              <p className="mt-1 leading-relaxed">{entry.answer}</p>
-            </div>
+      <aside className="content-callout guide-local-note">
+        <h2>{guide.localNoteTitle}</h2>
+        <p>{guide.localNote}</p>
+        <div className="guide-related-links">
+          <a href="/faq" className="content-inline-link">{t('common.footer_faq')}</a>
+          <a href="/privacy" className="content-inline-link">{t('common.footer_privacy')}</a>
+        </div>
+      </aside>
+
+      <section className="guide-section">
+        <div className="guide-section-heading">
+          <p className="content-eyebrow">03 — QUESTIONS</p>
+          <h2>{guide.faqTitle}</h2>
+        </div>
+        <div className="content-faq-list">
+          {guide.entries.map((entry, index) => (
+            <details key={entry.question} className="content-faq-item" open={index === 0}>
+              <summary>{entry.question}</summary>
+              <p>{entry.answer}</p>
+            </details>
           ))}
         </div>
       </section>

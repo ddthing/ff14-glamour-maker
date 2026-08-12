@@ -3,13 +3,18 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { useTranslation } from 'react-i18next';
 import { useDarkMode } from '../../hooks/useDarkMode';
 import { useLocalizedMetadata } from '../../hooks/useLocalizedMetadata';
+import type { ContentPageKey } from '../../content/pageTypes';
 import { LanguageSelector } from './LanguageSelector';
 
-export function Header() {
+interface HeaderProps {
+  page?: ContentPageKey;
+}
+
+export function Header({ page = 'home' }: HeaderProps) {
   const { t, i18n } = useTranslation();
   const [isDark, toggleDark] = useDarkMode();
   const language = i18n.resolvedLanguage?.split('-')[0] || i18n.language.split('-')[0];
-  useLocalizedMetadata();
+  useLocalizedMetadata(page);
 
   return (
     <>

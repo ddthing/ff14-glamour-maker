@@ -53,4 +53,19 @@ describe('localized document metadata', () => {
 
     expect(document.querySelector('meta[name="apple-mobile-web-app-title"]')?.getAttribute('content')).toBe('투영세트 메이커');
   });
+
+  it('sets route-specific metadata and structured data for information pages', async () => {
+    await act(async () => {
+      await i18n.changeLanguage('en');
+      root.render(<Header page="privacy" />);
+    });
+
+    expect(document.title).toBe('Privacy policy | Glamour Set Maker');
+    expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(`${window.location.origin}/privacy`);
+    expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toContain('Google AdSense');
+
+    const structuredData = JSON.parse(document.querySelector('#page-structured-data')?.textContent || '{}') as { '@type'?: string; dateModified?: string };
+    expect(structuredData['@type']).toBe('WebPage');
+    expect(structuredData.dateModified).toBe('2026-08-13');
+  });
 });

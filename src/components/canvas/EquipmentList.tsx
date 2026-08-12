@@ -14,15 +14,36 @@ const SLOT_ORDER: EquipmentPart[] = [
   'feet', 'ears', 'neck', 'wrists', 'rings', 'rings2', 'face',
 ];
 
+interface EquipmentListSpacing {
+  gap: number;
+  paddingBlock: number;
+}
+
+function getEquipmentListSpacing(filledCount: number): EquipmentListSpacing {
+  if (filledCount <= 6) return { gap: 10, paddingBlock: 20 };
+  if (filledCount <= 9) return { gap: 7, paddingBlock: 14 };
+  if (filledCount <= 12) return { gap: 4, paddingBlock: 8 };
+  return { gap: 2, paddingBlock: 4 };
+}
+
 export function EquipmentList({ items, fashionAccessory, emptyTitle, emptySteps }: EquipmentListProps) {
   const filledSlots = SLOT_ORDER.filter(id => Boolean(items[id]?.name));
   const filledCount = filledSlots.length + (fashionAccessory ? 1 : 0);
   const sizeMode = filledCount <= 6 ? 'comfortable' : filledCount <= 9 ? 'balanced' : 'compact';
+  const spacing = getEquipmentListSpacing(filledCount);
 
   return (
     <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       {filledCount > 0 ? (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
+        <div
+          data-canvas-list="equipment"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: `${spacing.gap}px`,
+            paddingBlock: `${spacing.paddingBlock}px`,
+          }}
+        >
           {filledSlots.map((id, index) => (
             <CanvasItemRow
               key={id}

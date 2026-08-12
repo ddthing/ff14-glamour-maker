@@ -62,6 +62,24 @@ describe('canvas display components', () => {
     expect(container.textContent).toContain('Save Image');
   });
 
+  it('adds breathable spacing for short equipment lists', () => {
+    const items = createEmptyItems();
+    for (const item of Object.values(items).slice(0, 3)) item.name = `Selected ${item.id}`;
+
+    act(() => root.render(
+      <EquipmentList
+        items={items}
+        fashionAccessory={null}
+        emptyTitle="Create Your Glamour Card"
+        emptySteps={['Upload Character Photo', 'Add Equipment', 'Save Image']}
+      />,
+    ));
+
+    const list = container.querySelector<HTMLElement>('[data-canvas-list="equipment"]');
+    expect(list?.style.gap).toBe('10px');
+    expect(list?.style.paddingBlock).toBe('20px');
+  });
+
   it('renders one separator between full rows and none above the footer', () => {
     const items = createEmptyItems();
     for (const item of Object.values(items)) item.name = `Selected ${item.id}`;
@@ -83,6 +101,9 @@ describe('canvas display components', () => {
 
     const rows = container.querySelectorAll<HTMLElement>('[data-canvas-row]');
     expect(rows).toHaveLength(14);
+    const list = container.querySelector<HTMLElement>('[data-canvas-list="equipment"]');
+    expect(list?.style.gap).toBe('2px');
+    expect(list?.style.paddingBlock).toBe('4px');
     expect(rows[rows.length - 2].style.borderBottom).toContain('1px');
     expect(rows[rows.length - 1].style.borderBottom).toBe('');
   });
