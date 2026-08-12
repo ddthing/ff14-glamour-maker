@@ -25,12 +25,16 @@ export function ControlPanel({ state, actions }: Props) {
 
   const handleResetItems = useCallback(() => {
     const previousItems = state.items;
+    const previousFashionAccessory = state.fashionAccessory;
     actions.resetItems();
     registerUndo({
       message: t('common.items_reset'),
-      undo: () => actions.replaceItems(previousItems),
+      undo: () => {
+        actions.replaceItems(previousItems);
+        actions.setFashionAccessory(previousFashionAccessory);
+      },
     });
-  }, [actions, registerUndo, state.items, t]);
+  }, [actions, registerUndo, state.fashionAccessory, state.items, t]);
 
   const handleRemovePreset = useCallback((id: string) => {
     const removed = removePreset(id);
@@ -42,8 +46,9 @@ export function ControlPanel({ state, actions }: Props) {
   }, [registerUndo, removePreset, restorePreset, t]);
 
   const hasPhoto = !!state.croppedImageSrc;
-  const hasItem = Object.values(state.items).some(item => !!item.name);
-  const isReadyToSave = hasPhoto && hasItem;
+  const hasSelection = Object.values(state.items).some(item => !!item.name)
+    || state.fashionAccessory !== null;
+  const isReadyToSave = hasPhoto && hasSelection;
   const exportLabel = isExporting && stage ? t(`common.export_${stage}`) : t('common.save');
 
   return (
@@ -74,13 +79,15 @@ export function ControlPanel({ state, actions }: Props) {
         ) : (
           <EquipmentTab
             items={state.items}
+            fashionAccessory={state.fashionAccessory}
             onUpdateItem={actions.updateItem}
+            onFashionAccessoryChange={actions.setFashionAccessory}
             onResetItems={handleResetItems}
           />
         )}
       </div>
 
-      <div className="flex shrink-0 flex-col gap-2 border-t border-[var(--border)] bg-[var(--surface-100)]/80 px-4 py-3.5 sm:px-5">
+      <div className="control-action-dock flex shrink-0 flex-col gap-2 border-t border-[var(--border)] bg-[var(--surface-100)] px-4 py-3.5 sm:px-5">
         <ControlActions
           isExporting={isExporting}
           isReadyToSave={isReadyToSave}

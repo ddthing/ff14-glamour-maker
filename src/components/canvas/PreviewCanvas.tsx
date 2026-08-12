@@ -109,11 +109,13 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
                 {...dragHandlers}
             >
                 <div
-                    className="canvas-scale-outer preview-frame overflow-hidden rounded-[var(--radius-lg)]"
+                    className="canvas-scale-outer preview-frame overflow-hidden rounded-none"
                     style={{
                         width:  scale < 1 ? CANVAS_W * scale : CANVAS_W,
                         height: scale < 1 ? CANVAS_H * scale : CANVAS_H,
-                        position: 'relative'
+                        position: 'relative',
+                        border: 0,
+                        borderRadius: 0,
                     }}
                 >
                     <div
@@ -123,6 +125,9 @@ export function PreviewCanvas({ state, onPhotoConfirm }: Props) {
                             background: '#1a1915',
                             width: CANVAS_W,
                             height: CANVAS_H,
+                            borderRadius: 0,
+                            boxSizing: 'border-box',
+                            overflow: 'hidden',
                             transformOrigin: 'top left',
                             backfaceVisibility: 'hidden',
                             WebkitBackfaceVisibility: 'hidden',

@@ -1,11 +1,12 @@
 import { useCallback, useMemo, type Dispatch, type SetStateAction } from 'react';
 import { cloneItems, createInitialItems } from './stateFactory';
-import type { AppState, EquipmentPart, EquipItem } from '../../types';
+import type { AppState, EquipmentPart, EquipItem, FashionAccessorySelection } from '../../types';
 
 interface PresetState {
   title: string;
   creator: string;
   items: AppState['items'];
+  fashionAccessory?: FashionAccessorySelection | null;
 }
 
 export interface GlamourActions {
@@ -14,6 +15,7 @@ export interface GlamourActions {
   updateItem: (part: EquipmentPart, updates: Partial<EquipItem>) => void;
   replaceItems: (items: AppState['items']) => void;
   resetItems: () => void;
+  setFashionAccessory: (accessory: FashionAccessorySelection | null) => void;
   applyPreset: (preset: PresetState) => void;
   setPhoto: (croppedImageSrc: string, imageSrc: string) => void;
 }
@@ -44,7 +46,11 @@ export function useGlamourActions(
   }, [setState]);
 
   const resetItems = useCallback(() => {
-    setState(current => ({ ...current, items: createInitialItems() }));
+    setState(current => ({ ...current, items: createInitialItems(), fashionAccessory: null }));
+  }, [setState]);
+
+  const setFashionAccessory = useCallback((fashionAccessory: FashionAccessorySelection | null) => {
+    setState(current => ({ ...current, fashionAccessory }));
   }, [setState]);
 
   const applyPreset = useCallback((preset: PresetState) => {
@@ -53,6 +59,7 @@ export function useGlamourActions(
       title: preset.title,
       creator: preset.creator,
       items: cloneItems(preset.items),
+      fashionAccessory: preset.fashionAccessory ?? null,
     }));
   }, [setState]);
 
@@ -66,7 +73,8 @@ export function useGlamourActions(
     updateItem,
     replaceItems,
     resetItems,
+    setFashionAccessory,
     applyPreset,
     setPhoto,
-  }), [applyPreset, replaceItems, resetItems, setCreator, setPhoto, setTitle, updateItem]);
+  }), [applyPreset, replaceItems, resetItems, setCreator, setFashionAccessory, setPhoto, setTitle, updateItem]);
 }

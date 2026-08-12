@@ -70,3 +70,40 @@ describe('loadSearchItems', () => {
     expect(String(fetchItems.mock.calls[0]?.[0])).toContain('facewear');
   });
 });
+
+describe('isFashionAccessoryItem', () => {
+  it('accepts fashion unlock icons and excludes migrated facewear', async () => {
+    const { isFashionAccessoryItem } = await import('./loadSearchItems');
+    expect(isFashionAccessoryItem({
+      id: 30269,
+      name: '파라솔',
+      nameEn: 'Parasol',
+      nameJa: 'パラソル',
+      iconPath: '/i/058000/058001.png',
+      uiCategory: 61,
+      source: 'item',
+    })).toBe(true);
+    expect(isFashionAccessoryItem({
+      id: 36345,
+      name: '타원형 안경 환영',
+      nameEn: 'False Oval Spectacles',
+      nameJa: 'オーバルグラス',
+      iconPath: '/i/058000/058022.png',
+      uiCategory: 61,
+      source: 'item',
+    })).toBe(false);
+  });
+
+  it('rejects similarly named housing items', async () => {
+    const { isFashionAccessoryItem } = await import('./loadSearchItems');
+    expect(isFashionAccessoryItem({
+      id: 6482,
+      name: '정원용 파라솔',
+      nameEn: 'Linen Parasol',
+      nameJa: 'ガーデンパラソル',
+      iconPath: '/i/052000/052125.png',
+      uiCategory: 57,
+      source: 'item',
+    })).toBe(false);
+  });
+});

@@ -27,7 +27,7 @@ export function LegalPage({ type }: LegalPageProps) {
           ))}
         </div>
         <div className="mt-6">
-          <a href="/" className="inline-flex min-h-11 items-center rounded-[var(--radius-sm)] bg-[var(--surface-300)] px-6 py-3 text-sm font-bold transition-colors hover:bg-[var(--accent)] hover:text-white">
+          <a href="/" className="inline-flex min-h-11 items-center rounded-[var(--radius-sm)] bg-[var(--surface-300)] px-6 py-3 text-sm font-bold transition-colors hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)]">
             {content.backHome}
           </a>
         </div>

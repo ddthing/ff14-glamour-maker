@@ -69,3 +69,17 @@ export async function preloadSearchItems(slot?: EquipmentPart): Promise<void> {
     // The failed cache entry is cleared by the loader so an actual search can retry.
   }
 }
+
+const LEGACY_FACEWEAR_PATTERN = /spectacles|glasses|monocle|eyepatch|안경|眼鏡|メガネ/i;
+
+export function isFashionAccessoryItem(item: FF14Item): boolean {
+  return item.source === 'item'
+    && item.uiCategory === 61
+    && /^\/i\/058000\/058\d{3}\.png$/i.test(item.iconPath ?? '')
+    && !LEGACY_FACEWEAR_PATTERN.test(`${item.name} ${item.nameEn} ${item.nameJa}`);
+}
+
+export async function loadFashionAccessories(): Promise<readonly FF14Item[]> {
+  const items = await loadEquipment();
+  return items.filter(isFashionAccessoryItem);
+}

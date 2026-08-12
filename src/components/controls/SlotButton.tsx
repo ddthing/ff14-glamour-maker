@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Plus } from 'lucide-react';
+import { Add01Icon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 import type { EquipmentPart, EquipItem } from '../../types';
 import { ItemIcon } from '../canvas/ItemIcon';
 import { getLocalizedItemNames } from '../../utils/formatters';
@@ -27,7 +28,7 @@ export function SlotButton({ part, item, isActive, onClick }: SlotButtonProps) {
             aria-pressed={isActive}
             aria-label={`${t(`slots.${part}`)}${isFilled ? `: ${localizedItemName}` : ''}`}
             className={`
-                group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-[var(--radius-sm)] border transition-[background-color,border-color,box-shadow,transform,color] duration-300
+                group relative flex flex-col items-center justify-center gap-1.5 p-2 rounded-[var(--radius-sm)] border transition-[background-color,border-color,transform,color] duration-300
                 ${isActive
                     ? 'bg-[var(--surface-300)] border-[var(--border-medium)] ring-1 ring-[var(--border-medium)]'
                     : 'bg-[var(--surface-100)] border-[var(--border)] hover:border-[var(--border-medium)] hover:bg-[var(--surface-200)] hover:scale-[1.02]'
@@ -58,14 +59,14 @@ export function SlotButton({ part, item, isActive, onClick }: SlotButtonProps) {
                         w-full h-full rounded-md flex items-center justify-center transition-colors
                         ${isActive ? 'bg-[var(--surface-400)]' : 'bg-[var(--surface-200)]'}
                     `}>
-                        <Plus size={14} className="opacity-30" aria-hidden="true" />
+                        <HugeiconsIcon icon={Add01Icon} size={15} strokeWidth={1.8} className="opacity-30" aria-hidden="true" />
                     </div>
                 )}
             </div>
 
             {/* Filled Indicator */}
             {isFilled && (
-                <div className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_8px_rgba(245,78,0,0.4)]" aria-hidden="true" />
+                <div className="absolute top-1 right-1 h-2 w-2 rounded-full border-2 border-[var(--background)] bg-[var(--primary)]" aria-hidden="true" />
             )}
         </button>
     );

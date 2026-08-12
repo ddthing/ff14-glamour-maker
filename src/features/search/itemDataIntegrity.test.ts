@@ -87,9 +87,10 @@ describe('generated item data integrity', () => {
     );
 
     for (const item of supported) {
-      const slot = item.uiCategory !== undefined && categorySlots.get(item.uiCategory)
-        ? categorySlots.get(item.uiCategory)!
-        : 'mainhand';
+      const categorySlot = item.uiCategory === undefined
+        ? undefined
+        : categorySlots.get(item.uiCategory);
+      const slot = categorySlot ?? (item.equipSlots?.includes('offhand') ? 'offhand' : 'mainhand');
       for (const [language, name] of [
         ['ko', item.name], ['en', item.nameEn], ['ja', item.nameJa],
       ] as const) {

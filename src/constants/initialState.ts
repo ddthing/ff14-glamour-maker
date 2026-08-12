@@ -24,4 +24,5 @@ export const INITIAL_STATE: AppState = {
   title: '',
   creator: '',
   items: INITIAL_ITEMS,
+  fashionAccessory: null,
 };

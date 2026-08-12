@@ -38,6 +38,23 @@ async function inlineImage(
   }
 }
 
+async function waitForPalette(element: HTMLElement, timeoutMs = 5_000): Promise<void> {
+  if (!element.querySelector('[data-palette-status="loading"]')) return;
+
+  await new Promise<void>(resolve => {
+    const finish = () => {
+      observer.disconnect();
+      window.clearTimeout(timeout);
+      resolve();
+    };
+    const observer = new MutationObserver(() => {
+      if (!element.querySelector('[data-palette-status="loading"]')) finish();
+    });
+    const timeout = window.setTimeout(finish, timeoutMs);
+    observer.observe(element, { attributes: true, subtree: true, attributeFilter: ['data-palette-status'] });
+  });
+}
+
 export async function exportCanvasElement(
   element: HTMLElement,
   dependencies: ExportCanvasDependencies = {},
@@ -45,13 +62,15 @@ export async function exportCanvasElement(
   const fetchImage = dependencies.fetchImage ?? fetch;
   const render = dependencies.render ?? toPng;
   const blobToDataUrl = dependencies.blobToDataUrl ?? readBlobAsDataUrl;
-  const snapshots: ImageSnapshot[] = Array.from(element.querySelectorAll('img')).map(image => ({
-    image,
-    source: image.getAttribute('src'),
-  }));
+  let snapshots: ImageSnapshot[] = [];
 
   try {
     dependencies.onStage?.('preparing');
+    await waitForPalette(element);
+    snapshots = Array.from(element.querySelectorAll('img')).map(image => ({
+      image,
+      source: image.getAttribute('src'),
+    }));
     await Promise.all(snapshots.map(({ image }) => inlineImage(image, fetchImage, blobToDataUrl)));
 
     dependencies.onStage?.('rendering');

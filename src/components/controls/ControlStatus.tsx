@@ -1,4 +1,5 @@
-import { AlertCircle, RotateCcw } from 'lucide-react';
+import { AlertCircleIcon, RefreshIcon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 import type { UndoAction } from '../../hooks/useUndoAction';
 
 interface ControlStatusProps {
@@ -27,7 +28,7 @@ export function ControlStatus({
       {exportError && (
         <div className="flex items-center justify-between gap-3 text-xs text-[var(--error)]" role="alert">
           <span className="flex items-center gap-1.5">
-            <AlertCircle size={14} aria-hidden="true" />
+            <HugeiconsIcon icon={AlertCircleIcon} size={15} strokeWidth={1.8} aria-hidden="true" />
             {exportFailedLabel}
           </span>
           <button
@@ -35,7 +36,7 @@ export function ControlStatus({
             className="flex shrink-0 items-center gap-1 font-bold underline underline-offset-2"
             onClick={onRetryExport}
           >
-            <RotateCcw size={12} aria-hidden="true" />
+            <HugeiconsIcon icon={RefreshIcon} size={13} strokeWidth={1.8} aria-hidden="true" />
             {retryLabel}
           </button>
         </div>
@@ -45,7 +46,7 @@ export function ControlStatus({
           <span>{undoAction.message}</span>
           <button
             type="button"
-            className="shrink-0 font-bold text-[var(--accent)] underline underline-offset-2"
+            className="shrink-0 font-bold text-[var(--foreground)] underline underline-offset-2"
             onClick={onUndo}
           >
             {undoLabel}

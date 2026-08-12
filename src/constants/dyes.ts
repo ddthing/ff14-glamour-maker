@@ -86,7 +86,7 @@ export const FF14_DYES: FF14Dye[] = [
     { name: '옅은 하늘색', nameEn: 'Ice Blue', nameJa: 'アイスブルー', hex: '#AFBDC2' },
     { name: '하늘색', nameEn: 'Sky Blue', nameJa: 'スカイブルー', hex: '#618090' },
     { name: '바다안개색', nameEn: 'Seafog Blue', nameJa: 'シーフォ그ブルー', hex: '#5D636D' },
-    { name: '공잣깃 파란색', nameEn: 'Peacock Blue', nameJa: 'ピーコックブルー', hex: '#38515A' },
+    { name: '공작깃 파란색', nameEn: 'Peacock Blue', nameJa: 'ピーコックブルー', hex: '#38515A' },
     { name: '로타노 바다색', nameEn: 'Rhotano Blue', nameJa: 'ロー타ノブルー', hex: '#1D2D3E' },
     { name: '좀비의 얼굴색', nameEn: 'Corpse Blue', nameJa: 'コープスブルー', hex: '#535A60' },
     { name: '청린수색', nameEn: 'Ceruleum Blue', nameJa: 'セルリウムブルー', hex: '#324451' },

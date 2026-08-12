@@ -25,7 +25,7 @@ export default defineConfig({
           // 캔버스/이미지 처리
           'vendor-canvas': ['react-easy-crop', 'html-to-image'],
           // UI 라이브러리
-          'vendor-ui': ['lucide-react'],
+          'vendor-ui': ['@hugeicons/react', '@hugeicons/core-free-icons'],
         },
       },
     },

@@ -10,6 +10,7 @@ export interface Preset {
   title: string;
   creator: string;
   items: AppState['items'];
+  fashionAccessory: AppState['fashionAccessory'];
   updatedAt: number;
 }
 
@@ -52,6 +53,7 @@ function parseStoredPresets(value: string | null): Preset[] {
         title: decoded.state.title,
         creator: decoded.state.creator,
         items: decoded.state.items,
+        fashionAccessory: decoded.state.fashionAccessory,
         updatedAt: typeof candidate.updatedAt === 'number' ? candidate.updatedAt : 0,
       }];
     });
@@ -98,6 +100,7 @@ export function usePresets(): UsePresetsReturn {
       title: state.title,
       creator: state.creator,
       items: state.items,
+      fashionAccessory: state.fashionAccessory,
       updatedAt: Date.now(),
     };
 

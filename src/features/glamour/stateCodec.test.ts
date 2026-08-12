@@ -58,6 +58,30 @@ describe('stateCodec', () => {
     expect(result.state).toEqual(INITIAL_STATE);
   });
 
+  it('preserves a valid optional fashion accessory and rejects an invalid one', () => {
+    const valid = decodeStateValue({
+      fashionAccessory: {
+        id: 42,
+        nameKo: '검은 파라솔',
+        nameEn: 'Black Parasol',
+        nameJa: 'ブラックパラソル',
+        iconPath: '/i/058000/058042.png',
+      },
+    });
+    const invalid = decodeStateValue({ fashionAccessory: { id: -1, nameKo: 'invalid' } });
+
+    expect(valid.status).toBe('valid');
+    expect(valid.state.fashionAccessory).toEqual({
+      id: 42,
+      nameKo: '검은 파라솔',
+      nameEn: 'Black Parasol',
+      nameJa: 'ブラックパラソル',
+      iconPath: '/i/058000/058042.png',
+    });
+    expect(invalid.status).toBe('recovered');
+    expect(invalid.state.fashionAccessory).toBeNull();
+  });
+
   it('migrates legacy preset values through the same validation path', () => {
     const result = decodeStateValue({
       title: '기존 프리셋',

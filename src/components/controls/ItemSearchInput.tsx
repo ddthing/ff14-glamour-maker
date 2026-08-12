@@ -2,7 +2,8 @@ import { useTranslation } from 'react-i18next';
 import type { FF14Item } from '../../hooks/useFF14Search';
 import type { EquipmentPart } from '../../types';
 import { ItemIcon } from '../canvas/ItemIcon';
-import { Search, AlertCircle, Loader2 } from 'lucide-react';
+import { AlertCircleIcon, Loading03Icon, Search01Icon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 import { useItemSearchCombobox } from '../../features/search/useItemSearchCombobox';
 import { getLocalizedItemNames } from '../../utils/formatters';
 
@@ -57,9 +58,9 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     onBlur={handleBlur}
                     onKeyDown={handleKeyDown}
                 />
-                <Search size={14} className="absolute left-3 text-[var(--text-muted)] pointer-events-none" aria-hidden="true" />
+                <HugeiconsIcon icon={Search01Icon} size={15} strokeWidth={1.7} className="absolute left-3 text-[var(--text-muted)] pointer-events-none" aria-hidden="true" />
                 {isLoading && (
-                    <Loader2 size={14} className="absolute right-3 text-[var(--accent)] animate-spin" aria-hidden="true" />
+                    <HugeiconsIcon icon={Loading03Icon} size={15} strokeWidth={1.7} className="absolute right-3 text-[var(--foreground)] animate-spin" aria-hidden="true" />
                 )}
             </div>
 
@@ -74,7 +75,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     {/* Loading State */}
                     {isLoading && filteredResults.length === 0 && (
                         <div className="p-4 flex items-center justify-center gap-2 text-xs text-[var(--text-muted)]" aria-live="polite">
-                            <Loader2 size={14} className="animate-spin text-[var(--accent)]" aria-hidden="true" />
+                            <HugeiconsIcon icon={Loading03Icon} size={15} strokeWidth={1.7} className="animate-spin text-[var(--foreground)]" aria-hidden="true" />
                             {t('common.loading')}
                         </div>
                     )}
@@ -89,7 +90,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     {/* Error State */}
                     {!!error && (
                         <div className="p-4 flex items-center gap-2 text-xs text-[var(--error)] font-medium bg-[var(--error)]/5" role="alert">
-                            <AlertCircle size={14} aria-hidden="true" />
+                            <HugeiconsIcon icon={AlertCircleIcon} size={15} strokeWidth={1.8} aria-hidden="true" />
                             {t('common.search_failed')}
                         </div>
                     )}
@@ -119,7 +120,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                                 />
                             </div>
                             <div className="flex-1 min-w-0">
-                                <div className="text-sm font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--accent)]">
+                                <div className="text-sm font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--foreground)]">
                                     {main}
                                 </div>
                                 {sub && (

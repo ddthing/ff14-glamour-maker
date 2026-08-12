@@ -19,7 +19,7 @@ export function About() {
                 {index === 1 ? (
                   <p>
                     <strong>{about.contactLabel}:</strong>{' '}
-                    <a href="https://x.com/reconeur" className="text-[var(--accent)] hover:underline" target="_blank" rel="noopener noreferrer">
+                    <a href="https://x.com/reconeur" className="text-[var(--foreground)] hover:underline" target="_blank" rel="noopener noreferrer">
                       @reconeur
                     </a>
                   </p>

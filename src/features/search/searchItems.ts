@@ -24,9 +24,6 @@ export function isMatchingSlot(item: FF14Item, slot: EquipmentPart): boolean {
   if (slot === 'face') return item.source === 'facewear';
   if (item.source === 'facewear') return false;
   if (item.equipSlots && item.equipSlots.length > 0) {
-    if (slot === 'mainhand') {
-      return item.equipSlots.includes('mainhand') || item.equipSlots.includes('offhand');
-    }
     return item.equipSlots.includes(slot);
   }
   if (slot === 'offhand') return item.equipSlot === 'offhand';

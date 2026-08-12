@@ -42,7 +42,7 @@ export function AdBanner({ slot, format = 'auto', className, style }: AdBannerPr
             href="https://ko-fi.com/reconeur"
             target="_blank"
             rel="noreferrer"
-            className="px-4 py-2 bg-[var(--surface-300)] hover:bg-[var(--accent)] hover:text-white text-[var(--text-primary)] rounded-[var(--radius-sm)] text-[0.7rem] font-bold tracking-wider transition-colors"
+            className="px-4 py-2 bg-[var(--surface-300)] hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] text-[var(--text-primary)] rounded-[var(--radius-sm)] text-[0.7rem] font-bold tracking-wider transition-colors"
           >
             후원하기
           </a>

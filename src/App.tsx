@@ -19,7 +19,7 @@ function App() {
         <main
           id="main-content"
           tabIndex={-1}
-          className="grid w-full min-w-0 grid-cols-1 items-stretch gap-4 min-[1400px]:grid-cols-[minmax(0,1fr)_400px] min-[1400px]:gap-9"
+          className="grid w-full min-w-0 grid-cols-1 items-stretch gap-5 xl:grid-cols-[minmax(0,1fr)_400px] xl:gap-8"
         >
           <div className="flex min-w-0 flex-col self-stretch">
             <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />

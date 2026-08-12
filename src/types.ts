@@ -48,6 +48,14 @@ export interface EquipItem {
     error?: string;
 }
 
+export interface FashionAccessorySelection {
+    id: number;
+    nameKo: string;
+    nameEn: string;
+    nameJa: string;
+    iconPath?: string;
+}
+
 // ─── App State ────────────────────────────────────────────────────────────────
 
 /**
@@ -65,6 +73,8 @@ export interface AppState {
     zoom: number;
     /** A dictionary recording the user's item choices across all equipment slots */
     items: Record<EquipmentPart, EquipItem>;
+    /** Optional cosmetic accessory equipped outside the normal gear slots. */
+    fashionAccessory: FashionAccessorySelection | null;
     /** The user-defined title of the glamour set (e.g., "Casual Wear") */
     title: string;
     /** The creator's handle to serve as a watermark (e.g., "@twitter") */

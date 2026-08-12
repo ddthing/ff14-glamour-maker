@@ -5,37 +5,26 @@ interface CanvasHeadingProps {
 }
 
 export function CanvasHeading({ title, creator, label }: CanvasHeadingProps) {
+  if (!title && !creator) return null;
+
   return (
-    <div style={{ marginBottom: '16px' }}>
-      <div style={{ marginBottom: '10px' }}>
-        <span style={{
-          fontSize: '0.575rem', fontWeight: 700, letterSpacing: '0.22em',
-          textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', display: 'block',
-        }}>
-          {label}
-        </span>
-      </div>
-
-      <h1 style={{
-        fontSize: '1.9rem', fontWeight: 800, lineHeight: 1.08, letterSpacing: '-0.4px',
-        color: '#ffffff', textShadow: '0 2px 20px rgba(0,0,0,0.4)', wordBreak: 'break-word',
-      }}>
-        {title || <span style={{ color: 'rgba(255,255,255,0.18)' }}>—</span>}
-      </h1>
-
-      {creator && (
-        <div style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{
-            width: '20px', height: '1px', background: 'rgba(255,255,255,0.2)', flexShrink: 0,
-          }} />
-          <span style={{
-            fontSize: '0.8rem', fontWeight: 500, color: 'rgba(255,255,255,0.45)',
-            letterSpacing: '0.02em', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-          }}>
+    <div className="mb-4">
+      <span className="mb-2.5 block text-[0.575rem] font-bold uppercase tracking-[0.22em] text-[var(--card-text-muted)]">
+        {label}
+      </span>
+      {title ? (
+        <h1 className="break-words text-[1.9rem] font-extrabold leading-[1.08] tracking-[-0.4px] text-[var(--card-text-primary)]">
+          {title}
+        </h1>
+      ) : null}
+      {creator ? (
+        <div className="mt-2.5 flex items-center gap-2">
+          <div className="h-px w-5 shrink-0 bg-[var(--card-divider)]" />
+          <span className="truncate text-[0.8rem] font-medium tracking-[0.02em] text-[var(--card-text-secondary)]">
             {creator}
           </span>
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

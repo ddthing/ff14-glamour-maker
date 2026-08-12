@@ -4,6 +4,7 @@ import { act } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { INITIAL_ITEMS } from '../../constants/initialState';
+import '../../i18n';
 import type { AppState } from '../../types';
 import { CanvasHeading } from './CanvasHeading';
 import { EquipmentList } from './EquipmentList';
@@ -40,6 +41,7 @@ describe('canvas display components', () => {
     ));
 
     expect(container.querySelector('h1')?.textContent).toBe('Library Look');
+    expect(container.querySelector<HTMLElement>('h1')?.style.textShadow).toBe('');
     expect(container.textContent).toContain('@scholar');
     expect(container.textContent).toContain('Glamour');
   });
@@ -48,6 +50,7 @@ describe('canvas display components', () => {
     act(() => root.render(
       <EquipmentList
         items={createEmptyItems()}
+        fashionAccessory={null}
         emptyTitle="Create Your Glamour Card"
         emptySteps={['Upload Character Photo', 'Add Equipment', 'Save Image']}
       />,
@@ -57,5 +60,30 @@ describe('canvas display components', () => {
     expect(container.textContent).toContain('Upload Character Photo');
     expect(container.textContent).toContain('Add Equipment');
     expect(container.textContent).toContain('Save Image');
+  });
+
+  it('renders one separator between full rows and none above the footer', () => {
+    const items = createEmptyItems();
+    for (const item of Object.values(items)) item.name = `Selected ${item.id}`;
+
+    act(() => root.render(
+      <EquipmentList
+        items={items}
+        fashionAccessory={{
+          id: 30269,
+          nameKo: '파라솔',
+          nameEn: 'Parasol',
+          nameJa: 'パラソル',
+          iconPath: '/i/058000/058001.png',
+        }}
+        emptyTitle="Create Your Glamour Card"
+        emptySteps={['Upload Character Photo', 'Add Equipment', 'Save Image']}
+      />,
+    ));
+
+    const rows = container.querySelectorAll<HTMLElement>('[data-canvas-row]');
+    expect(rows).toHaveLength(14);
+    expect(rows[rows.length - 2].style.borderBottom).toContain('1px');
+    expect(rows[rows.length - 1].style.borderBottom).toBe('');
   });
 });

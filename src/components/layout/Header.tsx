@@ -1,19 +1,21 @@
-import { Moon, Sun } from 'lucide-react';
+import { Moon02Icon, Sun03Icon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 import { useTranslation } from 'react-i18next';
 import { useDarkMode } from '../../hooks/useDarkMode';
 import { useLocalizedMetadata } from '../../hooks/useLocalizedMetadata';
 import { LanguageSelector } from './LanguageSelector';
 
 export function Header() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isDark, toggleDark] = useDarkMode();
+  const language = i18n.resolvedLanguage?.split('-')[0] || i18n.language.split('-')[0];
   useLocalizedMetadata();
 
   return (
     <>
       <a
         href="#main-content"
-        className="fixed left-4 top-2 z-[4000] -translate-y-24 rounded-[var(--radius-sm)] bg-[var(--text-primary)] px-4 py-2 text-sm font-bold text-[var(--bg-app)] shadow-lg transition-transform focus-visible:translate-y-0"
+        className="fixed left-4 top-2 z-[4000] -translate-y-24 rounded-[var(--radius-sm)] bg-[var(--text-primary)] px-4 py-2 text-sm font-bold text-[var(--bg-app)] transition-transform focus-visible:translate-y-0"
       >
         {t('common.skip_to_content')}
       </a>
@@ -22,10 +24,11 @@ export function Header() {
         aria-label={t('common.main_navigation')}
         className="app-header sticky top-0 z-50 w-full shrink-0"
       >
-        <div className="mx-auto flex h-[52px] w-full max-w-[1480px] items-center justify-between gap-3 px-3 sm:px-5 lg:px-10">
-          <div className="flex min-w-0 items-center">
-            <span className="brand-wordmark whitespace-nowrap">{t('common.title_brand')}</span>
-          </div>
+        <div className="mx-auto flex h-[44px] w-full max-w-[1480px] items-center justify-between gap-3 px-3 sm:h-[46px] sm:px-5 lg:px-10">
+          <a href="/" className="brand-link min-w-0" aria-label={t('common.title_brand')}>
+            <span className="brand-mark" aria-hidden="true" />
+            <span lang={language} className="brand-wordmark truncate">{t('common.title_brand')}</span>
+          </a>
 
           <div className="header-control-rail shrink-0">
             <LanguageSelector />
@@ -38,9 +41,12 @@ export function Header() {
               aria-pressed={isDark}
               className="header-control-cell"
             >
-              {isDark
-                ? <Sun size={15} aria-hidden="true" />
-                : <Moon size={15} aria-hidden="true" />}
+              <HugeiconsIcon
+                icon={isDark ? Sun03Icon : Moon02Icon}
+                size={16}
+                strokeWidth={1.7}
+                aria-hidden="true"
+              />
             </button>
           </div>
         </div>

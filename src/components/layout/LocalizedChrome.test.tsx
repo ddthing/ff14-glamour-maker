@@ -39,7 +39,7 @@ async function renderChrome(language: 'en' | 'ja') {
 }
 
 function localFooterLabels(): string[] {
-  return Array.from(container.querySelectorAll('footer a'))
+  return Array.from(container.querySelectorAll('footer nav a'))
     .filter(link => link.getAttribute('href')?.startsWith('/'))
     .map(link => link.textContent?.trim() ?? '');
 }
@@ -50,10 +50,12 @@ describe('localized application chrome', () => {
 
     expect(container.querySelector('header')?.getAttribute('aria-label')).toBe('Main navigation');
     expect(container.querySelector('.brand-wordmark')?.textContent).toBe('Glamour Set Maker');
+    expect(container.querySelector('.brand-wordmark')?.getAttribute('lang')).toBe('en');
     expect(container.querySelector('header img')).toBeNull();
-    expect(container.querySelector('header > div')?.className).toContain('h-[52px]');
+    expect(container.querySelector('header > div')?.className).toContain('h-[44px]');
     expect(container.querySelector('.header-control-rail')).not.toBeNull();
     expect(container.querySelectorAll('.header-control-cell')).toHaveLength(4);
+    expect(container.querySelector('.footer-meta .footer-legal')?.textContent).toContain('SQUARE ENIX.');
     expect(
       Array.from(container.querySelectorAll('.header-control-cell'))
         .every(cell => cell.tagName === 'BUTTON'),
@@ -66,6 +68,7 @@ describe('localized application chrome', () => {
 
     expect(container.querySelector('header')?.getAttribute('aria-label')).toBe('メインナビゲーション');
     expect(container.querySelector('.brand-wordmark')?.textContent).toBe('ミラプリセットメーカー');
+    expect(container.querySelector('.brand-wordmark')?.getAttribute('lang')).toBe('ja');
     expect(localFooterLabels()).toEqual([
       'ガイド',
       'よくある質問',

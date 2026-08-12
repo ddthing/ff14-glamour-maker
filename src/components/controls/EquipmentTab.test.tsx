@@ -90,7 +90,9 @@ describe('EquipmentTab', () => {
       root.render(
         <EquipmentTab
           items={createItems()}
+          fashionAccessory={null}
           onUpdateItem={onUpdateItem}
+          onFashionAccessoryChange={vi.fn()}
           onResetItems={vi.fn()}
         />,
       );
@@ -107,5 +109,28 @@ describe('EquipmentTab', () => {
     });
 
     expect(onUpdateItem).toHaveBeenLastCalledWith('head', { dye1: '칠흑색' });
+  });
+
+  it('keeps optional fashion accessories collapsed until requested', () => {
+    act(() => {
+      root.render(
+        <EquipmentTab
+          items={createItems()}
+          fashionAccessory={null}
+          onUpdateItem={vi.fn()}
+          onFashionAccessoryChange={vi.fn()}
+          onResetItems={vi.fn()}
+        />,
+      );
+    });
+
+    const toggle = container.querySelector<HTMLButtonElement>('button[aria-expanded]');
+    expect(toggle?.getAttribute('aria-expanded')).toBe('false');
+    expect(container.querySelectorAll('[role="combobox"]')).toHaveLength(0);
+
+    act(() => toggle?.click());
+
+    expect(toggle?.getAttribute('aria-expanded')).toBe('true');
+    expect(container.querySelectorAll('[role="combobox"]')).toHaveLength(1);
   });
 });

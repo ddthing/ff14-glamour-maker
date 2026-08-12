@@ -1,3 +1,5 @@
+import type { CSSProperties, ReactNode } from 'react';
+
 /**
  * SectionLabel — Reusable section heading for the control panel.
  *
@@ -8,11 +10,12 @@
  *     the exact same visual language without copy-paste drift.
  */
 interface SectionLabelProps {
-    icon: React.ReactNode;
-    children: React.ReactNode;
+    icon: ReactNode;
+    children: ReactNode;
+    style?: CSSProperties;
 }
 
-export function SectionLabel({ icon, children }: SectionLabelProps) {
+export function SectionLabel({ icon, children, style }: SectionLabelProps) {
     return (
         <h3 style={{
             display: 'flex',
@@ -24,6 +27,7 @@ export function SectionLabel({ icon, children }: SectionLabelProps) {
             textTransform: 'uppercase',
             color: 'var(--text-muted)',
             marginBottom: '10px',
+            ...style,
         }}>
             <span style={{ opacity: 0.6 }} aria-hidden="true">{icon}</span>
             {children}

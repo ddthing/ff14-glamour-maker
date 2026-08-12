@@ -52,4 +52,24 @@ describe('exportCanvasElement', () => {
       'https://example.com/b.png',
     ]);
   });
+
+  it('waits for palette analysis before taking the image snapshot', async () => {
+    const canvas = createCanvas();
+    const palette = document.createElement('div');
+    palette.dataset.paletteStatus = 'loading';
+    canvas.appendChild(palette);
+    const render = vi.fn().mockResolvedValue('data:image/png;base64,result');
+    const promise = exportCanvasElement(canvas, {
+      fetchImage: vi.fn().mockResolvedValue(new Response('image', { status: 200 })),
+      blobToDataUrl: vi.fn().mockResolvedValue('data:image/png;base64,inlined'),
+      render,
+    });
+
+    await Promise.resolve();
+    expect(render).not.toHaveBeenCalled();
+    palette.dataset.paletteStatus = 'ready';
+
+    await expect(promise).resolves.toBe('data:image/png;base64,result');
+    expect(render).toHaveBeenCalledOnce();
+  });
 });

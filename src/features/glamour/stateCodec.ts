@@ -1,8 +1,8 @@
 import { INITIAL_ITEMS } from '../../constants/initialState';
 import { createInitialState } from './stateFactory';
-import type { AppState, EquipmentPart, EquipItem } from '../../types';
+import type { AppState, EquipmentPart, EquipItem, FashionAccessorySelection } from '../../types';
 
-export const CURRENT_STATE_VERSION = 1;
+export const CURRENT_STATE_VERSION = 2;
 
 export interface DecodeStateResult {
   state: AppState;
@@ -81,6 +81,30 @@ function sanitizeItem(slot: EquipmentPart, value: unknown, warnings: string[]): 
   return item;
 }
 
+function sanitizeFashionAccessory(
+  value: unknown,
+  warnings: string[],
+): FashionAccessorySelection | null {
+  if (value === undefined || value === null) return null;
+  if (!isRecord(value) || typeof value.id !== 'number' || !Number.isInteger(value.id) || value.id <= 0) {
+    warnings.push('fashionAccessory must be a valid object');
+    return null;
+  }
+
+  const accessory = {
+    id: value.id,
+    nameKo: sanitizeString(value.nameKo, '', 'fashionAccessory.nameKo', warnings, 160),
+    nameEn: sanitizeString(value.nameEn, '', 'fashionAccessory.nameEn', warnings, 160),
+    nameJa: sanitizeString(value.nameJa, '', 'fashionAccessory.nameJa', warnings, 160),
+    iconPath: sanitizeString(value.iconPath, '', 'fashionAccessory.iconPath', warnings, 240),
+  };
+  if (!accessory.nameKo && !accessory.nameEn && !accessory.nameJa) {
+    warnings.push('fashionAccessory requires a name');
+    return null;
+  }
+  return accessory;
+}
+
 function sanitizeState(value: unknown): DecodeStateResult {
   const warnings: string[] = [];
   const initial = cloneInitialState();
@@ -118,6 +142,7 @@ function sanitizeState(value: unknown): DecodeStateResult {
     },
     zoom: sanitizeNumber(value.zoom, initial.zoom, 'zoom', warnings, 0.1, 10),
     items,
+    fashionAccessory: sanitizeFashionAccessory(value.fashionAccessory, warnings),
   };
 
   return { state, status: warnings.length > 0 ? 'recovered' : 'valid', warnings };

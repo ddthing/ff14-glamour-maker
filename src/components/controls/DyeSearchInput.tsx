@@ -108,7 +108,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
                                     className="w-2.5 h-2.5 rounded-full border border-[var(--border)] shrink-0" 
                                     style={{ background: dye.hex !== 'transparent' ? dye.hex : 'transparent' }} 
                                 />
-                                <span className="text-sm font-medium text-[var(--text-primary)] truncate group-hover:text-[var(--accent)]">
+                                <span className="text-sm font-medium text-[var(--text-primary)] truncate group-hover:text-[var(--foreground)]">
                                     {i18n.language.startsWith('ja') ? dye.nameJa : 
                                      i18n.language.startsWith('en') ? dye.nameEn : 
                                      dye.name}

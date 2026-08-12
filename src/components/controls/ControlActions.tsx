@@ -1,4 +1,5 @@
-import { Download } from 'lucide-react';
+import { Download04Icon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 
 interface ControlActionsProps {
   isExporting: boolean;
@@ -24,7 +25,7 @@ export function ControlActions({
       >
         {isExporting
           ? <span className="animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent" aria-hidden="true" />
-          : <Download size={15} aria-hidden="true" />}
+          : <HugeiconsIcon icon={Download04Icon} size={16} strokeWidth={1.7} aria-hidden="true" />}
         {saveLabel}
       </button>
     </div>

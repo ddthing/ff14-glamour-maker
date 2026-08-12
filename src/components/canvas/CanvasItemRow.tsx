@@ -7,6 +7,7 @@ import { getLocalizedItemNames } from '../../utils/formatters';
 interface CanvasItemRowProps {
     item: EquipItem;
     sizeMode?: 'comfortable' | 'balanced' | 'compact';
+    showDivider?: boolean;
 }
 
 /**
@@ -14,7 +15,7 @@ interface CanvasItemRowProps {
  * Design: 3단 적층 구조 (메인명 / 서브명 / 염색 칩)
  * — 다국어 이름이 길어도 잘리지 않음, 염색 정보를 하단에 칩 형태로 배치
  */
-export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps) {
+export function CanvasItemRow({ item, sizeMode = 'compact', showDivider = true }: CanvasItemRowProps) {
     const { t, i18n } = useTranslation();
     const lang = i18n.language;
 
@@ -38,22 +39,21 @@ export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps
     ].filter((d): d is { idx: number; name: string } => d !== null);
 
     return (
-        <div style={{
+        <div data-canvas-row="equipment" style={{
             display: 'flex',
             alignItems: 'flex-start',
             gap: s.gap,
             padding: s.padding,
-            borderBottom: '1px solid rgba(255,255,255,0.06)',
+            borderBottom: showDivider ? '1px solid var(--card-divider)' : 'none',
         }}
-            className="last:border-0"
         >
             {/* Icon */}
             <div style={{
                 width: `${s.icon}px`,
                 height: `${s.icon}px`,
                 borderRadius: '2px',
-                background: 'rgba(255,255,255,0.07)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                background: 'var(--card-chip-bg)',
+                border: '1px solid var(--card-chip-border)',
                 flexShrink: 0,
                 overflow: 'hidden',
                 display: 'flex',
@@ -73,7 +73,7 @@ export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps
                         textTransform: 'uppercase',
                         fontWeight: 600,
                         letterSpacing: '0.1em',
-                        color: 'white',
+                        color: 'var(--card-text-primary)',
                     }}>
                         {t(`slots.${item.id as string}`).slice(0, 3)}
                     </span>
@@ -87,7 +87,7 @@ export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps
                 <span style={{
                     fontSize: s.mainFont,
                     fontWeight: 800,
-                    color: '#ffffff',
+                    color: 'var(--card-text-primary)',
                     lineHeight: 1.15,
                     letterSpacing: '-0.03em',
                     display: 'block',
@@ -101,7 +101,7 @@ export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps
                     <span style={{
                         fontSize: s.subFont,
                         fontWeight: 500,
-                        color: 'rgba(255,255,255,0.42)',
+                        color: 'var(--card-text-secondary)',
                         lineHeight: 1.2,
                         display: 'block',
                         letterSpacing: '-0.01em',
@@ -135,8 +135,8 @@ export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps
                                     display: 'flex',
                                     alignItems: 'center',
                                     gap: '5px',
-                                    background: 'rgba(255,255,255,0.06)',
-                                    border: '1px solid rgba(255,255,255,0.1)',
+                                    background: 'var(--card-chip-bg)',
+                                    border: '1px solid var(--card-chip-border)',
                                     padding: '2px 8px 2px 5px',
                                     borderRadius: '2px',
                                 }}>
@@ -146,14 +146,14 @@ export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps
                                         height: '10px',
                                         background: hex,
                                         borderRadius: '1px',
-                                        boxShadow: '0 0 0 1px rgba(0,0,0,0.4)',
+                                        border: '1px solid var(--card-chip-border)',
                                         flexShrink: 0,
                                     }} />
                                     {/* 염색명 */}
                                     <span style={{
                                         fontSize: '0.7rem',
                                         fontWeight: 700,
-                                        color: 'rgba(255,255,255,0.75)',
+                                        color: 'var(--card-text-secondary)',
                                         letterSpacing: '0.01em',
                                         lineHeight: 1,
                                     }}>
@@ -163,7 +163,7 @@ export function CanvasItemRow({ item, sizeMode = 'compact' }: CanvasItemRowProps
                                     <span style={{
                                         fontSize: '0.55rem',
                                         fontWeight: 500,
-                                        color: 'rgba(255,255,255,0.25)',
+                                        color: 'var(--card-text-muted)',
                                         letterSpacing: '0.05em',
                                     }}>
                                         {idx}

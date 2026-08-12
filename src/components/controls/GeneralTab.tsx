@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { PenTool, User, Bookmark, Save, Trash2 } from 'lucide-react';
+import { Bookmark01Icon, Delete02Icon, FloppyDiskIcon, PencilEdit01Icon, UserIcon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 import { useState, useEffect } from 'react';
 import type { AppState } from '../../types';
 import { SectionLabel } from '../ui/SectionLabel';
@@ -10,7 +11,7 @@ interface GeneralTabProps {
     state: AppState;
     onTitleChange: (title: string) => void;
     onCreatorChange: (creator: string) => void;
-    onApplyPreset: (preset: Pick<AppState, 'title' | 'creator' | 'items'>) => void;
+    onApplyPreset: (preset: Pick<AppState, 'title' | 'creator' | 'items' | 'fashionAccessory'>) => void;
     presets: Preset[];
     onAddPreset: (name: string) => boolean;
     onRemovePreset: (id: string) => void;
@@ -49,8 +50,15 @@ export function GeneralTab({
     return (
         <>
             {/* ── Section 1: 투영 기본 정보 ── */}
-            <section style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <SectionLabel icon={<PenTool size={12} />}>{t('common.title')}</SectionLabel>
+            <section style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <div style={{ minHeight: '36px', display: 'flex', alignItems: 'center' }}>
+                    <SectionLabel
+                        style={{ marginBottom: 0 }}
+                        icon={<HugeiconsIcon icon={PencilEdit01Icon} size={13} strokeWidth={1.8} />}
+                    >
+                        {t('common.title')}
+                    </SectionLabel>
+                </div>
                 <input
                     id="glamour-set-name"
                     name="glamour-set-name"
@@ -65,7 +73,7 @@ export function GeneralTab({
                 />
 
                 <div style={{ marginTop: '6px' }}>
-                    <SectionLabel icon={<User size={12} />}>{t('common.creator')}</SectionLabel>
+                    <SectionLabel icon={<HugeiconsIcon icon={UserIcon} size={13} strokeWidth={1.8} />}>{t('common.creator')}</SectionLabel>
                     <input
                         id="glamour-creator"
                         name="glamour-creator"
@@ -86,7 +94,7 @@ export function GeneralTab({
 
             {/* ── Section 2: 프리셋 관리 ── */}
             <section style={{ padding: '12px 20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <SectionLabel icon={<Bookmark size={12} />}>{t('common.presets_title')}</SectionLabel>
+                <SectionLabel icon={<HugeiconsIcon icon={Bookmark01Icon} size={13} strokeWidth={1.8} />}>{t('common.presets_title')}</SectionLabel>
 
                 <div style={{ display: 'flex', gap: '8px', height: '40px' }}>
                     <input
@@ -132,7 +140,7 @@ export function GeneralTab({
                         onMouseDown={e => (e.currentTarget.style.transform = 'scale(0.97)')}
                         onMouseUp={e => (e.currentTarget.style.transform = 'scale(1)')}
                     >
-                        <Save size={13} aria-hidden="true" />
+                        <HugeiconsIcon icon={FloppyDiskIcon} size={14} strokeWidth={1.8} aria-hidden="true" />
                         <span className="hidden sm:inline">{t('common.presets_save')}</span>
                     </button>
                 </div>
@@ -202,7 +210,7 @@ export function GeneralTab({
                                     onMouseEnter={e => (e.currentTarget.style.color = 'var(--error)')}
                                     onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
                                 >
-                                    <Trash2 size={13} aria-hidden="true" />
+                                    <HugeiconsIcon icon={Delete02Icon} size={14} strokeWidth={1.8} aria-hidden="true" />
                                 </button>
                             </div>
                         ))}

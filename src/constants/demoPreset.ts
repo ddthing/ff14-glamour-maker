@@ -71,4 +71,5 @@ export const DEMO_PRESET: AppState = {
     rings2: { id: 'rings2', label: '', name: '' },
     face: { id: 'face', label: '', name: '' },
   },
+  fashionAccessory: null,
 };
