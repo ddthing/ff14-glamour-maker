@@ -27,6 +27,15 @@ describe('extractPaletteFromPixels', () => {
     expect(palette.colors).toHaveLength(3);
   });
 
+  it('keeps white text for medium-light reference-card brightness', () => {
+    const palette = extractPaletteFromPixels(pixels(
+      [214, 214, 214], [198, 198, 198], [184, 184, 184], [174, 135, 96],
+    ));
+
+    expect(palette.averageLuminance).toBeLessThan(0.78);
+    expect(palette.textTone).toBe('light');
+  });
+
   it('keeps a warm saturated image visible below the readability scrim', () => {
     const palette = extractPaletteFromPixels(pixels(
       [236, 126, 34], [236, 126, 34], [211, 82, 24], [148, 65, 31],

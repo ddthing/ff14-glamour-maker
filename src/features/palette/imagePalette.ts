@@ -15,6 +15,10 @@ export interface ImagePalette {
 const SAMPLE_SIZE = 32;
 const DEFAULT_COLORS = ['#3f4348', '#24272b', '#111315'];
 
+// Reference-card calibration: medium-light panels still use white text;
+// dark text is reserved for panels that are genuinely close to white.
+const DARK_TEXT_LUMINANCE_THRESHOLD = 0.78;
+
 interface Bucket {
   red: number;
   green: number;
@@ -137,7 +141,7 @@ export function extractPaletteFromPixels(
     })),
     averageLuminance,
     scrimOpacity: calculateScrimOpacity(averageLuminance),
-    textTone: averageLuminance >= 0.58 ? 'dark' : 'light',
+    textTone: averageLuminance >= DARK_TEXT_LUMINANCE_THRESHOLD ? 'dark' : 'light',
     previewDataUrl,
     fallback: ranked.length < 2 ? 'low-color' : 'none',
   };
