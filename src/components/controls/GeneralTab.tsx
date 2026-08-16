@@ -6,6 +6,7 @@ import type { AppState } from '../../types';
 import { SectionLabel } from '../ui/SectionLabel';
 import { Divider } from '../ui/Divider';
 import type { Preset } from '../../hooks/usePresets';
+import { HashtagTools } from './HashtagTools';
 
 interface GeneralTabProps {
     state: AppState;
@@ -50,8 +51,8 @@ export function GeneralTab({
     return (
         <>
             {/* ── Section 1: 투영 기본 정보 ── */}
-            <section style={{ padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <div style={{ minHeight: '36px', display: 'flex', alignItems: 'center' }}>
+            <section className="general-settings-section">
+                <div className="general-field">
                     <SectionLabel
                         style={{ marginBottom: 0 }}
                         icon={<HugeiconsIcon icon={PencilEdit01Icon} size={13} strokeWidth={1.8} />}
@@ -72,8 +73,13 @@ export function GeneralTab({
                     placeholder={t('common.input_set_name')}
                 />
 
-                <div style={{ marginTop: '6px' }}>
-                    <SectionLabel icon={<HugeiconsIcon icon={UserIcon} size={13} strokeWidth={1.8} />}>{t('common.creator')}</SectionLabel>
+                <div className="general-field">
+                    <SectionLabel
+                        style={{ marginBottom: 0 }}
+                        icon={<HugeiconsIcon icon={UserIcon} size={13} strokeWidth={1.8} />}
+                    >
+                        {t('common.creator')}
+                    </SectionLabel>
                     <input
                         id="glamour-creator"
                         name="glamour-creator"
@@ -93,8 +99,13 @@ export function GeneralTab({
             <Divider />
 
             {/* ── Section 2: 프리셋 관리 ── */}
-            <section style={{ padding: '12px 20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <SectionLabel icon={<HugeiconsIcon icon={Bookmark01Icon} size={13} strokeWidth={1.8} />}>{t('common.presets_title')}</SectionLabel>
+            <section className="general-presets-section">
+                <SectionLabel
+                    style={{ marginBottom: 0 }}
+                    icon={<HugeiconsIcon icon={Bookmark01Icon} size={13} strokeWidth={1.8} />}
+                >
+                    {t('common.presets_title')}
+                </SectionLabel>
 
                 <div style={{ display: 'flex', gap: '8px', height: '40px' }}>
                     <input
@@ -217,6 +228,10 @@ export function GeneralTab({
                     </div>
                 )}
             </section>
+
+            <Divider />
+
+            <HashtagTools />
         </>
     );
 }
