@@ -45,17 +45,12 @@ async function syncImages() {
   // 여기서는 전체를 순회하며 존재 여부를 확인하거나 업로드를 시도합니다.
   
   for (const [id, item] of entries) {
-    if (!item.ko || !item.iconPath) {
+    if (!item.ko || !item.iconPath || item.iconAssetKey) {
       skipCount++;
       continue;
     }
 
-    // 파일명 표준화 규칙 (기존 uploadImages.mjs와 동일)
-    const safeBaseName = item.ko
-      .replace(/[^\uAC00-\uD7A30-9a-zA-Z]+/g, '_')
-      .replace(/_+/g, '_')
-      .replace(/^_|_$/g, '');
-
+    const stablePublicId = item.iconAssetKey || 'ko/' + id;
     const imageUrl = `${XIVAPI_BASE}${item.iconPath}`;
 
     // 큐에 업로드 작업 추가
@@ -65,7 +60,7 @@ async function syncImages() {
         // overwrite: false로 설정하면 이미 있는 파일은 건너뛰어 속도가 더 빨라집니다.
         await cloudinary.uploader.upload(imageUrl, {
           folder: CLOUDINARY_FOLDER,
-          public_id: safeBaseName,
+          public_id: stablePublicId,
           overwrite: false // 중복 업로드 방지 (속도 향상 및 비용 절감)
         });
         successCount++;

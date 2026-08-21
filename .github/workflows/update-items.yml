@@ -37,6 +37,9 @@ jobs:
       - name: Refresh item data
         run: node scripts/makeKoItems.mjs
 
+      - name: Validate generated item data
+        run: npm run validate:data
+
       - name: Run lint
         run: npm run lint
 
@@ -52,7 +55,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add src/data/items.json
+          git add src/data/items.json scripts/item-overrides.json
           if git diff --cached --quiet -- src/data/items.json; then
             echo "No item data changes detected."
             exit 0

@@ -37,6 +37,7 @@ export function CanvasAccessoryRow({ accessory, sizeMode }: CanvasAccessoryRowPr
         <ItemIcon
           nameKo={accessory.nameKo}
           iconPath={accessory.iconPath ?? ''}
+          iconAssetKey={accessory.iconAssetKey}
           className="h-full w-full object-cover"
         />
       </div>

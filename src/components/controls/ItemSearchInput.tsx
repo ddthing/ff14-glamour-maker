@@ -115,6 +115,7 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                             <div className="w-8 h-8 rounded shrink-0 overflow-hidden border border-[var(--border)] bg-[var(--surface-100)]">
                                 <ItemIcon
                                     iconPath={item.iconPath || ''}
+                                    iconAssetKey={item.iconAssetKey}
                                     nameKo={item.name}
                                     className="w-full h-full object-cover"
                                 />

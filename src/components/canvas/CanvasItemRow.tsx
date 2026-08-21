@@ -60,10 +60,11 @@ export function CanvasItemRow({ item, sizeMode = 'compact', showDivider = true }
                 alignItems: 'center',
                 justifyContent: 'center',
             }}>
-                {(item.nameKo || item.iconPath) ? (
+                {(item.nameKo || item.iconPath || item.iconAssetKey) ? (
                     <ItemIcon
                         nameKo={item.nameKo || ''}
                         iconPath={item.iconPath || ''}
+                        iconAssetKey={item.iconAssetKey}
                         className="w-full h-full object-cover"
                     />
                 ) : (

@@ -47,9 +47,10 @@ export function SlotButton({ part, item, isActive, onClick }: SlotButtonProps) {
 
             {/* Content Area */}
             <div className="relative w-9 h-9 flex items-center justify-center shrink-0">
-                {item.nameKo || item.iconPath ? (
+                {item.nameKo || item.iconPath || item.iconAssetKey ? (
                     <ItemIcon
                         iconPath={item.iconPath || ''}
+                        iconAssetKey={item.iconAssetKey}
                         nameKo={item.nameKo || ''}
                         enableWebhook={true}
                         className="w-full h-full rounded-md object-cover border border-[var(--border)]"

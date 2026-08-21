@@ -1,5 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { reportMissingItem } from '../../utils/reportMissingItem';
+
+const CLOUDINARY_BASE = 'https://res.cloudinary.com/dlr5fs1pl/image/upload/v1/ff14-items';
+const LOCAL_ASSET_BASE = '/item-icons';
 
 /**
  * XIVAPI v2 Asset API helper
@@ -14,20 +17,25 @@ function getXivapiUrl(iconPath: string): string {
     return `${window.location.origin}/xivapi${iconPath}`;
 }
 
-/**
- * Cloudinary URL generator (Fallback)
- */
-function getCloudinaryUrl(name: string): string {
+/** Stable ID-based same-origin asset reference for regional/manual assets. */
+function getLocalAssetUrl(assetKey: string): string {
+    const encodedKey = assetKey.split('/').filter(Boolean).map(encodeURIComponent).join('/');
+    return `${LOCAL_ASSET_BASE}/${encodedKey}.png`;
+}
+
+/** Legacy name-based Cloudinary fallback kept for older manually uploaded assets. */
+function getLegacyCloudinaryUrl(name: string): string {
     const standardized = name.trim().normalize('NFC')
         .replace(/[^\uAC00-\uD7A30-9a-zA-Z]+/g, '_')
         .replace(/_+/g, '_')
         .replace(/^_|_$/g, '');
-    return `https://res.cloudinary.com/dlr5fs1pl/image/upload/v1/ff14-items/${encodeURIComponent(standardized)}.png`;
+    return `${CLOUDINARY_BASE}/${encodeURIComponent(standardized)}.png`;
 }
 
 interface ItemIconProps {
     nameKo?: string;
     iconPath?: string;
+    iconAssetKey?: string;
     tarToUrl?: string;
     enableWebhook?: boolean;
     className?: string;
@@ -37,27 +45,31 @@ interface ItemIconProps {
  * ItemIcon
  * Design Reference: Cursor Warm Minimalism - Bordered asset with smooth loading
  */
-export function ItemIcon({ nameKo, iconPath, tarToUrl, enableWebhook, className }: ItemIconProps) {
+export function ItemIcon({ nameKo, iconPath, iconAssetKey, tarToUrl, enableWebhook, className }: ItemIconProps) {
     const [imgSrc, setImgSrc] = useState<string | null>(null);
+    const [fallbackSources, setFallbackSources] = useState<string[]>([]);
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
-        setIsError(false);
+        const sources = [
+            iconAssetKey ? getLocalAssetUrl(iconAssetKey) : undefined,
+            iconPath ? getXivapiUrl(iconPath) : undefined,
+            tarToUrl,
+            nameKo ? getLegacyCloudinaryUrl(nameKo) : undefined,
+        ].filter((source): source is string => Boolean(source));
+        const uniqueSources = [...new Set(sources)];
 
-        if (iconPath) {
-            setImgSrc(getXivapiUrl(iconPath));
-        } else if (tarToUrl) {
-            setImgSrc(tarToUrl);
-        } else if (nameKo) {
-            setImgSrc(getCloudinaryUrl(nameKo));
-        } else {
-            setIsError(true);
-        }
-    }, [iconPath, tarToUrl, nameKo]);
+        setIsError(false);
+        setImgSrc(uniqueSources[0] ?? null);
+        setFallbackSources(uniqueSources.slice(1));
+        if (uniqueSources.length === 0) setIsError(true);
+    }, [iconAssetKey, iconPath, nameKo, tarToUrl]);
 
     const handleError = () => {
-        if (nameKo && imgSrc !== getCloudinaryUrl(nameKo)) {
-            setImgSrc(getCloudinaryUrl(nameKo));
+        const [nextSource, ...remainingSources] = fallbackSources;
+        if (nextSource) {
+            setImgSrc(nextSource);
+            setFallbackSources(remainingSources);
         } else {
             setIsError(true);
         }
@@ -69,7 +81,7 @@ export function ItemIcon({ nameKo, iconPath, tarToUrl, enableWebhook, className 
         }
     }, [isError, enableWebhook, nameKo]);
 
-    if (!iconPath && !tarToUrl && !nameKo) return null;
+    if (!iconPath && !iconAssetKey && !tarToUrl && !nameKo) return null;
 
     if (isError) {
         return (

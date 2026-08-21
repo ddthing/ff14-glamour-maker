@@ -16,4 +16,19 @@ describe('item data generation', () => {
     const slots = parseEquipSlotCsv('#,MainHand,OffHand,Head,Body\n13,1,-1,0,0');
     expect(slots.get(13)).toEqual(['mainhand']);
   });
+
+  it('keeps regional-only records explicit and applies stable asset overrides', () => {
+    const ko = parseItemCsv('key,0,1,2,3\n#,Name,Icon,ItemUICategory,EquipSlotCategory\nint32,str,int32,int32,int32\n3,한국 전용 장비,30003,34,3');
+    const en = parseItemCsv('#,Name,Icon,ItemUICategory,EquipSlotCategory\n3,,30003,34,3');
+    const slots = parseEquipSlotCsv('#,MainHand,OffHand,Head,Body\n3,0,0,1,0');
+    const result = mergeLocalizedItems({ en, ko }, slots, {
+      3: { iconAssetKey: 'ko/3' },
+    });
+
+    expect(result['3']).toMatchObject({
+      ko: '한국 전용 장비',
+      translationStatus: 'kr-only',
+      iconAssetKey: 'ko/3',
+    });
+  });
 });

@@ -10,7 +10,7 @@ describe('loadSearchItems', () => {
     const fetchItems = vi.fn(async (input: string | URL | Request) => {
       const isFacewear = String(input).includes('facewear');
       const record = isFacewear
-        ? { 2: { ko: '얼굴 소품', en: 'Facewear', ja: 'フェイスアクセサリー' } }
+        ? { 2: { ko: '얼굴 소품', en: 'Facewear', ja: 'フェイスアクセサリー', iconAssetKey: 'ko/2' } }
         : { 1: { ko: '머리 장비', en: 'Head Gear', ja: '頭装備', uiCategory: 34 } };
       return new Response(JSON.stringify(record), {
         status: 200,
@@ -25,7 +25,12 @@ describe('loadSearchItems', () => {
 
     expect(fetchItems).toHaveBeenCalledTimes(1);
     expect(firstFacewear).toBe(secondFacewear);
-    expect(firstFacewear[0]).toMatchObject({ id: 2, source: 'facewear' });
+    expect(firstFacewear[0]).toMatchObject({
+      id: 2,
+      source: 'facewear',
+      iconAssetKey: 'ko/2',
+      translationStatus: 'complete',
+    });
 
     const equipment = await loadSearchItems('head');
     expect(fetchItems).toHaveBeenCalledTimes(2);

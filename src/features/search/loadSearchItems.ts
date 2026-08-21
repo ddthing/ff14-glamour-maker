@@ -9,6 +9,8 @@ interface LocalItemData {
   ko?: string;
   uiCategory?: number | null;
   iconPath?: string;
+  iconAssetKey?: string;
+  translationStatus?: FF14Item['translationStatus'];
   equipSlots?: EquipmentPart[];
 }
 
@@ -16,6 +18,14 @@ type ItemDataMap = Record<string, LocalItemData>;
 
 let equipmentPromise: Promise<FF14Item[]> | null = null;
 let facewearPromise: Promise<FF14Item[]> | null = null;
+
+function inferTranslationStatus(item: LocalItemData): NonNullable<FF14Item['translationStatus']> {
+  if (item.translationStatus) return item.translationStatus;
+  if (item.en && item.ja) return 'complete';
+  if (item.en || item.ja) return 'partial';
+  if (item.ko) return 'kr-only';
+  return 'review';
+}
 
 function mapItems(data: ItemDataMap, source: ItemSource): FF14Item[] {
   return Object.entries(data).map(([id, item]) => ({
@@ -25,6 +35,8 @@ function mapItems(data: ItemDataMap, source: ItemSource): FF14Item[] {
     nameJa: item.ja || '',
     uiCategory: item.uiCategory ?? undefined,
     iconPath: item.iconPath || undefined,
+    iconAssetKey: item.iconAssetKey || undefined,
+    translationStatus: inferTranslationStatus(item),
     equipSlots: item.equipSlots,
     source,
   }));

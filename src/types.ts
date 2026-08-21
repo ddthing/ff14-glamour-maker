@@ -34,6 +34,8 @@ export interface EquipItem {
     name: string;
     /** XIVAPI icon path (e.g. '/i/065000/060128.png') — used to build the direct image URL */
     iconPath?: string;
+    /** Stable asset key for manually hosted regional icons (e.g. 'ko/21036'). */
+    iconAssetKey?: string;
     
     // Localization & Metadata
     nameKo?: string;
@@ -54,6 +56,7 @@ export interface FashionAccessorySelection {
     nameEn: string;
     nameJa: string;
     iconPath?: string;
+    iconAssetKey?: string;
 }
 
 // ─── App State ────────────────────────────────────────────────────────────────

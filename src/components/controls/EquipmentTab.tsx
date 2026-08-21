@@ -99,7 +99,7 @@ export function EquipmentTab({
                     <button
                         type="button"
                         aria-label={`${t('common.clear_slot')}: ${t(`slots.${activeSlot}`)}`}
-                        onClick={() => updateItem({ name: '', dye1: '', dye2: '', iconPath: '', nameKo: '', nameEn: '', nameJa: '' })}
+                        onClick={() => updateItem({ name: '', dye1: '', dye2: '', iconPath: '', iconAssetKey: undefined, nameKo: '', nameEn: '', nameJa: '' })}
                         style={{
                             color: 'var(--text-muted)',
                             background: 'none',
@@ -133,6 +133,7 @@ export function EquipmentTab({
                             nameEn: item.nameEn,
                             nameJa: item.nameJa,
                             iconPath: item.iconPath || '',
+                            iconAssetKey: item.iconAssetKey,
                             error: ''
                         });
                     }}
@@ -216,6 +217,7 @@ export function EquipmentTab({
                                 nameEn: item.nameEn,
                                 nameJa: item.nameJa,
                                 iconPath: item.iconPath,
+                                iconAssetKey: item.iconAssetKey,
                             })}
                         />
                     </div>

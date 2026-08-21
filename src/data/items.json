@@ -34391,7 +34391,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "3217": {
     "ko": "신전기사 고리갑옷",
@@ -44256,7 +44257,8 @@
     "equipSlotCategory": 11,
     "equipSlots": [
       "wrists"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "4150": {
     "ko": "호박금 손목장식",
@@ -44947,7 +44949,8 @@
     "equipSlotCategory": 9,
     "equipSlots": [
       "ears"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "4213": {
     "ko": "은 귀걸이",
@@ -46289,7 +46292,8 @@
     "equipSlotCategory": 10,
     "equipSlots": [
       "neck"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "4335": {
     "ko": "미스릴 목가리개",
@@ -48057,7 +48061,8 @@
     "equipSlots": [
       "rings",
       "rings2"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "4488": {
     "ko": "그리다니아 수송대 반지",
@@ -118526,7 +118531,8 @@
     "ko": "초록틀",
     "iconPath": "/i/059000/059522.png",
     "uiCategory": 81,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "12044": {
     "ko": "모그리 음악단",
@@ -128004,7 +128010,8 @@
     "ko": "녠 뿔피리",
     "iconPath": "/i/026000/026038.png",
     "uiCategory": 63,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13104": {
     "ko": "깍깍이",
@@ -128021,7 +128028,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "13106": {
     "ko": "동방 무관의 의복",
@@ -128030,7 +128038,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "13107": {
     "ko": "동방 무관의 장화",
@@ -128039,7 +128048,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "13108": {
     "ko": "동방 여관의 모자",
@@ -128048,7 +128058,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "13109": {
     "ko": "동방 여관의 의복",
@@ -128057,7 +128068,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "13110": {
     "ko": "동방 여관의 구두",
@@ -128066,7 +128078,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "13111": {
     "ko": "들장미 갑주",
@@ -130491,7 +130504,8 @@
     "ko": "도둑맞은 신발: 2016",
     "iconPath": "/i/046000/046183.png",
     "uiCategory": 85,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13357": {
     "ko": "청린수 연료통: 구름바다 탐사",
@@ -136282,61 +136296,71 @@
     "ko": "나이트의 모험록",
     "iconPath": "/i/026000/026402.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13993": {
     "ko": "전사의 모험록",
     "iconPath": "/i/026000/026403.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13994": {
     "ko": "몽크의 모험록",
     "iconPath": "/i/026000/026404.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13995": {
     "ko": "용기사의 모험록",
     "iconPath": "/i/026000/026405.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13996": {
     "ko": "닌자의 모험록",
     "iconPath": "/i/026000/026406.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13997": {
     "ko": "음유시인의 모험록",
     "iconPath": "/i/026000/026407.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13998": {
     "ko": "백마도사의 모험록",
     "iconPath": "/i/026000/026408.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "13999": {
     "ko": "흑마도사의 모험록",
     "iconPath": "/i/026000/026409.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "14000": {
     "ko": "소환사의 모험록",
     "iconPath": "/i/026000/026410.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "14001": {
     "ko": "학자의 모험록",
     "iconPath": "/i/026000/026411.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "14003": {
     "ko": "빌트갠스급 선체",
@@ -145333,7 +145357,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14985": {
     "ko": "모조 목수의 가운",
@@ -145342,7 +145367,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14986": {
     "ko": "모조 목수 장갑",
@@ -145351,7 +145377,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14987": {
     "ko": "모조 목수 일자바지",
@@ -145360,7 +145387,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14988": {
     "ko": "모조 목수 작업장화",
@@ -145369,7 +145397,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14989": {
     "ko": "모조 대장장이 고글",
@@ -145378,7 +145407,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14990": {
     "ko": "모조 대장장이 앞치마",
@@ -145387,7 +145417,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14991": {
     "ko": "모조 대장장이 장갑",
@@ -145396,7 +145427,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14992": {
     "ko": "모조 대장장이 일자바지",
@@ -145405,7 +145437,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14993": {
     "ko": "모조 대장장이 작업장화",
@@ -145414,7 +145447,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14994": {
     "ko": "모조 갑주제작사 얼굴가리개",
@@ -145423,7 +145457,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14995": {
     "ko": "모조 갑주제작사의 가운",
@@ -145432,7 +145467,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14996": {
     "ko": "모조 갑주제작사 장갑",
@@ -145441,7 +145477,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14997": {
     "ko": "모조 갑주제작사 일자바지",
@@ -145450,7 +145487,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14998": {
     "ko": "모조 갑주제작사 작업장화",
@@ -145459,7 +145497,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "14999": {
     "ko": "모조 보석공예가 터번",
@@ -145468,7 +145507,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15000": {
     "ko": "모조 보석공예가 겹옷",
@@ -145477,7 +145517,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15001": {
     "ko": "모조 보석공예가 장갑",
@@ -145486,7 +145527,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15002": {
     "ko": "모조 보석공예가 긴바지",
@@ -145495,7 +145537,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15003": {
     "ko": "모조 보석공예가 장화",
@@ -145504,7 +145547,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15004": {
     "ko": "모조 가죽공예가 모자",
@@ -145513,7 +145557,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15005": {
     "ko": "모조 가죽공예가 셔츠",
@@ -145522,7 +145567,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15006": {
     "ko": "모조 가죽공예가 팔보호구",
@@ -145531,7 +145577,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15007": {
     "ko": "모조 가죽공예가 긴바지",
@@ -145540,7 +145587,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15008": {
     "ko": "모조 가죽공예가 장화",
@@ -145549,7 +145597,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15009": {
     "ko": "모조 재봉사 중산모",
@@ -145558,7 +145607,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15010": {
     "ko": "모조 재봉사 연미복",
@@ -145567,7 +145617,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15011": {
     "ko": "모조 재봉사 장갑",
@@ -145576,7 +145627,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15012": {
     "ko": "모조 재봉사 긴바지",
@@ -145585,7 +145637,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15013": {
     "ko": "모조 재봉사 허벅지장화",
@@ -145594,7 +145647,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15014": {
     "ko": "모조 연금술사 단안경",
@@ -145603,7 +145657,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15015": {
     "ko": "모조 연금술사 외투",
@@ -145612,7 +145667,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15016": {
     "ko": "모조 연금술사 장갑",
@@ -145621,7 +145677,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15017": {
     "ko": "모조 연금술사 긴바지",
@@ -145630,7 +145687,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15018": {
     "ko": "모조 연금술사 허벅지장화",
@@ -145639,7 +145697,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15019": {
     "ko": "모조 요리사 모자",
@@ -145648,7 +145707,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15020": {
     "ko": "모조 요리사 앞치마",
@@ -145657,7 +145717,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15021": {
     "ko": "모조 요리사 벙어리장갑",
@@ -145666,7 +145727,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15022": {
     "ko": "모조 요리사 긴바지",
@@ -145675,7 +145737,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15023": {
     "ko": "모조 요리사 구두",
@@ -145684,7 +145747,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15024": {
     "ko": "모조 광부 철모",
@@ -145693,7 +145757,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15025": {
     "ko": "모조 광부 셔츠",
@@ -145702,7 +145767,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15026": {
     "ko": "모조 광부 장갑",
@@ -145711,7 +145777,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15027": {
     "ko": "모조 광부 일자바지",
@@ -145720,7 +145787,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15028": {
     "ko": "모조 광부 작업장화",
@@ -145729,7 +145797,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15029": {
     "ko": "모조 원예가 모자",
@@ -145738,7 +145807,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15030": {
     "ko": "모조 원예가 겹옷",
@@ -145747,7 +145817,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15031": {
     "ko": "모조 원예가 장갑",
@@ -145756,7 +145827,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15032": {
     "ko": "모조 원예가 일자바지",
@@ -145765,7 +145837,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15033": {
     "ko": "모조 원예가 작업장화",
@@ -145774,7 +145847,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15034": {
     "ko": "모조 어부 모자",
@@ -145783,7 +145857,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15035": {
     "ko": "모조 어부 셔츠",
@@ -145792,7 +145867,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15036": {
     "ko": "모조 어부 장갑",
@@ -145801,7 +145877,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15037": {
     "ko": "모조 어부 무릎바지",
@@ -145810,7 +145887,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15038": {
     "ko": "모조 어부 작업장화",
@@ -145819,7 +145897,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15039": {
     "ko": "모조 제재소 모자",
@@ -145828,7 +145907,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15040": {
     "ko": "모조 제재소 앞치마",
@@ -145837,7 +145917,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15041": {
     "ko": "모조 제재소 장갑",
@@ -145846,7 +145927,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15042": {
     "ko": "모조 제재소 일자바지",
@@ -145855,7 +145937,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15043": {
     "ko": "모조 제재소 작업장화",
@@ -145864,7 +145947,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15044": {
     "ko": "모조 제련소 고글",
@@ -145873,7 +145957,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15045": {
     "ko": "모조 제련소 앞트임외투",
@@ -145882,7 +145967,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15046": {
     "ko": "모조 제련소 장갑",
@@ -145891,7 +145977,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15047": {
     "ko": "모조 제련소 일자바지",
@@ -145900,7 +145987,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15048": {
     "ko": "모조 제련소 샌들",
@@ -145909,7 +145997,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15049": {
     "ko": "모조 갑주공방 얼굴가리개",
@@ -145918,7 +146007,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15050": {
     "ko": "모조 갑주공방 허리앞치마",
@@ -145927,7 +146017,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15051": {
     "ko": "모조 갑주공방 작업장갑",
@@ -145936,7 +146027,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15052": {
     "ko": "모조 갑주공방 일자바지",
@@ -145945,7 +146037,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15053": {
     "ko": "모조 갑주공방 작업장화",
@@ -145954,7 +146047,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15054": {
     "ko": "모조 보석공방 보관",
@@ -145963,7 +146057,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15055": {
     "ko": "모조 보석공방 가운",
@@ -145972,7 +146067,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15056": {
     "ko": "모조 보석공방 손등고리",
@@ -145981,7 +146077,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15057": {
     "ko": "모조 보석공방 긴바지",
@@ -145990,7 +146087,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15058": {
     "ko": "모조 보석공방 샌들",
@@ -145999,7 +146097,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15059": {
     "ko": "모조 가죽공방 모자",
@@ -146008,7 +146107,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15060": {
     "ko": "모조 가죽공방 앞치마",
@@ -146017,7 +146117,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15061": {
     "ko": "모조 가죽공방 장갑",
@@ -146026,7 +146127,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15062": {
     "ko": "모조 가죽공방 긴바지",
@@ -146035,7 +146137,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15063": {
     "ko": "모조 가죽공방 장화",
@@ -146044,7 +146147,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15064": {
     "ko": "모조 방직소 중산모",
@@ -146053,7 +146157,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15065": {
     "ko": "모조 방직소 외투",
@@ -146062,7 +146167,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15066": {
     "ko": "모조 방직소 장갑",
@@ -146071,7 +146177,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15067": {
     "ko": "모조 방직소 하의",
@@ -146080,7 +146187,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15068": {
     "ko": "모조 방직소 둥근장화",
@@ -146089,7 +146197,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15069": {
     "ko": "모조 연금공방 단안경",
@@ -146098,7 +146207,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15070": {
     "ko": "모조 연금공방 장외투",
@@ -146107,7 +146217,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15071": {
     "ko": "모조 연금공방 장갑",
@@ -146116,7 +146227,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15072": {
     "ko": "모조 연금공방 장치마",
@@ -146125,7 +146237,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15073": {
     "ko": "모조 연금공방 무릎장화",
@@ -146134,7 +146247,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15074": {
     "ko": "모조 주방 조리모",
@@ -146143,7 +146257,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15075": {
     "ko": "모조 주방 앞치마",
@@ -146152,7 +146267,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15076": {
     "ko": "모조 주방 장갑",
@@ -146161,7 +146277,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15077": {
     "ko": "모조 주방 긴바지",
@@ -146170,7 +146287,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15078": {
     "ko": "모조 주방 둥근장화",
@@ -146179,7 +146297,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15079": {
     "ko": "모조 광산 철모",
@@ -146188,7 +146307,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15080": {
     "ko": "모조 광산 작업복",
@@ -146197,7 +146317,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15081": {
     "ko": "모조 광산 작업장갑",
@@ -146206,7 +146327,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15082": {
     "ko": "모조 광산 일자바지",
@@ -146215,7 +146337,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15083": {
     "ko": "모조 광산 작업장화",
@@ -146224,7 +146347,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15084": {
     "ko": "모조 농장 납작모자",
@@ -146233,7 +146357,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15085": {
     "ko": "모조 농장 셔츠",
@@ -146242,7 +146367,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15086": {
     "ko": "모조 농장 꽃장갑",
@@ -146251,7 +146377,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15087": {
     "ko": "모조 농장 일자바지",
@@ -146260,7 +146387,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15088": {
     "ko": "모조 농장 작업장화",
@@ -146269,7 +146397,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15089": {
     "ko": "모조 어장 모자",
@@ -146278,7 +146407,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15090": {
     "ko": "모조 어장 조끼",
@@ -146287,7 +146417,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15091": {
     "ko": "모조 어장 장갑",
@@ -146296,7 +146427,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15092": {
     "ko": "모조 어장 무릎바지",
@@ -146305,7 +146437,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15093": {
     "ko": "모조 어장 낚시장화",
@@ -146314,7 +146447,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "15095": {
     "ko": "연기 교본: 포권의 예",
@@ -149635,7 +149769,8 @@
     "ko": "도둑맞은 신발: 2017",
     "iconPath": "/i/046000/046183.png",
     "uiCategory": 85,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "15427": {
     "ko": "니드호그 갑주",
@@ -160800,7 +160935,8 @@
     "ko": "야광귀 인형",
     "iconPath": "/i/059000/059612.png",
     "uiCategory": 81,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "16570": {
     "ko": "신 알리제",
@@ -164967,7 +165103,8 @@
     "ko": "집사의 모험록",
     "iconPath": "/i/026000/026169.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "17002": {
     "ko": "숙련된 집사의 모험록",
@@ -203950,7 +204087,9 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "iconAssetKey": "ko/21036",
+    "translationStatus": "kr-only"
   },
   "21037": {
     "ko": "동방 도령의 도포",
@@ -203959,7 +204098,9 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "iconAssetKey": "ko/21037",
+    "translationStatus": "kr-only"
   },
   "21038": {
     "ko": "동방 도령의 장화",
@@ -203968,7 +204109,9 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "iconAssetKey": "ko/21038",
+    "translationStatus": "kr-only"
   },
   "21039": {
     "ko": "동방 낭자의 머리장식",
@@ -203977,7 +204120,9 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "iconAssetKey": "ko/21039",
+    "translationStatus": "kr-only"
   },
   "21040": {
     "ko": "동방 낭자의 치마",
@@ -203986,7 +204131,9 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "iconAssetKey": "ko/21040",
+    "translationStatus": "kr-only"
   },
   "21041": {
     "ko": "동방 낭자의 신발",
@@ -203995,7 +204142,9 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "iconAssetKey": "ko/21041",
+    "translationStatus": "kr-only"
   },
   "21042": {
     "ko": "신룡 갑주",
@@ -205201,13 +205350,15 @@
     "ko": "봉투: 집사 급료",
     "iconPath": "/i/026000/026172.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "21195": {
     "ko": "두툼한 봉투: 집사 급료",
     "iconPath": "/i/026000/026172.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "21196": {
     "ko": "신룡의 우상",
@@ -235408,7 +235559,8 @@
     "ko": "연기 교본: 석판",
     "iconPath": "/i/026000/026435.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "24226": {
     "ko": "상세 지도: 기라바니아 변방지대",
@@ -240889,7 +241041,8 @@
     "ko": "1등급 외층 지도",
     "iconPath": "/i/025000/025930.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "24794": {
     "ko": "특1등급 오래된 지도",
@@ -258134,7 +258287,8 @@
     "ko": "모험의 증표",
     "iconPath": "/i/026000/026183.png",
     "uiCategory": 63,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "26536": {
     "en": "Irregular Tomestone of Mythology",
@@ -266359,19 +266513,22 @@
     "ko": "경험의 결정: 전투",
     "iconPath": "/i/020000/020034.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "27594": {
     "ko": "경험의 결정: 제작",
     "iconPath": "/i/020000/020034.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "27595": {
     "ko": "경험의 결정: 채집",
     "iconPath": "/i/020000/020034.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "27596": {
     "ko": "티타니아 한손검",
@@ -269974,19 +270131,22 @@
     "ko": "왕좌의 증서: FRC 2019",
     "iconPath": "/i/026000/026191.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "28004": {
     "ko": "영광의 증서: FRC 2019",
     "iconPath": "/i/026000/026190.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "28005": {
     "ko": "격전의 증서: FRC 2019",
     "iconPath": "/i/026000/026190.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "28006": {
     "ko": "모조 제재소왕 모자",
@@ -269995,7 +270155,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28007": {
     "ko": "모조 제재소왕 외투",
@@ -270004,7 +270165,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28008": {
     "ko": "모조 제재소왕 장갑",
@@ -270013,7 +270175,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28009": {
     "ko": "모조 제재소왕 일자바지",
@@ -270022,7 +270185,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28010": {
     "ko": "모조 제재소왕 장화",
@@ -270031,7 +270195,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28011": {
     "ko": "모조 제련소왕 두건",
@@ -270040,7 +270205,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28012": {
     "ko": "모조 제련소왕 앞치마",
@@ -270049,7 +270215,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28013": {
     "ko": "모조 제련소왕 장갑",
@@ -270058,7 +270225,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28014": {
     "ko": "모조 제련소왕 일자바지",
@@ -270067,7 +270235,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28015": {
     "ko": "모조 제련소왕 장화",
@@ -270076,7 +270245,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28016": {
     "ko": "모조 갑주공방왕 얼굴가리개",
@@ -270085,7 +270255,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28017": {
     "ko": "모조 갑주공방왕 앞트임외투",
@@ -270094,7 +270265,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28018": {
     "ko": "모조 갑주공방왕 장갑",
@@ -270103,7 +270275,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28019": {
     "ko": "모조 갑주공방왕 일자바지",
@@ -270112,7 +270285,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28020": {
     "ko": "모조 갑주공방왕 장화",
@@ -270121,7 +270295,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28021": {
     "ko": "모조 보석공방왕 터번",
@@ -270130,7 +270305,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28022": {
     "ko": "모조 보석공방왕 외투",
@@ -270139,7 +270315,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28023": {
     "ko": "모조 보석공방왕 장갑",
@@ -270148,7 +270325,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28024": {
     "ko": "모조 보석공방왕 일자바지",
@@ -270157,7 +270335,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28025": {
     "ko": "모조 보석공방왕 장화",
@@ -270166,7 +270345,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28026": {
     "ko": "모조 가죽공방왕 두건",
@@ -270175,7 +270355,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28027": {
     "ko": "모조 가죽공방왕 재킷",
@@ -270184,7 +270365,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28028": {
     "ko": "모조 가죽공방왕 장갑",
@@ -270193,7 +270375,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28029": {
     "ko": "모조 가죽공방왕 하의",
@@ -270202,7 +270385,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28030": {
     "ko": "모조 가죽공방왕 허벅지장화",
@@ -270211,7 +270395,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28031": {
     "ko": "모조 방직소왕 모자",
@@ -270220,7 +270405,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28032": {
     "ko": "모조 방직소왕 재킷",
@@ -270229,7 +270415,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28033": {
     "ko": "모조 방직소왕 장갑",
@@ -270238,7 +270425,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28034": {
     "ko": "모조 방직소왕 일자바지",
@@ -270247,7 +270435,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28035": {
     "ko": "모조 방직소왕 장화",
@@ -270256,7 +270445,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28036": {
     "ko": "모조 연금공방왕 모자",
@@ -270265,7 +270455,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28037": {
     "ko": "모조 연금공방왕 외투",
@@ -270274,7 +270465,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28038": {
     "ko": "모조 연금공방왕 예식장갑",
@@ -270283,7 +270475,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28039": {
     "ko": "모조 연금공방왕 일자바지",
@@ -270292,7 +270485,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28040": {
     "ko": "모조 연금공방왕 장화",
@@ -270301,7 +270495,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28041": {
     "ko": "모조 주방왕 조리모",
@@ -270310,7 +270505,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28042": {
     "ko": "모조 주방왕 앞치마",
@@ -270319,7 +270515,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28043": {
     "ko": "모조 주방왕 벙어리장갑",
@@ -270328,7 +270525,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28044": {
     "ko": "모조 주방왕 긴바지",
@@ -270337,7 +270535,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28045": {
     "ko": "모조 주방왕 신발",
@@ -270346,7 +270545,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28046": {
     "ko": "모조 광산왕 철모",
@@ -270355,7 +270555,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28047": {
     "ko": "모조 광산왕 작업셔츠",
@@ -270364,7 +270565,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28048": {
     "ko": "모조 광산왕 작업장갑",
@@ -270373,7 +270575,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28049": {
     "ko": "모조 광산왕 일자바지",
@@ -270382,7 +270585,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28050": {
     "ko": "모조 광산왕 작업장화",
@@ -270391,7 +270595,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28051": {
     "ko": "모조 농장왕 모자",
@@ -270400,7 +270605,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28052": {
     "ko": "모조 농장왕 셔츠",
@@ -270409,7 +270615,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28053": {
     "ko": "모조 농장왕 장갑",
@@ -270418,7 +270625,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28054": {
     "ko": "모조 농장왕 일자바지",
@@ -270427,7 +270635,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28055": {
     "ko": "모조 농장왕 신발",
@@ -270436,7 +270645,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28056": {
     "ko": "모조 어장왕 두건",
@@ -270445,7 +270655,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28057": {
     "ko": "모조 어장왕 조끼",
@@ -270454,7 +270665,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28058": {
     "ko": "모조 어장왕 반장갑",
@@ -270463,7 +270675,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28059": {
     "ko": "모조 어장왕 반바지",
@@ -270472,7 +270685,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28060": {
     "ko": "모조 어장왕 샌들",
@@ -270481,7 +270695,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "28061": {
     "ko": "오케스트리온 악보: Blinding Indigo",
@@ -271552,7 +271767,8 @@
     "ko": "2등급 외층 지도",
     "iconPath": "/i/025000/025930.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "28186": {
     "ko": "픽시 환상수정",
@@ -358458,7 +358674,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37495": {
     "ko": "모조 제재광 앞치마",
@@ -358467,7 +358684,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37496": {
     "ko": "모조 제재광 손등장갑",
@@ -358476,7 +358694,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37497": {
     "ko": "모조 제재광 덧바지",
@@ -358485,7 +358704,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37498": {
     "ko": "모조 제재광 작업장화",
@@ -358494,7 +358714,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37499": {
     "ko": "모조 제련광 고글",
@@ -358503,7 +358724,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37500": {
     "ko": "모조 제련광 앞치마",
@@ -358512,7 +358734,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37501": {
     "ko": "모조 제련광 작업장갑",
@@ -358521,7 +358744,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37502": {
     "ko": "모조 제련광 긴바지",
@@ -358530,7 +358754,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37503": {
     "ko": "모조 제련광 다리보호대",
@@ -358539,7 +358764,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37504": {
     "ko": "모조 갑주광 얼굴가리개",
@@ -358548,7 +358774,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37505": {
     "ko": "모조 갑주광 앞치마",
@@ -358557,7 +358784,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37506": {
     "ko": "모조 갑주광 작업장갑",
@@ -358566,7 +358794,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37507": {
     "ko": "모조 갑주광 긴바지",
@@ -358575,7 +358804,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37508": {
     "ko": "모조 갑주광 작업장화",
@@ -358584,7 +358814,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37509": {
     "ko": "모조 보석광 단안경",
@@ -358593,7 +358824,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37510": {
     "ko": "모조 보석광 조끼",
@@ -358602,7 +358834,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37511": {
     "ko": "모조 보석광 단장갑",
@@ -358611,7 +358844,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37512": {
     "ko": "모조 보석광 긴바지",
@@ -358620,7 +358854,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37513": {
     "ko": "모조 보석광 장화",
@@ -358629,7 +358864,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37514": {
     "ko": "모조 가죽광 모자",
@@ -358638,7 +358874,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37515": {
     "ko": "모조 가죽광 재킷",
@@ -358647,7 +358884,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37516": {
     "ko": "모조 가죽광 팔덮개",
@@ -358656,7 +358894,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37517": {
     "ko": "모조 가죽광 덧바지",
@@ -358665,7 +358904,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37518": {
     "ko": "모조 가죽광 허벅지장화",
@@ -358674,7 +358914,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37519": {
     "ko": "모조 방직광 예장모자",
@@ -358683,7 +358924,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37520": {
     "ko": "모조 방직광 연미복",
@@ -358692,7 +358934,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37521": {
     "ko": "모조 방직광 세손장갑",
@@ -358701,7 +358944,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37522": {
     "ko": "모조 방직광 하의",
@@ -358710,7 +358954,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37523": {
     "ko": "모조 방직광 장화",
@@ -358719,7 +358964,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37524": {
     "ko": "모조 연금광 역반무테 안경",
@@ -358728,7 +358974,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37525": {
     "ko": "모조 연금광 외투",
@@ -358737,7 +358984,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37526": {
     "ko": "모조 연금광 장갑",
@@ -358746,7 +358994,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37527": {
     "ko": "모조 연금광 덧바지",
@@ -358755,7 +359004,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37528": {
     "ko": "모조 연금광 신발",
@@ -358764,7 +359014,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37529": {
     "ko": "모조 주방광 조리모",
@@ -358773,7 +359024,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37530": {
     "ko": "모조 주방광 앞치마",
@@ -358782,7 +359034,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37531": {
     "ko": "모조 주방광 벙어리장갑",
@@ -358791,7 +359044,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37532": {
     "ko": "모조 주방광 긴바지",
@@ -358800,7 +359054,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37533": {
     "ko": "모조 주방광 나무덧신",
@@ -358809,7 +359064,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37534": {
     "ko": "모조 광산광 철모",
@@ -358818,7 +359074,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37535": {
     "ko": "모조 광산광 작업셔츠",
@@ -358827,7 +359084,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37536": {
     "ko": "모조 광산광 작업장갑",
@@ -358836,7 +359094,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37537": {
     "ko": "모조 광산광 일자바지",
@@ -358845,7 +359104,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37538": {
     "ko": "모조 광산광 작업장화",
@@ -358854,7 +359114,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37539": {
     "ko": "모조 농장광 모자",
@@ -358863,7 +359124,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37540": {
     "ko": "모조 농장광 셔츠",
@@ -358872,7 +359134,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37541": {
     "ko": "모조 농장광 손등장갑",
@@ -358881,7 +359144,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37542": {
     "ko": "모조 농장광 일자바지",
@@ -358890,7 +359154,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37543": {
     "ko": "모조 농장광 작업장화",
@@ -358899,7 +359164,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37544": {
     "ko": "모조 어장광 모자",
@@ -358908,7 +359174,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37545": {
     "ko": "모조 어장광 재킷",
@@ -358917,7 +359184,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37546": {
     "ko": "모조 어장광 작업장갑",
@@ -358926,7 +359194,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37547": {
     "ko": "모조 어장광 일자바지",
@@ -358935,7 +359204,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37548": {
     "ko": "모조 어장광 작업장화",
@@ -358944,7 +359214,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "37549": {
     "ko": "시엘달레 화폐: 청선화",
@@ -361625,7 +361896,8 @@
     "ko": "3등급 외층 지도",
     "iconPath": "/i/025000/025930.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "37856": {
     "ko": "바람받이 샴시르",
@@ -416431,7 +416703,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43415": {
     "ko": "모조 제재학자 앞치마",
@@ -416440,7 +416713,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43416": {
     "ko": "모조 제재학자 장갑",
@@ -416449,7 +416723,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43417": {
     "ko": "모조 제재학자 바지",
@@ -416458,7 +416733,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43418": {
     "ko": "모조 제재학자 구두",
@@ -416467,7 +416743,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43419": {
     "ko": "모조 제련학자 고글",
@@ -416476,7 +416753,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43420": {
     "ko": "모조 제련학자 앞치마",
@@ -416485,7 +416763,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43421": {
     "ko": "모조 제련학자 작업장갑",
@@ -416494,7 +416773,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43422": {
     "ko": "모조 제련학자 긴바지",
@@ -416503,7 +416783,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43423": {
     "ko": "모조 제련학자 장화",
@@ -416512,7 +416793,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43424": {
     "ko": "모조 갑주학자 얼굴가리개",
@@ -416521,7 +416803,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43425": {
     "ko": "모조 갑주학자 앞치마",
@@ -416530,7 +416813,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43426": {
     "ko": "모조 갑주학자 작업장갑",
@@ -416539,7 +416823,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43427": {
     "ko": "모조 갑주학자 긴바지",
@@ -416548,7 +416833,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43428": {
     "ko": "모조 갑주학자 작업장화",
@@ -416557,7 +416843,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43429": {
     "ko": "모조 보석학자 모자",
@@ -416566,7 +416853,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43430": {
     "ko": "모조 보석학자 조끼",
@@ -416575,7 +416863,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43431": {
     "ko": "모조 보석학자 소매장식",
@@ -416584,7 +416873,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43432": {
     "ko": "모조 보석학자 긴바지",
@@ -416593,7 +416883,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43433": {
     "ko": "모조 보석학자 허벅지장화",
@@ -416602,7 +416893,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43434": {
     "ko": "모조 가죽학자 모자",
@@ -416611,7 +416903,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43435": {
     "ko": "모조 가죽학자 앞치마",
@@ -416620,7 +416913,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43436": {
     "ko": "모조 가죽학자 팔보호대",
@@ -416629,7 +416923,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43437": {
     "ko": "모조 가죽학자 덧바지",
@@ -416638,7 +416933,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43438": {
     "ko": "모조 가죽학자 장화",
@@ -416647,7 +416943,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43439": {
     "ko": "모조 방직학자 모자",
@@ -416656,7 +416953,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43440": {
     "ko": "모조 방직학자 연미복",
@@ -416665,7 +416963,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43441": {
     "ko": "모조 방직학자 소맷동",
@@ -416674,7 +416973,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43442": {
     "ko": "모조 방직학자 하의",
@@ -416683,7 +416983,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43443": {
     "ko": "모조 방직학자 장화",
@@ -416692,7 +416993,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43444": {
     "ko": "모조 연금학자 모자",
@@ -416701,7 +417003,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43445": {
     "ko": "모조 연금학자 케이프망토",
@@ -416710,7 +417013,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43446": {
     "ko": "모조 연금학자 장갑",
@@ -416719,7 +417023,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43447": {
     "ko": "모조 연금학자 덧바지",
@@ -416728,7 +417033,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43448": {
     "ko": "모조 연금학자 신발",
@@ -416737,7 +417043,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43449": {
     "ko": "모조 주방학자 모자",
@@ -416746,7 +417053,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43450": {
     "ko": "모조 주방학자 앞치마",
@@ -416755,7 +417063,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43451": {
     "ko": "모조 주방학자 벙어리장갑",
@@ -416764,7 +417073,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43452": {
     "ko": "모조 주방학자 긴바지",
@@ -416773,7 +417083,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43453": {
     "ko": "모조 주방학자 신발",
@@ -416782,7 +417093,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43454": {
     "ko": "모조 광산학자 철모",
@@ -416791,7 +417103,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43455": {
     "ko": "모조 광산학자 작업셔츠",
@@ -416800,7 +417113,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43456": {
     "ko": "모조 광산학자 작업장갑",
@@ -416809,7 +417123,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43457": {
     "ko": "모조 광산학자 일자바지",
@@ -416818,7 +417133,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43458": {
     "ko": "모조 광산학자 작업장화",
@@ -416827,7 +417143,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43459": {
     "ko": "모조 농장학자 두건",
@@ -416836,7 +417153,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43460": {
     "ko": "모조 농장학자 셔츠",
@@ -416845,7 +417163,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43461": {
     "ko": "모조 농장학자 장갑",
@@ -416854,7 +417173,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43462": {
     "ko": "모조 농장학자 일자바지",
@@ -416863,7 +417183,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43463": {
     "ko": "모조 농장학자 뾰족신",
@@ -416872,7 +417193,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43464": {
     "ko": "모조 어장학자 모자",
@@ -416881,7 +417203,8 @@
     "equipSlotCategory": 3,
     "equipSlots": [
       "head"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43465": {
     "ko": "모조 어장학자 재킷",
@@ -416890,7 +417213,8 @@
     "equipSlotCategory": 4,
     "equipSlots": [
       "body"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43466": {
     "ko": "모조 어장학자 작업장갑",
@@ -416899,7 +417223,8 @@
     "equipSlotCategory": 5,
     "equipSlots": [
       "hands"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43467": {
     "ko": "모조 어장학자 일자바지",
@@ -416908,7 +417233,8 @@
     "equipSlotCategory": 7,
     "equipSlots": [
       "legs"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43468": {
     "ko": "모조 어장학자 작업장화",
@@ -416917,7 +417243,8 @@
     "equipSlotCategory": 8,
     "equipSlots": [
       "feet"
-    ]
+    ],
+    "translationStatus": "kr-only"
   },
   "43469": {
     "ko": "마술다람쥐 마이카 머리",
@@ -431339,13 +431666,15 @@
     "ko": "동방 무관 의복",
     "iconPath": "/i/048000/048932.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45169": {
     "ko": "동방 여관 의복",
     "iconPath": "/i/048000/048933.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45170": {
     "ko": "토끼 대장 의복",
@@ -431575,133 +431904,155 @@
     "ko": "모조 목수 의복",
     "iconPath": "/i/042000/042334.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45201": {
     "ko": "모조 대장장이 의복",
     "iconPath": "/i/042000/042331.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45202": {
     "ko": "모조 갑주제작사 의복",
     "iconPath": "/i/042000/042327.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45203": {
     "ko": "모조 보석공예가 의복",
     "iconPath": "/i/042000/042332.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45204": {
     "ko": "모조 가죽공예가 의복",
     "iconPath": "/i/042000/042324.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45205": {
     "ko": "모조 재봉사 의복",
     "iconPath": "/i/042000/042329.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45206": {
     "ko": "모조 연금술사 의복",
     "iconPath": "/i/042000/042335.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45207": {
     "ko": "모조 요리사 의복",
     "iconPath": "/i/042000/042333.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45208": {
     "ko": "모조 광부 의복",
     "iconPath": "/i/042000/042328.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45209": {
     "ko": "모조 원예가 의복",
     "iconPath": "/i/042000/042323.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45210": {
     "ko": "모조 어부 의복",
     "iconPath": "/i/042000/042326.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45211": {
     "ko": "모조 제재소 의복",
     "iconPath": "/i/042000/042426.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45212": {
     "ko": "모조 제련소 의복",
     "iconPath": "/i/042000/042427.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45213": {
     "ko": "모조 갑주공방 의복",
     "iconPath": "/i/042000/042428.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45214": {
     "ko": "모조 보석공방 의복",
     "iconPath": "/i/042000/042429.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45215": {
     "ko": "모조 가죽공방 의복",
     "iconPath": "/i/042000/042430.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45216": {
     "ko": "모조 방직소 의복",
     "iconPath": "/i/042000/042431.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45217": {
     "ko": "모조 연금공방 의복",
     "iconPath": "/i/042000/042432.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45218": {
     "ko": "모조 주방 의복",
     "iconPath": "/i/042000/042433.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45219": {
     "ko": "모조 광산 의복",
     "iconPath": "/i/042000/042434.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45220": {
     "ko": "모조 농장 의복",
     "iconPath": "/i/042000/042435.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45221": {
     "ko": "모조 어장 의복",
     "iconPath": "/i/042000/042436.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45222": {
     "ko": "고독한 늑대 의복",
@@ -432291,13 +432642,15 @@
     "ko": "동방 도령 의복",
     "iconPath": "/i/042000/042586.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45296": {
     "ko": "동방 낭자 의복",
     "iconPath": "/i/042000/042585.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45297": {
     "ko": "리세 의복",
@@ -432693,67 +433046,78 @@
     "ko": "모조 제재소왕 의복",
     "iconPath": "/i/042000/042545.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45347": {
     "ko": "모조 제련소왕 의복",
     "iconPath": "/i/042000/042549.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45348": {
     "ko": "모조 갑주공방왕 의복",
     "iconPath": "/i/042000/042546.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45349": {
     "ko": "모조 보석공방왕 의복",
     "iconPath": "/i/042000/042550.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45350": {
     "ko": "모조 가죽공방왕 의복",
     "iconPath": "/i/042000/042547.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45351": {
     "ko": "모조 방직소왕 의복",
     "iconPath": "/i/042000/042548.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45352": {
     "ko": "모조 연금공방왕 의복",
     "iconPath": "/i/042000/042551.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45353": {
     "ko": "모조 주방왕 의복",
     "iconPath": "/i/042000/042552.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45354": {
     "ko": "모조 광산왕 의복",
     "iconPath": "/i/042000/042542.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45355": {
     "ko": "모조 농장왕 의복",
     "iconPath": "/i/042000/042543.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45356": {
     "ko": "모조 어장왕 의복",
     "iconPath": "/i/042000/042544.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45357": {
     "ko": "구알라그 수호자 장비",
@@ -433647,67 +434011,78 @@
     "ko": "모조 제재광 의상",
     "iconPath": "/i/042000/042643.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45469": {
     "ko": "모조 제련광 의상",
     "iconPath": "/i/042000/042640.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45470": {
     "ko": "모조 갑주광 의상",
     "iconPath": "/i/042000/042636.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45471": {
     "ko": "모조 보석광 의상",
     "iconPath": "/i/042000/042641.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45472": {
     "ko": "모조 가죽광 의상",
     "iconPath": "/i/042000/042633.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45473": {
     "ko": "모조 방직광 의상",
     "iconPath": "/i/042000/042638.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45474": {
     "ko": "모조 연금광 의상",
     "iconPath": "/i/043000/043871.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45475": {
     "ko": "모조 주방광 의상",
     "iconPath": "/i/042000/042642.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45476": {
     "ko": "모조 광산광 의상",
     "iconPath": "/i/042000/042637.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45477": {
     "ko": "모조 농장광 의상",
     "iconPath": "/i/042000/042632.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45478": {
     "ko": "모조 어장광 의상",
     "iconPath": "/i/042000/042634.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45479": {
     "ko": "섬농부 통바지 세트",
@@ -434265,67 +434640,78 @@
     "ko": "모조 제재학자 의상",
     "iconPath": "/i/042000/042777.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45549": {
     "ko": "모조 제련학자 의상",
     "iconPath": "/i/042000/042772.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45550": {
     "ko": "모조 갑주학자 의상",
     "iconPath": "/i/042000/042761.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45551": {
     "ko": "모조 보석학자 의상",
     "iconPath": "/i/042000/042773.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45552": {
     "ko": "모조 가죽학자 의상",
     "iconPath": "/i/042000/042756.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45553": {
     "ko": "모조 방직학자 의상",
     "iconPath": "/i/042000/042764.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45554": {
     "ko": "모조 연금학자 의상",
     "iconPath": "/i/042000/042780.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45555": {
     "ko": "모조 주방학자 의상",
     "iconPath": "/i/042000/042774.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45556": {
     "ko": "모조 광산학자 의상",
     "iconPath": "/i/042000/042763.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45557": {
     "ko": "모조 농장학자 의상",
     "iconPath": "/i/042000/042755.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45558": {
     "ko": "모조 어장학자 의상",
     "iconPath": "/i/042000/042759.png",
     "uiCategory": 112,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "45559": {
     "ko": "마술다람쥐 마이카 의복",
@@ -445932,7 +446318,8 @@
     "ko": "염료 교환 증서",
     "iconPath": "/i/026000/026182.png",
     "uiCategory": 63,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "46825": {
     "ko": "우주 달멜 호루라기",
@@ -481187,13 +481574,15 @@
     "ko": "초상화 교재: 와글와글 모그리",
     "iconPath": "/i/026000/026625.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "50810": {
     "ko": "초상화 교재: 와글와글 꼬마 친구",
     "iconPath": "/i/026000/026625.png",
     "uiCategory": 61,
-    "equipSlots": []
+    "equipSlots": [],
+    "translationStatus": "kr-only"
   },
   "50811": {
     "ko": "우두머리 늑대 왕관",

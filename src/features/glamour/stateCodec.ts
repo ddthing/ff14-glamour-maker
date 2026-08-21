@@ -78,6 +78,15 @@ function sanitizeItem(slot: EquipmentPart, value: unknown, warnings: string[]): 
       [field]: sanitizeString(value[field], fallbackValue, `items.${slot}.${field}`, warnings),
     });
   }
+  if (value.iconAssetKey !== undefined) {
+    item.iconAssetKey = sanitizeString(
+      value.iconAssetKey,
+      '',
+      `items.${slot}.iconAssetKey`,
+      warnings,
+      120,
+    );
+  }
   return item;
 }
 
@@ -91,13 +100,22 @@ function sanitizeFashionAccessory(
     return null;
   }
 
-  const accessory = {
+  const accessory: FashionAccessorySelection = {
     id: value.id,
     nameKo: sanitizeString(value.nameKo, '', 'fashionAccessory.nameKo', warnings, 160),
     nameEn: sanitizeString(value.nameEn, '', 'fashionAccessory.nameEn', warnings, 160),
     nameJa: sanitizeString(value.nameJa, '', 'fashionAccessory.nameJa', warnings, 160),
     iconPath: sanitizeString(value.iconPath, '', 'fashionAccessory.iconPath', warnings, 240),
   };
+  if (value.iconAssetKey !== undefined) {
+    accessory.iconAssetKey = sanitizeString(
+      value.iconAssetKey,
+      '',
+      'fashionAccessory.iconAssetKey',
+      warnings,
+      120,
+    );
+  }
   if (!accessory.nameKo && !accessory.nameEn && !accessory.nameJa) {
     warnings.push('fashionAccessory requires a name');
     return null;

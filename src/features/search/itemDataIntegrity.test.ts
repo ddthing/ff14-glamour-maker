@@ -11,6 +11,8 @@ interface LocalItemData {
   ja?: string;
   uiCategory?: number | null;
   iconPath?: string;
+  iconAssetKey?: string;
+  translationStatus?: FF14Item['translationStatus'];
   equipSlots?: EquipmentPart[];
 }
 
@@ -22,6 +24,8 @@ const records: FF14Item[] = Object.entries(itemsData as Record<string, LocalItem
     nameJa: item.ja || '',
     uiCategory: item.uiCategory ?? undefined,
     iconPath: item.iconPath,
+    iconAssetKey: item.iconAssetKey,
+    translationStatus: item.translationStatus,
     equipSlots: item.equipSlots,
     source: 'item',
   }),
@@ -40,6 +44,8 @@ const facewearRecords: FF14Item[] = Object.entries(
   nameEn: item.en || '',
   nameJa: item.ja || '',
   iconPath: item.iconPath,
+  iconAssetKey: item.iconAssetKey,
+  translationStatus: item.translationStatus,
   source: 'facewear',
 }));
 
@@ -50,6 +56,14 @@ describe('generated item data integrity', () => {
     );
 
     expect(corrupted).toEqual([]);
+  });
+
+  it('keeps Korean-only icon exceptions on stable asset keys', () => {
+    const regionalIds = [21036, 21037, 21038, 21039, 21040, 21041];
+    expect(regionalIds.every(id => {
+      const item = records.find(record => record.id === id);
+      return item?.translationStatus === 'kr-only' && item.iconAssetKey === `ko/${id}`;
+    })).toBe(true);
   });
 
   it('classifies every generated supported equipment record into its slot', () => {

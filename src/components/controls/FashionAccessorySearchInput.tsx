@@ -122,7 +122,12 @@ export function FashionAccessorySearchInput({ onSelect }: FashionAccessorySearch
                 onClick={() => select(item)}
               >
                 <span className="h-8 w-8 shrink-0 overflow-hidden rounded-[var(--radius-sm)] border border-[var(--border)]">
-                  <ItemIcon nameKo={item.name} iconPath={item.iconPath ?? ''} className="h-full w-full object-cover" />
+                  <ItemIcon
+                    nameKo={item.name}
+                    iconPath={item.iconPath ?? ''}
+                    iconAssetKey={item.iconAssetKey}
+                    className="h-full w-full object-cover"
+                  />
                 </span>
                 <span className="min-w-0 truncate text-sm font-semibold">{name}</span>
               </button>
