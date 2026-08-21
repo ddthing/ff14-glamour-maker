@@ -5,7 +5,7 @@
 > 스크린샷을 고르고, 장비와 염색 정보를 입력하고, 바로 저장·공유한다.
 > 투영 정보를 이미지 편집기에서 따로 정리해야 하는 시간을 줄이는 것이 이 프로젝트의 핵심 가치입니다.
 
-[운영 서비스](https://ff14-glamour.pages.dev/) · [사용 가이드](https://ff14-glamour.pages.dev/guide) · [FAQ](https://ff14-glamour.pages.dev/faq)
+[운영 서비스](https://ff14-glamour-maker.pages.dev/) · [사용 가이드](https://ff14-glamour-maker.pages.dev/guide) · [FAQ](https://ff14-glamour-maker.pages.dev/faq)
 
 ## 제품 포지셔닝: 마케터의 질문에 대한 개발자의 답
 
@@ -206,4 +206,4 @@ public/
 - 아이콘 제공 경로가 외부 서비스에 의존하는 항목은 네트워크 상태에 따라 표시가 늦거나 실패할 수 있습니다.
 - 프리셋은 브라우저별 저장이므로 다른 기기와 자동 동기화되지 않습니다. 중요한 결과는 PNG로 별도 보관해야 합니다.
 - 이 프로젝트는 SQUARE ENIX의 공식 서비스가 아닌 비공식 팬 프로젝트입니다. FINAL FANTASY XIV와 관련 지식재산권은 각 권리자에게 귀속됩니다.
-- 서비스 내부의 [가이드](https://ff14-glamour.pages.dev/guide), [소개](https://ff14-glamour.pages.dev/about), [이용약관](https://ff14-glamour.pages.dev/terms), [개인정보처리방침](https://ff14-glamour.pages.dev/privacy)에서 사용자용 정책을 확인할 수 있습니다.
+- 서비스 내부의 [가이드](https://ff14-glamour-maker.pages.dev/guide), [소개](https://ff14-glamour-maker.pages.dev/about), [이용약관](https://ff14-glamour-maker.pages.dev/terms), [개인정보처리방침](https://ff14-glamour-maker.pages.dev/privacy)에서 사용자용 정책을 확인할 수 있습니다.
