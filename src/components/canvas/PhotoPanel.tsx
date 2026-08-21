@@ -22,20 +22,13 @@ export function PhotoPanel({
   const { t } = useTranslation();
 
   return (
-    <div
-      role="button"
-      tabIndex={0}
+    <button
+      type="button"
       aria-label={croppedImageSrc ? t('common.replace_image') : t('common.upload_hint')}
-      className="relative flex h-full w-[480px] shrink-0 cursor-pointer select-none items-center justify-center overflow-hidden bg-[#17191c]"
+      className="relative flex h-full w-[480px] shrink-0 cursor-pointer select-none items-center justify-center overflow-hidden border-0 bg-[#17191c] p-0 text-left"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onClick={onClick}
-      onKeyDown={event => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          onClick();
-        }
-      }}
     >
       {isDragging ? (
         <div className="absolute inset-4 z-50 flex flex-col items-center justify-center gap-3 border border-dashed border-white/40 bg-[#17191c]/92 text-white/80">
@@ -78,6 +71,6 @@ export function PhotoPanel({
           </div>
         </div>
       )}
-    </div>
+    </button>
   );
 }

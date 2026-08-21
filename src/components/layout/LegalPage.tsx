@@ -1,5 +1,6 @@
 import { ContentPageLayout } from './ContentPageLayout';
 import { useLocalizedPageContent } from '../../content/localizedPages';
+import { useTranslation } from 'react-i18next';
 
 interface LegalPageProps {
   type: 'terms' | 'privacy';
@@ -7,6 +8,7 @@ interface LegalPageProps {
 
 export function LegalPage({ type }: LegalPageProps) {
   const content = useLocalizedPageContent();
+  const { t } = useTranslation();
   const page = content[type];
 
   return (
@@ -31,7 +33,12 @@ export function LegalPage({ type }: LegalPageProps) {
               <ul className="content-link-list">
                 {section.links.map(link => (
                   <li key={link.href}>
-                    <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${link.label} (${t('common.opens_new_window')})`}
+                    >
                       {link.label}
                     </a>
                   </li>

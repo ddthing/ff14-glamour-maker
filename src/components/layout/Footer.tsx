@@ -40,6 +40,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link footer-support"
+            aria-label={`${t('common.footer_support')} (${t('common.opens_new_window')})`}
           >
             {t('common.footer_support')}
           </a>

@@ -42,6 +42,7 @@ export function DynamicCardBackground({ source, palette, status }: DynamicCardBa
       data-palette-fallback={palette.fallback}
       data-palette-colors={palette.colors.map(color => color.hex).join(',')}
       data-palette-status={status}
+      data-contrast-scrim-opacity={palette.contrastScrimOpacity}
     >
       <div className="absolute inset-0" style={{ backgroundColor: primary.hex }} />
       {palette.previewDataUrl ? (
@@ -61,6 +62,14 @@ export function DynamicCardBackground({ source, palette, status }: DynamicCardBa
           background: `linear-gradient(100deg, rgba(8,10,12,${Math.max(0.06, palette.scrimOpacity - 0.04)}) 0%, rgba(8,10,12,${palette.scrimOpacity}) 62%, rgba(6,8,10,${Math.min(0.24, palette.scrimOpacity + 0.04)}) 100%)`,
         }}
       />
+      {palette.contrastScrimOpacity > 0 ? (
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(100deg, rgba(8,10,12,${palette.contrastScrimOpacity}) 0%, rgba(8,10,12,${Math.min(0.92, palette.contrastScrimOpacity + 0.06)}) 62%, rgba(6,8,10,${Math.min(0.94, palette.contrastScrimOpacity + 0.1)}) 100%)`,
+          }}
+        />
+      ) : null}
       <div
         className="absolute inset-0 opacity-[0.035]"
         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }}

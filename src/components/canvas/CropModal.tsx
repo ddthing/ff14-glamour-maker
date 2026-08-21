@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { createPortal } from 'react-dom';
 import { Cancel01Icon, CheckmarkCircle02Icon, ImageUploadIcon, Search01Icon, Undo02Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
@@ -25,6 +25,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPx, setCroppedAreaPx] = useState<CropArea | null>(null);
   const [isApplying, setIsApplying] = useState(false);
+  const [applyError, setApplyError] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -67,16 +68,44 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
   }, [onCancel]);
 
   const handleCropComplete = useCallback(
-    (_: unknown, pixels: CropArea) => setCroppedAreaPx(pixels),
+    (_: unknown, pixels: CropArea) => {
+      setCroppedAreaPx(pixels);
+      setApplyError(false);
+    },
     [],
   );
+
+  const moveCrop = (deltaX: number, deltaY: number) => {
+    setCrop(previous => ({ x: previous.x + deltaX, y: previous.y + deltaY }));
+  };
+
+  const handleCropKeyDown = (event: ReactKeyboardEvent<HTMLElement>) => {
+    const step = 2;
+    const movement = {
+      ArrowLeft: [-step, 0],
+      ArrowRight: [step, 0],
+      ArrowUp: [0, -step],
+      ArrowDown: [0, step],
+    }[event.key as 'ArrowLeft' | 'ArrowRight' | 'ArrowUp' | 'ArrowDown'];
+
+    if (!movement) return;
+    event.preventDefault();
+    moveCrop(movement[0], movement[1]);
+  };
 
   const handleConfirm = async () => {
     if (!croppedAreaPx || isApplying) return;
     setIsApplying(true);
+    setApplyError(false);
     try {
       const url = await getCroppedImg(imageSrc, croppedAreaPx);
-      if (url) onConfirm(url, imageSrc);
+      if (url) {
+        onConfirm(url, imageSrc);
+      } else {
+        setApplyError(true);
+      }
+    } catch {
+      setApplyError(true);
     } finally {
       setIsApplying(false);
     }
@@ -112,7 +141,14 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
         </header>
 
         <div className="grid min-h-0 flex-1 grid-rows-[minmax(300px,52dvh)_auto] lg:grid-cols-[minmax(0,1fr)_320px] lg:grid-rows-none">
-          <section className="relative min-h-0 overflow-hidden border-b border-[var(--border)] bg-[#17191c] lg:border-b-0 lg:border-r" aria-label={t('crop.refine_portrait')}>
+          <section
+            className="relative min-h-0 overflow-hidden border-b border-[var(--border)] bg-[#17191c] lg:border-b-0 lg:border-r"
+            aria-label={t('crop.refine_portrait')}
+            aria-describedby="crop-position-hint"
+            aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown"
+            tabIndex={0}
+            onKeyDown={handleCropKeyDown}
+          >
             <Cropper
               image={imageSrc}
               crop={crop}
@@ -131,9 +167,9 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                 },
               }}
             />
-            <div className="pointer-events-none absolute bottom-3 left-3 flex items-center gap-2 rounded-[var(--radius-sm)] border border-white/15 bg-black/35 px-2.5 py-1.5 text-[0.65rem] text-white/65">
+            <div id="crop-position-hint" className="pointer-events-none absolute bottom-3 left-3 flex items-center gap-2 rounded-[var(--radius-sm)] border border-white/15 bg-black/35 px-2.5 py-1.5 text-[0.65rem] text-white/65">
               <HugeiconsIcon icon={ImageUploadIcon} size={14} strokeWidth={1.6} aria-hidden="true" />
-              <span>{t('crop.hint_move')}</span>
+              <span>{t('crop.hint_move')} · {t('crop.hint_keyboard')}</span>
             </div>
           </section>
 
@@ -157,7 +193,7 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                 className="range-premium"
               />
               <p className="border-t border-[var(--border)] pt-5 text-xs leading-5 text-[var(--text-muted)]">
-                {t('crop.hint_move')} · {t('crop.hint_zoom')} · {t('crop.hint_confirm')}
+                {t('crop.hint_move')} · {t('crop.hint_keyboard')} · {t('crop.hint_zoom')} · {t('crop.hint_confirm')}
               </p>
             </div>
 
@@ -171,6 +207,11 @@ export function CropModal({ imageSrc, onCancel, onConfirm }: CropModalProps) {
                 <HugeiconsIcon icon={CheckmarkCircle02Icon} size={19} strokeWidth={1.8} aria-hidden="true" />
                 <span>{isApplying ? t('common.loading') : t('crop.apply_portrait')}</span>
               </button>
+              {applyError ? (
+                <p role="alert" className="text-xs leading-5 text-[var(--error)]">
+                  {t('crop.apply_failed')}
+                </p>
+              ) : null}
               <button
                 type="button"
                 onClick={onCancel}

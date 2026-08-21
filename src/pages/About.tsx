@@ -1,8 +1,10 @@
 import { useLocalizedPageContent } from '../content/localizedPages';
 import { ContentPageLayout } from '../components/layout/ContentPageLayout';
+import { useTranslation } from 'react-i18next';
 
 export function About() {
   const { about, backHome } = useLocalizedPageContent();
+  const { t } = useTranslation();
 
   return (
     <ContentPageLayout
@@ -24,7 +26,13 @@ export function About() {
         <section className="content-callout">
           <h2>{about.contactLabel}</h2>
           <p>{about.contactText}</p>
-          <a href="https://x.com/reconeur" target="_blank" rel="noopener noreferrer" className="content-inline-link">
+          <a
+            href="https://x.com/reconeur"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="content-inline-link"
+            aria-label={`@reconeur (${t('common.opens_new_window')})`}
+          >
             @reconeur
           </a>
         </section>

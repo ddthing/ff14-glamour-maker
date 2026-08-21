@@ -1,5 +1,6 @@
 import { Moon02Icon, Sun03Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
+import type { KeyboardEvent as ReactKeyboardEvent, MouseEvent as ReactMouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDarkMode } from '../../hooks/useDarkMode';
 import { useLocalizedMetadata } from '../../hooks/useLocalizedMetadata';
@@ -16,10 +17,22 @@ export function Header({ page = 'home' }: HeaderProps) {
   const language = i18n.resolvedLanguage?.split('-')[0] || i18n.language.split('-')[0];
   useLocalizedMetadata(page);
 
+  const focusMainContent = (event: ReactMouseEvent<HTMLAnchorElement> | ReactKeyboardEvent<HTMLAnchorElement>) => {
+    const mainContent = document.getElementById('main-content');
+    if (!mainContent) return;
+
+    event.preventDefault();
+    mainContent.focus();
+  };
+
   return (
     <>
       <a
         href="#main-content"
+        onClick={focusMainContent}
+        onKeyDown={event => {
+          if (event.key === 'Enter' || event.key === ' ') focusMainContent(event);
+        }}
         className="fixed left-4 top-2 z-[4000] -translate-y-24 rounded-[var(--radius-sm)] bg-[var(--text-primary)] px-4 py-2 text-sm font-bold text-[var(--bg-app)] transition-transform focus-visible:translate-y-0"
       >
         {t('common.skip_to_content')}

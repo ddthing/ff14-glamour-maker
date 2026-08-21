@@ -42,8 +42,8 @@ export function ItemSearchInput({ value, hasError, currentSlot, onNameChange, on
                     role="combobox"
                     aria-autocomplete="list"
                     aria-expanded={shouldShowDropdown}
-                    aria-controls={listboxId}
-                    aria-activedescendant={selectedIndex >= 0 ? `${listboxId}-option-${selectedIndex}` : undefined}
+                    aria-controls={shouldShowDropdown ? listboxId : undefined}
+                    aria-activedescendant={shouldShowDropdown && selectedIndex >= 0 ? `${listboxId}-option-${selectedIndex}` : undefined}
                     aria-label={`${currentSlot ? t(`slots.${currentSlot}`) : ''} ${t('common.search_item')}`.trim()}
                     className={`
                         input-focus-control w-full h-full bg-[var(--surface-100)] border rounded-[var(--radius-sm)] px-4 pl-10 text-sm

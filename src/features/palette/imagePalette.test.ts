@@ -34,6 +34,7 @@ describe('extractPaletteFromPixels', () => {
 
     expect(palette.averageLuminance).toBeLessThan(0.78);
     expect(palette.textTone).toBe('light');
+    expect(palette.contrastScrimOpacity).toBeGreaterThan(0);
   });
 
   it('keeps a warm saturated image visible below the readability scrim', () => {
@@ -53,6 +54,7 @@ describe('extractPaletteFromPixels', () => {
 
     expect(palette.scrimOpacity).toBeGreaterThanOrEqual(0.19);
     expect(palette.scrimOpacity).toBeLessThanOrEqual(0.2);
+    expect(palette.contrastScrimOpacity).toBe(0);
     expect(palette.textTone).toBe('dark');
   });
 

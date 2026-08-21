@@ -52,14 +52,6 @@ export function useItemSearchCombobox({
     setOpen(false);
     setSelectedIndex(-1);
 
-    let focusTimeout: number | null = null;
-    if (inputRef.current && window.matchMedia('(pointer: fine)').matches) {
-      focusTimeout = window.setTimeout(() => inputRef.current?.focus(), 10);
-    }
-
-    return () => {
-      if (focusTimeout !== null) window.clearTimeout(focusTimeout);
-    };
   }, [clearResults, currentSlot, value]);
 
   useEffect(() => {

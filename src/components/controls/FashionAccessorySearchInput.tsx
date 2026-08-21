@@ -65,13 +65,14 @@ export function FashionAccessorySearchInput({ onSelect }: FashionAccessorySearch
   return (
     <div ref={containerRef} className="relative">
       <div className="relative flex h-11 items-center">
-        <HugeiconsIcon icon={Search01Icon} className="pointer-events-none absolute left-3 text-[var(--muted-foreground)]" size={16} strokeWidth={1.7} />
+        <HugeiconsIcon icon={Search01Icon} className="pointer-events-none absolute left-3 text-[var(--muted-foreground)]" size={16} strokeWidth={1.7} aria-hidden="true" />
         <input
           type="search"
           role="combobox"
+          aria-autocomplete="list"
           aria-label={t('common.search_fashion_accessory')}
           aria-expanded={open}
-          aria-controls={listboxId}
+          aria-controls={open ? listboxId : undefined}
           aria-activedescendant={open && results[selectedIndex] ? `${listboxId}-${selectedIndex}` : undefined}
           autoComplete="off"
           value={query}
@@ -96,7 +97,7 @@ export function FashionAccessorySearchInput({ onSelect }: FashionAccessorySearch
             }
           }}
         />
-        {loading ? <HugeiconsIcon icon={SparklesIcon} className="absolute right-3 animate-pulse text-[var(--muted-foreground)]" size={16} strokeWidth={1.7} /> : null}
+        {loading ? <HugeiconsIcon icon={SparklesIcon} className="absolute right-3 animate-pulse text-[var(--muted-foreground)]" size={16} strokeWidth={1.7} aria-hidden="true" /> : null}
       </div>
 
       {open ? (
@@ -133,7 +134,7 @@ export function FashionAccessorySearchInput({ onSelect }: FashionAccessorySearch
               </button>
             );
           }) : (
-            <p className="px-3 py-4 text-center text-xs text-[var(--muted-foreground)]">
+            <p className="px-3 py-4 text-center text-xs text-[var(--muted-foreground)]" aria-live="polite">
               {loading ? t('common.loading') : t('common.no_results')}
             </p>
           )}

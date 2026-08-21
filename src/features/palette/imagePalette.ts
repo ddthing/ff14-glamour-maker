@@ -7,6 +7,7 @@ export interface ImagePalette {
   colors: PaletteColor[];
   averageLuminance: number;
   scrimOpacity: number;
+  contrastScrimOpacity: number;
   textTone: 'light' | 'dark';
   previewDataUrl: string | null;
   fallback: 'none' | 'low-color' | 'unavailable';
@@ -18,6 +19,7 @@ const DEFAULT_COLORS = ['#3f4348', '#24272b', '#111315'];
 // Reference-card calibration: medium-light panels still use white text;
 // dark text is reserved for panels that are genuinely close to white.
 const DARK_TEXT_LUMINANCE_THRESHOLD = 0.78;
+const LIGHT_TEXT_TARGET_LUMINANCE = 0.15;
 
 interface Bucket {
   red: number;
@@ -62,11 +64,25 @@ function calculateScrimOpacity(averageLuminance: number): number {
   return clamp(0.1 + averageLuminance * 0.1, 0.1, 0.2);
 }
 
+function calculateContrastScrimOpacity(averageLuminance: number, scrimOpacity: number, textTone: ImagePalette['textTone']): number {
+  if (textTone === 'dark') return 0;
+
+  const luminanceAfterArtisticScrim = averageLuminance * (1 - scrimOpacity);
+  if (luminanceAfterArtisticScrim <= LIGHT_TEXT_TARGET_LUMINANCE) return 0;
+
+  return clamp(
+    1 - LIGHT_TEXT_TARGET_LUMINANCE / luminanceAfterArtisticScrim,
+    0,
+    0.88,
+  );
+}
+
 export function createFallbackPalette(reason: ImagePalette['fallback'] = 'unavailable'): ImagePalette {
   return {
     colors: DEFAULT_COLORS.map((hex, index) => ({ hex, weight: index === 0 ? 0.46 : 0.27 })),
     averageLuminance: 0.035,
     scrimOpacity: 0.12,
+    contrastScrimOpacity: 0,
     textTone: 'light',
     previewDataUrl: null,
     fallback: reason,
@@ -133,6 +149,8 @@ export function extractPaletteFromPixels(
 
   const selectedWeight = selected.reduce((sum, color) => sum + color.weight, 0);
   const averageLuminance = totalPixelWeight > 0 ? weightedLuminance / totalPixelWeight : 0.04;
+  const textTone = averageLuminance >= DARK_TEXT_LUMINANCE_THRESHOLD ? 'dark' : 'light';
+  const scrimOpacity = calculateScrimOpacity(averageLuminance);
 
   return {
     colors: selected.map(color => ({
@@ -140,8 +158,9 @@ export function extractPaletteFromPixels(
       weight: color.weight / selectedWeight,
     })),
     averageLuminance,
-    scrimOpacity: calculateScrimOpacity(averageLuminance),
-    textTone: averageLuminance >= DARK_TEXT_LUMINANCE_THRESHOLD ? 'dark' : 'light',
+    scrimOpacity,
+    contrastScrimOpacity: calculateContrastScrimOpacity(averageLuminance, scrimOpacity, textTone),
+    textTone,
     previewDataUrl,
     fallback: ranked.length < 2 ? 'low-color' : 'none',
   };

@@ -29,6 +29,7 @@ i18n
             clear_fashion_accessory: '패션 소품 지우기',
             search_dye: '염색',
             close: '닫기',
+            opens_new_window: '새 창에서 열림',
             update: '업데이트',
             new_updates: '새로운 소식',
             confirm: '확인',
@@ -124,8 +125,10 @@ i18n
             discard: '취소',
             apply_portrait: '적용하기',
             hint_move: '사진 이동',
+            hint_keyboard: '화살표 키로 사진 이동',
             hint_zoom: '크기 조절',
-            hint_confirm: '선택 완료'
+            hint_confirm: '선택 완료',
+            apply_failed: '사진을 적용하지 못했습니다. 다른 이미지를 선택해 주세요.'
           }
         }
       },
@@ -146,6 +149,7 @@ i18n
             clear_fashion_accessory: 'Clear fashion accessory',
             search_dye: 'Dye',
             close: 'Close',
+            opens_new_window: 'opens in a new window',
             update: 'UPDATE',
             new_updates: "What's New",
             confirm: 'Confirm',
@@ -241,8 +245,10 @@ i18n
             discard: 'Discard',
             apply_portrait: 'Apply Portrait',
             hint_move: 'Move Photo',
+            hint_keyboard: 'Use arrow keys to move the photo',
             hint_zoom: 'Zoom In/Out',
-            hint_confirm: 'Confirm Selection'
+            hint_confirm: 'Confirm Selection',
+            apply_failed: 'Could not apply the photo. Please choose another image.'
           }
         }
       },
@@ -263,6 +269,7 @@ i18n
             clear_fashion_accessory: 'ファッションアクセサリーを外す',
             search_dye: 'カララント',
             close: '閉じる',
+            opens_new_window: '新しいウィンドウで開きます',
             update: 'アップデート',
             new_updates: '最新情報',
             confirm: '確認',
@@ -358,8 +365,10 @@ i18n
             discard: 'キャンセル',
             apply_portrait: '適用する',
             hint_move: '写真の移動',
+            hint_keyboard: '矢印キーで写真を移動',
             hint_zoom: 'ズーム',
-            hint_confirm: '選択を確定'
+            hint_confirm: '選択を確定',
+            apply_failed: '写真を適用できませんでした。別の画像を選択してください。'
           }
         }
       }

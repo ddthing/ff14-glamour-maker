@@ -16,6 +16,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
     const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
+    const [selectedIndex, setSelectedIndex] = useState(-1);
     const wrapperRef = useRef<HTMLDivElement>(null);
     const listboxId = useId();
 
@@ -41,6 +42,10 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
         (d.nameJa ?? '').toLowerCase().includes(term)
     );
 
+    useEffect(() => {
+        setSelectedIndex(previous => previous >= filteredDyes.length ? -1 : previous);
+    }, [filteredDyes.length]);
+
     const matchedDye = FF14_DYES.find(d => d.name === value);
 
     return (
@@ -62,23 +67,47 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
                 role="combobox"
                 aria-autocomplete="list"
                 aria-expanded={open}
-                aria-controls={listboxId}
+                aria-controls={open ? listboxId : undefined}
+                aria-activedescendant={open && selectedIndex >= 0 ? `${listboxId}-option-${selectedIndex}` : undefined}
                 aria-label={placeholder}
                 className="input-focus-proxy w-full h-full bg-transparent border-none text-sm outline-none placeholder:text-[var(--text-muted)]"
                 placeholder={placeholder}
                 value={open ? searchTerm : value}
                 onChange={e => {
                     setSearchTerm(e.target.value);
+                    setSelectedIndex(-1);
                     if (!open) setOpen(true);
                 }}
                 onFocus={() => {
                     setSearchTerm('');
+                    setSelectedIndex(-1);
                     setOpen(true);
                 }}
                 onKeyDown={event => {
                     if (event.key === 'Escape') {
                         setOpen(false);
                         setSearchTerm(value);
+                        setSelectedIndex(-1);
+                        return;
+                    }
+
+                    if (!open || filteredDyes.length === 0) return;
+
+                    if (event.key === 'ArrowDown') {
+                        event.preventDefault();
+                        setSelectedIndex(previous => previous < filteredDyes.length - 1 ? previous + 1 : 0);
+                    } else if (event.key === 'ArrowUp') {
+                        event.preventDefault();
+                        setSelectedIndex(previous => previous > 0 ? previous - 1 : filteredDyes.length - 1);
+                    } else if (event.key === 'Enter') {
+                        event.preventDefault();
+                        const selectedDye = filteredDyes[selectedIndex] ?? filteredDyes[0];
+                        if (selectedDye) {
+                            onChange(selectedDye.name);
+                            setSearchTerm(selectedDye.name);
+                            setOpen(false);
+                            setSelectedIndex(-1);
+                        }
                     }
                 }}
             />
@@ -87,21 +116,26 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
             {open && (
                 <div id={listboxId} role="listbox" className="dropdown-menu absolute top-[calc(100%+6px)] left-0 right-0 z-[200] max-h-[220px] scrollbar-thin">
                     {filteredDyes.length === 0 ? (
-                        <div className="p-3 text-center text-xs text-[var(--text-muted)]">
+                        <div className="p-3 text-center text-xs text-[var(--text-muted)]" aria-live="polite">
                             {t('common.no_results')}
                         </div>
                     ) : (
-                        filteredDyes.map(dye => (
+                        filteredDyes.map((dye, index) => (
                             <button
+                                id={`${listboxId}-option-${index}`}
                                 type="button"
                                 role="option"
                                 aria-selected={dye.name === value}
                                 key={dye.name}
-                                className="w-full flex items-center gap-2.5 p-2 text-left hover:bg-[var(--surface-300)] transition-colors group"
+                                className={`w-full flex items-center gap-2.5 p-2 text-left hover:bg-[var(--surface-300)] transition-colors group ${
+                                    index === selectedIndex ? 'bg-[var(--surface-300)]' : ''
+                                }`}
+                                onMouseEnter={() => setSelectedIndex(index)}
                                 onClick={() => {
                                     onChange(dye.name);
                                     setSearchTerm(dye.name);
                                     setOpen(false);
+                                    setSelectedIndex(-1);
                                 }}
                             >
                                 <span 

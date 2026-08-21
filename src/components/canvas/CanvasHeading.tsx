@@ -13,9 +13,9 @@ export function CanvasHeading({ title, creator, label }: CanvasHeadingProps) {
         {label}
       </span>
       {title ? (
-        <h1 className="break-words text-[1.9rem] font-extrabold leading-[1.08] tracking-[-0.4px] text-[var(--card-text-primary)]">
+        <h2 className="break-words text-[1.9rem] font-extrabold leading-[1.08] tracking-[-0.4px] text-[var(--card-text-primary)]">
           {title}
-        </h1>
+        </h2>
       ) : null}
       {creator ? (
         <div className="mt-2.5 flex items-center gap-2">

@@ -40,8 +40,8 @@ describe('canvas display components', () => {
       <CanvasHeading title="Library Look" creator="@scholar" label="Glamour" />,
     ));
 
-    expect(container.querySelector('h1')?.textContent).toBe('Library Look');
-    expect(container.querySelector<HTMLElement>('h1')?.style.textShadow).toBe('');
+    expect(container.querySelector('h2')?.textContent).toBe('Library Look');
+    expect(container.querySelector<HTMLElement>('h2')?.style.textShadow).toBe('');
     expect(container.textContent).toContain('@scholar');
     expect(container.textContent).toContain('Glamour');
   });

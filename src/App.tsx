@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { PreviewCanvas } from './components/canvas/PreviewCanvas';
 import { ControlPanel } from './components/controls/ControlPanel';
 import { Header } from './components/layout/Header';
@@ -8,6 +9,7 @@ import { useGlamourActions } from './features/glamour/useGlamourActions';
 import type { AppState } from './types';
 
 function App() {
+  const { t } = useTranslation();
   const [state, setState] = useState<AppState>(createInitialState);
   const actions = useGlamourActions(setState);
 
@@ -19,8 +21,12 @@ function App() {
         <main
           id="main-content"
           tabIndex={-1}
+          aria-labelledby="app-page-title"
           className="grid w-full min-w-0 grid-cols-1 items-stretch gap-5 xl:grid-cols-[minmax(0,1fr)_400px] xl:gap-8"
         >
+          <h1 id="app-page-title" className="sr-only">
+            {t('common.title_brand')}
+          </h1>
           <div className="flex min-w-0 flex-col self-stretch">
             <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />
           </div>

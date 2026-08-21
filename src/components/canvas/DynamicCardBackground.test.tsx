@@ -14,6 +14,7 @@ const palette: ImagePalette = {
   ],
   averageLuminance: 0.25,
   scrimOpacity: 0.13,
+  contrastScrimOpacity: 0.3,
   textTone: 'light',
   previewDataUrl: 'data:image/jpeg;base64,preview',
   fallback: 'none',
