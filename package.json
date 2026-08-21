@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -16,6 +19,7 @@
     "sync:facewear": "node scripts/syncFacewear.mjs"
   },
   "dependencies": {
+    "@ff14-glamour/design-system": "file:./packages/design-system",
     "@hugeicons/core-free-icons": "^4.2.3",
     "@hugeicons/react": "^1.1.9",
     "clsx": "^2.1.1",

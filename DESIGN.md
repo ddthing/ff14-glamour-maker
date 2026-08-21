@@ -1,309 +1,441 @@
-# Design System Inspired by Cursor
+# FF14 Glamour Maker Design System
 
-## 1. Visual Theme & Atmosphere
+현재 운영 중인 투영 세트 메이커의 시각 언어와 UI 규칙을 기록한 문서입니다.
+새 화면이나 다른 프로젝트를 만들 때 이 문서를 먼저 읽고, 임의의 색상·radius·shadow를 추가하지 않습니다.
 
-Cursor's website is a study in warm minimalism meets code-editor elegance. The entire experience is built on a warm off-white canvas (`#f2f1ed`) with dark warm-brown text (`#26251e`) -- not pure black, not neutral gray, but a deeply warm near-black with a yellowish undertone that evokes old paper, ink, and craft. This warmth permeates every surface: backgrounds lean toward cream (`#e6e5e0`, `#ebeae5`), borders dissolve into transparent warm overlays using `oklab` color space, and even the error state (`#cf2d56`) carries warmth rather than clinical red. The result feels more like a premium print publication than a tech website.
+## 0. 문서 기준
 
-The custom CursorGothic font is the typographic signature -- a gothic sans-serif with aggressive negative letter-spacing at display sizes (-2.16px at 72px) that creates a compressed, engineered feel. As a secondary voice, the jjannon serif font (with OpenType `"cswh"` contextual swash alternates) provides literary counterpoint for body copy and editorial passages. The monospace voice comes from berkeleyMono, a refined coding font that connects the marketing site to Cursor's core identity as a code editor. This three-font system (gothic display, serif body, mono code) gives Cursor one of the most typographically rich palettes in developer tooling.
+이 문서는 현재 구현을 기준으로 정리한 디자인 계약입니다.
 
-The border system is particularly distinctive -- Cursor uses `oklab()` color space for border colors, applying warm brown at various alpha levels (0.1, 0.2, 0.55) to create borders that feel organic rather than mechanical. The signature border color `oklab(0.263084 -0.00230259 0.0124794 / 0.1)` is not a simple rgba value but a perceptually uniform color that maintains visual consistency across different backgrounds.
+- 구현 기준: <code>src/index.css</code>
+- 작업공간: <code>src/App.tsx</code>, <code>src/components/canvas</code>, <code>src/components/controls</code>
+- 콘텐츠 페이지: <code>src/components/layout</code>, <code>src/pages</code>
+- 아이콘: Hugeicons
+- 폰트: Pretendard Variable
+- CSS: Tailwind CSS v4 utility와 <code>src/index.css</code>의 공통 클래스 혼용
 
-**Key Characteristics:**
-- CursorGothic with aggressive negative letter-spacing (-2.16px at 72px, -0.72px at 36px) for compressed display headings
-- jjannon serif for body text with OpenType `"cswh"` (contextual swash alternates)
-- berkeleyMono for code and technical labels
-- Warm off-white background (`#f2f1ed`) instead of pure white -- the entire system is warm-shifted
-- Primary text color `#26251e` (warm near-black with yellow undertone)
-- Accent orange `#f54e00` for brand highlight and links
-- oklab-space borders at various alpha levels for perceptually uniform edge treatment
-- Pill-shaped elements with extreme radius (33.5M px, effectively full-pill)
-- 8px base spacing system with fine-grained sub-8px increments (1.5px, 2px, 2.5px, 3px, 4px, 5px, 6px)
+스타일의 핵심은 “차분한 중성색 작업공간 + 사진에서 추출한 카드 배경 + 조밀하지만 충분한 터치 여백”입니다.
+브랜드 경험은 화려한 장식보다 사진과 투영 정보의 가독성을 우선합니다.
 
-## 2. Color Palette & Roles
+## 1. Visual Direction
 
-### Primary
-- **Cursor Dark** (`#26251e`): Primary text, headings, dark UI surfaces. A warm near-black with distinct yellow-brown undertone -- the defining color of the system.
-- **Cursor Cream** (`#f2f1ed`): Page background, primary surface. Not white but a warm cream that sets the entire warm tone.
-- **Cursor Light** (`#e6e5e0`): Secondary surface, button backgrounds, card fills. A slightly warmer, slightly darker cream.
-- **Pure White** (`#ffffff`): Used sparingly for maximum contrast elements and specific surface highlights.
-- **True Black** (`#000000`): Minimal use, specific code/console contexts.
+### 키워드
 
-### Accent
-- **Cursor Orange** (`#f54e00`): Brand accent, `--color-accent`. A vibrant red-orange used for primary CTAs, active links, and brand moments. Warm and urgent.
-- **Gold** (`#c08532`): Secondary accent, warm gold for premium or highlighted contexts.
+- Quiet utility: 도구처럼 명확하고 조용한 화면
+- Neutral studio: 흰색·회색·검정 중심의 중성 표면
+- Editorial card: 완성 결과물은 사진과 정보가 균형을 이루는 한 장의 카드
+- Soft density: 간격은 조밀하게 유지하되 입력과 터치 영역은 답답하지 않게
+- Adaptive contrast: 사진 색상에 따라 카드의 텍스트 톤을 자동 조정
 
-### Semantic
-- **Error** (`#cf2d56`): `--color-error`. A warm crimson-rose rather than cold red.
-- **Success** (`#1f8a65`): `--color-success`. A muted teal-green, warm-shifted.
+### 지켜야 할 것
 
-### Timeline / Feature Colors
-- **Thinking** (`#dfa88f`): Warm peach for "thinking" state in AI timeline.
-- **Grep** (`#9fc9a2`): Soft sage green for search/grep operations.
-- **Read** (`#9fbbe0`): Soft blue for file reading operations.
-- **Edit** (`#c0a8dd`): Soft lavender for editing operations.
+- 앱 외곽은 순수한 장식용 그라디언트보다 표면 단계와 1px border로 깊이를 만듭니다.
+- primary text는 순수 검정 대신 <code>--text-primary</code>를 사용합니다.
+- 정보 패널의 배경은 사용자 사진에서 추출한 팔레트로 만들고, 텍스트 대비를 먼저 계산합니다.
+- 카드 내부의 장식은 정보 위에 놓이지 않습니다. scrim, noise, divider는 가독성을 보조하는 수준으로 제한합니다.
+- 화면 전체의 radius는 6·8·12px 계열을 사용하고, 태그와 상태 chip만 pill을 사용합니다.
 
-### Surface Scale
-- **Surface 100** (`#f7f7f4`): Lightest button/card surface, barely tinted.
-- **Surface 200** (`#f2f1ed`): Primary page background.
-- **Surface 300** (`#ebeae5`): Button default background, subtle emphasis.
-- **Surface 400** (`#e6e5e0`): Card backgrounds, secondary surfaces.
-- **Surface 500** (`#e1e0db`): Tertiary button background, deeper emphasis.
+## 2. Design Tokens
 
-### Border Colors
-- **Border Primary** (`oklab(0.263084 -0.00230259 0.0124794 / 0.1)`): Standard border, 10% warm brown in oklab space.
-- **Border Medium** (`oklab(0.263084 -0.00230259 0.0124794 / 0.2)`): Emphasized border, 20% warm brown.
-- **Border Strong** (`rgba(38, 37, 30, 0.55)`): Strong borders, table rules.
-- **Border Solid** (`#26251e`): Full-opacity dark border for maximum contrast.
-- **Border Light** (`#f2f1ed`): Light border matching page background.
+### 2.1 Typography
 
-### Shadows & Depth
-- **Card Shadow** (`rgba(0,0,0,0.14) 0px 28px 70px, rgba(0,0,0,0.1) 0px 14px 32px, oklab(0.263084 -0.00230259 0.0124794 / 0.1) 0px 0px 0px 1px`): Heavy elevated card with warm oklab border ring.
-- **Ambient Shadow** (`rgba(0,0,0,0.02) 0px 0px 16px, rgba(0,0,0,0.008) 0px 0px 8px`): Subtle ambient glow for floating elements.
+기본 폰트는 Pretendard Variable입니다. 외부 폰트를 사용할 수 없을 때도 동일한 인상을 유지하도록 fallback을 둡니다.
 
-## 3. Typography Rules
+~~~css
+--font-sans: 'Pretendard Variable', Pretendard, sans-serif;
+~~~
 
-### Font Family
-- **Display/Headlines**: `CursorGothic`, with fallbacks: `CursorGothic Fallback, system-ui, Helvetica Neue, Helvetica, Arial`
-- **Body/Editorial**: `jjannon`, with fallbacks: `Iowan Old Style, Palatino Linotype, URW Palladio L, P052, ui-serif, Georgia, Cambria, Times New Roman, Times`
-- **Code/Technical**: `berkeleyMono`, with fallbacks: `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New`
-- **UI/System**: `system-ui`, with fallbacks: `-apple-system, Segoe UI, Helvetica Neue, Arial`
-- **Icons**: `CursorIcons16` (icon font at 14px and 12px)
-- **OpenType Features**: `"cswh"` on jjannon body text, `"ss09"` on CursorGothic buttons/captions
+| 역할 | 크기 | 굵기 | 규칙 |
+| --- | ---: | ---: | --- |
+| 일반 본문 | 브라우저 기본 또는 0.94rem | 400–500 | line-height 1.7–1.75 |
+| 입력·검색 UI | 0.875rem | 400–600 | 한 줄 truncation 허용 |
+| 섹션 라벨 | 0.68–0.75rem | 600–750 | 필요한 경우 uppercase, tracking 0.08–0.16em |
+| 콘텐츠 페이지 제목 | clamp(1.9rem, 5vw, 3.1rem) | 750 | line-height 1.08, tracking -0.045em |
+| 카드 아이템명 | 1.05–1.30rem | 800 | line-height 1.15, tracking -0.03em |
+| 카드 보조명 | 0.73–0.82rem | 500 | line-height 1.2 |
+| 카드 메타 | 0.50–0.60rem | 600–800 | uppercase, tracking 0.05–0.12em |
 
-### Hierarchy
+### 2.2 Light theme
 
-| Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
-|------|------|------|--------|-------------|----------------|-------|
-| Display Hero | CursorGothic | 72px (4.50rem) | 400 | 1.10 (tight) | -2.16px | Maximum compression, hero statements |
-| Section Heading | CursorGothic | 36px (2.25rem) | 400 | 1.20 (tight) | -0.72px | Feature sections, CTA headlines |
-| Sub-heading | CursorGothic | 26px (1.63rem) | 400 | 1.25 (tight) | -0.325px | Card headings, sub-sections |
-| Title Small | CursorGothic | 22px (1.38rem) | 400 | 1.30 (tight) | -0.11px | Smaller titles, list headings |
-| Body Serif | jjannon | 19.2px (1.20rem) | 500 | 1.50 | normal | Editorial body with `"cswh"` |
-| Body Serif SM | jjannon | 17.28px (1.08rem) | 400 | 1.35 | normal | Standard body text, descriptions |
-| Body Sans | CursorGothic | 16px (1.00rem) | 400 | 1.50 | normal/0.08px | UI body text |
-| Button Label | CursorGothic | 14px (0.88rem) | 400 | 1.00 (tight) | normal | Primary button text |
-| Button Caption | CursorGothic | 14px (0.88rem) | 400 | 1.50 | 0.14px | Secondary button with `"ss09"` |
-| Caption | CursorGothic | 11px (0.69rem) | 400-500 | 1.50 | normal | Small captions, metadata |
-| System Heading | system-ui | 20px (1.25rem) | 700 | 1.55 | normal | System UI headings |
-| System Caption | system-ui | 13px (0.81rem) | 500-600 | 1.33 | normal | System UI labels |
-| System Micro | system-ui | 11px (0.69rem) | 500 | 1.27 (tight) | 0.048px | Uppercase micro labels |
-| Mono Body | berkeleyMono | 12px (0.75rem) | 400 | 1.67 (relaxed) | normal | Code blocks |
-| Mono Small | berkeleyMono | 11px (0.69rem) | 400 | 1.33 | -0.275px | Inline code, terminal |
-| Lato Heading | Lato | 16px (1.00rem) | 600 | 1.33 | normal | Lato section headings |
-| Lato Caption | Lato | 14px (0.88rem) | 400-600 | 1.33 | normal | Lato captions |
-| Lato Micro | Lato | 12px (0.75rem) | 400-600 | 1.27 (tight) | 0.053px | Lato small labels |
+색상은 중성 OKLCH를 기본으로 합니다. hex로 임의 변환하지 말고 아래 역할 토큰을 사용합니다.
 
-### Principles
-- **Gothic compression for impact**: CursorGothic at display sizes uses -2.16px letter-spacing at 72px, progressively relaxing: -0.72px at 36px, -0.325px at 26px, -0.11px at 22px, normal at 16px and below. The tracking creates a sense of precision engineering.
-- **Serif for soul**: jjannon provides literary warmth. The `"cswh"` feature adds contextual swash alternates that give body text a calligraphic quality.
-- **Three typographic voices**: Gothic (display/UI), serif (editorial/body), mono (code/technical). Each serves a distinct communication purpose.
-- **Weight restraint**: CursorGothic uses weight 400 almost exclusively, relying on size and tracking for hierarchy rather than weight. System-ui components use 500-700 for functional emphasis.
+| 토큰 | 값 | 역할 |
+| --- | --- | --- |
+| <code>--bg-app</code> | <code>oklch(0.985 0 0)</code> | 앱 전체 배경 |
+| <code>--bg-panel</code> | <code>oklch(1 0 0)</code> | 입력 패널·카드 표면 |
+| <code>--bg-slot</code> | <code>oklch(0.97 0 0)</code> | slot 보조 배경 |
+| <code>--surface-100</code> | <code>oklch(1 0 0)</code> | 가장 밝은 표면 |
+| <code>--surface-200</code> | <code>oklch(0.985 0 0)</code> | 앱 배경과 가까운 표면 |
+| <code>--surface-300</code> | <code>oklch(0.97 0 0)</code> | hover·button·선택 보조 표면 |
+| <code>--surface-400</code> | <code>oklch(0.922 0 0)</code> | 깊은 보조 표면 |
+| <code>--surface-500</code> | <code>oklch(0.87 0 0)</code> | 강한 보조 표면 |
+| <code>--text-primary</code> | <code>oklch(0.145 0 0)</code> | 제목·핵심 값 |
+| <code>--text-secondary</code> | <code>oklch(0.371 0 0)</code> | 일반 본문·보조 제목 |
+| <code>--text-muted</code> | <code>oklch(0.556 0 0)</code> | hint·metadata |
+| <code>--border</code> | <code>oklch(0.922 0 0)</code> | 기본 1px 경계 |
+| <code>--border-medium</code> | <code>oklch(0.708 0 0 / 55%)</code> | hover·focus·선택 경계 |
+| <code>--border-strong</code> | <code>oklch(0.371 0 0 / 60%)</code> | 강한 구분선 |
+| <code>--accent</code> | <code>oklch(0.97 0 0)</code> | 상호작용 보조 배경 |
+| <code>--accent-strong</code> | <code>oklch(0.145 0 0)</code> | 선택 상태·강조 |
+| <code>--error</code> | <code>oklch(0.577 0.245 27.325)</code> | 오류·hover 피드백 |
+| <code>--success</code> | <code>#23866b</code> | 복사 완료·성공 상태 |
 
-## 4. Component Stylings
+### 2.3 Dark theme
 
-### Buttons
+<code>.dark</code>가 <code>html</code>에 적용되면 같은 역할 토큰이 어두운 표면으로 교체됩니다.
 
-**Primary (Warm Surface)**
-- Background: `#ebeae5` (Surface 300)
-- Text: `#26251e` (Cursor Dark)
-- Padding: 10px 12px 10px 14px
-- Radius: 8px
-- Outline: none
-- Hover: text shifts to `var(--color-error)` (`#cf2d56`)
-- Focus shadow: `rgba(0,0,0,0.1) 0px 4px 12px`
-- Use: Primary actions, main CTAs
+| 토큰 | 값 |
+| --- | --- |
+| <code>--bg-app</code> | <code>oklch(0.145 0 0)</code> |
+| <code>--bg-panel</code> | <code>oklch(0.205 0 0)</code> |
+| <code>--bg-slot</code> | <code>oklch(0.269 0 0)</code> |
+| <code>--surface-100</code> | <code>oklch(0.205 0 0)</code> |
+| <code>--surface-200</code> | <code>oklch(0.235 0 0)</code> |
+| <code>--surface-300</code> | <code>oklch(0.269 0 0)</code> |
+| <code>--surface-400</code> | <code>oklch(0.32 0 0)</code> |
+| <code>--surface-500</code> | <code>oklch(0.371 0 0)</code> |
+| <code>--text-primary</code> | <code>oklch(0.985 0 0)</code> |
+| <code>--text-secondary</code> | <code>oklch(0.87 0 0)</code> |
+| <code>--text-muted</code> | <code>oklch(0.708 0 0)</code> |
+| <code>--border</code> | <code>oklch(1 0 0 / 10%)</code> |
+| <code>--border-medium</code> | <code>oklch(1 0 0 / 20%)</code> |
+| <code>--border-strong</code> | <code>oklch(1 0 0 / 44%)</code> |
+| <code>--accent</code> | <code>oklch(0.269 0 0)</code> |
+| <code>--accent-strong</code> | <code>oklch(0.985 0 0)</code> |
+| <code>--error</code> | <code>oklch(0.704 0.191 22.216)</code> |
+| <code>--success</code> | <code>#65c9a8</code> |
 
-**Secondary Pill**
-- Background: `#e6e5e0` (Surface 400)
-- Text: `oklab(0.263 / 0.6)` (60% warm brown)
-- Padding: 3px 8px
-- Radius: full pill (33.5M px)
-- Hover: text shifts to `var(--color-error)`
-- Use: Tags, filters, secondary actions
+### 2.4 Radius, shadow, motion
 
-**Tertiary Pill**
-- Background: `#e1e0db` (Surface 500)
-- Text: `oklab(0.263 / 0.6)` (60% warm brown)
-- Radius: full pill
-- Use: Active filter state, selected tags
+~~~css
+--radius-sm: 6px;
+--radius-md: 8px;
+--radius-lg: 12px;
+--radius-full: 9999px;
 
-**Ghost (Transparent)**
-- Background: `rgba(38, 37, 30, 0.06)` (6% warm brown)
-- Text: `rgba(38, 37, 30, 0.55)` (55% warm brown)
-- Padding: 6px 12px
-- Use: Tertiary actions, dismiss buttons
+--shadow-elevated:
+  0 12px 40px var(--shadow-color-1),
+  0 2px 10px var(--shadow-color-2);
 
-**Light Surface**
-- Background: `#f7f7f4` (Surface 100) or `#f2f1ed` (Surface 200)
-- Text: `#26251e` or `oklab(0.263 / 0.9)` (90%)
-- Padding: 0px 8px 1px 12px
-- Use: Dropdown triggers, subtle interactive elements
+--shadow-focus: 0 0 0 4px var(--shadow-color-focus);
+~~~
 
-### Cards & Containers
-- Background: `#e6e5e0` or `#f2f1ed`
-- Border: `1px solid oklab(0.263 / 0.1)` (warm brown at 10%)
-- Radius: 8px (standard), 4px (compact), 10px (featured)
-- Shadow: `rgba(0,0,0,0.14) 0px 28px 70px, rgba(0,0,0,0.1) 0px 14px 32px` for elevated cards
-- Hover: shadow intensification
+- 기본 card와 panel은 shadow를 거의 사용하지 않고 border로 구분합니다.
+- dropdown처럼 떠야 하는 요소만 <code>--shadow-elevated</code>를 사용합니다.
+- 입력 focus는 border-medium + shadow-focus를 사용합니다.
+- 색상·background transition은 150–200ms, slot과 레이아웃 상태는 160–300ms입니다.
+- 클릭 피드백은 <code>scale(0.97)</code> 또는 <code>scale(0.98)</code> 이하로 작게 사용합니다.
+- <code>prefers-reduced-motion: reduce</code>에서는 transition과 animation을 사실상 제거합니다.
 
-### Inputs & Forms
-- Background: transparent or surface
-- Text: `#26251e`
-- Padding: 8px 8px 6px (textarea)
-- Border: `1px solid oklab(0.263 / 0.1)`
-- Focus: border shifts to `oklab(0.263 / 0.2)` or accent orange
+## 3. Layout
 
-### Navigation
-- Clean horizontal nav on warm cream background
-- Cursor logotype left-aligned (~96x24px)
-- Links: 14px CursorGothic or system-ui, weight 500
-- CTA button: warm surface with Cursor Dark text
-- Tab navigation: bottom border `1px solid oklab(0.263 / 0.1)` with active tab differentiation
+### 3.1 앱 셸
 
-### Image Treatment
-- Code editor screenshots with `1px solid oklab(0.263 / 0.1)` border
-- Rounded corners: 8px standard
-- AI chat/timeline screenshots dominate feature sections
-- Warm gradient or solid cream backgrounds behind hero images
+- header는 sticky이며 높이는 mobile 44px, larger viewport 46px입니다.
+- 콘텐츠 최대 너비는 1480px입니다.
+- 외곽 horizontal padding은 mobile 12px, small 20px, large 40px입니다.
+- footer는 작은 metadata와 링크만 제공하고, 본문보다 시각적 우선순위를 낮춥니다.
+- 앱은 <code>min-height: 100dvh</code>와 <code>overflow-x: hidden</code>을 기본으로 합니다.
 
-### Distinctive Components
+### 3.2 작업공간
 
-**AI Timeline**
-- Vertical timeline showing AI operations: thinking (peach), grep (sage), read (blue), edit (lavender)
-- Each step uses its semantic color with matching text
-- Connected with vertical lines
-- Core visual metaphor for Cursor's AI-first coding experience
+메인 작업공간은 작은 화면에서 한 열, xl breakpoint부터 미리보기와 컨트롤 패널 두 열입니다.
 
-**Code Editor Previews**
-- Dark code editor screenshots with warm cream border frame
-- berkeleyMono for code text
-- Syntax highlighting using timeline colors
+~~~css
+display: grid;
+grid-template-columns: 1fr;
+gap: 20px;
 
-**Pricing Cards**
-- Warm surface backgrounds with bordered containers
-- Feature lists using jjannon serif for readability
-- CTA buttons with accent orange or primary dark styling
+@media (min-width: 1280px) {
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: 32px;
+}
+~~~
 
-## 5. Layout Principles
+- 미리보기는 flex로 남은 공간을 사용합니다.
+- 컨트롤 패널은 고정 폭 400px을 넘지 않습니다.
+- 패널 내부는 세로 flex이며, 입력 영역은 scroll, action dock은 하단에 고정됩니다.
 
-### Spacing System
-- Base unit: 8px
-- Fine scale: 1.5px, 2px, 2.5px, 3px, 4px, 5px, 6px (sub-8px for micro-adjustments)
-- Standard scale: 8px, 10px, 12px, 14px (derived from extraction)
-- Extended scale (inferred): 16px, 24px, 32px, 48px, 64px, 96px
-- Notable: fine-grained sub-8px increments for precise icon/text alignment
+### 3.3 정보 페이지
 
-### Grid & Container
-- Max content width: approximately 1200px
-- Hero: centered single-column with generous top padding (80-120px)
-- Feature sections: 2-3 column grids for cards and features
-- Full-width sections with warm cream or slightly darker backgrounds
-- Sidebar layouts for documentation and settings pages
+- 본문 최대 너비: 900px
+- hero 텍스트 최대 너비: 760px
+- 본문 설명 최대 너비: 64ch
+- 기본 padding: <code>clamp(1.5rem, 4vw, 4rem) 1rem 4rem</code>
+- mobile 600px 이하에서는 좌우 padding 0.75rem, 하단 padding 2.5rem
+- section card는 border + 12px radius + surface background
 
-### Whitespace Philosophy
-- **Warm negative space**: The cream background means whitespace has warmth and texture, unlike cold white minimalism. Large empty areas feel cozy rather than clinical.
-- **Compressed text, open layout**: Aggressive negative letter-spacing on CursorGothic headlines is balanced by generous surrounding margins. Text is dense; space around it breathes.
-- **Section variation**: Alternating surface tones (cream → lighter cream → cream) create subtle section differentiation without harsh boundaries.
+## 4. Hero Output Card
 
-### Border Radius Scale
-- Micro (1.5px): Fine detail elements
-- Small (2px): Inline elements, code spans
-- Medium (3px): Small containers, inline badges
-- Standard (4px): Cards, images, compact buttons
-- Comfortable (8px): Primary buttons, cards, menus
-- Featured (10px): Larger containers, featured cards
-- Full Pill (33.5M px / 9999px): Pill buttons, tags, badges
+완성 결과물은 1080 × 900px 고정 캔버스입니다.
 
-## 6. Depth & Elevation
+| 영역 | 크기 | 역할 |
+| --- | ---: | --- |
+| photo panel | 480 × 900px | 캐릭터 사진 업로드·교체 |
+| info panel | 600 × 900px | 세트명·제작자·장비 목록 |
+| info padding | 32px 40px 24px | 정보 밀도와 여백의 기준 |
 
-| Level | Treatment | Use |
-|-------|-----------|-----|
-| Flat (Level 0) | No shadow | Page background, text blocks |
-| Border Ring (Level 1) | `oklab(0.263 / 0.1) 0px 0px 0px 1px` | Standard card/container border (warm oklab) |
-| Border Medium (Level 1b) | `oklab(0.263 / 0.2) 0px 0px 0px 1px` | Emphasized borders, active states |
-| Ambient (Level 2) | `rgba(0,0,0,0.02) 0px 0px 16px, rgba(0,0,0,0.008) 0px 0px 8px` | Floating elements, subtle glow |
-| Elevated Card (Level 3) | `rgba(0,0,0,0.14) 0px 28px 70px, rgba(0,0,0,0.1) 0px 14px 32px, oklab ring` | Modals, popovers, elevated cards |
-| Focus | `rgba(0,0,0,0.1) 0px 4px 12px` on button focus | Interactive focus feedback |
+외부 wrapper가 available width에 맞춰 scale하고, 내부 canvas는 1080 × 900을 유지합니다.
+이 방식으로 responsive preview와 export 결과의 비율을 분리합니다.
 
-**Shadow Philosophy**: Cursor's depth system is built around two ideas. First, borders use perceptually uniform oklab color space rather than rgba, ensuring warm brown borders look consistent across different background tones. Second, elevation shadows use dramatically large blur values (28px, 70px) with moderate opacity (0.14, 0.1), creating a diffused, atmospheric lift rather than hard-edged drop shadows. Cards don't feel like they float above the page -- they feel like the page has gently opened a space for them.
+### 4.1 Photo panel
 
-### Decorative Depth
-- Warm cream surface variations create subtle tonal depth without shadows
-- oklab borders at 10% and 20% create a spectrum of edge definition
-- No harsh divider lines -- section separation through background tone shifts and spacing
+- 기본 배경: <code>#17191c</code>
+- 이미지: 전체 영역 object-cover
+- 빈 상태: 안쪽 margin 24px, 큰 화면 32px의 얇은 border frame
+- 업로드 아이콘: 56 × 56px, white 4–12% surface
+- hover 교체 버튼: 하단 16px inset, min-height 44px, dark translucent surface
+- drag 상태: inset 16px, dashed white border, dark scrim
 
-## 7. Interaction & Motion
+### 4.2 Dynamic info background
 
-### Hover States
-- Buttons: text color shifts to `--color-error` (`#cf2d56`) on hover -- a distinctive warm crimson that signals interactivity
-- Links: color shift to accent orange (`#f54e00`) or underline decoration with `rgba(38, 37, 30, 0.4)`
-- Cards: shadow intensification on hover (ambient → elevated)
+사진이 있으면 <code>useImagePalette</code>가 색상 3개와 text tone을 계산합니다.
 
-### Focus States
-- Shadow-based focus: `rgba(0,0,0,0.1) 0px 4px 12px` for depth-based focus indication
-- Border focus: `oklab(0.263 / 0.2)` (20% border) for input/form focus
-- Consistent warm tone in all focus states -- no cold blue focus rings
+1. primary 색상으로 base background를 채웁니다.
+2. 원본의 blurred preview image를 크게 확대해 ambient 색을 만듭니다.
+3. primary·secondary·tertiary radial/linear gradient를 중첩합니다.
+4. 좌우 linear scrim으로 텍스트 영역의 대비를 확보합니다.
+5. 낮은 opacity의 noise texture를 추가합니다.
 
-### Transitions
-- Color transitions: 150ms ease for text/background color changes
-- Shadow transitions: 200ms ease for elevation changes
-- Transform: subtle scale or translate for interactive feedback
+사진이 없을 때는 <code>#17191c</code> fallback을 사용합니다. 배경 효과가 정보보다 강해지면 안 됩니다.
 
-## 8. Responsive Behavior
+### 4.3 Card text tone
 
-### Breakpoints
-| Name | Width | Key Changes |
-|------|-------|-------------|
-| Mobile | <600px | Single column, reduced padding, stacked navigation |
-| Tablet Small | 600-768px | 2-column grids begin |
-| Tablet | 768-900px | Expanded card grids, sidebar appears |
-| Desktop Small | 900-1279px | Full layout forming |
-| Desktop | >1279px | Full layout, maximum content width |
+정보 패널은 배경 밝기에 따라 아래 변수를 주입합니다.
 
-### Touch Targets
-- Buttons use comfortable padding (6px-14px vertical, 8px-14px horizontal)
-- Pill buttons maintain tap-friendly sizing with 3px-10px padding
-- Navigation links at 14px with adequate spacing for touch
+| 역할 | dark text tone | light text tone |
+| --- | --- | --- |
+| primary | rgba(18, 22, 26, 0.94) | rgba(255, 255, 255, 0.98) |
+| secondary | rgba(18, 22, 26, 0.72) | rgba(255, 255, 255, 0.76) |
+| muted | rgba(18, 22, 26, 0.54) | rgba(255, 255, 255, 0.56) |
+| divider | rgba(18, 22, 26, 0.14) | rgba(255, 255, 255, 0.12) |
+| chip background | rgba(255, 255, 255, 0.38) | rgba(255, 255, 255, 0.08) |
+| chip border | rgba(18, 22, 26, 0.14) | rgba(255, 255, 255, 0.12) |
 
-### Collapsing Strategy
-- Hero: 72px CursorGothic → 36px → 26px on smaller screens, maintaining proportional letter-spacing
-- Navigation: horizontal links → hamburger menu on mobile
-- Feature cards: 3-column → 2-column → single column stacked
-- Code editor screenshots: maintain aspect ratio, may shrink with border treatment preserved
-- Timeline visualization: horizontal → vertical stacking
-- Section spacing: 80px+ → 48px → 32px on mobile
+### 4.4 Equipment row
 
-### Image Behavior
-- Editor screenshots maintain warm border treatment at all sizes
-- AI timeline adapts from horizontal to vertical layout
-- Product screenshots use responsive images with consistent border radius
-- Full-width hero images scale proportionally
+장비 행은 메인명 → 보조 다국어명 → 염색 chip의 3단 구조입니다.
 
-## 9. Agent Prompt Guide
+| mode | icon | row padding | text gap | main font |
+| --- | ---: | --- | ---: | ---: |
+| comfortable | 48px | 8px 0 | 3px | 1.30rem |
+| balanced | 42px | 6px 0 | 2px | 1.15rem |
+| compact | 36px | 5px 0 | 2px | 1.05rem |
 
-### Quick Color Reference
-- Primary CTA background: `#ebeae5` (warm cream button)
-- Page background: `#f2f1ed` (warm off-white)
-- Text color: `#26251e` (warm near-black)
-- Secondary text: `rgba(38, 37, 30, 0.55)` (55% warm brown)
-- Accent: `#f54e00` (orange)
-- Error/hover: `#cf2d56` (warm crimson)
-- Success: `#1f8a65` (muted teal)
-- Border: `oklab(0.263084 -0.00230259 0.0124794 / 0.1)` or `rgba(38, 37, 30, 0.1)` as fallback
+- icon radius는 2px로 작게 유지합니다.
+- row divider는 <code>--card-divider</code>를 사용합니다.
+- 염색 chip은 4px gap, 2px 8px 2px 5px padding, 2px radius입니다.
+- 색상 swatch는 10 × 10px입니다.
+- 아이템명이 길어도 word-break와 sub line을 이용해 카드 내 정보 손실을 줄입니다.
 
-### Example Component Prompts
-- "Create a hero section on `#f2f1ed` warm cream background. Headline at 72px CursorGothic weight 400, line-height 1.10, letter-spacing -2.16px, color `#26251e`. Subtitle at 17.28px jjannon weight 400, line-height 1.35, color `rgba(38,37,30,0.55)`. Primary CTA button (`#ebeae5` bg, 8px radius, 10px 14px padding) with hover text shift to `#cf2d56`."
-- "Design a card: `#e6e5e0` background, border `1px solid rgba(38,37,30,0.1)`. Radius 8px. Title at 22px CursorGothic weight 400, letter-spacing -0.11px. Body at 17.28px jjannon weight 400, color `rgba(38,37,30,0.55)`. Use `#f54e00` for link accents."
-- "Build a pill tag: `#e6e5e0` background, `rgba(38,37,30,0.6)` text, full-pill radius (9999px), 3px 8px padding, 14px CursorGothic weight 400."
-- "Create navigation: sticky `#f2f1ed` background with backdrop-filter blur. 14px system-ui weight 500 for links, `#26251e` text. CTA button right-aligned with `#ebeae5` bg and 8px radius. Bottom border `1px solid rgba(38,37,30,0.1)`."
-- "Design an AI timeline showing four steps: Thinking (`#dfa88f`), Grep (`#9fc9a2`), Read (`#9fbbe0`), Edit (`#c0a8dd`). Each step: 14px system-ui label + 16px CursorGothic description + vertical connecting line in `rgba(38,37,30,0.1)`."
+## 5. Control Panel Components
 
-### Iteration Guide
-1. Always use warm tones -- `#f2f1ed` background, `#26251e` text, never pure white/black for primary surfaces
-2. Letter-spacing scales with font size for CursorGothic: -2.16px at 72px, -0.72px at 36px, -0.325px at 26px, normal at 16px
-3. Use `rgba(38, 37, 30, alpha)` as a CSS-compatible fallback for oklab borders
-4. Three fonts, three voices: CursorGothic (display/UI), jjannon (editorial), berkeleyMono (code)
-5. Pill shapes (9999px radius) for tags and filters; 8px radius for primary buttons and cards
-6. Hover states use `#cf2d56` text color -- the warm crimson shift is a signature interaction
-7. Shadows use large blur values (28px, 70px) for diffused atmospheric depth
-8. The sub-8px spacing scale (1.5, 2, 2.5, 3, 4, 5, 6px) is critical for icon/text micro-alignment
+### 5.1 Panel and tabs
+
+- panel: <code>--bg-panel</code>, 1px <code>--border</code>, shadow 없음, 12px radius
+- tabs: 2열 grid, gap 6px, padding 8px, bottom border
+- tab: min-height 44px, 6px radius, 0.875rem, weight 650
+- active tab: surface-100 background, border, primary text
+- hover: surface-100 background, secondary text
+
+### 5.2 Inputs
+
+공통 input은 최소 높이 44px을 보장합니다.
+
+~~~css
+.input-base {
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+~~~
+
+- focus-visible: border-medium + shadow-focus
+- 검색 input은 좌측 icon을 위해 padding-left를 늘립니다.
+- 결과 dropdown은 surface-100, border, 6px radius, elevated shadow입니다.
+- 검색 결과 행은 min-height 44px, 아이콘 32px, text truncation을 사용합니다.
+
+### 5.3 Slot selector
+
+- 3열 grid, gap 8px
+- button min-height 76px, padding 8px, 6px radius
+- 빈 slot: surface-100 + border
+- hover: surface-200 + border-medium + scale 1.02
+- active: surface-300 + border-medium + 1px ring
+- filled indicator: 우상단 8px dot, primary 색상
+- icon frame: 36 × 36px, 6px radius
+
+선택됨과 입력됨을 동시에 표현해야 합니다. active는 배경·ring, filled는 작은 dot으로 표현해 의미를 겹치지 않게 합니다.
+
+### 5.4 General settings and presets
+
+- 각 section: 세로 flex, gap 12px, padding 16px 20px
+- label과 input 사이 gap: 10px
+- preset input row height: 40px
+- preset list row: surface-100, border, 8px 10px 8px 12px padding, 8px radius
+- 삭제는 아이콘 버튼으로 제공하고 hover 시 error 색상을 사용합니다.
+
+### 5.5 Hashtag tools
+
+해시태그는 기본 설정 안에서만 제공해 입력 흐름을 방해하지 않습니다.
+
+- wrapper: margin 16px 20px, padding 12px, surface-200, border, 8px radius
+- chip list: flex-wrap, gap 6.4px
+- chip: min-height 28px, full pill, surface-100
+- selected chip: <code>--accent-strong</code> 배경과 surface-100 text
+- 개별 copy button: chip 내부에 배치하고 opacity를 낮춰 시각적 우선순위를 줄입니다.
+- 다중 복사 button: width 100%, min-height 32px, surface-300, 6px radius
+- 복사 완료: success, 실패: error
+
+체크박스를 추가하지 않습니다. chip의 색상과 <code>aria-pressed</code>가 선택 상태를 충분히 전달합니다.
+
+### 5.6 Primary action
+
+- action dock: panel 하단 sticky, top border, surface-100, safe-area bottom padding
+- save button: min-height 46px, high-contrast primary background, 6px radius
+- 준비 전 disabled: opacity 0.58
+- 클릭: scale 0.98
+- export 중: icon 대신 작은 spinner
+
+## 6. Header, Footer, Content
+
+### Header
+
+- sticky top, app background, bottom border
+- brand mark: 8 × 8px, 1.5px border, 2px radius
+- wordmark: 0.78rem, weight 650, secondary text
+- language/theme controls: 30 × 30px, 5px radius
+- hover/current: surface-200 background
+- skip link: focus 시 화면 상단으로 들어오는 dark surface button
+
+### Footer
+
+- top border와 header background
+- brand 0.68rem, legal text 0.62rem
+- navigation link 0.64rem, muted text, min-height 24px
+- 지원 링크는 opacity를 낮춰 primary navigation보다 덜 강조합니다.
+
+### Content pages
+
+- eyebrow: 0.68rem, weight 700, tracking 0.1em, uppercase
+- page title: clamp(1.9rem, 5vw, 3.1rem)
+- description: 1rem, line-height 1.7, secondary text
+- prose: 0.94rem, line-height 1.75
+- FAQ row: min-height 52px, 0.9rem 1rem padding, open 시 bottom border
+- guide step: desktop 2열 rail + copy, mobile 1열로 전환
+
+## 7. Interaction and Accessibility
+
+- 모든 interactive element는 <code>:focus-visible</code>에서 2px ring + 3px offset을 가집니다.
+- input shell이 focus-within일 때도 border와 ring을 함께 표시합니다.
+- 주요 버튼과 tab은 min-height 44px을 유지합니다.
+- 아이콘만 있는 버튼은 30–44px hit area를 확보하고 aria-label을 제공합니다.
+- tab은 role=tab, aria-selected, aria-controls를 사용합니다.
+- 이미지는 고정 width/height 또는 aspect-ratio를 지정해 layout shift를 줄입니다.
+- hover만으로 핵심 정보를 전달하지 않습니다. active, selected, aria 상태를 함께 제공합니다.
+- <code>prefers-reduced-motion</code>과 <code>prefers-reduced-transparency</code>를 지원합니다.
+- 캔버스의 사진·배경은 장식이어도 정보 텍스트의 대비를 방해하지 않아야 합니다.
+
+## 8. Responsive Rules
+
+| 영역 | mobile | desktop |
+| --- | --- | --- |
+| workspace | 1열, panel이 preview 아래 | xl부터 preview + 400px panel |
+| shell padding | 12px | 20px → 40px |
+| content page | 좌우 12px | max 900px, clamp padding |
+| guide step | rail 위 / copy 아래 | rail 왼쪽 / copy 오른쪽 |
+| guide tips | 1열 | 2열 |
+| control panel | width 100% | width 400px |
+| preview | width에 맞춰 scale | available width 안에서 scale |
+
+새 breakpoint를 추가하기보다 기존 xl grid와 600px content-page breakpoint를 우선 재사용합니다.
+
+## 9. Implementation Recipes
+
+### 새 화면을 추가할 때
+
+1. 배경·텍스트·border는 역할 토큰을 선택합니다.
+2. panel은 <code>--bg-panel</code> + <code>--border</code> + 12px radius로 시작합니다.
+3. 입력은 44px 높이와 focus-visible 상태를 먼저 구현합니다.
+4. primary action은 dark primary, secondary action은 surface-300으로 구분합니다.
+5. mobile 600px과 xl 1280px에서 layout을 확인합니다.
+6. dark mode, keyboard focus, reduced motion을 확인합니다.
+
+### 다른 프로젝트로 이식할 때
+
+실행 가능한 공통 스타일은 <code>packages/design-system</code>으로 분리했습니다.
+<code>DESIGN.md</code>가 의사결정과 component recipe를 설명하고,
+패키지가 토큰과 Tailwind 연결을 실행합니다.
+
+#### Tailwind v4 프로젝트
+
+다른 저장소에서 로컬 패키지를 시험할 때:
+
+~~~sh
+npm install ../ff14-glamour-maker/packages/design-system
+~~~
+
+전역 CSS에서 기존 <code>@import "tailwindcss";</code>를 아래 한 줄로 교체합니다.
+
+~~~css
+@import "@ff14-glamour/design-system/theme.css";
+~~~
+
+이후 <code>html</code> 또는 상위 요소에 <code>dark</code> 클래스를 적용하면
+동일한 light/dark 토큰을 사용할 수 있습니다.
+
+#### Tailwind를 사용하지 않는 프로젝트
+
+토큰만 가져오고 컴포넌트 CSS는 각 프로젝트에서 작성합니다.
+
+~~~css
+@import "@ff14-glamour/design-system/fonts.css";
+@import "@ff14-glamour/design-system/tokens.css";
+~~~
+
+<code>var(--bg-panel)</code>, <code>var(--text-primary)</code>,
+<code>var(--border)</code>, <code>var(--radius-lg)</code>처럼 역할 기반 토큰을
+사용하면 프로젝트가 달라도 색상·상태·radius 기준이 흔들리지 않습니다.
+
+#### 이식 범위와 한계
+
+- 공유 패키지: light/dark 변수, Pretendard entry, Tailwind theme alias, radius, shadow
+- 현재 앱에 남긴 규칙: canvas, item slot, hashtag chip, control panel 등 제품 전용 selector
+- 정확히 같은 화면이 필요하면 이 문서의 markup/component recipe와 Hugeicons도 함께 적용
+- 픽셀 단위의 동일함은 markup, 폰트 렌더링, 아이콘, 브라우저 차이 때문에 보장되지 않음
+
+여러 독립 저장소에서 버전으로 관리하려면 패키지를 별도 저장소로 옮기거나
+private npm registry에 publish합니다. 현재는 실수로 공개 배포되지 않도록
+<code>private: true</code>인 로컬 workspace package로 두었습니다.
+
+## 10. Anti-patterns
+
+- Cursor 전용 색상이나 다른 프로젝트의 warm cream palette를 다시 섞지 않습니다.
+- 순수 검정·순수 흰색을 앱 표면의 기본값으로 남발하지 않습니다.
+- panel마다 다른 radius와 임의의 shadow를 추가하지 않습니다.
+- 44px 미만의 핵심 입력·tab·action을 만들지 않습니다.
+- 선택 상태를 색상 하나로만 표현하지 않습니다. border, ring, aria 상태 중 하나 이상을 함께 사용합니다.
+- 사진 카드 안에 고정 흰색 텍스트만 넣지 않습니다. palette text tone을 계산합니다.
+- mobile에서 desktop 2열을 억지로 유지하지 않습니다.
+- 디자인 문서와 실제 토큰이 달라지면 먼저 <code>src/index.css</code>와 이 문서를 함께 갱신합니다.
+
+## 11. Quick Reference
+
+~~~text
+Font       Pretendard Variable
+Palette    neutral OKLCH + high-contrast primary action + teal success + red error
+Radius     6 / 8 / 12px, pill only for tags and status chips
+Spacing    4 / 6 / 8 / 10 / 12 / 16 / 20 / 24 / 32 / 40px
+Input      min-height 44px
+Header     44px mobile, 46px larger viewport
+Workspace  1 column → xl (1280px) preview + 400px controls
+Canvas     1080 × 900px, photo 480px + info 600px
+Motion     150–200ms transitions, 0.97–0.98 active scale
+Focus      2px outline, 3px offset, role-based ring
+~~~
+
+이 문서의 목적은 특정 앱의 화면을 묘사하는 데서 끝나지 않고, 같은 의사결정 규칙을 다른 프로젝트에서도 반복해서 사용할 수 있게 하는 것입니다.
