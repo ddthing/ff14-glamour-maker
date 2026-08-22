@@ -70,6 +70,21 @@ export function SeoArticle() {
         </ul>
       </section>
 
+      <section className="guide-section">
+        <div className="guide-section-heading">
+          <p className="content-eyebrow">03 — CHECK</p>
+          <h2>{guide.checklistTitle}</h2>
+        </div>
+        <ul className="guide-checklist">
+          {guide.checklist.map(item => (
+            <li key={item}>
+              <span className="guide-checklist-mark" aria-hidden="true">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <aside className="content-callout guide-local-note">
         <h2>{guide.localNoteTitle}</h2>
         <p>{guide.localNote}</p>
@@ -81,7 +96,7 @@ export function SeoArticle() {
 
       <section className="guide-section">
         <div className="guide-section-heading">
-          <p className="content-eyebrow">03 — QUESTIONS</p>
+          <p className="content-eyebrow">04 — QUESTIONS</p>
           <h2>{guide.faqTitle}</h2>
         </div>
         <div className="content-faq-list">

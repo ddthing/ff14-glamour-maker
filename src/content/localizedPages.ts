@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-type SupportedLanguage = 'ko' | 'en' | 'ja';
+export type SupportedLanguage = 'ko' | 'en' | 'ja';
 
 interface PageMeta {
   title: string;
@@ -21,7 +21,7 @@ interface TextSection {
   links?: TextLink[];
 }
 
-interface LocalizedPageContent {
+export interface LocalizedPageContent {
   backHome: string;
   about: PageMeta & {
     sections: TextSection[];
@@ -37,6 +37,8 @@ interface LocalizedPageContent {
     steps: Array<{ title: string; description: string }>;
     tipsTitle: string;
     tips: Array<{ title: string; description: string }>;
+    checklistTitle: string;
+    checklist: string[];
     faqTitle: string;
     entries: Array<{ question: string; answer: string }>;
     localNoteTitle: string;
@@ -59,8 +61,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       title: '투영 세트 메이커 소개',
       description: '파이널판타지14 캐릭터 사진과 투영 장비를 한 장의 공유용 카드로 정리하는 브라우저 도구입니다.',
       eyebrow: '서비스 안내',
-      lastUpdated: '2026년 8월 13일 업데이트',
-      lastUpdatedIso: '2026-08-13',
+      lastUpdated: '2026년 8월 22일 업데이트',
+      lastUpdatedIso: '2026-08-22',
       contactLabel: '문의 채널',
       contactText: '오류 제보, 데이터 누락, 사용성 제안은 개발자에게 보내 주세요. 확인 가능한 재현 방법과 사용 중인 언어를 함께 알려 주시면 도움이 됩니다.',
       sections: [
@@ -83,6 +85,18 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
           paragraphs: [
             '업로드한 캐릭터 사진은 카드 생성을 위해 사용자의 브라우저에서 처리됩니다. 로그인이나 회원가입은 필요하지 않으며, 저장한 프리셋·테마·언어 설정은 사용자의 브라우저 저장소에 보관됩니다.',
             '장비 아이콘과 아이템 데이터는 서비스 화면에서 필요한 시점에 제공 경로를 통해 불러옵니다. 외부 제공자의 네트워크 요청과 처리 방식은 개인정보처리방침에서 확인할 수 있습니다.',
+          ],
+        },
+        {
+          title: '데이터 범위와 업데이트 방식',
+          paragraphs: [
+            '2026년 8월 22일 생성 데이터 기준으로 검색 카탈로그에는 장비·아이템 51,156개와 얼굴 소품 684개가 포함되어 있습니다. 한국어 이름은 51,128개, 영어와 일본어 이름은 각각 50,773개가 연결되어 있습니다.',
+            '영어·일본어 원문이 확인되지 않는 한국 서버 전용 항목 383개는 이름을 추정해 번역하지 않고 한국어 상태로 남깁니다. 그중 확인된 6개 아이콘은 ID 기반 저장소 자산으로 관리해 이름이 비슷한 다른 아이템과 잘못 연결되지 않도록 했습니다.',
+            '아이템 원천 CSV를 다시 병합할 때마다 번역 상태, 장비 부위, 로컬 아이콘 파일을 검증하고 lint·테스트·프로덕션 빌드를 통과한 데이터만 배포합니다. 패치에 따라 수치는 달라질 수 있으며, 누락은 문의 채널로 제보할 수 있습니다.',
+          ],
+          links: [
+            { label: '한국어 데이터마이닝 저장소', href: 'https://github.com/Ra-Workspace/ffxiv-datamining-ko' },
+            { label: 'XIVAPI 데이터마이닝 저장소', href: 'https://github.com/xivapi/ffxiv-datamining' },
           ],
         },
         {
@@ -139,8 +153,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       title: '투영 세트 메이커 사용 가이드',
       description: '캐릭터 사진에서 완성된 투영 카드까지, 처음 사용하는 사람도 따라 할 수 있는 5단계 안내입니다.',
       eyebrow: '시작하기',
-      lastUpdated: '2026년 8월 13일 업데이트',
-      lastUpdatedIso: '2026-08-13',
+      lastUpdated: '2026년 8월 22일 업데이트',
+      lastUpdatedIso: '2026-08-22',
       intro: [
         '투영 세트 메이커는 캐릭터 스크린샷, 장비 이름, 염색 정보를 한 장의 읽기 쉬운 카드로 정리합니다. 아래 순서대로 진행하면 필수 항목과 선택 항목을 헷갈리지 않고 완성할 수 있습니다.',
         '사진과 프리셋은 브라우저 중심으로 처리되며, 완성한 결과는 고화질 PNG 파일로 사용자의 기기에 저장됩니다.',
@@ -159,6 +173,14 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         { title: '조명과 배경', description: '밝고 대비가 있는 조명은 캐릭터를 또렷하게 합니다. 배경이 너무 복잡하면 정보 패널의 가독성이 떨어질 수 있습니다.' },
         { title: '이름과 염색', description: '아이템 이름과 염색을 한 번 더 확인하면 다른 플레이어가 세트를 재현하기 쉬워집니다.' },
         { title: '모바일 저장', description: '메신저로 바로 공유하기보다 먼저 원본 PNG를 저장하세요. 서비스 밖에서 발생하는 이미지 압축은 카드 품질을 바꿀 수 있습니다.' },
+      ],
+      checklistTitle: '저장 전 확인할 것',
+      checklist: [
+        '사진에서 얼굴과 의상이 잘 보이는지 확인하기',
+        '카드에 남길 장비 부위와 염색 입력하기',
+        '세트명과 제작자 표기 다시 확인하기',
+        '원본 PNG를 저장한 뒤 SNS에 업로드하기',
+        '필요하면 해시태그 도구에서 게시글용 태그 복사하기',
       ],
       faqTitle: '가이드 질문',
       entries: [
@@ -221,8 +243,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       title: 'About Glamour Set Maker',
       description: 'A browser tool for turning a Final Fantasy XIV character screenshot and glamour gear into one shareable card.',
       eyebrow: 'ABOUT THE MAKER',
-      lastUpdated: 'Updated August 13, 2026',
-      lastUpdatedIso: '2026-08-13',
+      lastUpdated: 'Updated August 22, 2026',
+      lastUpdatedIso: '2026-08-22',
       contactLabel: 'Contact',
       contactText: 'Send bug reports, missing-item reports, and product suggestions to the developer. Include the steps to reproduce an issue and the language you were using.',
       sections: [
@@ -245,6 +267,18 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
           paragraphs: [
             'Uploaded character photos are processed in the browser for card generation. The site does not require an account, and saved presets, theme, and language preferences remain in the browser storage on the current device.',
             'Item data and icons may be requested through external asset providers when the interface needs them. The privacy policy explains those network requests and the advertising providers used by the site.',
+          ],
+        },
+        {
+          title: 'Data coverage and update process',
+          paragraphs: [
+            'The generated catalog on August 22, 2026 contains 51,156 equipment and item records plus 684 face-accessory records. Korean names are available for 51,128 records, while English and Japanese names are each available for 50,773 records.',
+            'The 383 Korean-server-only records without verified English or Japanese source names stay marked as Korean instead of receiving guessed translations. Six confirmed regional icons are kept as ID-based repository assets so similarly named items are not matched by guesswork.',
+            'Each source-data refresh merges the item CSVs and checks translation status, equipment slots, and local icon files before lint, tests, and the production build run. Counts can change with a patch; missing items can be reported through the contact channel.',
+          ],
+          links: [
+            { label: 'Korean data-mining repository', href: 'https://github.com/Ra-Workspace/ffxiv-datamining-ko' },
+            { label: 'XIVAPI data-mining repository', href: 'https://github.com/xivapi/ffxiv-datamining' },
           ],
         },
         {
@@ -301,8 +335,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       title: 'Glamour Set Maker guide',
       description: 'A visual five-step walkthrough from a character screenshot to a finished Final Fantasy XIV glamour card.',
       eyebrow: 'GET STARTED',
-      lastUpdated: 'Updated August 13, 2026',
-      lastUpdatedIso: '2026-08-13',
+      lastUpdated: 'Updated August 22, 2026',
+      lastUpdatedIso: '2026-08-22',
       intro: [
         'Glamour Set Maker combines a character screenshot, item names, and dye information into one readable card. Follow the steps in order to keep required gear input separate from optional details.',
         'Photos and presets are handled in the browser, and the finished card is downloaded as a high-resolution PNG file to your device.',
@@ -321,6 +355,14 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         { title: 'Lighting and background', description: 'Bright, contrasty lighting helps the character remain readable. A less busy background gives the item list more visual room.' },
         { title: 'Names and dyes', description: 'Double-check item and dye names so another player can reproduce the set accurately.' },
         { title: 'Mobile saving', description: 'Save the original PNG before sending it to a messenger or social network, because those services may compress the image.' },
+      ],
+      checklistTitle: 'Before you save',
+      checklist: [
+        'Make sure the face and outfit are readable in the photo',
+        'Add the equipment slots and dyes you want to document',
+        'Double-check the set name and creator line',
+        'Save the original PNG before uploading it to social media',
+        'Copy post hashtags from the hashtag tool when needed',
       ],
       faqTitle: 'Guide questions',
       entries: [
@@ -383,8 +425,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       title: 'ミラプリセットメーカーについて',
       description: 'ファイナルファンタジーXIVのキャラクター写真とミラプリ装備を、共有しやすい一枚のカードにまとめるブラウザツールです。',
       eyebrow: 'サービス案内',
-      lastUpdated: '2026年8月13日更新',
-      lastUpdatedIso: '2026-08-13',
+      lastUpdated: '2026年8月22日更新',
+      lastUpdatedIso: '2026-08-22',
       contactLabel: 'お問い合わせ',
       contactText: '不具合報告、アイテムの欠落、使い勝手に関する提案は開発者までお寄せください。再現手順と使用言語を添えていただくと確認しやすくなります。',
       sections: [
@@ -407,6 +449,18 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
           paragraphs: [
             'アップロードしたキャラクター写真はカード作成のためブラウザ内で処理されます。ログインや会員登録は不要で、保存したプリセット、テーマ、言語設定は現在のブラウザの保存領域に保管されます。',
             '装備アイコンやアイテムデータは必要なときに外部の提供経路から読み込まれる場合があります。ネットワーク通信と各提供者の扱いについてはプライバシーポリシーをご確認ください。',
+          ],
+        },
+        {
+          title: 'データ範囲と更新方法',
+          paragraphs: [
+            '2026年8月22日に生成したカタログには、装備・アイテム51,156件とフェイスアクセサリー684件が含まれています。韓国語名は51,128件、英語名と日本語名はそれぞれ50,773件に用意されています。',
+            '英語・日本語の原文を確認できない韓国サーバー専用の383件は、推測で翻訳せず韓国語の状態で表示します。確認済みの地域限定アイコン6件は、似た名前の別アイテムと誤って結び付かないようIDベースのリポジトリアセットで管理しています。',
+            '原データを更新するたびに、翻訳状態、装備部位、ローカルアイコンを検証し、lint・テスト・プロダクションビルドを通過したデータだけを公開します。パッチにより件数は変わる場合があり、見つからないアイテムはお問い合わせから報告できます。',
+          ],
+          links: [
+            { label: '韓国語データマイニングリポジトリ', href: 'https://github.com/Ra-Workspace/ffxiv-datamining-ko' },
+            { label: 'XIVAPIデータマイニングリポジトリ', href: 'https://github.com/xivapi/ffxiv-datamining' },
           ],
         },
         {
@@ -463,8 +517,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       title: 'ミラプリセットメーカーの使い方',
       description: 'キャラクタースクリーンショットから完成したファイナルファンタジーXIVミラプリカードまでを5段階で案内します。',
       eyebrow: 'はじめに',
-      lastUpdated: '2026年8月13日更新',
-      lastUpdatedIso: '2026-08-13',
+      lastUpdated: '2026年8月22日更新',
+      lastUpdatedIso: '2026-08-22',
       intro: [
         'ミラプリセットメーカーは、キャラクター写真、アイテム名、カララント情報を一枚の読みやすいカードにまとめます。以下の順番で進めると、必須装備と任意項目を分けて入力できます。',
         '写真とプリセットはブラウザを中心に処理され、完成したカードは高解像度PNGファイルとして端末に保存されます。',
@@ -483,6 +537,14 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         { title: '照明と背景', description: '明るくコントラストのある照明はキャラクターを見やすくします。背景が複雑すぎるとアイテム一覧の可読性が下がる場合があります。' },
         { title: '名前とカララント', description: 'アイテム名とカララント名を確認すると、ほかのプレイヤーがセットを再現しやすくなります。' },
         { title: 'モバイル保存', description: 'メッセージアプリやSNSに送る前に元のPNGを保存してください。サービス外の圧縮で画質が変わる場合があります。' },
+      ],
+      checklistTitle: '保存前の確認',
+      checklist: [
+        '写真の顔と衣装が見やすく収まっているか確認する',
+        '記録したい装備部位とカララントを入力する',
+        'セット名と作者名をもう一度確認する',
+        'SNSへ投稿する前に元のPNGを保存する',
+        '必要ならハッシュタグ機能で投稿用タグをコピーする',
       ],
       faqTitle: 'ガイドの質問',
       entries: [
@@ -541,8 +603,12 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
   },
 };
 
+export function getLocalizedPageContent(language: string): LocalizedPageContent {
+  const baseLanguage = language.split('-')[0];
+  return content[baseLanguage as SupportedLanguage] || content.ko;
+}
+
 export function useLocalizedPageContent(): LocalizedPageContent {
   const { i18n } = useTranslation();
-  const language = i18n.resolvedLanguage?.split('-')[0] || i18n.language.split('-')[0];
-  return content[language as SupportedLanguage] || content.ko;
+  return getLocalizedPageContent(i18n.resolvedLanguage || i18n.language);
 }

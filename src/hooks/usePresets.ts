@@ -63,6 +63,7 @@ function parseStoredPresets(value: string | null): Preset[] {
 }
 
 function readStoredPresets(): { presets: Preset[]; error: string | null } {
+  if (typeof window === 'undefined') return { presets: [], error: null };
   const storage = getSafeStorage('local');
   if (!storage) return { presets: [], error: 'storage-failed' };
   return { presets: parseStoredPresets(readStorage(storage, PRESETS_STORAGE_KEY)), error: null };

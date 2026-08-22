@@ -109,6 +109,8 @@ npm test
 npm run build
 ~~~
 
+`npm run build` also creates static HTML for `/`, `/guide`, `/faq`, `/about`, `/terms`, and `/privacy` with the same React components used by the browser. This keeps the public pages readable before JavaScript loads and gives crawlers page-specific headings, links, metadata, and structured data. Keep `src/ssrEntry.tsx` and `scripts/prerender.mjs` in the production build path when changing the public-page routes.
+
 테스트를 감시 모드로 실행하려면 <code>npm run test:watch</code>, 프로덕션 번들을 로컬에서 확인하려면 <code>npm run preview</code>를 사용합니다.
 
 ## 아이템 데이터 갱신
