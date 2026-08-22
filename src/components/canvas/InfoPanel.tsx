@@ -71,7 +71,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
               {t('common.title_brand')}
             </span>
             <span className="text-[0.55rem] font-semibold uppercase tracking-[0.08em] text-[var(--card-text-muted)]">
-              ff14-glamour.pages.dev
+              ff14-glamour-maker.pages.dev
             </span>
           </div>
 

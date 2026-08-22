@@ -6,7 +6,7 @@ const projectRoot = resolve(import.meta.dirname, '..');
 const distRoot = join(projectRoot, 'dist');
 const ssrEntry = await import(pathToFileURL(join(projectRoot, 'dist-ssr', 'ssrEntry.js')).href);
 const template = await readFile(join(distRoot, 'index.html'), 'utf8');
-const origin = 'https://ff14-glamour.pages.dev';
+const origin = 'https://ff14-glamour-maker.pages.dev';
 const routes = ['/', '/guide', '/faq', '/about', '/terms', '/privacy'];
 
 function escapeHtml(value) {

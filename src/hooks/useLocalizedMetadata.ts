@@ -45,7 +45,7 @@ export function getLocalizedMetadata(
     ? `${pageData.title} | ${translate('common.title_brand')}`
     : translate('common.meta_title');
   const description = pageData?.description || translate('common.meta_description');
-  const routePath = page === 'home' ? '/' : `/${page}`;
+  const routePath = page === 'home' ? '/' : `/${page}/`;
   const canonicalUrl = `${origin}${routePath}`;
   const ogLocale = language === 'ko' ? 'ko_KR' : language === 'ja' ? 'ja_JP' : 'en_US';
 

@@ -61,7 +61,7 @@ describe('localized document metadata', () => {
     });
 
     expect(document.title).toBe('Privacy policy | Glamour Set Maker');
-    expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(`${window.location.origin}/privacy`);
+    expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(`${window.location.origin}/privacy/`);
     expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toContain('Google AdSense');
 
     const structuredData = JSON.parse(document.querySelector('#page-structured-data')?.textContent || '{}') as { '@type'?: string; dateModified?: string };
