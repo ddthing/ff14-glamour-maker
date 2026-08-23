@@ -20,6 +20,16 @@ function App() {
 
       <div className="workspace-shell mx-auto flex w-full max-w-[1480px] flex-1 px-3 pb-10 pt-4 sm:px-5 sm:pt-6 lg:px-10 lg:pb-14 lg:pt-8">
         <main id="main-content" tabIndex={-1} aria-labelledby="app-page-title" className="w-full min-w-0">
+          <div className="workspace-grid mt-5 w-full min-w-0 items-stretch">
+            <aside className="workspace-controls flex w-full min-w-0 flex-col self-stretch">
+              <ControlPanel state={state} actions={actions} />
+            </aside>
+
+            <div className="workspace-preview flex min-w-0 flex-col self-stretch">
+              <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />
+            </div>
+          </div>
+
           <section className="home-intro" aria-labelledby="app-page-title">
             <div className="home-intro-copy">
               <p className="content-eyebrow">{t('common.home_intro_eyebrow')}</p>
@@ -34,16 +44,6 @@ function App() {
               <li>{t('common.home_proof_post')}</li>
             </ul>
           </section>
-
-          <div className="mt-5 grid w-full min-w-0 grid-cols-1 items-stretch gap-5 xl:grid-cols-[minmax(0,1fr)_400px] xl:gap-8">
-            <div className="flex min-w-0 flex-col self-stretch">
-              <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />
-            </div>
-
-            <aside className="flex w-full min-w-0 flex-col self-stretch">
-              <ControlPanel state={state} actions={actions} />
-            </aside>
-          </div>
 
           <HomeValueSection />
         </main>
