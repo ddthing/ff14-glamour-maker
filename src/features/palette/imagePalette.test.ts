@@ -22,9 +22,24 @@ describe('extractPaletteFromPixels', () => {
       [252, 252, 252], [250, 250, 250], [248, 248, 248], [174, 135, 96],
     ));
     expect(palette.colors[0].hex).not.toBe('#fafafa');
-    expect(palette.scrimOpacity).toBeLessThanOrEqual(0.2);
+    expect(palette.background.mode).toBe('light-neutral');
+    expect(palette.scrimOpacity).toBe(0);
+    expect(palette.background.previewOpacity).toBeLessThanOrEqual(0.05);
     expect(palette.textTone).toBe('dark');
     expect(palette.colors).toHaveLength(3);
+  });
+
+  it('keeps a mostly white source background even when the subject is dark', () => {
+    const palette = extractPaletteFromPixels(pixels(
+      [255, 255, 255], [255, 255, 255], [248, 248, 248], [255, 255, 255],
+      [28, 28, 30], [155, 38, 42], [232, 232, 232], [255, 255, 255],
+    ), null, { width: 4, height: 2 });
+
+    expect(palette.background.mode).toBe('light-neutral');
+    expect(palette.background.coverage).toBeGreaterThanOrEqual(0.55);
+    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.05);
+    expect(palette.scrimOpacity).toBe(0);
+    expect(palette.textTone).toBe('dark');
   });
 
   it('keeps white text for medium-light reference-card brightness', () => {
@@ -52,8 +67,8 @@ describe('extractPaletteFromPixels', () => {
       [255, 255, 255], [253, 253, 253], [250, 250, 250],
     ));
 
-    expect(palette.scrimOpacity).toBeGreaterThanOrEqual(0.19);
-    expect(palette.scrimOpacity).toBeLessThanOrEqual(0.2);
+    expect(palette.background.mode).toBe('light-neutral');
+    expect(palette.scrimOpacity).toBe(0);
     expect(palette.contrastScrimOpacity).toBe(0);
     expect(palette.textTone).toBe('dark');
   });
