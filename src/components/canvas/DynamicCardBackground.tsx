@@ -53,11 +53,12 @@ export function DynamicCardBackground({ source, palette, status }: DynamicCardBa
           alt=""
           width={32}
           height={32}
-          className="absolute -inset-16 h-[calc(100%+128px)] w-[calc(100%+128px)] object-cover opacity-90"
+          className="absolute -inset-16 h-[calc(100%+128px)] w-[calc(100%+128px)] object-cover"
           style={{
             filter: background.mode === 'light-neutral'
-              ? 'blur(34px) saturate(1.05) brightness(1.02)'
+              ? 'blur(30px) saturate(1.5) contrast(1.08) brightness(1.02)'
               : 'blur(34px) saturate(1.25) brightness(1.04)',
+            mixBlendMode: background.mode === 'light-neutral' ? 'multiply' : undefined,
             opacity: background.previewOpacity,
             transform: 'scale(1.12)',
           }}

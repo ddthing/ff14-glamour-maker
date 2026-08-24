@@ -159,7 +159,7 @@ function createBackgroundProfile(
   const backgroundLuminance = luminance(color.red, color.green, color.blue);
   const backgroundSaturation = saturation(color.red, color.green, color.blue);
   const visualSettings: Record<ImageBackgroundMode, { tintOpacity: number; previewOpacity: number }> = {
-    'light-neutral': { tintOpacity: 0.1, previewOpacity: 0.07 },
+    'light-neutral': { tintOpacity: 0.16, previewOpacity: 0.15 },
     'soft-color': { tintOpacity: 0.12, previewOpacity: 0.1 },
     dark: { tintOpacity: 0.16, previewOpacity: 0.12 },
     unknown: { tintOpacity: 0.08, previewOpacity: 0.08 },

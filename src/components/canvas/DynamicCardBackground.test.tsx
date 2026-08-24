@@ -77,8 +77,8 @@ describe('DynamicCardBackground', () => {
         edgeConfidence: 0.92,
         luminance: 0.96,
         saturation: 0,
-        tintOpacity: 0.1,
-        previewOpacity: 0.07,
+        tintOpacity: 0.16,
+        previewOpacity: 0.15,
       },
     };
 
@@ -93,8 +93,10 @@ describe('DynamicCardBackground', () => {
 
     expect(background?.dataset.paletteBackgroundMode).toBe('light-neutral');
     expect(styles).toContain('rgb(251, 250, 248)');
-    expect(styles).toContain('opacity: 0.1');
-    expect(styles).toContain('opacity: 0.07');
+    expect(styles).toContain('opacity: 0.16');
+    expect(styles).toContain('opacity: 0.15');
+    expect(styles).toContain('blur(30px) saturate(1.5)');
+    expect(styles).toContain('mix-blend-mode: multiply');
     expect(styles).not.toContain('rgba(8,10,12,0.06)');
   });
 });

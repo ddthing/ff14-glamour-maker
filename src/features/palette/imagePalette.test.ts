@@ -24,10 +24,10 @@ describe('extractPaletteFromPixels', () => {
     expect(palette.colors[0].hex).not.toBe('#fafafa');
     expect(palette.background.mode).toBe('light-neutral');
     expect(palette.scrimOpacity).toBe(0);
-    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.09);
-    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.12);
-    expect(palette.background.previewOpacity).toBeGreaterThanOrEqual(0.06);
-    expect(palette.background.previewOpacity).toBeLessThanOrEqual(0.08);
+    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.14);
+    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.18);
+    expect(palette.background.previewOpacity).toBeGreaterThanOrEqual(0.13);
+    expect(palette.background.previewOpacity).toBeLessThanOrEqual(0.17);
     expect(palette.textTone).toBe('dark');
     expect(palette.colors).toHaveLength(3);
   });
@@ -40,8 +40,8 @@ describe('extractPaletteFromPixels', () => {
 
     expect(palette.background.mode).toBe('light-neutral');
     expect(palette.background.coverage).toBeGreaterThanOrEqual(0.55);
-    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.09);
-    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.12);
+    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.14);
+    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.18);
     expect(palette.scrimOpacity).toBe(0);
     expect(palette.textTone).toBe('dark');
   });
