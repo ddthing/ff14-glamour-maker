@@ -75,6 +75,34 @@ Cloudinary는 현재 전체 아이콘의 기본 생성 경로가 아니라 레�
 
 정적 아이콘 경로는 SPA fallback보다 먼저 처리해야 합니다. 따라서 <code>public/_redirects</code>에는 <code>/item-icons/*</code> 예외가 있고, <code>public/_headers</code>에는 정적 자산 장기 캐시 정책이 있습니다.
 
+### 카드 배경과 사진 팔레트
+
+정보 패널 배경은 의상 색상만으로 전체를 칠하지 않습니다. 원본 사진의 배경과 의상 포인트 색상을 분리해야 흰색 배경 사진이 검은색이나 과한 단색 배경으로 변하지 않으면서도 사진을 흐린 듯한 색감이 남습니다.
+
+분석은 <code>src/features/palette/imagePalette.ts</code>에서 32×32 샘플을 기준으로 수행합니다.
+
+1. 모서리·가장자리 픽셀을 모아 원본 배경 후보를 추정합니다.
+2. 후보 색상과 가까운 픽셀의 전체 비율(<code>55%</code> 이상)과 가장자리 신뢰도(<code>55%</code> 이상)를 확인합니다.
+3. 배경을 <code>light-neutral</code>, <code>soft-color</code>, <code>dark</code>, <code>unknown</code> 중 하나로 분류합니다.
+4. 배경과 일치하는 픽셀의 팔레트 가중치를 낮추고, 남은 색상을 의상 포인트 팔레트로 사용합니다.
+
+| 배경 모드 | 패널 처리 | 텍스트·scrim |
+| --- | --- | --- |
+| <code>light-neutral</code> | 원본의 밝은 배경 유지, mesh <code>16%</code>, blurred preview <code>15%</code> | 어두운 텍스트, 검은 scrim 없음 |
+| <code>soft-color</code> | 배경색과 포인트 팔레트를 <code>12%</code> 수준으로 혼합 | 최종 밝기에 따라 텍스트 톤 결정 |
+| <code>dark</code> | 어두운 배경 위에 포인트 팔레트 적용 | 밝은 텍스트, 약한 scrim |
+| <code>unknown</code> | 중립 fallback | 기존 밝기 기반 보정 |
+
+<code>light-neutral</code> 모드에서는 <code>src/components/canvas/DynamicCardBackground.tsx</code>가 30px blur, 채도 1.5, 대비 1.08을 사용하고 사진 레이어에 <code>mix-blend-mode: multiply</code>를 적용합니다. 흰색 배경은 유지하면서 의상의 검정·빨강·보라 계열이 번진 색상으로 보이게 하는 설정입니다. 이 모드의 값을 낮추면 카드가 단색처럼 보이고, 높이면 정보 패널의 가독성이 떨어질 수 있습니다.
+
+팔레트 배경 판정은 <code>src/features/palette/imagePalette.test.ts</code>, 실제 레이어 표현은 <code>src/components/canvas/DynamicCardBackground.test.tsx</code>에서 회귀 테스트합니다. 배경 효과를 조정할 때는 다음 검증을 함께 실행합니다.
+
+~~~bash
+npm run lint
+npm test
+npm run build
+~~~
+
 ### 개인정보와 브라우저 저장
 
 - 로그인, 계정 동기화, 온라인 갤러리는 제공하지 않습니다.
