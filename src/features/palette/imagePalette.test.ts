@@ -17,17 +17,17 @@ describe('extractPaletteFromPixels', () => {
     expect(palette.colors.reduce((sum, color) => sum + color.weight, 0)).toBeCloseTo(1);
   });
 
-  it('reduces white influence and provides neutral support colors', () => {
+  it('reduces white influence while keeping a visible tint for light sources', () => {
     const palette = extractPaletteFromPixels(pixels(
       [252, 252, 252], [250, 250, 250], [248, 248, 248], [174, 135, 96],
     ));
     expect(palette.colors[0].hex).not.toBe('#fafafa');
     expect(palette.background.mode).toBe('light-neutral');
     expect(palette.scrimOpacity).toBe(0);
-    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.14);
-    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.18);
-    expect(palette.background.previewOpacity).toBeGreaterThanOrEqual(0.13);
-    expect(palette.background.previewOpacity).toBeLessThanOrEqual(0.17);
+    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.28);
+    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.32);
+    expect(palette.background.previewOpacity).toBeGreaterThanOrEqual(0.16);
+    expect(palette.background.previewOpacity).toBeLessThanOrEqual(0.2);
     expect(palette.textTone).toBe('dark');
     expect(palette.colors).toHaveLength(3);
   });
@@ -40,8 +40,8 @@ describe('extractPaletteFromPixels', () => {
 
     expect(palette.background.mode).toBe('light-neutral');
     expect(palette.background.coverage).toBeGreaterThanOrEqual(0.55);
-    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.14);
-    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.18);
+    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.28);
+    expect(palette.background.tintOpacity).toBeLessThanOrEqual(0.32);
     expect(palette.scrimOpacity).toBe(0);
     expect(palette.textTone).toBe('dark');
   });
@@ -64,6 +64,16 @@ describe('extractPaletteFromPixels', () => {
     expect(palette.colors[0].hex).toBe('#ec7e22');
     expect(palette.scrimOpacity).toBeLessThan(0.3);
     expect(palette.textTone).toBe('light');
+  });
+
+  it('keeps complex scenes color-forward when no single background is reliable', () => {
+    const palette = extractPaletteFromPixels(pixels(
+      [220, 42, 72], [24, 88, 160], [48, 156, 86], [236, 142, 38],
+    ), null, { width: 4, height: 1 });
+
+    expect(palette.background.mode).toBe('unknown');
+    expect(palette.background.tintOpacity).toBeGreaterThanOrEqual(0.74);
+    expect(palette.background.previewOpacity).toBeGreaterThanOrEqual(0.22);
   });
 
   it('keeps the same subtle effect and switches to dark text for an almost-white image', () => {

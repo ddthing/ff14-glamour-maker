@@ -18,8 +18,8 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
   const useDarkText = Boolean(bgSrc) && palette.textTone === 'dark';
   const cardStyle = {
     '--card-text-primary': useDarkText ? 'rgba(18, 22, 26, 0.94)' : 'rgba(255, 255, 255, 0.98)',
-    '--card-text-secondary': useDarkText ? 'rgba(18, 22, 26, 0.92)' : 'rgba(255, 255, 255, 0.94)',
-    '--card-text-muted': useDarkText ? 'rgba(18, 22, 26, 0.88)' : 'rgba(255, 255, 255, 0.9)',
+    '--card-text-secondary': useDarkText ? 'rgba(18, 22, 26, 0.72)' : 'rgba(255, 255, 255, 0.76)',
+    '--card-text-muted': useDarkText ? 'rgba(18, 22, 26, 0.54)' : 'rgba(255, 255, 255, 0.56)',
     '--card-divider': useDarkText ? 'rgba(18, 22, 26, 0.14)' : 'rgba(255, 255, 255, 0.12)',
     '--card-chip-bg': useDarkText ? 'rgba(255, 255, 255, 0.38)' : 'rgba(255, 255, 255, 0.08)',
     '--card-chip-border': useDarkText ? 'rgba(18, 22, 26, 0.14)' : 'rgba(255, 255, 255, 0.12)',

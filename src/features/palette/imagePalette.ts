@@ -159,10 +159,12 @@ function createBackgroundProfile(
   const backgroundLuminance = luminance(color.red, color.green, color.blue);
   const backgroundSaturation = saturation(color.red, color.green, color.blue);
   const visualSettings: Record<ImageBackgroundMode, { tintOpacity: number; previewOpacity: number }> = {
-    'light-neutral': { tintOpacity: 0.16, previewOpacity: 0.15 },
-    'soft-color': { tintOpacity: 0.12, previewOpacity: 0.1 },
-    dark: { tintOpacity: 0.16, previewOpacity: 0.12 },
-    unknown: { tintOpacity: 0.08, previewOpacity: 0.08 },
+    // A light source stays airy, but the extracted hues should still be visible.
+    'light-neutral': { tintOpacity: 0.3, previewOpacity: 0.18 },
+    // Coloured and complex sources are the card's visual identity, not noise to suppress.
+    'soft-color': { tintOpacity: 0.62, previewOpacity: 0.2 },
+    dark: { tintOpacity: 0.72, previewOpacity: 0.22 },
+    unknown: { tintOpacity: 0.78, previewOpacity: 0.24 },
   };
 
   return {
@@ -260,8 +262,9 @@ function calculateScrimOpacity(
   textTone: ImagePalette['textTone'],
 ): number {
   if (mode === 'light-neutral') return 0;
+  if (textTone === 'dark') return mode === 'soft-color' ? 0.03 : 0;
   if (mode === 'dark') return 0.08;
-  if (mode === 'soft-color') return textTone === 'dark' ? 0.02 : 0.1;
+  if (mode === 'soft-color') return 0.1;
   return clamp(0.1 + averageLuminance * 0.1, 0.1, 0.2);
 }
 
@@ -335,6 +338,8 @@ export function extractPaletteFromPixels(
     }
     if (pixelLuminance >= 0.83 && pixelSaturation <= 0.08) pixelWeight *= 0.08;
     if (pixelLuminance <= 0.015 && pixelSaturation <= 0.08) pixelWeight *= 0.16;
+    // Preserve a clear colour story when the source contains a lot of neutral detail.
+    pixelWeight *= 0.72 + pixelSaturation * 1.18;
     if (pixelWeight < 0.02) continue;
 
     weightedLuminance += pixelLuminance * alpha;

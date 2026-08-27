@@ -46,7 +46,7 @@ afterEach(() => {
 });
 
 describe('DynamicCardBackground', () => {
-  it('uses extracted colors as a restrained background treatment for colored sources', () => {
+  it('uses extracted colors as a visible background treatment for colored sources', () => {
     act(() => root.render(
       <DynamicCardBackground source="photo" palette={palette} status="ready" />,
     ));
@@ -57,8 +57,10 @@ describe('DynamicCardBackground', () => {
       .join(' ');
 
     expect(background?.dataset.paletteColors).toBe('#d7a47d,#e99741,#7f401d');
-    expect(styles).toContain('rgb(215, 164, 125)');
-    expect(styles).toContain('rgb(233, 151, 65)');
+    expect(background?.dataset.paletteBaseColor).not.toBe('#d7a47d');
+    expect(styles).toContain('linear-gradient');
+    expect(styles).toContain('rgb(190, 125, 57)');
+    expect(styles).toContain('rgb(105, 55, 28)');
     expect(styles).not.toContain('rgb(41, 45, 49)');
     expect(styles).not.toContain('rgb(17, 19, 21)');
   });
@@ -95,7 +97,7 @@ describe('DynamicCardBackground', () => {
     expect(styles).toContain('rgb(251, 250, 248)');
     expect(styles).toContain('opacity: 0.16');
     expect(styles).toContain('opacity: 0.15');
-    expect(styles).toContain('blur(30px) saturate(1.5)');
+    expect(styles).toContain('blur(30px) saturate(1.75)');
     expect(styles).toContain('mix-blend-mode: multiply');
     expect(styles).not.toContain('rgba(8,10,12,0.06)');
   });
