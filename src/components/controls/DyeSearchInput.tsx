@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FF14_DYES } from '../../constants/dyes';
+import { findDye, getLocalizedDyeName } from '../../utils/dyes';
 
 interface DyeSearchInputProps {
     value: string;
@@ -46,7 +47,8 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
         setSelectedIndex(previous => previous >= filteredDyes.length ? -1 : previous);
     }, [filteredDyes.length]);
 
-    const matchedDye = FF14_DYES.find(d => d.name === value);
+    const matchedDye = findDye(value);
+    const displayedValue = getLocalizedDyeName(matchedDye, i18n.language, value);
 
     return (
         <div ref={wrapperRef} className="input-focus-shell relative flex-1 flex items-center bg-[var(--surface-100)] border border-[var(--border)] rounded-[var(--radius-sm)] px-3 h-[44px] gap-2 transition-[border-color,box-shadow]">
@@ -72,7 +74,7 @@ export function DyeSearchInput({ value, onChange, placeholder }: DyeSearchInputP
                 aria-label={placeholder}
                 className="input-focus-proxy w-full h-full bg-transparent border-none text-sm outline-none placeholder:text-[var(--text-muted)]"
                 placeholder={placeholder}
-                value={open ? searchTerm : value}
+                value={open ? searchTerm : displayedValue}
                 onChange={e => {
                     setSearchTerm(e.target.value);
                     setSelectedIndex(-1);

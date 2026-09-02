@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { FF14_DYES } from '../../constants/dyes';
 import type { EquipItem } from '../../types';
 import { ItemIcon } from './ItemIcon';
+import { findDye, getLocalizedDyeName } from '../../utils/dyes';
 import { getLocalizedItemNames } from '../../utils/formatters';
 
 interface CanvasItemRowProps {
@@ -32,9 +32,9 @@ export function CanvasItemRow({ item, sizeMode = 'compact', showDivider = true }
     const s = sizes[sizeMode];
 
     const activeDyes = [
-        item.dye1 && !['기본색', 'None', 'なし'].includes(item.dye1)
+        item.dye1 && findDye(item.dye1)?.name !== '기본색'
             ? { idx: 1, name: item.dye1 } : null,
-        item.dye2 && !['기본색', 'None', 'なし'].includes(item.dye2)
+        item.dye2 && findDye(item.dye2)?.name !== '기본색'
             ? { idx: 2, name: item.dye2 } : null,
     ].filter((d): d is { idx: number; name: string } => d !== null);
 
@@ -116,20 +116,9 @@ export function CanvasItemRow({ item, sizeMode = 'compact', showDivider = true }
                 {activeDyes.length > 0 && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '2px' }}>
                         {activeDyes.map(({ idx, name }) => {
-                            const dye = FF14_DYES.find(d => d.name === name);
-                            const dyeKo = dye?.name || name;
-                            const dyeEn = dye?.nameEn || '';
-                            const dyeJa = dye?.nameJa || '';
+                            const dye = findDye(name);
                             const hex = dye?.hex ?? '#888888';
-
-                            let dyeLabel: string;
-                            if (lang.startsWith('en')) {
-                                dyeLabel = dyeEn || dyeKo;
-                            } else if (lang.startsWith('ja')) {
-                                dyeLabel = dyeJa || dyeKo;
-                            } else {
-                                dyeLabel = dyeKo;
-                            }
+                            const dyeLabel = getLocalizedDyeName(dye, lang, name);
 
                             return (
                                 <div key={idx} style={{
