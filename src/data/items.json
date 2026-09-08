@@ -100337,7 +100337,7 @@
     ]
   },
   "10332": {
-    "ko": "생선 감자 튀김",
+    "ko": "생선 포포토 튀김",
     "iconPath": "/i/024000/024319.png",
     "uiCategory": 46,
     "en": "Battered Fish",
@@ -171401,7 +171401,7 @@
     "ko": "오케스트리온 악보: Aetherosphere",
     "iconPath": "/i/025000/025945.png",
     "uiCategory": 94,
-    "en": "Aetherosphere Orchestrion Roll",
+    "en": "Aetherpause Orchestrion Roll",
     "ja": "オーケストリオン譜:エーテル圏",
     "equipSlots": []
   },
@@ -424459,6 +424459,14 @@
     "ja": "希少トームストーン:幻想",
     "equipSlots": []
   },
+  "44349": {
+    "ko": "특5등급 오래된 지도",
+    "iconPath": "/i/025000/025930.png",
+    "uiCategory": 61,
+    "en": "Presumably Special Timeworn Map",
+    "ja": "古ぼけた地図S5",
+    "equipSlots": []
+  },
   "44350": {
     "ko": "초상화 교재: 봉인된 바위섬",
     "iconPath": "/i/026000/026625.png",
@@ -452806,6 +452814,17 @@
     "ja": "惑星探索用のマッシュルームコットン",
     "equipSlots": []
   },
+  "47470": {
+    "ko": "마수사육사 한손도끼",
+    "iconPath": "/i/039000/039932.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beast Herder's Hand Axe",
+    "ja": "ビーストハーダー・ハンドアクス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
   "47471": {
     "ko": "초경량 균사 옷감",
     "iconPath": "/i/021000/021608.png",
@@ -452814,12 +452833,32 @@
     "ja": "超軽量の菌糸布材",
     "equipSlots": []
   },
+  "47472": {
+    "ko": "마수사육사 전통방패",
+    "iconPath": "/i/030000/030025.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beast Herder's Hoplon",
+    "ja": "ビーストハーダー・ホプロン",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
   "47473": {
     "ko": "정비용 옷감",
     "iconPath": "/i/021000/021611.png",
     "uiCategory": 63,
     "en": "Spare Cloth",
     "ja": "整備用布材",
+    "equipSlots": []
+  },
+  "47474": {
+    "ko": "마수조련사의 증표",
+    "iconPath": "/i/026000/026085.png",
+    "uiCategory": 62,
+    "equipSlotCategory": 17,
+    "en": "Soul of the Beastmaster",
+    "ja": "魔獣使いの証",
     "equipSlots": []
   },
   "47475": {
@@ -473742,6 +473781,134 @@
     "ja": "麻雀金言集:メテム",
     "equipSlots": []
   },
+  "49805": {
+    "ko": "코르나고 항아리: 쿠시",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Cu Sith Gourd",
+    "ja": "コルナゴの壺:クーシー",
+    "equipSlots": []
+  },
+  "49806": {
+    "ko": "코르나고 항아리: 게",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Crab Gourd",
+    "ja": "コルナゴの壺:クラブ",
+    "equipSlots": []
+  },
+  "49807": {
+    "ko": "코르나고 항아리: 슬라임",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Slime Gourd",
+    "ja": "コルナゴの壺:スライム",
+    "equipSlots": []
+  },
+  "49808": {
+    "ko": "코르나고 항아리: 둘라한",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Dullahan Gourd",
+    "ja": "コルナゴの壺:デュラハン",
+    "equipSlots": []
+  },
+  "49809": {
+    "ko": "코르나고 항아리: 거대지렁이",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Worm Gourd",
+    "ja": "コルナゴの壺:ジャイアントウォーム",
+    "equipSlots": []
+  },
+  "49810": {
+    "ko": "코르나고 항아리: 도마뱀",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Drake Gourd",
+    "ja": "コルナゴの壺:ドレイク",
+    "equipSlots": []
+  },
+  "49811": {
+    "ko": "코르나고 항아리: 거대개미",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Antling Gourd",
+    "ja": "コルナゴの壺:アントリング",
+    "equipSlots": []
+  },
+  "49812": {
+    "ko": "코르나고 항아리: 키마이라",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Chimera Gourd",
+    "ja": "コルナゴの壺:キマイラ",
+    "equipSlots": []
+  },
+  "49813": {
+    "ko": "코르나고 항아리: 하이드라",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Hydra Gourd",
+    "ja": "コルナゴの壺:ハイドラ",
+    "equipSlots": []
+  },
+  "49814": {
+    "ko": "코르나고 항아리: 실잠자리",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Damselfly Gourd",
+    "ja": "コルナゴの壺:ダムゼルフライ",
+    "equipSlots": []
+  },
+  "49815": {
+    "ko": "코르나고 항아리: 부패한 구부",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Rotting Goobbue Gourd",
+    "ja": "コルナゴの壺:ロッティング・グゥーブー",
+    "equipSlots": []
+  },
+  "49816": {
+    "ko": "코르나고 항아리: 즈",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Zu Gourd",
+    "ja": "コルナゴの壺:ズー",
+    "equipSlots": []
+  },
+  "49817": {
+    "ko": "코르나고 항아리: 얼음 골렘",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Ice Golem Gourd",
+    "ja": "コルナゴの壺:アイスゴーレム",
+    "equipSlots": []
+  },
+  "49818": {
+    "ko": "코르나고 항아리: 칼라보스",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Karlabos Gourd",
+    "ja": "コルナゴの壺:カーラボス",
+    "equipSlots": []
+  },
+  "49819": {
+    "ko": "코르나고 항아리: 라플레시아",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Rafflesia Gourd",
+    "ja": "コルナゴの壺:ラフレシア",
+    "equipSlots": []
+  },
+  "49820": {
+    "ko": "코르나고 항아리: 베히모스",
+    "iconPath": "/i/026000/026693.png",
+    "uiCategory": 63,
+    "en": "Behemoth Gourd",
+    "ja": "コルナゴの壺:ベヒーモス",
+    "equipSlots": []
+  },
   "49821": {
     "ko": "용맹한 셰퍼드",
     "iconPath": "/i/059000/059973.png",
@@ -481330,6 +481497,578 @@
     "ja": "コスモアドミラル・アタイア",
     "equipSlots": []
   },
+  "50727": {
+    "ko": "마수사육사 머리장식",
+    "iconPath": "/i/056000/056960.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Beast Herder's Circlet",
+    "ja": "ビーストハーダー・サークレット",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "50728": {
+    "ko": "마수사육사 외투",
+    "iconPath": "/i/057000/057398.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Beast Herder's Coat",
+    "ja": "ビーストハーダー・コート",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "50729": {
+    "ko": "마수사육사 장갑",
+    "iconPath": "/i/056000/056466.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Beast Herder's Gloves",
+    "ja": "ビーストハーダー・グローブ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "50730": {
+    "ko": "마수사육사 하의",
+    "iconPath": "/i/057000/057483.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Beast Herder's Bottoms",
+    "ja": "ビーストハーダー・ボトム",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "50731": {
+    "ko": "마수사육사 장화",
+    "iconPath": "/i/057000/057986.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Beast Herder's Boots",
+    "ja": "ビーストハーダー・ブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "50732": {
+    "ko": "마수보호사 한손도끼",
+    "iconPath": "/i/039000/039930.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beast Tender's Hand Axe",
+    "ja": "ビーストテンダー・ハンドアクス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50733": {
+    "ko": "마수보호사 전통방패",
+    "iconPath": "/i/030000/030023.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beast Tender's Hoplon",
+    "ja": "ビーストテンダー・ホプロン",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50734": {
+    "ko": "마수훈련사 안장도끼",
+    "iconPath": "/i/039000/039926.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beast Handler's Tabar",
+    "ja": "ビーストハンドラー・タバール",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50735": {
+    "ko": "마수훈련사 타원방패",
+    "iconPath": "/i/030000/030024.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beast Handler's Pelta",
+    "ja": "ビーストハンドラー・ペルタ",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50736": {
+    "ko": "마수소통자 한손도끼",
+    "iconPath": "/i/039000/039927.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beast Whisperer's Hand Axe",
+    "ja": "ビーストウィスパラー・ハンドアクス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50737": {
+    "ko": "마수소통자 원형방패",
+    "iconPath": "/i/030000/030011.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beast Whisperer's Round Shield",
+    "ja": "ビーストウィスパラー・ラウンドシールド",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50738": {
+    "ko": "마수육성가 안장도끼",
+    "iconPath": "/i/039000/039928.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beast Tamer's Tabar",
+    "ja": "ビーストテイマー・タバール",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50739": {
+    "ko": "마수육성가 전통방패",
+    "iconPath": "/i/039000/039951.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beast Tamer's Hoplon",
+    "ja": "ビーストテイマー・ホプロン",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50740": {
+    "ko": "마수관리자 한손도끼",
+    "iconPath": "/i/039000/039929.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beastwarden's Hand Axe",
+    "ja": "ビーストワーデン・ハンドアクス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50741": {
+    "ko": "마수관리자 전투방패",
+    "iconPath": "/i/039000/039952.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beastwarden's Buckler",
+    "ja": "ビーストワーデン・バックラー",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50742": {
+    "ko": "마수전문가 한손도끼",
+    "iconPath": "/i/039000/039931.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beastmaster's Hand Axe",
+    "ja": "ビーストマスター・ハンドアクス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50743": {
+    "ko": "마수전문가 전통방패",
+    "iconPath": "/i/039000/039953.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beastmaster's Hoplon",
+    "ja": "ビーストマスター・ホプロン",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50744": {
+    "ko": "마수전문가 뿔장식",
+    "iconPath": "/i/056000/056936.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Beastmaster's Horns",
+    "ja": "ビーストマスター・ホーン",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "50745": {
+    "ko": "마수전문가 모피옷",
+    "iconPath": "/i/057000/057364.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Beastmaster's Furs",
+    "ja": "ビーストマスター・ファーズ",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "50746": {
+    "ko": "마수전문가 팔보호구",
+    "iconPath": "/i/056000/056439.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Beastmaster's Armguards",
+    "ja": "ビーストマスター・アームガード",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "50747": {
+    "ko": "마수전문가 일자바지",
+    "iconPath": "/i/057000/057457.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Beastmaster's Slops",
+    "ja": "ビーストマスター・スロップ",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "50748": {
+    "ko": "마수전문가 장화",
+    "iconPath": "/i/057000/057949.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Beastmaster's Boots",
+    "ja": "ビーストマスター・ブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "50749": {
+    "ko": "마수전문가 한손도끼 +1",
+    "iconPath": "/i/039000/039931.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beastmaster's Hand Axe +1",
+    "ja": "ビーストマスター・ハンドアクス+1",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50750": {
+    "ko": "마수전문가 전통방패 +1",
+    "iconPath": "/i/039000/039953.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beastmaster's Hoplon +1",
+    "ja": "ビーストマスター・ホプロン+1",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50751": {
+    "ko": "마수전문가 뿔장식 +1",
+    "iconPath": "/i/056000/056936.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Beastmaster's Horns +1",
+    "ja": "ビーストマスター・ホーン+1",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "50752": {
+    "ko": "마수전문가 모피옷 +1",
+    "iconPath": "/i/057000/057364.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Beastmaster's Furs +1",
+    "ja": "ビーストマスター・ファーズ+1",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "50753": {
+    "ko": "마수전문가 팔보호구 +1",
+    "iconPath": "/i/056000/056439.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Beastmaster's Armguards +1",
+    "ja": "ビーストマスター・アームガード+1",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "50754": {
+    "ko": "마수전문가 일자바지 +1",
+    "iconPath": "/i/057000/057457.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Beastmaster's Slops +1",
+    "ja": "ビーストマスター・スロップ+1",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "50755": {
+    "ko": "마수전문가 장화 +1",
+    "iconPath": "/i/057000/057949.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Beastmaster's Boots +1",
+    "ja": "ビーストマスター・ブーツ+1",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "50756": {
+    "ko": "마수전문가 한손도끼 +2",
+    "iconPath": "/i/039000/039931.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beastmaster's Hand Axe +2",
+    "ja": "ビーストマスター・ハンドアクス+2",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50757": {
+    "ko": "마수전문가 전통방패 +2",
+    "iconPath": "/i/039000/039953.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beastmaster's Hoplon +2",
+    "ja": "ビーストマスター・ホプロン+2",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50758": {
+    "ko": "마수전문가 뿔장식 +2",
+    "iconPath": "/i/056000/056936.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Beastmaster's Horns +2",
+    "ja": "ビーストマスター・ホーン+2",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "50759": {
+    "ko": "마수전문가 모피옷 +2",
+    "iconPath": "/i/057000/057364.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Beastmaster's Furs +2",
+    "ja": "ビーストマスター・ファーズ+2",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "50760": {
+    "ko": "마수전문가 팔보호구 +2",
+    "iconPath": "/i/056000/056439.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Beastmaster's Armguards +2",
+    "ja": "ビーストマスター・アームガード+2",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "50761": {
+    "ko": "마수전문가 일자바지 +2",
+    "iconPath": "/i/057000/057457.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Beastmaster's Slops +2",
+    "ja": "ビーストマスター・スロップ+2",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "50762": {
+    "ko": "마수전문가 장화 +2",
+    "iconPath": "/i/057000/057949.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Beastmaster's Boots +2",
+    "ja": "ビーストマスター・ブーツ+2",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "50763": {
+    "ko": "마수전문가 한손도끼 +3",
+    "iconPath": "/i/039000/039931.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beastmaster's Hand Axe +3",
+    "ja": "ビーストマスター・ハンドアクス+3",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50764": {
+    "ko": "마수전문가 전통방패 +3",
+    "iconPath": "/i/039000/039953.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beastmaster's Hoplon +3",
+    "ja": "ビーストマスター・ホプロン+3",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50765": {
+    "ko": "마수전문가 뿔장식 +3",
+    "iconPath": "/i/056000/056936.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Beastmaster's Horns +3",
+    "ja": "ビーストマスター・ホーン+3",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "50766": {
+    "ko": "마수전문가 모피옷 +3",
+    "iconPath": "/i/057000/057364.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Beastmaster's Furs +3",
+    "ja": "ビーストマスター・ファーズ+3",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "50767": {
+    "ko": "마수전문가 팔보호구 +3",
+    "iconPath": "/i/056000/056439.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Beastmaster's Armguards +3",
+    "ja": "ビーストマスター・アームガード+3",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "50768": {
+    "ko": "마수전문가 일자바지 +3",
+    "iconPath": "/i/057000/057457.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Beastmaster's Slops +3",
+    "ja": "ビーストマスター・スロップ+3",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "50769": {
+    "ko": "마수전문가 장화 +3",
+    "iconPath": "/i/057000/057949.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Beastmaster's Boots +3",
+    "ja": "ビーストマスター・ブーツ+3",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "50770": {
+    "ko": "마수전문가 한손도끼 +4",
+    "iconPath": "/i/039000/039931.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beastmaster's Hand Axe +4",
+    "ja": "ビーストマスター・ハンドアクス+4",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50771": {
+    "ko": "마수전문가 전통방패 +4",
+    "iconPath": "/i/039000/039953.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beastmaster's Hoplon +4",
+    "ja": "ビーストマスター・ホプロン+4",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "50772": {
+    "ko": "마수전문가 뿔장식 +4",
+    "iconPath": "/i/056000/056936.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Beastmaster's Horns +4",
+    "ja": "ビーストマスター・ホーン+4",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "50773": {
+    "ko": "마수전문가 모피옷 +4",
+    "iconPath": "/i/057000/057364.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Beastmaster's Furs +4",
+    "ja": "ビーストマスター・ファーズ+4",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "50774": {
+    "ko": "마수전문가 팔보호구 +4",
+    "iconPath": "/i/056000/056439.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Beastmaster's Armguards +4",
+    "ja": "ビーストマスター・アームガード+4",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "50775": {
+    "ko": "마수전문가 일자바지 +4",
+    "iconPath": "/i/057000/057457.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Beastmaster's Slops +4",
+    "ja": "ビーストマスター・スロップ+4",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "50776": {
+    "ko": "마수전문가 장화 +4",
+    "iconPath": "/i/057000/057949.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Beastmaster's Boots +4",
+    "ja": "ビーストマスター・ブーツ+4",
+    "equipSlots": [
+      "feet"
+    ]
+  },
+  "50777": {
+    "ko": "거틀러",
+    "iconPath": "/i/039000/039933.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Guttler",
+    "ja": "ガトラー",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "50778": {
+    "ko": "코르나고 전통방패",
+    "iconPath": "/i/039000/039954.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Kornago Hoplon",
+    "ja": "コルナゴホプロン",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
   "50779": {
     "ko": "오케스트리온 악보: Dark City Treno (Dawntrail)",
     "iconPath": "/i/025000/025945.png",
@@ -486302,6 +487041,14 @@
     "ja": "ルインド・アクアダクト",
     "equipSlots": []
   },
+  "51273": {
+    "ko": "크리스탈 트로피: 마수조련사",
+    "iconPath": "/i/053000/053568.png",
+    "uiCategory": 78,
+    "en": "Beastmaster Display Crystal",
+    "ja": "クリスタルトロフィー:魔獣使い",
+    "equipSlots": []
+  },
   "51275": {
     "ko": "MG 갤럭틱웨이호",
     "iconPath": "/i/053000/053557.png",
@@ -486487,7 +487234,7 @@
     "equipSlots": []
   },
   "51300": {
-    "ko": "신생제 축제 탁상용 액자: 2026-1",
+    "ko": "신생제 탁상용 액자: 2026-1",
     "iconPath": "/i/053000/053566.png",
     "uiCategory": 78,
     "en": "Tabletop Rising MMXXV Advertisement",
@@ -489902,6 +490649,109 @@
     "ja": "ポートレート教材:アルテマS21",
     "equipSlots": []
   },
+  "51734": {
+    "ko": "저순도 마수핵",
+    "iconPath": "/i/020000/020217.png",
+    "uiCategory": 63,
+    "en": "Faded Remnant of Resilience",
+    "ja": "低純度ビーストコア",
+    "equipSlots": []
+  },
+  "51735": {
+    "ko": "고순도 마수핵",
+    "iconPath": "/i/020000/020230.png",
+    "uiCategory": 63,
+    "en": "Bright Remnant of Resilience",
+    "ja": "高純度ビーストコア",
+    "equipSlots": []
+  },
+  "51736": {
+    "ko": "마수군주 한손도끼",
+    "iconPath": "/i/039000/039931.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Beastliege's Hand Axe",
+    "ja": "ビーストリージュ・ハンドアクス",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51737": {
+    "ko": "마수군주 전통방패",
+    "iconPath": "/i/039000/039953.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Beastliege's Hoplon",
+    "ja": "ビーストリージュ・ホプロン",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "51739": {
+    "ko": "보강된 거틀러",
+    "iconPath": "/i/039000/039933.png",
+    "uiCategory": 113,
+    "equipSlotCategory": 1,
+    "en": "Guttler Unleashed",
+    "ja": "ガトラーRE",
+    "equipSlots": [
+      "mainhand"
+    ]
+  },
+  "51740": {
+    "ko": "보강된 코르나고 전통방패",
+    "iconPath": "/i/039000/039954.png",
+    "uiCategory": 11,
+    "equipSlotCategory": 2,
+    "en": "Augmented Kornago Hoplon",
+    "ja": "コルナゴホプロンRE",
+    "equipSlots": [
+      "offhand"
+    ]
+  },
+  "51744": {
+    "ko": "쇠스랑",
+    "iconPath": "/i/058000/058055.png",
+    "uiCategory": 61,
+    "en": "Pitchfork",
+    "ja": "ピッチフォーク",
+    "equipSlots": []
+  },
+  "51745": {
+    "ko": "마수전문가 귀걸이",
+    "iconPath": "/i/055000/055570.png",
+    "uiCategory": 41,
+    "equipSlotCategory": 9,
+    "en": "Beastmaster's Earrings",
+    "ja": "ビーストマスター・イヤリング",
+    "equipSlots": [
+      "ears"
+    ]
+  },
+  "51747": {
+    "ko": "헤어카탈로그: 단발 반올림머리",
+    "iconPath": "/i/026000/026178.png",
+    "uiCategory": 61,
+    "en": "Modern Aesthetics - Loosened Locks",
+    "ja": "ヘアカタログ:ハーフアップボブ",
+    "equipSlots": []
+  },
+  "51748": {
+    "ko": "스타일카탈로그: 눈물방울 안경",
+    "iconPath": "/i/026000/026074.png",
+    "uiCategory": 61,
+    "en": "The Faces We Wear - Teardrop Glasses",
+    "ja": "スタイルカタログ:ティアドロップグラス",
+    "equipSlots": []
+  },
+  "51749": {
+    "ko": "따라우다",
+    "iconPath": "/i/059000/059989.png",
+    "uiCategory": 81,
+    "en": "Laudouble",
+    "ja": "ラウダブル",
+    "equipSlots": []
+  },
   "51750": {
     "ko": "희소 석판: 천문 1장",
     "iconPath": "/i/026000/026350.png",
@@ -492443,6 +493293,14 @@
     "ja": "ポートレート教材:エコーズ オブ ヴァナ・ディール",
     "equipSlots": []
   },
+  "51994": {
+    "ko": "초상화 교재: 마수조련사",
+    "iconPath": "/i/026000/026625.png",
+    "uiCategory": 61,
+    "en": "Beastmaster Framer's Kit",
+    "ja": "ポートレート教材:魔獣使い",
+    "equipSlots": []
+  },
   "51995": {
     "ko": "초상화 교재: 초승달 섬 2",
     "iconPath": "/i/026000/026625.png",
@@ -494587,12 +495445,28 @@
     "ja": "ロケットパンチ認証鍵",
     "equipSlots": []
   },
+  "52263": {
+    "ko": "쿠시 뿔피리",
+    "iconPath": "/i/026000/026038.png",
+    "uiCategory": 63,
+    "en": "Cu Sith Horn",
+    "ja": "クーシー・ホルン",
+    "equipSlots": []
+  },
   "52264": {
     "ko": "과묵한 콜리브리 호루라기",
     "iconPath": "/i/026000/026039.png",
     "uiCategory": 63,
     "en": "Colibri Callado Whistle",
     "ja": "クワイエット・コリブリ・ホイッスル",
+    "equipSlots": []
+  },
+  "52265": {
+    "ko": "하이드라 뿔피리",
+    "iconPath": "/i/026000/026038.png",
+    "uiCategory": 63,
+    "en": "Hydra Horn",
+    "ja": "ハイドラ・ホルン",
     "equipSlots": []
   },
   "52266": {
@@ -495499,6 +496373,30 @@
     "ja": "オーケストリオン譜:銀嶺を行く",
     "equipSlots": []
   },
+  "52369": {
+    "ko": "오케스트리온 악보: Starkest Scale",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Starkest Scale Orchestrion Roll",
+    "ja": "オーケストリオン譜:堅固なる鱗",
+    "equipSlots": []
+  },
+  "52370": {
+    "ko": "오케스트리온 악보: Fiercest Fang",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Fiercest Fang Orchestrion Roll",
+    "ja": "オーケストリオン譜:凶猛なる牙",
+    "equipSlots": []
+  },
+  "52371": {
+    "ko": "오케스트리온 악보: Swiftest Wing",
+    "iconPath": "/i/025000/025945.png",
+    "uiCategory": 94,
+    "en": "Swiftest Wing Orchestrion Roll",
+    "ja": "オーケストリオン譜:飛翔する翼",
+    "equipSlots": []
+  },
   "52372": {
     "ko": "오케스트리온 악보: Triumph (Orchestral Version)",
     "iconPath": "/i/025000/025945.png",
@@ -496070,6 +496968,61 @@
       "feet"
     ]
   },
+  "52428": {
+    "ko": "계승자의 두건",
+    "iconPath": "/i/056000/056956.png",
+    "uiCategory": 34,
+    "equipSlotCategory": 3,
+    "en": "Successor's Hood",
+    "ja": "サクセサー・フード",
+    "equipSlots": [
+      "head"
+    ]
+  },
+  "52429": {
+    "ko": "계승자의 튜닉",
+    "iconPath": "/i/057000/057393.png",
+    "uiCategory": 35,
+    "equipSlotCategory": 4,
+    "en": "Successor's Tunic",
+    "ja": "サクセサー・チュニック",
+    "equipSlots": [
+      "body"
+    ]
+  },
+  "52430": {
+    "ko": "계승자의 반장갑",
+    "iconPath": "/i/056000/056462.png",
+    "uiCategory": 37,
+    "equipSlotCategory": 5,
+    "en": "Successor's Fingerless Gloves",
+    "ja": "サクセサー・フィンガレスグローブ",
+    "equipSlots": [
+      "hands"
+    ]
+  },
+  "52431": {
+    "ko": "계승자의 바지",
+    "iconPath": "/i/057000/057479.png",
+    "uiCategory": 36,
+    "equipSlotCategory": 7,
+    "en": "Successor's Breeches",
+    "ja": "サクセサー・ブリーチ",
+    "equipSlots": [
+      "legs"
+    ]
+  },
+  "52432": {
+    "ko": "계승자의 무릎장화",
+    "iconPath": "/i/057000/057972.png",
+    "uiCategory": 38,
+    "equipSlotCategory": 8,
+    "en": "Successor's Highboots",
+    "ja": "サクセサー・ハイブーツ",
+    "equipSlots": [
+      "feet"
+    ]
+  },
   "52433": {
     "ko": "그래피티 네오 튜닉",
     "iconPath": "/i/057000/057388.png",
@@ -496193,6 +497146,14 @@
     "uiCategory": 61,
     "en": "The Faces We Wear - Studded Eyepatch (Right)",
     "ja": "スタイルカタログ:スタッズアイパッチ:右",
+    "equipSlots": []
+  },
+  "52446": {
+    "ko": "스타일카탈로그: 고풍스러운 단안경",
+    "iconPath": "/i/026000/026074.png",
+    "uiCategory": 61,
+    "en": "The Faces We Wear - Antique Monocle",
+    "ja": "スタイルカタログ:アンティーク・モノクル",
     "equipSlots": []
   },
   "52447": {
@@ -497430,6 +498391,22 @@
     "ja": "コスモオペレーター・アタイア",
     "equipSlots": []
   },
+  "52601": {
+    "ko": "계승자 장비",
+    "iconPath": "/i/057000/057393.png",
+    "uiCategory": 112,
+    "en": "Successor's Attire",
+    "ja": "サクセサー・アタイア",
+    "equipSlots": []
+  },
+  "52602": {
+    "ko": "마수전문가 장비",
+    "iconPath": "/i/057000/057364.png",
+    "uiCategory": 112,
+    "en": "Beastmaster's Attire",
+    "ja": "ビーストマスターアタイア",
+    "equipSlots": []
+  },
   "52603": {
     "ko": "여성용 우주 탐험가 장비",
     "iconPath": "/i/057000/057395.png",
@@ -497802,6 +498779,14 @@
     "ja": "スウィートキャット",
     "equipSlots": []
   },
+  "52639": {
+    "ko": "전기석 골렘 뿔피리",
+    "iconPath": "/i/026000/026038.png",
+    "uiCategory": 63,
+    "en": "Tourmaline Golem Horn",
+    "ja": "トルマリンゴーレム・ホルン",
+    "equipSlots": []
+  },
   "52640": {
     "ko": "별빛 큰썰매 종",
     "iconPath": "/i/026000/026104.png",
@@ -497834,6 +498819,30 @@
     "ja": "ルインド・アクアダクトの錬金樹脂",
     "equipSlots": []
   },
+  "52644": {
+    "ko": "마수 시련장 챔피언의 증서",
+    "iconPath": "/i/026000/026191.png",
+    "uiCategory": 61,
+    "en": "Crucible Champion Certification",
+    "ja": "闘獣練チャンピオンの証",
+    "equipSlots": []
+  },
+  "52645": {
+    "ko": "마수 시련장 파이널리스트의 증서",
+    "iconPath": "/i/026000/026190.png",
+    "uiCategory": 61,
+    "en": "Crucible Finalist Certification",
+    "ja": "闘獣練ファイナリストの証",
+    "equipSlots": []
+  },
+  "52646": {
+    "ko": "마수 시련장 랭커의 증서",
+    "iconPath": "/i/026000/026189.png",
+    "uiCategory": 61,
+    "en": "Crucible Ranker Certification",
+    "ja": "闘獣練ランカーの証",
+    "equipSlots": []
+  },
   "52647": {
     "ko": "아발란치 리더 귀걸이",
     "iconPath": "/i/055000/055573.png",
@@ -497853,6 +498862,38 @@
     "ja": "オーケストリオン譜:ブリリアンスキャロット",
     "equipSlots": []
   },
+  "52649": {
+    "ko": "마수사육사 궤짝[아이템 레벨 1]",
+    "iconPath": "/i/026000/026509.png",
+    "uiCategory": 61,
+    "en": "Beast Herder's Coffer (IL 1)",
+    "ja": "ビーストハーダー・チェスト【ILv1】",
+    "equipSlots": []
+  },
+  "52650": {
+    "ko": "마수육성가 궤짝[아이템 레벨 30]",
+    "iconPath": "/i/026000/026509.png",
+    "uiCategory": 61,
+    "en": "Beast Tamer's Coffer (IL 30)",
+    "ja": "ビーストテイマー・チェスト【ILv30】",
+    "equipSlots": []
+  },
+  "52651": {
+    "ko": "마수관리자 궤짝[아이템 레벨 40]",
+    "iconPath": "/i/026000/026509.png",
+    "uiCategory": 61,
+    "en": "Beastwarden's Coffer (IL 40)",
+    "ja": "ビーストワーデン・チェスト【ILv40】",
+    "equipSlots": []
+  },
+  "52652": {
+    "ko": "마수전문가 궤짝[아이템 레벨 90]",
+    "iconPath": "/i/026000/026509.png",
+    "uiCategory": 61,
+    "en": "Beastmaster's Coffer (IL 90)",
+    "ja": "ビーストマスター・チェスト【ILv90】",
+    "equipSlots": []
+  },
   "52653": {
     "ko": "무역풍 의복",
     "iconPath": "/i/057000/057396.png",
@@ -497867,6 +498908,14 @@
     "uiCategory": 81,
     "en": "Musical Paca",
     "ja": "楽団のアルパ・カフ",
+    "equipSlots": []
+  },
+  "52655": {
+    "ko": "초상화 교재: 마수 시련장",
+    "iconPath": "/i/026000/026625.png",
+    "uiCategory": 61,
+    "en": "Crucible Framer's Kit",
+    "ja": "ポートレート教材:闘獣練",
     "equipSlots": []
   },
   "52656": {
