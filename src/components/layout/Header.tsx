@@ -43,9 +43,12 @@ export function Header({ page = 'home' }: HeaderProps) {
         className="app-header sticky top-0 z-50 w-full shrink-0"
       >
         <div className="mx-auto flex h-[44px] w-full max-w-[1480px] items-center justify-between gap-3 px-3 sm:h-[46px] sm:px-5 lg:px-10">
-          <a href="/" className="brand-link min-w-0" aria-label={t('common.title_brand')}>
+          <a href="/" className="brand-link min-w-0" aria-label={t('common.series_home_aria')}>
             <span className="brand-mark" aria-hidden="true" />
-            <span lang={language} className="brand-wordmark truncate">{t('common.title_brand')}</span>
+            <span className="brand-copy">
+              <span lang={language} className="brand-wordmark truncate">{t('common.title_brand')}</span>
+              <span lang={language} className="brand-series-label">{t('common.series_label')}</span>
+            </span>
           </a>
 
           <div className="header-control-rail shrink-0">

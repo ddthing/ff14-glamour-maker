@@ -120,12 +120,30 @@ body {
   text-decoration: none;
 }
 
+.brand-copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.16rem;
+}
+
 .brand-mark {
   width: 0.5rem;
   height: 0.5rem;
   flex: 0 0 auto;
   border: 1.5px solid var(--text-muted);
   border-radius: 2px;
+}
+
+.brand-series-label {
+  max-width: 8rem;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .header-control-rail {
@@ -217,6 +235,41 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.125rem 0.75rem;
+}
+
+.footer-series-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.125rem 0.5rem;
+}
+
+.footer-series-name {
+  color: var(--text-disabled);
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.footer-series-current,
+.footer-series-link {
+  color: var(--text-secondary);
+  font-size: 0.62rem;
+  font-weight: 650;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-series-link:hover {
+  color: var(--text-primary);
+}
+
+.footer-series-divider {
+  color: var(--text-disabled);
+  font-size: 0.62rem;
 }
 
 .footer-link {
@@ -311,6 +364,12 @@ body {
 .footer-support-option:focus-visible {
   background: var(--surface-300);
   color: var(--text-primary);
+}
+
+@media (max-width: 380px) {
+  .brand-series-label {
+    display: none;
+  }
 }
 
 /* ── Home content ──────────────────────────────────────────────────────── */

@@ -20,7 +20,7 @@ describe('home-screen assets', () => {
   });
 
   it.each([
-    ['ko', '투영세트 메이커'],
+    ['ko', '투영세트메이커'],
     ['en', 'Glamour Set Maker'],
     ['ja', 'ミラプリセットメーカー'],
   ])('provides a localized %s manifest using shared icons', (language, name) => {
