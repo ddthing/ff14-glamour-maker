@@ -31,7 +31,7 @@ afterEach(async () => {
   reactTestEnvironment.IS_REACT_ACT_ENVIRONMENT = false;
 });
 
-async function renderChrome(language: 'en' | 'ja') {
+async function renderChrome(language: 'ko' | 'en' | 'ja') {
   await act(async () => {
     await i18n.changeLanguage(language);
     root.render(<><Header /><Footer /></>);
@@ -42,6 +42,14 @@ function localFooterLabels(): string[] {
   return Array.from(container.querySelectorAll('footer nav a'))
     .filter(link => link.getAttribute('href')?.startsWith('/'))
     .map(link => link.textContent?.trim() ?? '');
+}
+
+function supportLinks(): Array<{ label: string; href: string | null }> {
+  return Array.from(container.querySelectorAll('.footer-support-option'))
+    .map(link => ({
+      label: link.textContent?.trim() ?? '',
+      href: link.getAttribute('href'),
+    }));
 }
 
 describe('localized application chrome', () => {
@@ -61,6 +69,24 @@ describe('localized application chrome', () => {
         .every(cell => cell.tagName === 'BUTTON'),
     ).toBe(true);
     expect(localFooterLabels()).toEqual(['Guide', 'FAQ', 'About', 'Terms', 'Privacy']);
+  });
+
+  it('offers Ko-fi and Buy Me a Coffee support links', async () => {
+    await renderChrome('ko');
+
+    expect(container.querySelector('.footer-support-menu')).not.toBeNull();
+    expect(container.querySelector('.footer-support-options')?.getAttribute('aria-label'))
+      .toBe('후원 방법 선택');
+    expect(container.querySelector('.footer-support-options')?.getAttribute('role')).toBe('group');
+    expect(supportLinks()).toEqual([
+      { label: 'Ko-fi', href: 'https://ko-fi.com/reconeur' },
+      { label: 'Buy Me a Coffee', href: 'https://buymeacoffee.com/coner' },
+    ]);
+    expect(
+      Array.from(container.querySelectorAll('.footer-support-option'))
+        .every(link => link.getAttribute('target') === '_blank'
+          && link.getAttribute('rel') === 'noopener noreferrer'),
+    ).toBe(true);
   });
 
   it('renders Japanese navigation and footer labels', async () => {
