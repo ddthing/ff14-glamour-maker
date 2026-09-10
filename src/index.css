@@ -127,11 +127,14 @@ body {
 }
 
 .brand-mark {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
   flex: 0 0 auto;
-  border: 1.5px solid var(--text-muted);
-  border-radius: 2px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: #fff url('/favicon-01.svg') center / cover no-repeat;
+  box-shadow: 0 0 0 1px var(--border);
+  overflow: hidden;
 }
 
 .brand-series-label {
