@@ -1,0 +1,24 @@
+{
+  "name": "투영세트메이커",
+  "short_name": "투영세트메이커",
+  "description": "FFXIV 캐릭터 스크린샷으로 투영 카드와 장비 정보를 정리하는 편집기",
+  "lang": "ko",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f6fb",
+  "theme_color": "#f7f6fb",
+  "icons": [
+    {
+      "src": "/icon-01-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-01-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -8,6 +8,13 @@ const FOOTER_LINKS = [
   { href: '/privacy', key: 'common.footer_privacy' },
 ] as const;
 
+const SUPPORT_LINKS = [
+  { href: 'https://ko-fi.com/reconeur', label: 'Ko-fi' },
+  { href: 'https://buymeacoffee.com/coner', label: 'Buy Me a Coffee' },
+] as const;
+
+const SERIES_LOOKBOOK_URL = 'https://ff14-glamour-maker2.pages.dev/';
+
 export function Footer() {
   const { t, i18n } = useTranslation();
   const language = i18n.resolvedLanguage?.split('-')[0] || i18n.language.split('-')[0];
@@ -26,6 +33,20 @@ export function Footer() {
         </div>
 
         <nav aria-label={t('common.footer_navigation')} className="footer-nav">
+          <span className="footer-series-group" role="group" aria-label={t('common.series_navigation')}>
+            <span className="footer-series-name">{t('common.series_name')}</span>
+            <span className="footer-series-current" aria-current="page">{t('common.series_label')}</span>
+            <a
+              href={SERIES_LOOKBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-series-link"
+              aria-label={`${t('common.series_lookbook')} (${t('common.opens_new_window')})`}
+            >
+              {t('common.series_lookbook')}
+            </a>
+          </span>
+          <span aria-hidden="true" className="footer-series-divider">·</span>
           {FOOTER_LINKS.map(({ href, key }) => (
             <a
               key={href}
@@ -35,15 +56,29 @@ export function Footer() {
               {t(key)}
             </a>
           ))}
-          <a
-            href="https://ko-fi.com/reconeur"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-link footer-support"
-            aria-label={`${t('common.footer_support')} (${t('common.opens_new_window')})`}
-          >
-            {t('common.footer_support')}
-          </a>
+          <details className="footer-support-menu">
+            <summary className="footer-link footer-support footer-support-trigger">
+              {t('common.footer_support')}
+            </summary>
+            <div
+              className="footer-support-options"
+              role="group"
+              aria-label={t('common.footer_support_options')}
+            >
+              {SUPPORT_LINKS.map(({ href, label }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-support-option"
+                  aria-label={`${label} (${t('common.opens_new_window')})`}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </details>
         </nav>
       </div>
     </footer>

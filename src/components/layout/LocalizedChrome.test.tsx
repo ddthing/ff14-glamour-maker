@@ -31,7 +31,7 @@ afterEach(async () => {
   reactTestEnvironment.IS_REACT_ACT_ENVIRONMENT = false;
 });
 
-async function renderChrome(language: 'en' | 'ja') {
+async function renderChrome(language: 'ko' | 'en' | 'ja') {
   await act(async () => {
     await i18n.changeLanguage(language);
     root.render(<><Header /><Footer /></>);
@@ -44,18 +44,28 @@ function localFooterLabels(): string[] {
     .map(link => link.textContent?.trim() ?? '');
 }
 
+function supportLinks(): Array<{ label: string; href: string | null }> {
+  return Array.from(container.querySelectorAll('.footer-support-option'))
+    .map(link => ({
+      label: link.textContent?.trim() ?? '',
+      href: link.getAttribute('href'),
+    }));
+}
+
 describe('localized application chrome', () => {
   it('renders English navigation and footer labels', async () => {
     await renderChrome('en');
 
     expect(container.querySelector('header')?.getAttribute('aria-label')).toBe('Main navigation');
     expect(container.querySelector('.brand-wordmark')?.textContent).toBe('Glamour Set Maker');
+    expect(container.querySelector('.brand-series-label')?.textContent).toBe('01 · CARD MAKER');
     expect(container.querySelector('.brand-wordmark')?.getAttribute('lang')).toBe('en');
     expect(container.querySelector('header img')).toBeNull();
     expect(container.querySelector('header > div')?.className).toContain('h-[44px]');
     expect(container.querySelector('.header-control-rail')).not.toBeNull();
     expect(container.querySelectorAll('.header-control-cell')).toHaveLength(4);
     expect(container.querySelector('.footer-meta .footer-legal')?.textContent).toContain('SQUARE ENIX.');
+    expect(container.querySelector('.footer-series-link')?.getAttribute('href')).toBe('https://ff14-glamour-maker2.pages.dev/');
     expect(
       Array.from(container.querySelectorAll('.header-control-cell'))
         .every(cell => cell.tagName === 'BUTTON'),
@@ -63,11 +73,30 @@ describe('localized application chrome', () => {
     expect(localFooterLabels()).toEqual(['Guide', 'FAQ', 'About', 'Terms', 'Privacy']);
   });
 
+  it('offers Ko-fi and Buy Me a Coffee support links', async () => {
+    await renderChrome('ko');
+
+    expect(container.querySelector('.footer-support-menu')).not.toBeNull();
+    expect(container.querySelector('.footer-support-options')?.getAttribute('aria-label'))
+      .toBe('후원 방법 선택');
+    expect(container.querySelector('.footer-support-options')?.getAttribute('role')).toBe('group');
+    expect(supportLinks()).toEqual([
+      { label: 'Ko-fi', href: 'https://ko-fi.com/reconeur' },
+      { label: 'Buy Me a Coffee', href: 'https://buymeacoffee.com/coner' },
+    ]);
+    expect(
+      Array.from(container.querySelectorAll('.footer-support-option'))
+        .every(link => link.getAttribute('target') === '_blank'
+          && link.getAttribute('rel') === 'noopener noreferrer'),
+    ).toBe(true);
+  });
+
   it('renders Japanese navigation and footer labels', async () => {
     await renderChrome('ja');
 
     expect(container.querySelector('header')?.getAttribute('aria-label')).toBe('メインナビゲーション');
     expect(container.querySelector('.brand-wordmark')?.textContent).toBe('ミラプリセットメーカー');
+    expect(container.querySelector('.brand-series-label')?.textContent).toBe('01 · カードメーカー');
     expect(container.querySelector('.brand-wordmark')?.getAttribute('lang')).toBe('ja');
     expect(localFooterLabels()).toEqual([
       'ガイド',

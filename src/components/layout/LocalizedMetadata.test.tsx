@@ -18,6 +18,7 @@ beforeEach(() => {
   document.head.innerHTML = [
     '<meta name="description" content="">',
     '<meta name="apple-mobile-web-app-title" content="">',
+    '<meta name="application-name" content="">',
     '<link rel="manifest" href="">',
   ].join('');
   container = document.createElement('div');
@@ -39,10 +40,11 @@ describe('localized document metadata', () => {
     });
 
     expect(document.documentElement.lang).toBe('ja');
-    expect(document.title).toBe('ミラプリセットメーカー | ファイナルファンタジーXIV');
+    expect(document.title).toBe('ミラプリセットメーカー 01 · カードメーカー | ファイナルファンタジーXIV');
     expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toContain('ミラプリセット');
     expect(document.querySelector('meta[name="apple-mobile-web-app-title"]')?.getAttribute('content')).toBe('ミラプリセットメーカー');
-    expect(document.querySelector('link[rel="manifest"]')?.getAttribute('href')).toBe('/manifest.ja.webmanifest');
+    expect(document.querySelector('link[rel="manifest"]')?.getAttribute('href')).toBe('/manifest-01.ja.webmanifest');
+    expect(document.querySelector('meta[name="application-name"]')?.getAttribute('content')).toBe('ミラプリセットメーカー');
   });
 
   it('uses the dedicated Korean home-screen name', async () => {
@@ -51,7 +53,7 @@ describe('localized document metadata', () => {
       root.render(<Header />);
     });
 
-    expect(document.querySelector('meta[name="apple-mobile-web-app-title"]')?.getAttribute('content')).toBe('투영세트 메이커');
+    expect(document.querySelector('meta[name="apple-mobile-web-app-title"]')?.getAttribute('content')).toBe('투영세트메이커');
   });
 
   it('sets route-specific metadata and structured data for information pages', async () => {
