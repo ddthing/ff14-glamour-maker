@@ -54,7 +54,7 @@ export function getLocalizedMetadata(
     pageTitle,
     description,
     canonicalUrl,
-    manifestPath: `/manifest.${language}.webmanifest`,
+    manifestPath: `/manifest-01.${language}.webmanifest`,
     ogLocale,
     structuredData: pageData
       ? {
@@ -124,6 +124,7 @@ export function useLocalizedMetadata(page: ContentPageKey = 'home'): void {
     document.title = metadata.pageTitle;
     setMetaContent('name', 'description', metadata.description);
     setMetaContent('name', 'apple-mobile-web-app-title', t('common.home_screen_name'));
+    setMetaContent('name', 'application-name', t('common.home_screen_name'));
     setMetaContent('property', 'og:title', metadata.pageTitle);
     setMetaContent('property', 'og:description', metadata.description);
     setMetaContent('property', 'og:url', metadata.canonicalUrl);
