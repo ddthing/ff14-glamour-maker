@@ -592,6 +592,14 @@ export function EditorTour({ onStart, onStepChange, onFinish }: EditorTourProps)
     else if (targetMissing) positionTip(null);
   }, [active, stepIndex, targetMissing, i18n.resolvedLanguage, positionTip]);
 
+  // The tooltip is hidden until its target is measured. Focus only after
+  // React commits that visible state, rather than during the measuring frame.
+  useLayoutEffect(() => {
+    if (active && (hasTarget || targetMissing)) {
+      nextRef.current?.focus({ preventScroll: true });
+    }
+  }, [active, hasTarget, targetMissing, stepIndex]);
+
   const currentStep = STEPS[stepIndex];
   const tipStyle = tipPosition;
   const overlay = active && typeof document !== 'undefined'
