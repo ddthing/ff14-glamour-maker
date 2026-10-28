@@ -20,6 +20,7 @@ export function PhotoPanel({
     <button
       type="button"
       aria-label={croppedImageSrc ? t('common.replace_image') : t('common.upload_hint')}
+      data-tour="photo"
       className="relative flex h-full w-[480px] shrink-0 cursor-pointer select-none items-center justify-center overflow-hidden border-0 bg-[#17191c] p-0 text-left"
       onClick={onClick}
     >

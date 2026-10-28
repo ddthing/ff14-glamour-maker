@@ -16,14 +16,21 @@ import { buildEquipmentShareText } from './equipmentShareText';
 interface Props {
   state: AppState;
   actions: GlamourActions;
+  activeTab?: ControlTab;
+  onTabChange?: (tab: ControlTab) => void;
 }
 
-export function ControlPanel({ state, actions }: Props) {
+export function ControlPanel({ state, actions, activeTab, onTabChange }: Props) {
   const { t, i18n } = useTranslation();
   const { isExporting, stage, error: exportError, handleExport } = useExport();
   const { presets, error: presetError, addPreset, removePreset, restorePreset } = usePresets();
   const { action: undoAction, registerUndo, undo } = useUndoAction();
-  const [activeTab, setActiveTab] = useState<ControlTab>('equipment');
+  const [internalActiveTab, setInternalActiveTab] = useState<ControlTab>('equipment');
+  const currentTab = activeTab ?? internalActiveTab;
+  const changeTab = (tab: ControlTab) => {
+    if (activeTab === undefined) setInternalActiveTab(tab);
+    onTabChange?.(tab);
+  };
 
   const handleResetItems = useCallback(() => actions.resetItems(), [actions]);
 
@@ -54,19 +61,19 @@ export function ControlPanel({ state, actions }: Props) {
   return (
     <div className="control-panel flex h-full min-h-0 flex-col overflow-hidden rounded-[var(--radius-lg)]">
       <ControlTabs
-        activeTab={activeTab}
+        activeTab={currentTab}
         equipmentLabel={t('common.info_entry', '투영 정보 입력')}
         generalLabel={t('common.settings', '기본 설정')}
-        onChange={setActiveTab}
+        onChange={changeTab}
       />
 
       <div
         id="control-tabpanel"
         role="tabpanel"
-        aria-labelledby={activeTab === 'general' ? 'general-tab' : 'equipment-tab'}
+        aria-labelledby={currentTab === 'general' ? 'general-tab' : 'equipment-tab'}
         className="flex min-h-0 flex-1 flex-col"
       >
-        {activeTab === 'general' ? (
+        {currentTab === 'general' ? (
           <GeneralTab
             state={state}
             onTitleChange={actions.setTitle}

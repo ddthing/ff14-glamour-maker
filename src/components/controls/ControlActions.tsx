@@ -76,6 +76,7 @@ export function ControlActions({
         <button
           type="button"
           className="control-action control-action-primary"
+          data-tour="export"
           onClick={onExport}
           disabled={isExporting}
           data-ready={isReadyToSave || undefined}

@@ -166,6 +166,38 @@ i18n
             home_next_description: '도구를 바로 사용해도 되지만, 처음이라면 가이드에서 입력 순서와 저장 방식을 먼저 확인할 수 있습니다. 기능별 질문은 FAQ, 데이터 처리와 팬 프로젝트 고지는 소개에서 확인하세요.',
             home_related_navigation: '관련 정보'
           },
+          tour: {
+            start: '사용법',
+            dialog_label: '에디터 사용법 안내',
+            skip: '건너뛰기',
+            previous: '이전',
+            next: '다음',
+            finish: '완료',
+            step_status: '{{current}} / {{total}}',
+            unavailable: '이 항목을 아직 찾을 수 없어요. 다음 단계로 이동하거나 안내를 종료할 수 있습니다.',
+            steps: {
+              photo: {
+                title: '캐릭터 사진',
+                description: '사진을 올리고 위치와 확대 비율을 조정해 카드에 담을 구도를 정하세요.'
+              },
+              slots: {
+                title: '부위별 장비',
+                description: '머리·상의·손 등 바꾸려는 부위를 먼저 선택하세요.'
+              },
+              search: {
+                title: '아이템 검색',
+                description: '아이템 이름을 입력하고 검색 결과를 선택하세요. 필요한 염색도 함께 고를 수 있어요.'
+              },
+              settings: {
+                title: '카드 정보',
+                description: '세트명과 제작자, 선택 항목을 정리하세요. 입력 내용은 카드 미리보기에 반영됩니다.'
+              },
+              export: {
+                title: 'PNG 저장',
+                description: '미리보기를 확인한 뒤 저장을 눌러 공유할 카드 이미지를 내려받으세요.'
+              }
+            }
+          },
           slots: {
             mainhand: '주 무기',
             offhand: '보조무기',
@@ -350,6 +382,38 @@ i18n
             home_next_description: 'You can start in the maker, or read the guide first for the entry order and export flow. The FAQ covers feature questions, while About explains data handling and the fan-project scope.',
             home_related_navigation: 'Related information'
           },
+          tour: {
+            start: 'How to use',
+            dialog_label: 'Editor walkthrough',
+            skip: 'Skip',
+            previous: 'Previous',
+            next: 'Next',
+            finish: 'Done',
+            step_status: '{{current}} / {{total}}',
+            unavailable: 'This part is not available yet. Move to the next step or close the walkthrough.',
+            steps: {
+              photo: {
+                title: 'Character photo',
+                description: 'Upload a photo, then adjust its position and zoom to choose the crop for your card.'
+              },
+              slots: {
+                title: 'Equipment by slot',
+                description: 'Choose the slot you want to change, such as head, body, or hands.'
+              },
+              search: {
+                title: 'Item search',
+                description: 'Enter an item name and choose a result. You can add a dye here if needed.'
+              },
+              settings: {
+                title: 'Card details',
+                description: 'Add a set name and creator, plus any optional items. Your entries appear in the card preview.'
+              },
+              export: {
+                title: 'Save as PNG',
+                description: 'Check the preview, then save to download a card image you can share.'
+              }
+            }
+          },
           slots: {
             mainhand: 'Main Hand',
             offhand: 'Off Hand',
@@ -533,6 +597,38 @@ i18n
             home_next_title: '完成に必要な情報だけ確認する',
             home_next_description: 'すぐにメーカーを使うこともできますが、初めてならガイドで入力順と保存方法を確認できます。機能の質問はFAQ、データ処理とファンプロジェクトの範囲は概要で説明しています。',
             home_related_navigation: '関連情報'
+          },
+          tour: {
+            start: '使い方',
+            dialog_label: 'エディターの使い方ガイド',
+            skip: 'スキップ',
+            previous: '戻る',
+            next: '次へ',
+            finish: '完了',
+            step_status: '{{current}} / {{total}}',
+            unavailable: 'この項目はまだ表示されていません。次へ進むか、ガイドを終了できます。',
+            steps: {
+              photo: {
+                title: 'キャラクター写真',
+                description: '写真を読み込み、位置とズームを調整してカードに使う範囲を決めます。'
+              },
+              slots: {
+                title: '部位ごとの装備',
+                description: '頭や胴、手など、変更したい部位を先に選びます。'
+              },
+              search: {
+                title: 'アイテム検索',
+                description: 'アイテム名を入力して検索結果を選びます。必要に応じてカララントも選べます。'
+              },
+              settings: {
+                title: 'カード情報',
+                description: 'セット名と製作者、任意項目を入力します。内容はカードのプレビューに反映されます。'
+              },
+              export: {
+                title: 'PNGを保存',
+                description: 'プレビューを確認して保存を押すと、共有用のカード画像をダウンロードできます。'
+              }
+            }
           },
           slots: {
             mainhand: '主武器',

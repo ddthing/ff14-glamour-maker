@@ -1,5 +1,6 @@
 import { Redo02Icon, Undo02Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
+import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { StudioDraftStatus } from '../../features/studio/useStudioState';
 
@@ -10,6 +11,7 @@ interface StudioPreviewToolbarProps {
   onUndo: () => void;
   onRedo: () => void;
   retrySave: () => void;
+  helpControl?: ReactNode;
 }
 
 export function StudioPreviewToolbar({
@@ -19,6 +21,7 @@ export function StudioPreviewToolbar({
   onUndo,
   onRedo,
   retrySave,
+  helpControl,
 }: StudioPreviewToolbarProps) {
   const { t } = useTranslation();
 
@@ -26,13 +29,15 @@ export function StudioPreviewToolbar({
     <div className="studio-preview-toolbar">
       <div className="studio-preview-heading">
         <div className="studio-preview-title-row">
-          <h2 className="studio-preview-title">{t('common.preview')}</h2>
-          <span className="studio-preview-live">
-            <span className="studio-preview-live-dot" aria-hidden="true" />
-            {t('common.preview_live')}
-          </span>
+          <h2
+            className="studio-preview-title"
+            title={t('common.canvas_export_spec')}
+            aria-describedby="studio-preview-output-spec"
+          >
+            {t('common.preview')}
+          </h2>
         </div>
-        <p className="studio-preview-output-spec">{t('common.canvas_export_spec')}</p>
+        <span id="studio-preview-output-spec" className="sr-only">{t('common.canvas_export_spec')}</span>
       </div>
 
       <div className="studio-preview-actions">
@@ -53,6 +58,8 @@ export function StudioPreviewToolbar({
             </button>
           )}
         </div>
+
+        {helpControl ? <div className="studio-preview-help-control">{helpControl}</div> : null}
 
         <div className="studio-history-actions" aria-label={t('common.studio_history')}>
           <button

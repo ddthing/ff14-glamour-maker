@@ -33,6 +33,7 @@ describe('StudioPreviewToolbar', () => {
           onUndo={vi.fn()}
           onRedo={vi.fn()}
           retrySave={vi.fn()}
+          helpControl={<button type="button" data-testid="help-control">사용법</button>}
         />,
       );
     });
@@ -40,6 +41,10 @@ describe('StudioPreviewToolbar', () => {
     expect(container.querySelector('[data-status="saved"]')?.textContent).toContain('이 브라우저에 저장됨');
     expect(container.querySelector<HTMLButtonElement>('[aria-label="실행 취소"]')?.disabled).toBe(true);
     expect(container.querySelector<HTMLButtonElement>('[aria-label="다시 실행"]')?.disabled).toBe(true);
+    expect(container.querySelector('[data-testid="help-control"]')?.textContent).toBe('사용법');
+    expect(container.querySelector('.studio-preview-live')).toBeNull();
+    expect(container.querySelector('.studio-preview-title')?.getAttribute('title')).toContain('1080 × 900');
+    expect(container.querySelector('#studio-preview-output-spec')?.classList.contains('sr-only')).toBe(true);
     expect(container.textContent).toContain('1080 × 900');
     expect(container.textContent).toContain('3240 × 2700');
   });

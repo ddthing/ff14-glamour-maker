@@ -33,7 +33,7 @@ export function GeneralTab({
     return (
         <>
             {/* ── Section 1: 투영 기본 정보 ── */}
-            <section className="general-settings-section">
+            <section className="general-settings-section" data-tour="settings">
                 <div className="general-field">
                     <SectionLabel
                         style={{ marginBottom: 0 }}
