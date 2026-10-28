@@ -1,51 +1,85 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PreviewCanvas } from './components/canvas/PreviewCanvas';
 import { ControlPanel } from './components/controls/ControlPanel';
+import type { ControlTab } from './components/controls/ControlTabs';
+import { StudioPreviewToolbar } from './components/studio/StudioPreviewToolbar';
+import { useStudioKeyboardShortcuts } from './components/studio/useStudioKeyboardShortcuts';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
-import { HomeValueSection } from './components/home/HomeValueSection';
-import { createInitialState } from './features/glamour/stateFactory';
+import { EditorTour } from './components/onboarding/EditorTour';
+import { useStudioState } from './features/studio/useStudioState';
 import { useGlamourActions } from './features/glamour/useGlamourActions';
-import type { AppState } from './types';
 
 function App() {
   const { t } = useTranslation();
-  const [state, setState] = useState<AppState>(createInitialState);
+  const [activeControlTab, setActiveControlTab] = useState<ControlTab>('equipment');
+  const previousControlTab = useRef<ControlTab | null>(null);
+  const {
+    state,
+    setState,
+    undo,
+    redo,
+    canUndo,
+    canRedo,
+    draftStatus,
+    retrySave,
+  } = useStudioState();
   const actions = useGlamourActions(setState);
+
+  const handleTourStart = () => {
+    previousControlTab.current = activeControlTab;
+  };
+  const handleTourStepChange = (index: number) => {
+    if (index === 1 || index === 2) setActiveControlTab('equipment');
+    if (index === 3) setActiveControlTab('general');
+  };
+  const handleTourFinish = () => {
+    if (previousControlTab.current) setActiveControlTab(previousControlTab.current);
+    previousControlTab.current = null;
+  };
+
+  useStudioKeyboardShortcuts({ canUndo, canRedo, undo, redo });
 
   return (
     <div className="flex min-h-[100dvh] w-full flex-col">
       <Header />
 
-      <div className="workspace-shell mx-auto flex w-full max-w-[1480px] flex-1 px-3 pb-10 pt-4 sm:px-5 sm:pt-6 lg:px-10 lg:pb-14 lg:pt-8">
+      <div className="workspace-shell mx-auto flex w-full max-w-[1480px] flex-1 px-3 pb-4 pt-3 sm:px-5 sm:pb-5 sm:pt-3 lg:px-10 lg:pb-6 lg:pt-3">
         <main id="main-content" tabIndex={-1} aria-labelledby="app-page-title" className="w-full min-w-0">
-          <div className="workspace-grid mt-5 w-full min-w-0 items-stretch">
+          <h1 id="app-page-title" className="sr-only">{t('common.series_label')}</h1>
+
+          <div className="workspace-grid w-full min-w-0 items-stretch">
             <aside className="workspace-controls flex w-full min-w-0 flex-col self-stretch">
-              <ControlPanel state={state} actions={actions} />
+              <ControlPanel
+                state={state}
+                actions={actions}
+                activeTab={activeControlTab}
+                onTabChange={setActiveControlTab}
+              />
             </aside>
 
             <div className="workspace-preview flex min-w-0 flex-col self-stretch">
-              <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />
+              <StudioPreviewToolbar
+                draftStatus={draftStatus}
+                canUndo={canUndo}
+                canRedo={canRedo}
+                onUndo={undo}
+                onRedo={redo}
+                retrySave={retrySave}
+                helpControl={(
+                  <EditorTour
+                    onStart={handleTourStart}
+                    onStepChange={handleTourStepChange}
+                    onFinish={handleTourFinish}
+                  />
+                )}
+              />
+              <div className="studio-preview-canvas-shell">
+                <PreviewCanvas state={state} onPhotoConfirm={actions.setPhoto} />
+              </div>
             </div>
           </div>
-
-          <section className="home-intro" aria-labelledby="app-page-title">
-            <div className="home-intro-copy">
-              <p className="content-eyebrow">{t('common.home_intro_eyebrow')}</p>
-              <h1 id="app-page-title" className="home-intro-title">
-                {t('common.home_intro_title')}
-              </h1>
-              <p className="home-intro-description">{t('common.home_intro_description')}</p>
-            </div>
-            <ul className="home-intro-proof-list" aria-label={t('common.home_intro_proof_label')}>
-              <li>{t('common.home_proof_photo')}</li>
-              <li>{t('common.home_proof_items')}</li>
-              <li>{t('common.home_proof_post')}</li>
-            </ul>
-          </section>
-
-          <HomeValueSection />
         </main>
       </div>
 

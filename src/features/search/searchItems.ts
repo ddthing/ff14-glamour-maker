@@ -36,24 +36,30 @@ export function isMatchingSlot(item: FF14Item, slot: EquipmentPart): boolean {
 }
 
 function normalizeSearchText(value: string): string {
-  return value.normalize('NFKC').toLocaleLowerCase().replace(/\s+/g, '');
+  return value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
 }
 
-function matchScore(item: FF14Item, query: string): number | null {
-  let bestScore: number | null = null;
+const normalizedNameCache = new WeakMap<FF14Item, readonly string[]>();
 
-  for (const name of [item.name, item.nameEn, item.nameJa]) {
-    const normalizedName = normalizeSearchText(name);
+function getSearchKeys(item: FF14Item): readonly string[] {
+  if (item.searchKeys) return item.searchKeys;
+
+  const cached = normalizedNameCache.get(item);
+  if (cached) return cached;
+
+  const keys = [item.name, item.nameEn, item.nameJa].map(normalizeSearchText);
+  normalizedNameCache.set(item, keys);
+  return keys;
+}
+
+function matchScore(item: FF14Item, query: string): 0 | 1 | 2 | null {
+  let bestScore: 1 | 2 | null = null;
+
+  for (const normalizedName of getSearchKeys(item)) {
     if (!normalizedName) continue;
-
-    let score: number | null = null;
-    if (normalizedName === query) score = 0;
-    else if (normalizedName.startsWith(query)) score = 1;
-    else if (normalizedName.includes(query)) score = 2;
-
-    if (score !== null && (bestScore === null || score < bestScore)) {
-      bestScore = score;
-    }
+    if (normalizedName === query) return 0;
+    if (normalizedName.startsWith(query)) bestScore = 1;
+    else if (normalizedName.includes(query) && bestScore === null) bestScore = 2;
   }
 
   return bestScore;
@@ -73,15 +79,22 @@ export function searchItems(
   if (!normalizedQuery) return [];
 
   const limit = Math.max(0, options.limit ?? 200);
-  const ranked: Array<{ item: FF14Item; score: number; index: number }> = [];
+  if (limit === 0) return [];
 
-  items.forEach((item, index) => {
+  const ranked: [FF14Item[], FF14Item[], FF14Item[]] = [[], [], []];
+
+  items.forEach(item => {
     if (options.slot && !isMatchingSlot(item, options.slot)) return;
     const score = matchScore(item, normalizedQuery);
     if (score === null) return;
-    ranked.push({ item, score, index });
+    ranked[score].push(item);
   });
 
-  ranked.sort((left, right) => left.score - right.score || left.index - right.index);
-  return ranked.slice(0, limit).map(result => result.item);
+  const results: FF14Item[] = [];
+  for (const bucket of ranked) {
+    const remaining = limit - results.length;
+    results.push(...bucket.slice(0, remaining));
+    if (results.length >= limit) break;
+  }
+  return results;
 }

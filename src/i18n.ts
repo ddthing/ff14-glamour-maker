@@ -50,6 +50,11 @@ i18n
             character_photo: '캐릭터 사진',
             upload_hint: '클릭하거나 사진을 끌어다 놓으세요',
             drop_image: '사진을 여기에 놓으세요',
+            photo_invalid_type: '지원하지 않는 이미지 형식입니다. 지원하는 이미지 파일을 선택해 주세요.',
+            photo_too_large: '사진은 20MB 이하만 업로드할 수 있습니다.',
+            photo_read_failed: '사진을 읽지 못했습니다. 다시 선택해 주세요.',
+            photo_paste_hint: '사진을 복사한 뒤 이 화면에서 붙여넣을 수도 있습니다.',
+            photo_size_hint: '최대 파일 크기: 20MB',
             loading: '데이터를 불러오는 중…',
             no_results: '결과 없음',
             search_failed: '아이템 데이터를 불러오지 못했습니다. 다시 시도해 주세요.',
@@ -64,6 +69,23 @@ i18n
             step1_upload: '캐릭터 사진 업로드',
             step2_equip: '투영 장비 입력',
             step3_save: '이미지 저장',
+            studio_step3_label: '저장 준비',
+            studio_eyebrow: 'FFXIV GLAMOUR STUDIO · 01',
+            studio_title: '이번 룩을 한 장의 카드로',
+            studio_description: '사진과 장비를 미리보면서 필요한 정보를 골라 담고, 어느 단계에서든 이미지를 저장할 수 있어요.',
+            studio_progress: '카드 준비도',
+            studio_progress_count: '{{completed}} / {{total}} 단계 완료',
+            studio_step_complete: '완료',
+            studio_step_pending: '진행 전',
+            preview: '미리보기',
+            preview_live: '실시간 반영',
+            canvas_export_spec: '캔버스 1080 × 900 · PNG 3240 × 2700',
+            studio_history: '편집 기록',
+            draft_loading: '임시 저장을 불러오는 중…',
+            draft_saving: '임시 저장 중…',
+            draft_saved: '이 브라우저에 저장됨',
+            draft_unavailable: '이 브라우저에는 저장할 수 없음',
+            retry_draft_save: '다시 저장',
             settings: '기본 설정',
             export_preparing: '이미지 준비 중…',
             export_rendering: '이미지 생성 중…',
@@ -80,9 +102,14 @@ i18n
             hashtags_copying: '복사 중…',
             hashtags_copied: '복사됨',
             hashtags_copy_failed: '복사하지 못했어요. 브라우저 권한을 확인해 주세요.',
+            copy_equipment_list: '장비 목록 복사',
+            copying_equipment_list: '장비 목록 복사 중…',
+            equipment_list_copied: '장비 목록을 복사했어요.',
+            equipment_list_copy_failed: '장비 목록을 복사하지 못했어요.',
             clear_slot: '부위 아이템 지우기',
             delete_preset: '프리셋 삭제',
             undo: '실행 취소',
+            redo: '다시 실행',
             items_reset: '장비를 초기화했습니다.',
             preset_deleted: '프리셋을 삭제했습니다.',
             preset_storage_failed: '프리셋을 저장하지 못했습니다. 브라우저 저장 공간을 확인해 주세요.',
@@ -138,6 +165,38 @@ i18n
             home_next_title: '완성까지 필요한 정보만 확인하세요',
             home_next_description: '도구를 바로 사용해도 되지만, 처음이라면 가이드에서 입력 순서와 저장 방식을 먼저 확인할 수 있습니다. 기능별 질문은 FAQ, 데이터 처리와 팬 프로젝트 고지는 소개에서 확인하세요.',
             home_related_navigation: '관련 정보'
+          },
+          tour: {
+            start: '사용법',
+            dialog_label: '에디터 사용법 안내',
+            skip: '건너뛰기',
+            previous: '이전',
+            next: '다음',
+            finish: '완료',
+            step_status: '{{current}} / {{total}}',
+            unavailable: '이 항목을 아직 찾을 수 없어요. 다음 단계로 이동하거나 안내를 종료할 수 있습니다.',
+            steps: {
+              photo: {
+                title: '캐릭터 사진',
+                description: '사진을 올리고 위치와 확대 비율을 조정해 카드에 담을 구도를 정하세요.'
+              },
+              slots: {
+                title: '부위별 장비',
+                description: '머리·상의·손 등 바꾸려는 부위를 먼저 선택하세요.'
+              },
+              search: {
+                title: '아이템 검색',
+                description: '아이템 이름을 입력하고 검색 결과를 선택하세요. 필요한 염색도 함께 고를 수 있어요.'
+              },
+              settings: {
+                title: '카드 정보',
+                description: '세트명과 제작자, 선택 항목을 정리하세요. 입력 내용은 카드 미리보기에 반영됩니다.'
+              },
+              export: {
+                title: 'PNG 저장',
+                description: '미리보기를 확인한 뒤 저장을 눌러 공유할 카드 이미지를 내려받으세요.'
+              }
+            }
           },
           slots: {
             mainhand: '주 무기',
@@ -207,6 +266,11 @@ i18n
             character_photo: 'Character photo',
             upload_hint: 'Click or drag and drop your photo',
             drop_image: 'Drop to load image',
+            photo_invalid_type: 'Unsupported image format. Choose a supported image file.',
+            photo_too_large: 'Photos must be 20 MB or smaller.',
+            photo_read_failed: 'Could not read the photo. Please choose it again.',
+            photo_paste_hint: 'You can also copy a photo and paste it on this screen.',
+            photo_size_hint: 'Maximum file size: 20 MB',
             loading: 'Loading data…',
             no_results: 'No results',
             search_failed: 'Could not load item data. Please try again.',
@@ -221,6 +285,23 @@ i18n
             step1_upload: 'Upload Character Photo',
             step2_equip: 'Add Equipment',
             step3_save: 'Save Image',
+            studio_step3_label: 'Ready to export',
+            studio_eyebrow: 'GLAMOUR CARD STUDIO · 01',
+            studio_title: 'Turn this look into a card',
+            studio_description: 'See your photo and gear come together as you work. Add only the details you need and save a partial card at any time.',
+            studio_progress: 'Card progress',
+            studio_progress_count: '{{completed}} / {{total}} complete',
+            studio_step_complete: 'Complete',
+            studio_step_pending: 'Not started',
+            preview: 'Preview',
+            preview_live: 'Live preview',
+            canvas_export_spec: 'Canvas 1080 × 900 · PNG 3240 × 2700',
+            studio_history: 'Edit history',
+            draft_loading: 'Loading local draft…',
+            draft_saving: 'Saving draft…',
+            draft_saved: 'Saved in this browser',
+            draft_unavailable: 'Local save unavailable',
+            retry_draft_save: 'Retry save',
             settings: 'Settings',
             export_preparing: 'Preparing image…',
             export_rendering: 'Creating image…',
@@ -237,9 +318,14 @@ i18n
             hashtags_copying: 'Copying…',
             hashtags_copied: 'Copied',
             hashtags_copy_failed: 'Could not copy. Check your browser permissions.',
+            copy_equipment_list: 'Copy equipment list',
+            copying_equipment_list: 'Copying equipment list…',
+            equipment_list_copied: 'Equipment list copied.',
+            equipment_list_copy_failed: 'Could not copy the equipment list.',
             clear_slot: 'Clear slot item',
             delete_preset: 'Delete preset',
             undo: 'Undo',
+            redo: 'Redo',
             items_reset: 'Equipment was reset.',
             preset_deleted: 'Preset deleted.',
             preset_storage_failed: 'Could not save the preset. Check your browser storage.',
@@ -295,6 +381,38 @@ i18n
             home_next_title: 'Find only what you need to finish',
             home_next_description: 'You can start in the maker, or read the guide first for the entry order and export flow. The FAQ covers feature questions, while About explains data handling and the fan-project scope.',
             home_related_navigation: 'Related information'
+          },
+          tour: {
+            start: 'How to use',
+            dialog_label: 'Editor walkthrough',
+            skip: 'Skip',
+            previous: 'Previous',
+            next: 'Next',
+            finish: 'Done',
+            step_status: '{{current}} / {{total}}',
+            unavailable: 'This part is not available yet. Move to the next step or close the walkthrough.',
+            steps: {
+              photo: {
+                title: 'Character photo',
+                description: 'Upload a photo, then adjust its position and zoom to choose the crop for your card.'
+              },
+              slots: {
+                title: 'Equipment by slot',
+                description: 'Choose the slot you want to change, such as head, body, or hands.'
+              },
+              search: {
+                title: 'Item search',
+                description: 'Enter an item name and choose a result. You can add a dye here if needed.'
+              },
+              settings: {
+                title: 'Card details',
+                description: 'Add a set name and creator, plus any optional items. Your entries appear in the card preview.'
+              },
+              export: {
+                title: 'Save as PNG',
+                description: 'Check the preview, then save to download a card image you can share.'
+              }
+            }
           },
           slots: {
             mainhand: 'Main Hand',
@@ -364,6 +482,11 @@ i18n
             character_photo: 'キャラクター写真',
             upload_hint: 'クリック または 写真をドラッグ＆ドロップ',
             drop_image: 'ここへドロップ',
+            photo_invalid_type: '対応していない画像形式です。対応している画像ファイルを選択してください。',
+            photo_too_large: '写真は20MB以下にしてください。',
+            photo_read_failed: '写真を読み込めませんでした。もう一度選択してください。',
+            photo_paste_hint: '写真をコピーして、この画面に貼り付けることもできます。',
+            photo_size_hint: '最大ファイルサイズ：20MB',
             loading: 'データを読み込み中…',
             no_results: '結果なし',
             search_failed: 'アイテムデータを読み込めませんでした。もう一度お試しください。',
@@ -378,6 +501,23 @@ i18n
             step1_upload: 'キャラクター写真をアップロード',
             step2_equip: '装備を入力',
             step3_save: '画像を保存',
+            studio_step3_label: '保存の準備',
+            studio_eyebrow: 'GLAMOUR CARD STUDIO · 01',
+            studio_title: 'このミラプリを一枚のカードに',
+            studio_description: '写真と装備をプレビューで確認しながら、必要な情報だけを追加できます。途中の状態でも画像を保存できます。',
+            studio_progress: 'カードの進み具合',
+            studio_progress_count: '{{completed}} / {{total}} 完了',
+            studio_step_complete: '完了',
+            studio_step_pending: '未着手',
+            preview: 'プレビュー',
+            preview_live: 'リアルタイム反映',
+            canvas_export_spec: 'キャンバス 1080 × 900 · PNG 3240 × 2700',
+            studio_history: '編集履歴',
+            draft_loading: '下書きを読み込み中…',
+            draft_saving: '下書きを保存中…',
+            draft_saved: 'このブラウザに保存済み',
+            draft_unavailable: 'このブラウザには保存できません',
+            retry_draft_save: '再保存',
             settings: '設定',
             export_preparing: '画像を準備中…',
             export_rendering: '画像を作成中…',
@@ -394,9 +534,14 @@ i18n
             hashtags_copying: 'コピー中…',
             hashtags_copied: 'コピーしました',
             hashtags_copy_failed: 'コピーできませんでした。ブラウザの権限を確認してください。',
+            copy_equipment_list: '装備一覧をコピー',
+            copying_equipment_list: '装備一覧をコピー中…',
+            equipment_list_copied: '装備一覧をコピーしました。',
+            equipment_list_copy_failed: '装備一覧をコピーできませんでした。',
             clear_slot: '部位のアイテムを消去',
             delete_preset: 'プリセットを削除',
             undo: '元に戻す',
+            redo: 'やり直す',
             items_reset: '装備を初期化しました。',
             preset_deleted: 'プリセットを削除しました。',
             preset_storage_failed: 'プリセットを保存できませんでした。ブラウザの保存領域を確認してください。',
@@ -452,6 +597,38 @@ i18n
             home_next_title: '完成に必要な情報だけ確認する',
             home_next_description: 'すぐにメーカーを使うこともできますが、初めてならガイドで入力順と保存方法を確認できます。機能の質問はFAQ、データ処理とファンプロジェクトの範囲は概要で説明しています。',
             home_related_navigation: '関連情報'
+          },
+          tour: {
+            start: '使い方',
+            dialog_label: 'エディターの使い方ガイド',
+            skip: 'スキップ',
+            previous: '戻る',
+            next: '次へ',
+            finish: '完了',
+            step_status: '{{current}} / {{total}}',
+            unavailable: 'この項目はまだ表示されていません。次へ進むか、ガイドを終了できます。',
+            steps: {
+              photo: {
+                title: 'キャラクター写真',
+                description: '写真を読み込み、位置とズームを調整してカードに使う範囲を決めます。'
+              },
+              slots: {
+                title: '部位ごとの装備',
+                description: '頭や胴、手など、変更したい部位を先に選びます。'
+              },
+              search: {
+                title: 'アイテム検索',
+                description: 'アイテム名を入力して検索結果を選びます。必要に応じてカララントも選べます。'
+              },
+              settings: {
+                title: 'カード情報',
+                description: 'セット名と製作者、任意項目を入力します。内容はカードのプレビューに反映されます。'
+              },
+              export: {
+                title: 'PNGを保存',
+                description: 'プレビューを確認して保存を押すと、共有用のカード画像をダウンロードできます。'
+              }
+            }
           },
           slots: {
             mainhand: '主武器',

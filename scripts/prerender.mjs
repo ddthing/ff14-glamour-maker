@@ -6,7 +6,6 @@ const projectRoot = resolve(import.meta.dirname, '..');
 const distRoot = join(projectRoot, 'dist');
 const ssrEntry = await import(pathToFileURL(join(projectRoot, 'dist-ssr', 'ssrEntry.js')).href);
 const template = await readFile(join(distRoot, 'index.html'), 'utf8');
-const origin = 'https://ff14-glamour-maker.pages.dev';
 const routes = ['/', '/guide', '/faq', '/about', '/terms', '/privacy'];
 
 function escapeHtml(value) {
@@ -48,7 +47,7 @@ function applyMetadata(html, metadata) {
 
 for (const route of routes) {
   const markup = await ssrEntry.renderPage(route, 'ko');
-  const metadata = ssrEntry.getPageMetadata(route, 'ko', origin);
+  const metadata = ssrEntry.getPageMetadata(route, 'ko');
   let html = applyMetadata(template, metadata);
   html = html.replace('<div id="root"></div>', `<div id="root">${markup}</div>`);
   html = html.replace(/\s*<noscript>[\s\S]*?<\/noscript>/i, '<noscript><p>이 페이지를 사용하려면 JavaScript를 활성화해 주세요.</p></noscript>');

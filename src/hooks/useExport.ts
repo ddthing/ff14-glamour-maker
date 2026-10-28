@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import type { ExportStage } from '../features/export/exportCanvas';
 
 export interface UseExportReturn {
@@ -39,14 +39,18 @@ export function useExport(): UseExportReturn {
   const [isExporting, setIsExporting] = useState(false);
   const [stage, setStage] = useState<ExportStage | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const exportInFlight = useRef(false);
 
   const handleExport = useCallback(async (title?: string) => {
+    if (exportInFlight.current) return;
+
     const element = document.getElementById('glamour-canvas');
     if (!element) {
       setError('canvas-not-found');
       return;
     }
 
+    exportInFlight.current = true;
     setIsExporting(true);
     setStage('preparing');
     setError(null);
@@ -67,6 +71,7 @@ export function useExport(): UseExportReturn {
       console.error('[useExport] Export failed:', exportError);
       setError(exportError instanceof Error ? exportError.message : 'unknown-export-error');
     } finally {
+      exportInFlight.current = false;
       setIsExporting(false);
       setStage(null);
     }

@@ -3,6 +3,7 @@
 import { act } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { SITE_ORIGIN } from '../../constants/site';
 import i18n from '../../i18n';
 import { Header } from './Header';
 
@@ -63,11 +64,13 @@ describe('localized document metadata', () => {
     });
 
     expect(document.title).toBe('Privacy policy | Glamour Set Maker');
-    expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(`${window.location.origin}/privacy/`);
+    expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(`${SITE_ORIGIN}/privacy/`);
+    expect(document.querySelector('meta[property="og:url"]')?.getAttribute('content')).toBe(`${SITE_ORIGIN}/privacy/`);
     expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toContain('Google AdSense');
 
-    const structuredData = JSON.parse(document.querySelector('#page-structured-data')?.textContent || '{}') as { '@type'?: string; dateModified?: string };
+    const structuredData = JSON.parse(document.querySelector('#page-structured-data')?.textContent || '{}') as { '@type'?: string; dateModified?: string; url?: string };
     expect(structuredData['@type']).toBe('WebPage');
     expect(structuredData.dateModified).toBe('2026-08-13');
+    expect(structuredData.url).toBe(`${SITE_ORIGIN}/privacy/`);
   });
 });

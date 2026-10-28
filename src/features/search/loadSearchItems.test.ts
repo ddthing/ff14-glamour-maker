@@ -5,13 +5,24 @@ afterEach(() => {
   vi.resetModules();
 });
 
+const shardRecord = {
+  id: 1,
+  name: '머리 장비',
+  nameEn: 'Head Gear',
+  nameJa: '頭装備',
+  uiCategory: 34,
+  equipSlots: ['head'],
+  source: 'item',
+  searchKeys: ['머리장비', 'headgear', '頭装備'],
+};
+
 describe('loadSearchItems', () => {
-  it('loads only the requested dataset and reuses it for later searches', async () => {
+  it('loads the requested slot shard and reuses it for later searches', async () => {
     const fetchItems = vi.fn(async (input: string | URL | Request) => {
       const isFacewear = String(input).includes('facewear');
       const record = isFacewear
         ? { 2: { ko: '얼굴 소품', en: 'Facewear', ja: 'フェイスアクセサリー', iconAssetKey: 'ko/2' } }
-        : { 1: { ko: '머리 장비', en: 'Head Gear', ja: '頭装備', uiCategory: 34 } };
+        : [shardRecord];
       return new Response(JSON.stringify(record), {
         status: 200,
         headers: { 'Content-Type': 'application/json' },
@@ -30,28 +41,28 @@ describe('loadSearchItems', () => {
       source: 'facewear',
       iconAssetKey: 'ko/2',
       translationStatus: 'complete',
+      searchKeys: ['얼굴소품', 'facewear', 'フェイスアクセサリー'],
     });
 
     const equipment = await loadSearchItems('head');
     expect(fetchItems).toHaveBeenCalledTimes(2);
     expect(equipment[0]).toMatchObject({ id: 1, source: 'item', uiCategory: 34 });
+    expect(String(fetchItems.mock.calls[1]?.[0])).toContain('head.json');
   });
 
-  it('clears a failed cache entry so the next search can retry', async () => {
+  it('clears a failed slot cache entry so the next search can retry', async () => {
     const fetchItems = vi.fn()
       .mockResolvedValueOnce(new Response('', { status: 503 }))
-      .mockResolvedValueOnce(new Response(JSON.stringify({
-        1: { ko: '상의', en: 'Body', ja: '胴防具', uiCategory: 35 },
-      }), { status: 200 }));
+      .mockResolvedValueOnce(new Response(JSON.stringify([shardRecord]), { status: 200 }));
     vi.stubGlobal('fetch', fetchItems);
 
     const { loadSearchItems } = await import('./loadSearchItems');
-    await expect(loadSearchItems('body')).rejects.toThrow('Could not load item data');
+    await expect(loadSearchItems('body')).rejects.toThrow('Could not load body item data');
     await expect(loadSearchItems('body')).resolves.toHaveLength(1);
     expect(fetchItems).toHaveBeenCalledTimes(2);
   });
 
-  it('preloads only the requested dataset and shares the pending request', async () => {
+  it('preloads only the requested shard and shares its pending request', async () => {
     let resolveFetch: ((response: Response) => void) | undefined;
     const fetchItems = vi.fn((input: string | URL | Request) => {
       void input;
@@ -62,17 +73,81 @@ describe('loadSearchItems', () => {
     vi.stubGlobal('fetch', fetchItems);
 
     const { loadSearchItems, preloadSearchItems } = await import('./loadSearchItems');
-    const preload = preloadSearchItems('face');
-    const load = loadSearchItems('face');
+    const preload = preloadSearchItems('head');
+    const load = loadSearchItems('head');
 
     expect(fetchItems).toHaveBeenCalledTimes(1);
-    resolveFetch?.(new Response(JSON.stringify({
-      2: { ko: '안경', en: 'Glasses', ja: '眼鏡' },
-    }), { status: 200 }));
+    resolveFetch?.(new Response(JSON.stringify([shardRecord]), { status: 200 }));
 
     await expect(preload).resolves.toBeUndefined();
     await expect(load).resolves.toHaveLength(1);
-    expect(String(fetchItems.mock.calls[0]?.[0])).toContain('facewear');
+    expect(String(fetchItems.mock.calls[0]?.[0])).toContain('head.json');
+  });
+
+  it('loads and caches a jewelry-specific shard', async () => {
+    const fetchItems = vi.fn(async (input: string | URL | Request) => {
+      void input;
+      return new Response(JSON.stringify([{
+        ...shardRecord,
+        uiCategory: 43,
+        equipSlots: ['rings'],
+      }]), { status: 200 });
+    });
+    vi.stubGlobal('fetch', fetchItems);
+
+    const { loadSearchItems } = await import('./loadSearchItems');
+    const first = await loadSearchItems('rings');
+    const second = await loadSearchItems('rings');
+    const secondRingSlot = await loadSearchItems('rings2');
+
+    expect(first).toBe(second);
+    expect(secondRingSlot).toBe(first);
+    expect(fetchItems).toHaveBeenCalledTimes(1);
+    expect(String(fetchItems.mock.calls[0]?.[0])).toContain('rings.json');
+  });
+
+  it('loads only the fashion accessory shard', async () => {
+    const fetchItems = vi.fn(async (input: string | URL | Request) => {
+      void input;
+      return new Response(JSON.stringify([{
+        id: 30269,
+        name: '파라솔',
+        nameEn: 'Parasol',
+        nameJa: 'パラソル',
+        iconPath: '/i/058000/058001.png',
+        uiCategory: 61,
+        source: 'item',
+        searchKeys: ['파라솔', 'parasol', 'パラソル'],
+      }]), { status: 200 });
+    });
+    vi.stubGlobal('fetch', fetchItems);
+
+    const { loadFashionAccessories } = await import('./loadSearchItems');
+    const first = await loadFashionAccessories();
+    const second = await loadFashionAccessories();
+
+    expect(first).toBe(second);
+    expect(first).toHaveLength(1);
+    expect(fetchItems).toHaveBeenCalledTimes(1);
+    expect(String(fetchItems.mock.calls[0]?.[0])).toContain('fashion-accessories.json');
+  });
+
+  it('keeps the unscoped search path available through the canonical full dataset', async () => {
+    const fetchItems = vi.fn(async (input: string | URL | Request) => {
+      const isFacewear = String(input).includes('facewear');
+      const record = isFacewear
+        ? { 2: { ko: '얼굴 소품', en: 'Facewear', ja: 'フェイスアクセサリー' } }
+        : { 1: { ko: '길', en: 'Gil', ja: 'ギル' } };
+      return new Response(JSON.stringify(record), { status: 200 });
+    });
+    vi.stubGlobal('fetch', fetchItems);
+
+    const { loadSearchItems } = await import('./loadSearchItems');
+    const items = await loadSearchItems();
+
+    expect(fetchItems).toHaveBeenCalledTimes(2);
+    expect(items.map(item => item.id)).toEqual([1, 2]);
+    expect(String(fetchItems.mock.calls[0]?.[0])).toContain('items.json');
   });
 });
 

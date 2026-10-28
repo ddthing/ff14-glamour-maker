@@ -1,5 +1,17 @@
 import itemsUrl from '../../data/items.json?url';
 import facewearUrl from '../../data/facewear.json?url';
+import mainhandUrl from '../../data/search/mainhand.json?url';
+import offhandUrl from '../../data/search/offhand.json?url';
+import headUrl from '../../data/search/head.json?url';
+import bodyUrl from '../../data/search/body.json?url';
+import handsUrl from '../../data/search/hands.json?url';
+import legsUrl from '../../data/search/legs.json?url';
+import feetUrl from '../../data/search/feet.json?url';
+import neckUrl from '../../data/search/neck.json?url';
+import earsUrl from '../../data/search/ears.json?url';
+import wristsUrl from '../../data/search/wrists.json?url';
+import ringsUrl from '../../data/search/rings.json?url';
+import fashionAccessoriesUrl from '../../data/search/fashion-accessories.json?url';
 import type { EquipmentPart } from '../../types';
 import type { FF14Item, ItemSource } from './types';
 
@@ -15,9 +27,28 @@ interface LocalItemData {
 }
 
 type ItemDataMap = Record<string, LocalItemData>;
+type SearchShardSlot = Exclude<EquipmentPart, 'face'>;
 
-let equipmentPromise: Promise<FF14Item[]> | null = null;
-let facewearPromise: Promise<FF14Item[]> | null = null;
+const slotUrls: Readonly<Record<SearchShardSlot, string>> = {
+  mainhand: mainhandUrl,
+  offhand: offhandUrl,
+  head: headUrl,
+  body: bodyUrl,
+  hands: handsUrl,
+  legs: legsUrl,
+  feet: feetUrl,
+  neck: neckUrl,
+  ears: earsUrl,
+  wrists: wristsUrl,
+  rings: ringsUrl,
+  rings2: ringsUrl,
+};
+
+const itemPromiseCache = new Map<string, Promise<readonly FF14Item[]>>();
+
+function normalizeSearchText(value: string): string {
+  return value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
+}
 
 function inferTranslationStatus(item: LocalItemData): NonNullable<FF14Item['translationStatus']> {
   if (item.translationStatus) return item.translationStatus;
@@ -28,47 +59,89 @@ function inferTranslationStatus(item: LocalItemData): NonNullable<FF14Item['tran
 }
 
 function mapItems(data: ItemDataMap, source: ItemSource): FF14Item[] {
-  return Object.entries(data).map(([id, item]) => ({
-    id: Number(id),
-    name: item.ko || item.en || item.ja || (source === 'facewear' ? 'Unknown Facewear' : 'Unknown Item'),
-    nameEn: item.en || '',
-    nameJa: item.ja || '',
-    uiCategory: item.uiCategory ?? undefined,
-    iconPath: item.iconPath || undefined,
-    iconAssetKey: item.iconAssetKey || undefined,
-    translationStatus: inferTranslationStatus(item),
-    equipSlots: item.equipSlots,
-    source,
-  }));
+  return Object.entries(data).map(([id, item]) => {
+    const name = item.ko || item.en || item.ja || (source === 'facewear' ? 'Unknown Facewear' : 'Unknown Item');
+    const nameEn = item.en || '';
+    const nameJa = item.ja || '';
+
+    return {
+      id: Number(id),
+      name,
+      nameEn,
+      nameJa,
+      uiCategory: item.uiCategory ?? undefined,
+      iconPath: item.iconPath || undefined,
+      iconAssetKey: item.iconAssetKey || undefined,
+      translationStatus: inferTranslationStatus(item),
+      equipSlots: item.equipSlots,
+      source,
+      searchKeys: [name, nameEn, nameJa].map(normalizeSearchText),
+    };
+  });
 }
 
-async function fetchItems(url: string, source: ItemSource): Promise<FF14Item[]> {
+async function readJson(url: string, source: string): Promise<unknown> {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Could not load ${source} data (${response.status}).`);
   }
-  return mapItems(await response.json() as ItemDataMap, source);
+  return response.json() as Promise<unknown>;
 }
 
-function loadEquipment(): Promise<FF14Item[]> {
-  equipmentPromise ??= fetchItems(itemsUrl, 'item').catch(error => {
-    equipmentPromise = null;
-    throw error;
-  });
-  return equipmentPromise;
+async function fetchItemMap(url: string, source: ItemSource): Promise<FF14Item[]> {
+  return mapItems(await readJson(url, source) as ItemDataMap, source);
 }
 
-function loadFacewear(): Promise<FF14Item[]> {
-  facewearPromise ??= fetchItems(facewearUrl, 'facewear').catch(error => {
-    facewearPromise = null;
-    throw error;
+async function fetchSearchShard(url: string, source: string): Promise<FF14Item[]> {
+  const payload = await readJson(url, source);
+  if (!Array.isArray(payload)) {
+    throw new Error(`Could not load ${source} data (invalid response).`);
+  }
+
+  return payload.map((value: unknown) => {
+    const item = value as FF14Item;
+    if (Array.isArray(item.searchKeys)) return item;
+    return {
+      ...item,
+      searchKeys: [item.name, item.nameEn, item.nameJa].map(normalizeSearchText),
+    };
   });
-  return facewearPromise;
+}
+
+function loadCachedItems(
+  key: string,
+  load: () => Promise<FF14Item[]>,
+): Promise<readonly FF14Item[]> {
+  const cached = itemPromiseCache.get(key);
+  if (cached) return cached;
+
+  const pending = load();
+  itemPromiseCache.set(key, pending);
+  void pending.catch(() => {
+    if (itemPromiseCache.get(key) === pending) itemPromiseCache.delete(key);
+  });
+  return pending;
+}
+
+function loadEquipment(): Promise<readonly FF14Item[]> {
+  return loadCachedItems('equipment:all', () => fetchItemMap(itemsUrl, 'item'));
+}
+
+function loadFacewear(): Promise<readonly FF14Item[]> {
+  return loadCachedItems('facewear', () => fetchItemMap(facewearUrl, 'facewear'));
+}
+
+function loadSlot(slot: SearchShardSlot): Promise<readonly FF14Item[]> {
+  const url = slotUrls[slot];
+  return loadCachedItems(
+    `slot:${url}`,
+    () => fetchSearchShard(url, `${slot} item`),
+  );
 }
 
 export async function loadSearchItems(slot?: EquipmentPart): Promise<readonly FF14Item[]> {
   if (slot === 'face') return loadFacewear();
-  if (slot) return loadEquipment();
+  if (slot) return loadSlot(slot);
 
   const [equipment, facewear] = await Promise.all([loadEquipment(), loadFacewear()]);
   return [...equipment, ...facewear];
@@ -91,7 +164,9 @@ export function isFashionAccessoryItem(item: FF14Item): boolean {
     && !LEGACY_FACEWEAR_PATTERN.test(`${item.name} ${item.nameEn} ${item.nameJa}`);
 }
 
-export async function loadFashionAccessories(): Promise<readonly FF14Item[]> {
-  const items = await loadEquipment();
-  return items.filter(isFashionAccessoryItem);
+export function loadFashionAccessories(): Promise<readonly FF14Item[]> {
+  return loadCachedItems(
+    'fashion-accessories',
+    () => fetchSearchShard(fashionAccessoriesUrl, 'fashion accessory'),
+  );
 }

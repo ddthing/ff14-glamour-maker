@@ -63,7 +63,7 @@ export function EquipmentTab({
             </div>
 
             {/* Active slot editor */}
-            <div style={{
+            <div data-tour="search" style={{
                 background: 'var(--surface-100)',
                 border: '1px solid var(--border)',
                 borderRadius: 'var(--radius-md)',
@@ -154,7 +154,7 @@ export function EquipmentTab({
             </div>
 
             {/* Slot grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
+            <div data-tour="slots" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
                 {SLOT_ORDER.map(part => (
                     <SlotButton
                         key={part}

@@ -3,11 +3,12 @@
 import { act } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { INITIAL_ITEMS } from '../../constants/initialState';
+import { INITIAL_ITEMS, INITIAL_STATE } from '../../constants/initialState';
 import '../../i18n';
 import type { AppState } from '../../types';
 import { CanvasHeading } from './CanvasHeading';
 import { EquipmentList } from './EquipmentList';
+import { InfoPanel } from './InfoPanel';
 
 let container: HTMLDivElement;
 let root: Root;
@@ -35,6 +36,13 @@ afterEach(() => {
 });
 
 describe('canvas display components', () => {
+  it('renders the canonical site address in the exported card footer', () => {
+    act(() => root.render(<InfoPanel state={INITIAL_STATE} bgSrc={null} />));
+
+    expect(container.textContent).toContain('gm.ffxiv.world');
+    expect(container.textContent).not.toContain('ff14-glamour-maker.pages.dev');
+  });
+
   it('renders the title and creator without owning application state', () => {
     act(() => root.render(
       <CanvasHeading title="Library Look" creator="@scholar" label="Glamour" />,

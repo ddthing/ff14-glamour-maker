@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
+import { SITE_HOST } from '../../constants/site';
 import { useImagePalette } from '../../hooks/useImagePalette';
 import type { AppState } from '../../types';
 import { CanvasHeading } from './CanvasHeading';
@@ -71,7 +72,7 @@ export function InfoPanel({ state, bgSrc }: InfoPanelProps) {
               {t('common.title_brand')}
             </span>
             <span className="text-[0.55rem] font-semibold uppercase tracking-[0.08em] text-[var(--card-text-muted)]">
-              ff14-glamour-maker.pages.dev
+              {SITE_HOST}
             </span>
           </div>
 

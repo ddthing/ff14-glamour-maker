@@ -1,8 +1,10 @@
 import fs from 'node:fs/promises';
 import { summarizeItemData } from './itemData.mjs';
+import { buildSearchData } from './buildSearchData.mjs';
 
 const ITEMS_FILE = 'src/data/items.json';
 const ASSET_ROOT = 'public/item-icons';
+const SEARCH_ROOT = 'src/data/search';
 const VALID_STATUSES = new Set(['complete', 'partial', 'kr-only', 'review']);
 
 function inferredStatus(item) {
@@ -15,6 +17,24 @@ function inferredStatus(item) {
 async function main() {
   const items = JSON.parse(await fs.readFile(ITEMS_FILE, 'utf8'));
   const errors = [];
+  const expectedSearchData = buildSearchData(items);
+
+  for (const [filename, expected] of Object.entries(expectedSearchData)) {
+    try {
+      const actual = JSON.parse(await fs.readFile(`${SEARCH_ROOT}/${filename}`, 'utf8'));
+      if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+        errors.push(`${filename}: search shard is stale; run node scripts/buildSearchData.mjs`);
+      }
+    } catch {
+      errors.push(`${filename}: missing or invalid search shard; run node scripts/buildSearchData.mjs`);
+    }
+  }
+
+  for (const filename of await fs.readdir(SEARCH_ROOT)) {
+    if (filename.endsWith('.json') && !(filename in expectedSearchData)) {
+      errors.push(`${filename}: obsolete search shard; run node scripts/buildSearchData.mjs`);
+    }
+  }
 
   for (const [id, item] of Object.entries(items)) {
     const status = item.translationStatus ?? inferredStatus(item);
@@ -49,7 +69,13 @@ async function main() {
     return;
   }
 
-  console.log(JSON.stringify(summarizeItemData(items), null, 2));
+  console.log(JSON.stringify({
+    ...summarizeItemData(items),
+    searchShards: Object.fromEntries(Object.entries(expectedSearchData).map(([filename, records]) => [
+      filename,
+      { items: records.length },
+    ])),
+  }, null, 2));
 }
 
 main().catch(error => {

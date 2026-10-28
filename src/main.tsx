@@ -4,6 +4,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import './i18n'
 import App from './App.tsx'
+import type { ContentPageKey } from './content/pageTypes'
+import { resolveContentPage } from './utils/resolveContentPage'
 
 const Terms = lazy(() => import('./pages/Terms.tsx').then(module => ({ default: module.Terms })))
 const Privacy = lazy(() => import('./pages/Privacy.tsx').then(module => ({ default: module.Privacy })))
@@ -21,20 +23,15 @@ window.addEventListener('error', (e) => {
 }, true);
 
 // 초경량 라우팅 시스템 (react-router 불필요)
-const path = window.location.pathname;
-let Component: ComponentType = App;
-
-if (path === '/terms') {
-  Component = Terms;
-} else if (path === '/privacy') {
-  Component = Privacy;
-} else if (path === '/guide') {
-  Component = Guide;
-} else if (path === '/faq') {
-  Component = Faq;
-} else if (path === '/about') {
-  Component = About;
-}
+const pageComponents: Record<ContentPageKey, ComponentType> = {
+  home: App,
+  guide: Guide,
+  faq: Faq,
+  about: About,
+  terms: Terms,
+  privacy: Privacy,
+};
+const Component = pageComponents[resolveContentPage(window.location.pathname)];
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
