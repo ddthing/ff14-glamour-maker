@@ -80,4 +80,23 @@ describe('searchItems', () => {
     expect(searchItems([item], 'death sickle', { slot: 'mainhand' })).toEqual([item]);
     expect(searchItems([item], 'デスシックル', { slot: 'mainhand' })).toEqual([item]);
   });
+
+  it('uses generated normalized keys and keeps stable ordering within a rank', () => {
+    const exact = {
+      ...makeItem(4, 'display name', 34),
+      searchKeys: ['itemname', 'itemname', 'itemname'],
+    };
+    const prefixFirst = makeItem(5, 'itemname long', 34);
+    const prefixSecond = makeItem(6, 'itemname second', 34);
+    const substring = makeItem(7, 'a itemname', 34);
+
+    expect(searchItems([prefixFirst, exact, prefixSecond, substring], ' ITEM NAME ', {
+      slot: 'head',
+      limit: 3,
+    }).map(item => item.id)).toEqual([4, 5, 6]);
+  });
+
+  it('returns no results for a zero result limit', () => {
+    expect(searchItems([makeItem(1, '머리 장비', 34)], '머리', { limit: 0 })).toEqual([]);
+  });
 });

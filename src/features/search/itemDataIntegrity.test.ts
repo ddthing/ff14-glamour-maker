@@ -1,7 +1,21 @@
 import { describe, expect, it } from 'vitest';
 import itemsData from '../../data/items.json';
 import facewearData from '../../data/facewear.json';
+import mainhandData from '../../data/search/mainhand.json';
+import offhandData from '../../data/search/offhand.json';
+import headData from '../../data/search/head.json';
+import bodyData from '../../data/search/body.json';
+import handsData from '../../data/search/hands.json';
+import legsData from '../../data/search/legs.json';
+import feetData from '../../data/search/feet.json';
+import neckData from '../../data/search/neck.json';
+import earsData from '../../data/search/ears.json';
+import wristsData from '../../data/search/wrists.json';
+import ringsData from '../../data/search/rings.json';
+import rings2Data from '../../data/search/rings.json';
+import fashionAccessoriesData from '../../data/search/fashion-accessories.json';
 import type { EquipmentPart } from '../../types';
+import { isFashionAccessoryItem } from './loadSearchItems';
 import { isMatchingSlot, searchItems, WEAPON_UI_CATEGORIES } from './searchItems';
 import type { FF14Item } from './types';
 
@@ -48,6 +62,28 @@ const facewearRecords: FF14Item[] = Object.entries(
   translationStatus: item.translationStatus,
   source: 'facewear',
 }));
+
+type SearchShardSlot = Exclude<EquipmentPart, 'face'>;
+const searchShards: Record<SearchShardSlot, readonly FF14Item[]> = {
+  mainhand: mainhandData as unknown as FF14Item[],
+  offhand: offhandData as unknown as FF14Item[],
+  head: headData as unknown as FF14Item[],
+  body: bodyData as unknown as FF14Item[],
+  hands: handsData as unknown as FF14Item[],
+  legs: legsData as unknown as FF14Item[],
+  feet: feetData as unknown as FF14Item[],
+  neck: neckData as unknown as FF14Item[],
+  ears: earsData as unknown as FF14Item[],
+  wrists: wristsData as unknown as FF14Item[],
+  rings: ringsData as unknown as FF14Item[],
+  rings2: rings2Data as unknown as FF14Item[],
+};
+const fashionAccessoryShard = fashionAccessoriesData as unknown as FF14Item[];
+const recordsById = new Map(records.map(item => [item.id, item]));
+
+function normalizeSearchKey(value: string): string {
+  return value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
+}
 
 describe('generated item data integrity', () => {
   it('contains no replacement characters in localized display names', () => {
@@ -128,5 +164,58 @@ describe('generated item data integrity', () => {
     });
 
     expect(failures).toEqual([]);
+  });
+});
+
+describe('generated search shard integrity', () => {
+  it('includes every canonical item classified into each equipment slot', () => {
+    for (const [slot, shard] of Object.entries(searchShards) as Array<[SearchShardSlot, readonly FF14Item[]]>) {
+      const expected = slot === 'rings' || slot === 'rings2'
+        ? records.filter(item => isMatchingSlot(item, 'rings') || isMatchingSlot(item, 'rings2'))
+        : records.filter(item => isMatchingSlot(item, slot));
+      expect(shard.map(item => item.id), slot).toEqual(expected.map(item => item.id));
+    }
+  });
+
+  it('keeps localized names, display metadata, and pre-normalized keys in sync', () => {
+    const mismatches: number[] = [];
+    for (const shard of [...Object.values(searchShards), fashionAccessoryShard]) {
+      for (const item of shard) {
+        const canonical = recordsById.get(item.id);
+        if (!canonical) {
+          mismatches.push(item.id);
+          continue;
+        }
+        const metadataMatches = item.name === canonical.name
+          && item.nameEn === canonical.nameEn
+          && item.nameJa === canonical.nameJa
+          && item.iconPath === canonical.iconPath
+          && item.iconAssetKey === canonical.iconAssetKey
+          && item.uiCategory === canonical.uiCategory
+          && JSON.stringify(item.equipSlots) === JSON.stringify(canonical.equipSlots)
+          && item.source === 'item';
+        const keysMatch = JSON.stringify(item.searchKeys)
+          === JSON.stringify([item.name, item.nameEn, item.nameJa].map(normalizeSearchKey));
+        if (!metadataMatches || !keysMatch) mismatches.push(item.id);
+      }
+    }
+    expect(mismatches).toEqual([]);
+  });
+
+  it('returns the same ranked results from a slot shard as from the full catalog', () => {
+    for (const [slot, shard] of Object.entries(searchShards) as Array<[SearchShardSlot, readonly FF14Item[]]>) {
+      const sampleName = shard[Math.floor(shard.length / 2)]?.name ?? '';
+      const query = sampleName.slice(0, Math.min(2, sampleName.length));
+      const fullCatalogResults = searchItems(records, query, { slot, limit: 40 });
+      const shardResults = searchItems(shard, query, { slot, limit: 40 });
+
+      expect(shardResults.map(item => item.id), slot)
+        .toEqual(fullCatalogResults.map(item => item.id));
+    }
+  });
+
+  it('keeps the fashion accessory shard equivalent to the canonical filter', () => {
+    const expected = records.filter(isFashionAccessoryItem);
+    expect(fashionAccessoryShard.map(item => item.id)).toEqual(expected.map(item => item.id));
   });
 });

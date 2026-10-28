@@ -10,6 +10,8 @@ import { ControlStatus } from './ControlStatus';
 import { ControlTabs, type ControlTab } from './ControlTabs';
 import { EquipmentTab } from './EquipmentTab';
 import { GeneralTab } from './GeneralTab';
+import { copyTextToClipboard } from '../../utils/clipboard';
+import { buildEquipmentShareText } from './equipmentShareText';
 
 interface Props {
   state: AppState;
@@ -17,24 +19,13 @@ interface Props {
 }
 
 export function ControlPanel({ state, actions }: Props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { isExporting, stage, error: exportError, handleExport } = useExport();
   const { presets, error: presetError, addPreset, removePreset, restorePreset } = usePresets();
   const { action: undoAction, registerUndo, undo } = useUndoAction();
   const [activeTab, setActiveTab] = useState<ControlTab>('equipment');
 
-  const handleResetItems = useCallback(() => {
-    const previousItems = state.items;
-    const previousFashionAccessory = state.fashionAccessory;
-    actions.resetItems();
-    registerUndo({
-      message: t('common.items_reset'),
-      undo: () => {
-        actions.replaceItems(previousItems);
-        actions.setFashionAccessory(previousFashionAccessory);
-      },
-    });
-  }, [actions, registerUndo, state.fashionAccessory, state.items, t]);
+  const handleResetItems = useCallback(() => actions.resetItems(), [actions]);
 
   const handleRemovePreset = useCallback((id: string) => {
     const removed = removePreset(id);
@@ -50,6 +41,15 @@ export function ControlPanel({ state, actions }: Props) {
     || state.fashionAccessory !== null;
   const isReadyToSave = hasPhoto && hasSelection;
   const exportLabel = isExporting && stage ? t(`common.export_${stage}`) : t('common.save');
+  const copyEquipmentList = useCallback(() => {
+    const shareText = buildEquipmentShareText(state, i18n.resolvedLanguage || i18n.language, {
+      title: t('common.default_set_title'),
+      creator: t('common.creator'),
+      dye: t('common.search_dye'),
+      slot: part => t(part === 'fashionAccessory' ? 'slots.fashionAccessory' : `slots.${part}`),
+    });
+    return copyTextToClipboard(shareText);
+  }, [i18n.language, i18n.resolvedLanguage, state, t]);
 
   return (
     <div className="control-panel flex h-full min-h-0 flex-col overflow-hidden rounded-[var(--radius-lg)]">
@@ -93,6 +93,12 @@ export function ControlPanel({ state, actions }: Props) {
           isReadyToSave={isReadyToSave}
           saveLabel={exportLabel}
           onExport={() => handleExport(state.title || t('common.default_set_title'))}
+          hasEquipmentToCopy={hasSelection}
+          copyEquipmentLabel={t('common.copy_equipment_list')}
+          copyingEquipmentLabel={t('common.copying_equipment_list')}
+          equipmentCopiedLabel={t('common.equipment_list_copied')}
+          equipmentCopyFailedLabel={t('common.equipment_list_copy_failed')}
+          onCopyEquipment={copyEquipmentList}
         />
         <ControlStatus
           presetError={presetError}

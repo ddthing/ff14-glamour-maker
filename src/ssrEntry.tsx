@@ -38,7 +38,7 @@ export async function renderPage(path: string, language: string): Promise<string
   );
 }
 
-export function getPageMetadata(path: string, language: string, origin: string) {
+export function getPageMetadata(path: string, language: string) {
   const page = getPageKey(path);
-  return getLocalizedMetadata(page, language, origin, key => i18n.t(key));
+  return getLocalizedMetadata(page, language, key => i18n.t(key));
 }

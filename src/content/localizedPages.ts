@@ -83,7 +83,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         {
           title: '데이터와 이미지 처리',
           paragraphs: [
-            '업로드한 캐릭터 사진은 카드 생성을 위해 사용자의 브라우저에서 처리됩니다. 로그인이나 회원가입은 필요하지 않으며, 저장한 프리셋·테마·언어 설정은 사용자의 브라우저 저장소에 보관됩니다.',
+            '사진을 포함해 입력 중인 카드 초안은 브라우저의 IndexedDB에 자동 저장되고, 같은 브라우저에서 다시 방문하면 복원됩니다. 사진과 초안은 서버로 업로드되지 않으며, 브라우저에서 이 사이트의 데이터를 삭제하면 초안도 지워집니다. 프리셋·테마·언어 설정도 현재 브라우저에 저장됩니다.',
             '장비 아이콘과 아이템 데이터는 서비스 화면에서 필요한 시점에 제공 경로를 통해 불러옵니다. 외부 제공자의 네트워크 요청과 처리 방식은 개인정보처리방침에서 확인할 수 있습니다.',
           ],
         },
@@ -133,7 +133,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         },
         {
           question: '사진이나 프리셋이 서버에 저장되나요?',
-          answer: '업로드한 사진은 카드 생성을 위해 브라우저에서 처리되며 서비스 계정이나 서버 갤러리에 저장되지 않습니다. 프리셋과 테마·언어 설정은 현재 기기의 브라우저 저장소에 남으므로 브라우저 사이트 데이터를 삭제하면 함께 사라질 수 있습니다.',
+          answer: '사진을 포함한 현재 카드 초안은 브라우저의 IndexedDB에 자동 저장되며 서버로 업로드되지 않습니다. 다시 방문하면 같은 브라우저에서 복원할 수 있습니다. 브라우저에서 이 사이트의 데이터를 삭제하면 초안과 프리셋, 테마·언어 설정도 함께 삭제됩니다.',
         },
         {
           question: '모바일에서 저장한 이미지가 흐리게 보입니다.',
@@ -186,11 +186,11 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       entries: [
         { question: '모든 장비를 입력해야 하나요?', answer: '아니요. 카드에 보여 주고 싶은 부위만 입력해도 됩니다. 다만 다른 사람이 세트를 재현하기를 원한다면 주요 장비와 염색 정보를 함께 적는 것이 좋습니다.' },
         { question: '투영 세트명은 꼭 입력해야 하나요?', answer: '아니요. 세트명은 선택 항목입니다. 이름이 없으면 카드의 제목 영역을 비워 둔 채 장비 정보만 저장할 수 있습니다.' },
-        { question: '사용한 사진과 프리셋을 다른 기기에서도 볼 수 있나요?', answer: '현재 저장은 브라우저와 기기 단위입니다. 계정 동기화 기능이 아니므로 다른 기기에서 같은 사진이나 프리셋을 자동으로 불러오지는 않습니다.' },
+        { question: '사용한 사진과 프리셋을 다른 기기에서도 볼 수 있나요?', answer: '초안은 사진을 포함해 현재 브라우저에 자동 저장되지만 계정 동기화는 지원하지 않습니다. 다른 브라우저나 기기에서는 자동으로 불러오지 않습니다.' },
         { question: '무료로 사용할 수 있나요?', answer: '네. 서비스 사용 자체에는 별도 결제가 필요하지 않습니다. 광고가 표시될 수 있으며 광고와 쿠키 처리 방식은 개인정보처리방침에 안내합니다.' },
       ],
       localNoteTitle: '브라우저에서 처리되는 항목',
-      localNote: '사진은 카드 생성을 위해 브라우저 메모리에서 처리되고, 프리셋·테마·언어 설정은 현재 기기의 저장소에 기록됩니다. 사이트 데이터를 삭제하면 저장한 프리셋이 사라질 수 있으니 필요한 카드는 PNG로 먼저 보관하세요.',
+      localNote: '사진을 포함한 카드 초안은 IndexedDB에 자동 저장되고 다시 방문하면 복원됩니다. 서버로 업로드되지 않으며, 브라우저에서 사이트 데이터를 삭제하면 초안과 프리셋이 지워집니다. 중요한 카드는 PNG로도 보관하세요.',
     },
     terms: {
       title: '이용약관',
@@ -220,8 +220,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       sections: [
         { title: '1. 적용 범위와 운영자', paragraphs: ['본 방침은 투영세트메이커 웹사이트와 그 안에서 제공되는 사진 편집·장비 검색·카드 저장 기능에 적용됩니다. 문의는 소개 페이지에 연결된 개발자 채널로 받을 수 있습니다.'] },
         { title: '2. 직접 수집하지 않는 개인정보', paragraphs: ['회원가입을 요구하지 않으며 이름, 이메일 주소, 전화번호, 비밀번호와 같은 계정 정보를 서비스가 직접 수집하지 않습니다. 사진 속 인물이나 입력한 제작자 표기는 사용자가 카드에 표시하기 위해 직접 입력하는 콘텐츠이며, 서비스가 별도 회원 프로필로 등록하지 않습니다.'] },
-        { title: '3. 브라우저에 저장되는 정보', paragraphs: ['테마와 언어 선택, 사용자가 저장한 프리셋은 현재 기기의 브라우저 저장소에 보관됩니다. 브라우저 환경에 따라 언어 감지 정보가 저장될 수 있습니다. 이 정보는 로그인 계정과 연결되지 않습니다.'] },
-        { title: '4. 업로드 사진과 생성 이미지', paragraphs: ['업로드한 사진과 자르기 결과는 카드 생성 과정에서 브라우저 메모리로 처리됩니다. 서비스가 사진을 서버 갤러리나 계정 저장소에 영구 보관하지 않지만, 사용자의 브라우저·운영체제·네트워크 환경과 외부 아이콘 요청은 별도의 기술 로그를 남길 수 있습니다.'] },
+        { title: '3. 브라우저에 저장되는 정보', paragraphs: ['입력 중인 카드 초안(사진 포함)은 IndexedDB에 자동 저장되어 같은 브라우저에서 다시 방문하면 복원됩니다. 테마와 언어 선택, 사용자가 저장한 프리셋도 현재 기기의 브라우저 저장소에 보관됩니다. 이 정보는 로그인 계정과 연결되지 않으며 브라우저에서 사이트 데이터를 삭제하면 지워집니다.'] },
+        { title: '4. 업로드 사진과 생성 이미지', paragraphs: ['사진은 카드 편집과 생성을 위해 브라우저에서 처리되며, 초안을 복원할 수 있도록 IndexedDB에도 자동 저장됩니다. 사진이나 초안은 서비스 서버로 업로드되지 않고 서버 갤러리나 계정 저장소에 보관되지 않습니다. 브라우저에서 이 사이트의 데이터를 삭제하면 저장된 사진과 초안도 지워집니다. 브라우저·운영체제·네트워크 환경과 외부 아이콘 요청은 별도의 기술 로그를 남길 수 있습니다.'] },
         { title: '5. 외부 제공자와 네트워크 요청', paragraphs: ['장비 아이콘과 관련 데이터는 XIVAPI 프록시 또는 Cloudinary 경로에서 제공될 수 있고, 글꼴은 jsDelivr에서 제공됩니다. 광고 태그를 사용하는 페이지에서는 Google AdSense와 Google의 광고 기술 제공자가 요청·쿠키·기기 정보를 처리할 수 있습니다. 각 제공자의 처리 방식과 보관 기간은 해당 제공자의 정책이 적용됩니다.'], links: [
           { label: 'Google 개인정보처리방침', href: 'https://policies.google.com/privacy' },
           { label: 'Cloudinary 개인정보처리방침', href: 'https://cloudinary.com/privacy' },
@@ -232,7 +232,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
           { label: 'Google 광고 설정', href: 'https://adssettings.google.com/' },
         ] },
         { title: '7. 지역별 동의와 광고 제공', paragraphs: ['유럽경제지역(EEA), 영국, 스위스 이용자에게 개인 맞춤 광고를 제공하는 경우 Google의 최신 EU 사용자 동의 정책과 인증된 동의 관리 플랫폼(CMP) 요구사항이 적용될 수 있습니다. 광고를 제공하는 계정 설정과 지역별 법률에 맞는 동의 절차를 확인한 뒤 운영합니다.'] },
-        { title: '8. 삭제와 보관', paragraphs: ['브라우저의 사이트 데이터와 저장소를 삭제하면 기기에 저장된 프리셋·테마·언어 설정을 지울 수 있습니다. 외부 제공자가 광고·콘텐츠 요청 과정에서 생성하는 기술 로그와 쿠키의 보관·삭제는 각 제공자의 정책과 사용자의 브라우저 설정에 따릅니다.'] },
+        { title: '8. 삭제와 보관', paragraphs: ['브라우저에서 이 사이트의 데이터를 삭제하면 기기에 저장된 초안·사진·프리셋·테마·언어 설정이 지워집니다. 외부 제공자가 광고·콘텐츠 요청 과정에서 생성하는 기술 로그와 쿠키의 보관·삭제는 각 제공자의 정책과 사용자의 브라우저 설정에 따릅니다.'] },
         { title: '9. 방침 변경과 문의', paragraphs: ['서비스 기능, 광고 제공 방식 또는 관련 법률이 바뀌면 이 방침을 업데이트하고 페이지의 업데이트 날짜를 변경합니다. 개인정보 처리에 관한 문의나 삭제 요청은 소개 페이지의 개발자 연락처로 보내 주세요.'] },
       ],
     },
@@ -265,7 +265,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         {
           title: 'Data and image handling',
           paragraphs: [
-            'Uploaded character photos are processed in the browser for card generation. The site does not require an account, and saved presets, theme, and language preferences remain in the browser storage on the current device.',
+            'Your in-progress card draft, including its photo, is saved automatically in browser IndexedDB and restored when you return in the same browser. Drafts and photos are not uploaded to the service. Clearing this site’s browser data removes the draft. Presets, theme, and language preferences are also kept in the current browser.',
             'Item data and icons may be requested through external asset providers when the interface needs them. The privacy policy explains those network requests and the advertising providers used by the site.',
           ],
         },
@@ -315,7 +315,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         },
         {
           question: 'Are my photos or presets stored on a server?',
-          answer: 'Uploaded photos are processed in your browser for card generation. Presets, theme, and language settings are stored in the browser on the current device, so clearing site data can remove them.',
+          answer: 'Your current card draft, including its photo, is saved automatically in browser IndexedDB and can be restored in the same browser. It is not uploaded to the service. Clearing this site’s browser data removes the draft, presets, theme, and language settings.',
         },
         {
           question: 'Why does my saved image look blurry on mobile?',
@@ -368,11 +368,11 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       entries: [
         { question: 'Do I need to fill every slot?', answer: 'No. Add the slots you want to show. If other players need to reproduce the set, include the main gear and dye information they will need.' },
         { question: 'Is the glamour set name required?', answer: 'No. It is an optional label. You can save a card with the item list and creator line without a set name.', },
-        { question: 'Can I see the same preset on another device?', answer: 'Not automatically. Presets are stored per browser and device, not in a synced account.', },
+        { question: 'Can I see the same preset on another device?', answer: 'Drafts, including their photos, are saved in the current browser, but there is no account sync. They are not automatically available in another browser or device.', },
         { question: 'Is the tool free?', answer: 'Yes. The service itself is free to use. Ads may be displayed, and their cookie handling is described in the Privacy Policy.', },
       ],
       localNoteTitle: 'What stays in your browser',
-      localNote: 'Photos are processed in browser memory for card creation. Presets, theme, and language settings are kept in the current device’s browser storage. Export important cards as PNG files before clearing site data.',
+      localNote: 'Your card draft, including its photo, is saved automatically in IndexedDB and restored when you return in the same browser. It is not uploaded to the service. Clearing this site’s browser data removes drafts and presets. Keep important cards as PNG files too.',
     },
     terms: {
       title: 'Terms of service',
@@ -402,8 +402,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       sections: [
         { title: '1. Scope and operator', paragraphs: ['This policy applies to the Glamour Set Maker website and its photo editing, equipment search, preset, and image export features. Privacy questions can be sent through the developer contact channel listed on the About page.'] },
         { title: '2. Personal information not directly collected', paragraphs: ['The service does not require an account and does not directly collect an account name, email address, phone number, or password. A character photo or creator line is content you choose to place on a card; it is not registered as a user profile by this service.'] },
-        { title: '3. Information stored in your browser', paragraphs: ['Theme, language choice, and saved presets are stored in the browser on the current device. Depending on the browser and language detector, a language preference may also be cached. This data is not linked to a sign-in account.'] },
-        { title: '4. Uploaded photos and generated images', paragraphs: ['Uploaded photos and crop results are processed in browser memory while a card is generated. The service does not permanently store photos in an account gallery or server library, but browsers, networks, and external asset requests can create technical logs outside the service’s control.'] },
+        { title: '3. Information stored in your browser', paragraphs: ['Your in-progress card draft, including its photo, is saved automatically in IndexedDB and restored when you return in the same browser. Theme, language choice, and saved presets are also stored in the browser on the current device. This data is not linked to a sign-in account. Clearing this site’s browser data removes these local items.'] },
+        { title: '4. Uploaded photos and generated images', paragraphs: ['Photos are processed in the browser for editing and card generation, and are saved in IndexedDB so the draft can be restored. Photos and drafts are not uploaded to the service or stored in a server gallery or account. Clearing this site’s browser data removes the saved photo and draft. Browser, operating system, network, and external asset requests may create technical logs outside the service’s control.'] },
         { title: '5. External providers and requests', paragraphs: ['Item icons and related data may be delivered through an XIVAPI proxy or Cloudinary, and the site font may be delivered through jsDelivr. Pages using advertising tags may send requests to Google AdSense and Google advertising technology providers. Each provider’s own policy governs its processing and retention.'], links: [
           { label: 'Google Privacy Policy', href: 'https://policies.google.com/privacy' },
           { label: 'Cloudinary Privacy Policy', href: 'https://cloudinary.com/privacy' },
@@ -414,7 +414,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
           { label: 'Google Ads Settings', href: 'https://adssettings.google.com/' },
         ] },
         { title: '7. Regional consent and advertising', paragraphs: ['When personalized ads are served to users in the EEA, the UK, or Switzerland, Google’s current EU User Consent Policy and certified consent-management requirements may apply. The account and consent configuration must be reviewed before serving personalized ads in those regions.'] },
-        { title: '8. Deletion and retention', paragraphs: ['Clear this site’s browser data or storage to remove local presets, theme, and language settings. Retention and deletion of cookies or technical logs created by external providers during ad or asset requests are controlled by those providers and your browser settings.'] },
+        { title: '8. Deletion and retention', paragraphs: ['Clearing this site’s browser data removes locally stored drafts, photos, presets, theme, and language settings. Retention and deletion of cookies or technical logs created by external providers during ad or asset requests are controlled by those providers and your browser settings.'] },
         { title: '9. Changes and contact', paragraphs: ['This policy may be updated when the service, advertising configuration, or applicable requirements change. The update date on this page will be changed with material revisions. Send privacy questions or requests to the developer contact listed on the About page.'] },
       ],
     },
@@ -447,7 +447,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         {
           title: 'データと画像の処理',
           paragraphs: [
-            'アップロードしたキャラクター写真はカード作成のためブラウザ内で処理されます。ログインや会員登録は不要で、保存したプリセット、テーマ、言語設定は現在のブラウザの保存領域に保管されます。',
+            '編集中のカード下書きは写真も含めてIndexedDBに自動保存され、同じブラウザで再訪問すると復元されます。写真や下書きはサービスへアップロードされず、このサイトのブラウザデータを削除すると下書きも消去されます。プリセット、テーマ、言語設定も現在のブラウザに保存されます。',
             '装備アイコンやアイテムデータは必要なときに外部の提供経路から読み込まれる場合があります。ネットワーク通信と各提供者の扱いについてはプライバシーポリシーをご確認ください。',
           ],
         },
@@ -497,7 +497,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
         },
         {
           question: '写真やプリセットはサーバーに保存されますか？',
-          answer: 'アップロード写真はカード作成のためブラウザ内で処理されます。プリセット、テーマ、言語設定は現在の端末のブラウザに保存されるため、サイトデータを削除すると消える場合があります。',
+          answer: '写真を含む編集中のカード下書きはIndexedDBに自動保存され、同じブラウザで復元できます。サービスへアップロードされません。このサイトのブラウザデータを削除すると下書き、プリセット、テーマ、言語設定も消去されます。',
         },
         {
           question: 'モバイルで保存した画像がぼやけて見えます。',
@@ -521,7 +521,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       lastUpdatedIso: '2026-08-22',
       intro: [
         'ミラプリセットメーカーは、キャラクター写真、アイテム名、カララント情報を一枚の読みやすいカードにまとめます。以下の順番で進めると、必須装備と任意項目を分けて入力できます。',
-        '写真とプリセットはブラウザを中心に処理され、完成したカードは高解像度PNGファイルとして端末に保存されます。',
+        '写真を含む編集中のカード下書きはIndexedDBに自動保存され、同じブラウザで再訪問すると復元されます。完成したカードは高解像度PNGファイルとして端末に保存できます。',
       ],
       howTitle: '5つの手順でカードを作る',
       steps: [
@@ -550,11 +550,11 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       entries: [
         { question: 'すべてのスロットを入力する必要がありますか？', answer: 'いいえ。表示したい部位だけを追加できます。ほかのプレイヤーに再現してもらいたい場合は、主要装備とカララントを入力すると便利です。' },
         { question: 'ミラプリセット名は必須ですか？', answer: 'いいえ。任意のラベルです。セット名がなくてもアイテム一覧と作者名を含むカードを保存できます。' },
-        { question: '別の端末でも同じプリセットを見られますか？', answer: '自動では同期されません。プリセットはアカウントではなく、現在のブラウザと端末に保存されます。' },
+        { question: '別の端末でも同じプリセットを見られますか？', answer: '下書きは写真も含めて現在のブラウザに保存されますが、アカウント同期には対応していません。別のブラウザや端末では自動的に読み込まれません。' },
         { question: '無料で使えますか？', answer: 'はい。サービス自体は無料で利用できます。広告が表示される場合があり、Cookieの扱いはプライバシーポリシーで説明しています。' },
       ],
       localNoteTitle: 'ブラウザ内で処理されるもの',
-      localNote: '写真はカード作成のためブラウザメモリで処理されます。プリセット、テーマ、言語設定は現在の端末のブラウザ保存領域に記録されます。サイトデータを削除する前に重要なカードをPNGで保存してください。',
+      localNote: '写真を含むカード下書きはIndexedDBに自動保存され、同じブラウザで再訪問すると復元されます。サービスへアップロードされません。このサイトのブラウザデータを削除すると下書きやプリセットが消去されるため、重要なカードはPNGでも保存してください。',
     },
     terms: {
       title: '利用規約',
@@ -584,8 +584,8 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
       sections: [
         { title: '1. 適用範囲と運営者', paragraphs: ['本方針はミラプリセットメーカーのウェブサイトと、写真編集、装備検索、プリセット、画像保存の機能に適用されます。プライバシーに関する質問は概要ページに記載された開発者の連絡先へ送ることができます。'] },
         { title: '2. 直接収集しない個人情報', paragraphs: ['会員登録を求めず、氏名、メールアドレス、電話番号、パスワードなどのアカウント情報を直接収集しません。キャラクター写真や作者名はカードに表示するためにユーザーが選ぶコンテンツであり、本サービスがユーザープロフィールとして登録するものではありません。'] },
-        { title: '3. ブラウザに保存される情報', paragraphs: ['テーマ、言語選択、保存したプリセットは現在の端末のブラウザに保存されます。ブラウザや言語検出機能により、言語設定がキャッシュされる場合があります。ログインアカウントとは紐づきません。'] },
-        { title: '4. アップロード写真と生成画像', paragraphs: ['アップロード写真とトリミング結果はカード作成中にブラウザメモリで処理されます。本サービスは写真をアカウントギャラリーやサーバーライブラリに恒久保存しませんが、ブラウザ、ネットワーク、外部アセットへのリクエストでは本サービスの管理外で技術ログが生成される場合があります。'] },
+        { title: '3. ブラウザに保存される情報', paragraphs: ['編集中のカード下書きは写真も含めてIndexedDBに自動保存され、同じブラウザで再訪問すると復元されます。テーマ、言語選択、保存したプリセットも現在の端末のブラウザに保存されます。ログインアカウントとは紐づかず、このサイトのブラウザデータを削除すると消去されます。'] },
+        { title: '4. アップロード写真と生成画像', paragraphs: ['写真は編集とカード作成のためブラウザ内で処理され、下書きを復元できるようIndexedDBにも保存されます。写真や下書きはサービスへアップロードされず、アカウントギャラリーやサーバーライブラリにも保存されません。このサイトのブラウザデータを削除すると保存された写真と下書きも消去されます。ブラウザ、ネットワーク、外部アセットへのリクエストでは、本サービスの管理外で技術ログが生成される場合があります。'] },
         { title: '5. 外部提供者と通信', paragraphs: ['アイテムアイコンと関連データはXIVAPIプロキシまたはCloudinaryから、フォントはjsDelivrから配信される場合があります。広告タグを使用するページではGoogle AdSenseやGoogleの広告技術提供者へリクエストが送信される場合があります。各提供者の処理と保存には各自の方針が適用されます。'], links: [
           { label: 'Googleプライバシーポリシー', href: 'https://policies.google.com/privacy' },
           { label: 'Cloudinaryプライバシーポリシー', href: 'https://cloudinary.com/privacy' },
@@ -596,7 +596,7 @@ const content: Record<SupportedLanguage, LocalizedPageContent> = {
           { label: 'Google広告設定', href: 'https://adssettings.google.com/' },
         ] },
         { title: '7. 地域別の同意と広告', paragraphs: ['EEA、英国、スイスのユーザーへパーソナライズド広告を配信する場合、Googleの最新EUユーザー同意ポリシーと認証済みの同意管理プラットフォーム要件が適用される場合があります。これらの地域で広告を配信する前にアカウントと同意設定を確認します。'] },
-        { title: '8. 削除と保存期間', paragraphs: ['ブラウザのサイトデータや保存領域を削除すると、端末内のプリセット、テーマ、言語設定を削除できます。広告やアセットのリクエストで外部提供者が作成するCookieや技術ログの保存・削除は、各提供者の方針とブラウザ設定に従います。'] },
+        { title: '8. 削除と保存期間', paragraphs: ['このサイトのブラウザデータを削除すると、端末に保存された下書き、写真、プリセット、テーマ、言語設定が削除されます。広告やアセットのリクエストで外部提供者が作成するCookieや技術ログの保存・削除は、各提供者の方針とブラウザ設定に従います。'] },
         { title: '9. 方針の変更とお問い合わせ', paragraphs: ['サービス、広告設定、適用される要件に変更があった場合、この方針を更新し、ページの更新日を変更します。プライバシーに関する質問や依頼は概要ページの開発者連絡先へ送ってください。'] },
       ],
     },

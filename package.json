@@ -14,6 +14,7 @@
     "test:watch": "vitest",
     "preview": "vite preview",
     "validate:data": "node scripts/validateItemData.mjs",
+    "build:search-data": "node scripts/buildSearchData.mjs",
     "upload": "node scripts/uploadImages.mjs",
     "sync": "node scripts/syncImagesAuto.mjs",
     "sync:facewear": "node scripts/syncFacewear.mjs"

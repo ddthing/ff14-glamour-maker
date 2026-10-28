@@ -5,6 +5,7 @@ import {
   parseItemCsv,
   summarizeItemData,
 } from './itemData.mjs';
+import { writeSearchData } from './buildSearchData.mjs';
 
 const ITEM_SOURCES = {
   ko: 'https://raw.githubusercontent.com/Ra-Workspace/ffxiv-datamining-ko/master/csv/Item.csv',
@@ -40,6 +41,7 @@ async function main() {
     throw new Error(`Overrides reference unknown item IDs: ${unknownOverrides.join(', ')}`);
   }
   await fs.writeFile('src/data/items.json', `${JSON.stringify(items, null, 2)}\n`, 'utf8');
+  await writeSearchData(items);
 
   const counts = Object.fromEntries(Object.keys(ITEM_SOURCES).map(language => [
     language,

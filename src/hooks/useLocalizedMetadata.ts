@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getLocalizedPageContent } from '../content/localizedPages';
 import type { ContentPageKey } from '../content/pageTypes';
+import { SITE_ORIGIN } from '../constants/site';
 
 const SUPPORTED_LANGUAGES = new Set(['ko', 'en', 'ja']);
 
@@ -35,7 +36,6 @@ export interface LocalizedMetadata {
 export function getLocalizedMetadata(
   page: ContentPageKey,
   languageInput: string,
-  origin: string,
   translate: (key: string) => string,
 ): LocalizedMetadata {
   const language = getLanguage(languageInput);
@@ -46,7 +46,7 @@ export function getLocalizedMetadata(
     : translate('common.meta_title');
   const description = pageData?.description || translate('common.meta_description');
   const routePath = page === 'home' ? '/' : `/${page}/`;
-  const canonicalUrl = `${origin}${routePath}`;
+  const canonicalUrl = `${SITE_ORIGIN}${routePath}`;
   const ogLocale = language === 'ko' ? 'ko_KR' : language === 'ja' ? 'ja_JP' : 'en_US';
 
   return {
@@ -68,7 +68,7 @@ export function getLocalizedMetadata(
           isPartOf: {
             '@type': 'WebSite',
             name: translate('common.title_brand'),
-            url: `${origin}/`,
+            url: `${SITE_ORIGIN}/`,
           },
           breadcrumb: {
             '@type': 'BreadcrumbList',
@@ -77,7 +77,7 @@ export function getLocalizedMetadata(
                 '@type': 'ListItem',
                 position: 1,
                 name: translate('common.title_brand'),
-                item: `${origin}/`,
+                item: `${SITE_ORIGIN}/`,
               },
               {
                 '@type': 'ListItem',
@@ -118,7 +118,7 @@ export function useLocalizedMetadata(page: ContentPageKey = 'home'): void {
   const language = getLanguage(i18n.resolvedLanguage || i18n.language);
 
   useEffect(() => {
-    const metadata = getLocalizedMetadata(page, language, window.location.origin, t);
+    const metadata = getLocalizedMetadata(page, language, t);
 
     document.documentElement.lang = metadata.language;
     document.title = metadata.pageTitle;

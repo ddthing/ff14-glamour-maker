@@ -55,8 +55,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add src/data/items.json scripts/item-overrides.json
-          if git diff --cached --quiet -- src/data/items.json; then
+          git add src/data/items.json src/data/search scripts/item-overrides.json
+          if git diff --cached --quiet -- src/data/items.json src/data/search; then
             echo "No item data changes detected."
             exit 0
           fi

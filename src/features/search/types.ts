@@ -15,4 +15,6 @@ export interface FF14Item {
   source?: ItemSource;
   equipSlot?: 'mainhand' | 'offhand';
   equipSlots?: EquipmentPart[];
+  /** Normalized Korean, English, and Japanese names generated with the search data. */
+  searchKeys?: readonly string[];
 }

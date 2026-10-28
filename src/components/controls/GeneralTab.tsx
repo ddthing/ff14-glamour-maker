@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Bookmark01Icon, Delete02Icon, FloppyDiskIcon, PencilEdit01Icon, UserIcon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import type { AppState } from '../../types';
 import { SectionLabel } from '../ui/SectionLabel';
 import { Divider } from '../ui/Divider';
@@ -29,24 +29,6 @@ export function GeneralTab({
 }: GeneralTabProps) {
     const { t } = useTranslation();
     const [presetNameInput, setPresetNameInput] = useState('');
-    
-    // Local state for debounced inputs
-    const [localTitle, setLocalTitle] = useState(state.title);
-    const [localCreator, setLocalCreator] = useState(state.creator);
-
-    // Sync from global to local when preset is loaded
-    useEffect(() => {
-        setLocalTitle(state.title);
-        setLocalCreator(state.creator);
-    }, [state.title, state.creator]);
-
-    const handleTitleBlur = () => {
-        onTitleChange(localTitle);
-    };
-
-    const handleCreatorBlur = () => {
-        onCreatorChange(localCreator);
-    };
 
     return (
         <>
@@ -63,13 +45,12 @@ export function GeneralTab({
                 <input
                     id="glamour-set-name"
                     name="glamour-set-name"
+                    maxLength={120}
                     aria-label={t('common.title')}
                     autoComplete="off"
                     className="input-base"
-                    value={localTitle}
-                    onChange={e => setLocalTitle(e.target.value)}
-                    onBlur={handleTitleBlur}
-                    onKeyDown={e => e.key === 'Enter' && handleTitleBlur()}
+                    value={state.title}
+                    onChange={e => onTitleChange(e.target.value)}
                     placeholder={t('common.input_set_name')}
                 />
 
@@ -83,14 +64,13 @@ export function GeneralTab({
                     <input
                         id="glamour-creator"
                         name="glamour-creator"
+                        maxLength={80}
                         aria-label={t('common.creator')}
                         autoComplete="off"
                         spellCheck={false}
                         className="input-base"
-                        value={localCreator}
-                        onChange={e => setLocalCreator(e.target.value)}
-                        onBlur={handleCreatorBlur}
-                        onKeyDown={e => e.key === 'Enter' && handleCreatorBlur()}
+                        value={state.creator}
+                        onChange={e => onCreatorChange(e.target.value)}
                         placeholder={t('common.input_creator')}
                     />
                 </div>
