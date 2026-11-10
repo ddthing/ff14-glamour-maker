@@ -152906,7 +152906,7 @@
     "equipSlots": []
   },
   "15741": {
-    "ko": "용비늘 줄톱",
+    "ko": "용비늘 줄판",
     "iconPath": "/i/021000/021003.png",
     "uiCategory": 63,
     "en": "Dragonscale Rasp",
@@ -153114,7 +153114,7 @@
     "equipSlots": []
   },
   "15767": {
-    "ko": "용비늘 줄톱 재료",
+    "ko": "용비늘 줄판 재료",
     "iconPath": "/i/025000/025919.png",
     "uiCategory": 63,
     "en": "Dragonscale Rasp Materials",
@@ -446034,6 +446034,14 @@
     "ja": "マメット・フェオ＝ウル",
     "equipSlots": []
   },
+  "46786": {
+    "ko": "꿈나르미",
+    "iconPath": "/i/059000/059963.png",
+    "uiCategory": 81,
+    "en": "Dreambringer",
+    "ja": "ユメマワシ",
+    "equipSlots": []
+  },
   "46787": {
     "ko": "픽시 우산",
     "iconPath": "/i/058000/058049.png",
@@ -487009,6 +487017,14 @@
     "ja": "エバーキープ・パーティション",
     "equipSlots": []
   },
+  "51268": {
+    "ko": "증정품 상자",
+    "iconPath": "/i/026000/026114.png",
+    "uiCategory": 61,
+    "en": "Wrapped Gift",
+    "ja": "ギフトボックス",
+    "equipSlots": []
+  },
   "51269": {
     "ko": "정원 축제등",
     "iconPath": "/i/053000/053740.png",
@@ -498968,6 +498984,14 @@
     "uiCategory": 112,
     "en": "Zero's Luminary Attire",
     "ja": "ゼロルミナリー・アタイア",
+    "equipSlots": []
+  },
+  "52661": {
+    "ko": "황금의 모험록: 백은에 이르는 길",
+    "iconPath": "/i/026000/026401.png",
+    "uiCategory": 61,
+    "en": "Tales of Adventure: Winter's Prelude",
+    "ja": "黄金の冒険録:白銀への道",
     "equipSlots": []
   },
   "52712": {
